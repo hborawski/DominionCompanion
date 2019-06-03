@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
-		AFE8EE4022A4843B008E09B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* ViewController.swift */; };
+		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
 		AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4122A4843B008E09B2 /* Main.storyboard */; };
 		AFE8EE4522A4843C008E09B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4422A4843C008E09B2 /* Assets.xcassets */; };
 		AFE8EE4822A4843C008E09B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4622A4843C008E09B2 /* LaunchScreen.storyboard */; };
 		AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */; };
 		AFE8EE5E22A4843C008E09B2 /* DominionCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE5D22A4843C008E09B2 /* DominionCompanionUITests.swift */; };
+		AFE8EE6C22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
+		AFE8EE6D22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
+		AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */; };
+		AFE8EE7022A4982D008E09B2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */; };
+		AFE8EE7222A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
+		AFE8EE7322A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
+		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
+		AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFE8EE3F22A4843B008E09B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		AFE8EE4222A4843B008E09B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFE8EE4422A4843C008E09B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE8EE4722A4843C008E09B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		AFE8EE5922A4843C008E09B2 /* DominionCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE5D22A4843C008E09B2 /* DominionCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanionUITests.swift; sourceTree = "<group>"; };
 		AFE8EE5F22A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE8EE6B22A49517008E09B2 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
+		AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		AFE8EE7122A4AFBE008E09B2 /* cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cards; sourceTree = "<group>"; };
+		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,16 @@
 		AFE8EE3C22A4843B008E09B2 /* DominionCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				AFE8EE7122A4AFBE008E09B2 /* cards */,
 				AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */,
-				AFE8EE3F22A4843B008E09B2 /* ViewController.swift */,
+				AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */,
+				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
+				AFE8EE7422A4B830008E09B2 /* Card.swift */,
 				AFE8EE4122A4843B008E09B2 /* Main.storyboard */,
 				AFE8EE4422A4843C008E09B2 /* Assets.xcassets */,
 				AFE8EE4622A4843C008E09B2 /* LaunchScreen.storyboard */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
+				AFE8EE6B22A49517008E09B2 /* cards.json */,
 			);
 			path = DominionCompanion;
 			sourceTree = "<group>";
@@ -232,6 +248,8 @@
 				AFE8EE4822A4843C008E09B2 /* LaunchScreen.storyboard in Resources */,
 				AFE8EE4522A4843C008E09B2 /* Assets.xcassets in Resources */,
 				AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */,
+				AFE8EE7222A4AFBE008E09B2 /* cards in Resources */,
+				AFE8EE6C22A49517008E09B2 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE8EE7322A4AFBE008E09B2 /* cards in Resources */,
+				AFE8EE6D22A49517008E09B2 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE8EE4022A4843B008E09B2 /* ViewController.swift in Sources */,
+				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
+				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
+				AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE8EE7022A4982D008E09B2 /* CardsViewController.swift in Sources */,
+				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
