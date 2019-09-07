@@ -14,38 +14,20 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        do {
-            if let path = Bundle.main.path(forResource: "cards", ofType: "json") {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonDict = json as? Array<AnyObject> {
-                    self.rawCardData = jsonDict.map { Card($0 as! Dictionary<String, AnyObject>) }
-                    self.filterCards("")
-                }
-            }
-        } catch {
-            print("Error")
-        }
+        self.rawCardData = CardData.shared.cardData
+        self.filterCards("")
     }
     
     func filterCards(_ searchText: String) {
         self.cardData = self.rawCardData?
             .filter { card -> Bool in
-                if searchText == "" {
-                    return true
-                }
-                if let name = card.name {
-                    let retVal = name.lowercased().contains(searchText.lowercased())
-                    return retVal
-                }
-                return false
+                guard searchText != "" else { return true }
+                guard let name = card.name else { return false }
+                return name.lowercased().contains(searchText.lowercased())
             }
             .sorted(by: { (card1, card2) -> Bool in
-                if let name1 = card1.name, let name2 = card2.name {
-                    return name1 <= name2
-                }
-                return false
+                guard let name1 = card1.name, let name2 = card2.name else { return false }
+                return name1 <= name2
             })
         self.tableView.reloadData()
     }

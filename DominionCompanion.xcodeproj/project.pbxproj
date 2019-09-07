@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */; };
+		AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
 		AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4122A4843B008E09B2 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderViewController.swift; sourceTree = "<group>"; };
+		AF1B6EAB2324226800ADA74D /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1B6EA7232421A000ADA74D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */,
+				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
+				AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AF1B6EA8232421B300ADA74D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EE7422A4B830008E09B2 /* Card.swift */,
+				AF1B6EAB2324226800ADA74D /* CardData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF1B6EA9232421E600ADA74D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EE4122A4843B008E09B2 /* Main.storyboard */,
+				AFE8EE4622A4843C008E09B2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF1B6EAA232421F500ADA74D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EE4422A4843C008E09B2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		AFE8EE3122A4843B008E09B2 = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +151,10 @@
 			children = (
 				AFE8EE7122A4AFBE008E09B2 /* cards */,
 				AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */,
-				AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */,
-				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
-				AFE8EE7422A4B830008E09B2 /* Card.swift */,
-				AFE8EE4122A4843B008E09B2 /* Main.storyboard */,
-				AFE8EE4422A4843C008E09B2 /* Assets.xcassets */,
-				AFE8EE4622A4843C008E09B2 /* LaunchScreen.storyboard */,
+				AF1B6EA9232421E600ADA74D /* Storyboards */,
+				AF1B6EA7232421A000ADA74D /* ViewControllers */,
+				AF1B6EA8232421B300ADA74D /* Models */,
+				AF1B6EAA232421F500ADA74D /* Assets */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
 				AFE8EE6B22A49517008E09B2 /* cards.json */,
 			);
@@ -277,7 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
+				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
+				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */,
 			);
