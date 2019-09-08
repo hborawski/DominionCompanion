@@ -54,7 +54,14 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "Set" : "Pool of Cards"
+        switch section {
+        case 0:
+            return "Set"
+        case 1:
+            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter" : "All Cards"
+        default:
+            return ""
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,9 +95,13 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             if self.pinnedCards.contains(card) {
                 if let pinnedIndex = self.pinnedCards.index(of: card) {
                     self.pinnedCards.remove(at: pinnedIndex)
+                    self.randomCards.insert(card, at: 0)
                 }
             } else {
                 self.pinnedCards.append(card)
+                if let randomIndex = self.randomCards.index(of: card) {
+                    self.randomCards.remove(at: randomIndex)
+                }
             }
         case 1:
             let card = self.poolOfCards[indexPath.row]
