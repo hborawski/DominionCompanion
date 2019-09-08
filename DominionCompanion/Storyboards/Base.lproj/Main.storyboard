@@ -170,12 +170,25 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="597"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="blankCell1" id="GSr-RU-d6t">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="loadingCell" id="GSr-RU-d6t">
                                                 <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSr-RU-d6t" id="hPv-nU-RsQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="n6W-Ed-Rkw">
+                                                            <rect key="frame" x="177.66666666666666" y="12" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="EwG-Hf-M1v"/>
+                                                                <constraint firstAttribute="width" constant="20" id="om1-zH-isO"/>
+                                                            </constraints>
+                                                        </activityIndicatorView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="n6W-Ed-Rkw" firstAttribute="centerX" secondItem="hPv-nU-RsQ" secondAttribute="centerX" id="RIo-4V-3WW"/>
+                                                        <constraint firstItem="n6W-Ed-Rkw" firstAttribute="centerY" secondItem="hPv-nU-RsQ" secondAttribute="centerY" id="iHB-Dx-0Ap"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attributedCardCell" id="2LC-qB-Shr" customClass="AttributedCardCell" customModule="DominionCompanion" customModuleProvider="target">

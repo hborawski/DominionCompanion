@@ -13,6 +13,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
     
+    var shuffling: Bool = false
+    
     // MARK: Setup
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func shuffleSet() {
+        guard shuffling == false else { return }
+        self.shuffling = true
+        self.tableView.reloadData()
         SetBuilder.shared.shuffleSet {
+            self.shuffling = false
             self.tableView.reloadData()
         }
     }
@@ -58,7 +64,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return SetBuilder.shared.fullSet.count
+            return shuffling ? 1 : SetBuilder.shared.fullSet.count
         case 1:
             return SetBuilder.shared.cardPool.count
         default:
@@ -69,6 +75,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if shuffling == true && indexPath.section == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
         let card = indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
         cell.setData(card, favorite: SetBuilder.shared.pinnedCards.contains(card))
@@ -76,6 +85,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard shuffling == false else { return }
         switch indexPath.section {
         case 0:
             let card = SetBuilder.shared.fullSet[indexPath.row]
