@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FilterOperation: String {
+enum FilterOperation: String, Codable {
     case greater = ">"
     case greaterOrEqual = ">="
     case equal = "=="

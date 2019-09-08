@@ -12,7 +12,7 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
-    var maxCards = 10
+    var maxCards = 10 - 1
     var pinnedCards: [Card] = []
     var randomCards: [Card] = []
 

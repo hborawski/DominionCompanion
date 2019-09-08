@@ -9,11 +9,19 @@
 import Foundation
 
 
-protocol PropertyFilter {
+protocol PropertyFilter: Codable {
     static var availableOperations: [FilterOperation] { get }
     var property: CardProperty { get }
     var operation: FilterOperation { get }
     var stringValue: String { get }
     func match(_ card: Card) -> Bool
     init(property: CardProperty, value: String, operation: FilterOperation)
+}
+
+enum CodingKeys: String, CodingKey {
+    case property
+    case value
+    case stringValue
+    case operation
+    case propertyFilter
 }

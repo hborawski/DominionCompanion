@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 class CardData {
     public static let shared: CardData = CardData()
     
@@ -22,6 +21,19 @@ class CardData {
     let allTypes: [String]
     
     init() {
+        do {
+            let t : NumberFilter = NumberFilter(property: .actions, value: "2", operation: .less)
+            if let saveData = try? JSONEncoder().encode(t) {
+                UserDefaults.standard.set(saveData, forKey: "test")
+            }
+            if let data = UserDefaults.standard.data(forKey: "test"),
+                let prop = try? JSONDecoder().decode(NumberFilter.self, from: data)
+            {
+                print(prop)
+            }
+        } catch let err {
+            print(err)
+        }
         do {
             if let path = Bundle.main.path(forResource: "cards", ofType: "json") {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)

@@ -28,11 +28,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.2164119"
+            timestampString = "589624915.969882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Locations>
@@ -76,7 +76,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetFiltersViewController.swift"
-            timestampString = "589619363.2167619"
+            timestampString = "589624915.970149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -92,7 +92,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetFiltersViewController.swift"
-            timestampString = "589619363.2169141"
+            timestampString = "589624915.970299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -108,7 +108,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.2169631"
+            timestampString = "589624915.970348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -124,7 +124,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/CardsViewController.swift"
-            timestampString = "589619363.217024"
+            timestampString = "589624915.9704109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -140,11 +140,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/CardData.swift"
-            timestampString = "589619363.21717"
+            timestampString = "589624915.970551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -156,7 +156,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.217315"
+            timestampString = "589624915.970705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -171,24 +171,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DominionCompanion/Models/Filters/NumberFilter.swift"
-            timestampString = "589619363.217805"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "match(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/NewFilterViewController.swift"
-            timestampString = "589619363.217952"
+            timestampString = "589624915.9712811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -204,7 +188,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.218101"
+            timestampString = "589624915.971449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -220,7 +204,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.218437"
+            timestampString = "589624915.971777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -236,7 +220,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.218737"
+            timestampString = "589624915.972088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -284,7 +268,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/NewFilterViewController.swift"
-            timestampString = "589619363.219009"
+            timestampString = "589624915.972389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -300,7 +284,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/NewFilterViewController.swift"
-            timestampString = "589619363.219059"
+            timestampString = "589624915.9724391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -316,7 +300,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/NewFilterViewController.swift"
-            timestampString = "589619363.219105"
+            timestampString = "589624915.972483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -332,7 +316,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.219148"
+            timestampString = "589624915.972524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -348,11 +332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/Filters/ListFilter.swift"
-            timestampString = "589619363.219411"
+            timestampString = "589624915.972793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "match(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -364,7 +348,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.21956"
+            timestampString = "589624915.972946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -380,11 +364,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/Filters/ListFilter.swift"
-            timestampString = "589619363.219822"
+            timestampString = "589624915.973214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "match(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -396,11 +380,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/Filters/ListFilter.swift"
-            timestampString = "589619363.219867"
+            timestampString = "589624915.973261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "match(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -412,7 +396,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/Card.swift"
-            timestampString = "589619363.219911"
+            timestampString = "589624915.973304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -428,7 +412,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/Card.swift"
-            timestampString = "589619363.2200561"
+            timestampString = "589624915.9734401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -444,7 +428,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.220103"
+            timestampString = "589624915.9734859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -460,11 +444,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.220148"
+            timestampString = "589624915.9735301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -476,11 +460,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.220192"
+            timestampString = "589624915.973574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -492,7 +476,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
-            timestampString = "589619363.220235"
+            timestampString = "589624915.973617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -508,11 +492,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.220276"
+            timestampString = "589624915.9737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "getMatchingSet(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -524,7 +508,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "DominionCompanion/Models/Card.swift"
-            timestampString = "589619363.220529"
+            timestampString = "589624915.974056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -549,7 +533,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.220572"
+            timestampString = "589624915.974099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -565,11 +549,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "DominionCompanion/Models/FilterEngine.swift"
-            timestampString = "589619363.220796"
+            timestampString = "589624915.974328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getMatchingSet(_:_:)"
             landmarkType = "7">
             <Actions>
@@ -581,6 +565,118 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Filters/SetFilter.swift"
+            timestampString = "589624915.9745539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "encode(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/CardData.swift"
+            timestampString = "589624915.974696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/CardData.swift"
+            timestampString = "589624915.974739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Filters/NumberFilter.swift"
+            timestampString = "589624915.9748"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "encode(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/FilterEngine.swift"
+            timestampString = "589624915.974952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "saveFilters()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/FilterEngine.swift"
+            timestampString = "589624915.975178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "loadFilters()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/FilterEngine.swift"
+            timestampString = "589624915.975395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadFilters()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

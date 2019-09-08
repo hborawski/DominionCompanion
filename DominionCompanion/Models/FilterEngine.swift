@@ -44,6 +44,7 @@ class FilterEngine {
     
     
     init() {
+        self.filters = self.loadFilters()
     }
     
     // MARK: Public API
@@ -65,10 +66,12 @@ class FilterEngine {
     
     func addFilter(_ filter: SetFilter) {
         self.filters.append(filter)
+        self.saveFilters()
     }
     
     func removeFilter(_ index: Int) {
         self.filters.remove(at: index)
+        self.saveFilters()
     }
     
     // MARK: Utility Methods
@@ -79,6 +82,18 @@ class FilterEngine {
     func matchesAllFilters(_ cards: [Card], _ filters: [SetFilter]) -> Bool {
         return filters.reduce(true) { (acc: Bool, cv: SetFilter) -> Bool in
             return acc && cv.match(cards)
+        }
+    }
+    
+    private func loadFilters() -> [SetFilter] {
+        guard let rawData = UserDefaults.standard.data(forKey: "savedFilters"),
+            let filters = try? PropertyListDecoder().decode([SetFilter].self, from: rawData) else { return [] }
+        return filters
+    }
+    
+    private func saveFilters() {
+        if let data = try? PropertyListEncoder().encode(self.filters) {
+            UserDefaults.standard.set(data, forKey: "savedFilters")
         }
     }
 }

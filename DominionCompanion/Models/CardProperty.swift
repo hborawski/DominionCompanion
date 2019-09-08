@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CardProperty: String, CaseIterable {
+enum CardProperty: String, Codable {
     static var allCases : [CardProperty] = [.cost, .actions, .buys, .cards, .expansion, .type]
     case cost = "Cost"
     case expansion = "Expansion"
@@ -16,6 +16,8 @@ enum CardProperty: String, CaseIterable {
     case buys = "+ Buys"
     case actions = "+ Actions"
     case cards = "+ Cards"
+    
+    
     
     var inputType: PropertyFilter.Type {
         get {

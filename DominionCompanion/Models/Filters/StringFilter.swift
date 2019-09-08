@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct StringFilter: PropertyFilter {
+struct StringFilter: PropertyFilter, Codable {
     static var availableOperations: [FilterOperation] = [
         .equal
     ]
@@ -22,6 +22,32 @@ struct StringFilter: PropertyFilter {
         self.value = value
         self.stringValue = "\(value)"
         self.operation = operation
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        if let propertyValue = try? values.decode(String.self, forKey: .property),
+            let property = CardProperty(rawValue: propertyValue) {
+            self.property = property
+        } else {
+            self.property = .cost
+        }
+        if let operationValue = try? values.decode(String.self, forKey: .operation),
+            let operation = FilterOperation(rawValue: operationValue) {
+            self.operation = operation
+        } else {
+            self.operation = .equal
+        }
+        value = try values.decode(String.self, forKey: .value)
+        stringValue = try values.decode(String.self, forKey: .stringValue)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var coder = encoder.container(keyedBy: CodingKeys.self)
+        try coder.encode(self.operation.rawValue, forKey: .operation)
+        try coder.encode(self.value, forKey: .value)
+        try coder.encode(self.stringValue, forKey: .stringValue)
+        try coder.encode(self.property.rawValue, forKey: .property)
     }
     
     func match(_ card: Card) -> Bool {
