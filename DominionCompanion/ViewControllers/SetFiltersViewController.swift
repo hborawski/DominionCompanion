@@ -12,7 +12,6 @@ import UIKit
 class SetFiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Filters"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newItem(_:)))
     }
     
@@ -47,5 +46,15 @@ class SetFiltersViewController: UITableViewController {
         }
         
         return [delete]
+    }
+    
+    // MARK: Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
+        if segue.identifier == "EditFilter",
+            let filterViewController = segue.destination as? NewFilterViewController
+        {
+            filterViewController.existingFilterIndex = indexPath.row
+        }
     }
 }

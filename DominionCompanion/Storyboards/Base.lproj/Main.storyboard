@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1557.5999999999999" y="-381.2807881773399"/>
         </scene>
-        <!--Set Filters View Controller-->
+        <!--Filters-->
         <scene sceneID="Z1t-Wg-NgO">
             <objects>
-                <tableViewController id="I7P-L3-2q9" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Filters" id="I7P-L3-2q9" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ao-fr-A2m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,6 +331,7 @@
                                     <outlet property="operationLabel" destination="KVQ-bb-1ff" id="JoH-d8-W9C"/>
                                     <outlet property="propertyLabel" destination="NjW-Fr-uyx" id="e8I-Bf-EJG"/>
                                     <outlet property="valueLabel" destination="Ifl-rU-viC" id="dUd-hp-e7U"/>
+                                    <segue destination="pGw-c3-6gE" kind="show" identifier="EditFilter" id="ZMD-ol-adL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -347,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="2492" y="-381.2807881773399"/>
         </scene>
-        <!--New Filter View Controller-->
+        <!--New Filter-->
         <scene sceneID="kSk-fP-u5X">
             <objects>
-                <viewController id="pGw-c3-6gE" customClass="NewFilterViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Filter" id="pGw-c3-6gE" customClass="NewFilterViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qpq-w7-McW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,5 +568,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Mfl-fY-bcv"/>
+        <segue reference="ZMD-ol-adL"/>
     </inferredMetricsTieBreakers>
 </document>

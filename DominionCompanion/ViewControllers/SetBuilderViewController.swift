@@ -20,7 +20,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         get {
             guard randomCards.count > 0 else { return [] }
             let numberToPick = maxCards - pinnedCards.count
-            return pinnedCards + Array(randomCards[0...numberToPick])
+            return pinnedCards + Array(randomCards[0...(numberToPick < randomCards.count ? numberToPick : (randomCards.count - 1))])
         }
     }
     

@@ -18,6 +18,8 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var operationPicker: UIPickerView!
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var valuePicker: UIPickerView!
+    
+    var existingFilterIndex: Int?
 
     var cardOperation: FilterOperation = .greaterOrEqual
     var cardValue: Int = 0
@@ -40,6 +42,48 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addFilter(_:)))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // If there is an index, we are editing
+        guard let index = existingFilterIndex,
+            let filter = FilterEngine.shared.getFilter(index)
+            else { return }
+        
+        self.title = "Edit Filter"
+        
+        self.cardOperation = filter.operation
+        self.cardValue = filter.value
+        self.selectedProperty = filter.propertyFilter.property
+        self.selectedOperation = filter.propertyFilter.operation
+        self.selectedValue = filter.propertyFilter.stringValue
+        
+        self.cardValuePicker.reloadAllComponents()
+        self.cardOperationPicker.reloadAllComponents()
+        self.propertyPicker.reloadAllComponents()
+        self.operationPicker.reloadAllComponents()
+        self.valuePicker.reloadAllComponents()
+        
+        self.cardValuePicker.selectRow(self.cardValue, inComponent: 0, animated: false)
+        
+        if let cardOperationIndex = NumberFilter.availableOperations.index(of: self.cardOperation) {
+            self.cardOperationPicker.selectRow(cardOperationIndex, inComponent: 0, animated: false)
+        }
+        
+        if let property = self.selectedProperty, let propertyIndex = CardData.shared.allAttributes.index(of: property) {
+            self.propertyPicker.selectRow(propertyIndex, inComponent: 0, animated: false)
+            if property.inputType == ListFilter.self, let valueIndex = property.all.index(of: self.selectedValue) {
+                self.valuePicker.selectRow(valueIndex, inComponent: 0, animated: false)
+            } else {
+                self.valueTextField.text = self.selectedValue
+            }
+        }
+        
+        if let operation = self.selectedOperation, let operationIndex = self.availableOperations.index(of: operation) {
+            self.operationPicker.selectRow(operationIndex, inComponent: 0, animated: false)
+        }
+    }
+    
     // MARK: Done Button Handler
     @objc func addFilter(_ sender: UIBarButtonItem) {
         guard let T = self.selectedProperty?.inputType,
@@ -48,7 +92,11 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             else { return }
         let propFilter = T.init(property: property, value: self.selectedValue, operation: operation)
         let setFilter = SetFilter(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
-        FilterEngine.shared.addFilter(setFilter)
+        if let index = self.existingFilterIndex {
+            FilterEngine.shared.updateFilter(index, setFilter)
+        } else {
+            FilterEngine.shared.addFilter(setFilter)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -74,6 +74,16 @@ class FilterEngine {
         self.saveFilters()
     }
     
+    func updateFilter( _ index: Int, _ newFilter: SetFilter) {
+        self.filters[index] = newFilter
+        self.saveFilters()
+    }
+    
+    func getFilter(_ index: Int) -> SetFilter? {
+        guard index < self.filters.count else { return nil }
+        return self.filters[index]
+    }
+    
     // MARK: Utility Methods
     func applyFilter(_ cards: [Card], _ filter: PropertyFilter) -> [Card] {
         return cards.filter{filter.match($0)}
