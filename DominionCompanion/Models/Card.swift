@@ -16,7 +16,7 @@ class Card {
     var cards: Int? = 0
     var name: String? = "Card"
     var text: String? = "Text"
-    var expansion: [String]? = ["Expansion"]
+    var expansion: String? = "Expansion"
     var types: [String]? = []
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
@@ -34,7 +34,7 @@ class Card {
             self.cards = cards
             self.name = name
             self.text = text
-            self.expansion = [expansion]
+            self.expansion = expansion
             self.types = types
         } else {
             print(cardData)
@@ -51,7 +51,7 @@ class Card {
         case .cards:
             return self.cards
         case .expansion:
-            return self.expansion
+            return [self.expansion]
         case .type:
             return self.types
         default:
