@@ -57,7 +57,7 @@ struct SetFilter: Codable {
     }
     
     private func hasMatch(_ cards: [Card]) -> Bool {
-        if let i = cards.firstIndex(where: { (card: Card) -> Bool in
+        if let _ = cards.firstIndex(where: { (card: Card) -> Bool in
             let matched = propertyFilter.match(card)
             return matched
         }) {

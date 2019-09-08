@@ -12,7 +12,8 @@ import Foundation
 
 struct ListFilter: PropertyFilter, Codable {
     static var availableOperations: [FilterOperation] = [
-        .equal
+        .equal,
+        .notEqual
     ]
     
     var property: CardProperty
@@ -58,6 +59,8 @@ struct ListFilter: PropertyFilter, Codable {
         switch self.operation {
         case .equal:
             return cardValue.contains(value)
+        case .notEqual:
+            return !cardValue.contains(value)
         default:
             return false
         }

@@ -24,8 +24,7 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
         self.cardData = self.rawCardData?
             .filter { card -> Bool in
                 guard searchText != "" else { return true }
-                guard let name = card.name else { return false }
-                return name.lowercased().contains(searchText.lowercased())
+                return card.name.lowercased().contains(searchText.lowercased())
             }
             .sorted(by: Utilities.alphabeticSort(card1:card2:))
         self.tableView.reloadData()

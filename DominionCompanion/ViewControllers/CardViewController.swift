@@ -16,9 +16,7 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let card = self.card else { return }
-        if let name = card.name, let expansion = card.expansion {
-            self.nameLabel.text = "\(name) - \(expansion)"
-        }
+        self.nameLabel.text = "\(card.name) - \(card.expansion)"
         self.textLabel?.text = card.text
         if let image = card.image() {
             self.imageView.image = image

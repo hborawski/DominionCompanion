@@ -10,8 +10,7 @@ import Foundation
 
 class Utilities {    
     public static func alphabeticSort(card1: Card, card2: Card) -> Bool {
-        guard let name1 = card1.name, let name2 = card2.name else { return false }
-        return name1 <= name2
+        return card1.name <= card2.name
     }
 
     public static func combos<T>(elements: ArraySlice<T>, k: Int) -> [[T]] {

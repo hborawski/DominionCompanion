@@ -33,8 +33,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         registerForPreviewing(with: self, sourceView: tableView)
 
         self.poolOfCards = FilterEngine.shared.matchAnyFilter
-        let matchingCards = FilterEngine.shared.matchAllFilters
-        self.randomCards = Array(matchingCards.shuffled()[0...(matchingCards.count > maxCards ? maxCards : (matchingCards.count - 1))])
+//        let matchingCards = FilterEngine.shared.matchAllFilters
+        self.shuffleSet()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,11 +45,15 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: Button Handlers
     @IBAction func shuffleSet(_ sender: UIButton) {
+        self.shuffleSet()
+    }
+    
+    func shuffleSet() {
         FilterEngine.shared.getMatchingSet(self.pinnedCards) { cards in
             self.randomCards = cards.filter{ !self.pinnedCards.contains($0) }
             self.tableView.reloadData()
         }
-    }    
+    }
     
     // MARK: UITableViewDataSource
     

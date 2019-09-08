@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class Card {
-    var cost: Int? = 0
-    var actions: Int? = 0
-    var buys: Int? = 0
-    var cards: Int? = 0
-    var name: String? = "Card"
-    var text: String? = "Text"
-    var expansion: String? = "Expansion"
-    var types: [String]? = []
+    var cost: Int = 0
+    var actions: Int = 0
+    var buys: Int = 0
+    var cards: Int = 0
+    var name: String = ""
+    var text: String = ""
+    var expansion: String = ""
+    var types: [String] = []
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
             let cost = cardData["cost"] as? Int,
@@ -40,7 +40,7 @@ class Card {
             print(cardData)
         }
     }
-    public func getProperty(_ property: CardProperty) -> Any? {
+    public func getProperty(_ property: CardProperty) -> Any {
         switch property {
         case .cost:
             return self.cost
@@ -54,15 +54,12 @@ class Card {
             return [self.expansion]
         case .type:
             return self.types
-        default:
-            return nil
         }
     }
     
     public func image() -> UIImage? {
         do {
-            if let name = self.name,
-                let path = Bundle.main.path(forResource: "cards/\(name)", ofType: "jpg") {
+            if let path = Bundle.main.path(forResource: "cards/\(self.name)", ofType: "jpg") {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path))
                 return UIImage(data: data)
             } else {
@@ -83,17 +80,5 @@ extension Card: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.name)
         hasher.combine(self.cost)
-    }
-}
-
-extension Array where Element : Card {
-    func cardString() -> String {
-        return self.map({ card in
-            if let cost = card.cost,
-                let actions = card.actions {
-                return "cost\(cost):actions\(actions)"
-            }
-            return ""
-        }).joined(separator: "|")
     }
 }

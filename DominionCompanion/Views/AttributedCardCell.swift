@@ -18,8 +18,6 @@ class AttributedCardCell : UITableViewCell {
     func setData(_ card: Card, favorite: Bool = false) {
         self.pinnedLabel.text = favorite ? "pinned" : ""
         self.nameLabel.text = card.name
-        if let cost = card.cost {
-            self.costLabel.text = "\(cost)"
-        }
+        self.costLabel.text = "\(card.cost)"
     }
 }

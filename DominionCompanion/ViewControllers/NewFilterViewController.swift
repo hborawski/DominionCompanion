@@ -60,12 +60,6 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         self.selectedOperation = filter.propertyFilter.operation
         self.selectedValue = filter.propertyFilter.stringValue
         
-        self.cardValuePicker.reloadAllComponents()
-        self.cardOperationPicker.reloadAllComponents()
-        self.propertyPicker.reloadAllComponents()
-        self.operationPicker.reloadAllComponents()
-        self.valuePicker.reloadAllComponents()
-        
         self.cardValuePicker.selectRow(self.cardValue, inComponent: 0, animated: false)
         
         if let cardOperationIndex = NumberFilter.availableOperations.index(of: self.cardOperation) {
@@ -84,6 +78,14 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         if let operation = self.selectedOperation, let operationIndex = self.availableOperations.index(of: operation) {
             self.operationPicker.selectRow(operationIndex, inComponent: 0, animated: false)
         }
+        
+        self.cardValuePicker.reloadAllComponents()
+        self.cardOperationPicker.reloadAllComponents()
+        self.propertyPicker.reloadAllComponents()
+        self.operationPicker.reloadAllComponents()
+        self.valuePicker.reloadAllComponents()
+        
+        self.updateEntryView()
     }
     
     // MARK: Done Button Handler
