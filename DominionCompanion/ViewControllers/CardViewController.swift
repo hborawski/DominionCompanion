@@ -16,6 +16,9 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let card = self.card else { return }
+        
+        setupPinButton()
+        
         self.nameLabel.text = "\(card.name) - \(card.expansion)"
         self.textLabel?.text = card.text
         if let image = card.image() {
@@ -23,8 +26,28 @@ class CardViewController: UIViewController {
         }
     }
     
+    func setupPinButton() {
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(doPin(_:)))
+        let remove = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(doPin(_:)))
+        if let card = self.card, SetBuilder.shared.pinnedCards.contains(card) {
+            self.navigationItem.rightBarButtonItem = remove
+        } else {
+            self.navigationItem.rightBarButtonItem = add
+        }
+    }
+    
     @IBAction func close(sender: UIButton?) {
         self.dismiss(animated: true)
+    }
+    
+    @objc func doPin(_ sender: UIBarButtonItem) {
+        guard let card = self.card else { return }
+        if SetBuilder.shared.pinnedCards.contains(card) {
+            SetBuilder.shared.unpinCard(card)
+        } else {
+            SetBuilder.shared.pinCard(card)
+        }
+        setupPinButton()
     }
 }
 

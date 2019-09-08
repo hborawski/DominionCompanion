@@ -12,19 +12,6 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
-    var maxCards = 10 - 1
-    var pinnedCards: [Card] = []
-    var randomCards: [Card] = []
-
-    var fullSet: [Card] {
-        get {
-            guard randomCards.count > 0 else { return [] }
-            let numberToPick = maxCards - pinnedCards.count
-            return pinnedCards + Array(randomCards[0...(numberToPick < randomCards.count ? numberToPick : (randomCards.count - 1))])
-        }
-    }
-    
-    var poolOfCards: [Card] = []
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -32,14 +19,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         registerForPreviewing(with: self, sourceView: tableView)
 
-        self.poolOfCards = FilterEngine.shared.matchAnyFilter
-//        let matchingCards = FilterEngine.shared.matchAllFilters
         self.shuffleSet()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.poolOfCards = FilterEngine.shared.matchAnyFilter
         self.tableView.reloadData()
     }
     
@@ -49,8 +33,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func shuffleSet() {
-        FilterEngine.shared.getMatchingSet(self.pinnedCards) { cards in
-            self.randomCards = cards.filter{ !self.pinnedCards.contains($0) }
+        SetBuilder.shared.shuffleSet {
             self.tableView.reloadData()
         }
     }
@@ -75,9 +58,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return self.fullSet.count
+            return SetBuilder.shared.fullSet.count
         case 1:
-            return self.poolOfCards.count
+            return SetBuilder.shared.cardPool.count
         default:
             return 0
         }
@@ -87,31 +70,23 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
-        let card = indexPath.section == 0 ? self.fullSet[indexPath.row] : self.poolOfCards[indexPath.row]
-        cell.setData(card, favorite: self.pinnedCards.contains(card))
+        let card = indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
+        cell.setData(card, favorite: SetBuilder.shared.pinnedCards.contains(card))
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            let card = self.fullSet[indexPath.row]
-            if self.pinnedCards.contains(card) {
-                if let pinnedIndex = self.pinnedCards.index(of: card) {
-                    self.pinnedCards.remove(at: pinnedIndex)
-                    self.randomCards.insert(card, at: 0)
-                }
+            let card = SetBuilder.shared.fullSet[indexPath.row]
+            if SetBuilder.shared.pinnedCards.contains(card) {
+                SetBuilder.shared.unpinCard(card)
             } else {
-                self.pinnedCards.append(card)
-                if let randomIndex = self.randomCards.index(of: card) {
-                    self.randomCards.remove(at: randomIndex)
-                }
+                SetBuilder.shared.pinCard(card)
             }
         case 1:
-            let card = self.poolOfCards[indexPath.row]
-            if nil == self.pinnedCards.index(of: card) {
-                self.pinnedCards.append(card)
-            }
+            let card = SetBuilder.shared.cardPool[indexPath.row]
+            SetBuilder.shared.pinCard(card)
         default:
             break
         }
@@ -127,7 +102,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         guard let cardViewController = storyboard?.instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return nil }
         
-        cardViewController.card = indexPath.section == 0 ? self.fullSet[indexPath.row] : self.poolOfCards[indexPath.row]
+        cardViewController.card = indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
         
         return cardViewController
     }

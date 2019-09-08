@@ -119,7 +119,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         } else if pickerView == cardOperationPicker {
             return NumberFilter.availableOperations.count
         } else if pickerView == cardValuePicker {
-            return 10
+            return 11
         }
         return 0
     }

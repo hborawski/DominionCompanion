@@ -23,6 +23,7 @@
 		AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1B6EC82324945D00ADA74D /* Icons.xcassets */; };
 		AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */; };
+		AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
 		AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4122A4843B008E09B2 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		AF1B6EC6232463FD00ADA74D /* CardProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProperty.swift; sourceTree = "<group>"; };
 		AF1B6EC82324945D00ADA74D /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedCardCell.swift; sourceTree = "<group>"; };
+		AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilder.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				AF1B6EAB2324226800ADA74D /* CardData.swift */,
 				AF1B6EB0232432A700ADA74D /* FilterEngine.swift */,
 				AF1B6EC6232463FD00ADA74D /* CardProperty.swift */,
+				AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6EC123244FEF00ADA74D /* NumberFilter.swift in Sources */,
 				AF1B6EC52324515D00ADA74D /* StringFilter.swift in Sources */,
+				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,

@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 
 class SetFilterCell : UITableViewCell {
+    @IBOutlet var cardOperationLabel: UILabel!
     @IBOutlet var cardCountLabel: UILabel!
     @IBOutlet var propertyLabel: UILabel!
     @IBOutlet var operationLabel: UILabel!
     @IBOutlet var valueLabel: UILabel!
     
     func setData(filter: SetFilter) {
+        self.cardOperationLabel.text = filter.operation.rawValue
         self.cardCountLabel.text = "\(filter.value)"
         self.propertyLabel.text = "\(filter.propertyFilter.property)"
         self.operationLabel.text = filter.propertyFilter.operation.rawValue
