@@ -9,19 +9,25 @@
 import Foundation
 
 enum CardProperty: String, CaseIterable {
-    static var allCases : [CardProperty] = [.cost, .name, .expansion, .type]
+    static var allCases : [CardProperty] = [.cost, .actions, .buys, .cards, .expansion, .type]
     case cost = "Cost"
-    case name = "Name"
     case expansion = "Expansion"
     case type = "Type"
+    case buys = "+ Buys"
+    case actions = "+ Actions"
+    case cards = "+ Cards"
     
     var inputType: PropertyFilter.Type {
         get {
             switch self {
             case .cost:
                 return NumberFilter.self
-            case .name:
-                return StringFilter.self
+            case .actions:
+                return NumberFilter.self
+            case .buys:
+                return NumberFilter.self
+            case .cards:
+                return NumberFilter.self
             case .expansion:
                 return ListFilter.self
             case .type:
@@ -35,7 +41,11 @@ enum CardProperty: String, CaseIterable {
             switch self {
             case .cost:
                 return []
-            case .name:
+            case .actions:
+                return []
+            case .buys:
+                return []
+            case .cards:
                 return []
             case .expansion:
                 return CardData.shared.expansions

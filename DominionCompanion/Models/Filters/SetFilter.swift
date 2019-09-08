@@ -17,7 +17,12 @@ struct SetFilter {
         return cards.filter{propertyFilter.match($0)}
     }
     
+    private func hasMatch(_ cards: [Card]) -> Bool {
+        return nil != cards.firstIndex { propertyFilter.match($0) }
+    }
+    
     func match(_ cards: [Card]) -> Bool {
+        guard self.hasMatch(cards) else { return false }
         let setValue = self.matchingCards(cards).count
         switch self.operation {
         case .greater:

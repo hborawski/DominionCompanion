@@ -3457,7 +3457,7 @@
     },
     {
         "potion": false,
-        "cost": "5",
+        "cost": 5,
         "raw_buys": [
             [
                 "+",

@@ -42,10 +42,27 @@ class FilterEngine {
         }
     }
     
+    
     init() {
     }
     
     // MARK: Public API
+    func getMatchingSet(_ pinned: [Card], _ completion: @escaping ([Card]) -> Void) {
+        guard filters.count > 0 else {
+            completion(Array(cardData.shuffled()[0...9]))
+            return
+        }
+        DispatchQueue.main.async {
+            var attempts = 0
+            var testSet = Array(self.cardData.shuffled()[0...9])
+            while !self.matchesAllFilters(testSet, self.filters) && attempts < 2000 {
+                testSet = Array(self.cardData.shuffled()[0...9])
+                attempts += 1
+            }
+            completion(testSet)
+        }
+    }
+    
     func addFilter(_ filter: SetFilter) {
         self.filters.append(filter)
     }
@@ -59,4 +76,9 @@ class FilterEngine {
         return cards.filter{filter.match($0)}
     }
     
+    func matchesAllFilters(_ cards: [Card], _ filters: [SetFilter]) -> Bool {
+        return filters.reduce(true) { (acc: Bool, cv: SetFilter) -> Bool in
+            return acc && cv.match(cards)
+        }
+    }
 }

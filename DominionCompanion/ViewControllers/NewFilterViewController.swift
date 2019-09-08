@@ -11,11 +11,17 @@ import UIKit
 
 class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     // MARK: Outlets
+    @IBOutlet weak var cardOperationPicker: UIPickerView!
+    @IBOutlet weak var cardValuePicker: UIPickerView!
+    
     @IBOutlet weak var propertyPicker: UIPickerView!
     @IBOutlet weak var operationPicker: UIPickerView!
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var valuePicker: UIPickerView!
 
+    var cardOperation: FilterOperation = .greaterOrEqual
+    var cardValue: Int = 0
+    
     var selectedProperty : CardProperty?
     var selectedOperation : FilterOperation?
     var selectedValue: String = ""
@@ -41,7 +47,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             let operation = self.selectedOperation
             else { return }
         let propFilter = T.init(property: property, value: self.selectedValue, operation: operation)
-        let setFilter = SetFilter(value: 1, operation: .equal, propertyFilter: propFilter)
+        let setFilter = SetFilter(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
         FilterEngine.shared.addFilter(setFilter)
         self.navigationController?.popViewController(animated: true)
     }
@@ -58,6 +64,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             return self.availableOperations.count
         } else if pickerView == valuePicker {
             return self.selectedProperty?.all.count ?? 0
+        } else if pickerView == cardOperationPicker {
+            return NumberFilter.availableOperations.count
+        } else if pickerView == cardValuePicker {
+            return 10
         }
         return 0
     }
@@ -69,6 +79,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             return self.availableOperations[row].rawValue
         } else if pickerView == valuePicker {
             return self.selectedProperty?.all[row]
+        } else if pickerView == cardOperationPicker {
+            return NumberFilter.availableOperations[row].rawValue
+        } else if pickerView == cardValuePicker {
+            return "\(row)"
         }
         return ""
     }
@@ -76,6 +90,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     // MARK: Picker Selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let updateSelectedValue = { (_ position: Int) -> Void in
+            guard let all = self.selectedProperty?.all, all.count > 0 else { return }
             if let value = self.selectedProperty?.all[position] {
                 self.selectedValue = value
             } else {
@@ -90,6 +105,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             self.selectedOperation = self.availableOperations[row]
         } else if pickerView == valuePicker {
             updateSelectedValue(row)
+        } else if pickerView == cardOperationPicker {
+            self.cardOperation = NumberFilter.availableOperations[row]
+        } else if pickerView == cardValuePicker {
+            self.cardValue = row
         }
         self.valuePicker.reloadAllComponents()
         self.operationPicker.reloadAllComponents()

@@ -12,9 +12,19 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
+    var maxCards = 10
+    var pinnedCards: [Card] = []
+    var randomCards: [Card] = []
+
+    var fullSet: [Card] {
+        get {
+            guard randomCards.count > 0 else { return [] }
+            let numberToPick = maxCards - pinnedCards.count
+            return pinnedCards + Array(randomCards[0...numberToPick])
+        }
+    }
     
-    var set: [Card] = []
-    var filteredCards: [Card] = []
+    var poolOfCards: [Card] = []
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -22,20 +32,23 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         registerForPreviewing(with: self, sourceView: tableView)
 
-        self.filteredCards = FilterEngine.shared.matchAnyFilter
+        self.poolOfCards = FilterEngine.shared.matchAnyFilter
+        let matchingCards = FilterEngine.shared.matchAllFilters
+        self.randomCards = Array(matchingCards.shuffled()[0...(matchingCards.count > maxCards ? maxCards : (matchingCards.count - 1))])
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.filteredCards = FilterEngine.shared.matchAnyFilter
+        self.poolOfCards = FilterEngine.shared.matchAnyFilter
         self.tableView.reloadData()
     }
     
     // MARK: Button Handlers
     @IBAction func shuffleSet(_ sender: UIButton) {
-        let matchingCards = FilterEngine.shared.matchAllFilters
-        self.set = Array(matchingCards.shuffled()[0...(matchingCards.count > 10 ? 10 : (matchingCards.count - 1))])
-        self.tableView.reloadData()
+        FilterEngine.shared.getMatchingSet(self.pinnedCards) { cards in
+            self.randomCards = cards.filter{ !self.pinnedCards.contains($0) }
+            self.tableView.reloadData()
+        }
     }    
     
     // MARK: UITableViewDataSource
@@ -51,23 +64,43 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return self.set.count
+            return self.fullSet.count
         case 1:
-            return self.filteredCards.count
+            return self.poolOfCards.count
         default:
             return 0
         }
     }
     
+    // MARK: UITableViewDelegate
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell")!
-        let card = indexPath.section == 0 ? self.set[indexPath.row] : self.filteredCards[indexPath.row]
-        cell.textLabel?.text = card.name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
+        let card = indexPath.section == 0 ? self.fullSet[indexPath.row] : self.poolOfCards[indexPath.row]
+        cell.setData(card, favorite: self.pinnedCards.contains(card))
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        switch indexPath.section {
+        case 0:
+            let card = self.fullSet[indexPath.row]
+            if self.pinnedCards.contains(card) {
+                if let pinnedIndex = self.pinnedCards.index(of: card) {
+                    self.pinnedCards.remove(at: pinnedIndex)
+                }
+            } else {
+                self.pinnedCards.append(card)
+            }
+        case 1:
+            let card = self.poolOfCards[indexPath.row]
+            if nil == self.pinnedCards.index(of: card) {
+                self.pinnedCards.append(card)
+            }
+        default:
+            break
+        }
+        self.tableView.reloadData()
     }
 
     // MARK: 3D Touch
@@ -79,7 +112,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         guard let cardViewController = storyboard?.instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return nil }
         
-        cardViewController.card = indexPath.section == 0 ? self.set[indexPath.row] : self.filteredCards[indexPath.row]
+        cardViewController.card = indexPath.section == 0 ? self.fullSet[indexPath.row] : self.poolOfCards[indexPath.row]
         
         return cardViewController
     }
