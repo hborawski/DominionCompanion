@@ -19,6 +19,7 @@ class FilterEngine {
     
     var matchAnyFilter: [Card] {
         get {
+            guard filters.count > 0 else { return cardData }
             let cards = filters.reduce([]) { (cards: [Card], filter: SetFilter) -> [Card] in
                 let cardSet = Set(cards)
                 let filtered = filter.matchingCards(cardData)

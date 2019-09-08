@@ -21,11 +21,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         
         registerForPreviewing(with: self, sourceView: tableView)
-        
-        let f = NumberFilter(property: .cost, value: "2", operation: .equal)
-//        let g = StringFilter(property: .expansion, value: "Seaside", operation: .equal)
-        let s = SetFilter(value: 1, operation: .greaterOrEqual, propertyFilter: f)
-        FilterEngine.shared.addFilter(s)
+
         self.filteredCards = FilterEngine.shared.matchAnyFilter
     }
     
@@ -38,7 +34,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Button Handlers
     @IBAction func shuffleSet(_ sender: UIButton) {
         let matchingCards = FilterEngine.shared.matchAllFilters
-        self.set = Array(Utilities.shuffleArray(matchingCards)[0...(matchingCards.count > 10 ? 10 : (matchingCards.count - 1))])
+        self.set = Array(matchingCards.shuffled()[0...(matchingCards.count > 10 ? 10 : (matchingCards.count - 1))])
         self.tableView.reloadData()
     }    
     

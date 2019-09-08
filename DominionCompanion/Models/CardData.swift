@@ -27,7 +27,7 @@ class CardData {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonDict = json as? Array<AnyObject> {
-                    self.cardData = jsonDict.map { Card($0 as! Dictionary<String, AnyObject>) }
+                    self.cardData = jsonDict.map({ Card($0 as! Dictionary<String, AnyObject>) }).sorted(by: Utilities.alphabeticSort(card1:card2:))
                 } else {
                     self.cardData = []
                 }
