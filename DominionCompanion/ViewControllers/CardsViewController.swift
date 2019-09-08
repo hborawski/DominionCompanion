@@ -9,6 +9,8 @@
 import UIKit
 
 class CardsViewController: UITableViewController, UISearchBarDelegate {
+    
+    
     var rawCardData : [Card]? = []
     var cardData: [Card]? = []
     
@@ -37,9 +39,7 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = cardData?.count else {
-            return 0
-        }
+        guard let count = cardData?.count else { return 0 }
         return count
     }
     
@@ -56,18 +56,13 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let index = indexPath.last {
-            performSegue(withIdentifier: "cardDetail", sender: self.cardData?[index])
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is CardViewController,
-            let card = sender as? Card,
-            let vc = segue.destination as? CardViewController
+        guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
+        if segue.identifier == "ViewCard",
+            let cardVC = segue.destination as? CardViewController,
+            let card = self.cardData?[indexPath.row]
         {
-            vc.card = card
+            cardVC.card = card
         }
     }
     

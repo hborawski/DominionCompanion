@@ -15,18 +15,13 @@ class CardViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.nameLabel?.text = self.card?.name
-        self.textLabel?.text = self.card?.text
-        do {
-            if let name = self.card?.name,
-                let path = Bundle.main.path(forResource: "cards/\(name)", ofType: "jpg") {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                let imageData = UIImage(data: data)
-                self.imageView.image = imageData
-            }
-        } catch {
-            
+        guard let card = self.card else { return }
+        if let name = card.name, let expansion = card.expansion {
+            self.nameLabel.text = "\(name) - \(expansion)"
+        }
+        self.textLabel?.text = card.text
+        if let image = card.image() {
+            self.imageView.image = image
         }
     }
     

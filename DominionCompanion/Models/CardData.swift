@@ -13,6 +13,14 @@ class CardData {
     
     let cardData: [Card]
     
+    let maxPrice: Int
+    
+    let expansions: [String]
+    
+    let allAttributes: [CardProperty]
+    
+    let allTypes: [String]
+    
     init() {
         do {
             if let path = Bundle.main.path(forResource: "cards", ofType: "json") {
@@ -30,5 +38,17 @@ class CardData {
             self.cardData = []
             print("Error")
         }
+        
+        self.maxPrice = self.cardData.map({$0.cost ?? 0}).max(by: {$0<$1}) ?? 0
+        self.expansions = self.cardData.map({$0.expansion ?? ""}).filter { $0 != "" }
+        
+        self.allTypes = self.cardData.map({$0.types ?? []}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
+            let fullSet = Set(allTypes)
+            let newSet = Set(types)
+            return Array(fullSet.union(newSet))
+        })
+        
+        self.allAttributes = CardProperty.allCases
+        
     }
 }

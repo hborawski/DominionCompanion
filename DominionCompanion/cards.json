@@ -1741,7 +1741,8 @@
         ],
         "expansion": "Nocturne",
         "types": [
-            "Action - Spirit"
+            "Action",
+            "Spirit"
         ],
         "coins": 0,
         "raw_actions": [
@@ -2569,7 +2570,9 @@
         "raw_cards": [],
         "expansion": "Nocturne",
         "types": [
-            "Treasure - Victory - Heirloom"
+            "Treasure",
+            "Victory",
+            "Heirloom"
         ],
         "coins": 0,
         "raw_actions": [],
@@ -3903,7 +3906,8 @@
         "raw_cards": [],
         "expansion": "Nocturne",
         "types": [
-            "Action - Zombie"
+            "Action",
+            "Zombie"
         ],
         "coins": 0,
         "raw_actions": [],
@@ -5551,7 +5555,8 @@
         ],
         "expansion": "Nocturne",
         "types": [
-            "Action - Zombie"
+            "Action",
+            "Zombie"
         ],
         "coins": 0,
         "raw_actions": [
@@ -6922,7 +6927,8 @@
         ],
         "expansion": "Nocturne",
         "types": [
-            "Action - Zombie"
+            "Action",
+            "Zombie"
         ],
         "coins": 0,
         "raw_actions": [
@@ -13651,7 +13657,9 @@
         ],
         "expansion": "Nocturne",
         "types": [
-            "Night - Duration - Spirit"
+            "Night",
+            "Duration",
+            "Spirit"
         ],
         "coins": 0,
         "raw_actions": [],
