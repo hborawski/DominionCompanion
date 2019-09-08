@@ -57,7 +57,15 @@ struct SetFilter: Codable {
     }
     
     private func hasMatch(_ cards: [Card]) -> Bool {
-        return nil != cards.firstIndex { propertyFilter.match($0) }
+        if let i = cards.firstIndex(where: { (card: Card) -> Bool in
+            let matched = propertyFilter.match(card)
+            return matched
+        }) {
+            return true
+        } else {
+            return false
+        }
+//        return nil != cards.firstIndex { propertyFilter.match($0) }
     }
     
     func match(_ cards: [Card]) -> Bool {
@@ -65,17 +73,17 @@ struct SetFilter: Codable {
         let setValue = self.matchingCards(cards).count
         switch self.operation {
         case .greater:
-            return value > setValue
+            return setValue > value
         case .greaterOrEqual:
-            return value >= setValue
+            return setValue >= value
         case .equal:
-            return value == setValue
+            return setValue == value
         case .lessOrEqual:
-            return value <= setValue
+            return setValue <= value
         case .less:
-            return value > setValue
+            return setValue > value
         case .notEqual:
-            return value != setValue
+            return setValue != value
         }
     }
 }

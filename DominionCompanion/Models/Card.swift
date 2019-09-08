@@ -85,3 +85,15 @@ extension Card: Hashable {
         hasher.combine(self.cost)
     }
 }
+
+extension Array where Element : Card {
+    func cardString() -> String {
+        return self.map({ card in
+            if let cost = card.cost,
+                let actions = card.actions {
+                return "cost\(cost):actions\(actions)"
+            }
+            return ""
+        }).joined(separator: "|")
+    }
+}

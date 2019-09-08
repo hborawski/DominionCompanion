@@ -40,6 +40,8 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         self.selectedProperty = CardProperty.allCases[0]
         self.selectedOperation = self.selectedProperty?.inputType.availableOperations[0]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addFilter(_:)))
+        
+        self.valueTextField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -192,6 +194,11 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        self.selectedValue = text
+    }
+    
+    @objc func textFieldChanged(_ textField: UITextField) {
         guard let text = textField.text else { return }
         self.selectedValue = text
     }

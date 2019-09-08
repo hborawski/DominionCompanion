@@ -53,14 +53,25 @@ class FilterEngine {
             completion(Array(cardData.shuffled()[0...9]))
             return
         }
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .background).async {
             var attempts = 0
             var testSet = Array(self.cardData.shuffled()[0...9])
             while !self.matchesAllFilters(testSet, self.filters) && attempts < 2000 {
                 testSet = Array(self.cardData.shuffled()[0...9])
+                let stringRep = testSet.map({ (card: Card) -> String in
+                    if let cost = card.cost,
+                        let actions = card.actions {
+                        return "cost:\(cost) actions:\(actions)"
+                    } else {
+                        return ""
+                    }
+                })
+                print(stringRep.joined(separator: "|"))
                 attempts += 1
             }
-            completion(testSet)
+            DispatchQueue.main.async {
+                completion(testSet)
+            }
         }
     }
     
@@ -91,7 +102,11 @@ class FilterEngine {
     
     func matchesAllFilters(_ cards: [Card], _ filters: [SetFilter]) -> Bool {
         return filters.reduce(true) { (acc: Bool, cv: SetFilter) -> Bool in
-            return acc && cv.match(cards)
+            let setMatched = cv.match(cards)
+            if !setMatched {
+                print(cards.cardString())
+            }
+            return acc && setMatched
         }
     }
     
