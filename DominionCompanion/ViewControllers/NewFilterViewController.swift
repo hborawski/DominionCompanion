@@ -38,10 +38,9 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @objc func addFilter(_ sender: UIBarButtonItem) {
         guard let T = self.selectedProperty?.inputType,
             let property = self.selectedProperty,
-            let operation = self.selectedOperation,
-            let value = self.valueTextField.text
+            let operation = self.selectedOperation
             else { return }
-        let propFilter = T.init(property: property, value: value, operation: operation)
+        let propFilter = T.init(property: property, value: self.selectedValue, operation: operation)
         let setFilter = SetFilter(value: 1, operation: .equal, propertyFilter: propFilter)
         FilterEngine.shared.addFilter(setFilter)
         self.navigationController?.popViewController(animated: true)
@@ -55,9 +54,12 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == propertyPicker {
             return CardData.shared.allAttributes.count
-        } else {
+        } else if pickerView == operationPicker {
             return self.availableOperations.count
+        } else if pickerView == valuePicker {
+            return self.selectedProperty?.all.count ?? 0
         }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -66,40 +68,64 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         } else if pickerView == operationPicker{
             return self.availableOperations[row].rawValue
         } else if pickerView == valuePicker {
-            
-            return ""
+            return self.selectedProperty?.all[row]
         }
         return ""
     }
     
     // MARK: Picker Selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let updateSelectedValue = { (_ position: Int) -> Void in
+            if let value = self.selectedProperty?.all[position] {
+                self.selectedValue = value
+            } else {
+                self.selectedValue = ""
+            }
+        }
         if pickerView == propertyPicker {
             self.selectedProperty = CardData.shared.allAttributes[row]
             self.selectedOperation = self.availableOperations[0]
+            updateSelectedValue(0)
         } else if pickerView == operationPicker {
             self.selectedOperation = self.availableOperations[row]
         } else if pickerView == valuePicker {
-            self.selectedValue = ""
+            updateSelectedValue(row)
         }
+        self.valuePicker.reloadAllComponents()
         self.operationPicker.reloadAllComponents()
         updateEntryView()
     }
     
     func updateEntryView() {
         guard let T = self.selectedProperty?.inputType else { return }
+        let animateAlphas = { (textView: Bool) -> Void in
+            UIView.animate(withDuration: 0.2) {
+                self.valueTextField.alpha = textView ? 1.0 : 0.0
+                self.valuePicker.alpha = textView ? 0.0 : 1.0
+            }
+        }
         if T == NumberFilter.self {
-            self.valueTextField.placeholder = "Number"
+            animateAlphas(true)
+            self.valueTextField.placeholder = "0"
+            self.valueTextField.keyboardType = .default
         } else if T == StringFilter.self {
+            animateAlphas(true)
             self.valueTextField.placeholder = "String"
+            self.valueTextField.keyboardType = .default
         } else if T == ListFilter.self {
+            animateAlphas(false)
             self.valueTextField.placeholder = "List"
         }
     }
     
-    // MARK: TextFieldDelegate    
+    // MARK: TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        self.selectedValue = text
     }
 }

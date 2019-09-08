@@ -29,6 +29,18 @@ class FilterEngine {
         }
     }
     
+    var matchAllFilters: [Card] {
+        get {
+            let cards = filters.reduce(cardData) { (cards: [Card], filter: SetFilter) -> [Card] in
+                let cardSet = Set(cards)
+                let filtered = filter.matchingCards(cardData)
+                let filterSet = Set(filtered)
+                return Array(cardSet.intersection(filterSet))
+            }
+            return cards
+        }
+    }
+    
     init() {
     }
     

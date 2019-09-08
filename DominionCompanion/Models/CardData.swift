@@ -40,7 +40,7 @@ class CardData {
         }
         
         self.maxPrice = self.cardData.map({$0.cost ?? 0}).max(by: {$0<$1}) ?? 0
-        self.expansions = self.cardData.map({$0.expansion ?? ""}).filter { $0 != "" }
+        self.expansions = Array(Set(self.cardData.flatMap({$0.expansion ?? []}).filter { $0 != "" }))
         
         self.allTypes = self.cardData.map({$0.types ?? []}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
             let fullSet = Set(allTypes)

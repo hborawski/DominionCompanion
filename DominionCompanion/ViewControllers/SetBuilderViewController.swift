@@ -37,7 +37,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: Button Handlers
     @IBAction func shuffleSet(_ sender: UIButton) {
-        self.set = Array(Utilities.shuffleArray(self.filteredCards)[0...10])
+        let matchingCards = FilterEngine.shared.matchAllFilters
+        self.set = Array(Utilities.shuffleArray(matchingCards)[0...(matchingCards.count > 10 ? 10 : (matchingCards.count - 1))])
         self.tableView.reloadData()
     }    
     
