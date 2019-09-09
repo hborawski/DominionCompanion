@@ -18,8 +18,10 @@ class SetBuilder {
     var fullSet: [Card] {
         get {
             guard self.randomCards.count > 0 else { return [] }
-            let numberToPick = maxCards - self.pinnedCards.count
-            return pinnedCards + Array(randomCards[0...(numberToPick < randomCards.count ? numberToPick : (randomCards.count - 1))])
+            let openSlots = maxCards - self.pinnedCards.count
+            guard openSlots > 0 else { return self.pinnedCards }
+            let numberToPick = openSlots < self.randomCards.count ? openSlots : (self.randomCards.count - 1)
+            return pinnedCards + Array(self.randomCards[0...numberToPick])
         }
     }
     
@@ -29,6 +31,7 @@ class SetBuilder {
     }
     
     func pinCard(_ card: Card) {
+        guard self.pinnedCards.count < maxCards else { return }
         guard !self.pinnedCards.contains(card) else { return }
         self.pinnedCards.append(card)
         if let index = self.randomCards.index(of: card) {

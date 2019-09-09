@@ -40,7 +40,7 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cardCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else {
             print("couldn't get a cell")
             return UITableViewCell()
         }
@@ -48,7 +48,10 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
             cell.textLabel?.text = "Error With Index"
             return cell
         }
-        cell.textLabel?.text = self.cardData?[index].name
+//        cell.textLabel?.text = self.cardData?[index].name
+        if let card = self.cardData?[index] {
+            cell.setData(card)
+        }
         return cell
     }
     

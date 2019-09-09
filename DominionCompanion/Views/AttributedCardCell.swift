@@ -12,6 +12,7 @@ import UIKit
 class AttributedCardCell : UITableViewCell {
     @IBOutlet weak var pinnedLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var costBackground: UIView!
     @IBOutlet weak var cardColorView: UIStackView!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -19,9 +20,26 @@ class AttributedCardCell : UITableViewCell {
         self.pinnedLabel.text = favorite ? "pinned" : ""
         self.nameLabel.text = card.name
         self.costLabel.text = "\(card.cost)"
-//        cardColorView.backgroundColor = card.colors.first
         makeColorView(card.colors)
-//        makeTypeView(card.types)
+        makeCostView()
+    }
+    
+    func makeCostView() {
+        guard let costBackground = self.costBackground,
+            let costLabel = self.costLabel else { return }
+        let dimension = costLabel.frame.width
+        let circleView = UIView()
+        costBackground.insertSubview(circleView, at: 0)
+        
+        circleView.layer.cornerRadius = dimension / 2
+        circleView.translatesAutoresizingMaskIntoConstraints = false
+        circleView.heightAnchor.constraint(equalToConstant: dimension).isActive = true
+        circleView.widthAnchor.constraint(equalToConstant: dimension).isActive = true
+        circleView.centerXAnchor.constraint(equalTo: costLabel.centerXAnchor).isActive = true
+        circleView.centerYAnchor.constraint(equalTo: costLabel.centerYAnchor).isActive = true
+        circleView.backgroundColor = UIColor(named: "Treasure")
+        costBackground.layoutIfNeeded()
+        
     }
     
     func makeColorView(_ colors: [UIColor]) {

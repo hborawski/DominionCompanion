@@ -64,6 +64,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
+            let set = SetBuilder.shared.fullSet
+            print(set)
             return shuffling ? 1 : SetBuilder.shared.fullSet.count
         case 1:
             return SetBuilder.shared.cardPool.count
