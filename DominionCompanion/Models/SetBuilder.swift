@@ -13,21 +13,29 @@ class SetBuilder {
     var maxCards = 10
     var cardPool: [Card] = []
     var pinnedCards: [Card] = []
-    var randomCards: [Card] = []
-    
-    var fullSet: [Card] {
-        get {
-            guard self.randomCards.count > 0 else { return [] }
-            let openSlots = maxCards - self.pinnedCards.count
-            guard openSlots > 0 else { return self.pinnedCards }
-            let numberToPick = openSlots < self.randomCards.count ? openSlots : (self.randomCards.count - 1)
-            return pinnedCards + Array(self.randomCards[0...numberToPick])
+    var randomCards: [Card] {
+        didSet {
+            guard randomCards.count > 0 else {
+                fullSet = pinnedCards
+                return
+            }
+            let openSlots = maxCards - pinnedCards.count
+            guard openSlots > 0 else {
+                fullSet = pinnedCards
+                return
+            }
+            let numberToPick = openSlots < randomCards.count ? openSlots : (randomCards.count - 1)
+            let randoms = Array(randomCards[0...numberToPick])
+            fullSet = pinnedCards + randoms
         }
     }
+    
+    var fullSet: [Card] = []
     
     
     init() {
         self.cardPool = FilterEngine.shared.matchAnyFilter.sorted(by: Utilities.alphabeticSort(card1:card2:))
+        self.randomCards = []
     }
     
     func pinCard(_ card: Card) {
