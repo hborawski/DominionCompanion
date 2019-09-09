@@ -12,22 +12,11 @@ class SetBuilder {
     public static var shared: SetBuilder = SetBuilder()
     var maxCards = 10
     var cardPool: [Card] = []
-    var pinnedCards: [Card] = []
+    var pinnedCards: [Card] {
+        didSet { fullSet = getFullSet() }
+    }
     var randomCards: [Card] {
-        didSet {
-            guard randomCards.count > 0 else {
-                fullSet = pinnedCards
-                return
-            }
-            let openSlots = maxCards - pinnedCards.count
-            guard openSlots > 0 else {
-                fullSet = pinnedCards
-                return
-            }
-            let numberToPick = openSlots < randomCards.count ? openSlots : (randomCards.count - 1)
-            let randoms = Array(randomCards[0...numberToPick])
-            fullSet = pinnedCards + randoms
-        }
+        didSet { fullSet = getFullSet() }
     }
     
     var fullSet: [Card] = []
@@ -36,28 +25,42 @@ class SetBuilder {
     init() {
         self.cardPool = FilterEngine.shared.matchAnyFilter.sorted(by: Utilities.alphabeticSort(card1:card2:))
         self.randomCards = []
+        self.pinnedCards = []
     }
     
     func pinCard(_ card: Card) {
-        guard self.pinnedCards.count < maxCards else { return }
-        guard !self.pinnedCards.contains(card) else { return }
-        self.pinnedCards.append(card)
-        if let index = self.randomCards.index(of: card) {
-            self.randomCards.remove(at: index)
+        guard pinnedCards.count < maxCards else { return }
+        guard !pinnedCards.contains(card) else { return }
+        pinnedCards.append(card)
+        if let index = randomCards.index(of: card) {
+            randomCards.remove(at: index)
         }
     }
     
     func unpinCard(_ card: Card) {
-        guard self.pinnedCards.contains(card) else { return }
-        guard let index = self.pinnedCards.index(of: card) else { return }
-        self.pinnedCards.remove(at: index)
-        self.randomCards.insert(card, at: 0)
+        guard pinnedCards.contains(card) else { return }
+        guard let index = pinnedCards.index(of: card) else { return }
+        pinnedCards.remove(at: index)
+        randomCards.insert(card, at: 0)
+        if randomCards.count > maxCards - pinnedCards.count {
+            randomCards.remove(at: randomCards.count - 1)
+        }
     }
     
     func shuffleSet(_ completion: @escaping () -> ()) {
-        FilterEngine.shared.getMatchingSet(self.pinnedCards) { cards in
+        FilterEngine.shared.getMatchingSet(pinnedCards) { cards in
             self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
             completion()
         }
+    }
+    
+    // MARK: Private
+    private func getFullSet() -> [Card] {
+        guard randomCards.count > 0 else { return pinnedCards }
+        let openSlots = maxCards - pinnedCards.count
+        guard openSlots > 0 else { return pinnedCards }
+        let numberToPick = openSlots < randomCards.count ? openSlots : (randomCards.count - 1)
+        let randoms = Array(randomCards[0...numberToPick])
+        return pinnedCards + randoms
     }
 }
