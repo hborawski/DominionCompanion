@@ -18,6 +18,7 @@ class Card {
     var text: String = ""
     var expansion: String = ""
     var types: [String] = []
+    var colors: [UIColor] = []
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
             let cost = cardData["cost"] as? Int,
@@ -39,6 +40,9 @@ class Card {
         } else {
             print(cardData)
         }
+        self.colors = self.types.map({(type: String) -> UIColor? in
+            return UIColor(named: type)
+        }).filter { $0 != nil } as! [UIColor]
     }
     public func getProperty(_ property: CardProperty) -> Any {
         switch property {

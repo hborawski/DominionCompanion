@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utilities {    
     public static func alphabeticSort(card1: Card, card2: Card) -> Bool {
@@ -32,5 +33,22 @@ class Utilities {
     
     public static func combos<T>(elements: Array<T>, k: Int) -> [[T]] {
         return combos(elements: ArraySlice(elements), k: k)
+    }
+}
+
+extension UIStackView {
+    
+    func removeAllArrangedSubviews() {
+        
+        let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
+            self.removeArrangedSubview(subview)
+            return allSubviews + [subview]
+        }
+        
+        // Deactivate all constraints
+        NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
+        
+        // Remove the views from self
+        removedSubviews.forEach({ $0.removeFromSuperview() })
     }
 }
