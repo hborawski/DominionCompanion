@@ -10,18 +10,18 @@ import UIKit
 
 class CardsViewController: UITableViewController, UISearchBarDelegate {
     
-    
-    var rawCardData : [Card]? = []
+    var cardsToDisplay : [Card]? = nil
+    var rawCardData : [Card] = []
     var cardData: [Card]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rawCardData = CardData.shared.allCards
+        self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
         self.filterCards("")
     }
     
     func filterCards(_ searchText: String) {
-        self.cardData = self.rawCardData?
+        self.cardData = self.rawCardData
             .filter { card -> Bool in
                 guard searchText != "" else { return true }
                 return card.name.lowercased().contains(searchText.lowercased())
@@ -48,7 +48,6 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
             cell.textLabel?.text = "Error With Index"
             return cell
         }
-//        cell.textLabel?.text = self.cardData?[index].name
         if let card = self.cardData?[index] {
             cell.setData(card)
         }

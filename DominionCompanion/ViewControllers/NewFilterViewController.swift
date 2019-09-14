@@ -46,6 +46,13 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             return T.init(property: property, value: self.selectedValue, operation: operation)
         }
     }
+    
+    var matchingCards: [Card] {
+        get {
+            guard let propFilter = self.currentFilter else { return [] }
+            return CardData.shared.allCards.filter({ propFilter.match($0) })
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -197,13 +204,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         } else if T == BooleanFilter.self {
             animateAlphas(false)
         }
-        updateMatchingCardView()
-    }
-    
-    func updateMatchingCardView() {
-        guard let propFilter = self.currentFilter else { return }
-        let totalCards = CardData.shared.allCards.filter({ propFilter.match($0) }).count
-        self.matchingCardLabel.text = "Matching Cards: \(totalCards)"
+        self.matchingCardLabel.text = "Matching Cards: \(self.matchingCards.count)"
     }
     
     // MARK: TextFieldDelegate
@@ -221,5 +222,13 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @objc func textFieldChanged(_ textField: UITextField) {
         guard let text = textField.text else { return }
         self.selectedValue = text
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            identifier == "ViewMatchingCards",
+            let destination = segue.destination as? CardsViewController
+            else { return }
+        destination.cardsToDisplay = self.matchingCards
     }
 }
