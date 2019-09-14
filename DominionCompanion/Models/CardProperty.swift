@@ -9,13 +9,14 @@
 import Foundation
 
 enum CardProperty: String, Codable {
-    static var allCases : [CardProperty] = [.cost, .actions, .buys, .cards, .expansion, .type]
+    static var allCases : [CardProperty] = [.cost, .actions, .buys, .cards, .expansion, .type, .trash]
     case cost = "Cost"
     case expansion = "Expansion"
     case type = "Type"
     case buys = "+ Buys"
     case actions = "+ Actions"
     case cards = "+ Cards"
+    case trash = "Trash"
     
     
     
@@ -34,6 +35,8 @@ enum CardProperty: String, Codable {
                 return ListFilter.self
             case .type:
                 return ListFilter.self
+            case .trash:
+                return BooleanFilter.self
             }
         }
     }
@@ -53,6 +56,8 @@ enum CardProperty: String, Codable {
                 return CardData.shared.expansions
             case .type:
                 return CardData.shared.allTypes
+            case .trash:
+                return ["true", "false"]
             }
         }
     }

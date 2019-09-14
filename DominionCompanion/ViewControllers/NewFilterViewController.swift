@@ -19,6 +19,8 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var valuePicker: UIPickerView!
     
+    @IBOutlet weak var matchingCardLabel: UILabel!
+    
     var existingFilterIndex: Int?
 
     var cardOperation: FilterOperation = .greaterOrEqual
@@ -32,6 +34,16 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         get {
             guard let operations = self.selectedProperty?.inputType.availableOperations else { return [] }
             return operations
+        }
+    }
+    
+    var currentFilter: PropertyFilter? {
+        get {
+            guard let T = self.selectedProperty?.inputType,
+                let property = self.selectedProperty,
+                let operation = self.selectedOperation
+                else { return nil }
+            return T.init(property: property, value: self.selectedValue, operation: operation)
         }
     }
 
@@ -90,11 +102,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     // MARK: Done Button Handler
     @objc func addFilter(_ sender: UIBarButtonItem) {
-        guard let T = self.selectedProperty?.inputType,
-            let property = self.selectedProperty,
-            let operation = self.selectedOperation
-            else { return }
-        let propFilter = T.init(property: property, value: self.selectedValue, operation: operation)
+        guard let propFilter = self.currentFilter else { return }
         let setFilter = SetFilter(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
         if let index = self.existingFilterIndex {
             FilterEngine.shared.updateFilter(index, setFilter)
@@ -186,7 +194,16 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         } else if T == ListFilter.self {
             animateAlphas(false)
             self.valueTextField.placeholder = "List"
+        } else if T == BooleanFilter.self {
+            animateAlphas(false)
         }
+        updateMatchingCardView()
+    }
+    
+    func updateMatchingCardView() {
+        guard let propFilter = self.currentFilter else { return }
+        let totalCards = CardData.shared.allCards.filter({ propFilter.match($0) }).count
+        self.matchingCardLabel.text = "Matching Cards: \(totalCards)"
     }
     
     // MARK: TextFieldDelegate
@@ -198,6 +215,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         self.selectedValue = text
+        updateEntryView()
     }
     
     @objc func textFieldChanged(_ textField: UITextField) {

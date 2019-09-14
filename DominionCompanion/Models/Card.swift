@@ -19,6 +19,7 @@ class Card {
     var expansion: String = ""
     var types: [String] = []
     var colors: [UIColor] = []
+    var trash: Bool = false
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
             let cost = cardData["cost"] as? Int,
@@ -27,7 +28,8 @@ class Card {
             let cards = cardData["cards"] as? Int,
             let text = cardData["text"] as? String,
             let expansion = cardData["expansion"] as? String,
-            let types = cardData["types"] as? [String]
+            let types = cardData["types"] as? [String],
+            let trash = cardData["trash"] as? Bool
         {
             self.cost = cost
             self.actions = actions
@@ -37,6 +39,7 @@ class Card {
             self.text = text
             self.expansion = expansion
             self.types = types
+            self.trash = trash
         } else {
             print(cardData)
         }
@@ -58,6 +61,8 @@ class Card {
             return [self.expansion]
         case .type:
             return self.types
+        case .trash:
+            return self.trash
         }
     }
     

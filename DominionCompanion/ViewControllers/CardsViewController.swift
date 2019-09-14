@@ -16,7 +16,7 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rawCardData = CardData.shared.cardData
+        self.rawCardData = CardData.shared.allCards
         self.filterCards("")
     }
     

@@ -12,7 +12,7 @@ class FilterEngine {
     public static let shared : FilterEngine = FilterEngine()
     
     // MARK: Constant Properties
-    let cardData : [Card] = CardData.shared.cardData
+    let cardData : [Card] = CardData.shared.allCards
     
     // MARK: Mutable Properties
     var filters: [SetFilter] = []
