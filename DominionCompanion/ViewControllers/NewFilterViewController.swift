@@ -73,6 +73,8 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         self.title = "Edit Filter"
         
+        guard self.selectedProperty == nil else { return }
+        
         self.cardOperation = filter.operation
         self.cardValue = filter.value
         self.selectedProperty = filter.propertyFilter.property
