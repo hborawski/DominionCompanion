@@ -10,6 +10,9 @@ import UIKit
 
 class CardsViewController: UITableViewController, UISearchBarDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    var showSearch = false
+    
     var cardsToDisplay : [Card]? = nil
     var rawCardData : [Card] = []
     var cardData: [Card]? = []
@@ -18,6 +21,14 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
         self.filterCards("")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if showSearch {
+            searchBar.becomeFirstResponder()
+            showSearch = false
+        }
     }
     
     func filterCards(_ searchText: String) {

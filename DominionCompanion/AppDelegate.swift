@@ -40,6 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(showCardSearch())
+    }
+    
+    func showCardSearch() -> Bool {
+        guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
+            return false
+        }
+        tabBarController.selectedIndex = 1
+        guard let navController = tabBarController.selectedViewController as? UINavigationController,
+            let cardsViewController = navController.topViewController as? CardsViewController
+            else { return false }
+        cardsViewController.showSearch = true
+        return true
+    }
 
 
 }

@@ -140,6 +140,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Cards" id="uEj-AV-kC5"/>
                     <connections>
+                        <outlet property="searchBar" destination="p9b-Ih-kch" id="bnD-F8-KEK"/>
                         <outlet property="tableView" destination="IZI-hh-1uY" id="uid-Kq-7ZH"/>
                     </connections>
                 </tableViewController>
