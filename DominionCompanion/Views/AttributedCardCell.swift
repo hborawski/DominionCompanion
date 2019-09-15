@@ -10,14 +10,13 @@ import Foundation
 import UIKit
 
 class AttributedCardCell : UITableViewCell {
-    @IBOutlet weak var pinnedLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var costBackground: UIView!
     @IBOutlet weak var cardColorView: UIStackView!
     @IBOutlet weak var nameLabel: UILabel!
     
     func setData(_ card: Card, favorite: Bool = false) {
-        self.pinnedLabel.text = favorite ? "pinned" : ""
+        self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
         self.costLabel.text = "\(card.cost)"
         makeColorView(card.colors)
