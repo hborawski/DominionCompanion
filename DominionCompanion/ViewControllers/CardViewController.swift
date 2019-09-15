@@ -11,6 +11,7 @@ import UIKit
 class CardViewController: UIViewController {
     var card: Card?
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet weak var expansionLabel: UILabel!
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
@@ -19,7 +20,8 @@ class CardViewController: UIViewController {
         
         setupPinButton()
         
-        self.nameLabel.text = "\(card.name) - \(card.expansion)"
+        self.nameLabel.text = card.name
+        self.expansionLabel.text = card.expansion
         self.textLabel?.text = card.text
         if let image = card.image() {
             self.imageView.image = image
