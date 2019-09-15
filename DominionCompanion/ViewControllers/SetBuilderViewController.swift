@@ -12,6 +12,7 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var filtersButton: UIButton!
     
     var shuffling: Bool = false
     
@@ -27,6 +28,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
+        filtersButton.setTitle("Filters(\(FilterEngine.shared.filters.count))", for: .normal)
     }
     
     // MARK: Button Handlers
@@ -51,7 +53,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         case 0:
             return "Set"
         case 1:
-            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter" : "All Cards"
+            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter (\(FilterEngine.shared.matchAnyFilter.count))" : "All Cards (\(CardData.shared.chosenExpansions.count))"
         default:
             return ""
         }
@@ -118,6 +120,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         return cardViewController
     }
+    
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }

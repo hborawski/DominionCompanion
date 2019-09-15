@@ -31,7 +31,7 @@
         <!--Cards-->
         <scene sceneID="TtH-Mb-sxT">
             <objects>
-                <tableViewController id="POI-rM-VS8" customClass="CardsViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CardsViewController" id="POI-rM-VS8" customClass="CardsViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IZI-hh-1uY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,6 +344,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Set Builder" id="k0y-Ht-sh0"/>
                     <connections>
+                        <outlet property="filtersButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                     </connections>
                 </viewController>

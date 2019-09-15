@@ -22,7 +22,7 @@ class CardData {
     
     var chosenExpansions: [Card] {
         get {
-            guard let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] else { return [] }
+            let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] ?? self.expansions
             let cards = self.allCards.filter { expansions.contains($0.expansion) }
             return cards
         }
