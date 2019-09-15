@@ -11,19 +11,24 @@ import Foundation
 class SetBuilder {
     public static var shared: SetBuilder = SetBuilder()
     var maxCards = 10
-    var cardPool: [Card] = []
+    var cardPool: [Card] {
+        get {
+            return FilterEngine.shared.matchAnyFilter.sorted(by: Utilities.alphabeticSort(card1:card2:))
+        }
+    }
     var pinnedCards: [Card] {
         didSet { fullSet = getFullSet() }
     }
     var randomCards: [Card] {
-        didSet { fullSet = getFullSet() }
+        didSet {
+            fullSet = getFullSet()
+        }
     }
     
     var fullSet: [Card] = []
     
     
     init() {
-        self.cardPool = FilterEngine.shared.matchAnyFilter.sorted(by: Utilities.alphabeticSort(card1:card2:))
         self.randomCards = []
         self.pinnedCards = []
     }

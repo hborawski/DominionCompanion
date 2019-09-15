@@ -20,6 +20,14 @@ class CardData {
     
     let allTypes: [String]
     
+    var chosenExpansions: [Card] {
+        get {
+            guard let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] else { return [] }
+            let cards = self.allCards.filter { expansions.contains($0.expansion) }
+            return cards
+        }
+    }
+    
     init() {
         do {
             if let path = Bundle.main.path(forResource: "cards", ofType: "json") {

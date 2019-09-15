@@ -11,10 +11,11 @@ import Foundation
 class FilterEngine {
     public static let shared : FilterEngine = FilterEngine()
     
-    // MARK: Constant Properties
-    let cardData : [Card] = CardData.shared.allCards
-    
-    // MARK: Mutable Properties
+    var cardData : [Card] {
+        get {
+            return CardData.shared.chosenExpansions
+        }
+    }
     var filters: [SetFilter] = []
     
     var matchAnyFilter: [Card] {
@@ -49,6 +50,10 @@ class FilterEngine {
     
     // MARK: Public API
     func getMatchingSet(_ pinned: [Card], _ completion: @escaping ([Card]) -> Void) {
+        guard self.cardData.count >= 10 else {
+            completion([])
+            return
+        }
         guard filters.count > 0 else {
             completion(Array(cardData.shuffled()[0...9]))
             return
