@@ -45,13 +45,13 @@ enum CardProperty: String, Codable {
         get {
             switch self {
             case .cost:
-                return []
+                return Array(0...CardData.shared.maxPrice).map { "\($0)" }
             case .actions:
-                return []
+                return Array(0...CardData.shared.maxActions).map { "\($0)" }
             case .buys:
-                return []
+                return Array(0...CardData.shared.maxBuys).map { "\($0)" }
             case .cards:
-                return []
+                return Array(0...CardData.shared.maxCards).map { "\($0)" }
             case .expansion:
                 return CardData.shared.expansions
             case .type:

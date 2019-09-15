@@ -73,7 +73,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         self.title = "Edit Filter"
         
-        guard self.selectedProperty == nil else { return }
+        guard self.selectedValue == "" else { return }
         
         self.cardOperation = filter.operation
         self.cardValue = filter.value
@@ -166,12 +166,22 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 self.selectedValue = ""
             }
         }
+        let updateSelectedOperation = { () -> Void in
+            self.operationPicker.reloadAllComponents()
+            if let operation = self.selectedOperation, let operationIndex = self.availableOperations.index(of: operation) {
+                self.operationPicker.selectRow(operationIndex, inComponent: 0, animated: false)
+            } else {
+                self.selectedOperation = self.availableOperations[0]
+                self.operationPicker.selectRow(0, inComponent: 0, animated: false)
+            }
+        }
         if pickerView == propertyPicker {
             self.selectedProperty = CardData.shared.allAttributes[row]
-            self.selectedOperation = self.availableOperations[0]
             updateSelectedValue(0)
+            updateSelectedOperation()
         } else if pickerView == operationPicker {
             self.selectedOperation = self.availableOperations[row]
+            self.operationPicker.reloadAllComponents()
         } else if pickerView == valuePicker {
             updateSelectedValue(row)
         } else if pickerView == cardOperationPicker {
@@ -180,29 +190,29 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             self.cardValue = row
         }
         self.valuePicker.reloadAllComponents()
-        self.operationPicker.reloadAllComponents()
         updateEntryView()
     }
     
     func updateEntryView() {
-        guard let T = self.selectedProperty?.inputType else { return }
+        guard let T = self.selectedProperty?.inputType,
+            let count = self.selectedProperty?.all.count
+            else { return }
         let animateAlphas = { (textView: Bool) -> Void in
             UIView.animate(withDuration: 0.2) {
                 self.valueTextField.alpha = textView ? 1.0 : 0.0
                 self.valuePicker.alpha = textView ? 0.0 : 1.0
             }
         }
-        if T == NumberFilter.self {
+        if T == NumberFilter.self && count == 0 {
             animateAlphas(true)
             self.valueTextField.placeholder = "0"
             self.valueTextField.keyboardType = .default
         } else if T == StringFilter.self {
             animateAlphas(true)
-            self.valueTextField.placeholder = "String"
+            self.valueTextField.placeholder = "Comparsion Text"
             self.valueTextField.keyboardType = .default
-        } else if T == ListFilter.self {
+        } else if (T == ListFilter.self || (T == NumberFilter.self && count > 0)) {
             animateAlphas(false)
-            self.valueTextField.placeholder = "List"
         } else if T == BooleanFilter.self {
             animateAlphas(false)
         }

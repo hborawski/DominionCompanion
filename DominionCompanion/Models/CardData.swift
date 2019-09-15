@@ -12,17 +12,22 @@ class CardData {
     
     var allCards: [Card]
     
-    let maxPrice: Int
-    
     let expansions: [String]
     
     let allAttributes: [CardProperty]
     
     let allTypes: [String]
     
+    // MARK: Maxes for creating picker inputs
+    let maxPrice: Int
+    let maxActions: Int
+    let maxBuys: Int
+    let maxCards: Int
+    
     var chosenExpansions: [Card] {
         get {
             let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] ?? self.expansions
+            guard expansions.count > 0 else { return allCards }
             let cards = self.allCards.filter { expansions.contains($0.expansion) }
             return cards
         }
@@ -51,6 +56,9 @@ class CardData {
         }
         
         self.maxPrice = self.allCards.map({$0.cost}).max(by: {$0<$1}) ?? 0
+        self.maxActions = self.allCards.map({$0.actions}).max(by: {$0<$1}) ?? 0
+        self.maxBuys = self.allCards.map({$0.buys}).max(by: {$0<$1}) ?? 0
+        self.maxCards = self.allCards.map({$0.cards}).max(by: {$0<$1}) ?? 0
         self.expansions = Array(Set(self.allCards.map({$0.expansion}).filter { $0 != "" })).sorted()
         
         self.allTypes = self.allCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
