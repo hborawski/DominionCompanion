@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
+class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filtersButton: UIButton!
@@ -19,9 +19,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        registerForPreviewing(with: self, sourceView: tableView)
-
         self.shuffleSet()
     }
     
@@ -83,46 +80,37 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
-        let card = indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
+        let card = getCardForIndexPath(indexPath)
         cell.setData(card, favorite: SetBuilder.shared.pinnedCards.contains(card))
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard shuffling == false else { return }
-        switch indexPath.section {
-        case 0:
-            let card = SetBuilder.shared.fullSet[indexPath.row]
-            if SetBuilder.shared.pinnedCards.contains(card) {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let card = getCardForIndexPath(indexPath)
+        let contains = SetBuilder.shared.pinnedCards.contains(card)
+        let pin = UITableViewRowAction(style: .normal, title: contains ? "Unpin" : "Pin") { (action, indexPath) in
+            guard self.shuffling == false else { return }
+            if contains {
                 SetBuilder.shared.unpinCard(card)
             } else {
                 SetBuilder.shared.pinCard(card)
             }
-        case 1:
-            let card = SetBuilder.shared.cardPool[indexPath.row]
-            SetBuilder.shared.pinCard(card)
-        default:
-            break
+            tableView.reloadData()
         }
-        self.tableView.reloadData()
-    }
-
-    // MARK: 3D Touch
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        guard let indexPath = tableView.indexPathForRow(at: location),
-            let cell = tableView.cellForRow(at: indexPath) else { return nil }
         
-        previewingContext.sourceRect = cell.frame
-        
-        guard let cardViewController = storyboard?.instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return nil }
-        
-        cardViewController.card = indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
-        
-        return cardViewController
+        return [pin]
     }
     
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
+        if segue.identifier == "ViewCard",
+            let cardVC = segue.destination as? CardViewController
+        {
+            cardVC.card = getCardForIndexPath(indexPath)
+        }
     }
-    
+    //MARK: Helpers
+    private func getCardForIndexPath(_ indexPath: IndexPath) -> Card {
+        return indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
+    }
 }

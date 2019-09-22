@@ -58,6 +58,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         super.viewDidLoad()
         self.selectedProperty = CardProperty.allCases[0]
         self.selectedOperation = self.selectedProperty?.inputType.availableOperations[0]
+        if let value = self.selectedProperty?.all[0] {
+            self.selectedValue = value
+            self.updateEntryView()
+        }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addFilter(_:)))
         
         self.valueTextField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
