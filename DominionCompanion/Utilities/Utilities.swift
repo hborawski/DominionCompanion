@@ -13,6 +13,10 @@ class Utilities {
     public static func alphabeticSort(card1: Card, card2: Card) -> Bool {
         return card1.name <= card2.name
     }
+    
+    public static func priceSort(card1: Card, card2: Card) -> Bool {
+        return card1.cost <= card2.cost
+    }
 
     public static func combos<T>(elements: ArraySlice<T>, k: Int) -> [[T]] {
         if k == 0 {

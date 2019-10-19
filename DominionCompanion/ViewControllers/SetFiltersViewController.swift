@@ -12,7 +12,11 @@ import UIKit
 class SetFiltersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newItem(_:)))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newItem(_:)))
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newItem(_:))),
+            UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(newItem(_:)))
+        ]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,6 +25,10 @@ class SetFiltersViewController: UITableViewController {
     }
     
     @objc func newItem(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "NewFilter", sender: self)
+    }
+    
+    @objc func savedSets(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "NewFilter", sender: self)
     }
     
@@ -39,13 +47,12 @@ class SetFiltersViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             FilterEngine.shared.removeFilter(indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        
-        return [delete]
+        return UISwipeActionsConfiguration(actions: [delete])
     }
     
     // MARK: Segues

@@ -38,10 +38,6 @@ class CardViewController: UIViewController {
         }
     }
     
-    @IBAction func close(sender: UIButton?) {
-        self.dismiss(animated: true)
-    }
-    
     @objc func doPin(_ sender: UIBarButtonItem) {
         guard let card = self.card else { return }
         if SetBuilder.shared.pinnedCards.contains(card) {

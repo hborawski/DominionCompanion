@@ -85,10 +85,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let card = getCardForIndexPath(indexPath)
         let contains = SetBuilder.shared.pinnedCards.contains(card)
-        let pin = UITableViewRowAction(style: .normal, title: contains ? "Unpin" : "Pin") { (action, indexPath) in
+        let pin = UIContextualAction(style: .normal, title: contains ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             if contains {
                 SetBuilder.shared.unpinCard(card)
@@ -97,8 +97,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             }
             tableView.reloadData()
         }
-        
-        return [pin]
+        return UISwipeActionsConfiguration(actions: [pin])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

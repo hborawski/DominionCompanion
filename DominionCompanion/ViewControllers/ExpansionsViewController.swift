@@ -10,24 +10,30 @@ import Foundation
 import UIKit
 
 class ExpansionsViewController : UITableViewController {
+    
     var chosenExpansions : [String] = [] {
         didSet {
             UserDefaults.standard.setValue(self.chosenExpansions, forKey: "expansions")
             self.tableView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] else { return }
         self.chosenExpansions = expansions
         
     }
+    
+    // MARK: TableViewController
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return CardData.shared.expansions.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
         let expansion = CardData.shared.expansions[indexPath.row]
@@ -45,36 +51,26 @@ class ExpansionsViewController : UITableViewController {
         self.chosenExpansions = self.chosenExpansions.filter { $0 != expansion }
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let view = UITableViewRowAction(style: .normal, title: "View Cards") { (action, indexPath) in
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let view = UITableViewRowAction(style: .normal, title: "View Cards") { (action, indexPath) in
+//            let expansion = CardData.shared.expansions[indexPath.row]
+//            let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
+//            self.performSegue(withIdentifier: "ViewCards", sender: cards)
+//        }
+//        
+//        return [view]
+//    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let view = UIContextualAction(style: .normal, title: "View Cards") { (action, view, completion) in
             let expansion = CardData.shared.expansions[indexPath.row]
             let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
             self.performSegue(withIdentifier: "ViewCards", sender: cards)
         }
-        
-        return [view]
+        return UISwipeActionsConfiguration(actions: [view])
     }
-
-//    // MARK: 3D Touch
-//    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-//        guard let indexPath = tableView.indexPathForRow(at: location),
-//            let cell = tableView.cellForRow(at: indexPath) else { return nil }
-//
-//        previewingContext.sourceRect = cell.frame
-//
-//        guard let cardsViewController = storyboard?.instantiateViewController(withIdentifier: "CardsViewController") as? CardsViewController else { return nil }
-//        let expansion = CardData.shared.expansions[indexPath.row]
-//        let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
-//
-//        cardsViewController.cardsToDisplay = cards
-//
-//        return cardsViewController
-//    }
-//
-//    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-//        navigationController?.pushViewController(viewControllerToCommit, animated: true)
-//    }
     
+    // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier, identifier == "ViewCards", let destination = segue.destination as? CardsViewController else { return }
         guard let cards = sender as? [Card] else { return }

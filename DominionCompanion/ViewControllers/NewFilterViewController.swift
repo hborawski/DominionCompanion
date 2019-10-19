@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class NewFilterViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var cardOperationPicker: UIPickerView!
     @IBOutlet weak var cardValuePicker: UIPickerView!
@@ -77,7 +77,7 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         self.title = "Edit Filter"
         
-        guard self.selectedValue == "" else { return }
+//        guard self.selectedValue == "" else { return }
         
         self.cardOperation = filter.operation
         self.cardValue = filter.value
@@ -93,7 +93,9 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         if let property = self.selectedProperty, let propertyIndex = CardData.shared.allAttributes.index(of: property) {
             self.propertyPicker.selectRow(propertyIndex, inComponent: 0, animated: false)
-            if property.inputType == ListFilter.self, let valueIndex = property.all.index(of: self.selectedValue) {
+            let T = property.inputType
+            let count = property.all.count
+            if T == ListFilter.self || (T == NumberFilter.self && count > 0), let valueIndex = property.all.index(of: self.selectedValue) {
                 self.valuePicker.selectRow(valueIndex, inComponent: 0, animated: false)
             } else {
                 self.valueTextField.text = self.selectedValue
@@ -125,7 +127,43 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         self.navigationController?.popViewController(animated: true)
     }
     
-    // MARK: Picker Data
+    func updateEntryView() {
+        guard let T = self.selectedProperty?.inputType,
+            let count = self.selectedProperty?.all.count
+            else { return }
+        let animateAlphas = { (textView: Bool) -> Void in
+            UIView.animate(withDuration: 0.2) {
+                self.valueTextField.alpha = textView ? 1.0 : 0.0
+                self.valuePicker.alpha = textView ? 0.0 : 1.0
+            }
+        }
+        if T == NumberFilter.self && count == 0 {
+            animateAlphas(true)
+            self.valueTextField.placeholder = "0"
+            self.valueTextField.keyboardType = .default
+        } else if T == StringFilter.self {
+            animateAlphas(true)
+            self.valueTextField.placeholder = "Comparsion Text"
+            self.valueTextField.keyboardType = .default
+        } else if (T == ListFilter.self || (T == NumberFilter.self && count > 0)) {
+            animateAlphas(false)
+        } else if T == BooleanFilter.self {
+            animateAlphas(false)
+        }
+        self.matchingCardLabel.text = "Matching Cards: \(self.matchingCards.count)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            identifier == "ViewMatchingCards",
+            let destination = segue.destination as? CardsViewController
+            else { return }
+        destination.cardsToDisplay = self.matchingCards
+    }
+}
+
+// MARK: UIPickerViewDataSource
+extension NewFilterViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -160,7 +198,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         return ""
     }
     
-    // MARK: Picker Selection
+}
+
+// MARK: UIPickerViewDelegate
+extension NewFilterViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let updateSelectedValue = { (_ position: Int) -> Void in
             guard let all = self.selectedProperty?.all, all.count > 0 else { return }
@@ -197,33 +238,10 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         updateEntryView()
     }
     
-    func updateEntryView() {
-        guard let T = self.selectedProperty?.inputType,
-            let count = self.selectedProperty?.all.count
-            else { return }
-        let animateAlphas = { (textView: Bool) -> Void in
-            UIView.animate(withDuration: 0.2) {
-                self.valueTextField.alpha = textView ? 1.0 : 0.0
-                self.valuePicker.alpha = textView ? 0.0 : 1.0
-            }
-        }
-        if T == NumberFilter.self && count == 0 {
-            animateAlphas(true)
-            self.valueTextField.placeholder = "0"
-            self.valueTextField.keyboardType = .default
-        } else if T == StringFilter.self {
-            animateAlphas(true)
-            self.valueTextField.placeholder = "Comparsion Text"
-            self.valueTextField.keyboardType = .default
-        } else if (T == ListFilter.self || (T == NumberFilter.self && count > 0)) {
-            animateAlphas(false)
-        } else if T == BooleanFilter.self {
-            animateAlphas(false)
-        }
-        self.matchingCardLabel.text = "Matching Cards: \(self.matchingCards.count)"
-    }
-    
-    // MARK: TextFieldDelegate
+}
+
+// MARK: UITextFieldDelegate
+extension NewFilterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -238,13 +256,5 @@ class NewFilterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @objc func textFieldChanged(_ textField: UITextField) {
         guard let text = textField.text else { return }
         self.selectedValue = text
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier,
-            identifier == "ViewMatchingCards",
-            let destination = segue.destination as? CardsViewController
-            else { return }
-        destination.cardsToDisplay = self.matchingCards
     }
 }

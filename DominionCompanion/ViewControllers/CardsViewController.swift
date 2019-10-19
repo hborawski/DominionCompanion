@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardsViewController: UITableViewController, UISearchBarDelegate {
+class CardsViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var showSearch = false
@@ -55,11 +55,7 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
             print("couldn't get a cell")
             return UITableViewCell()
         }
-        guard let index = indexPath.last else {
-            cell.textLabel?.text = "Error With Index"
-            return cell
-        }
-        if let card = self.cardData?[index] {
+        if let card = self.cardData?[indexPath.row] {
             cell.setData(card)
         }
         return cell
@@ -74,7 +70,9 @@ class CardsViewController: UITableViewController, UISearchBarDelegate {
             cardVC.card = card
         }
     }
-    
+}
+
+extension CardsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.filterCards(searchText)
     }
