@@ -96,6 +96,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
                 SetBuilder.shared.pinCard(card)
             }
             tableView.reloadData()
+            completion(true)
         }
         return UISwipeActionsConfiguration(actions: [pin])
     }

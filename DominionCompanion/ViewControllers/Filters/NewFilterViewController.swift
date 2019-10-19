@@ -21,6 +21,8 @@ class NewFilterViewController: UIViewController {
     
     @IBOutlet weak var matchingCardLabel: UILabel!
     
+    var filterEngine: FilterEngine = FilterEngine.shared
+    
     var existingFilterIndex: Int?
 
     var cardOperation: FilterOperation = .greaterOrEqual
@@ -72,7 +74,7 @@ class NewFilterViewController: UIViewController {
         
         // If there is an index, we are editing
         guard let index = existingFilterIndex,
-            let filter = FilterEngine.shared.getFilter(index)
+            let filter = filterEngine.getFilter(index)
             else { return }
         
         self.title = "Edit Filter"
@@ -120,9 +122,9 @@ class NewFilterViewController: UIViewController {
         guard let propFilter = self.currentFilter else { return }
         let setFilter = SetFilter(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
         if let index = self.existingFilterIndex {
-            FilterEngine.shared.updateFilter(index, setFilter)
+            filterEngine.updateFilter(index, setFilter)
         } else {
-            FilterEngine.shared.addFilter(setFilter)
+            filterEngine.addFilter(setFilter)
         }
         self.navigationController?.popViewController(animated: true)
     }

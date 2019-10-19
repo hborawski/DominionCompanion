@@ -26,6 +26,7 @@
 		AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */; };
 		AF1B6ECF232D9F2400ADA74D /* BooleanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */; };
 		AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */; };
+		AFB14779235B9F3100CDA293 /* SavedFiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
 		AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4122A4843B008E09B2 /* Main.storyboard */; };
@@ -36,7 +37,6 @@
 		AFE8EE6C22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
 		AFE8EE6D22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
 		AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */; };
-		AFE8EE7022A4982D008E09B2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */; };
 		AFE8EE7222A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
 		AFE8EE7322A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
 		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
@@ -80,6 +80,7 @@
 		AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilder.swift; sourceTree = "<group>"; };
 		AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanFilter.swift; sourceTree = "<group>"; };
 		AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsViewController.swift; sourceTree = "<group>"; };
+		AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedFiltersTableViewController.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -127,11 +128,9 @@
 		AF1B6EA7232421A000ADA74D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */,
-				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
+				AFB14777235B9F0D00CDA293 /* Cards */,
+				AFB14776235B9EFC00CDA293 /* Filters */,
 				AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */,
-				AF1B6EB7232442AA00ADA74D /* SetFiltersViewController.swift */,
-				AF1B6EB923244BCE00ADA74D /* NewFilterViewController.swift */,
 				AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -197,6 +196,25 @@
 				AF1B6EC42324515D00ADA74D /* StringFilter.swift */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		AFB14776235B9EFC00CDA293 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				AF1B6EB7232442AA00ADA74D /* SetFiltersViewController.swift */,
+				AF1B6EB923244BCE00ADA74D /* NewFilterViewController.swift */,
+				AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		AFB14777235B9F0D00CDA293 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */,
+				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		AFE8EE3122A4843B008E09B2 = {
@@ -407,6 +425,7 @@
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetFilter.swift in Sources */,
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,
+				AFB14779235B9F3100CDA293 /* SavedFiltersTableViewController.swift in Sources */,
 				AF1B6EB623243FAA00ADA74D /* SetFilterCell.swift in Sources */,
 				AF1B6EB8232442AA00ADA74D /* SetFiltersViewController.swift in Sources */,
 				AF1B6EC32324502500ADA74D /* ListFilter.swift in Sources */,
@@ -419,7 +438,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE8EE7022A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
 			);

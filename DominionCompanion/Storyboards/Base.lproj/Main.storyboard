@@ -116,10 +116,7 @@
                                     <outlet property="costBackground" destination="60y-VD-Wt4" id="PSL-wS-NbQ"/>
                                     <outlet property="costLabel" destination="4wj-vG-xOk" id="NFV-ZZ-HWL"/>
                                     <outlet property="nameLabel" destination="gDL-fp-wrd" id="Hdy-dt-b42"/>
-                                    <segue destination="G82-5Z-Sbp" kind="show" identifier="ViewCard" id="NOu-4v-eYC">
-                                        <segue key="commit" inheritsFrom="parent" id="sox-Lw-zYr"/>
-                                        <segue key="preview" inheritsFrom="commit" id="gdf-VR-TL1"/>
-                                    </segue>
+                                    <segue destination="G82-5Z-Sbp" kind="show" identifier="ViewCard" id="NOu-4v-eYC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -186,6 +183,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brF-Ft-UMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492" y="-1083"/>
+        </scene>
+        <!--Saved Filters-->
+        <scene sceneID="TzD-Ed-EeC">
+            <objects>
+                <tableViewController id="Ocz-Lu-XZY" customClass="SavedFiltersTableViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LQq-1v-OZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zbj-nB-Ha0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbj-nB-Ha0" id="L2t-3T-bU3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ocz-Lu-XZY" id="x2a-Cx-MFE"/>
+                            <outlet property="delegate" destination="Ocz-Lu-XZY" id="7Gy-yO-9K9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Saved Filters" id="TcH-wJ-iRY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kz8-j4-2tq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4281" y="-1102"/>
         </scene>
         <!--Set Builder-->
         <scene sceneID="VGu-JK-fdb">
@@ -340,7 +366,7 @@
         <!--Filters-->
         <scene sceneID="Z1t-Wg-NgO">
             <objects>
-                <tableViewController title="Filters" id="I7P-L3-2q9" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SetFiltersViewController" title="Filters" id="I7P-L3-2q9" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ao-fr-A2m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,8 +447,10 @@
                             <outlet property="delegate" destination="I7P-L3-2q9" id="Zie-is-14o"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Filters" id="hBd-4T-DgD"/>
                     <connections>
                         <segue destination="pGw-c3-6gE" kind="show" identifier="NewFilter" id="hO1-Ff-OUS"/>
+                        <segue destination="Ocz-Lu-XZY" kind="show" identifier="SavedFilters" id="8C5-JX-r5o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTD-pQ-SqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,6 +571,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aUt-N5-jJb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eAt-vI-Dmz"/>
                     <connections>
                         <outlet property="cardOperationPicker" destination="gaO-Yv-9bN" id="4Cl-Ne-EMk"/>
                         <outlet property="cardValuePicker" destination="qq9-XU-f48" id="51e-6v-pk4"/>
@@ -645,8 +674,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sox-Lw-zYr"/>
-        <segue reference="hO1-Ff-OUS"/>
+        <segue reference="NOu-4v-eYC"/>
+        <segue reference="ZMD-ol-adL"/>
         <segue reference="Y75-9A-kYm"/>
     </inferredMetricsTieBreakers>
 </document>

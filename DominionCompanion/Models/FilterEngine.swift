@@ -10,13 +10,27 @@ import Foundation
 
 class FilterEngine {
     public static let shared : FilterEngine = FilterEngine()
+    var savedFilter: SavedFilter?
+    
+    var editing: Bool {
+        get {
+            return savedFilter != nil
+        }
+    }
     
     var cardData : [Card] {
         get {
             return CardData.shared.chosenExpansions
         }
     }
-    var filters: [SetFilter] = []
+    
+    var filters: [SetFilter] = [] {
+        didSet {
+            if !editing {
+                self.savePinnedFilters()
+            }
+        }
+    }
     
     var matchAnyFilter: [Card] {
         get {
@@ -45,7 +59,12 @@ class FilterEngine {
     
     
     init() {
-        self.filters = self.loadFilters()
+        self.filters = self.loadPinnedFilters()
+    }
+    
+    init(_ savedFilter: SavedFilter) {
+        self.filters = savedFilter.filters
+        self.savedFilter = savedFilter
     }
     
     // MARK: Public API
@@ -73,17 +92,14 @@ class FilterEngine {
     
     func addFilter(_ filter: SetFilter) {
         self.filters.append(filter)
-        self.saveFilters()
     }
     
     func removeFilter(_ index: Int) {
         self.filters.remove(at: index)
-        self.saveFilters()
     }
     
     func updateFilter( _ index: Int, _ newFilter: SetFilter) {
         self.filters[index] = newFilter
-        self.saveFilters()
     }
     
     func getFilter(_ index: Int) -> SetFilter? {
@@ -101,16 +117,51 @@ class FilterEngine {
             return acc && cv.match(cards)
         }
     }
-    
-    private func loadFilters() -> [SetFilter] {
-        guard let rawData = UserDefaults.standard.data(forKey: "savedFilters"),
+}
+
+// MARK: UserDefaults saving
+extension FilterEngine {
+    private func loadPinnedFilters() -> [SetFilter] {
+        guard let rawData = UserDefaults.standard.data(forKey: "pinnedFilters"),
             let filters = try? PropertyListDecoder().decode([SetFilter].self, from: rawData) else { return [] }
         return filters
     }
     
-    private func saveFilters() {
-        if let data = try? PropertyListEncoder().encode(self.filters) {
+    private func savePinnedFilters(_ filters: [SetFilter]? = nil) {
+        if let data = try? PropertyListEncoder().encode(filters ?? self.filters) {
+            UserDefaults.standard.set(data, forKey: "pinnedFilters")
+        }
+    }
+    
+    func loadSavedFilters() -> [SavedFilter] {
+        guard
+            let rawData = UserDefaults.standard.data(forKey: "savedFilters"),
+            let filters = try? PropertyListDecoder().decode([SavedFilter].self, from: rawData)
+        else {
+            return []
+        }
+        return filters
+    }
+    
+    func saveFilters(_ filters: [SavedFilter]) {
+        if let data = try? PropertyListEncoder().encode(filters) {
             UserDefaults.standard.set(data, forKey: "savedFilters")
         }
     }
+    
+    func updateSavedFilter(_ filter: SavedFilter) {
+        var filters = loadSavedFilters()
+        guard let index = filters.firstIndex(where: { f in f.uuid == filter.uuid }) else {
+            return
+        }
+        filters[index] = filter
+        saveFilters(filters)
+    }
+}
+
+// MARK: SavedFilter
+struct SavedFilter: Codable {
+    var name: String
+    var filters: [SetFilter]
+    var uuid: String = UUID().uuidString
 }
