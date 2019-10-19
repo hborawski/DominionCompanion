@@ -135,6 +135,16 @@
             </objects>
             <point key="canvasLocation" x="2492" y="445"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="jdn-v4-8FJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="JAb-gU-f70" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tZO-7y-zB9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcE-9G-Fqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="-245"/>
+        </scene>
         <!--Set Builder-->
         <scene sceneID="Ssc-Z4-hfN">
             <objects>
@@ -357,6 +367,7 @@
                     <connections>
                         <outlet property="filtersButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
+                        <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZZ-e6-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -674,8 +685,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NOu-4v-eYC"/>
+        <segue reference="27U-ob-zrt"/>
         <segue reference="ZMD-ol-adL"/>
-        <segue reference="Y75-9A-kYm"/>
+        <segue reference="Xt1-bU-Jf1"/>
     </inferredMetricsTieBreakers>
 </document>

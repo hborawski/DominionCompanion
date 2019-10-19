@@ -5,6 +5,8 @@
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.dominioncompanion.search</string>
 			<key>UIApplicationShortcutItemTitle</key>

@@ -61,15 +61,23 @@ class SavedFiltersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let replace = UIContextualAction(style: .normal, title: "Replace", handler: { (action, view, completion) in
+            FilterEngine.shared.filters = self.savedFilters[indexPath.row].filters
+            self.navigationController?.popViewController(animated: true)
+        })
+        replace.backgroundColor = .systemBlue
+        let append = UIContextualAction(style: .normal, title: "Append", handler: { (action, view, completion) in
+            FilterEngine.shared.filters = FilterEngine.shared.filters + self.savedFilters[indexPath.row].filters
+            self.navigationController?.popViewController(animated: true)
+        })
+        append.backgroundColor = .systemTeal
         return UISwipeActionsConfiguration(actions: [
             UIContextualAction(style: .destructive, title: "Delete", handler: { (action, view, completion) in
                 self.savedFilters.remove(at: indexPath.row)
                 completion(true)
             }),
-            UIContextualAction(style: .normal, title: "Load", handler: { (action, view, completion) in
-                FilterEngine.shared.filters = self.savedFilters[indexPath.row].filters
-                self.navigationController?.popViewController(animated: true)
-            })
+            replace,
+            append
         ])
     }
     

@@ -51,22 +51,13 @@ class ExpansionsViewController : UITableViewController {
         self.chosenExpansions = self.chosenExpansions.filter { $0 != expansion }
     }
     
-//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        let view = UITableViewRowAction(style: .normal, title: "View Cards") { (action, indexPath) in
-//            let expansion = CardData.shared.expansions[indexPath.row]
-//            let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
-//            self.performSegue(withIdentifier: "ViewCards", sender: cards)
-//        }
-//        
-//        return [view]
-//    }
-    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let view = UIContextualAction(style: .normal, title: "View Cards") { (action, view, completion) in
             let expansion = CardData.shared.expansions[indexPath.row]
             let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
             self.performSegue(withIdentifier: "ViewCards", sender: cards)
         }
+        view.backgroundColor = .systemBlue
         return UISwipeActionsConfiguration(actions: [view])
     }
     

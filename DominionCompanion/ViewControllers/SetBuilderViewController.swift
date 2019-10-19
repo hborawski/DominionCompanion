@@ -20,6 +20,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shuffleSet()
+        let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
+        self.navigationItem.rightBarButtonItems = [settings]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +33,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Button Handlers
     @IBAction func shuffleSet(_ sender: UIButton) {
         self.shuffleSet()
+    }
+    
+    @objc func openSettings(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "ShowSettings", sender: self)
     }
     
     func shuffleSet() {
@@ -98,6 +104,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             tableView.reloadData()
             completion(true)
         }
+        pin.backgroundColor = .systemBlue
         return UISwipeActionsConfiguration(actions: [pin])
     }
     
