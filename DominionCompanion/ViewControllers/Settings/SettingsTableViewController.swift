@@ -12,7 +12,6 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "Settings"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(excludeNewCard(_:)))
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,10 +37,6 @@ class SettingsTableViewController: UITableViewController {
         default:
             return
         }
-    }
-    
-    @objc func excludeNewCard(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "ExcludeCard", sender: self)
     }
 }
 

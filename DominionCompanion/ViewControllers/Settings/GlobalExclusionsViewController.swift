@@ -13,6 +13,7 @@ class GlobalExclusionViewController: UITableViewController {
     override func viewDidLoad() {
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewExclusion(_:)))
         self.navigationItem.rightBarButtonItem = add
+        self.navigationItem.title = "Excluded Cards"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
