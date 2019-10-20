@@ -10,6 +10,16 @@ import Foundation
 class CardData {
     public static let shared: CardData = CardData()
     
+    var excludedCards: [Card] {
+        get {
+            guard let value = UserDefaults.standard.array(forKey: "excludedCards") as? [Card] else { return [] }
+            return value
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "excludedCards")
+        }
+    }
+    
     var allCards: [Card]
     
     let expansions: [String]

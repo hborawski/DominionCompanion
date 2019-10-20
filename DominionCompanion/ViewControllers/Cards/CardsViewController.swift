@@ -81,4 +81,3 @@ extension CardsViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
 }
-

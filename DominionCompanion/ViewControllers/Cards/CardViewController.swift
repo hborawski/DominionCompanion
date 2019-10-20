@@ -29,8 +29,8 @@ class CardViewController: UIViewController {
     }
     
     func setupPinButton() {
-        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(doPin(_:)))
-        let remove = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(doPin(_:)))
+        let add = UIBarButtonItem(image: UIImage(named: "Checkmark"), style: .plain, target: self, action: #selector(doPin(_:)))
+        let remove = UIBarButtonItem(image: UIImage(named: "Delete"), style: .plain, target: self, action: #selector(doPin(_:)))
         if let card = self.card, SetBuilder.shared.pinnedCards.contains(card) {
             self.navigationItem.rightBarButtonItem = remove
         } else {

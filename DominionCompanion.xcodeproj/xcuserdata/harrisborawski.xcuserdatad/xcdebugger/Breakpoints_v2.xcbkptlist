@@ -1020,8 +1020,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "chosenExpansions"
-            landmarkType = "24">
+            landmarkName = "CardData"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "E0FEB33D-7B5A-4993-B2A1-09215F43F8AE - 68dba3cd213e3896"

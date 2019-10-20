@@ -607,7 +607,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-kX-e3k">
-                                <rect key="frame" x="8" y="96" width="359" height="33.666666666666657"/>
+                                <rect key="frame" x="8" y="96" width="71.666666666666671" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -626,7 +626,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Expansion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4S-PZ-paR">
-                                <rect key="frame" x="8" y="133.66666666666666" width="359" height="21"/>
+                                <rect key="frame" x="8" y="133.66666666666666" width="78.333333333333329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -641,10 +641,8 @@
                             <constraint firstItem="dQr-kX-e3k" firstAttribute="top" secondItem="yFw-wK-GxX" secondAttribute="top" constant="8" id="SCf-C0-suf"/>
                             <constraint firstItem="yFw-wK-GxX" firstAttribute="bottom" secondItem="PNS-Wy-bF9" secondAttribute="bottom" constant="8" id="SDi-t9-c46"/>
                             <constraint firstItem="PNS-Wy-bF9" firstAttribute="leading" secondItem="4Si-hj-vGH" secondAttribute="leading" constant="8" id="acR-gF-2UW"/>
-                            <constraint firstItem="yFw-wK-GxX" firstAttribute="trailing" secondItem="dQr-kX-e3k" secondAttribute="trailing" constant="8" id="j9o-dS-iA1"/>
                             <constraint firstItem="dQr-kX-e3k" firstAttribute="leading" secondItem="yFw-wK-GxX" secondAttribute="leading" constant="8" id="uaU-rJ-5dR"/>
                             <constraint firstItem="k4S-PZ-paR" firstAttribute="leading" secondItem="yFw-wK-GxX" secondAttribute="leading" constant="8" id="wBo-A6-M9T"/>
-                            <constraint firstItem="yFw-wK-GxX" firstAttribute="trailing" secondItem="k4S-PZ-paR" secondAttribute="trailing" constant="8" id="yle-gd-3jk"/>
                             <constraint firstItem="ySb-yO-EeM" firstAttribute="top" secondItem="k4S-PZ-paR" secondAttribute="bottom" constant="8" id="zlc-9P-1WS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yFw-wK-GxX"/>
@@ -688,7 +686,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="27U-ob-zrt"/>
+        <segue reference="NOu-4v-eYC"/>
         <segue reference="ZMD-ol-adL"/>
         <segue reference="Xt1-bU-Jf1"/>
     </inferredMetricsTieBreakers>
