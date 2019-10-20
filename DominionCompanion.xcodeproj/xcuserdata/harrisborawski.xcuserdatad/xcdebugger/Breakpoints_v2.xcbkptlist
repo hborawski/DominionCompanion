@@ -1316,7 +1316,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A92F19C1-2C52-40BF-B148-9578D4344EA4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/Settings/GlobalExclusionsViewController.swift"
@@ -1326,6 +1326,70 @@
             endingLineNumber = "40"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4171015E-5FD0-485F-88E8-DEA649883086"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/CardData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "chosenExpansions"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4171015E-5FD0-485F-88E8-DEA649883086 - 68dba3cd213e3896"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanion.CardData.chosenExpansions.getter : Swift.Array&lt;DominionCompanion.Card&gt;"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "4171015E-5FD0-485F-88E8-DEA649883086 - 4b3c2ad4649d0d47"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DominionCompanion.Card) -&gt; Swift.Bool in DominionCompanion.CardData.chosenExpansions.getter : Swift.Array&lt;DominionCompanion.Card&gt;"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A903B677-D80B-429E-9F43-3C982E8BF416"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/CardData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "chosenExpansions"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

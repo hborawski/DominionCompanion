@@ -45,7 +45,7 @@ class CardData {
         get {
             let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] ?? self.expansions
             guard expansions.count > 0 else { return allCards }
-            let cards = self.allCards.filter { expansions.contains($0.expansion) }
+            let cards = self.allCards.filter { expansions.contains($0.expansion) && !excludedCards.contains($0) }
             return cards
         }
     }
