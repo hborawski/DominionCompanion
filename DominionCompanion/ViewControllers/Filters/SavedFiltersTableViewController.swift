@@ -102,7 +102,7 @@ class SavedFiltersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let filter = savedFilters[indexPath.row]
-        guard let filtersVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetFiltersViewController") as? SetFiltersViewController else {
+        guard let filtersVC = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "SetFiltersViewController") as? SetFiltersViewController else {
             return
         }
         filtersVC.filterEngine = FilterEngine(filter)
