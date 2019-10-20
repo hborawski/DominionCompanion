@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Card {
+class Card: Decodable {
     var cost: Int = 0
     var actions: Int = 0
     var buys: Int = 0
@@ -18,7 +18,6 @@ class Card {
     var text: String = ""
     var expansion: String = ""
     var types: [String] = []
-    var colors: [UIColor] = []
     var trash: Bool = false
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
@@ -43,9 +42,6 @@ class Card {
         } else {
             print(cardData)
         }
-        self.colors = self.types.map({(type: String) -> UIColor? in
-            return UIColor(named: type)
-        }).filter { $0 != nil } as! [UIColor]
     }
     public func getProperty(_ property: CardProperty) -> Any {
         switch property {
@@ -90,4 +86,8 @@ extension Card: Hashable {
         hasher.combine(self.name)
         hasher.combine(self.cost)
     }
+}
+
+extension Card: Encodable {
+    
 }

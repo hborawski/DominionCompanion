@@ -38,22 +38,25 @@
             </objects>
             <point key="canvasLocation" x="-511" y="-12"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Excluded Cards-->
         <scene sceneID="FE8-z9-w24">
             <objects>
-                <tableViewController id="Sk1-w9-lu9" sceneMemberID="viewController">
+                <tableViewController title="Excluded Cards" id="Sk1-w9-lu9" customClass="GlobalExclusionViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cT1-Vy-mAh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xDZ-yf-lgz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="blankCell" id="xDZ-yf-lgz">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xDZ-yf-lgz" id="eLP-qI-cT3">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="UuG-sK-kXl" kind="show" identifier="ViewCard" id="Xym-Yo-cMb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,10 +65,33 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="16k-Nv-wDu"/>
+                    <connections>
+                        <segue destination="C24-g7-cPe" kind="show" identifier="ExcludeCards" id="E9J-aB-Pl8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="044-Qy-EgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="-12"/>
+        </scene>
+        <!--Cards-->
+        <scene sceneID="5oz-1m-XuT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cards" id="C24-g7-cPe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BXa-Hd-ZoQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M93-81-6Yk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-244"/>
+        </scene>
+        <!--CardViewController-->
+        <scene sceneID="TKE-oW-P3m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cards" referencedIdentifier="CardViewController" id="UuG-sK-kXl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pQa-Fm-U0D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYG-hE-613" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533" y="-18"/>
         </scene>
     </scenes>
 </document>

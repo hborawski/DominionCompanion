@@ -13,6 +13,8 @@ class CardsViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     var showSearch = false
     
+    var excludeMode: Bool = false
+    
     var cardsToDisplay : [Card]? = nil
     var rawCardData : [Card] = []
     var cardData: [Card]? = []
@@ -68,6 +70,7 @@ class CardsViewController: UITableViewController {
             let card = self.cardData?[indexPath.row]
         {
             cardVC.card = card
+            cardVC.excludeMode = excludeMode
         }
     }
 }

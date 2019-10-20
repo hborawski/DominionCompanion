@@ -12,11 +12,18 @@ class CardData {
     
     var excludedCards: [Card] {
         get {
-            guard let value = UserDefaults.standard.array(forKey: "excludedCards") as? [Card] else { return [] }
-            return value
+            guard
+                let rawData = UserDefaults.standard.data(forKey: "excludedCards"),
+                let cards = try? PropertyListDecoder().decode([Card].self, from: rawData)
+            else {
+                return []
+            }
+            return cards
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "excludedCards")
+            if let data = try? PropertyListEncoder().encode(newValue) {
+                UserDefaults.standard.set(data, forKey: "excludedCards")
+            }
         }
     }
     

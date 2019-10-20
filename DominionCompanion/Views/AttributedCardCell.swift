@@ -19,7 +19,7 @@ class AttributedCardCell : UITableViewCell {
         self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
         self.costLabel.text = "\(card.cost)"
-        makeColorView(card.colors)
+        makeColorView(card.types)
         makeCostView()
     }
     
@@ -41,7 +41,7 @@ class AttributedCardCell : UITableViewCell {
         
     }
     
-    func makeColorView(_ colors: [UIColor]) {
+    func makeColorView(_ colors: [String]) {
         guard colors.count > 0 else { return }
         guard let cardColorView = self.cardColorView else { return }
         cardColorView.arrangedSubviews.forEach{ subview in
@@ -49,29 +49,10 @@ class AttributedCardCell : UITableViewCell {
         }
         let width = cardColorView.frame.width / CGFloat(colors.count)
         colors.forEach { color in
-            addStripToView(color, view: cardColorView, width: width)
+            guard let uiColor = UIColor(named: color) else { return }
+            addStripToView(uiColor, view: cardColorView, width: width)
         }
         cardColorView.layoutIfNeeded()
-    }
-    
-    func makeTypeView(_ types: [String]) {
-        guard types.count > 0 else { return }
-        guard let cardColorView = self.cardColorView else { return }
-        cardColorView.arrangedSubviews.forEach{ subview in
-            subview.removeFromSuperview()
-        }
-        let width = cardColorView.frame.width / CGFloat(types.count)
-        types.forEach { type in
-            let l = UILabel()
-            l.text = type.first?.description
-            cardColorView.addArrangedSubview(l)
-
-            l.translatesAutoresizingMaskIntoConstraints = false
-
-            l.heightAnchor.constraint(equalTo: cardColorView.heightAnchor).isActive = true
-        }
-        cardColorView.layoutIfNeeded()
-
     }
     
     func addStripToView(_ color: UIColor, view parentView: UIStackView, width: CGFloat) {

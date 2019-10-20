@@ -14,6 +14,10 @@ class GlobalExclusionViewController: UITableViewController {
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewExclusion(_:)))
         self.navigationItem.rightBarButtonItem = add
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -23,12 +27,25 @@ class GlobalExclusionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
         cell.textLabel?.text = CardData.shared.excludedCards[indexPath.row].name
         return cell
     }
     
     @objc func addNewExclusion(_ sender: UIBarButtonItem) {
-        
+        self.performSegue(withIdentifier: "ExcludeCards", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CardsViewController {
+            destination.excludeMode = true
+        } else if
+            let destination = segue.destination as? CardViewController,
+            let selectedCell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: selectedCell)
+        {
+            destination.excludeMode = true
+            destination.card = CardData.shared.excludedCards[indexPath.row]
+        }
     }
 }
