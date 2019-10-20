@@ -81,6 +81,25 @@ class SavedFiltersTableViewController: UITableViewController {
         ])
     }
     
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let rename = UIContextualAction(style: .normal, title: "Rename") { (action, view, completion) in
+            let renameAlert = UIAlertController(title: "Rename", message: "Rename saved ruleset", preferredStyle: .alert)
+            renameAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in renameAlert.dismiss(animated: true, completion: nil)}))
+            renameAlert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
+                let savedFilter = self.savedFilters[indexPath.row]
+                let filter = SavedFilter(name: self.tempFilterName, filters: savedFilter.filters, uuid: savedFilter.uuid)
+                self.savedFilters[indexPath.row] = filter
+                self.tempFilterName = ""
+            }))
+            renameAlert.addTextField { (field) in
+                field.delegate = self
+            }
+            self.present(renameAlert, animated: true)
+        }
+        rename.backgroundColor = .systemTeal
+        return UISwipeActionsConfiguration(actions: [rename])
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let filter = savedFilters[indexPath.row]
         guard let filtersVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetFiltersViewController") as? SetFiltersViewController else {

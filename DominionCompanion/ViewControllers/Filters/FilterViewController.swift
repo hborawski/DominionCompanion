@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewFilterViewController: UIViewController {
+class FilterViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var cardOperationPicker: UIPickerView!
     @IBOutlet weak var cardValuePicker: UIPickerView!
@@ -165,7 +165,7 @@ class NewFilterViewController: UIViewController {
 }
 
 // MARK: UIPickerViewDataSource
-extension NewFilterViewController: UIPickerViewDataSource {
+extension FilterViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -203,7 +203,7 @@ extension NewFilterViewController: UIPickerViewDataSource {
 }
 
 // MARK: UIPickerViewDelegate
-extension NewFilterViewController: UIPickerViewDelegate {
+extension FilterViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let updateSelectedValue = { (_ position: Int) -> Void in
             guard let all = self.selectedProperty?.all, all.count > 0 else { return }
@@ -243,7 +243,7 @@ extension NewFilterViewController: UIPickerViewDelegate {
 }
 
 // MARK: UITextFieldDelegate
-extension NewFilterViewController: UITextFieldDelegate {
+extension FilterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

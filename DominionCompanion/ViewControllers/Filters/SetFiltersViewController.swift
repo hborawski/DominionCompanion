@@ -71,11 +71,11 @@ class SetFiltersViewController: UITableViewController {
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let filterViewController = segue.destination as? NewFilterViewController else { return }
+        guard let filterViewController = segue.destination as? FilterViewController else { return }
         filterViewController.filterEngine = self.filterEngine
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
         if segue.identifier == "EditFilter",
-            let filterViewController = segue.destination as? NewFilterViewController
+            let filterViewController = segue.destination as? FilterViewController
         {
             filterViewController.existingFilterIndex = indexPath.row
         }

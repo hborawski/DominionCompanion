@@ -14,7 +14,7 @@
         <scene sceneID="Kjx-dM-kxR">
             <objects>
                 <navigationController id="hN0-lG-Mdt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cards" id="C4q-xp-Kh6"/>
+                    <tabBarItem key="tabBarItem" title="Cards" image="Card" id="C4q-xp-Kh6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3vA-w2-NZ3">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -149,7 +149,7 @@
         <scene sceneID="Ssc-Z4-hfN">
             <objects>
                 <navigationController id="kK5-gY-lHd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Set Builder" id="b56-yp-PdB"/>
+                    <tabBarItem key="tabBarItem" title="Set Builder" image="Deck" id="b56-yp-PdB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mmM-wh-ikP">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -471,7 +471,7 @@
         <!--New Filter-->
         <scene sceneID="kSk-fP-u5X">
             <objects>
-                <viewController title="New Filter" id="pGw-c3-6gE" customClass="NewFilterViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Filter" id="pGw-c3-6gE" customClass="FilterViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qpq-w7-McW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -680,6 +680,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Card" width="30" height="30"/>
+        <image name="Deck" width="30" height="30"/>
         <namedColor name="Background">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
@@ -687,6 +689,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="27U-ob-zrt"/>
         <segue reference="ZMD-ol-adL"/>
-        <segue reference="Xt1-bU-Jf1"/>
+        <segue reference="Y75-9A-kYm"/>
     </inferredMetricsTieBreakers>
 </document>

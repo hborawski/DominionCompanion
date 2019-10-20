@@ -10,9 +10,9 @@ import Foundation
 
 enum FilterOperation: String, Codable {
     case greater = ">"
-    case greaterOrEqual = ">="
-    case equal = "=="
-    case lessOrEqual = "<="
+    case greaterOrEqual = "≥"
+    case equal = "="
+    case lessOrEqual = "≤"
     case less = "<"
-    case notEqual = "!="
+    case notEqual = "≠"
 }
