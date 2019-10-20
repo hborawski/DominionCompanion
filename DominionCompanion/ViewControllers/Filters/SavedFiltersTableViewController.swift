@@ -83,7 +83,7 @@ class SavedFiltersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let rename = UIContextualAction(style: .normal, title: "Rename") { (action, view, completion) in
-            let renameAlert = UIAlertController(title: "Rename", message: "Rename saved ruleset", preferredStyle: .alert)
+            let renameAlert = UIAlertController(title: "Rename", message: "Rename saved filter set", preferredStyle: .alert)
             renameAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in renameAlert.dismiss(animated: true, completion: nil)}))
             renameAlert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
                 let savedFilter = self.savedFilters[indexPath.row]

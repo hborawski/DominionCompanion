@@ -57,6 +57,7 @@ class ExpansionsViewController : UITableViewController {
             let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
             self.performSegue(withIdentifier: "ViewCards", sender: cards)
         }
+        view.image = UIImage(named: "Card")
         view.backgroundColor = .systemBlue
         return UISwipeActionsConfiguration(actions: [view])
     }

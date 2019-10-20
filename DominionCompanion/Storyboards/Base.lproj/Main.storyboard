@@ -390,20 +390,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-Co-QQR">
-                                            <rect key="frame" x="24" y="19" width="58" height="22"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-5n-fNt">
-                                            <rect key="frame" x="90" y="19.666666666666668" width="22" height="21.000000000000004"/>
+                                            <rect key="frame" x="46" y="19.666666666666668" width="22" height="21.000000000000004"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-sD-XzX">
-                                            <rect key="frame" x="120" y="19.666666666666668" width="11" height="21.000000000000004"/>
+                                            <rect key="frame" x="76" y="19.666666666666668" width="11" height="21.000000000000004"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -426,25 +420,32 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card" translatesAutoresizingMaskIntoConstraints="NO" id="iZ1-aO-o0d">
+                                            <rect key="frame" x="8" y="15" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="64M-aC-1La"/>
+                                                <constraint firstAttribute="height" constant="30" id="mxL-S7-LuW"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="lGT-5n-fNt" firstAttribute="centerY" secondItem="iZ1-aO-o0d" secondAttribute="centerY" id="1WI-So-Ru0"/>
                                         <constraint firstItem="Ifl-rU-viC" firstAttribute="leading" secondItem="KVQ-bb-1ff" secondAttribute="trailing" constant="8" id="5oV-SG-wQ9"/>
-                                        <constraint firstItem="Ifl-rU-viC" firstAttribute="centerY" secondItem="gdq-Co-QQR" secondAttribute="centerY" id="6ON-m7-rdj"/>
-                                        <constraint firstItem="NjW-Fr-uyx" firstAttribute="centerY" secondItem="gdq-Co-QQR" secondAttribute="centerY" id="7ck-ZW-THz"/>
                                         <constraint firstItem="YGl-sD-XzX" firstAttribute="leading" secondItem="lGT-5n-fNt" secondAttribute="trailing" constant="8" id="8Rx-nr-xwk"/>
+                                        <constraint firstItem="iZ1-aO-o0d" firstAttribute="centerY" secondItem="uWg-eL-cOp" secondAttribute="centerY" id="8gZ-TA-Tli"/>
                                         <constraint firstItem="KVQ-bb-1ff" firstAttribute="leading" secondItem="NjW-Fr-uyx" secondAttribute="trailing" constant="8" id="Ado-ZF-KJ3"/>
-                                        <constraint firstItem="gdq-Co-QQR" firstAttribute="leading" secondItem="uWg-eL-cOp" secondAttribute="leadingMargin" constant="8" id="GLR-Mz-2PZ"/>
+                                        <constraint firstItem="NjW-Fr-uyx" firstAttribute="centerY" secondItem="iZ1-aO-o0d" secondAttribute="centerY" id="NSo-oL-PtW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Ifl-rU-viC" secondAttribute="trailing" constant="8" id="PK3-9e-mlS"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gdq-Co-QQR" secondAttribute="bottom" constant="8" id="RvE-cB-QmU"/>
-                                        <constraint firstItem="lGT-5n-fNt" firstAttribute="centerY" secondItem="gdq-Co-QQR" secondAttribute="centerY" id="bJ6-Pn-uyV"/>
-                                        <constraint firstItem="lGT-5n-fNt" firstAttribute="leading" secondItem="gdq-Co-QQR" secondAttribute="trailing" constant="8" id="bgJ-mT-PLr"/>
-                                        <constraint firstItem="YGl-sD-XzX" firstAttribute="centerY" secondItem="gdq-Co-QQR" secondAttribute="centerY" id="qHS-wI-5yO"/>
-                                        <constraint firstItem="KVQ-bb-1ff" firstAttribute="centerY" secondItem="gdq-Co-QQR" secondAttribute="centerY" id="qtM-bc-Jha"/>
-                                        <constraint firstItem="gdq-Co-QQR" firstAttribute="top" secondItem="uWg-eL-cOp" secondAttribute="topMargin" constant="8" id="wKg-Gi-hkz"/>
+                                        <constraint firstItem="YGl-sD-XzX" firstAttribute="centerY" secondItem="iZ1-aO-o0d" secondAttribute="centerY" id="TGP-Mo-cbi"/>
+                                        <constraint firstItem="lGT-5n-fNt" firstAttribute="leading" secondItem="iZ1-aO-o0d" secondAttribute="trailing" constant="8" id="Xqd-AG-Fnz"/>
+                                        <constraint firstItem="KVQ-bb-1ff" firstAttribute="centerY" secondItem="iZ1-aO-o0d" secondAttribute="centerY" id="dUw-2F-Lwd"/>
+                                        <constraint firstItem="Ifl-rU-viC" firstAttribute="centerY" secondItem="iZ1-aO-o0d" secondAttribute="centerY" id="h12-Nv-cQ7"/>
+                                        <constraint firstItem="iZ1-aO-o0d" firstAttribute="leading" secondItem="uWg-eL-cOp" secondAttribute="leading" constant="8" id="tiJ-dL-SIe"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cardCountLabel" destination="YGl-sD-XzX" id="KdK-m2-m58"/>
+                                    <outlet property="cardIcon" destination="iZ1-aO-o0d" id="U5U-m6-qWV"/>
                                     <outlet property="cardOperationLabel" destination="lGT-5n-fNt" id="BY6-qb-iZe"/>
                                     <outlet property="operationLabel" destination="KVQ-bb-1ff" id="JoH-d8-W9C"/>
                                     <outlet property="propertyLabel" destination="NjW-Fr-uyx" id="e8I-Bf-EJG"/>
@@ -466,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTD-pQ-SqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3398" y="-381"/>
+            <point key="canvasLocation" x="3397.5999999999999" y="-381.2807881773399"/>
         </scene>
         <!--New Filter-->
         <scene sceneID="kSk-fP-u5X">
@@ -689,6 +690,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="27U-ob-zrt"/>
         <segue reference="ZMD-ol-adL"/>
-        <segue reference="Y75-9A-kYm"/>
+        <segue reference="Xt1-bU-Jf1"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,7 @@ class SetFilterCell : UITableViewCell {
     @IBOutlet var propertyLabel: UILabel!
     @IBOutlet var operationLabel: UILabel!
     @IBOutlet var valueLabel: UILabel!
+    @IBOutlet weak var cardIcon: UIImageView!
     
     func setData(filter: SetFilter) {
         self.cardOperationLabel.text = filter.operation.rawValue
@@ -22,5 +23,6 @@ class SetFilterCell : UITableViewCell {
         self.propertyLabel.text = "\(filter.propertyFilter.property)"
         self.operationLabel.text = filter.propertyFilter.operation.rawValue
         self.valueLabel.text = filter.propertyFilter.stringValue
+        self.cardIcon.tintColor = UIColor(named: "Glyph")
     }
 }

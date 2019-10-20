@@ -104,7 +104,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             tableView.reloadData()
             completion(true)
         }
-        pin.backgroundColor = .systemBlue
+        pin.image = contains ? UIImage(named: "Delete") : UIImage(named: "Checkmark")
+        pin.backgroundColor = contains ? .systemRed : .systemBlue
         return UISwipeActionsConfiguration(actions: [pin])
     }
     
