@@ -52,60 +52,45 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Set"
-        case 1:
-            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter (\(FilterEngine.shared.matchAnyFilter.count))" : "All Cards (\(CardData.shared.cardsFromChosenExpansions.count))"
-        default:
-            return ""
-        }
+        return SetBuilder.shared.currentSet[section].title
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return SetBuilder.shared.currentSet.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            let set = SetBuilder.shared.fullSet
-            print(set)
-            return shuffling ? 1 : SetBuilder.shared.fullSet.count
-        case 1:
-            return SetBuilder.shared.cardPool.count
-        default:
-            return 0
-        }
+        let section = SetBuilder.shared.currentSet[section]
+        return (shuffling && section.canShuffle) ? 1 : section.cards.count
     }
     
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if shuffling == true && indexPath.section == 0 {
+        let section = SetBuilder.shared.currentSet[indexPath.section]
+        if shuffling == true && section.canShuffle {
             return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
-        let card = getCardForIndexPath(indexPath)
-        cell.setData(card, favorite: SetBuilder.shared.pinnedCards.contains(card))
+        let card = section.cards[indexPath.row]
+        cell.setData(card.card, favorite: card.pinned)
         return cell
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let card = getCardForIndexPath(indexPath)
-        let contains = SetBuilder.shared.pinnedCards.contains(card)
-        let pin = UIContextualAction(style: .normal, title: contains ? "Unpin" : "Pin") { (action, view, completion) in
+        let cardData = SetBuilder.shared.currentSet[indexPath.section].cards[indexPath.row]
+        let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
-            if contains {
-                SetBuilder.shared.unpinCard(card)
+            if cardData.pinned {
+                SetBuilder.shared.unpinCard(cardData.card)
             } else {
-                SetBuilder.shared.pinCard(card)
+                SetBuilder.shared.pinCard(cardData.card)
             }
             tableView.reloadData()
             completion(true)
         }
-        pin.image = contains ? UIImage(named: "Delete") : UIImage(named: "Checkmark")
-        pin.backgroundColor = contains ? .systemRed : .systemBlue
+        pin.image = cardData.pinned ? UIImage(named: "Delete") : UIImage(named: "Checkmark")
+        pin.backgroundColor = cardData.pinned ? .systemRed : .systemBlue
         return UISwipeActionsConfiguration(actions: [pin])
     }
     
@@ -114,11 +99,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "ViewCard",
             let cardVC = segue.destination as? CardViewController
         {
-            cardVC.card = getCardForIndexPath(indexPath)
+            cardVC.card = SetBuilder.shared.currentSet[indexPath.section].cards[indexPath.row].card
         }
-    }
-    //MARK: Helpers
-    private func getCardForIndexPath(_ indexPath: IndexPath) -> Card {
-        return indexPath.section == 0 ? SetBuilder.shared.fullSet[indexPath.row] : SetBuilder.shared.cardPool[indexPath.row]
     }
 }

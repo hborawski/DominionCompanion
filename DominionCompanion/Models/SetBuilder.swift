@@ -11,6 +11,16 @@ import Foundation
 class SetBuilder {
     public static var shared: SetBuilder = SetBuilder()
     
+    var currentSet: [SetBuilderSection] {
+        get {
+            let cards = getFullSet()
+            return [
+                SetBuilderSection(title: "Set", cards: cards.map { SetBuilderCardRow(card: $0, pinned: pinnedCards.contains($0) )}),
+                SetBuilderSection(title: "All Cards", cards: cardPool.map { SetBuilderCardRow(card: $0, pinned: false)}, canShuffle: false)
+            ]
+        }
+    }
+    
     var maxCards = 10
     
     var cardPool: [Card] {
@@ -88,4 +98,15 @@ class SetBuilder {
             UserDefaults.standard.set(data, forKey: "pinnedCards")
         }
     }
+}
+
+struct SetBuilderSection {
+    var title: String
+    var cards: [SetBuilderCardRow]
+    var canShuffle: Bool = true
+}
+
+struct SetBuilderCardRow {
+    var card: Card
+    var pinned: Bool
 }
