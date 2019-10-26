@@ -31,19 +31,19 @@ class ExpansionsViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CardData.shared.expansions.count
+        return CardData.shared.allExpansions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
-        let expansion = CardData.shared.expansions[indexPath.row]
+        let expansion = CardData.shared.allExpansions[indexPath.row]
         cell.textLabel?.text = expansion
         cell.accessoryType = self.chosenExpansions.contains(expansion) ? .checkmark : .none
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let expansion = CardData.shared.expansions[indexPath.row]
+        let expansion = CardData.shared.allExpansions[indexPath.row]
         guard self.chosenExpansions.contains(expansion) else {
             self.chosenExpansions.append(expansion)
             return
@@ -53,8 +53,8 @@ class ExpansionsViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let view = UIContextualAction(style: .normal, title: "View Cards") { (action, view, completion) in
-            let expansion = CardData.shared.expansions[indexPath.row]
-            let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
+            let expansion = CardData.shared.allExpansions[indexPath.row]
+            let cards = CardData.shared.kingdomCards.filter { $0.expansion == expansion }
             self.performSegue(withIdentifier: "ViewCards", sender: cards)
         }
         view.image = UIImage(named: "Card")

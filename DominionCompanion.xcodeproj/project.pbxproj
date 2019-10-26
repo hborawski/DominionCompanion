@@ -31,6 +31,7 @@
 		AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D701235C040100FDC4D6 /* GlobalExclusionsViewController.swift */; };
 		AF80D704235C05E300FDC4D6 /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D703235C05E300FDC4D6 /* Cards.storyboard */; };
 		AF80D706235C144800FDC4D6 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D705235C144800FDC4D6 /* Filters.storyboard */; };
+		AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AFB14779235B9F3100CDA293 /* SavedFiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
@@ -90,6 +91,7 @@
 		AF80D701235C040100FDC4D6 /* GlobalExclusionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusionsViewController.swift; sourceTree = "<group>"; };
 		AF80D703235C05E300FDC4D6 /* Cards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cards.storyboard; sourceTree = "<group>"; };
 		AF80D705235C144800FDC4D6 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
+		AF80D7092364DA9800FDC4D6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedFiltersTableViewController.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1B6EAE232428ED00ADA74D /* Utilities.swift */,
+				AF80D7092364DA9800FDC4D6 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
+				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6EC123244FEF00ADA74D /* NumberFilter.swift in Sources */,
 				AF1B6EC52324515D00ADA74D /* StringFilter.swift in Sources */,

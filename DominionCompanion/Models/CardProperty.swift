@@ -58,7 +58,7 @@ enum CardProperty: String, Codable {
             case .cards:
                 return Array(0...CardData.shared.maxCards).map { "\($0)" }
             case .expansion:
-                return CardData.shared.expansions
+                return CardData.shared.allExpansions
             case .type:
                 return CardData.shared.allTypes
             case .trash:

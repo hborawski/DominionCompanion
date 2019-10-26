@@ -52,7 +52,7 @@ class FilterViewController: UIViewController {
     var matchingCards: [Card] {
         get {
             guard let propFilter = self.currentFilter else { return [] }
-            return CardData.shared.chosenExpansions.filter({ propFilter.match($0) })
+            return CardData.shared.cardsFromChosenExpansions.filter({ propFilter.match($0) })
         }
     }
 

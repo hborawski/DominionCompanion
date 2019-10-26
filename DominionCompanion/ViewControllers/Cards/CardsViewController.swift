@@ -21,7 +21,7 @@ class CardsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
+        self.rawCardData = self.cardsToDisplay ?? CardData.shared.kingdomCards
         self.filterCards("")
     }
     

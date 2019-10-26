@@ -134,8 +134,8 @@
             timestampString = "590273579.597453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -615,73 +615,6 @@
             endingLineNumber = "73"
             landmarkName = "match(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "64DE8863-3404-43C3-A3E1-FDEBE59ABFC5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DominionCompanion/Models/CardData.swift"
-            timestampString = "590273579.6027859"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "64DE8863-3404-43C3-A3E1-FDEBE59ABFC5 - f0f350b1f9a64614"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DominionCompanion.CardData.init() -&gt; DominionCompanion.CardData"
-                  moduleName = "DominionCompanion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
-                  timestampString = "589667708.474045"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "2644">
-               </Location>
-               <Location
-                  uuid = "64DE8863-3404-43C3-A3E1-FDEBE59ABFC5 - 3295c5967f21c38f"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (DominionCompanion.Card) -&gt; Swift.Int in DominionCompanion.CardData.init() -&gt; DominionCompanion.CardData"
-                  moduleName = "DominionCompanion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
-                  timestampString = "589667708.475571"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "64DE8863-3404-43C3-A3E1-FDEBE59ABFC5 - 522bdc4086369324"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 (Swift.Int, Swift.Int) -&gt; Swift.Bool in DominionCompanion.CardData.init() -&gt; DominionCompanion.CardData"
-                  moduleName = "DominionCompanion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
-                  timestampString = "589667708.477141"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1340,7 +1273,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "chosenExpansions"
+            landmarkName = "cardsFromChosenExpansions"
             landmarkType = "24">
             <Locations>
                <Location
@@ -1388,7 +1321,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "chosenExpansions"
+            landmarkName = "cardsFromChosenExpansions"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

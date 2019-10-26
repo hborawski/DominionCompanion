@@ -20,7 +20,7 @@ class FilterEngine {
     
     var cardData : [Card] {
         get {
-            return CardData.shared.chosenExpansions
+            return CardData.shared.cardsFromChosenExpansions
         }
     }
     

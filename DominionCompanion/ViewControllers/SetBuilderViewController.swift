@@ -56,7 +56,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         case 0:
             return "Set"
         case 1:
-            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter (\(FilterEngine.shared.matchAnyFilter.count))" : "All Cards (\(CardData.shared.chosenExpansions.count))"
+            return FilterEngine.shared.filters.count > 0 ? "Cards Matching Any Filter (\(FilterEngine.shared.matchAnyFilter.count))" : "All Cards (\(CardData.shared.cardsFromChosenExpansions.count))"
         default:
             return ""
         }
