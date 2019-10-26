@@ -51,7 +51,7 @@ class Card: Decodable {
         case .cost:
             return self.cost
         case .debt:
-        return self.debt
+            return self.debt
         case .actions:
             return self.actions
         case .buys:
@@ -68,16 +68,12 @@ class Card: Decodable {
     }
     
     public func image() -> UIImage? {
-        do {
-            if let path = Bundle.main.path(forResource: "cards/\(self.name)", ofType: "jpg") {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                return UIImage(data: data)
-            } else {
+        guard
+            let path = Bundle.main.path(forResource: "cards/\(self.name)", ofType: "jpg"),
+            let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
                 return nil
-            }
-        } catch {
-            return nil
         }
+        return UIImage(data: data)
     }
 }
 
