@@ -628,8 +628,8 @@
             timestampString = "590273579.6029201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "SetBuilder"
             landmarkType = "3">
          </BreakpointContent>
@@ -1317,8 +1317,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "pinLandmark(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1365,8 +1365,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "rows"
             landmarkType = "24">
          </BreakpointContent>
@@ -1381,8 +1381,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "rows"
             landmarkType = "24">
             <Locations>

@@ -94,6 +94,8 @@ class SetBuilder {
     
     init() {
         self.randomCards = []
+        self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
+        self.randomEvents = CardData.shared.allEvents.shuffled()
         self.pinnedCards = []
         self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
     }
