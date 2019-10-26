@@ -4,7 +4,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "e7694a15-57df-4222-8795-1fe63335a265",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -33,7 +33,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "b45fdada-d00d-46dc-a264-11a06bd60dcb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -61,7 +61,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "80c3d7e5-016a-4127-96c2-bd288876c471",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -94,7 +94,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "3e7ff8e4-da11-4293-b412-23cb54481b64",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -132,7 +132,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "730af8d3-f843-43aa-8686-8e7eedbbe799",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -160,7 +160,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "3df286b1-d1e3-496f-b096-5bd2b2c1917c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -188,7 +188,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f8f5fe9b-0a45-478a-9e01-ddc04d9f89b5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -217,7 +217,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "d7783479-05ca-49eb-abd8-c65a257b67f1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -243,10 +243,10 @@
   },
   {
     "potion": false,
-    "cost": 108,
+    "cost": 0,
     "raw_buys": [],
     "id": "1f64eb2e-d8dd-4790-988e-14fce534102e",
-    "debt": true,
+    "debt": 8,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -274,7 +274,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "85e2f5a8-46bd-4fe1-90f0-f9d77b9dea3c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -312,7 +312,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f131d00a-a0b7-425e-9414-e3f0fe6c77c4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -345,7 +345,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "7c24ba97-edb1-495f-91f0-84170873bc41",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -373,7 +373,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3dc9db80-5857-43c3-9f69-d477447b5e6d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -412,7 +412,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "b135933d-c263-410e-9af5-f763d06568bf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -440,7 +440,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "9b5832f1-88bb-47bf-8e3b-c362d1361c60",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -468,7 +468,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "cae3d15d-f1f2-4bde-a12a-7e8d7278aac6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -510,7 +510,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "3a73fb37-e825-4c57-9482-a71eb2df5aeb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -543,7 +543,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "066eb8b0-98ff-437a-8a0c-712746e0f6e1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -576,7 +576,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "e2b64957-04b0-4bf1-9601-7a727ed49015",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -604,7 +604,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "da1d8b12-6c46-4dfa-bed3-a243281cd08d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -638,7 +638,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "9c811805-477e-4bd1-aea4-017f23a118a1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -676,7 +676,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f263f5e6-fe64-4c4e-b2b7-0920a796c2a9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -704,7 +704,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b9f6489d-6bd2-483e-a859-a164f4d05830",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -732,7 +732,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3424c64c-c0ba-46ad-a55d-381a6d89183e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -761,7 +761,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "8b321a44-4b7d-44cd-8337-fcece613bf01",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -799,7 +799,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "a33dc1b5-f395-49b4-8d13-98c7f57aa8c2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -827,7 +827,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "34a29f1d-7334-4992-aaf8-126576f0acb3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -855,7 +855,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f8b0d364-48a2-4862-8c77-344ef8445691",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -883,7 +883,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "84d0afef-9046-4f71-8916-e049858f8429",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -917,7 +917,7 @@
       ]
     ],
     "id": "f2f74d3c-4a3f-41c5-9813-9320b4b08b91",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -945,7 +945,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "3cdf8774-fabf-403d-8e96-ae8df4a5e0d5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -973,7 +973,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "f30f3c9f-1de7-4c7d-a297-bcfe461279f8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -1001,7 +1001,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "b664ecd4-b076-4ee2-92bc-96cd8d080fb6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -1029,7 +1029,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "1a94cb49-020e-4e6b-b4e7-9c1a5a63c309",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -1057,7 +1057,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "40bb4363-4dad-4cf9-8a6e-2e00cdd56609",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1095,7 +1095,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "d19151f8-af18-4ca1-82e2-a4b245f112be",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -1124,7 +1124,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "bd2c79dd-76ce-4b8d-9fcd-7f8acc83fce6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -1152,7 +1152,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "4d7bce02-cc72-4c78-a2de-9b5577b47ba8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -1180,7 +1180,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "257057cd-5eff-4bb3-90eb-6be4b7b42a22",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1219,7 +1219,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "01d5662f-47b2-4a26-b9d9-45ef4b89ecb0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -1247,7 +1247,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "c7983aa0-00ff-45a5-b2ba-41ca3c2732dc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1290,7 +1290,7 @@
       ]
     ],
     "id": "40b13d91-d82e-428d-9270-c48dd16ac25e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -1323,7 +1323,7 @@
       ]
     ],
     "id": "63a51ea5-d2b5-4b35-9157-270063a164f2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -1356,7 +1356,7 @@
       ]
     ],
     "id": "0fc81f8f-73a2-45f4-a6d2-545593c3bdea",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -1386,7 +1386,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "a27cb8bc-033e-4425-87b0-5a071ff2846b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -1415,7 +1415,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6f9642ce-d23d-490e-a18f-2052c3d1abc8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1453,7 +1453,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a3c53a6b-7473-42c4-b9c5-1ff3c16beb38",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -1481,7 +1481,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "be98e3ff-2869-43a7-884d-2480f3a777ce",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -1514,7 +1514,7 @@
       ]
     ],
     "id": "23aef30f-3387-459b-800e-675c532d163a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -1552,7 +1552,7 @@
       ]
     ],
     "id": "bdc3d343-a828-4334-ad58-63bdfb12e6af",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -1580,7 +1580,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "33175888-6ffb-4cf1-bc1f-7c77e1dd05fc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1619,7 +1619,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "55b05d1c-ef1a-47ee-abc7-6b8e98b90b31",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1659,7 +1659,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "dd6c5c34-23ea-48de-b767-88c58a917e29",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1697,7 +1697,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "9ad25f4f-0800-43b3-bb92-c4f5a799333d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1730,7 +1730,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f07a357b-c651-41d0-be49-4afb137185ae",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -1762,7 +1762,7 @@
     "potion": false,
     "raw_buys": [],
     "id": "30f19075-cda5-4a03-8734-47f91527f576",
-    "debt": false,
+    "debt": 0,
     "categories": [],
     "raw_cards": [
       [
@@ -1801,7 +1801,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "99e7e8b9-8563-4d8b-a00e-43d5efd920e7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -1829,7 +1829,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "0ea20a52-b03d-4b56-9b3d-aa189330d45e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -1863,7 +1863,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "660a7c9f-f231-4092-ab0e-5d17669d1029",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -1891,7 +1891,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "2a36cf36-bbca-4f85-9bff-9857e705cc03",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -1919,7 +1919,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "8ca0d22f-e5e8-4306-b556-8540fa49b826",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -1962,7 +1962,7 @@
       ]
     ],
     "id": "69d97e06-7de9-41b9-bed0-e5c0e55e94ea",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -1995,7 +1995,7 @@
       ]
     ],
     "id": "36f10964-c511-44f5-add5-f9929517421b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2071,7 +2071,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "bf767895-c807-43cc-8c33-35e72c278c53",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -2100,7 +2100,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "2a15e541-49f5-49fb-8a30-3b48e0853a70",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -2134,7 +2134,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "920ead76-b14b-4777-b649-0fc0f0b32fc3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -2162,7 +2162,7 @@
     "cost": 11,
     "raw_buys": [],
     "id": "839d1c5e-dbd0-4e1b-bdba-8259ba85ded7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -2190,7 +2190,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "9258c3ff-7f21-4d8a-a3bc-cea9f85cabef",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -2223,7 +2223,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "b4d3dd0f-b202-4d29-b11a-f96270312ea6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -2251,7 +2251,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "12eead12-9a23-4c39-9729-1262afa0eb52",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2294,7 +2294,7 @@
       ]
     ],
     "id": "5ae5dbc1-8db9-4ac8-84f8-5e1b878c15f5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -2322,7 +2322,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "1464ed1c-a305-4267-94d7-835375d355b4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -2355,7 +2355,7 @@
       ]
     ],
     "id": "f5f8031e-58d2-4926-aafc-64e6cd7676cf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2388,7 +2388,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "e33c62cf-ef52-4ae6-b056-a8a49b127492",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2421,7 +2421,7 @@
       ]
     ],
     "id": "c1173609-890c-4c7b-8937-28eacb5e60a6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2449,7 +2449,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "7c5f8829-5cae-4565-bca5-97163a914c47",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -2482,7 +2482,7 @@
       ]
     ],
     "id": "45f5aec6-dc26-4f48-8bdb-035e42143ad4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -2515,7 +2515,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "ccf0db48-cbf5-4d1b-b457-6ff27cbe971a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2552,7 +2552,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "27eb608c-82e4-4649-b090-ca4d5432bbfd",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2590,7 +2590,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "da48c588-65a4-470d-99ed-a251d9c1e407",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -2619,7 +2619,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "2d12148d-bc30-49ba-ac66-a5f70678723b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -2648,7 +2648,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "4872815f-c36b-4d74-ac68-017e87d2f506",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -2677,7 +2677,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "51116a3f-319d-4b0b-9d38-1e92bf1d0780",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2712,7 +2712,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "dc666536-214b-4e2a-b3bd-4ff48e1dea57",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -2740,7 +2740,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "aa90671c-2214-4b2e-9024-458433629756",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -2769,7 +2769,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "cb9f0e73-6125-4db5-87ea-f911b2073131",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -2808,7 +2808,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "488a8524-d112-4c83-81ba-4326caa64263",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -2837,7 +2837,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6d0d317b-b6f0-4814-876a-24ecaff11712",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2867,7 +2867,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "2eed254f-9538-4009-b003-8ba1a15601c1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2898,7 +2898,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "e380b87b-f28a-4e3b-813c-aa4a0c0fb9e1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2933,7 +2933,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "e5fb13be-dcd8-4f82-b443-6eee66036b49",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2963,7 +2963,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "fdd3347f-7653-4a0f-b1a3-30a5a8afba28",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -2993,7 +2993,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "76ed3e75-367a-42b3-a479-6e752742b293",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -3022,7 +3022,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "d3ad4e7b-ccc9-4851-a744-5a40bfec86d1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -3050,7 +3050,7 @@
     "cost": -4,
     "raw_buys": [],
     "id": "85410d21-169e-4ad9-9f1a-e6f7de162352",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3078,7 +3078,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "ae04ae68-20e1-4ccb-b456-d200647b403f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3106,7 +3106,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "b416d094-1575-484c-9285-c9ca294fad84",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -3134,7 +3134,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "467eaa58-9d66-43bb-bb35-d4e3a54b9aff",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3168,7 +3168,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "ccd3f8c2-edf7-4b3c-a7c2-15f72aa1f3ca",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -3196,7 +3196,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "ee41c898-7299-4aab-9ee5-04fe018e43f6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3224,7 +3224,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "ef31e612-89bc-441f-9b58-79e51c61a018",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -3253,7 +3253,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "03aee903-dff8-43e1-aedb-3898878460e0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3292,7 +3292,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "29193b35-5b1b-41ba-b0ba-4b9a9415fa2a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -3321,7 +3321,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "c48b3701-7248-4267-a946-af189055ee43",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -3349,7 +3349,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b8e7e757-f666-4189-9d43-cfdfec854c0e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -3379,7 +3379,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "bfbed59d-20f3-4a16-8844-1d3051082887",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -3407,7 +3407,7 @@
     "cost": 14,
     "raw_buys": [],
     "id": "31274892-5694-4918-a354-a71a0a222a23",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -3468,7 +3468,7 @@
       ]
     ],
     "id": "f23d8674-57eb-43c3-a315-55700e3d65a2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3497,7 +3497,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "cbfe7c71-78dc-4c41-aefd-ca2cde9f0e8e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -3525,7 +3525,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "681b16a5-9da5-43a1-85be-1f15c64ac010",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -3553,7 +3553,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "4abfb347-edd8-43f1-911c-353ebc4b9fa6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -3581,7 +3581,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "bd455fd3-6c9b-4cf8-a103-d890f7f266a1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3624,7 +3624,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "1ad3a399-d809-4520-9d91-f89368b311a5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -3653,7 +3653,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "58e3f151-5a3e-4b79-95c3-4c7eb6074e4a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -3681,7 +3681,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "40a25ec8-a5a1-4be8-9dfd-2d273f82ad03",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3718,7 +3718,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a8ac08be-762c-4a95-b3bc-223dac096ebc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3756,7 +3756,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "ffbfa120-52d8-419d-b591-a82900e2abe3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3794,7 +3794,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f84f482e-ab7d-48f2-97a4-0b8b451a5f67",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -3857,7 +3857,7 @@
     "cost": -4,
     "raw_buys": [],
     "id": "bc8ba9b7-4f8d-4eff-827b-e86767f3f3f0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3885,7 +3885,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "73176d11-ff03-4fe5-8cc2-b101a968c833",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -3913,7 +3913,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "e9c8fe66-58eb-429e-8c01-d62d558e323f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3941,7 +3941,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "616c57c7-24d4-4aac-abac-8c66a4682b8a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -3969,7 +3969,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "7659ce1b-f145-4058-b0a0-9908adcbe4eb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -3997,7 +3997,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "753d908c-75b7-4d32-9188-618bafda4a3b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -4025,7 +4025,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "8210998c-406b-446f-a524-34c766ac2867",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4058,7 +4058,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "ac3d4ce6-47a6-4311-a958-5ff1402da0e3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -4086,7 +4086,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "e8021619-61c9-41e8-a0f0-15dc8cb1b894",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -4114,7 +4114,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "9374615c-069b-4c16-a943-7507c5512324",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4148,7 +4148,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "2b82c354-652e-4d32-8478-022e17c92761",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4187,7 +4187,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "88482abc-3d68-437d-87ce-0f56ef4f86bc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -4220,7 +4220,7 @@
       ]
     ],
     "id": "9daf8418-2c8a-4512-b27c-f627cd2a2c75",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -4249,7 +4249,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "fea9f99f-a2f0-43aa-9305-97d751ceeb18",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -4282,7 +4282,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "04ccaa9a-9b84-4cf3-8843-7e90877ddaf9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -4310,7 +4310,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "12166b64-8d87-42fe-9926-970474fcbaa8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -4338,7 +4338,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "ea82bfb6-dd8c-4ae1-817b-06d5dea03e07",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -4366,7 +4366,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "bb5aa4d6-89cb-412d-a6a6-478df9855aef",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -4399,7 +4399,7 @@
       ]
     ],
     "id": "c6f6bfd3-71c5-4c8a-943d-d5e816a61830",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -4432,7 +4432,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "af77baef-0c90-4f21-a22c-64d808917522",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -4466,7 +4466,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "9edd8d01-3be7-48f0-8f86-a47f1dd398f6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4501,7 +4501,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "31f92d47-ef31-4f94-8873-071e00487633",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -4530,7 +4530,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "be0a1ecf-25b2-40c8-9608-ed37652bc96f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -4564,7 +4564,7 @@
       ]
     ],
     "id": "a0c98994-d904-4ce1-be4c-7177afed827f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -4597,7 +4597,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "f8dfce00-509e-4863-b222-5599882cacf5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -4625,7 +4625,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "61d489c9-7c04-440e-9a4c-7e2c9ad0c514",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4696,7 +4696,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "df0eb31c-9651-4326-8a67-26dd65aa7d60",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -4725,7 +4725,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "1a27da79-d533-4daf-8455-9657701b251b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4763,7 +4763,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "8a8c7cf1-b297-4140-afa8-79986c977134",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -4791,7 +4791,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "392b492e-f9c5-4048-aa39-5fe2810b466f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4830,7 +4830,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f1ec8e07-68c3-4f42-ac58-383b5107953c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -4858,7 +4858,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "2cd1f6b8-d49e-43b3-8c88-1914141d66a4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4892,7 +4892,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "0bb575d6-3567-479b-b661-2585b3aeee10",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4927,7 +4927,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "cd90b419-e76e-43b9-9443-5d29d42a59fc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -4961,7 +4961,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "2d6ce4ad-5abe-40ca-85fb-087909ea1184",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5000,7 +5000,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6a7a5405-d9a0-4eb6-8dee-d75a01c8ab89",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -5029,7 +5029,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "0406c9c5-f776-42dc-9fbd-6c1649114a75",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -5057,7 +5057,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "7c9a4140-9ccf-4e45-a283-4ced250e6aaf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -5086,7 +5086,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "40923169-b2e9-41e7-bd76-b3e860388817",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -5114,7 +5114,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "85bb77e6-f146-43ee-87f7-b345cc710303",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -5147,7 +5147,7 @@
       ]
     ],
     "id": "5580886a-71ee-4a0e-82b3-aae1e576b099",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -5176,7 +5176,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "9a87d113-554d-4992-9c6f-742b604b359e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5214,7 +5214,7 @@
     "cost": 9,
     "raw_buys": [],
     "id": "00ca8552-f90e-4416-b440-eae52fbb217b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -5248,7 +5248,7 @@
       ]
     ],
     "id": "a5822d02-e1ca-459b-b723-bf532d70c8c0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5286,7 +5286,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3d40fd28-e599-41e4-808c-749d997ac7a1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -5314,7 +5314,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "3cb6a095-90c5-4433-88df-6bcab40e54e2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -5342,7 +5342,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "71082eb1-2a15-4166-92d5-fa516d1e1e44",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5380,7 +5380,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "7372cdc9-0970-4ec7-b7eb-153d5c614e10",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -5409,7 +5409,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "e777c2c7-6bf1-41e0-b332-a6bc36c06b1c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -5452,7 +5452,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3d27ddb9-c64c-4163-9b8a-e7a03cb0e2f2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -5485,7 +5485,7 @@
       ]
     ],
     "id": "7ca14d99-68aa-434c-92dd-efe97afbf8c8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5523,7 +5523,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "dbe2ece5-9c31-4cd0-9446-9e0674318ce9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5561,7 +5561,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "1073e0d3-9b2a-43fd-8720-3272312abcd4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -5590,7 +5590,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f7c48eab-6be1-448f-9f1b-b9c86500abd2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -5618,7 +5618,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "fd022c0e-d7cd-415e-975c-322121bf1ced",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -5647,7 +5647,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "46d24140-3129-44d4-bca8-d0345dc7eb3c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -5681,7 +5681,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "eb8fc362-002b-45a0-82a8-4221f7ca928e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5716,7 +5716,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "035cf8e8-3246-4e0b-9bf3-e99d8da93dbc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -5744,7 +5744,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "49a738f3-244c-4e3a-a82c-91cb9e9e3513",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5783,7 +5783,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "c084d2df-1e2f-49bd-99e2-ef9581de7cce",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5826,7 +5826,7 @@
       ]
     ],
     "id": "cd11cbae-7b50-4ce6-811d-13ff23ea529e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -5854,7 +5854,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "fa5ebf99-5e66-4f35-b6de-8c7b4d3ac59f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -5882,7 +5882,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "54867758-4d72-4a79-ae70-c55c6147d6ea",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -5911,7 +5911,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "2b2e8c85-7f51-49f5-8b8d-38edd5965db3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5949,7 +5949,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "90bb9d84-78fb-452d-aab1-1652aa42820d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -5983,7 +5983,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "eba67fc5-dddc-4a80-a723-685f1f072755",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -6011,7 +6011,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "ea65de4d-1257-4656-b388-73c52b309ad2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -6044,7 +6044,7 @@
       ]
     ],
     "id": "4080a8ab-cf9a-4618-9e11-16d799bda2a7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -6078,7 +6078,7 @@
     "cost": 1,
     "raw_buys": [],
     "id": "ef7f0dee-c53b-4770-80cc-52687437598e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -6107,7 +6107,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "5f737e15-ed64-4449-87de-4012adaed1c9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -6137,7 +6137,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "4bde021a-bccf-4e3b-96aa-d7ed2c3eecb7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
         [
             "+",
@@ -6170,7 +6170,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "9448e5c5-5152-4b57-aae9-c1d6bfff11d0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6208,7 +6208,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "2a8d3d67-799b-4371-a953-a29e1f7082b0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -6238,7 +6238,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "8b72777c-d090-4f95-9485-6304a3f649aa",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -6266,7 +6266,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "1e5fc5ff-5d7b-467c-8bcb-0123c3980e36",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6300,7 +6300,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "c6483003-2518-4ea6-8516-2ce4a1426bf4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -6328,7 +6328,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "d604c043-4f7e-42d5-a661-1dc6c1861e36",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6370,7 +6370,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "796b7689-6213-4028-9640-69bc6d4ee3eb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6408,7 +6408,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "90fa25e3-8920-46cc-ad0f-9f9a8386230d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6446,7 +6446,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "7c4afdbc-c669-430f-b7d3-c010524b716c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -6475,7 +6475,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "943a2cef-95d0-4a84-ba70-82176b905dd3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6508,7 +6508,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b7036bf7-5f61-4c40-bded-238c88e2e0d5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -6537,7 +6537,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "acd1ae89-4eed-4033-ad21-b0a972434192",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -6565,7 +6565,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "c45458fb-7dd0-4469-a43e-511b6be8f4aa",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6603,7 +6603,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "f9040fcf-f84a-43e7-a1c1-84e14d987246",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -6631,7 +6631,7 @@
     "cost": 10,
     "raw_buys": [],
     "id": "a21e9ac8-182d-495f-a649-385073e9bdc1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -6660,7 +6660,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "92e64951-c8a8-4104-a49e-c1e10365813b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -6688,7 +6688,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "8a9be7e7-8d07-4977-b57f-97874f4789fe",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6726,7 +6726,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "cff1b77e-fdd1-4aa4-a9ee-175487e420c7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -6754,7 +6754,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3acec3f6-0c2c-40c8-98ec-c04186d28b73",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -6783,7 +6783,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "9978fe37-7c38-45e9-80fe-379fc5d474fc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -6812,7 +6812,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "5adeeec2-a0c4-49c5-8a59-8703034fcf26",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -6845,7 +6845,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "c7230caf-e5a5-46e6-be6c-6416267807fa",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -6879,7 +6879,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f0b3d038-8aee-426a-8fda-9ab971b329f0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -6907,7 +6907,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "7f1298c4-77a0-40c1-b3a8-04786e950542",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -6935,7 +6935,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "17f1bc33-e4bf-4c2b-9eb8-0ba9c5ad19b2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -6968,7 +6968,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "6ca8eba8-a1c8-468e-852c-d2d3fc7a5746",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -6996,7 +6996,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "87be93e9-6bb3-4af4-b14a-3c3b88d45cb8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7034,7 +7034,7 @@
     "cost": -4,
     "raw_buys": [],
     "id": "09db1000-2a46-4ba3-8658-3fe6b818ef74",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -7067,7 +7067,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "c439381d-e2f6-4165-ab72-9bafae227a3a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -7096,7 +7096,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "59ecff24-6d78-4f49-9839-dd429e8e3b34",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -7129,7 +7129,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "fd513d41-41b4-498a-9e7e-29c35282b814",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -7162,7 +7162,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "e065851f-7509-4229-9527-522528dd1a0e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -7191,7 +7191,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "d4bc27d7-ea20-4ba7-8b74-fabb8b653582",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7229,7 +7229,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "9b4a4119-6f36-40cf-92cd-f43571a627c8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -7257,7 +7257,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "05ff1617-d62a-4da6-ad57-34ec904c5dfb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -7292,7 +7292,7 @@
       ]
     ],
     "id": "0b0a9bc8-1372-421e-a509-eb4b6b87caba",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7331,7 +7331,7 @@
       ]
     ],
     "id": "1ad589f2-79c0-475e-b7e3-36fa1e9bc09d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7374,7 +7374,7 @@
       ]
     ],
     "id": "5f92ef37-fbb6-4c34-bddf-45b9f05f00f3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7413,7 +7413,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "96c3f19e-9b26-4e46-81a4-c3bbfe07c142",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7446,7 +7446,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "a2a044e8-b20a-4939-96ed-df74d7a8186b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -7474,7 +7474,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "c81cfdef-970a-4292-8b71-239534f4708c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7512,7 +7512,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "254cdbcc-470e-47f9-910f-26ad9fd0eb86",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7546,7 +7546,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "2e8aa1a4-2709-4cb7-a4db-ee31c2a80ace",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7589,7 +7589,7 @@
       ]
     ],
     "id": "f2c33bad-18fe-4467-b28f-ed255ef86bd9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -7617,7 +7617,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6a96c425-f9d9-40a1-8b21-f5b520c11c88",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -7651,7 +7651,7 @@
       ]
     ],
     "id": "289ae838-d247-4fee-a33e-338554503660",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -7679,7 +7679,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "76454b70-9313-48a5-ba69-3ceb9d1dc4a2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -7708,7 +7708,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "d87e5078-eab8-445d-860d-e00f33e612cc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7751,7 +7751,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f97db3e0-5048-4a4a-861a-271fe0a6df56",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -7779,7 +7779,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "e23645fd-a238-4301-9a81-d4a2c867e3ef",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -7817,7 +7817,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3b32b328-eb51-42cd-aeba-d510e5c88236",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -7860,7 +7860,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6e28133e-8a5f-4908-924c-6dd3e26a1cb2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -7888,7 +7888,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "26a365fe-3ddf-4d71-be34-cbae7f07d0df",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -7916,7 +7916,7 @@
     "cost": -4,
     "raw_buys": [],
     "id": "32788b5f-70b7-4b04-9418-2188e613f607",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -7944,7 +7944,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "9bbdee45-7470-456f-8b25-eb650321a57f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -7972,7 +7972,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "1e6652a6-18f8-4439-9587-f0634b17e31c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -8000,7 +8000,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "ddef07a6-54f0-4fc2-a8d2-1b6f9eb023af",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8034,7 +8034,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "c771516e-4778-4b46-8237-8e7615e49c09",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -8062,7 +8062,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "fec7c27b-3eb3-4f6f-868f-f7ca344b2f99",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -8090,7 +8090,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "a9833672-c325-43fa-82d6-aa3285ff94df",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -8146,7 +8146,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "2f678de9-5321-4c9a-878e-0099adae98a1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -8175,7 +8175,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "585b394a-64d9-44d4-ba69-771b00562ea1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8203,7 +8203,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b8df94af-4001-4335-9f2e-1d00131507d7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -8236,7 +8236,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "201ee2f1-e62c-4dfa-b770-3147a2e16d80",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -8269,7 +8269,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "47076b50-107f-4a02-9e7c-9f346c655b30",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -8297,7 +8297,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f7071904-99ad-4f81-b7da-b57b017d5c02",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -8325,7 +8325,7 @@
     "cost": 1,
     "raw_buys": [],
     "id": "c6f60804-9a8d-4a32-b413-6d64cc01596d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -8359,7 +8359,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "51e56f10-d714-43ab-bc8a-c360222d39b2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -8387,7 +8387,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "4e20900d-8857-4102-b4c7-f03c4474737f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -8416,7 +8416,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "a86c0ff3-404d-40be-bcdd-b53ad1787a09",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8460,7 +8460,7 @@
       ]
     ],
     "id": "b5cae3e0-4f02-425d-b72e-bcfa0f6a51fa",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -8488,7 +8488,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "3165a317-088b-4f6a-8cb1-4a5e4108894f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8530,7 +8530,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "941ef728-997e-4c74-8522-e10441692bf8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8558,7 +8558,7 @@
     "cost": 7,
     "raw_buys": [],
     "id": "a71a61d4-1d54-4c6b-b92e-133df4b72d83",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8588,7 +8588,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "83180e5a-953b-47a5-947e-da6e5b500026",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8622,7 +8622,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "10d95552-5378-4deb-b120-bdb23018ac42",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8650,7 +8650,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "db077687-a809-425f-9ec9-a2abc3c2db64",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -8679,7 +8679,7 @@
     "cost": 1,
     "raw_buys": [],
     "id": "b231e709-ab7a-4927-be0f-a0284bdd9d37",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -8736,7 +8736,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "d5eab824-c7fd-4103-82b0-fe74212b58e7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8775,7 +8775,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "2112e5f7-c303-4470-b004-b0f4d4fedf9e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8803,7 +8803,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "2122ecc4-6535-4a82-a303-fa490661eca1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -8833,7 +8833,7 @@
     "cost": 8,
     "raw_buys": [],
     "id": "e55e0318-72e8-4571-8b7d-8d4d9c938611",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -8861,7 +8861,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "80c8f042-426f-4240-baa9-2d5533a0c653",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8899,7 +8899,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f448e7d5-2910-4c9e-a4ae-cfda5670cf2c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8937,7 +8937,7 @@
       ]
     ],
     "id": "d38260a9-1caa-456e-9542-2b6c2158cf02",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -8975,7 +8975,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "f0273737-cb2b-4ad5-a8a3-2583bf08051c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9018,7 +9018,7 @@
       ]
     ],
     "id": "298646f3-b098-4bd8-b2fa-77e166ed169a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -9047,7 +9047,7 @@
     "cost": 8,
     "raw_buys": [],
     "id": "0bb16285-dfb2-461d-9590-9fefa82d8c14",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9085,7 +9085,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "a3e58885-0229-4558-ba14-c8fbf319fe61",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -9113,7 +9113,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "3da014da-caab-492c-bc10-1be1a39ec4d0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -9141,7 +9141,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "17bc94d1-f034-4ca3-a5b9-57c2c028750d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -9170,7 +9170,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "04794a5f-0af5-416a-80fe-c76fb6d00e3c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -9199,7 +9199,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "f0fec0e6-fdc6-42d9-a0f4-2c2ef7c486f1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9238,7 +9238,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "8d3a80a0-36eb-4239-90b1-20f3d1bcad82",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -9266,7 +9266,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "97bf0f03-8265-4c1a-84fa-87673c63fda9",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -9294,7 +9294,7 @@
     "cost": 9,
     "raw_buys": [],
     "id": "908c661d-4bcd-49e3-a1ec-3d8ce668dcd7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -9322,7 +9322,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "9a32f9cd-9f19-494e-a105-6b61a3e9fe98",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9360,7 +9360,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "11bb2a12-d9e1-45ca-9738-7ddd28ad97f1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -9388,7 +9388,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "6a2fdf3f-9f1b-46a4-953c-77bde0a09a43",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9430,7 +9430,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "7032c263-9c6b-4afc-8905-6c2bb9d7c2da",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9463,7 +9463,7 @@
     "cost": 1,
     "raw_buys": [],
     "id": "b3036444-e305-4921-affb-0d2518dd478b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -9491,7 +9491,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "6bdbfa57-0d03-4e2a-8389-860f9aeac9bc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9529,7 +9529,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "c89be1e1-adb3-477f-bc93-2d51b53a4973",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -9557,7 +9557,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "bd3f5d8a-40a3-4db3-8078-70b14b04d4df",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -9590,7 +9590,7 @@
       ]
     ],
     "id": "c06b169e-016c-4378-969e-6c97bf4b1484",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -9619,7 +9619,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "a950f2e9-0f12-4325-8349-25beb19be740",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -9652,7 +9652,7 @@
     "cost": 8,
     "raw_buys": [],
     "id": "7c9c7f8c-8e30-4556-988d-ba21f61067de",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -9685,7 +9685,7 @@
       ]
     ],
     "id": "653ea975-1473-44d6-9550-98e18d855b6d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -9714,7 +9714,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "955d348e-e607-45fc-b300-c05faa0df76d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -9742,7 +9742,7 @@
     "cost": 8,
     "raw_buys": [],
     "id": "eb6c1bfc-e8e6-4b16-befb-b0e5fcad75bb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -9770,7 +9770,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "3a94c0aa-5ae2-4ec1-afcc-332933f00d01",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -9798,7 +9798,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "9e82cb77-2a8a-4476-9bdd-904860ad031d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -9831,7 +9831,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "95e30c02-9be7-4fa4-8e40-ceebe2f2ecdc",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9865,7 +9865,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "23373731-e8f5-4bcf-beb4-bdd43b873d0d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -9893,7 +9893,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "7bb64c18-27f6-4002-be05-ca05b90dea9c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -9928,7 +9928,7 @@
       ]
     ],
     "id": "1103941f-f2b6-4fab-8efe-70f9880a7a08",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -9961,7 +9961,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "6297ea08-9f1b-4035-a893-371963c0ca85",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10000,7 +10000,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "57b52603-a4de-45b5-b729-819e5918b53b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10038,7 +10038,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "d61c83b9-5510-44ae-9a77-c7d39b227fb8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10076,7 +10076,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "92b0bbbb-4cea-4551-8672-804c6847b517",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10109,7 +10109,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a0503972-e03f-4d16-9f1c-2dbfc4ba264a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -10138,7 +10138,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "3c0faee4-8a6e-4347-b3e0-8483bad5b046",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Cornucopia",
     "types": [
@@ -10166,7 +10166,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f022e40c-a567-4ce8-83a1-e2221d838f06",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -10194,7 +10194,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "004c6b6b-7713-4ca7-a077-4183b3daba19",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -10223,7 +10223,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "6ea9753f-b27e-407b-965e-93797a57d120",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -10251,7 +10251,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f1bca2f7-1829-4487-b75b-3c61130dc673",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -10279,7 +10279,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "bc601d1d-8397-4949-8653-ebb9b34a432a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10345,7 +10345,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "91d89f07-11e5-458e-899d-0d9e145d0be5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -10379,7 +10379,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "da878263-c2b9-4489-b026-74f14bd946eb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -10407,7 +10407,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "b2f5e4f2-9d5b-43bc-b4db-af587dc62362",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10446,7 +10446,7 @@
       ]
     ],
     "id": "f38e1cab-7ebc-4cd0-a2e2-427573070f37",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10475,7 +10475,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "97bc5ded-489f-4ae8-806c-bfa9b126e065",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10514,7 +10514,7 @@
       ]
     ],
     "id": "726a974f-f586-4988-abd2-d5b792cc2d0c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -10543,7 +10543,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "a1b6e3f6-6ab3-4829-a625-bf53fe612d44",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10581,7 +10581,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "d3d2a3dc-cf55-48c6-a259-846cb5568dbf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10614,7 +10614,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "27c96f7e-87e1-41e6-a02e-aecb43bad037",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -10647,7 +10647,7 @@
       ]
     ],
     "id": "02069577-03eb-4850-ba64-1f7f5f54e2cb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -10675,7 +10675,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "2a7cecd1-e652-4770-abef-a4162f2f65b3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10718,7 +10718,7 @@
       ]
     ],
     "id": "f754bed4-ccf6-4642-87ed-e4fd73e10faf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -10746,7 +10746,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "a5449dbf-6cdd-4aef-834c-7ad7e43a2917",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -10774,7 +10774,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "5d1ed103-5c36-444b-bfa1-19abfc8d3d80",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10817,7 +10817,7 @@
       ]
     ],
     "id": "1c159a77-72ae-42ee-8134-5df8ba65c889",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -10845,7 +10845,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "eaacdd96-957e-48ec-a02d-cb2838c9164f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -10879,7 +10879,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "07c18fc2-d55a-4fe2-9529-fd1e46aa2399",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -10908,7 +10908,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "beb7e5bc-5924-41e5-b87b-9ced0108c183",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -10936,7 +10936,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "8dd86d3a-3182-40fb-9ab1-cde3ed46039d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -10979,7 +10979,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "84a31f87-6dba-461c-a718-56ee11761e8a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11021,7 +11021,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "5c6498dc-8e62-4ae4-acfe-a07573a0e062",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11059,7 +11059,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "e6865dc6-7e12-414c-adf4-71b87f1690d4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11097,7 +11097,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "81be5bd4-b365-451f-9b4c-4d54ff190fba",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11135,7 +11135,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "b5fff6db-feff-4da8-9c06-b6f5090a8e8c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -11177,7 +11177,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "06102a87-7cb2-44ce-8eb6-cc0647ad3923",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -11205,7 +11205,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "6519b337-6471-4ece-b252-5e3843a9e86a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -11233,7 +11233,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a730da03-e3f5-4eee-a849-f12ddcb2b421",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11273,7 +11273,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "63ffd7f8-4f9d-4fb2-83c6-ce4aa8d12901",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11313,7 +11313,7 @@
       ]
     ],
     "id": "2460a14d-b086-4114-9b15-50d0101ffd4e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11343,7 +11343,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b907620b-04c1-4822-9efa-704a2775f763",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11373,7 +11373,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a04e0947-1526-46aa-9d89-0de7aaf2cb42",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11408,7 +11408,7 @@
       ]
     ],
     "id": "5a632f6f-d32b-465c-8e71-5a3d7a3aa514",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -11438,7 +11438,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "d58dbc5f-a992-4450-85cd-d6bb79072eac",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -11468,7 +11468,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "0eeaec89-748c-4c3e-8cb6-83722b8e6e3a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11501,7 +11501,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "0ca173b6-1d58-4446-916c-8b20bf475d7b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -11529,7 +11529,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "5e3ed324-74f0-4654-8113-3efdf7f3b156",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -11559,7 +11559,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "41299e4f-2482-41ab-a462-fd3d79718ce5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -11593,7 +11593,7 @@
       ]
     ],
     "id": "ce616269-8f65-43f5-a0fe-c4adb620d847",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11631,7 +11631,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "02bec2c3-b6cc-47a7-a244-6bd80ceb3343",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11659,7 +11659,7 @@
     "cost": 8,
     "raw_buys": [],
     "id": "4eeac700-3396-47f1-acda-73cac6d00a4f",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -11693,7 +11693,7 @@
       ]
     ],
     "id": "48d97d2a-306d-480f-bdcb-90707b7849be",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11726,7 +11726,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "74685744-8a9c-4483-bd90-b73edec868c2",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11764,7 +11764,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "f6066c73-c4d8-4b2a-9719-2ea7d5697802",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -11792,7 +11792,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "6b22a3c9-0d54-48cd-8270-c2da4c24087a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11825,7 +11825,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "8a8b4fe6-8b0b-44b6-b1d8-2841172a8fd0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -11858,7 +11858,7 @@
       ]
     ],
     "id": "ba6e48de-a4ac-4790-abf5-a15f89dd0163",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -11895,7 +11895,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3b4bd634-498d-4e05-80d8-5b1df0cc3451",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -11933,7 +11933,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "53148781-d379-4008-a5b0-7c0cc39ccc51",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Promo",
     "types": [
@@ -11961,7 +11961,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "36c75667-fc6a-4980-b1d9-87c9a88de7e6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Dark Ages",
     "types": [
@@ -11990,7 +11990,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "581e2e9a-6589-4f45-a951-1b9ef62d799e",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -12020,7 +12020,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "2af41ff9-5893-43da-ad33-4256483ffdfd",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -12054,7 +12054,7 @@
       ]
     ],
     "id": "9ab5006d-0f55-4b4b-8e9b-e86284b734f8",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12093,7 +12093,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "655a1eb9-63d0-455f-80bb-8dd9b337c0a1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -12121,7 +12121,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "63bd507e-62fc-4d28-a60c-75189e533a17",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -12149,7 +12149,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f81c70e7-ac6d-4ee8-a733-490c4bc7bb7a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Guilds",
     "types": [
@@ -12178,7 +12178,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "e43d27be-0ccf-428b-81e1-6a1cc3a571b5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -12207,7 +12207,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "958aac9b-1a85-4b6a-a78f-ca05106d0bc0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -12236,7 +12236,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "f1c8bfc8-97ca-42fb-9e7e-0511b3bb7fcb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -12269,7 +12269,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "970508bf-bd8a-467f-a667-728d0140fbb3",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12302,7 +12302,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "3cccbfe8-afa5-4b2d-9d12-017f93b5fffd",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12335,7 +12335,7 @@
       ]
     ],
     "id": "a0be7959-424e-456e-b710-4f67ae2b52d7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12363,7 +12363,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "a83c0d6d-c8a2-46ec-8ec5-19ace8b38324",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12396,7 +12396,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "cd45e948-c7bd-4c38-89cc-be4e4c4aeb4b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12424,7 +12424,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "8b6ec3c7-798c-48f2-9a2d-d53f01147cba",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12457,7 +12457,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "12ed7d77-a567-42b4-be3a-14bd91775cd7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12490,7 +12490,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "17dcbe33-2d6c-423e-9f6d-a4bdb838c833",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "-",
@@ -12523,7 +12523,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "bac7b797-474c-453c-a4b1-6f152169d3af",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12551,7 +12551,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "25658d52-21d6-4164-a5fd-bbb5927403ca",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12579,7 +12579,7 @@
     "cost": -2,
     "raw_buys": [],
     "id": "914c0184-1dd8-4153-9ac9-537035ff6b66",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12616,7 +12616,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f7314a75-9549-4fa9-8c8f-d895cf4f91b5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -12644,7 +12644,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "f65cc0e4-18ed-497d-a57c-5b9e2a3bf9b7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -12672,7 +12672,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "c5cf6d8e-12ad-4db0-89c1-3ec4854ea76c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12702,7 +12702,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "38eea2e1-c8f8-44d8-bd76-917ec081d3c4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12736,7 +12736,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "b0e2eff8-05ff-4999-817e-81c8af4a31e7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12774,7 +12774,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "2a14010e-41db-40aa-b06d-ca9af1acd55a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -12802,7 +12802,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "6a05ea6c-4eda-4231-aae7-107cc5363d1c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -12831,7 +12831,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "5e8ac6ee-42c6-4b3f-b62a-81041a3e2eb7",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -12864,7 +12864,7 @@
       ]
     ],
     "id": "0e6fb402-8d26-4083-be5a-a40cbc1b9984",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -12892,7 +12892,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "09c0843f-ffef-4c76-bf7d-1c043d2d9405",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -12921,7 +12921,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "23bb8d6f-a75f-4a8f-bd25-1b96271879b1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Intrigue",
     "types": [
@@ -12954,7 +12954,7 @@
       ]
     ],
     "id": "6140fd32-b6b6-470d-8feb-c3fb1d128d94",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -12987,7 +12987,7 @@
     "cost": 6,
     "raw_buys": [],
     "id": "2a617d7d-9956-4fef-afe9-3dcabef33e20",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -13015,7 +13015,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "12c2b013-957c-4fa6-8434-befc2c9327c4",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -13049,7 +13049,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "dff32b3a-f2ec-486a-a6be-e27288bd1f3a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -13082,7 +13082,7 @@
       ]
     ],
     "id": "fe7eabb6-606f-4efc-b07f-c3eb1999be7b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -13110,7 +13110,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "5179111d-cac8-49f0-889c-a74f20aa2cfe",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -13144,7 +13144,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "966f0199-87d7-4352-b869-232d80be93fb",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Seaside",
     "types": [
@@ -13172,7 +13172,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "cf667c6b-eabb-47f6-9c2f-3c740366b3a0",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -13200,7 +13200,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b27a6c84-acde-45b1-93b5-e31aa459eada",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13266,7 +13266,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "23734dcc-107f-4381-82b9-e70543cebefd",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -13294,7 +13294,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "1f1001da-a16f-4353-a8f7-63c958918e0c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13333,7 +13333,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "84d6e923-c3fc-4565-87c6-d2afb8c3fee5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Hinterlands",
     "types": [
@@ -13362,7 +13362,7 @@
     "cost": -4,
     "raw_buys": [],
     "id": "e85ff8ef-ba8b-4ec7-9cf5-ceb43e9ae51a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -13390,7 +13390,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "7d3bc33e-1282-4902-81a5-cb30a753188c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -13423,7 +13423,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "6a2a8d18-63dc-4c2d-839d-4fb292d631ad",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13461,7 +13461,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "0c11b64d-1d0d-4aa4-b4ee-f1f27fb030c6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13500,7 +13500,7 @@
     "cost": 2,
     "raw_buys": [],
     "id": "3d7f7cc4-c281-49a8-b65d-691282e6e50b",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13538,7 +13538,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "c309b934-d061-4977-91d7-7bf98bcae805",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -13568,7 +13568,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "0ce746e8-e2fe-4367-bed0-9b11c7ff56b5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -13596,7 +13596,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a348bba2-269e-48a5-8038-debba72c2460",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13633,7 +13633,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "3647e12f-c2f4-4c9c-921a-f76d414ad658",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Prosperity",
     "types": [
@@ -13666,7 +13666,7 @@
       ]
     ],
     "id": "d8b6e7ab-9a93-4bc3-ae79-c541e0e89d99",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -13699,7 +13699,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "bb994cdd-595d-4fc5-9f43-1ab609697ac6",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13737,7 +13737,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "8ba47cf9-d6d9-4d1b-8943-4f05f2978078",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Alchemy",
     "types": [
@@ -13765,7 +13765,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "7aa2c394-d5c6-475d-8247-0f47537aee7a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -13793,7 +13793,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "7b75d22c-cc44-4d94-85c8-15949a51f16c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13831,7 +13831,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "f29fe2a5-bdd3-4ef5-8ede-c8b43af32835",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13869,7 +13869,7 @@
     "cost": -3,
     "raw_buys": [],
     "id": "40188acf-da3f-4e60-b97e-351d8e607157",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -13897,7 +13897,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "657b950f-394b-4cb9-ac34-f9fb08adefca",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13939,7 +13939,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "0fb687b4-54cb-4492-a7ef-83b7f2015f08",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -13974,7 +13974,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "eb26d971-fd88-4a5c-94fc-2413978326e1",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14036,7 +14036,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "fcf0e172-bb91-4ded-b88f-7344e704a414",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14077,7 +14077,7 @@
       ]
     ],
     "id": "c283d0c2-6e06-4147-9158-382d58f3d684",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14111,7 +14111,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "b64b601a-bb07-43e2-a953-ddac0a24cd9d",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14145,7 +14145,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "afd37373-d4a9-4f21-8219-a53335e4e75a",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14184,7 +14184,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "a18dbcfc-efdc-49b1-9b7c-1ecc36eb0aaf",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -14217,7 +14217,7 @@
       ]
     ],
     "id": "7e9c71c0-a97b-4a51-93d1-1acf99040c87",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Adventures",
     "types": [
@@ -14246,7 +14246,7 @@
     "cost": 0,
     "raw_buys": [],
     "id": "7475f826-38db-4368-bdd4-b2d46381df83",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -14279,7 +14279,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "414a4247-761e-4f2b-b77c-1eec10136cca",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14321,7 +14321,7 @@
     "cost": 5,
     "raw_buys": [],
     "id": "be029344-a379-4dd6-b929-20bb09b5b06c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14355,7 +14355,7 @@
     "cost": -1,
     "raw_buys": [],
     "id": "55c19f5b-9576-4ddf-9f18-69dafed94323",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -14388,7 +14388,7 @@
       ]
     ],
     "id": "56096150-d3b3-4f05-95e7-46621f141529",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14426,7 +14426,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "d884e86b-746d-4402-b7b5-4a4f6792d6ef",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Base",
     "types": [
@@ -14454,7 +14454,7 @@
     "cost": 4,
     "raw_buys": [],
     "id": "20247252-9419-4ed7-a6c0-5a22b70cf46c",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14488,7 +14488,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "22b47f18-1031-4053-ac7a-32147202b9c5",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
@@ -14527,7 +14527,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "26f26da3-8502-4b9f-a314-1dde106e02ac",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [],
     "expansion": "Nocturne",
     "types": [
@@ -14556,7 +14556,7 @@
     "cost": 3,
     "raw_buys": [],
     "id": "f9e12e6b-a5f4-45bd-bfd0-c78215082790",
-    "debt": false,
+    "debt": 0,
     "raw_cards": [
       [
         "+",
