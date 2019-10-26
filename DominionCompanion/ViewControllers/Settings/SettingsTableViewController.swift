@@ -41,15 +41,16 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") else { return UITableViewCell() }
         let menuItem = allSettings[indexPath.section].items[indexPath.row]
-        let cell = UITableViewCell()
+        cell.detailTextLabel?.text = ""
+        cell.textLabel?.text = menuItem.title
         switch menuItem.destinationType {
         case .viewController:
-            cell.textLabel?.text = menuItem.title
             cell.accessoryType = .disclosureIndicator
         case .list:
-            cell.textLabel?.text = "\(menuItem.title) (\(UserDefaults.standard.string(forKey: menuItem.saveKey) ?? ""))"
             cell.accessoryType = .disclosureIndicator
+            cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: menuItem.saveKey) ?? ""
         default:
             cell.accessoryType = .none
         }
@@ -75,6 +76,7 @@ class SettingsTableViewController: UITableViewController {
             else { return }
         destination.saveKey = menuItem.saveKey
         destination.values = menuItem.values
+        destination.navTitle = menuItem.title
     }
 }
 

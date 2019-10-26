@@ -12,6 +12,12 @@ import UIKit
 class ListSettingTableViewController: UITableViewController {
     var values: [String] = []
     var saveKey: String = ""
+    var navTitle: String?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = self.navTitle
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
