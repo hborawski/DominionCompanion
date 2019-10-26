@@ -14,10 +14,23 @@ class SetBuilder {
     var currentSet: [SetBuilderSection] {
         get {
             let cards = getFullSet()
-            return [
-                SetBuilderSection(title: "Set", cards: cards),
-                SetBuilderSection(title: "All Cards", cards: cardPool, canShuffle: false)
+            
+            var defaults = [
+                CardSection(title: "Set", cards: cards, pinnedCards: pinnedCards),
+                CardSection(title: "All Cards", cards: cardPool, pinnedCards: pinnedCards, canShuffle: false)
             ]
+            
+            if maxEvents > 0 {
+                let displayed = Array((pinnedEvents + randomEvents.filter { !pinnedEvents.contains($0) } )[0...(maxEvents - 1)])
+                defaults.insert(CardSection(title: "Events", cards: displayed, pinnedCards: pinnedEvents), at: 0)
+            }
+            
+            if maxLandmarks > 0 {
+                let displayed = Array((pinnedLandmarks + randomLandmarks.filter { !pinnedLandmarks.contains($0) } )[0...(maxLandmarks - 1)])
+                defaults.insert(CardSection(title: "Landmarks", cards: displayed, pinnedCards: pinnedLandmarks), at: 0)
+            }
+            
+            return defaults
         }
     }
     
@@ -29,10 +42,52 @@ class SetBuilder {
         }
     }
     
+    var maxLandmarks: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "settings_numberOfLandmarks")
+        }
+    }
+    
+    var randomLandmarks: [Card] {
+        get {
+            return CardData.shared.allLandmarks.shuffled()
+        }
+    }
+    
+    var pinnedLandmarks: [Card] {
+        get {
+            return self.loadPinned("pinnedLandmarks")
+        }
+        set {
+            self.savePinned(newValue, key: "pinnedLandmarks")
+        }
+    }
+    
+    var maxEvents: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "settings_numberOfEvents")
+        }
+    }
+    
+    var randomEvents: [Card] {
+        get {
+            return CardData.shared.allEvents.shuffled()
+        }
+    }
+    
+    var pinnedEvents: [Card] {
+        get {
+            return self.loadPinned("pinnedEvents")
+        }
+        set {
+            self.savePinned(newValue, key: "pinnedEvents")
+        }
+    }
+    
     var pinnedCards: [Card] {
         didSet {
             fullSet = getFullSet()
-            self.savePinnedCards()
+            self.savePinned(self.pinnedCards, key: "pinnedCards")
         }
     }
     
@@ -48,11 +103,16 @@ class SetBuilder {
     init() {
         self.randomCards = []
         self.pinnedCards = []
-        self.pinnedCards = loadPinnedCards()
+        self.pinnedCards = loadPinned()
     }
     
     func pinCard(_ card: Card) {
-        guard card.types.first(where: { Constants.nonKingdomTypes.contains($0)}) == nil else {
+        if card.types.contains("Landmark") {
+            pinLandmark(card)
+            return
+        }
+        if card.types.contains("Event") {
+            pinEvent(card)
             return
         }
         guard pinnedCards.count < maxCards else { return }
@@ -63,7 +123,41 @@ class SetBuilder {
         }
     }
     
+    func pinLandmark(_ card: Card) {
+        guard !pinnedLandmarks.contains(card) else { return }
+        pinnedLandmarks.append(card)
+    }
+    
+    func unpinLandmark(_ card: Card) {
+        guard
+            pinnedLandmarks.contains(card),
+            let index = pinnedLandmarks.firstIndex(of: card)
+            else { return }
+        pinnedLandmarks.remove(at: index)
+    }
+    
+    func pinEvent(_ card: Card) {
+        guard !pinnedEvents.contains(card) else { return }
+        pinnedEvents.append(card)
+    }
+    
+    func unpinEvent(_ card: Card) {
+        guard
+            pinnedEvents.contains(card),
+            let index = pinnedEvents.firstIndex(of: card)
+            else { return }
+        pinnedEvents.remove(at: index)
+    }
+    
     func unpinCard(_ card: Card) {
+        if card.types.contains("Landmark") {
+            unpinLandmark(card)
+            return
+        }
+        if card.types.contains("Event") {
+            unpinEvent(card)
+            return
+        }
         guard pinnedCards.contains(card) else { return }
         guard let index = pinnedCards.index(of: card) else { return }
         pinnedCards.remove(at: index)
@@ -90,30 +184,39 @@ class SetBuilder {
         return pinnedCards + randoms
     }
     
-    private func loadPinnedCards() -> [Card] {
-        guard let rawData = UserDefaults.standard.data(forKey: "pinnedCards"),
+    private func loadPinned(_ key: String = "pinnedCards") -> [Card] {
+        guard let rawData = UserDefaults.standard.data(forKey: key),
             let cards = try? PropertyListDecoder().decode([Card].self, from: rawData) else { return [] }
         return cards
     }
     
-    private func savePinnedCards(_ cards: [Card]? = nil) {
-        if let data = try? PropertyListEncoder().encode(cards ?? self.pinnedCards) {
-            UserDefaults.standard.set(data, forKey: "pinnedCards")
+    private func savePinned(_ cards: [Card], key: String) {
+        if let data = try? PropertyListEncoder().encode(cards) {
+            UserDefaults.standard.set(data, forKey: key)
         }
     }
 }
 
-struct SetBuilderSection {
+
+protocol SetBuilderSection {
+    var title: String { get }
+    var rows: [SetBuilderCardRow] { get }
+    var cards: [Card] { get }
+    var canShuffle: Bool { get }
+}
+
+struct CardSection: SetBuilderSection {
     var title: String
     var rows: [SetBuilderCardRow] {
         get {
             return self.cards.map { c in
-                let pinned = SetBuilder.shared.pinnedCards.contains(c)
+                let pinned = self.pinnedCards.contains(c)
                 return SetBuilderCardRow(card: c, pinned: pinned, pinAction: {pinned ? SetBuilder.shared.unpinCard(c): SetBuilder.shared.pinCard(c)})
             }
         }
     }
     var cards: [Card]
+    var pinnedCards: [Card]
     var canShuffle: Bool = true
 }
 
