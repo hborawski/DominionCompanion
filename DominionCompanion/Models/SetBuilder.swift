@@ -15,8 +15,8 @@ class SetBuilder {
         get {
             let cards = getFullSet()
             return [
-                SetBuilderSection(title: "Set", cards: cards.map { SetBuilderCardRow(card: $0, pinned: pinnedCards.contains($0) )}),
-                SetBuilderSection(title: "All Cards", cards: cardPool.map { SetBuilderCardRow(card: $0, pinned: false)}, canShuffle: false)
+                SetBuilderSection(title: "Set", cards: cards),
+                SetBuilderSection(title: "All Cards", cards: cardPool, canShuffle: false)
             ]
         }
     }
@@ -52,6 +52,9 @@ class SetBuilder {
     }
     
     func pinCard(_ card: Card) {
+        guard card.types.first(where: { Constants.nonKingdomTypes.contains($0)}) == nil else {
+            return
+        }
         guard pinnedCards.count < maxCards else { return }
         guard !pinnedCards.contains(card) else { return }
         pinnedCards.append(card)
@@ -102,11 +105,20 @@ class SetBuilder {
 
 struct SetBuilderSection {
     var title: String
-    var cards: [SetBuilderCardRow]
+    var rows: [SetBuilderCardRow] {
+        get {
+            return self.cards.map { c in
+                let pinned = SetBuilder.shared.pinnedCards.contains(c)
+                return SetBuilderCardRow(card: c, pinned: pinned, pinAction: {pinned ? SetBuilder.shared.unpinCard(c): SetBuilder.shared.pinCard(c)})
+            }
+        }
+    }
+    var cards: [Card]
     var canShuffle: Bool = true
 }
 
 struct SetBuilderCardRow {
     var card: Card
     var pinned: Bool
+    var pinAction: () -> Void
 }

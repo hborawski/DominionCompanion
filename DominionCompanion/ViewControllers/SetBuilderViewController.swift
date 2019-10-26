@@ -72,20 +72,16 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
-        let card = section.cards[indexPath.row]
+        let card = section.rows[indexPath.row]
         cell.setData(card.card, favorite: card.pinned)
         return cell
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let cardData = SetBuilder.shared.currentSet[indexPath.section].cards[indexPath.row]
+        let cardData = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row]
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
-            if cardData.pinned {
-                SetBuilder.shared.unpinCard(cardData.card)
-            } else {
-                SetBuilder.shared.pinCard(cardData.card)
-            }
+            cardData.pinAction()
             tableView.reloadData()
             completion(true)
         }
@@ -99,7 +95,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "ViewCard",
             let cardVC = segue.destination as? CardViewController
         {
-            cardVC.card = SetBuilder.shared.currentSet[indexPath.section].cards[indexPath.row].card
+            cardVC.card = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row].card
         }
     }
 }
