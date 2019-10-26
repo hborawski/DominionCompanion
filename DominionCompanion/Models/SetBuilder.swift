@@ -20,7 +20,10 @@ class SetBuilder {
     }
     
     var pinnedCards: [Card] {
-        didSet { fullSet = getFullSet() }
+        didSet {
+            fullSet = getFullSet()
+            self.savePinnedCards()
+        }
     }
     
     var randomCards: [Card] {
@@ -35,6 +38,7 @@ class SetBuilder {
     init() {
         self.randomCards = []
         self.pinnedCards = []
+        self.pinnedCards = loadPinnedCards()
     }
     
     func pinCard(_ card: Card) {
@@ -71,5 +75,17 @@ class SetBuilder {
         let numberToPick = openSlots < randomCards.count ? openSlots : (randomCards.count - 1)
         let randoms = Array(randomCards[0...numberToPick])
         return pinnedCards + randoms
+    }
+    
+    private func loadPinnedCards() -> [Card] {
+        guard let rawData = UserDefaults.standard.data(forKey: "pinnedCards"),
+            let cards = try? PropertyListDecoder().decode([Card].self, from: rawData) else { return [] }
+        return cards
+    }
+    
+    private func savePinnedCards(_ cards: [Card]? = nil) {
+        if let data = try? PropertyListEncoder().encode(cards ?? self.pinnedCards) {
+            UserDefaults.standard.set(data, forKey: "pinnedCards")
+        }
     }
 }

@@ -37,6 +37,7 @@ class CardData {
     
     // MARK: Maxes for creating picker inputs
     let maxPrice: Int
+    let maxDebt: Int
     let maxActions: Int
     let maxBuys: Int
     let maxCards: Int
@@ -73,6 +74,7 @@ class CardData {
         }
         
         self.maxPrice = self.allCards.map({$0.cost}).max(by: {$0<$1}) ?? 0
+        self.maxDebt = self.allCards.map({$0.debt}).max(by: {$0<$1}) ?? 0
         self.maxActions = self.allCards.map({$0.actions}).max(by: {$0<$1}) ?? 0
         self.maxBuys = self.allCards.map({$0.buys}).max(by: {$0<$1}) ?? 0
         self.maxCards = self.allCards.map({$0.cards}).max(by: {$0<$1}) ?? 0

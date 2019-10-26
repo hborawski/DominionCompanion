@@ -11,6 +11,7 @@ import UIKit
 
 class Card: Decodable {
     var cost: Int = 0
+    var debt: Int = 0
     var actions: Int = 0
     var buys: Int = 0
     var cards: Int = 0
@@ -22,6 +23,7 @@ class Card: Decodable {
     init(_ cardData: Dictionary<String, AnyObject>) {
         if let name = cardData["name"] as? String,
             let cost = cardData["cost"] as? Int,
+            let debt = cardData["debt"] as? Int,
             let actions = cardData["actions"] as? Int,
             let buys = cardData["buys"] as? Int,
             let cards = cardData["cards"] as? Int,
@@ -31,6 +33,7 @@ class Card: Decodable {
             let trash = cardData["trash"] as? Bool
         {
             self.cost = cost
+            self.debt = debt
             self.actions = actions
             self.buys = buys
             self.cards = cards
@@ -47,6 +50,8 @@ class Card: Decodable {
         switch property {
         case .cost:
             return self.cost
+        case .debt:
+        return self.debt
         case .actions:
             return self.actions
         case .buys:
