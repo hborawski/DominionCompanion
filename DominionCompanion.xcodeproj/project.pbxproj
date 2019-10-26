@@ -34,6 +34,8 @@
 		AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
 		AF80D70E2364E32F00FDC4D6 /* GameplaySetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D70D2364E32F00FDC4D6 /* GameplaySetup.storyboard */; };
+		AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */; };
+		AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */; };
 		AFB14779235B9F3100CDA293 /* SavedFiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
@@ -96,6 +98,8 @@
 		AF80D7092364DA9800FDC4D6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF80D70B2364DD7100FDC4D6 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
 		AF80D70D2364E32F00FDC4D6 /* GameplaySetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameplaySetup.storyboard; sourceTree = "<group>"; };
+		AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuModel.swift; sourceTree = "<group>"; };
+		AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingTableViewController.swift; sourceTree = "<group>"; };
 		AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedFiltersTableViewController.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				AF1B6EC6232463FD00ADA74D /* CardProperty.swift */,
 				AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */,
 				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
+				AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			children = (
 				AF80D6FF235BCE6800FDC4D6 /* SettingsTableViewController.swift */,
 				AF80D701235C040100FDC4D6 /* GlobalExclusionsViewController.swift */,
+				AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
 				AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
+				AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
 				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
@@ -469,6 +476,7 @@
 				AF80D700235BCE6800FDC4D6 /* SettingsTableViewController.swift in Sources */,
 				AF1B6EC32324502500ADA74D /* ListFilter.swift in Sources */,
 				AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */,
+				AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */,
 				AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */,
 				AF1B6EBA23244BCE00ADA74D /* FilterViewController.swift in Sources */,
 			);
