@@ -2825,7 +2825,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/7d/Cutpurse.jpg/200px-Cutpurse.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/7d/Cutpurse.jpg"
     },
-    "text": "+. Each other player discards a Copper card (or reveals a hand with no Copper). ",
+    "text": "+2 Coins. Each other player discards a Copper card (or reveals a hand with no Copper). ",
     "trash": false,
     "name": "Cutpurse",
     "junk": false,
@@ -2855,7 +2855,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/ad/Dame_Anna.jpg/200px-Dame_Anna.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/ad/Dame_Anna.jpg"
     },
-    "text": "You may trash up to 2 cards from your hand. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "You may trash up to 2 cards from your hand. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 to 6, and discards the rest. If a Knight is trashed by this, trash this card.",
     "trash": true,
     "name": "Dame Anna",
     "junk": false,
@@ -2886,7 +2886,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/dd/Dame_Josephine.jpg/200px-Dame_Josephine.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/dd/Dame_Josephine.jpg"
     },
-    "text": "Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. Worth 2",
+    "text": "Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 to 6, and discards the rest. If a Knight is trashed by this, trash this card. Worth 2",
     "trash": false,
     "name": "Dame Josephine",
     "junk": false,
@@ -2921,7 +2921,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/10/Dame_Molly.jpg/200px-Dame_Molly.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/10/Dame_Molly.jpg"
     },
-    "text": "+2 Actions. Each other player discards the top 2 cards of his deck, and trashes one of them costing from  to . If a Knight is trashed by this, trash this card. ",
+    "text": "+2 Actions. Each other player discards the top 2 cards of his deck, and trashes one of them costing from 3 to 6. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Dame Molly",
     "junk": false,
@@ -2951,7 +2951,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/85/Dame_Natalie.jpg/200px-Dame_Natalie.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/85/Dame_Natalie.jpg"
     },
-    "text": "You may gain a card costing up to . Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "You may gain a card costing up to . Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 to 6, and discards the rest. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Dame Natalie",
     "junk": false,
@@ -2981,7 +2981,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c3/Dame_Sylvia.jpg/200px-Dame_Sylvia.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c3/Dame_Sylvia.jpg"
     },
-    "text": "+. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "+2 Coins. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 to 6, and discards the rest. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Dame Sylvia",
     "junk": false,
@@ -3010,7 +3010,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/50/Death_Cart.jpg/200px-Death_Cart.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/50/Death_Cart.jpg"
     },
-    "text": "+. You may trash an Action card from your hand. If you don’t, trash this. —  When you gain this, gain two Ruins. ",
+    "text": "+5 Coins. You may trash an Action card from your hand. If you don’t, trash this. —  When you gain this, gain two Ruins. ",
     "trash": true,
     "name": "Death Cart",
     "junk": false,
@@ -3038,12 +3038,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/dd/Defiled_Shrine.jpg/320px-Defiled_Shrine.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/dd/Defiled_Shrine.jpg"
     },
-    "text": "When you gain an Action, move 1 from its pile to this. When you buy a Curse, take the  from this. — Setup: Put 2 on each non-Gathering Action Supply pile. ",
+    "text": "When you gain an Action, move 1 Victory Token from its pile to this. When you buy a Curse, take the Victory Tokens from this. — Setup: Put 2 Victory Tokens on each non-Gathering Action Supply pile. ",
     "trash": false,
     "name": "Defiled Shrine",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -3116,7 +3116,7 @@
     "raw_actions": [],
     "cards": 0,
     "categories": [],
-    "buys": 0,
+    "buys": 1,
     "actions": 0,
     "images": {
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9d/Delve.jpg/320px-Delve.jpg",
@@ -3174,7 +3174,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -3184,7 +3184,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f7/Develop.jpg/200px-Develop.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f7/Develop.jpg"
     },
-    "text": "Trash a card from your hand. Gain a card costing exactly  more than it and a card costing exactly  less than it, in either order, putting them on top of your deck. ",
+    "text": "Trash a card from your hand. Gain a card costing exactly 1 more than it and a card costing exactly 1 less than it, in either order, putting them on top of your deck. ",
     "trash": true,
     "name": "Develop",
     "junk": false,
@@ -3212,7 +3212,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/07/Devil%27s_Workshop.jpg/200px-Devil%27s_Workshop.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/07/Devil%27s_Workshop.jpg"
     },
-    "text": " If the number of cards you've gained this turn is: 2+, gain an Imp from its pile; 1, gain a card costing up to ; 0, gain a Gold. ",
+    "text": " If the number of cards you've gained this turn is: 2+, gain an Imp from its pile; 1, gain a card costing up to 4 Coins; 0, gain a Gold.",
     "trash": false,
     "name": "Devil's Workshop",
     "junk": false,
@@ -3241,7 +3241,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/35/Diadem.jpg/200px-Diadem.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/35/Diadem.jpg"
     },
-    "text": "Worth . When you play this, + per unused Action you have (Action, not Action card). ",
+    "text": "Worth 2 Coins. When you play this, +1 Coin per unused Action you have (Action, not Action card).",
     "trash": false,
     "name": "Diadem",
     "junk": false,
@@ -3337,7 +3337,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c5/Dismantle.jpg/200px-Dismantle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c5/Dismantle.jpg"
     },
-    "text": " Trash a card from your hand. If it costs  or more, gain a cheaper card and a Gold. ",
+    "text": " Trash a card from your hand. If it costs 1 Coin or more, gain a cheaper card and a Gold. ",
     "trash": true,
     "name": "Dismantle",
     "junk": false,
@@ -3367,8 +3367,8 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3e/Distant_Lands.jpg/200px-Distant_Lands.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/3e/Distant_Lands.jpg"
     },
-    "text": "Put this on your Tavern mat. — Worth 4 if on your Tavern mat at the end of the game (otherwise worth 0). ",
-    "trash": true,
+    "text": "Put this on your Tavern mat. — Worth 4 Victory Points if on your Tavern mat at the end of the game (otherwise worth 0 Victory Points). ",
+    "trash": false,
     "name": "Distant Lands",
     "junk": false,
     "gain": 0,
@@ -3395,7 +3395,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b2/Doctor.jpg/200px-Doctor.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b2/Doctor.jpg"
     },
-    "text": "Name a card. Reveal the top 3 cards of your deck. Trash the matches. Put the rest back on top in any order. — When you buy this, you may overpay for it. For each  you overpaid, look at the top card of your deck; trash it, discard it, or put it back. ",
+    "text": "Name a card. Reveal the top 3 cards of your deck. Trash the matches. Put the rest back on top in any order. — When you buy this, you may overpay for it. For each 1 Coin you overpaid, look at the top card of your deck; trash it, discard it, or put it back. ",
     "trash": true,
     "name": "Doctor",
     "junk": false,
@@ -3423,19 +3423,19 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c9/Dominate.jpg/320px-Dominate.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c9/Dominate.jpg"
     },
-    "text": "Gain a Province. If you do, +9. ",
+    "text": "Gain a Province. If you do, +9 Victory Tokens. ",
     "trash": false,
     "name": "Dominate",
     "junk": false,
     "gain": 1,
-    "victoryTokens": 0
+    "victoryTokens": 9
   },
   {
     "potion": false,
-    "cost": 108,
+    "cost": 0,
     "raw_buys": [],
     "id": "de452f95-f866-43f2-be75-4a362340e2ec",
-    "debt": true,
+    "debt": 8,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -3513,11 +3513,11 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/df/Duchess.jpg/200px-Duchess.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/df/Duchess.jpg"
     },
-    "text": "+. Each player (including you) looks at the top card of his deck, and discards it or puts it back. —In games using this, when you gain a Duchy, you may gain a Duchess. ",
+    "text": "+2 Coins. Each player (including you) looks at the top card of his deck, and discards it or puts it back. — In games using this, when you gain a Duchy, you may gain a Duchess. ",
     "trash": false,
     "name": "Duchess",
     "junk": false,
-    "gain": 1,
+    "gain": 0,
     "victoryTokens": 0
   },
   {
@@ -3541,7 +3541,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4a/Duchy.jpg/200px-Duchy.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/4a/Duchy.jpg"
     },
-    "text": "Worth 3. ",
+    "text": "Worth 3 Victory Points.",
     "trash": false,
     "name": "Duchy",
     "junk": false,
@@ -3569,7 +3569,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/10/Duke.jpg/200px-Duke.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/10/Duke.jpg"
     },
-    "text": "Worth 1 per Duchy you have. ",
+    "text": "Worth 1 Victory Point per Duchy you have.",
     "trash": false,
     "name": "Duke",
     "junk": false,
@@ -3669,7 +3669,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fb/Embargo.jpg/200px-Embargo.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fb/Embargo.jpg"
     },
-    "text": "+. Trash this card. Put an Embargo token on top of a Supply pile. When a player buys a card, he gains a Curse card per Embargo token on that pile. ",
+    "text": "+2 Coins. Trash this card. Put an Embargo token on top of a Supply pile. When a player buys a card, he gains a Curse card per Embargo token on that pile. ",
     "trash": true,
     "name": "Embargo",
     "junk": true,
@@ -3744,40 +3744,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fe/Emporium.jpg/200px-Emporium.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fe/Emporium.jpg"
     },
-    "text": "+1 Card. +1 Action. +1.  — When you gain this, if you have at least 5 Action cards in play, +2. ",
+    "text": "+1 Card. +1 Action. +1 Coin.  — When you gain this, if you have at least 5 Action cards in play, +2 Victory Tokens. ",
     "trash": false,
     "name": "Emporium",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
-    "cost": 2,
-    "raw_buys": [],
-    "id": "136ee93d-ac75-4dd1-a7da-86efc650204c",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Empires",
-    "types": [
-      "Action"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4e/Encampment.jpg/200px-Encampment.jpg",
-      "full": "http://wiki.dominionstrategy.com/images/4/4e/Encampment.jpg"
-    },
-    "text": "Split pile containing 5 Encampment cards on top and 5 Plunder cards on bottom. ",
-    "trash": false,
-    "name": "Encampment",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 2
   },
   {
     "potion": false,
@@ -3854,10 +3826,10 @@
   },
   {
     "potion": false,
-    "cost": 104,
+    "cost": 0,
     "raw_buys": [],
     "id": "fc168391-42b7-4f3b-92e2-9a05432cbf22",
-    "debt": true,
+    "debt": 4,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -3873,7 +3845,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/ab/Engineer.jpg/200px-Engineer.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/ab/Engineer.jpg"
     },
-    "text": "Gain a card costing up to . You may trash this. If you do, gain a card costing up to . ",
+    "text": "Gain a card costing up to 4 Coins. You may trash this. If you do, gain a card costing up to 4 Coins.",
     "trash": true,
     "name": "Engineer",
     "junk": false,
@@ -3901,7 +3873,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/8c/Envious.jpg/200px-Envious.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/8c/Envious.jpg"
     },
-    "text": " At the start of your Buy phase, return this, and Silver and Gold make  this turn. ",
+    "text": " At the start of your Buy phase, return this, and Silver and Gold make 1 Coin this turn. ",
     "trash": false,
     "name": "Envious",
     "junk": false,
@@ -3921,7 +3893,7 @@
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": 0,
+    "cards": 4,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -3985,7 +3957,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/91/Estate.jpg/200px-Estate.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/91/Estate.jpg"
     },
-    "text": "Worth 1. ",
+    "text": "Worth 1 Victory Point. ",
     "trash": false,
     "name": "Estate",
     "junk": false,
@@ -4041,7 +4013,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/dc/Expand.jpg/200px-Expand.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/dc/Expand.jpg"
     },
-    "text": "Trash a card from your hand. Gain a card costing up to  more than the trashed card. ",
+    "text": "Trash a card from your hand. Gain a card costing up to 3 Coins more than the trashed card. ",
     "trash": true,
     "name": "Expand",
     "junk": false,
@@ -4130,7 +4102,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/7e/Fairgrounds.jpg/200px-Fairgrounds.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/7e/Fairgrounds.jpg"
     },
-    "text": "Worth 2 for every 5 differently named cards in your deck (round down). ",
+    "text": "Worth 2 Victory Points for every 5 differently named cards in your deck (round down). ",
     "trash": false,
     "name": "Fairgrounds",
     "junk": false,
@@ -4164,7 +4136,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/60/Faithful_Hound.jpg/200px-Faithful_Hound.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/60/Faithful_Hound.jpg"
     },
-    "text": " +2 Cards  When you discard this other than during Clean-up, you may set it aside, and put it into your hand at end of turn. ",
+    "text": " +2 Cards - When you discard this other than during Clean-up, you may set it aside, and put it into your hand at end of turn. ",
     "trash": false,
     "name": "Faithful Hound",
     "junk": false,
@@ -4255,7 +4227,7 @@
       "Action",
       "Gathering"
     ],
-    "coins": 4,
+    "coins": 0,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -4265,7 +4237,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/37/Farmers%27_Market.jpg/200px-Farmers%27_Market.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/37/Farmers%27_Market.jpg"
     },
-    "text": "+1 Buy. If there are 4 or more on the Farmers' Market Supply pile, take them and trash this. Otherwise, add 1 to the pile and then + per 1 on the pile. ",
+    "text": "+1 Buy. If there are 4 or more Victory Tokens on the Farmers' Market Supply pile, take them and trash this. Otherwise, add 1 Victory Token to the pile and then +1 Coin per 1 Victory Token on the pile. ",
     "trash": true,
     "name": "Farmers' Market",
     "junk": false,
@@ -4326,7 +4298,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ea/Farmland.jpg/200px-Farmland.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ea/Farmland.jpg"
     },
-    "text": "Worth 2. —When you buy this, trash a card from your hand. Gain a card costing exactly  more than the trashed card. ",
+    "text": "Worth 2 Victory Points. — When you buy this, trash a card from your hand. Gain a card costing exactly 2 Coins more than the trashed card. ",
     "trash": true,
     "name": "Farmland",
     "junk": false,
@@ -4382,7 +4354,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/1f/Feodum.jpg/200px-Feodum.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/1f/Feodum.jpg"
     },
-    "text": "Worth 1 for every 3 Silvers in your deck. —When you trash this, gain 3 Silvers. ",
+    "text": "Worth 1 Victory Point for every 3 Silvers in your deck. — When you trash this, gain 3 Silvers. ",
     "trash": false,
     "name": "Feodum",
     "junk": false,
@@ -4410,7 +4382,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d9/Ferry.jpg/320px-Ferry.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d9/Ferry.jpg"
     },
-    "text": "Move your - cost token to an Action Supply pile (cards from that pile cost  less on your turns, but not less than ). ",
+    "text": "Move your -2 Coins cost token to an Action Supply pile (cards from that pile cost 2 Coins less on your turns, but not less than 0 Coins). ",
     "trash": false,
     "name": "Ferry",
     "junk": false,
@@ -4448,7 +4420,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ec/Festival.jpg/200px-Festival.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ec/Festival.jpg"
     },
-    "text": "+2 Actions, +1 Buy; +. ",
+    "text": "+2 Actions, +1 Buy; +2 Coins. ",
     "trash": false,
     "name": "Festival",
     "junk": false,
@@ -4482,7 +4454,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3b/Fishing_Village.jpg/200px-Fishing_Village.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/3b/Fishing_Village.jpg"
     },
-    "text": "+2 Actions, +. At the start of your next turn: +1 Action; +. ",
+    "text": "+2 Actions, +1 Coin. At the start of your next turn: +1 Action; +1 Coin. ",
     "trash": false,
     "name": "Fishing Village",
     "junk": false,
@@ -4546,7 +4518,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d2/Fool.jpg/200px-Fool.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d2/Fool.jpg"
     },
-    "text": " If you aren't the player with Lost in the Woods, take it, take 3 Boons, and receive the Boons in any order.  Heirloom: Lucky Coin ",
+    "text": " If you aren't the player with Lost in the Woods, take it, take 3 Boons, and receive the Boons in any order.",
     "trash": false,
     "name": "Fool",
     "junk": false,
@@ -4575,7 +4547,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ed/Fool%27s_Gold.jpg/200px-Fool%27s_Gold.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ed/Fool%27s_Gold.jpg"
     },
-    "text": " Worth  if it's the first time you played a Fool's Gold this turn, otherwise worth .  When another player gains a Province, you may trash this from your hand, to gain a Gold onto your deck. ",
+    "text": " Worth 1 Coin if it's the first time you played a Fool's Gold this turn, otherwise worth 4 Coins.  When another player gains a Province, you may trash this from your hand, to gain a Gold onto your deck. ",
     "trash": true,
     "name": "Fool's Gold",
     "junk": false,
@@ -4613,7 +4585,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e6/Forager.jpg/200px-Forager.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e6/Forager.jpg"
     },
-    "text": "+1 Action; +1 Buy. Trash a card from your hand. + per differently named Treasure in the trash. ",
+    "text": "+1 Action; +1 Buy. Trash a card from your hand. +1 Coin per differently named Treasure in the trash. ",
     "trash": true,
     "name": "Forager",
     "junk": false,
@@ -4688,7 +4660,7 @@
   },
   {
     "potion": false,
-    "cost": 116,
+    "cost": 8,
     "raw_buys": [
       [
         "+",
@@ -4696,7 +4668,7 @@
       ]
     ],
     "id": "f5b0d27a-9a67-4c2e-a2b8-e871d527a159",
-    "debt": true,
+    "debt": 8,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -4712,7 +4684,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/05/Fortune.jpg/200px-Fortune.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/05/Fortune.jpg"
     },
-    "text": "+1 Buy. When you play this, double your  if you haven't yet this turn. — When you gain this, gain a Gold per Gladiator you have in play. ",
+    "text": "+1 Buy. When you play this, double your coins if you haven't yet this turn. — When you gain this, gain a Gold per Gladiator you have in play. ",
     "trash": false,
     "name": "Fortune",
     "junk": false,
@@ -4741,7 +4713,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/55/Fortune_Teller.jpg/200px-Fortune_Teller.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/55/Fortune_Teller.jpg"
     },
-    "text": "+. Each other player reveals cards from the top of his deck until he reveals a Victory or Curse card. He puts it on top and discards the other revealed cards. ",
+    "text": "+2 Coins. Each other player reveals cards from the top of his deck until he reveals a Victory or Curse card. They put it on top and discards the rest. ",
     "trash": false,
     "name": "Fortune Teller",
     "junk": false,
@@ -4807,7 +4779,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ee/Fountain.jpg/320px-Fountain.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ee/Fountain.jpg"
     },
-    "text": "When scoring, 15 if you have at least 10 Coppers. ",
+    "text": "When scoring, 15 Victory Points if you have at least 10 Coppers. ",
     "trash": false,
     "name": "Fountain",
     "junk": false,
@@ -4874,7 +4846,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/8c/Gardens.jpg/200px-Gardens.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/8c/Gardens.jpg"
     },
-    "text": "Worth 1 for every 10 cards in your deck (rounded down). ",
+    "text": "Worth 1 Victory Point for every 10 cards in your deck (rounded down). ",
     "trash": false,
     "name": "Gardens",
     "junk": false,
@@ -5016,7 +4988,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/73/Ghost_Town.jpg/200px-Ghost_Town.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/73/Ghost_Town.jpg"
     },
-    "text": " At the start of your next turn, +1 Card and +1 Action.  This is gained to your hand (instead of your discard pile). ",
+    "text": " At the start of your next turn, +1 Card and +1 Action. - This is gained to your hand (instead of your discard pile). ",
     "trash": false,
     "name": "Ghost Town",
     "junk": false,
@@ -5035,7 +5007,7 @@
       "Action",
       "Attack"
     ],
-    "coins": 4,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -5045,7 +5017,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4c/Giant.jpg/200px-Giant.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/4c/Giant.jpg"
     },
-    "text": "Turn your Journey token over (it starts face up). If it's face down, +. If it's face up, +, and each other player reveals the top card of his deck, trashes it if it costs from  to , and otherwise discards it and gains a Curse. ",
+    "text": "Turn your Journey token over (it starts face up). If it's face down, +1 Coin. If it's face up, +5 Coins, and each other player reveals the top card of his deck, trashes it if it costs from 3 Coins to 6 Coins, and otherwise discards it and gains a Curse. ",
     "trash": false,
     "name": "Giant",
     "junk": true,
@@ -5056,14 +5028,14 @@
     "potion": false,
     "cost": 3,
     "raw_buys": [],
-    "id": "82133da0-2f39-4af7-b509-5df5e3e7b105",
+    "id": "0406c9c5-f776-42dc-9fbd-6c1649114a75",
     "debt": false,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 2,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -5073,40 +5045,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e9/Gladiator.jpg/200px-Gladiator.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e9/Gladiator.jpg"
     },
-    "text": "Split pile containing 5 Gladiator cards on top and 5 Fortune cards on bottom. ",
-    "trash": false,
-    "name": "Gladiator",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
-    "cost": 3,
-    "raw_buys": [
-      [
-        "+",
-        "1"
-      ]
-    ],
-    "id": "0406c9c5-f776-42dc-9fbd-6c1649114a75",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Empires",
-    "types": [
-      "Action"
-    ],
-    "coins": 3,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 1,
-    "actions": 0,
-    "images": {
-      "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e9/Gladiator.jpg/200px-Gladiator.jpg",
-      "full": "http://wiki.dominionstrategy.com/images/e/e9/Gladiator.jpg"
-    },
-    "text": "+. Reveal a card from your hand. The player to your left may reveal a copy from their hand. If they do not, + and trash a Gladiator from the Supply. ",
+    "text": "+2 Coins. Reveal a card from your hand. The player to your left may reveal a copy from their hand. If they do not, +1 Coin and trash a Gladiator from the Supply. ",
     "trash": false,
     "name": "Gladiator",
     "junk": false,
@@ -5125,7 +5064,7 @@
       "Treasure",
       "Heirloom"
     ],
-    "coins": 0,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -5135,7 +5074,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/da/Goat.jpg/200px-Goat.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/da/Goat.jpg"
     },
-    "text": "   When you play this, you may trash a card from your hand. ",
+    "text": "Worth 1 Coin. When you play this, you may trash a card from your hand.",
     "trash": true,
     "name": "Goat",
     "junk": false,
@@ -5153,7 +5092,7 @@
     "types": [
       "Treasure"
     ],
-    "coins": 0,
+    "coins": 3,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -5163,7 +5102,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/50/Gold.jpg/200px-Gold.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/50/Gold.jpg"
     },
-    "text": "Worth . ",
+    "text": "Worth 3 Coins. ",
     "trash": false,
     "name": "Gold",
     "junk": false,
@@ -5225,12 +5164,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e2/Goons.jpg/200px-Goons.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e2/Goons.jpg"
     },
-    "text": "+1 Buy; +. Each other player discards down to 3 cards in hand. While this is in play, when you buy a card, +1. ",
+    "text": "+1 Buy; +2 Coins. Each other player discards down to 3 cards in hand. While this is in play, when you buy a card, +1 Victory Token. ",
     "trash": false,
     "name": "Goons",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -5263,7 +5202,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a2/Governor.jpg/200px-Governor.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a2/Governor.jpg"
     },
-    "text": "+1 Action. Choose one; you get the version in parentheses: +1 (+3) Cards; or each player gains a Silver (Gold); or each player may trash a card from his hand and gain a card costing exactly  () more. ",
+    "text": "+1 Action. Choose one; you get the version in parentheses: +1 (+3) Cards; or each player gains a Silver (Gold); or each player may trash a card from his hand and gain a card costing exactly  1 Coin (2 Coins) more. ",
     "trash": true,
     "name": "Governor",
     "junk": false,
@@ -5292,7 +5231,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f5/Grand_Castle.jpg/200px-Grand_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f5/Grand_Castle.jpg"
     },
-    "text": "Worth 5 — When you gain this, reveal your hand. +1 per Victory card in your hand and/or in play.",
+    "text": "Worth 5 Victory Points — When you gain this, reveal your hand. +1 Victory Token per Victory card in your hand and/or in play.",
     "trash": false,
     "name": "Grand Castle",
     "junk": false,
@@ -5335,7 +5274,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/81/Grand_Market.jpg/200px-Grand_Market.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/81/Grand_Market.jpg"
     },
-    "text": "+1 Card; +1 Action; +1 Buy; +. You can’t buy this if you have any Copper in play. ",
+    "text": "+1 Card; +1 Action; +1 Buy; +2 Coins. - You can’t buy this if you have any Copper in play. ",
     "trash": false,
     "name": "Grand Market",
     "junk": false,
@@ -5363,7 +5302,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/13/Graverobber.jpg/200px-Graverobber.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/13/Graverobber.jpg"
     },
-    "text": "Choose one: Gain a card from the trash costing from  to , putting it on top of your deck; or trash an Action card from your hand and gain a card costing up to  more than it. ",
+    "text": "Choose one: Gain a card from the trash costing from 3 Coins to 6 Coins, putting it on top of your deck; or trash an Action card from your hand and gain a card costing up to 3 Coins more than it. ",
     "trash": true,
     "name": "Graverobber",
     "junk": false,
@@ -5395,7 +5334,7 @@
     "trash": false,
     "name": "Greed",
     "junk": true,
-    "gain": 0,
+    "gain": 1,
     "victoryTokens": 0
   },
   {
@@ -5429,12 +5368,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/33/Groundskeeper.jpg/200px-Groundskeeper.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/33/Groundskeeper.jpg"
     },
-    "text": "+1 Card. +1 Action. — While this is in play, when you gain a Victory card, +1 ",
+    "text": "+1 Card. +1 Action. — While this is in play, when you gain a Victory card, +1 Victory Token",
     "trash": false,
     "name": "Groundskeeper",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -5458,7 +5397,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fa/Guardian.jpg/200px-Guardian.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fa/Guardian.jpg"
     },
-    "text": " Until your next turn, when another player plays an Attack card, it doesn't affect you. At the start of your next turn, +.  This is gained to your hand (instead of your discard pile). ",
+    "text": " Until your next turn, when another player plays an Attack card, it doesn't affect you. At the start of your next turn, +1 Coin.  This is gained to your hand (instead of your discard pile). ",
     "trash": false,
     "name": "Guardian",
     "junk": false,
@@ -5493,7 +5432,7 @@
         "1"
       ]
     ],
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -5529,7 +5468,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/96/Haggler.jpg/200px-Haggler.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/96/Haggler.jpg"
     },
-    "text": "+. —While this is in play, when you buy a card, gain a card costing less than it that is not a Victory card. ",
+    "text": "+2 Coins. — While this is in play, when you buy a card, gain a card costing less than it that is not a Victory card. ",
     "trash": false,
     "name": "Haggler",
     "junk": false,
@@ -5550,7 +5489,7 @@
     "raw_cards": [
       [
         "+",
-        "2"
+        "1"
       ]
     ],
     "expansion": "Cornucopia",
@@ -5564,7 +5503,7 @@
         "1"
       ]
     ],
-    "cards": 2,
+    "cards": 1,
     "categories": [],
     "buys": 1,
     "actions": 1,
@@ -5639,7 +5578,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9d/Harem.jpg/200px-Harem.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9d/Harem.jpg"
     },
-    "text": "Worth . Worth 2 ",
+    "text": "Worth 2 Coins. Worth 2 Victory Points",
     "trash": false,
     "name": "Harem",
     "junk": false,
@@ -5667,7 +5606,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/1c/Harvest.jpg/200px-Harvest.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/1c/Harvest.jpg"
     },
-    "text": "Reveal the top 4 cards of your deck, then discard them. + per differently named card revealed. ",
+    "text": "Reveal the top 4 cards of your deck, then discard them. +1 Coin per differently named card revealed. ",
     "trash": false,
     "name": "Harvest",
     "junk": false,
@@ -5696,7 +5635,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b7/Haunted_Castle.jpg/200px-Haunted_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b7/Haunted_Castle.jpg"
     },
-    "text": "Worth 2 — When you gain this during your turn, gain a Gold, and each other player with 5 or more cards in hand puts 2 cards from their hand onto their deck.",
+    "text": "Worth 2 Victory Points — When you gain this during your turn, gain a Gold, and each other player with 5 or more cards in hand puts 2 cards from their hand onto their deck.",
     "trash": false,
     "name": "Haunted Castle",
     "junk": false,
@@ -5730,7 +5669,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/58/Haunted_Mirror.jpg/200px-Haunted_Mirror.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/58/Haunted_Mirror.jpg"
     },
-    "text": "   When you trash this, you may discard an Action card, to gain a Ghost from its pile. ",
+    "text": "Worth 1 Coin - When you trash this, you may discard an Action card, to gain a Ghost from its pile. ",
     "trash": false,
     "name": "Haunted Mirror",
     "junk": false,
@@ -5765,7 +5704,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/54/Haunted_Woods.jpg/200px-Haunted_Woods.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/54/Haunted_Woods.jpg"
     },
-    "text": "Until your next turn, when any other player buys a card, he puts his hand on top of his deck in any order. At the start of your next turn, +3 Cards. ",
+    "text": "Until your next turn, when any other player buys a card, they puts their hand on top of their deck in any order. At the start of your next turn, +3 Cards. ",
     "trash": false,
     "name": "Haunted Woods",
     "junk": false,
@@ -5785,7 +5724,7 @@
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": 0,
+    "cards": -1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -5870,7 +5809,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c1/Herald.jpg/200px-Herald.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c1/Herald.jpg"
     },
-    "text": "+1 Card; +1 Action. Reveal the top card of your deck. If it is an Action, play it. — When you buy this, you may overpay for it. For each  you overpaid, look through your discard pile and put a card from it on top of your deck. ",
+    "text": "+1 Card; +1 Action. Reveal the top card of your deck. If it is an Action, play it. — When you buy this, you may overpay for it. For each 1 Coin you overpaid, look through your discard pile and put a card from it on top of your deck. ",
     "trash": false,
     "name": "Herald",
     "junk": false,
@@ -5903,7 +5842,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/26/Herbalist.jpg/200px-Herbalist.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/26/Herbalist.jpg"
     },
-    "text": "+1 Buy; +. When you discard this from play, you may put one of your Treasures from play on top of your deck. ",
+    "text": "+1 Buy; +1 Coin. When you discard this from play, you may put one of your Treasures from play on top of your deck. ",
     "trash": false,
     "name": "Herbalist",
     "junk": false,
@@ -5931,7 +5870,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/8e/Hermit.jpg/200px-Hermit.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/8e/Hermit.jpg"
     },
-    "text": "Look through your discard pile. You may trash a card that is not a Treasure, from your discard pile or your hand. Gain a card costing up to . —  When you discard this from play, if you didn’t buy any cards this turn, trash this and gain a Madman (from the Madman pile). ",
+    "text": "Look through your discard pile. You may trash a card that is not a Treasure, from your discard pile or your hand. Gain a card costing up to 3 Coins. —  When you discard this from play, if you didn’t buy any cards this turn, trash this and gain a Madman (from the Madman pile). ",
     "trash": true,
     "name": "Hermit",
     "junk": false,
@@ -5960,7 +5899,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/26/Hero.jpg/200px-Hero.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/26/Hero.jpg"
     },
-    "text": "+. Gain a Treasure. — When you discard this from play, you may exchange it for a Champion. (This is not in the Supply.) ",
+    "text": "+2 Coins. Gain a Treasure. — When you discard this from play, you may exchange it for a Champion. (This is not in the Supply.) ",
     "trash": false,
     "name": "Hero",
     "junk": false,
@@ -5983,7 +5922,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "raw_actions": [
       [
         "+",
@@ -5998,7 +5937,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/29/Highway.jpg/200px-Highway.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/29/Highway.jpg"
     },
-    "text": "+1 Card; +1 Action. —While this is in play, cards cost  less, but not less than . ",
+    "text": "+1 Card; +1 Action. — While this is in play, cards cost 1 Coin less, but not less than 0 Coins. ",
     "trash": false,
     "name": "Highway",
     "junk": false,
@@ -6060,7 +5999,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d1/Hoard.jpg/200px-Hoard.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d1/Hoard.jpg"
     },
-    "text": "Worth . While this is in play, when you buy a Victory card, gain a Gold. ",
+    "text": "Worth 2 Coins. While this is in play, when you buy a Victory card, gain a Gold. ",
     "trash": false,
     "name": "Hoard",
     "junk": false,
@@ -6088,7 +6027,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/20/Horn_of_Plenty.jpg/200px-Horn_of_Plenty.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/20/Horn_of_Plenty.jpg"
     },
-    "text": "Worth . When you play this, gain a card costing up to  per differently named card you have in play, counting this. If it’s a Victory card, trash this. ",
+    "text": "Worth 0 Coins. When you play this, gain a card costing up to 1 Coin per differently named card you have in play, counting this. If it’s a Victory card, trash this. ",
     "trash": true,
     "name": "Horn of Plenty",
     "junk": false,
@@ -6127,7 +6066,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c8/Horse_Traders.jpg/200px-Horse_Traders.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c8/Horse_Traders.jpg"
     },
-    "text": "+1 Buy; +; Discard 2 cards. When another player plays an Attack card, you may set this aside from your hand. If you do, then at the start of your next turn, +1 Card and return this to your hand. ",
+    "text": "+1 Buy; +3 Coins; Discard 2 cards. - When another player plays an Attack card, you may set this aside from your hand. If you do, then at the start of your next turn, +1 Card and return this to your hand. ",
     "trash": false,
     "name": "Horse Traders",
     "junk": false,
@@ -6186,7 +6125,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/68/Humble_Castle.jpg/200px-Humble_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/68/Humble_Castle.jpg"
     },
-    "text": "Worth  — Worth 1 per Castle you have.",
+    "text": "Worth 1 Coin — Worth 1 Victory Point per Castle you have.",
     "trash": false,
     "name": "Humble Castle",
     "junk": false,
@@ -6199,14 +6138,19 @@
     "raw_buys": [],
     "id": "4bde021a-bccf-4e3b-96aa-d7ed2c3eecb7",
     "debt": false,
-    "raw_cards": [],
+    "raw_cards": [
+        [
+            "+",
+            "4"
+        ]
+    ],
     "expansion": "Dark Ages",
     "types": [
       "Action"
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": 0,
+    "cards": 4,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -6218,7 +6162,7 @@
     "trash": false,
     "name": "Hunting Grounds",
     "junk": false,
-    "gain": 3,
+    "gain": 0,
     "victoryTokens": 0
   },
   {
@@ -6272,7 +6216,7 @@
       "Attack",
       "Fate"
     ],
-    "coins": 0,
+    "coins": 2,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -6282,7 +6226,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/79/Idol.jpg/200px-Idol.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/79/Idol.jpg"
     },
-    "text": "   When you play this, if you then have an odd number of Idols in play, receive a Boon; if an even number, each other player gains a Curse. ",
+    "text": "Worth 2 Coins. When you play this, if you then have an odd number of Idols in play, receive a Boon; if an even number, each other player gains a Curse. ",
     "trash": false,
     "name": "Idol",
     "junk": true,
@@ -6310,7 +6254,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/91/Ill-Gotten_Gains.jpg/200px-Ill-Gotten_Gains.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/91/Ill-Gotten_Gains.jpg"
     },
-    "text": "Worth . When you play this, you may gain a Copper, putting it into your hand. — When you gain this, each other player gains a Curse. ",
+    "text": "Worth 1 Coin. When you play this, you may gain a Copper, putting it into your hand. — When you gain this, each other player gains a Curse. ",
     "trash": false,
     "name": "Ill-Gotten Gains",
     "junk": true,
@@ -6372,7 +6316,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/02/Inheritance.jpg/320px-Inheritance.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/02/Inheritance.jpg"
     },
-    "text": "Once per game: Set aside a non-Victory Action card from the Supply costing up to . Move your Estate token to it (your Estates gain the abilities and types of that card). ",
+    "text": "Once per game: Set aside a non-Victory Action card from the Supply costing up to 4 Coins. Move your Estate token to it (your Estates gain the abilities and types of that card). ",
     "trash": false,
     "name": "Inheritance",
     "junk": false,
@@ -6406,7 +6350,7 @@
         "2"
       ]
     ],
-    "cards": 0,
+    "cards": 2,
     "categories": [],
     "buys": 0,
     "actions": 2,
@@ -6452,7 +6396,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/93/Ironmonger.jpg/200px-Ironmonger.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/93/Ironmonger.jpg"
     },
-    "text": "+1 Card; +1 Action. Reveal the top card of your deck; you may discard it. If it is an Action card, +1 Action; a Treasure card, +; a Victory card, +1 Card. ",
+    "text": "+1 Card; +1 Action. Reveal the top card of your deck; you may discard it. If it is an Action card, +1 Action; a Treasure card, +1 Coin; a Victory card, +1 Card. ",
     "trash": false,
     "name": "Ironmonger",
     "junk": false,
@@ -6482,15 +6426,15 @@
         "1"
       ]
     ],
-    "cards": 1,
+    "cards": 0,
     "categories": [],
     "buys": 0,
-    "actions": 1,
+    "actions": 0,
     "images": {
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/76/Ironworks.jpg/200px-Ironworks.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/76/Ironworks.jpg"
     },
-    "text": "Gain a card costing up to . If it is an… Action card, +1 Action. Treasure card, +. Victory card, +1 Card. ",
+    "text": "Gain a card costing up to 4 Coins. If it is an... Action card, +1 Action. Treasure card, +1 Coin. Victory card, +1 Card. ",
     "trash": false,
     "name": "Ironworks",
     "junk": false,
@@ -6519,8 +6463,8 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fd/Island.jpg/200px-Island.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fd/Island.jpg"
     },
-    "text": "Set aside this and another card from your hand. Return them to your deck at the end of the game. Worth 2 ",
-    "trash": true,
+    "text": "Set aside this and another card from your hand. Return them to your deck at the end of the game. Worth 2 Victory Points",
+    "trash": false,
     "name": "Island",
     "junk": false,
     "gain": 0,
@@ -6581,7 +6525,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/1b/Jester.jpg/200px-Jester.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/1b/Jester.jpg"
     },
-    "text": "+. Each other player discards the top card of his deck. If it’s a Victory card he gains a Curse. Otherwise either he gains a copy of the discarded card or you do, your choice. ",
+    "text": "+2 Coins. Each other player discards the top card of his deck. If it’s a Victory card he gains a Curse. Otherwise either he gains a copy of the discarded card or you do, your choice. ",
     "trash": false,
     "name": "Jester",
     "junk": true,
@@ -6647,7 +6591,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c2/Junk_Dealer.jpg/200px-Junk_Dealer.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c2/Junk_Dealer.jpg"
     },
-    "text": "+1 Card; +1 Action; +. Trash a card from your hand. ",
+    "text": "+1 Card; +1 Action; +1 Coin. Trash a card from your hand. ",
     "trash": true,
     "name": "Junk Dealer",
     "junk": false,
@@ -6675,7 +6619,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4b/Keep.jpg/320px-Keep.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/4b/Keep.jpg"
     },
-    "text": "When scoring, 5 per differently named Treasure you have, that you have more copies of than each other player, or tied for most. ",
+    "text": "When scoring, 5 Victory Points per differently named Treasure you have, that you have more copies of than each other player, or tied for most. ",
     "trash": false,
     "name": "Keep",
     "junk": false,
@@ -6704,7 +6648,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f1/King%27s_Castle.jpg/200px-King%27s_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f1/King%27s_Castle.jpg"
     },
-    "text": "Worth 2 per Castle you have.",
+    "text": "Worth 2 Victory Points per Castle you have.",
     "trash": false,
     "name": "King's Castle",
     "junk": false,
@@ -6798,12 +6742,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c0/Labyrinth.jpg/320px-Labyrinth.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c0/Labyrinth.jpg"
     },
-    "text": "When you gain a 2nd card in one of your turns, take 2 from here. — Setup: Put 6 here per player. ",
+    "text": "When you gain a 2nd card in one of your turns, take 2 Victory Tokens from here. — Setup: Put 6 Victory Tokens here per player. ",
     "trash": false,
     "name": "Labyrinth",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 2
   },
   {
     "potion": false,
@@ -6827,7 +6771,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/64/Legionary.jpg/200px-Legionary.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/64/Legionary.jpg"
     },
-    "text": "+. You may reveal a Gold from your hand. If you do, each other player discards down to 2 cards in hand, then draws a card. ",
+    "text": "+3 Coins. You may reveal a Gold from your hand. If you do, each other player discards down to 2 cards in hand, then draws a card. ",
     "trash": false,
     "name": "Legionary",
     "junk": false,
@@ -6860,7 +6804,7 @@
     "trash": false,
     "name": "Leprechaun",
     "junk": false,
-    "gain": 2,
+    "gain": 1,
     "victoryTokens": 0
   },
   {
@@ -6923,7 +6867,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4f/Lighthouse.jpg/200px-Lighthouse.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/4f/Lighthouse.jpg"
     },
-    "text": "+1 Action. Now and at the start of your next turn: +. While this is in play, when another player plays an Attack card, it doesn’t affect you. ",
+    "text": "+1 Action. Now and at the start of your next turn: +1 Coin. While this is in play, when another player plays an Attack card, it doesn’t affect you. ",
     "trash": false,
     "name": "Lighthouse",
     "junk": false,
@@ -6951,7 +6895,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/11/Loan.jpg/200px-Loan.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/11/Loan.jpg"
     },
-    "text": "Worth . When you play this, reveal cards from your deck until you reveal a Treasure. Discard it or trash it. Discard the other cards. ",
+    "text": "Worth 1 Coin. When you play this, reveal cards from your deck until you reveal a Treasure. Discard it or trash it. Discard the other cards. ",
     "trash": true,
     "name": "Loan",
     "junk": false,
@@ -7103,7 +7047,7 @@
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": -1,
+    "cards": 0,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -7130,7 +7074,7 @@
       "Treasure",
       "Heirloom"
     ],
-    "coins": 0,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -7140,7 +7084,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3e/Lucky_Coin.jpg/200px-Lucky_Coin.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/3e/Lucky_Coin.jpg"
     },
-    "text": "    When you play this, gain a Silver. ",
+    "text": "Worth 1 Coin - When you play this, gain a Silver. ",
     "trash": false,
     "name": "Lucky Coin",
     "junk": false,
@@ -7207,7 +7151,7 @@
       "full": "http://wiki.dominionstrategy.com/images/1/19/Madman.jpg"
     },
     "text": "+2 Actions. Return this to the Madman pile. If you do, +1 Card per card in your hand. (This is not in the Supply.) ",
-    "trash": true,
+    "trash": false,
     "name": "Madman",
     "junk": false,
     "gain": 0,
@@ -7225,7 +7169,7 @@
       "Treasure",
       "Heirloom"
     ],
-    "coins": 0,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -7235,7 +7179,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/db/Magic_Lamp.jpg/200px-Magic_Lamp.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/db/Magic_Lamp.jpg"
     },
-    "text": "    When you play this, if there are at least 6 cards that you have exactly 1 copy of in play, trash this. If you do, gain 3 Wishes from their pile. ",
+    "text": "Worth 1 Coin. When you play this, if there are at least 6 cards that you have exactly 1 copy of in play, trash this. If you do, gain 3 Wishes from their pile. ",
     "trash": true,
     "name": "Magic Lamp",
     "junk": false,
@@ -7265,7 +7209,7 @@
         "1"
       ]
     ],
-    "cards": 2,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -7301,7 +7245,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/68/Mandarin.jpg/200px-Mandarin.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/68/Mandarin.jpg"
     },
-    "text": "+. Put a card from your hand on top of your deck. — When you gain this, put all Treasures you have in play on top of your deck in any order. ",
+    "text": "+3 Coins. Put a card from your hand on top of your deck. — When you gain this, put all Treasures you have in play on top of your deck in any order. ",
     "trash": false,
     "name": "Mandarin",
     "junk": false,
@@ -7334,7 +7278,7 @@
     "text": "Gain a Spoils. Each other player gains a Ruins. ",
     "trash": false,
     "name": "Marauder",
-    "junk": false,
+    "junk": true,
     "gain": 1,
     "victoryTokens": 0
   },
@@ -7413,7 +7357,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/7e/Market.jpg/200px-Market.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/7e/Market.jpg"
     },
-    "text": "+1 Card; +1 Action; +1 Buy; +. ",
+    "text": "+1 Card; +1 Action; +1 Buy; +1 Coin. ",
     "trash": false,
     "name": "Market",
     "junk": false,
@@ -7518,7 +7462,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/09/Masterpiece.jpg/200px-Masterpiece.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/09/Masterpiece.jpg"
     },
-    "text": "Worth . —When you buy this, you may overpay for it. If you do, gain a Silver per  you overpaid. ",
+    "text": "Worth 1 Coin. — When you buy this, you may overpay for it. If you do, gain a Silver per coin you overpaid. ",
     "trash": false,
     "name": "Masterpiece",
     "junk": false,
@@ -7590,7 +7534,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c5/Mercenary.jpg/200px-Mercenary.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c5/Mercenary.jpg"
     },
-    "text": "You may trash 2 cards from your hand. If you do, +2 Cards, + , and each other player discards down to 3 cards in hand. (This is not in the Supply.) ",
+    "text": "You may trash 2 cards from your hand. If you do, +2 Cards, +2 Coins, and each other player discards down to 3 cards in hand. (This is not in the Supply.) ",
     "trash": true,
     "name": "Mercenary",
     "junk": false,
@@ -7628,7 +7572,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/78/Merchant.jpg/200px-Merchant.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/78/Merchant.jpg"
     },
-    "text": "+1 Card; +1 Action. The first time you play a Silver this turn, +. ",
+    "text": "+1 Card; +1 Action. The first time you play a Silver this turn, +1 Coin. ",
     "trash": false,
     "name": "Merchant",
     "junk": false,
@@ -7661,7 +7605,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/af/Merchant_Guild.jpg/200px-Merchant_Guild.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/af/Merchant_Guild.jpg"
     },
-    "text": "+1 Buy; +. — While this is in play, when you buy a card, take a Coin token. ",
+    "text": "+1 Buy; +1 Coin. — While this is in play, when you buy a card, add a coin token to your coffers. ",
     "trash": false,
     "name": "Merchant Guild",
     "junk": false,
@@ -7690,7 +7634,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/92/Merchant_Ship.jpg/200px-Merchant_Ship.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/92/Merchant_Ship.jpg"
     },
-    "text": "Now and at the start of your next turn: +. ",
+    "text": "Now and at the start of your next turn: +2 Coins. ",
     "trash": false,
     "name": "Merchant Ship",
     "junk": false,
@@ -7723,7 +7667,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3c/Messenger.jpg/200px-Messenger.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/3c/Messenger.jpg"
     },
-    "text": "+1 Buy; +. You may put your deck into your discard pile. — When this is your first buy in a turn, gain a card costing up to , and each other player gains a copy of it. ",
+    "text": "+1 Buy; +2 Coins. You may put your deck into your discard pile. — When this is your first buy in a turn, gain a card costing up to 4 Coins, and each other player gains a copy of it. ",
     "trash": false,
     "name": "Messenger",
     "junk": false,
@@ -7752,7 +7696,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a0/Militia.jpg/200px-Militia.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a0/Militia.jpg"
     },
-    "text": "+. Each other player discards down to 3 cards in his hand. ",
+    "text": "+2 Coins. Each other player discards down to 3 cards in his hand. ",
     "trash": false,
     "name": "Militia",
     "junk": false,
@@ -7787,7 +7731,7 @@
         "1"
       ]
     ],
-    "cards": -1,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -7795,7 +7739,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/10/Mill.jpg/200px-Mill.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/10/Mill.jpg"
     },
-    "text": "+1 Card; +1 Action. You may discard 2 cards, for +. Worth 1 ",
+    "text": "+1 Card; +1 Action. You may discard 2 cards, for +2 Coins. Worth 1 Victory Point",
     "trash": false,
     "name": "Mill",
     "junk": false,
@@ -7823,7 +7767,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/8e/Mine.jpg/200px-Mine.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/8e/Mine.jpg"
     },
-    "text": "Trash a Treasure card from your hand. Gain a Treasure card costing up to  more; put it into your hand. ",
+    "text": "You may trash a Treasure from your hand. Gain a Treasure to your hand costing up to 3 Coins more than it.",
     "trash": true,
     "name": "Mine",
     "junk": false,
@@ -7861,7 +7805,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/7f/Mining_Village.jpg/200px-Mining_Village.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/7f/Mining_Village.jpg"
     },
-    "text": "+1 Card; +2 Actions. You may trash this card immediately. If you do, +. ",
+    "text": "+1 Card; +2 Actions. You may trash this card immediately. If you do, +2 Coins. ",
     "trash": true,
     "name": "Mining Village",
     "junk": false,
@@ -7904,7 +7848,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/47/Minion.jpg/200px-Minion.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/47/Minion.jpg"
     },
-    "text": "+1 Action. Choose one: +; or discard your hand, +4 Cards, and each other player with at least 5 cards in hand discards his hand and draws 4 cards. ",
+    "text": "+1 Action. Choose one: +2 Coins; or discard your hand, +4 Cards, and each other player with at least 5 cards in hand discards their hand and draws 4 cards. ",
     "trash": false,
     "name": "Minion",
     "junk": false,
@@ -7950,7 +7894,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -7960,8 +7904,8 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f6/Miser.jpg/200px-Miser.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f6/Miser.jpg"
     },
-    "text": "Choose one: Put a Copper from your hand onto your Tavern mat; or + per Copper on your Tavern mat. ",
-    "trash": true,
+    "text": "Choose one: Put a Copper from your hand onto your Tavern mat; or +1 Coin per Copper on your Tavern mat. ",
+    "trash": false,
     "name": "Miser",
     "junk": false,
     "gain": 0,
@@ -7988,7 +7932,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/6b/Miserable.jpg/200px-Miserable.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/6b/Miserable.jpg"
     },
-    "text": " -2 ",
+    "text": " -2 Victory Points",
     "trash": false,
     "name": "Miserable",
     "junk": false,
@@ -8134,7 +8078,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/70/Moneylender.jpg/200px-Moneylender.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/70/Moneylender.jpg"
     },
-    "text": "Trash a Copper from your hand. If you do, +. ",
+    "text": "Trash a Copper from your hand. If you do, +3 Coins. ",
     "trash": true,
     "name": "Moneylender",
     "junk": false,
@@ -8162,19 +8106,19 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/ad/Monument.jpg/200px-Monument.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/ad/Monument.jpg"
     },
-    "text": "+; +1. ",
+    "text": "+2 Coins; +1 Victory Token. ",
     "trash": false,
     "name": "Monument",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
     "cost": -1,
     "raw_buys": [],
     "id": "d2f8e485-35d9-4ef8-80e0-f07053c2c322",
-    "debt": false,
+    "debt": 1,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8190,7 +8134,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d5/Mountain_Pass.jpg/320px-Mountain_Pass.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d5/Mountain_Pass.jpg"
     },
-    "text": "When you are the first player to gain a Province, after that turn, each player bids once, up to , ending with you. High bidder gets +8 and takes the  they bid. ",
+    "text": "When you are the first player to gain a Province, after that turn, each player bids once, up to 40 Debt, ending with you. High bidder gets +8 Victory Tokens and takes the debt they bid. ",
     "trash": false,
     "name": "Mountain Pass",
     "junk": false,
@@ -8219,7 +8163,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/89/Mountebank.jpg/200px-Mountebank.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/89/Mountebank.jpg"
     },
-    "text": "+. Each other player may discard a Curse. If he doesn’t, he gains a Curse and a Copper. ",
+    "text": "+2 Coins. Each other player may discard a Curse. If he doesn’t, he gains a Curse and a Copper. ",
     "trash": false,
     "name": "Mountebank",
     "junk": true,
@@ -8247,7 +8191,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b2/Museum.jpg/320px-Museum.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b2/Museum.jpg"
     },
-    "text": "When scoring, 2 per differently named card you have. ",
+    "text": "When scoring, +2 Victory Points per differently named card you have. ",
     "trash": false,
     "name": "Museum",
     "junk": false,
@@ -8280,7 +8224,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/37/Mystic.jpg/200px-Mystic.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/37/Mystic.jpg"
     },
-    "text": "+1 Action. +. Name a card. Reveal the top card of your deck. If it’s the named card, put it into your hand. ",
+    "text": "+1 Action. +2 Coins. Name a card. Reveal the top card of your deck. If it’s the named card, put it into your hand. ",
     "trash": false,
     "name": "Mystic",
     "junk": false,
@@ -8341,7 +8285,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/dd/Navigator.jpg/200px-Navigator.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/dd/Navigator.jpg"
     },
-    "text": "+. Look at the top 5 cards of your deck. Either discard all of them, or put them back on top of your deck in any order. ",
+    "text": "+2 Coins. Look at the top 5 cards of your deck. Either discard all of them, or put them back on top of your deck in any order. ",
     "trash": false,
     "name": "Navigator",
     "junk": false,
@@ -8431,7 +8375,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/75/Night_Watchman.jpg/200px-Night_Watchman.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/75/Night_Watchman.jpg"
     },
-    "text": " Look at the top 5 cards of your deck, discard any number, and put the rest back in any order.  This is gained to your hand (instead of your discard pile). ",
+    "text": " Look at the top 5 cards of your deck, discard any number, and put the rest back in any order. - This is gained to your hand (instead of your discard pile). ",
     "trash": false,
     "name": "Night Watchman",
     "junk": false,
@@ -8460,10 +8404,10 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/63/Noble_Brigand.jpg/200px-Noble_Brigand.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/63/Noble_Brigand.jpg"
     },
-    "text": "+. When you buy this or play it, each other player reveals the top 2 cards of his deck, trashes a revealed Silver or Gold you choose, and discards the rest. If he didn’t reveal a Treasure, he gains a Copper. You gain the trashed cards. ",
+    "text": "+1 Coin. When you buy this or play it, each other player reveals the top 2 cards of his deck, trashes a revealed Silver or Gold you choose, and discards the rest. If he didn’t reveal a Treasure, he gains a Copper. You gain the trashed cards. ",
     "trash": false,
     "name": "Noble Brigand",
-    "junk": false,
+    "junk": true,
     "gain": 1,
     "victoryTokens": 0
   },
@@ -8499,7 +8443,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b6/Nobles.jpg/200px-Nobles.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b6/Nobles.jpg"
     },
-    "text": "Choose one: +3 Cards; or +2 Actions. Worth 2",
+    "text": "Choose one: +3 Cards; or +2 Actions. Worth 2 Victory Points",
     "trash": false,
     "name": "Nobles",
     "junk": false,
@@ -8532,7 +8476,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/89/Nomad_Camp.jpg/200px-Nomad_Camp.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/89/Nomad_Camp.jpg"
     },
-    "text": "+1 Buy; +. —When you gain this, put it on top of your deck. ",
+    "text": "+1 Buy; +2 Coins. — When you gain this, put it on top of your deck. ",
     "trash": false,
     "name": "Nomad Camp",
     "junk": false,
@@ -8566,7 +8510,7 @@
         "1"
       ]
     ],
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -8574,7 +8518,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fc/Oasis.jpg/200px-Oasis.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fc/Oasis.jpg"
     },
-    "text": "+1 Card; +1 Action; +. Discard a card. ",
+    "text": "+1 Card; +1 Action; +1 Coin. Discard a card. ",
     "trash": false,
     "name": "Oasis",
     "junk": false,
@@ -8602,7 +8546,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c6/Obelisk.jpg/320px-Obelisk.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c6/Obelisk.jpg"
     },
-    "text": "When scoring, 2 per card you have from the chosen pile. — Setup: Choose a random Action Supply pile. ",
+    "text": "When scoring, +2 Victory Points per card you have from the chosen pile. — Setup: Choose a random Action Supply pile. ",
     "trash": false,
     "name": "Obelisk",
     "junk": false,
@@ -8632,7 +8576,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/55/Opulent_Castle.jpg/200px-Opulent_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/55/Opulent_Castle.jpg"
     },
-    "text": "Discard any number of Victory cards. + per card discarded. — Worth 3",
+    "text": "Discard any number of Victory cards. +2 Coins per card discarded. — Worth 3 Victory Points",
     "trash": false,
     "name": "Opulent Castle",
     "junk": false,
@@ -8694,7 +8638,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/80/Orchard.jpg/320px-Orchard.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/80/Orchard.jpg"
     },
-    "text": "When scoring, 4 per differently named Action card you have 3 or more copies of. ",
+    "text": "When scoring, +4 Victory Points per differently named Action card you have 3 or more copies of. ",
     "trash": false,
     "name": "Orchard",
     "junk": false,
@@ -8723,7 +8667,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b4/Outpost.jpg/200px-Outpost.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b4/Outpost.jpg"
     },
-    "text": "You only draw 3 cards (instead of 5) in this turn’s Clean-up phase. Take an extra turn after this one. This can’t cause you to take more than two consecutive turns. ",
+    "text": "If this is the first time you played an Outpost this turn, and the previous turn wasn't yours, then take an extra turn after this one, and you only draw 3 cards for your next hand.",
     "trash": false,
     "name": "Outpost",
     "junk": false,
@@ -8752,7 +8696,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/36/Overgrown_Estate.jpg/200px-Overgrown_Estate.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/36/Overgrown_Estate.jpg"
     },
-    "text": "Worth 0. —When you trash this, +1 Card. ",
+    "text": "Worth 0 Victory Points. — When you trash this, +1 Card. ",
     "trash": false,
     "name": "Overgrown Estate",
     "junk": false,
@@ -8761,10 +8705,10 @@
   },
   {
     "potion": false,
-    "cost": 108,
+    "cost": 0,
     "raw_buys": [],
     "id": "52bfa057-2418-426b-9f5d-85aea0a709ab",
-    "debt": true,
+    "debt": 8,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -8780,7 +8724,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/5e/Overlord.jpg/200px-Overlord.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/5e/Overlord.jpg"
     },
-    "text": "Play this as if it were an Action card in the Supply costing up to . This is that card until it leaves play. ",
+    "text": "Play this as if it were an Action card in the Supply costing up to 5 Coins. This is that card until it leaves play. ",
     "trash": false,
     "name": "Overlord",
     "junk": false,
@@ -8847,7 +8791,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c4/Palace.jpg/320px-Palace.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c4/Palace.jpg"
     },
-    "text": "When scoring, 3 per set you have of Copper - Silver - Gold. ",
+    "text": "When scoring, +3 Victory Points per set you have of Copper - Silver - Gold. ",
     "trash": false,
     "name": "Palace",
     "junk": false,
@@ -8877,7 +8821,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a9/Pasture.jpg/200px-Pasture.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a9/Pasture.jpg"
     },
-    "text": "   Worth 1 per Estate you have. ",
+    "text": "Worth 1 Coin - Worth 1 Victory Point per Estate you have. ",
     "trash": false,
     "name": "Pasture",
     "junk": false,
@@ -8943,35 +8887,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fb/Patrician.jpg/200px-Patrician.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fb/Patrician.jpg"
     },
-    "text": "+1 Card. +1 Action. Reveal the top card of your deck. If it costs  or more, put it into your hand. ",
-    "trash": false,
-    "name": "Patrician",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
-    "cost": 2,
-    "raw_buys": [],
-    "id": "72902fff-b7ba-4798-8d85-e6d121a02626",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Empires",
-    "types": [
-      "Action"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fb/Patrician.jpg/200px-Patrician.jpg",
-      "full": "http://wiki.dominionstrategy.com/images/f/fb/Patrician.jpg"
-    },
-    "text": "Split pile containing 5 Patrician cards on top and 5 Emporium cards on bottom. ",
+    "text": "+1 Card. +1 Action. Reveal the top card of your deck. If it costs 5 Coins or more, put it into your hand. ",
     "trash": false,
     "name": "Patrician",
     "junk": false,
@@ -8988,10 +8904,6 @@
       [
         "+",
         "3"
-      ],
-      [
-        "-",
-        "7"
       ]
     ],
     "expansion": "Intrigue",
@@ -9000,7 +8912,7 @@
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": -4,
+    "cards": 3,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -9051,7 +8963,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/0f/Pawn.jpg/200px-Pawn.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/0f/Pawn.jpg"
     },
-    "text": "Choose two: +1 Card; +1 Action; +1 Buy; +. (The choices must be different.) ",
+    "text": "Choose two: +1 Card; +1 Action; +1 Buy; +1 Coin. (The choices must be different.) ",
     "trash": false,
     "name": "Pawn",
     "junk": false,
@@ -9123,7 +9035,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/70/Peasant.jpg/200px-Peasant.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/70/Peasant.jpg"
     },
-    "text": "+1 Buy; +. — When you discard this from play, you may exchange it for a Soldier. ",
+    "text": "+1 Buy; +1 Coin. — When you discard this from play, you may exchange it for a Soldier. ",
     "trash": false,
     "name": "Peasant",
     "junk": false,
@@ -9161,7 +9073,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/6f/Peddler.jpg/200px-Peddler.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/6f/Peddler.jpg"
     },
-    "text": "+1 Card; +1 Action; +. During your Buy phase, this costs  less per Action card you have in play, but not less than . ",
+    "text": "+1 Card; +1 Action; +1 Coin. During your Buy phase, this costs 2 Coins less per Action card you have in play, but not less than 0 Coins. ",
     "trash": false,
     "name": "Peddler",
     "junk": false,
@@ -9189,7 +9101,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/32/Philosopher%27s_Stone.jpg/200px-Philosopher%27s_Stone.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/32/Philosopher%27s_Stone.jpg"
     },
-    "text": "When you play this, count your deck and discard pile. Worth  per 5 cards total between them (rounded down). ",
+    "text": "When you play this, count your deck and discard pile. Worth 1 Coin per 5 cards total between them (rounded down). ",
     "trash": false,
     "name": "Philosopher's Stone",
     "junk": false,
@@ -9275,7 +9187,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/42/Pirate_Ship.jpg/200px-Pirate_Ship.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/42/Pirate_Ship.jpg"
     },
-    "text": "Choose one: Each other player reveals the top 2 cards of his deck, trashes a revealed Treasure that you choose, discards the rest, and if anyone trashed a Treasure you take a Coin token; or, + per Coin token you’ve taken with Pirate Ships this game. ",
+    "text": "Choose one: +1 Coin per Coin token on your Pirate Ship mat; or each other player reveals the top 2 cards of their deck, trashes one of those Treasures that you choose, and discards the rest, and then if anyone trashed a treasure you add a Coin token to your Pirate Ship mat.",
     "trash": false,
     "name": "Pirate Ship",
     "junk": false,
@@ -9398,7 +9310,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/72/Platinum.jpg/200px-Platinum.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/72/Platinum.jpg"
     },
-    "text": "Worth  ",
+    "text": "Worth 5 Coins.",
     "trash": false,
     "name": "Platinum",
     "junk": false,
@@ -9436,7 +9348,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fc/Plaza.jpg/200px-Plaza.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fc/Plaza.jpg"
     },
-    "text": "+1 Card; +2 Actions. You may discard a Treasure card. If you do, take a Coin token. ",
+    "text": "+1 Card; +2 Actions. You may discard a Treasure card. If you do, add a Coin token to your coffers. ",
     "trash": false,
     "name": "Plaza",
     "junk": false,
@@ -9464,12 +9376,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/da/Plunder.jpg/200px-Plunder.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/da/Plunder.jpg"
     },
-    "text": "Worth . +1 ",
+    "text": "Worth 2 Coins. +1 Victory Token",
     "trash": false,
     "name": "Plunder",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -9506,7 +9418,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a0/Poacher.jpg/200px-Poacher.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a0/Poacher.jpg"
     },
-    "text": "+1 Card; +1 Action; +. Discard a card per empty supply pile. ",
+    "text": "+1 Card; +1 Action; +1 Coin. Discard a card per empty supply pile. ",
     "trash": false,
     "name": "Poacher",
     "junk": false,
@@ -9567,7 +9479,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d6/Poor_House.jpg/200px-Poor_House.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d6/Poor_House.jpg"
     },
-    "text": "+. Reveal your hand. - per Treasure card in your hand, to a minimum of . ",
+    "text": "+4 Coins. Reveal your hand. -1 Coin per Treasure card in your hand, (You can't go below 0 Coins). ",
     "trash": false,
     "name": "Poor House",
     "junk": false,
@@ -9661,7 +9573,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c3/Potion.jpg/200px-Potion.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c3/Potion.jpg"
     },
-    "text": "Worth . ",
+    "text": "Worth 1 Potion. ",
     "trash": false,
     "name": "Potion",
     "junk": false,
@@ -9685,7 +9597,7 @@
       "Treasure",
       "Heirloom"
     ],
-    "coins": 0,
+    "coins": 1,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -9695,7 +9607,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/18/Pouch.jpg/200px-Pouch.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/18/Pouch.jpg"
     },
-    "text": "   +1 Buy ",
+    "text": "Worth 1 Coin. +1 Buy ",
     "trash": false,
     "name": "Pouch",
     "junk": false,
@@ -9756,7 +9668,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ea/Prince.jpg/200px-Prince.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ea/Prince.jpg"
     },
-    "text": "You may set this aside. If you do, set aside an Action card from your hand costing up to . At the start of each of your turns, play that Action, setting it aside again when you discard it from play. (Stop playing it if you fail to set it aside on a turn you play it.) ",
+    "text": "You may set this aside. If you do, set aside an Action card from your hand costing up to 4 Coins. At the start of each of your turns, play that Action, setting it aside again when you discard it from play. (Stop playing it if you fail to set it aside on a turn you play it.) ",
     "trash": false,
     "name": "Prince",
     "junk": false,
@@ -9790,7 +9702,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/42/Princess.jpg/200px-Princess.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/42/Princess.jpg"
     },
-    "text": "+1 Buy. While this is in play, cards cost  less, but not less than . ",
+    "text": "+1 Buy. While this is in play, cards cost 2 Coins less, but not less than 0 Coins. ",
     "trash": false,
     "name": "Princess",
     "junk": false,
@@ -9808,7 +9720,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -9846,7 +9758,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/81/Province.jpg/200px-Province.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/81/Province.jpg"
     },
-    "text": "Worth 6. ",
+    "text": "Worth 6 Victory Points. ",
     "trash": false,
     "name": "Province",
     "junk": false,
@@ -9874,7 +9786,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/65/Quarry.jpg/200px-Quarry.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/65/Quarry.jpg"
     },
-    "text": "Worth . While this is in play, Action cards cost  less, but not less than . ",
+    "text": "Worth 1 Coin. While this is in play, Action cards cost 2 Coins less, but not less than 0 Coins.",
     "trash": false,
     "name": "Quarry",
     "junk": false,
@@ -9941,7 +9853,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f1/Rabble.jpg/200px-Rabble.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f1/Rabble.jpg"
     },
-    "text": "+3 Cards. Each other player reveals the top 3 cards of his deck, discards the revealed Actions and Treasures, and puts the rest back on top in any order he chooses. ",
+    "text": "+3 Cards. Each other player reveals the top 3 cards of their deck, discards the revealed Actions and Treasures, and puts the rest back on top in any order they choose. ",
     "trash": false,
     "name": "Rabble",
     "junk": false,
@@ -9973,7 +9885,7 @@
     "trash": false,
     "name": "Raid",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "victoryTokens": 0
   },
   {
@@ -9999,7 +9911,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e0/Raider.jpg/200px-Raider.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e0/Raider.jpg"
     },
-    "text": " Each other player with 5 or more cards in hand discards a copy of a card you have in play (or reveals they can't).  At the start of your next turn, +. ",
+    "text": " Each other player with 5 or more cards in hand discards a copy of a card you have in play (or reveals they can't).  At the start of your next turn, +3 Coins. ",
     "trash": false,
     "name": "Raider",
     "junk": false,
@@ -10152,7 +10064,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d3/Raze.jpg/200px-Raze.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d3/Raze.jpg"
     },
-    "text": "+1 Action. Trash this or a card from your hand. Look at a number of cards from the top of your deck equal to the cost in  of the trashed card. Put one into your hand and discard the rest. ",
+    "text": "+1 Action. Trash this or a card from your hand. Look at a number of cards from the top of your deck equal to the cost in coins of the trashed card. Put one into your hand and discard the rest. ",
     "trash": true,
     "name": "Raze",
     "junk": false,
@@ -10214,7 +10126,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d3/Relic.jpg/200px-Relic.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d3/Relic.jpg"
     },
-    "text": "Worth . When you play this, each other player puts his -1 Card token on his deck. ",
+    "text": "Worth 2 Coins. When you play this, each other player puts his -1 Card token on his deck. ",
     "trash": false,
     "name": "Relic",
     "junk": false,
@@ -10232,7 +10144,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -10242,7 +10154,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/2b/Remake.jpg/200px-Remake.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/2b/Remake.jpg"
     },
-    "text": "Do this twice: Trash a card from your hand; gain a card costing exactly  more than the trashed card. ",
+    "text": "Do this twice: Trash a card from your hand; gain a card costing exactly 1 Coin more than the trashed card. ",
     "trash": true,
     "name": "Remake",
     "junk": false,
@@ -10270,7 +10182,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/2e/Remodel.jpg/200px-Remodel.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/2e/Remodel.jpg"
     },
-    "text": "Trash a card from your hand. Gain a card costing up to  more than the trashed card. ",
+    "text": "Trash a card from your hand. Gain a card costing up to 2 Coins more than the trashed card. ",
     "trash": true,
     "name": "Remodel",
     "junk": false,
@@ -10299,7 +10211,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/27/Replace.jpg/200px-Replace.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/27/Replace.jpg"
     },
-    "text": " Trash a card from your hand. Gain a card costing up to  more than it. If the gained card is an Action or Treasure, put it onto your deck; if it's a Victory card, each other player gains a Curse. ",
+    "text": " Trash a card from your hand. Gain a card costing up to 2 Coins more than it. If the gained card is an Action or Treasure, put it onto your deck; if it's a Victory card, each other player gains a Curse. ",
     "trash": true,
     "name": "Replace",
     "junk": true,
@@ -10327,12 +10239,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d1/Ritual.jpg/320px-Ritual.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d1/Ritual.jpg"
     },
-    "text": "Gain a Curse. If you do, trash a card from your hand. +1 per  it cost. ",
+    "text": "Gain a Curse. If you do, trash a card from your hand. +1 Victory Token per coin it cost. ",
     "trash": true,
     "name": "Ritual",
     "junk": true,
     "gain": 1,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -10355,7 +10267,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/2e/Rocks.jpg/200px-Rocks.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/2e/Rocks.jpg"
     },
-    "text": "Worth . When you gain or trash this, gain a Silver; if it is your Buy phase, put the Silver on your deck, otherwise put it into your hand. ",
+    "text": "Worth 1 Coin. When you gain or trash this, gain a Silver; if it is your Buy phase, put the Silver on your deck, otherwise put it into your hand. ",
     "trash": false,
     "name": "Rocks",
     "junk": false,
@@ -10384,7 +10296,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f6/Rogue.jpg/200px-Rogue.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f6/Rogue.jpg"
     },
-    "text": "+. If there are any cards in the trash costing from  to , gain one of them. Otherwise, each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. ",
+    "text": "+2 Coins. If there are any cards in the trash costing from 3 Coins to 6 Coins, gain one of them. Otherwise, each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. ",
     "trash": false,
     "name": "Rogue",
     "junk": false,
@@ -10393,10 +10305,10 @@
   },
   {
     "potion": false,
-    "cost": 108,
+    "cost": 0,
     "raw_buys": [],
     "id": "84d31edf-5e88-4aa5-9be3-e2762c08e78f",
-    "debt": true,
+    "debt": 8,
     "raw_cards": [
       [
         "+",
@@ -10483,7 +10395,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/dd/Royal_Seal.jpg/200px-Royal_Seal.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/dd/Royal_Seal.jpg"
     },
-    "text": "Worth . While this is in play, when you gain a card, you may put that card on top of your deck. ",
+    "text": "Worth 2 Coins. While this is in play, when you gain a card, you may put that card on top of your deck. ",
     "trash": false,
     "name": "Royal Seal",
     "junk": false,
@@ -10594,35 +10506,6 @@
   },
   {
     "potion": false,
-    "cost": 0,
-    "raw_buys": [],
-    "id": "c7a3464d-c129-4fb0-b4af-996082a1951a",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Dark Ages",
-    "types": [
-      "Action",
-      "Ruins"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": null,
-      "full": null
-    },
-    "text": "50 total, 10 of each type, shuffled into a pile of ten per opponent, like Curses ",
-    "trash": false,
-    "name": "Ruins",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
     "cost": 5,
     "raw_buys": [
       [
@@ -10648,7 +10531,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3a/Sacred_Grove.jpg/200px-Sacred_Grove.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/3a/Sacred_Grove.jpg"
     },
-    "text": " +1 Buy  +  Receive a Boon. If it doesn't give +, each other player may receive it. ",
+    "text": " +1 Buy +3 Coins  Receive a Boon. If it doesn't give +1 Coin, each other player may receive it. ",
     "trash": false,
     "name": "Sacred Grove",
     "junk": false,
@@ -10686,12 +10569,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/51/Sacrifice.jpg/200px-Sacrifice.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/51/Sacrifice.jpg"
     },
-    "text": "Trash a card from your hand. If it's an... Action card, +2 Cards, +2 Actions; Treasure card, +; Victory card, +2 ",
+    "text": "Trash a card from your hand. If it's an... Action card, +2 Cards, +2 Actions; Treasure card, +2 Coins; Victory card, +2 Victory Tokens",
     "trash": true,
     "name": "Sacrifice",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 2
   },
   {
     "potion": false,
@@ -10719,7 +10602,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/70/Sage.jpg/200px-Sage.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/70/Sage.jpg"
     },
-    "text": "+1 Action. Reveal cards from the top of your deck until you reveal one costing  or more. Put that card into your hand and discard the rest. ",
+    "text": "+1 Action. Reveal cards from the top of your deck until you reveal one costing 3 Coins or more. Put that card into your hand and discard the rest. ",
     "trash": false,
     "name": "Sage",
     "junk": false,
@@ -10747,12 +10630,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/66/Salt_the_Earth.jpg/320px-Salt_the_Earth.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/66/Salt_the_Earth.jpg"
     },
-    "text": "+1. Trash a Victory card from the Supply. ",
+    "text": "+1 Victory Token. Trash a Victory card from the Supply. ",
     "trash": true,
     "name": "Salt the Earth",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -10780,7 +10663,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/89/Salvager.jpg/200px-Salvager.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/89/Salvager.jpg"
     },
-    "text": "+1 Buy. Trash a card from your hand. +equal to its cost. ",
+    "text": "+1 Buy. Trash a card from your hand. +1 Coin per coin the card cost. ",
     "trash": true,
     "name": "Salvager",
     "junk": false,
@@ -10820,34 +10703,6 @@
     },
     "text": "+1 Card; +1 Action. You may play an Avanto from your hand. — While this is in play, when you play a Silver, you may trash a card from your hand. ",
     "trash": true,
-    "name": "Sauna",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
-    "cost": 4,
-    "raw_buys": [],
-    "id": "7f83c0bd-60f7-492b-b022-9c066fafd941",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Promo",
-    "types": [
-      "Action"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/3c/Sauna.jpg/200px-Sauna.jpg",
-      "full": "http://wiki.dominionstrategy.com/images/3/3c/Sauna.jpg"
-    },
-    "text": "Split pile containing 5 Sauna cards on top and 5 Avanto cards on bottom. ",
-    "trash": false,
     "name": "Sauna",
     "junk": false,
     "gain": 0,
@@ -10907,7 +10762,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d9/Scavenger.jpg/200px-Scavenger.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d9/Scavenger.jpg"
     },
-    "text": "+. You may put your deck into your discard pile. Look through your discard pile and put one card from it on top of your deck. ",
+    "text": "+2 Coins. You may put your deck into your discard pile. Look through your discard pile and put one card from it on top of your deck. ",
     "trash": false,
     "name": "Scavenger",
     "junk": false,
@@ -11069,7 +10924,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/df/Seaway.jpg/320px-Seaway.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/df/Seaway.jpg"
     },
-    "text": "Gain an Action card costing up to . Move your +1 Buy token to its pile (when you play a card from that pile, you first get +1 Buy). ",
+    "text": "Gain an Action card costing up to 4 Coins. Move your +1 Buy token to its pile (when you play a card from that pile, you first get +1 Buy). ",
     "trash": false,
     "name": "Seaway",
     "junk": false,
@@ -11104,7 +10959,7 @@
         "1"
       ]
     ],
-    "cards": -2,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -11146,7 +11001,7 @@
         "1"
       ]
     ],
-    "cards": 1,
+    "cards": 2,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -11239,34 +11094,6 @@
   },
   {
     "potion": false,
-    "cost": 2,
-    "raw_buys": [],
-    "id": "c1ff203e-56de-4b89-9532-98a9dd50d54e",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Empires",
-    "types": [
-      "Action"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/14/Settlers.jpg/200px-Settlers.jpg",
-      "full": "http://wiki.dominionstrategy.com/images/1/14/Settlers.jpg"
-    },
-    "text": "Split pile containing 5 Settlers cards on top and 5 Bustling Village cards on bottom. ",
-    "trash": false,
-    "name": "Settlers",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
     "cost": 3,
     "raw_buys": [],
     "id": "81be5bd4-b365-451f-9b4c-4d54ff190fba",
@@ -11299,34 +11126,6 @@
     "text": "+2 Actions. Reveal your hand. If you have no Action cards in hand, +2 Cards. ",
     "trash": false,
     "name": "Shanty Town",
-    "junk": false,
-    "gain": 0,
-    "victoryTokens": 0
-  },
-  {
-    "potion": false,
-    "cost": 1,
-    "raw_buys": [],
-    "id": "b8d1e447-2cd6-4c2e-9d87-8ecaa0cc4aba",
-    "debt": false,
-    "raw_cards": [],
-    "expansion": "Dark Ages",
-    "types": [
-      "Shelter"
-    ],
-    "coins": 0,
-    "raw_actions": [],
-    "cards": 0,
-    "categories": [],
-    "buys": 0,
-    "actions": 0,
-    "images": {
-      "thumb": null,
-      "full": null
-    },
-    "text": "Replaces starting Estates ",
-    "trash": false,
-    "name": "Shelters",
     "junk": false,
     "gain": 0,
     "victoryTokens": 0
@@ -11394,7 +11193,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f6/Silk_Road.jpg/200px-Silk_Road.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f6/Silk_Road.jpg"
     },
-    "text": "Worth 1 for every 4 Victory cards in your deck (round down). ",
+    "text": "Worth 1 Victory Point for every 4 Victory cards in your deck (round down). ",
     "trash": false,
     "name": "Silk Road",
     "junk": false,
@@ -11412,7 +11211,7 @@
     "types": [
       "Treasure"
     ],
-    "coins": 0,
+    "coins": 2,
     "raw_actions": [],
     "cards": 0,
     "categories": [],
@@ -11422,7 +11221,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/5d/Silver.jpg/200px-Silver.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/5d/Silver.jpg"
     },
-    "text": "Worth . ",
+    "text": "Worth 2 Coins. ",
     "trash": false,
     "name": "Silver",
     "junk": false,
@@ -11462,8 +11261,8 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a6/Sir_Bailey.jpg/200px-Sir_Bailey.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a6/Sir_Bailey.jpg"
     },
-    "text": "+1 Card; +1 Action. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
-    "trash": true,
+    "text": "+1 Card; +1 Action. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "trash": false,
     "name": "Sir Bailey",
     "junk": false,
     "gain": 0,
@@ -11497,7 +11296,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/18/Sir_Destry.jpg/200px-Sir_Destry.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/18/Sir_Destry.jpg"
     },
-    "text": "+2 Cards. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "+2 Cards. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Sir Destry",
     "junk": false,
@@ -11532,7 +11331,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/ab/Sir_Martin.jpg/200px-Sir_Martin.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/ab/Sir_Martin.jpg"
     },
-    "text": "+2 Buys. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "+2 Buys. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Sir Martin",
     "junk": false,
@@ -11562,7 +11361,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/21/Sir_Michael.jpg/200px-Sir_Michael.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/21/Sir_Michael.jpg"
     },
-    "text": "Each other player discards down to 3 cards in hand. Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. ",
+    "text": "Each other player discards down to 3 cards in hand. Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. ",
     "trash": true,
     "name": "Sir Michael",
     "junk": false,
@@ -11592,7 +11391,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/30/Sir_Vander.jpg/200px-Sir_Vander.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/30/Sir_Vander.jpg"
     },
-    "text": "Each other player reveals the top 2 cards of his deck, trashes one of them costing from  to , and discards the rest. If a Knight is trashed by this, trash this card. —  When this is trashed, gain a Gold.  ",
+    "text": "Each other player reveals the top 2 cards of his deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. —  When this is trashed, gain a Gold.",
     "trash": true,
     "name": "Sir Vander",
     "junk": false,
@@ -11657,7 +11456,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a9/Small_Castle.jpg/200px-Small_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a9/Small_Castle.jpg"
     },
-    "text": "Trash this or a Castle from your hand. If you do, gain a Castle. — Worth 2",
+    "text": "Trash this or a Castle from your hand. If you do, gain a Castle. — Worth 2 Victory Points",
     "trash": true,
     "name": "Small Castle",
     "junk": false,
@@ -11718,7 +11517,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/05/Smugglers.jpg/200px-Smugglers.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/05/Smugglers.jpg"
     },
-    "text": "Gain a copy of a card costing up to  that the player to your right gained on his last turn. ",
+    "text": "Gain a copy of a card costing up to 6 Coins that the player to your right gained on his last turn. ",
     "trash": false,
     "name": "Smugglers",
     "junk": false,
@@ -11748,7 +11547,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e3/Soldier.jpg/200px-Soldier.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e3/Soldier.jpg"
     },
-    "text": "+. + per other Attack you have in play. Each other player with 4 or more cards in hand discards a card. — When you discard this from play, you may exchange it for a Fugitive. (This is not in the Supply.) ",
+    "text": "+2 Coins. +1 Coin per other Attack you have in play. Each other player with 4 or more cards in hand discards a card. — When you discard this from play, you may exchange it for a Fugitive. (This is not in the Supply.) ",
     "trash": false,
     "name": "Soldier",
     "junk": false,
@@ -11820,7 +11619,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e2/Spice_Merchant.jpg/200px-Spice_Merchant.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e2/Spice_Merchant.jpg"
     },
-    "text": "You may trash a Treasure from your hand. If you do, choose one:. +2 Cards and +1 Action;. or + and +1 Buy. ",
+    "text": "You may trash a Treasure from your hand. If you do, choose one:. +2 Cards and +1 Action;. or +2 Coins and +1 Buy. ",
     "trash": true,
     "name": "Spice Merchant",
     "junk": false,
@@ -11848,7 +11647,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9f/Spoils.jpg/200px-Spoils.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9f/Spoils.jpg"
     },
-    "text": "Worth . When you play this, return it to the Spoils pile. (This is not in the Supply.) ",
+    "text": "Worth 3 Coins. When you play this, return it to the Spoils pile. (This is not in the Supply.) ",
     "trash": false,
     "name": "Spoils",
     "junk": false,
@@ -11877,7 +11676,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/14/Sprawling_Castle.jpg/200px-Sprawling_Castle.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/14/Sprawling_Castle.jpg"
     },
-    "text": "Worth 4 — When you gain this, gain a Duchy or 3 Estates.",
+    "text": "Worth 4 Victory Points — When you gain this, gain a Duchy or 3 Estates.",
     "trash": false,
     "name": "Sprawling Castle",
     "junk": false,
@@ -11915,7 +11714,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/79/Squire.jpg/200px-Squire.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/79/Squire.jpg"
     },
-    "text": "+. Choose one: +2 Actions; or +2 Buys; or gain a Silver. —  When you trash this, gain an Attack card. ",
+    "text": "+1 Coin. Choose one: +2 Actions; or +2 Buys; or gain a Silver. —  When you trash this, gain an Attack card. ",
     "trash": false,
     "name": "Squire",
     "junk": false,
@@ -11981,7 +11780,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/23/Stash.jpg/200px-Stash.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/23/Stash.jpg"
     },
-    "text": "Worth . When you shuffle, you may put this anywhere in your deck. ",
+    "text": "Worth 2 Coins. When you shuffle, you may put this anywhere in your deck. ",
     "trash": false,
     "name": "Stash",
     "junk": false,
@@ -12014,7 +11813,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/8/88/Steward.jpg/200px-Steward.jpg",
       "full": "http://wiki.dominionstrategy.com/images/8/88/Steward.jpg"
     },
-    "text": "Choose one: +2 Cards; or +; or trash 2 cards from your hand. ",
+    "text": "Choose one: +2 Cards; or +2 Coins; or trash 2 cards from your hand. ",
     "trash": true,
     "name": "Steward",
     "junk": false,
@@ -12084,7 +11883,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b4/Storeroom.jpg/200px-Storeroom.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b4/Storeroom.jpg"
     },
-    "text": "+1 Buy. Discard any number of cards. +1 Card per card discarded. Discard any number of cards. + per card discarded the second time. ",
+    "text": "+1 Buy. Discard any number of cards. +1 Card per card discarded. Discard any number of cards. +1 Coin per card discarded the second time. ",
     "trash": false,
     "name": "Storeroom",
     "junk": false,
@@ -12122,7 +11921,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/6a/Storyteller.jpg/200px-Storyteller.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/6a/Storyteller.jpg"
     },
-    "text": "+1 Action; +. Play up to 3 Treasures from your hand. Pay all of your ; +1 Card per  paid. ",
+    "text": "+1 Action; +1 Coin. Play up to 3 Treasures from your hand. Pay all of your Coins; +1 Card per Coin paid. ",
     "trash": false,
     "name": "Storyteller",
     "junk": false,
@@ -12150,7 +11949,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ee/Summon.jpg/320px-Summon.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ee/Summon.jpg"
     },
-    "text": " Gain an Action card costing up to . Set it aside. If you do, then at the start of your next turn, play it. ",
+    "text": " Gain an Action card costing up to 4 Coins. Set it aside. If you do, then at the start of your next turn, play it. ",
     "trash": false,
     "name": "Summon",
     "junk": false,
@@ -12209,7 +12008,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/db/Swamp_Hag.jpg/200px-Swamp_Hag.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/db/Swamp_Hag.jpg"
     },
-    "text": "Until your next turn, when any other player buys a card, he gains a Curse. At the start of your next turn, +. ",
+    "text": "Until your next turn, when any other player buys a card, he gains a Curse. At the start of your next turn, +3 Coins. ",
     "trash": false,
     "name": "Swamp Hag",
     "junk": true,
@@ -12238,7 +12037,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e7/Swindler.jpg/200px-Swindler.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e7/Swindler.jpg"
     },
-    "text": "+. Each other player trashes the top card of his deck and gains a card with the same cost that you choose. ",
+    "text": "+2 Coins. Each other player trashes the top card of his deck and gains a card with the same cost that you choose. ",
     "trash": false,
     "name": "Swindler",
     "junk": false,
@@ -12282,7 +12081,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ed/Tactician.jpg/200px-Tactician.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ed/Tactician.jpg"
     },
-    "text": "Discard your hand. If you discarded any cards this way, then at the start of your next turn, +5 Cards; +1 Buy; and +1 Action. ",
+    "text": "If you have at least one card in hand, discard your hand, and at the start of your next turn, +5 Cards, +1 Action, and +1 Buy",
     "trash": false,
     "name": "Tactician",
     "junk": false,
@@ -12310,7 +12109,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/cf/Talisman.jpg/200px-Talisman.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/cf/Talisman.jpg"
     },
-    "text": "Worth . While this is in play, when you buy a card costing  or less that is not a Victory card, gain a copy of it. ",
+    "text": "Worth 1 Coin. While this is in play, when you buy a card costing 4 Coins or less that is not a Victory card, gain a copy of it. ",
     "trash": false,
     "name": "Talisman",
     "junk": false,
@@ -12338,7 +12137,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9d/Tax.jpg/320px-Tax.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9d/Tax.jpg"
     },
-    "text": "Add  to a Supply pile. — Setup: Add  to each Supply pile. When a player buys a card, they take the  from its pile. ",
+    "text": "Add 2 Debt to a Supply pile. — Setup: Add 1 Debt to each Supply pile. When a player buys a card, they take the Debt from its pile. ",
     "trash": true,
     "name": "Tax",
     "junk": false,
@@ -12367,7 +12166,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/e0/Taxman.jpg/200px-Taxman.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/e0/Taxman.jpg"
     },
-    "text": "You may trash a Treasure from your hand. Each other player with 5 or more cards in hand discards a copy of it (or reveals a hand without it). Gain a Treasure card costing up to  more than the trashed card, putting it on top of your deck. ",
+    "text": "You may trash a Treasure from your hand. Each other player with 5 or more cards in hand discards a copy of it (or reveals a hand without it). Gain a Treasure card costing up to 3 Coins more than the trashed card, putting it on top of your deck. ",
     "trash": true,
     "name": "Taxman",
     "junk": false,
@@ -12396,7 +12195,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/27/Teacher.jpg/200px-Teacher.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/27/Teacher.jpg"
     },
-    "text": "Put this on your Tavern mat. — At the start of your turn, you may call this, to move your +1 Card, +1 Action, +1 Buy, or + token to an Action Supply pile you have no tokens on (when you play a card from that pile, you first get that bonus). (This is not in the Supply.) ",
+    "text": "Put this on your Tavern mat. — At the start of your turn, you may call this, to move your +1 Card, +1 Action, +1 Buy, or +1 Coin token to an Action Supply pile you have no tokens on (when you play a card from that pile, you first get that bonus). (This is not in the Supply.) ",
     "trash": false,
     "name": "Teacher",
     "junk": false,
@@ -12425,12 +12224,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9f/Temple.jpg/200px-Temple.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9f/Temple.jpg"
     },
-    "text": "+1. Trash from 1 to 3 differently named cards from your hand. Add 1 to the Temple Supply pile. — When you gain this, take the  from the Temple Supply pile. ",
+    "text": "+1 Victory Token. Trash from 1 to 3 differently named cards from your hand. Add 1 Victory Token to the Temple Supply pile. — When you gain this, take the Victory Tokens from the Temple Supply pile. ",
     "trash": true,
     "name": "Temple",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -12458,7 +12257,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ee/The_Earth%27s_Gift.jpg/200px-The_Earth%27s_Gift.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ee/The_Earth%27s_Gift.jpg"
     },
-    "text": " You may discard a Treasure to gain a card costing up to . ",
+    "text": " You may discard a Treasure to gain a card costing up to 4 Coins. ",
     "trash": false,
     "name": "The Earth's Gift",
     "junk": false,
@@ -12491,7 +12290,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c4/The_Field%27s_Gift.jpg/200px-The_Field%27s_Gift.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c4/The_Field%27s_Gift.jpg"
     },
-    "text": " +1 Action  +  (Keep this until Clean-up.) ",
+    "text": " +1 Action  + 1 Coin (Keep this until Clean-up.) ",
     "trash": false,
     "name": "The Field's Gift",
     "junk": false,
@@ -12552,7 +12351,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/6e/The_Forest%27s_Gift.jpg/200px-The_Forest%27s_Gift.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/6e/The_Forest%27s_Gift.jpg"
     },
-    "text": " +1 Buy  +  (Keep this until Clean-up.) ",
+    "text": " +1 Buy  +1 Coin (Keep this until Clean-up.) ",
     "trash": false,
     "name": "The Forest's Gift",
     "junk": false,
@@ -12797,7 +12596,7 @@
     ],
     "coins": 0,
     "raw_actions": [],
-    "cards": 0,
+    "cards": 2,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -12805,7 +12604,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/af/The_Wind%27s_Gift.jpg/200px-The_Wind%27s_Gift.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/af/The_Wind%27s_Gift.jpg"
     },
-    "text": " +2 Cards   Discard 2 cards. ",
+    "text": " +2 Cards, Discard 2 cards. ",
     "trash": false,
     "name": "The Wind's Gift",
     "junk": false,
@@ -12861,12 +12660,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/71/Tomb.jpg/320px-Tomb.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/71/Tomb.jpg"
     },
-    "text": "When you trash a card, +1. ",
+    "text": "When you trash a card, +1 Victory Token. ",
     "trash": false,
     "name": "Tomb",
     "junk": false,
     "gain": 0,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -12891,7 +12690,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/07/Tormentor.jpg/200px-Tormentor.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/07/Tormentor.jpg"
     },
-    "text": " +  If you have no other cards in play, gain an Imp from its pile. Otherwise, each other player receives the next Hex. ",
+    "text": " +2 Coins  If you have no other cards in play, gain an Imp from its pile. Otherwise, each other player receives the next Hex. ",
     "trash": false,
     "name": "Tormentor",
     "junk": false,
@@ -12925,7 +12724,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a9/Torturer.jpg/200px-Torturer.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a9/Torturer.jpg"
     },
-    "text": "+3 Cards. Each other player chooses one: he discards 2 cards; or he gains a Curse card, putting it in his hand. ",
+    "text": "+3 Cards. Each other player chooses one: discard 2 cards; or gain a Curse card to their hand. ",
     "trash": false,
     "name": "Torturer",
     "junk": true,
@@ -12963,7 +12762,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c4/Tournament.jpg/200px-Tournament.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c4/Tournament.jpg"
     },
-    "text": "+1 Action. Each player may reveal a Province from his hand. If you do, discard it and gain a Prize (from the Prize pile) or a Duchy, putting it on top of your deck. If no-one else does, +1 Card, +. ",
+    "text": "+1 Action. Each player may reveal a Province from his hand. If you do, discard it and gain a Prize (from the Prize pile) or a Duchy, putting it on top of your deck. If no-one else does, +1 Card, +1 Coin. ",
     "trash": false,
     "name": "Tournament",
     "junk": false,
@@ -12991,7 +12790,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/29/Tower.jpg/320px-Tower.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/29/Tower.jpg"
     },
-    "text": "When scoring, 1 per non-Victory card you have from an empty Supply pile. ",
+    "text": "When scoring, +1 Victory Point per non-Victory card you have from an empty Supply pile. ",
     "trash": false,
     "name": "Tower",
     "junk": false,
@@ -13020,7 +12819,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9a/Tracker.jpg/200px-Tracker.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9a/Tracker.jpg"
     },
-    "text": " +  Receive a Boon.  While this is in play, when you gain a card, you may put that card onto your deck.  Heirloom: Pouch ",
+    "text": "+1 Coin, Receive a Boon.  While this is in play, when you gain a card, you may put that card onto your deck.",
     "trash": false,
     "name": "Tracker",
     "junk": false,
@@ -13081,7 +12880,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/a/a7/Trade_Route.jpg/200px-Trade_Route.jpg",
       "full": "http://wiki.dominionstrategy.com/images/a/a7/Trade_Route.jpg"
     },
-    "text": "+1 Buy; + per token on the Trade Route mat. Trash a card from your hand. Setup: Put a token on each Victory card Supply pile. When a card is gained from that pile, move the token to the Trade Route mat. ",
+    "text": "+1 Buy; +1 Coin per token on the Trade Route mat. Trash a card from your hand. - Setup: Put a Coin token on each Victory card Supply pile. When a card is gained from that pile, move the token to the Trade Route mat. ",
     "trash": true,
     "name": "Trade Route",
     "junk": false,
@@ -13114,7 +12913,7 @@
     "trash": true,
     "name": "Trader",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "victoryTokens": 0
   },
   {
@@ -13138,7 +12937,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/3/36/Trading_Post.jpg/200px-Trading_Post.jpg",
       "full": "http://wiki.dominionstrategy.com/images/3/36/Trading_Post.jpg"
     },
-    "text": "Trash 2 cards from your hand. If you do, gain a silver card; put it into your hand. ",
+    "text": "Trash 2 cards from your hand. If you do, gain a silver card to your hand.",
     "trash": true,
     "name": "Trading Post",
     "junk": false,
@@ -13177,7 +12976,7 @@
       "full": "http://wiki.dominionstrategy.com/images/2/29/Tragic_Hero.jpg"
     },
     "text": " +3 Cards  +1 Buy  If you have 8 or more cards in hand (after drawing), trash this and gain a Treasure. ",
-    "trash": true,
+    "trash": false,
     "name": "Tragic Hero",
     "junk": false,
     "gain": 1,
@@ -13204,7 +13003,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/99/Training.jpg/320px-Training.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/99/Training.jpg"
     },
-    "text": "Move your + token to an Action Supply pile (when you play a card from that pile, you first get +). ",
+    "text": "Move your +1 Coin token to an Action Supply pile (when you play a card from that pile, you first get +1 Coin). ",
     "trash": false,
     "name": "Training",
     "junk": false,
@@ -13266,7 +13065,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/22/Transmute.jpg/200px-Transmute.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/22/Transmute.jpg"
     },
-    "text": "Trash a card from your hand. If it is an… Action card, gain a Duchy; Treasure card, gain a Transmute; Victory card, gain a Gold. ",
+    "text": "Trash a card from your hand. If it is an... Action card, gain a Duchy; Treasure card, gain a Transmute; Victory card, gain a Gold. ",
     "trash": true,
     "name": "Transmute",
     "junk": false,
@@ -13337,7 +13136,7 @@
     "trash": false,
     "name": "Treasure Hunter",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "victoryTokens": 0
   },
   {
@@ -13389,7 +13188,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/2/22/Treasure_Trove.jpg/200px-Treasure_Trove.jpg",
       "full": "http://wiki.dominionstrategy.com/images/2/22/Treasure_Trove.jpg"
     },
-    "text": "Worth . When you play this, gain a Gold and a Copper. ",
+    "text": "Worth 2 Coins. When you play this, gain a Gold and a Copper. ",
     "trash": false,
     "name": "Treasure Trove",
     "junk": false,
@@ -13427,7 +13226,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/fd/Treasury.jpg/200px-Treasury.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/fd/Treasury.jpg"
     },
-    "text": "+1 Card; +1 Action; +. When you discard this from play, if you didn’t buy a Victory card this turn, you may put this on top of your deck. ",
+    "text": "+1 Card; +1 Action; +1 Coin. When you discard this from play, if you didn’t buy a Victory card this turn, you may put this on top of your deck. ",
     "trash": false,
     "name": "Treasury",
     "junk": false,
@@ -13436,10 +13235,10 @@
   },
   {
     "potion": false,
-    "cost": 105,
+    "cost": 0,
     "raw_buys": [],
     "id": "d282274d-0004-4b02-8b65-e07f33fb7c17",
-    "debt": true,
+    "debt": 5,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -13455,7 +13254,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c9/Triumph.jpg/320px-Triumph.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c9/Triumph.jpg"
     },
-    "text": "Gain an Estate. If you did, +1 per card you've gained this turn. ",
+    "text": "Gain an Estate. If you did, +1 Victory Token per card you've gained this turn. ",
     "trash": false,
     "name": "Triumph",
     "junk": false,
@@ -13483,7 +13282,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/7/7a/Triumphal_Arch.jpg/320px-Triumphal_Arch.jpg",
       "full": "http://wiki.dominionstrategy.com/images/7/7a/Triumphal_Arch.jpg"
     },
-    "text": "When scoring, 3 per copy you have of the 2nd most common Action card among your cards (if it’s a tie, count either). ",
+    "text": "When scoring, +3 Victory Tokens per copy you have of the 2nd most common Action card among your cards (if it’s a tie, count either). ",
     "trash": false,
     "name": "Triumphal Arch",
     "junk": false,
@@ -13522,7 +13321,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/12/Trusty_Steed.jpg/200px-Trusty_Steed.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/12/Trusty_Steed.jpg"
     },
-    "text": "Choose two: +2 Cards; or +2 Actions; or +; or gain 4 Silvers and put your deck into your discard pile. ",
+    "text": "Choose two: +2 Cards; or +2 Actions; or +2 Coins; or gain 4 Silvers and put your deck into your discard pile. ",
     "trash": false,
     "name": "Trusty Steed",
     "junk": false,
@@ -13551,7 +13350,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c2/Tunnel.jpg/200px-Tunnel.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c2/Tunnel.jpg"
     },
-    "text": "Worth 2. -When you discard this other than during a Clean-up phase, you may reveal it. If you do, gain a Gold. ",
+    "text": "Worth 2 Victory Points. - When you discard this other than during a Clean-up phase, you may reveal it. If you do, gain a Gold. ",
     "trash": false,
     "name": "Tunnel",
     "junk": false,
@@ -13579,7 +13378,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/0d/Twice_Miserable.jpg/200px-Twice_Miserable.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/0d/Twice_Miserable.jpg"
     },
-    "text": " -4 ",
+    "text": " -4 Victory Points",
     "trash": false,
     "name": "Twice Miserable",
     "junk": false,
@@ -13612,7 +13411,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/9b/University.jpg/200px-University.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/9b/University.jpg"
     },
-    "text": "+2 Actions. You may gain an Action card costing up to . ",
+    "text": "+2 Actions. You may gain an Action card costing up to 5 Coins. ",
     "trash": false,
     "name": "University",
     "junk": false,
@@ -13650,7 +13449,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/d3/Upgrade.jpg/200px-Upgrade.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/d3/Upgrade.jpg"
     },
-    "text": "+1 Card; +1 Action. Trash a card from your hand. Gain a card costing exactly  more than it. ",
+    "text": "+1 Card; +1 Action. Trash a card from your hand. Gain a card costing exactly 1 Coin more than it. ",
     "trash": true,
     "name": "Upgrade",
     "junk": false,
@@ -13690,10 +13489,10 @@
       "full": "http://wiki.dominionstrategy.com/images/7/74/Urchin.jpg"
     },
     "text": "+1 Card; +1 Action. Each other player discards down to 4 cards in hand. —  When you play another Attack card with this in play, you may trash this. If you do, gain a Mercenary from the Mercenary pile. ",
-    "trash": true,
+    "trash": false,
     "name": "Urchin",
     "junk": false,
-    "gain": 1,
+    "gain": 0,
     "victoryTokens": 0
   },
   {
@@ -13757,7 +13556,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/00/Vampire.jpg/200px-Vampire.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/00/Vampire.jpg"
     },
-    "text": " Each other player receives the next Hex.  Gain a card costing up to  other than a Vampire. Exchange this for a Bat. ",
+    "text": " Each other player receives the next Hex.  Gain a card costing up to 5 Coins other than a Vampire. Exchange this for a Bat. ",
     "trash": false,
     "name": "Vampire",
     "junk": false,
@@ -13785,7 +13584,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/0/0b/Vassal.jpg/200px-Vassal.jpg",
       "full": "http://wiki.dominionstrategy.com/images/0/0b/Vassal.jpg"
     },
-    "text": "Discard the top card of your deck. If it is an Action card, you may play it. ",
+    "text": "+2 Coins, Discard the top card of your deck. If it is an Action card, you may play it. ",
     "trash": false,
     "name": "Vassal",
     "junk": false,
@@ -13822,7 +13621,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/62/Vault.jpg/200px-Vault.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/62/Vault.jpg"
     },
-    "text": "+2 Cards. Discard any number of cards. + per card discarded. Each other player may discard 2 cards. If he does, he draws a card. ",
+    "text": "+2 Cards. Discard any number of cards. +1 Coin per card discarded. Each other player may discard 2 cards. If he does, he draws a card. ",
     "trash": false,
     "name": "Vault",
     "junk": false,
@@ -13850,7 +13649,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/e/ef/Venture.jpg/200px-Venture.jpg",
       "full": "http://wiki.dominionstrategy.com/images/e/ef/Venture.jpg"
     },
-    "text": "Worth . When you play this, reveal cards from your deck until you reveal a Treasure. Discard the other cards. Play that Treasure. ",
+    "text": "Worth 1 Coin. When you play this, reveal cards from your deck until you reveal a Treasure. Discard the other cards. Play that Treasure. ",
     "trash": false,
     "name": "Venture",
     "junk": false,
@@ -13888,7 +13687,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/f/f7/Villa.jpg/200px-Villa.jpg",
       "full": "http://wiki.dominionstrategy.com/images/f/f7/Villa.jpg"
     },
-    "text": "+2 Actions. +1 Buy. +. — When you gain this, put it into your hand, +1 Action, and if it's your Buy phase return to your Action phase. ",
+    "text": "+2 Actions. +1 Buy. +1 Coin. — When you gain this, put it into your hand, +1 Action, and if it's your Buy phase return to your Action phase. ",
     "trash": false,
     "name": "Villa",
     "junk": false,
@@ -13954,7 +13753,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/c8/Vineyard.jpg/200px-Vineyard.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/c8/Vineyard.jpg"
     },
-    "text": "Worth 1 for every 3 Action cards in your deck (rounded down). ",
+    "text": "Worth 1 Victory Point for every 3 Action cards in your deck (rounded down). ",
     "trash": false,
     "name": "Vineyard",
     "junk": false,
@@ -13982,7 +13781,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/67/Wall.jpg/320px-Wall.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/67/Wall.jpg"
     },
-    "text": "When scoring, -1 per card you have after the first 15. ",
+    "text": "When scoring, -1 Victory Point per card you have after the first 15. ",
     "trash": false,
     "name": "Wall",
     "junk": false,
@@ -14086,7 +13885,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/51/War.jpg/200px-War.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/51/War.jpg"
     },
-    "text": " Reveal cards from your deck until revealing one costing  or . Trash it and discard the rest. ",
+    "text": " Reveal cards from your deck until revealing one costing 3 Coins or 4 Coins. Trash it and discard the rest. ",
     "trash": true,
     "name": "War",
     "junk": false,
@@ -14120,7 +13919,7 @@
         "1"
       ]
     ],
-    "cards": 0,
+    "cards": 3,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -14163,7 +13962,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/9/95/Warrior.jpg/200px-Warrior.jpg",
       "full": "http://wiki.dominionstrategy.com/images/9/95/Warrior.jpg"
     },
-    "text": "+2 Cards. For each Traveller you have in play (including this), each other player discards the top card of his deck and trashes it if it costs  or . — When you discard this from play, you may exchange it for a Hero. (This is not in the Supply.) ",
+    "text": "+2 Cards. For each Traveller you have in play (including this), each other player discards the top card of his deck and trashes it if it costs 3 Coins or 4 Coins. — When you discard this from play, you may exchange it for a Hero.",
     "trash": false,
     "name": "Warrior",
     "junk": false,
@@ -14206,10 +14005,10 @@
   },
   {
     "potion": false,
-    "cost": 107,
+    "cost": 4,
     "raw_buys": [],
     "id": "f9143721-6c48-47e7-9bbc-c8dec52267de",
-    "debt": true,
+    "debt": 3,
     "raw_cards": [],
     "expansion": "Empires",
     "types": [
@@ -14225,12 +14024,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b6/Wedding.jpg/320px-Wedding.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b6/Wedding.jpg"
     },
-    "text": "+1. Gain a Gold. ",
+    "text": "+1 Victory Token. Gain a Gold.",
     "trash": false,
     "name": "Wedding",
     "junk": false,
     "gain": 1,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -14334,12 +14133,12 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/48/Wild_Hunt.jpg/200px-Wild_Hunt.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/48/Wild_Hunt.jpg"
     },
-    "text": "Choose one: +3 Cards and add 1 to the Wild Hunt Supply pile; or gain an Estate, and if you do, take the  from the pile. ",
+    "text": "Choose one: +3 Cards and add 1 Victory Token to the Wild Hunt Supply pile; or gain an Estate, and if you do, take the Victory Tokens from the Wild Hunt Supply pile. ",
     "trash": false,
     "name": "Wild Hunt",
     "junk": false,
     "gain": 1,
-    "victoryTokens": 0
+    "victoryTokens": 1
   },
   {
     "potion": false,
@@ -14373,7 +14172,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/4/4f/Will-o%27-Wisp.jpg/200px-Will-o%27-Wisp.jpg",
       "full": "http://wiki.dominionstrategy.com/images/4/4f/Will-o%27-Wisp.jpg"
     },
-    "text": " +1 Card  +1 Action  Reveal the top card of your deck.  If it costs  or less, put it into your hand.  (This is not in the Supply.) ",
+    "text": " +1 Card  +1 Action  Reveal the top card of your deck.  If it costs 2 Coins or less, put it into your hand.  (This is not in the Supply.) ",
     "trash": false,
     "name": "Will-o'-Wisp",
     "junk": false,
@@ -14435,7 +14234,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/b/b2/Wine_Merchant.jpg/200px-Wine_Merchant.jpg",
       "full": "http://wiki.dominionstrategy.com/images/b/b2/Wine_Merchant.jpg"
     },
-    "text": "+; +1 Buy. Put this on your Tavern mat. — At the end of your Buy phase, if you have at least  unspent, you may discard this from your Tavern mat. ",
+    "text": "+4 Coins; +1 Buy. Put this on your Tavern mat. — At the end of your Buy phase, if you have at least 2 Coins unspent, you may discard this from your Tavern mat. ",
     "trash": false,
     "name": "Wine Merchant",
     "junk": false,
@@ -14468,7 +14267,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/6/68/Wish.jpg/200px-Wish.jpg",
       "full": "http://wiki.dominionstrategy.com/images/6/68/Wish.jpg"
     },
-    "text": " +1 Action  Return this to its pile. If you did, gain a card to your hand costing up to .  (This is not in the Supply.) ",
+    "text": " +1 Action  Return this to its pile. If you did, gain a card to your hand costing up to 6 Coins.",
     "trash": false,
     "name": "Wish",
     "junk": false,
@@ -14502,7 +14301,7 @@
         "1"
       ]
     ],
-    "cards": -1,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -14572,7 +14371,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/ca/Wolf_Den.jpg/320px-Wolf_Den.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/ca/Wolf_Den.jpg"
     },
-    "text": "When scoring, -3 per card you have exactly one copy of. ",
+    "text": "When scoring, -3 Victory Points per card you have exactly one copy of.",
     "trash": false,
     "name": "Wolf Den",
     "junk": false,
@@ -14643,7 +14442,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/50/Workshop.jpg/200px-Workshop.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/50/Workshop.jpg"
     },
-    "text": "Gain a card costing up to . ",
+    "text": "Gain a card costing up to 4 Coins. ",
     "trash": false,
     "name": "Workshop",
     "junk": false,
@@ -14745,7 +14544,7 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/5/59/Zombie_Mason.jpg/200px-Zombie_Mason.jpg",
       "full": "http://wiki.dominionstrategy.com/images/5/59/Zombie_Mason.jpg"
     },
-    "text": " Trash the top card of your deck. You may gain a card costing up to  more than it. ",
+    "text": " Trash the top card of your deck. You may gain a card costing up to 1 Coin more than it. ",
     "trash": true,
     "name": "Zombie Mason",
     "junk": false,
