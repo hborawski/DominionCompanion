@@ -48,11 +48,7 @@ class SetBuilder {
         }
     }
     
-    var randomLandmarks: [Card] {
-        get {
-            return CardData.shared.allLandmarks.shuffled()
-        }
-    }
+    var randomLandmarks: [Card] = []
     
     var pinnedLandmarks: [Card] {
         get {
@@ -69,11 +65,7 @@ class SetBuilder {
         }
     }
     
-    var randomEvents: [Card] {
-        get {
-            return CardData.shared.allEvents.shuffled()
-        }
-    }
+    var randomEvents: [Card] = []
     
     var pinnedEvents: [Card] {
         get {
@@ -170,6 +162,8 @@ class SetBuilder {
     func shuffleSet(_ completion: @escaping () -> ()) {
         FilterEngine.shared.getMatchingSet(pinnedCards) { cards in
             self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
+            self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
+            self.randomEvents = CardData.shared.allEvents.shuffled()
             completion()
         }
     }
@@ -210,8 +204,12 @@ struct CardSection: SetBuilderSection {
     var rows: [SetBuilderCardRow] {
         get {
             return self.cards.map { c in
-                let pinned = self.pinnedCards.contains(c)
-                return SetBuilderCardRow(card: c, pinned: pinned, pinAction: {pinned ? SetBuilder.shared.unpinCard(c): SetBuilder.shared.pinCard(c)})
+                let card = c
+                let pinned = self.pinnedCards.contains(card)
+                return SetBuilderCardRow(card: card, pinned: pinned, pinAction: {
+                    print("Pinning \(card.name)")
+                    pinned ? SetBuilder.shared.unpinCard(c): SetBuilder.shared.pinCard(c)
+                })
             }
         }
     }
