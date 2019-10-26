@@ -12,8 +12,8 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     let allSettings: [MenuSection] = [
         MenuSection(title: "Additional Mechanics", items: [
-            MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: "settings_numberOfLandmarks", values: ["0", "1", "2"]),
-            MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: "settings_numberOfEvents", values: ["0", "1", "2"])
+            MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
+            MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"])
         ]),
         MenuSection(title: "Miscellaneous", items: [
             MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions"),

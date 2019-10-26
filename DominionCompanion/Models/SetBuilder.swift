@@ -44,7 +44,7 @@ class SetBuilder {
     
     var maxLandmarks: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "settings_numberOfLandmarks")
+            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumLandmarks)
         }
     }
     
@@ -56,16 +56,16 @@ class SetBuilder {
     
     var pinnedLandmarks: [Card] {
         get {
-            return self.loadPinned("pinnedLandmarks")
+            return self.loadPinned(Constants.SaveKeys.pinnedLandmarks)
         }
         set {
-            self.savePinned(newValue, key: "pinnedLandmarks")
+            self.savePinned(newValue, key: Constants.SaveKeys.pinnedLandmarks)
         }
     }
     
     var maxEvents: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "settings_numberOfEvents")
+            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumEvents)
         }
     }
     
@@ -77,17 +77,17 @@ class SetBuilder {
     
     var pinnedEvents: [Card] {
         get {
-            return self.loadPinned("pinnedEvents")
+            return self.loadPinned(Constants.SaveKeys.pinnedEvents)
         }
         set {
-            self.savePinned(newValue, key: "pinnedEvents")
+            self.savePinned(newValue, key: Constants.SaveKeys.pinnedEvents)
         }
     }
     
     var pinnedCards: [Card] {
         didSet {
             fullSet = getFullSet()
-            self.savePinned(self.pinnedCards, key: "pinnedCards")
+            self.savePinned(self.pinnedCards, key: Constants.SaveKeys.pinnedCards)
         }
     }
     
@@ -103,7 +103,7 @@ class SetBuilder {
     init() {
         self.randomCards = []
         self.pinnedCards = []
-        self.pinnedCards = loadPinned()
+        self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
     }
     
     func pinCard(_ card: Card) {
@@ -184,7 +184,7 @@ class SetBuilder {
         return pinnedCards + randoms
     }
     
-    private func loadPinned(_ key: String = "pinnedCards") -> [Card] {
+    private func loadPinned(_ key: String) -> [Card] {
         guard let rawData = UserDefaults.standard.data(forKey: key),
             let cards = try? PropertyListDecoder().decode([Card].self, from: rawData) else { return [] }
         return cards
