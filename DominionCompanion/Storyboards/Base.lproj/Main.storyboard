@@ -48,6 +48,16 @@
             </objects>
             <point key="canvasLocation" x="2673" y="-189"/>
         </scene>
+        <!--GameplaySetup-->
+        <scene sceneID="cLI-ZD-WTv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameplaySetup" id="g35-Go-5Lx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tej-jg-qzA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksX-bz-CBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691" y="-115"/>
+        </scene>
         <!--Filters-->
         <scene sceneID="VGO-82-Pcq">
             <objects>
@@ -158,8 +168,17 @@
                                         </constraints>
                                     </stackView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSf-Wo-2uU">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
-                                        <state key="normal" title="Ready To Play"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DmH-Yy-ceS"/>
+                                        </constraints>
+                                        <state key="normal" title="Ready To Play">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToGameplaySetup:" destination="2F7-bz-VMJ" eventType="touchUpInside" id="J4L-vy-g5w"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="d7d-1I-lk4">
                                         <rect key="frame" x="0.0" y="44" width="375" height="597"/>
@@ -268,6 +287,7 @@
                         <outlet property="gameplaySetupButton" destination="cSf-Wo-2uU" id="IVs-wt-jkG"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
+                        <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZZ-e6-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>

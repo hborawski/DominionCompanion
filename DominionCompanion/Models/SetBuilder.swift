@@ -177,7 +177,8 @@ class SetBuilder {
     }
     
     func getFinalSet() -> SetModel {
-        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, notInSupply: [], colonies: true)
+        let colonies = UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies)
+        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, notInSupply: [], colonies: colonies)
     }
     
     // MARK: Private
@@ -187,7 +188,18 @@ class SetBuilder {
         guard openSlots > 0 else { return pinnedCards }
         let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1
         let randoms = Array(randomCards[0...numberToPick])
-        return pinnedCards + randoms
+        return pinnedCards.sorted(by: getSortFunction()) + randoms.sorted(by: getSortFunction())
+    }
+    
+    private func getSortFunction() -> ((Card, Card) -> Bool) {
+        let sortMode = UserDefaults.standard.string(forKey: Constants.SaveKeys.settingsSortMode)
+        switch sortMode {
+        case "cost":
+            return Utilities.priceSort(card1:card2:)
+        default:
+            return Utilities.alphabeticSort(card1:card2:)
+            
+        }
     }
     
     private func loadPinned(_ key: String) -> [Card] {

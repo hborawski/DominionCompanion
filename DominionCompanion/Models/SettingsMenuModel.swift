@@ -20,6 +20,7 @@ struct MenuItem {
     var destination: String = ""
     var saveKey: String = ""
     var values: [String] = []
+    var tag: SettingToggle?
 }
 
 enum SettingsDestination {

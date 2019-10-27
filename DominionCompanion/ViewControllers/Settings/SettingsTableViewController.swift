@@ -10,17 +10,29 @@ import Foundation
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    let tagToKey: [SettingToggle: String] = [
+        .colonies: Constants.SaveKeys.settingsColonies
+    ]
+    var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
         MenuSection(title: "Additional Mechanics", items: [
+            MenuItem(title: "Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"])
         ]),
         MenuSection(title: "Miscellaneous", items: [
-            MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions"),
+            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: ["alphabetical", "cost"]),
+            MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions")
         ])
     ]
     override func viewDidLoad() {
         self.navigationItem.title = "Settings"
+        for key in tagToKey.keys {
+            let s = UISwitch()
+            s.tag = key.rawValue
+            s.addTarget(self, action: #selector(handleSwitch(_:)), for: .touchUpInside)
+            tagToSwitch[key] = s
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,14 +57,20 @@ class SettingsTableViewController: UITableViewController {
         let menuItem = allSettings[indexPath.section].items[indexPath.row]
         cell.detailTextLabel?.text = ""
         cell.textLabel?.text = menuItem.title
+        cell.selectionStyle = .default
         switch menuItem.destinationType {
         case .viewController:
             cell.accessoryType = .disclosureIndicator
         case .list:
             cell.accessoryType = .disclosureIndicator
             cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: menuItem.saveKey) ?? ""
-        default:
+        case .toggle:
+            cell.selectionStyle = .none
             cell.accessoryType = .none
+            if let s = tagToSwitch[menuItem.tag!] {
+                s.isOn = UserDefaults.standard.bool(forKey: menuItem.saveKey)
+                cell.accessoryView = s
+            }
         }
         return cell
     }
@@ -78,6 +96,28 @@ class SettingsTableViewController: UITableViewController {
         destination.values = menuItem.values
         destination.navTitle = menuItem.title
     }
+    
+    @objc func handleSwitch(_ sender: UISwitch) {
+        guard let tag = SettingToggle.init(rawValue: sender.tag) else { return }
+        switch tag {
+        case .colonies:
+            let key = tagToKey[tag] ?? ""
+            UserDefaults.standard.set(sender.isOn, forKey: key)
+            return
+        }
+    }
+    
+    func makeSwitch(_ menuItem: MenuItem) -> UISwitch {
+        guard let tag = menuItem.tag else { return UISwitch() }
+        let s = UISwitch()
+        s.tag = tag.rawValue
+        s.addTarget(self, action: #selector(handleSwitch(_:)), for: .touchUpInside)
+        return s
+    }
+}
+
+enum SettingToggle: Int {
+    case colonies = 1
 }
 
 //struct Settings: Codable {

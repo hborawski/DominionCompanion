@@ -16,5 +16,7 @@ struct Constants {
         static let pinnedEvents = "pinnedEvents"
         static let settingsNumEvents = "settings_numberOfEvents"
         static let settingsNumLandmarks = "settings_numberOfLandmarks"
+        static let settingsColonies = "settings_colonies"
+        static let settingsSortMode = "settings_sortMode"
     }
 }

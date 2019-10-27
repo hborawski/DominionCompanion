@@ -23,12 +23,14 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.shuffleSet()
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]
+        gameplaySetupButton.layer.cornerRadius = 6.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
         filtersButton.setTitle("Filters(\(FilterEngine.shared.filters.count))", for: .normal)
+        toggleSetupButton()
     }
     
     // MARK: Button Handlers
@@ -100,8 +102,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             cardVC.card = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row].card
             return
         }
-        if segue.identifier == "GameplaySetup" {
-            
+        if segue.identifier == "GoToGameplaySetup", let gameplayVC = segue.destination as? GameplaySetupViewController {
+            gameplayVC.setModel = SetBuilder.shared.getFinalSet()
             return
         }
     }
@@ -109,7 +111,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
 
 extension SetBuilderViewController {
     @IBAction func goToGameplaySetup(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "GoToGameplaySetup", sender: self)
     }
     
     func toggleSetupButton() {
