@@ -13,6 +13,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filtersButton: UIButton!
+    @IBOutlet var gameplaySetupButton: UIButton!
     
     var shuffling: Bool = false
     
@@ -82,6 +83,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             cardData.pinAction()
+            self.toggleSetupButton()
             tableView.reloadData()
             completion(true)
         }
@@ -96,6 +98,29 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             let cardVC = segue.destination as? CardViewController
         {
             cardVC.card = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row].card
+            return
+        }
+        if segue.identifier == "GameplaySetup" {
+            
+            return
+        }
+    }
+}
+
+extension SetBuilderViewController {
+    @IBAction func goToGameplaySetup(_ sender: UIButton) {
+        
+    }
+    
+    func toggleSetupButton() {
+        if gameplaySetupButton.isHidden && SetBuilder.shared.setComplete {
+            UIView.animate(withDuration: 0.2) {
+                self.gameplaySetupButton.isHidden = false
+            }
+        } else if !gameplaySetupButton.isHidden {
+            UIView.animate(withDuration: 0.2) {
+                self.gameplaySetupButton.isHidden = true
+            }
         }
     }
 }

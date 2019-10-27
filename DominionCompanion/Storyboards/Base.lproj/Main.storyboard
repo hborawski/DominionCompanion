@@ -157,6 +157,10 @@
                                             <constraint firstAttribute="height" constant="44" id="eLR-b8-rtR"/>
                                         </constraints>
                                     </stackView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSf-Wo-2uU">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
+                                        <state key="normal" title="Ready To Play"/>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="d7d-1I-lk4">
                                         <rect key="frame" x="0.0" y="44" width="375" height="597"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -261,6 +265,7 @@
                     <navigationItem key="navigationItem" title="Set Builder" id="k0y-Ht-sh0"/>
                     <connections>
                         <outlet property="filtersButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
+                        <outlet property="gameplaySetupButton" destination="cSf-Wo-2uU" id="IVs-wt-jkG"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
                     </connections>
@@ -296,6 +301,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aIl-BN-Vth"/>
+        <segue reference="jpY-1W-paC"/>
     </inferredMetricsTieBreakers>
 </document>

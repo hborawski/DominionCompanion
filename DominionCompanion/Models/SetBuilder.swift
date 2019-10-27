@@ -91,6 +91,12 @@ class SetBuilder {
     
     var fullSet: [Card] = []
     
+    var setComplete: Bool {
+        get {
+            return (pinnedCards.count == maxCards) && (pinnedEvents.count >= maxEvents) && (pinnedLandmarks.count >= maxLandmarks)
+        }
+    }
+    
     
     init() {
         self.randomCards = []
@@ -170,12 +176,16 @@ class SetBuilder {
         }
     }
     
+    func getFinalSet() -> SetModel {
+        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, notInSupply: [], colonies: true)
+    }
+    
     // MARK: Private
     private func getFullSet() -> [Card] {
         guard randomCards.count > 0 else { return pinnedCards }
         let openSlots = maxCards - pinnedCards.count
         guard openSlots > 0 else { return pinnedCards }
-        let numberToPick = openSlots < randomCards.count ? openSlots : (randomCards.count - 1)
+        let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1
         let randoms = Array(randomCards[0...numberToPick])
         return pinnedCards + randoms
     }
