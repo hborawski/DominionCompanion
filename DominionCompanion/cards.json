@@ -975,7 +975,7 @@
       "coin": 0,
       "journey": false,
       "minusCard": false,
-      "minusCoin": false,
+      "minusCoin": true,
       "plusCard": false,
       "plusAction": false,
       "plusBuy": false,
@@ -1848,7 +1848,7 @@
       "victory": 0,
       "coin": 0,
       "journey": false,
-      "minusCard": false,
+      "minusCard": true,
       "minusCoin": false,
       "plusCard": false,
       "plusAction": false,
@@ -1943,7 +1943,7 @@
       "coin": 0,
       "journey": false,
       "minusCard": false,
-      "minusCoin": false,
+      "minusCoin": true,
       "plusCard": false,
       "plusAction": false,
       "plusBuy": false,
@@ -6191,7 +6191,7 @@
       "plusAction": false,
       "plusBuy": false,
       "plusCoin": false,
-      "minusCost": false,
+      "minusCost": true,
       "trashing": false,
       "estate": false
     }
@@ -7066,7 +7066,7 @@
     "tokens": {
       "victory": 0,
       "coin": 0,
-      "journey": false,
+      "journey": true,
       "minusCard": false,
       "minusCoin": false,
       "plusCard": false,
@@ -8894,7 +8894,7 @@
       "plusCoin": false,
       "minusCost": false,
       "trashing": false,
-      "estate": false
+      "estate": true
     }
   },
   {
@@ -9830,7 +9830,7 @@
       "minusCard": false,
       "minusCoin": false,
       "plusCard": false,
-      "plusAction": false,
+      "plusAction": true,
       "plusBuy": false,
       "plusCoin": false,
       "minusCost": false,
@@ -12448,7 +12448,7 @@
       "journey": false,
       "minusCard": false,
       "minusCoin": false,
-      "plusCard": false,
+      "plusCard": true,
       "plusAction": false,
       "plusBuy": false,
       "plusCoin": false,
@@ -12829,7 +12829,7 @@
     "tokens": {
       "victory": 0,
       "coin": 0,
-      "journey": false,
+      "journey": true,
       "minusCard": false,
       "minusCoin": false,
       "plusCard": false,
@@ -13055,7 +13055,7 @@
       "plusBuy": false,
       "plusCoin": false,
       "minusCost": false,
-      "trashing": false,
+      "trashing": true,
       "estate": false
     }
   },
@@ -13894,7 +13894,7 @@
       "victory": 0,
       "coin": 0,
       "journey": false,
-      "minusCard": false,
+      "minusCard": true,
       "minusCoin": false,
       "plusCard": false,
       "plusAction": false,
@@ -13987,7 +13987,7 @@
     "tokens": {
       "victory": 0,
       "coin": 0,
-      "journey": false,
+      "journey": true,
       "minusCard": false,
       "minusCoin": false,
       "plusCard": false,
@@ -14230,7 +14230,7 @@
       "victory": 0,
       "coin": 0,
       "journey": false,
-      "minusCard": false,
+      "minusCard": true,
       "minusCoin": false,
       "plusCard": false,
       "plusAction": false,
@@ -15357,7 +15357,7 @@
       "minusCoin": false,
       "plusCard": false,
       "plusAction": false,
-      "plusBuy": false,
+      "plusBuy": true,
       "plusCoin": false,
       "minusCost": false,
       "trashing": false,
@@ -17120,10 +17120,10 @@
       "journey": false,
       "minusCard": false,
       "minusCoin": false,
-      "plusCard": false,
-      "plusAction": false,
-      "plusBuy": false,
-      "plusCoin": false,
+      "plusCard": true,
+      "plusAction": true,
+      "plusBuy": true,
+      "plusCoin": true,
       "minusCost": false,
       "trashing": false,
       "estate": false
@@ -18087,7 +18087,7 @@
     "gain": 0,
     "tokens": {
       "victory": 0,
-      "coin": 0,
+      "coin": 1,
       "journey": false,
       "minusCard": false,
       "minusCoin": false,
@@ -18269,7 +18269,7 @@
       "plusCard": false,
       "plusAction": false,
       "plusBuy": false,
-      "plusCoin": false,
+      "plusCoin": true,
       "minusCost": false,
       "trashing": false,
       "estate": false
