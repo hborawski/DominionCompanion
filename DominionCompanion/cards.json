@@ -969,7 +969,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "raw_actions": [
       [
         "+",
@@ -994,7 +994,7 @@
     ],
     "tokens": {
       "victory": 0,
-      "coin": 0,
+      "coin": 1,
       "journey": false,
       "minusCard": false,
       "minusCoin": false,
@@ -1490,7 +1490,7 @@
     "name": "Bat",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Vampire"
     ],
@@ -2216,7 +2216,7 @@
     ],
     "tokens": {
       "victory": 0,
-      "coin": 0,
+      "coin": 2,
       "journey": false,
       "minusCard": false,
       "minusCoin": false,
