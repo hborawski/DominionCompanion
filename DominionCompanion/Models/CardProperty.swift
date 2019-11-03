@@ -9,7 +9,7 @@
 import Foundation
 
 enum CardProperty: String, Codable {
-    static var allCases : [CardProperty] = [.cost, .debt, .actions, .buys, .cards, .expansion, .type, .trash]
+    static var allCases : [CardProperty] = [.cost, .debt, .actions, .buys, .cards, .expansion, .type, .trash, .victoryTokens]
     case cost = "Cost"
     case debt = "Debt"
     case expansion = "Expansion"
@@ -18,6 +18,7 @@ enum CardProperty: String, Codable {
     case actions = "+ Actions"
     case cards = "+ Cards"
     case trash = "Trash"
+    case victoryTokens = "Victory Tokens"
     
     
     
@@ -40,6 +41,8 @@ enum CardProperty: String, Codable {
                 return ListFilter.self
             case .trash:
                 return BooleanFilter.self
+            case .victoryTokens:
+                return NumberFilter.self
             }
         }
     }
@@ -63,6 +66,8 @@ enum CardProperty: String, Codable {
                 return CardData.shared.allTypes
             case .trash:
                 return ["true", "false"]
+            case .victoryTokens:
+                return Array(0...CardData.shared.maxCards).map { "\($0)" }
             }
         }
     }

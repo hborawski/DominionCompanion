@@ -45,6 +45,7 @@ class CardData {
     let maxActions: Int
     let maxBuys: Int
     let maxCards: Int
+    let maxVictoryTokens: Int
     
     var cardsFromChosenExpansions: [Card] {
         get {
@@ -59,10 +60,9 @@ class CardData {
         if
             let path = Bundle.main.path(forResource: "cards", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
-            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
-            let jsonDict = json as? Array<AnyObject>
+            let decodedData = try? JSONDecoder().decode([Card].self, from: data)
         {
-            self.allCards = jsonDict.map({ Card($0 as! Dictionary<String, AnyObject>) }).sorted(by: Utilities.alphabeticSort(card1:card2:))
+            self.allCards = decodedData.sorted(by: Utilities.alphabeticSort(card1:card2:))
         } else {
             self.allCards = []
         }
@@ -75,17 +75,14 @@ class CardData {
         self.maxActions = self.kingdomCards.map({$0.actions}).max(by: {$0<$1}) ?? 0
         self.maxBuys = self.kingdomCards.map({$0.buys}).max(by: {$0<$1}) ?? 0
         self.maxCards = self.kingdomCards.map({$0.cards}).max(by: {$0<$1}) ?? 0
+        self.maxVictoryTokens = self.kingdomCards.map({$0.victoryTokens}).max(by: {$0<$1}) ?? 0
+
         self.allExpansions = Array(Set(self.kingdomCards.map({$0.expansion}).filter { $0 != "" })).sorted()
         self.allLandmarks = self.allCards.filter { $0.types.contains("Landmark") }
         self.allEvents = self.allCards.filter { $0.types.contains("Event") }
-        
-        self.allTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
-            let fullSet = Set(allTypes)
-            let newSet = Set(types)
-            return Array(fullSet.union(newSet))
-        }).sorted()
-        
         self.allAttributes = CardProperty.allCases
-        
+        self.allTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
+            return Array(Set(allTypes).union(Set(types)))
+        }).sorted()
     }
 }
