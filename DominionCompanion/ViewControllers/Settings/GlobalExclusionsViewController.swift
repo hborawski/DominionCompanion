@@ -33,6 +33,17 @@ class GlobalExclusionViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let pin = UIContextualAction(style: .normal, title: "Include") { (action, view, completion) in
+            CardData.shared.excludedCards.remove(at: indexPath.row)
+            tableView.reloadData()
+            completion(true)
+        }
+        pin.image = UIImage(named: "Delete")
+        pin.backgroundColor = .systemRed
+        return UISwipeActionsConfiguration(actions: [pin])
+    }
+    
     @objc func addNewExclusion(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "ExcludeCards", sender: self)
     }

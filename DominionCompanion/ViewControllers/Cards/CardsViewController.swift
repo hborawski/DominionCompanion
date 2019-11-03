@@ -57,10 +57,34 @@ class CardsViewController: UITableViewController {
             print("couldn't get a cell")
             return UITableViewCell()
         }
-        if let card = self.cardData?[indexPath.row] {
-            cell.setData(card)
+        guard let card = self.cardData?[indexPath.row] else { return cell }
+        cell.setData(card)
+        if excludeMode, CardData.shared.excludedCards.contains(card) {
+            cell.accessoryView = UIImageView(image: UIImage(named: "Exclude"))
+        } else {
+            cell.accessoryView = nil
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let card = self.cardData?[indexPath.row] else { return nil }
+        if excludeMode {
+            let excluded = CardData.shared.excludedCards.contains(card)
+            let pin = UIContextualAction(style: .normal, title:  excluded ? "Exclude" : "Include") { (action, view, completion) in
+                if CardData.shared.excludedCards.contains(card), let index = CardData.shared.excludedCards.firstIndex(of: card) {
+                    CardData.shared.excludedCards.remove(at: index)
+                } else {
+                    CardData.shared.excludedCards = (CardData.shared.excludedCards + [card]).sorted(by: Utilities.alphabeticSort(card1:card2:))
+                }
+                tableView.reloadData()
+                completion(true)
+            }
+            pin.image = excluded ? UIImage(named: "Delete") : UIImage(named: "Exclude")
+            pin.backgroundColor = excluded ? .systemRed : .systemBlue
+            return UISwipeActionsConfiguration(actions: [pin])
+        }
+        return nil
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
