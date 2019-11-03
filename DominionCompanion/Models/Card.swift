@@ -9,44 +9,20 @@
 import Foundation
 import UIKit
 
-//class Card: Decodable {
-//    var cost: Int = 0
-//    var debt: Int = 0
-//    var actions: Int = 0
-//    var buys: Int = 0
-//    var cards: Int = 0
-//    var name: String = ""
-//    var text: String = ""
-//    var expansion: String = ""
-//    var types: [String] = []
-//    var trash: Bool = false
-//    init(_ cardData: Dictionary<String, AnyObject>) {
-//        if let name = cardData["name"] as? String,
-//            let cost = cardData["cost"] as? Int,
-//            let debt = cardData["debt"] as? Int,
-//            let actions = cardData["actions"] as? Int,
-//            let buys = cardData["buys"] as? Int,
-//            let cards = cardData["cards"] as? Int,
-//            let text = cardData["text"] as? String,
-//            let expansion = cardData["expansion"] as? String,
-//            let types = cardData["types"] as? [String],
-//            let trash = cardData["trash"] as? Bool
-//        {
-//            self.cost = cost
-//            self.debt = debt
-//            self.actions = actions
-//            self.buys = buys
-//            self.cards = cards
-//            self.name = name
-//            self.text = text
-//            self.expansion = expansion
-//            self.types = types
-//            self.trash = trash
-//        } else {
-//            print(cardData)
-//        }
-//    }
-//}
+struct Tokens: Codable {
+    var victory: Int
+    var coin: Int
+    var journey: Bool
+    var minusCard: Bool
+    var minusCoin: Bool
+    var plusCard: Bool
+    var plusAction: Bool
+    var plusBuy: Bool
+    var plusCoin: Bool
+    var minusCost: Bool
+    var trashing: Bool
+    var estate: Bool
+}
 
 struct Card: Codable {
     var cost: Int
@@ -59,7 +35,7 @@ struct Card: Codable {
     var expansion: String
     var types: [String]
     var trash: Bool
-    var victoryTokens: Int
+    var tokens: Tokens
 }
 
 extension Card {
@@ -82,7 +58,7 @@ extension Card {
         case .trash:
             return self.trash
         case .victoryTokens:
-            return self.victoryTokens
+            return self.tokens.victory
         }
     }
     

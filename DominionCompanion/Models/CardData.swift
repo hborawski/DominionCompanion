@@ -75,7 +75,7 @@ class CardData {
         self.maxActions = self.kingdomCards.map({$0.actions}).max(by: {$0<$1}) ?? 0
         self.maxBuys = self.kingdomCards.map({$0.buys}).max(by: {$0<$1}) ?? 0
         self.maxCards = self.kingdomCards.map({$0.cards}).max(by: {$0<$1}) ?? 0
-        self.maxVictoryTokens = self.kingdomCards.map({$0.victoryTokens}).max(by: {$0<$1}) ?? 0
+        self.maxVictoryTokens = self.kingdomCards.map({$0.tokens.victory}).max(by: {$0<$1}) ?? 0
 
         self.allExpansions = Array(Set(self.kingdomCards.map({$0.expansion}).filter { $0 != "" })).sorted()
         self.allLandmarks = self.allCards.filter { $0.types.contains("Landmark") }

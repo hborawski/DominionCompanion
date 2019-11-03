@@ -29,7 +29,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-        filtersButton.setTitle("Filters(\(FilterEngine.shared.filters.count))", for: .normal)
+        filtersButton.setTitle("Filters (\(FilterEngine.shared.filters.count))", for: .normal)
         toggleSetupButton()
     }
     
@@ -115,14 +115,8 @@ extension SetBuilderViewController {
     }
     
     func toggleSetupButton() {
-        if gameplaySetupButton.isHidden && SetBuilder.shared.setComplete {
-            UIView.animate(withDuration: 0.2) {
-                self.gameplaySetupButton.isHidden = false
-            }
-        } else if !gameplaySetupButton.isHidden {
-            UIView.animate(withDuration: 0.2) {
-                self.gameplaySetupButton.isHidden = true
-            }
+        UIView.animate(withDuration: 0.2) {
+            self.gameplaySetupButton.isHidden = !SetBuilder.shared.setComplete
         }
     }
 }
