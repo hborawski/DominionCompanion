@@ -1492,6 +1492,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Vampire"
     ],
     "tokens": {
       "victory": 0,
@@ -20349,6 +20350,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Bat"
     ],
     "tokens": {
       "victory": 0,
