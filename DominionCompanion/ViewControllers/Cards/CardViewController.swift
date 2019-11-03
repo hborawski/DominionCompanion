@@ -65,5 +65,10 @@ class CardViewController: UIViewController {
         }
         setupPinButton()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let card = self.card, let destination = segue.destination as? CardsViewController else { return }
+        destination.cardsToDisplay = card.relatedCards
+    }
 }
 

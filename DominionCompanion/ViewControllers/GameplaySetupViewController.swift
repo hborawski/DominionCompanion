@@ -11,4 +11,9 @@ import UIKit
 
 class GameplaySetupViewController: UIViewController {
     var setModel: SetModel?
+    
+    override func viewDidLoad() {
+        let lab = CardData.shared.kingdomCards.first(where: {$0.name == "Laboratory"})!
+        self.setModel = SetModel(landmarks: [], events: [], cards: [lab], notInSupply: [], colonies: false)
+    }
 }

@@ -34,5 +34,14 @@ struct SetModel {
             return self.cards.filter({$0.debt > 0}).count > 0
         }
     }
-//    var victoryTokens: Bool
+    var victoryTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.victory > 0}).count > 0
+        }
+    }
+    var coinTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.coin > 0}).count > 0
+        }
+    }
 }

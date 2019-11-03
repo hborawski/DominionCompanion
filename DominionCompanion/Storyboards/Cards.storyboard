@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="CardsViewController" title="Cards" id="Gkf-rx-sHk" customClass="CardsViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WdT-p8-lbE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="iSQ-U0-PIH">
@@ -149,6 +149,13 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZA-d6-eIu">
+                                <rect key="frame" x="354" y="8" width="52" height="30"/>
+                                <state key="normal" title="Related"/>
+                                <connections>
+                                    <segue destination="Gkf-rx-sHk" kind="show" id="rEs-OD-rCv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
@@ -156,6 +163,8 @@
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="top" secondItem="jbm-sp-eX6" secondAttribute="bottom" constant="4" id="ETf-a7-QEr"/>
                             <constraint firstItem="7xV-wh-ZgO" firstAttribute="bottom" secondItem="pim-a8-Q2L" secondAttribute="bottom" constant="8" id="GQf-ja-VOb"/>
                             <constraint firstItem="DbJ-9E-AEO" firstAttribute="centerX" secondItem="jTC-rk-BCd" secondAttribute="centerX" id="ILM-x3-yrg"/>
+                            <constraint firstItem="IZA-d6-eIu" firstAttribute="top" secondItem="7xV-wh-ZgO" secondAttribute="top" constant="8" id="V5B-dO-bkH"/>
+                            <constraint firstItem="7xV-wh-ZgO" firstAttribute="trailing" secondItem="IZA-d6-eIu" secondAttribute="trailing" constant="8" id="ZXA-8F-DJS"/>
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="leading" secondItem="7xV-wh-ZgO" secondAttribute="leading" constant="8" id="bKm-tg-cYi"/>
                             <constraint firstItem="jbm-sp-eX6" firstAttribute="top" secondItem="7xV-wh-ZgO" secondAttribute="top" constant="8" id="bnD-u5-SEW"/>
                             <constraint firstItem="pim-a8-Q2L" firstAttribute="leading" secondItem="jTC-rk-BCd" secondAttribute="leading" constant="8" id="gct-2a-VAZ"/>

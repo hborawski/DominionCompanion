@@ -16,7 +16,7 @@ class SettingsTableViewController: UITableViewController {
     var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
         MenuSection(title: "Additional Mechanics", items: [
-            MenuItem(title: "Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
+            MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"])
         ]),

@@ -36,6 +36,16 @@ struct Card: Codable {
     var types: [String]
     var trash: Bool
     var tokens: Tokens
+    var supply: Bool
+    var related: [String]
+    
+    var relatedCards: [Card] {
+        get {
+            return CardData.shared.allCards.filter { (card) -> Bool in
+                return self.related.contains(card.name)
+            }
+        }
+    }
 }
 
 extension Card {

@@ -26,6 +26,9 @@
     "name": "Abandoned Mine",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -67,6 +70,9 @@
     "name": "Advance",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -113,6 +119,9 @@
     "name": "Advisor",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -164,6 +173,9 @@
     "name": "Alchemist",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -205,6 +217,9 @@
     "name": "Alms",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -246,6 +261,9 @@
     "name": "Altar",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -288,6 +306,9 @@
     "name": "Ambassador",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -330,6 +351,9 @@
     "name": "Amulet",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -371,6 +395,9 @@
     "name": "Annex",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -422,6 +449,9 @@
     "name": "Apothecary",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -468,6 +498,9 @@
     "name": "Apprentice",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -509,6 +542,9 @@
     "name": "Aqueduct",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -561,6 +597,9 @@
     "name": "Archive",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -602,6 +641,9 @@
     "name": "Arena",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -643,6 +685,9 @@
     "name": "Armory",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -698,6 +743,9 @@
     "name": "Artificer",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -744,6 +792,9 @@
     "name": "Artisan",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -790,6 +841,9 @@
     "name": "Avanto",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -831,6 +885,9 @@
     "name": "Bad Omens",
     "junk": true,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -878,6 +935,9 @@
     "name": "Bag of Gold",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -929,6 +989,9 @@
     "name": "Baker",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -970,6 +1033,9 @@
     "name": "Ball",
     "junk": false,
     "gain": 2,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1011,6 +1077,9 @@
     "name": "Band of Misfits",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1053,6 +1122,9 @@
     "name": "Bandit",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1104,6 +1176,9 @@
     "name": "Bandit Camp",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1145,6 +1220,9 @@
     "name": "Bandit Fort",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1186,6 +1264,9 @@
     "name": "Bank",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1227,6 +1308,9 @@
     "name": "Banquet",
     "junk": false,
     "gain": 3,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1269,6 +1353,9 @@
     "name": "Bard",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1315,6 +1402,9 @@
     "name": "Baron",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1356,6 +1446,9 @@
     "name": "Basilica",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1397,6 +1490,9 @@
     "name": "Bat",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1438,6 +1534,9 @@
     "name": "Baths",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1479,6 +1578,9 @@
     "name": "Battlefield",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1530,6 +1632,9 @@
     "name": "Bazaar",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1572,6 +1677,9 @@
     "name": "Beggar",
     "junk": false,
     "gain": 3,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1613,6 +1721,9 @@
     "name": "Bishop",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -1654,6 +1765,9 @@
     "name": "Black Market",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1706,6 +1820,9 @@
     "name": "Blessed Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1747,6 +1864,9 @@
     "name": "Bonfire",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1798,6 +1918,9 @@
     "name": "Border Village",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1844,6 +1967,9 @@
     "name": "Borrow",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1890,6 +2016,9 @@
     "name": "Bridge",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1938,6 +2067,9 @@
     "name": "Bridge Troll",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -1980,6 +2112,9 @@
     "name": "Bureaucrat",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2031,6 +2166,9 @@
     "name": "Bustling Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2072,6 +2210,9 @@
     "name": "Butcher",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2113,6 +2254,9 @@
     "name": "Cache",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2164,6 +2308,9 @@
     "name": "Candlestick Maker",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2210,6 +2357,9 @@
     "name": "Capital",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2262,6 +2412,9 @@
     "name": "Caravan",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2315,6 +2468,9 @@
     "name": "Caravan Guard",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2366,6 +2522,9 @@
     "name": "Cartographer",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2412,6 +2571,9 @@
     "name": "Catacombs",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2454,6 +2616,9 @@
     "name": "Catapult",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2509,6 +2674,9 @@
     "name": "Cellar",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2545,11 +2713,15 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/1/18/Cemetery.jpg/200px-Cemetery.jpg",
       "full": "http://wiki.dominionstrategy.com/images/1/18/Cemetery.jpg"
     },
-    "text": " 2When you gain this, trash up to 4 cards from your hand.Heirloom: Haunted Mirror ",
+    "text": "Worth 2 Victory Points. When you gain this, trash up to 4 cards from your hand.Heirloom: Haunted Mirror ",
     "trash": true,
     "name": "Cemetery",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Haunted Mirror"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2597,6 +2769,9 @@
     "name": "Champion",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2638,6 +2813,9 @@
     "name": "Changeling",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2679,6 +2857,9 @@
     "name": "Chapel",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2730,6 +2911,9 @@
     "name": "Chariot Race",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -2776,6 +2960,9 @@
     "name": "Charm",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2832,6 +3019,9 @@
     "name": "City",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2883,6 +3073,9 @@
     "name": "City Quarter",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2925,6 +3118,9 @@
     "name": "Cobbler",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -2972,6 +3168,9 @@
     "name": "Coin of the Realm",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3013,6 +3212,9 @@
     "name": "Colonnade",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 2,
       "coin": 0,
@@ -3054,6 +3256,9 @@
     "name": "Colony",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3100,6 +3305,9 @@
     "name": "Conclave",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3141,6 +3349,9 @@
     "name": "Conquest",
     "junk": false,
     "gain": 2,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -3192,6 +3403,9 @@
     "name": "Conspirator",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3238,6 +3452,9 @@
     "name": "Contraband",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3279,6 +3496,9 @@
     "name": "Copper",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3330,6 +3550,9 @@
     "name": "Council Room",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3371,6 +3594,9 @@
     "name": "Count",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3417,6 +3643,9 @@
     "name": "Counterfeit",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3458,6 +3687,9 @@
     "name": "Counting House",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3509,6 +3741,9 @@
     "name": "Courtier",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3559,6 +3794,9 @@
     "name": "Courtyard",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3610,6 +3848,9 @@
     "name": "Crossroads",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3652,6 +3893,9 @@
     "name": "Crown",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3694,6 +3938,9 @@
     "name": "Crumbling Castle",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3736,6 +3983,9 @@
     "name": "Crypt",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3784,6 +4034,9 @@
     "name": "Cultist",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3825,6 +4078,9 @@
     "name": "Curse",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3862,11 +4118,15 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/d/db/Cursed_Gold.jpg/200px-Cursed_Gold.jpg",
       "full": "http://wiki.dominionstrategy.com/images/d/db/Cursed_Gold.jpg"
     },
-    "text": "Worht 3 Coins. When you play this, gain a Curse.",
+    "text": "Worth 3 Coins. When you play this, gain a Curse.",
     "trash": false,
     "name": "Cursed Gold",
     "junk": true,
     "gain": 0,
+    "supply": false,
+    "related": [
+      "Pooka"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3919,6 +4179,9 @@
     "name": "Cursed Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -3961,6 +4224,9 @@
     "name": "Cutpurse",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4004,6 +4270,9 @@
     "name": "Dame Anna",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4048,6 +4317,9 @@
     "name": "Dame Josephine",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4096,6 +4368,9 @@
     "name": "Dame Molly",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4139,6 +4414,9 @@
     "name": "Dame Natalie",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4182,6 +4460,9 @@
     "name": "Dame Sylvia",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4224,6 +4505,9 @@
     "name": "Death Cart",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4265,6 +4549,9 @@
     "name": "Defiled Shrine",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -4306,6 +4593,9 @@
     "name": "Deluded",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4347,6 +4637,9 @@
     "name": "Delusion",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4388,6 +4681,9 @@
     "name": "Delve",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4435,6 +4731,9 @@
     "name": "Den of Sin",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4476,6 +4775,9 @@
     "name": "Develop",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4517,6 +4819,9 @@
     "name": "Devil's Workshop",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4559,6 +4864,9 @@
     "name": "Diadem",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4611,6 +4919,9 @@
     "name": "Diplomat",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4653,6 +4964,9 @@
     "name": "Disciple",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4694,6 +5008,9 @@
     "name": "Dismantle",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4737,6 +5054,9 @@
     "name": "Distant Lands",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4778,6 +5098,9 @@
     "name": "Doctor",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4819,6 +5142,9 @@
     "name": "Dominate",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 9,
       "coin": 0,
@@ -4860,6 +5186,9 @@
     "name": "Donate",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4907,6 +5236,9 @@
     "name": "Druid",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4948,6 +5280,9 @@
     "name": "Duchess",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -4989,6 +5324,9 @@
     "name": "Duchy",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5030,6 +5368,9 @@
     "name": "Duke",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5086,6 +5427,9 @@
     "name": "Dungeon",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5128,6 +5472,9 @@
     "name": "Duplicate",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5169,6 +5516,9 @@
     "name": "Embargo",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5219,6 +5569,9 @@
     "name": "Embassy",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5270,6 +5623,9 @@
     "name": "Emporium",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 2,
       "coin": 0,
@@ -5321,6 +5677,9 @@
     "name": "Encampment",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5369,6 +5728,9 @@
     "name": "Enchantress",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5410,6 +5772,9 @@
     "name": "Engineer",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5451,6 +5816,9 @@
     "name": "Envious",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5492,6 +5860,9 @@
     "name": "Envoy",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5533,6 +5904,9 @@
     "name": "Envy",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5574,6 +5948,9 @@
     "name": "Estate",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5615,6 +5992,9 @@
     "name": "Exorcist",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5656,6 +6036,9 @@
     "name": "Expand",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5702,6 +6085,9 @@
     "name": "Expedition",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5743,6 +6129,9 @@
     "name": "Explorer",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5784,6 +6173,9 @@
     "name": "Fairgrounds",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5831,6 +6223,9 @@
     "name": "Faithful Hound",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5883,6 +6278,9 @@
     "name": "Familiar",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5924,6 +6322,9 @@
     "name": "Famine",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -5971,6 +6372,9 @@
     "name": "Farmers' Market",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6017,6 +6421,9 @@
     "name": "Farming Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6058,6 +6465,9 @@
     "name": "Farmland",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6099,6 +6509,9 @@
     "name": "Fear",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6140,6 +6553,9 @@
     "name": "Feodum",
     "junk": false,
     "gain": 3,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6181,6 +6597,9 @@
     "name": "Ferry",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6232,6 +6651,9 @@
     "name": "Festival",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6279,6 +6701,9 @@
     "name": "Fishing Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6327,6 +6752,9 @@
     "name": "Followers",
     "junk": true,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6369,6 +6797,10 @@
     "name": "Fool",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Lucky Coin"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6411,6 +6843,9 @@
     "name": "Fool's Gold",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6462,6 +6897,9 @@
     "name": "Forager",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6503,6 +6941,9 @@
     "name": "Forge",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6554,6 +6995,9 @@
     "name": "Fortress",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6600,6 +7044,9 @@
     "name": "Fortune",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6642,6 +7089,9 @@
     "name": "Fortune Teller",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6693,6 +7143,9 @@
     "name": "Forum",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6734,6 +7187,9 @@
     "name": "Fountain",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6786,6 +7242,9 @@
     "name": "Fugitive",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6827,6 +7286,9 @@
     "name": "Gardens",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6874,6 +7336,9 @@
     "name": "Gear",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6922,6 +7387,9 @@
     "name": "Ghost",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -6969,6 +7437,9 @@
     "name": "Ghost Ship",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7021,6 +7492,9 @@
     "name": "Ghost Town",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7063,6 +7537,9 @@
     "name": "Giant",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7104,6 +7581,9 @@
     "name": "Gladiator",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7146,6 +7626,10 @@
     "name": "Goat",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+      "Pixie"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7187,6 +7671,9 @@
     "name": "Gold",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7228,6 +7715,9 @@
     "name": "Golem",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7275,6 +7765,9 @@
     "name": "Goons",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -7326,6 +7819,9 @@
     "name": "Governor",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7368,6 +7864,9 @@
     "name": "Grand Castle",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7424,6 +7923,9 @@
     "name": "Grand Market",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7465,6 +7967,9 @@
     "name": "Graverobber",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7506,6 +8011,9 @@
     "name": "Greed",
     "junk": true,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7557,6 +8065,9 @@
     "name": "Groundskeeper",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -7599,6 +8110,9 @@
     "name": "Guardian",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7655,6 +8169,9 @@
     "name": "Guide",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7696,6 +8213,9 @@
     "name": "Haggler",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7752,6 +8272,9 @@
     "name": "Hamlet",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7803,6 +8326,9 @@
     "name": "Harbinger",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7845,6 +8371,9 @@
     "name": "Harem",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7886,6 +8415,9 @@
     "name": "Harvest",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7928,6 +8460,9 @@
     "name": "Haunted Castle",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -7975,6 +8510,10 @@
     "name": "Haunted Mirror",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+      "Cemetery"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8023,6 +8562,9 @@
     "name": "Haunted Woods",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8064,6 +8606,9 @@
     "name": "Haunting",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8116,6 +8661,9 @@
     "name": "Haven",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8167,6 +8715,9 @@
     "name": "Herald",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8213,6 +8764,9 @@
     "name": "Herbalist",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8254,6 +8808,9 @@
     "name": "Hermit",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8296,6 +8853,9 @@
     "name": "Hero",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8347,6 +8907,9 @@
     "name": "Highway",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8394,6 +8957,9 @@
     "name": "Hireling",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8435,6 +9001,9 @@
     "name": "Hoard",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8476,6 +9045,9 @@
     "name": "Horn of Plenty",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8528,6 +9100,9 @@
     "name": "Horse Traders",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8570,6 +9145,9 @@
     "name": "Hovel",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8613,6 +9191,9 @@
     "name": "Humble Castle",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8635,10 +9216,10 @@
     "id": "4bde021a-bccf-4e3b-96aa-d7ed2c3eecb7",
     "debt": 0,
     "raw_cards": [
-        [
-            "+",
-            "4"
-        ]
+      [
+        "+",
+        "4"
+      ]
     ],
     "expansion": "Dark Ages",
     "types": [
@@ -8659,6 +9240,9 @@
     "name": "Hunting Grounds",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8710,6 +9294,9 @@
     "name": "Hunting Party",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8753,6 +9340,9 @@
     "name": "Idol",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8794,6 +9384,9 @@
     "name": "Ill-Gotten Gains",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8841,6 +9434,9 @@
     "name": "Imp",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8882,6 +9478,9 @@
     "name": "Inheritance",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8937,6 +9536,9 @@
     "name": "Inn",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -8988,6 +9590,9 @@
     "name": "Ironmonger",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9039,6 +9644,9 @@
     "name": "Ironworks",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9081,6 +9689,9 @@
     "name": "Island",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9127,6 +9738,9 @@
     "name": "Jack of all Trades",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9169,6 +9783,9 @@
     "name": "Jester",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9210,6 +9827,9 @@
     "name": "Journeyman",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9261,6 +9881,9 @@
     "name": "Junk Dealer",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9302,6 +9925,9 @@
     "name": "Keep",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9344,6 +9970,9 @@
     "name": "King's Castle",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9385,6 +10014,9 @@
     "name": "King's Court",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9436,6 +10068,9 @@
     "name": "Laboratory",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9477,6 +10112,9 @@
     "name": "Labyrinth",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 2,
       "coin": 0,
@@ -9519,6 +10157,9 @@
     "name": "Legionary",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9561,6 +10202,9 @@
     "name": "Leprechaun",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9607,6 +10251,9 @@
     "name": "Library",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9654,6 +10301,9 @@
     "name": "Lighthouse",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9695,6 +10345,9 @@
     "name": "Loan",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9736,6 +10389,9 @@
     "name": "Locusts",
     "junk": true,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9782,6 +10438,9 @@
     "name": "Lookout",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9823,6 +10482,9 @@
     "name": "Lost Arts",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9874,6 +10536,9 @@
     "name": "Lost City",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9920,6 +10585,9 @@
     "name": "Lost in the Woods",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -9962,6 +10630,10 @@
     "name": "Lucky Coin",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+      "Fool"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10008,6 +10680,9 @@
     "name": "Lurker",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10054,6 +10729,9 @@
     "name": "Madman",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10096,6 +10774,10 @@
     "name": "Magic Lamp",
     "junk": false,
     "gain": 3,
+    "supply": false,
+    "related": [
+      "Secret Cave"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10147,6 +10829,9 @@
     "name": "Magpie",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10188,6 +10873,9 @@
     "name": "Mandarin",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10231,6 +10919,9 @@
     "name": "Marauder",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10283,6 +10974,9 @@
     "name": "Margrave",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10339,6 +11033,9 @@
     "name": "Market",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10396,6 +11093,9 @@
     "name": "Market Square",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10442,6 +11142,9 @@
     "name": "Masquerade",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10483,6 +11186,9 @@
     "name": "Masterpiece",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10534,6 +11240,9 @@
     "name": "Menagerie",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10581,6 +11290,9 @@
     "name": "Mercenary",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10632,6 +11344,9 @@
     "name": "Merchant",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10678,6 +11393,9 @@
     "name": "Merchant Guild",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10720,6 +11438,9 @@
     "name": "Merchant Ship",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10766,6 +11487,9 @@
     "name": "Messenger",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10808,6 +11532,9 @@
     "name": "Militia",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10864,6 +11591,9 @@
     "name": "Mill",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10905,6 +11635,9 @@
     "name": "Mine",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -10956,6 +11689,9 @@
     "name": "Mining Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11012,6 +11748,9 @@
     "name": "Minion",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11053,6 +11792,9 @@
     "name": "Mint",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11094,6 +11836,9 @@
     "name": "Miser",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11135,6 +11880,9 @@
     "name": "Miserable",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11176,6 +11924,9 @@
     "name": "Misery",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11217,6 +11968,9 @@
     "name": "Mission",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11264,6 +12018,9 @@
     "name": "Moat",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11305,6 +12062,9 @@
     "name": "Monastery",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11346,6 +12106,9 @@
     "name": "Moneylender",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11387,6 +12150,9 @@
     "name": "Monument",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -11428,6 +12194,9 @@
     "name": "Mountain Pass",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11470,6 +12239,9 @@
     "name": "Mountebank",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11511,6 +12283,9 @@
     "name": "Museum",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11557,6 +12332,9 @@
     "name": "Mystic",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11603,6 +12381,9 @@
     "name": "Native Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11644,6 +12425,9 @@
     "name": "Navigator",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11685,6 +12469,9 @@
     "name": "Necromancer",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11732,6 +12519,9 @@
     "name": "Necropolis",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11773,6 +12563,9 @@
     "name": "Night Watchman",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11815,6 +12608,9 @@
     "name": "Noble Brigand",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11867,6 +12663,9 @@
     "name": "Nobles",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11913,6 +12712,9 @@
     "name": "Nomad Camp",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -11968,6 +12770,9 @@
     "name": "Oasis",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12009,6 +12814,9 @@
     "name": "Obelisk",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12052,6 +12860,9 @@
     "name": "Opulent Castle",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12099,6 +12910,9 @@
     "name": "Oracle",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12140,6 +12954,9 @@
     "name": "Orchard",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12182,6 +12999,9 @@
     "name": "Outpost",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12224,6 +13044,9 @@
     "name": "Overgrown Estate",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12265,6 +13088,9 @@
     "name": "Overlord",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12317,6 +13143,9 @@
     "name": "Page",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12358,6 +13187,9 @@
     "name": "Palace",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12401,6 +13233,10 @@
     "name": "Pasture",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+      "Shepherd"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12442,6 +13278,9 @@
     "name": "Pathfinding",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12493,6 +13332,9 @@
     "name": "Patrician",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12539,6 +13381,9 @@
     "name": "Patrol",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12595,6 +13440,9 @@
     "name": "Pawn",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12646,6 +13494,9 @@
     "name": "Pearl Diver",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12693,6 +13544,9 @@
     "name": "Peasant",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12744,6 +13598,9 @@
     "name": "Peddler",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12785,6 +13642,9 @@
     "name": "Philosopher's Stone",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12826,6 +13686,9 @@
     "name": "Pilgrimage",
     "junk": false,
     "gain": 3,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12868,6 +13731,9 @@
     "name": "Pillage",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12910,6 +13776,9 @@
     "name": "Pirate Ship",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -12962,6 +13831,10 @@
     "name": "Pixie",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Goat"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13003,6 +13876,9 @@
     "name": "Plague",
     "junk": true,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13044,6 +13920,9 @@
     "name": "Plan",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13085,6 +13964,9 @@
     "name": "Platinum",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13136,6 +14018,9 @@
     "name": "Plaza",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13177,6 +14062,9 @@
     "name": "Plunder",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -13232,6 +14120,9 @@
     "name": "Poacher",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13278,6 +14169,10 @@
     "name": "Pooka",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Cursed Gold"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13319,6 +14214,9 @@
     "name": "Poor House",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13370,6 +14268,9 @@
     "name": "Port",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13411,6 +14312,9 @@
     "name": "Possession",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13452,6 +14356,9 @@
     "name": "Potion",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13499,6 +14406,10 @@
     "name": "Pouch",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+      "Tracker"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13545,6 +14456,9 @@
     "name": "Poverty",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13586,6 +14500,9 @@
     "name": "Prince",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13633,6 +14550,9 @@
     "name": "Princess",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13674,6 +14594,9 @@
     "name": "Procession",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13715,6 +14638,9 @@
     "name": "Province",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13756,6 +14682,9 @@
     "name": "Quarry",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13802,6 +14731,9 @@
     "name": "Quest",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13849,6 +14781,9 @@
     "name": "Rabble",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13890,6 +14825,9 @@
     "name": "Raid",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13933,6 +14871,9 @@
     "name": "Raider",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -13984,6 +14925,9 @@
     "name": "Ranger",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14036,6 +14980,9 @@
     "name": "Ratcatcher",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14087,6 +15034,9 @@
     "name": "Rats",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14138,6 +15088,9 @@
     "name": "Raze",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14184,6 +15137,9 @@
     "name": "Rebuild",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14226,6 +15182,9 @@
     "name": "Relic",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14267,6 +15226,9 @@
     "name": "Remake",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14308,6 +15270,9 @@
     "name": "Remodel",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14350,6 +15315,9 @@
     "name": "Replace",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14391,6 +15359,9 @@
     "name": "Ritual",
     "junk": true,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -14432,6 +15403,9 @@
     "name": "Rocks",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14474,6 +15448,9 @@
     "name": "Rogue",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14524,6 +15501,9 @@
     "name": "Royal Blacksmith",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14571,6 +15551,9 @@
     "name": "Royal Carriage",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14612,6 +15595,9 @@
     "name": "Royal Seal",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14659,6 +15645,9 @@
     "name": "Ruined Library",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14706,6 +15695,9 @@
     "name": "Ruined Market",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14753,6 +15745,9 @@
     "name": "Ruined Village",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14800,6 +15795,9 @@
     "name": "Sacred Grove",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14851,6 +15849,9 @@
     "name": "Sacrifice",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 2,
       "coin": 0,
@@ -14897,6 +15898,9 @@
     "name": "Sage",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -14938,6 +15942,9 @@
     "name": "Salt the Earth",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -14984,6 +15991,9 @@
     "name": "Salvager",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15035,6 +16045,9 @@
     "name": "Sauna",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15081,6 +16094,9 @@
     "name": "Save",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15122,6 +16138,9 @@
     "name": "Scavenger",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15173,6 +16192,9 @@
     "name": "Scheme",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15219,6 +16241,9 @@
     "name": "Scouting Party",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15266,6 +16291,9 @@
     "name": "Scrying Pool",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15308,6 +16336,9 @@
     "name": "Sea Hag",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15349,6 +16380,9 @@
     "name": "Seaway",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15405,6 +16439,10 @@
     "name": "Secret Cave",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Magic Lamp"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15460,6 +16498,9 @@
     "name": "Secret Passage",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15511,6 +16552,9 @@
     "name": "Sentry",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15562,6 +16606,9 @@
     "name": "Settlers",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15613,6 +16660,9 @@
     "name": "Shanty Town",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15668,6 +16718,10 @@
     "name": "Shepherd",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Pasture"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15709,6 +16763,9 @@
     "name": "Silk Road",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15750,6 +16807,9 @@
     "name": "Silver",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15803,6 +16863,9 @@
     "name": "Sir Bailey",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15851,6 +16914,9 @@
     "name": "Sir Destry",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15899,6 +16965,9 @@
     "name": "Sir Martin",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15942,6 +17011,9 @@
     "name": "Sir Michael",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -15985,6 +17057,9 @@
     "name": "Sir Vander",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16033,6 +17108,9 @@
     "name": "Skulk",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16076,6 +17154,9 @@
     "name": "Small Castle",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16122,6 +17203,9 @@
     "name": "Smithy",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16163,6 +17247,9 @@
     "name": "Smugglers",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16206,6 +17293,9 @@
     "name": "Soldier",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16248,6 +17338,9 @@
     "name": "Soothsayer",
     "junk": true,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16304,6 +17397,9 @@
     "name": "Spice Merchant",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16345,6 +17441,9 @@
     "name": "Spoils",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16387,6 +17486,9 @@
     "name": "Sprawling Castle",
     "junk": false,
     "gain": 3,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16438,6 +17540,9 @@
     "name": "Squire",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16489,6 +17594,9 @@
     "name": "Stables",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16530,6 +17638,9 @@
     "name": "Stash",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16576,6 +17687,9 @@
     "name": "Steward",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16617,6 +17731,9 @@
     "name": "Stonemason",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16672,6 +17789,9 @@
     "name": "Storeroom",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16723,6 +17843,9 @@
     "name": "Storyteller",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16764,6 +17887,9 @@
     "name": "Summon",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16806,6 +17932,9 @@
     "name": "Survivors",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16849,6 +17978,9 @@
     "name": "Swamp Hag",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16891,6 +18023,9 @@
     "name": "Swindler",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16948,6 +18083,9 @@
     "name": "Tactician",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -16989,6 +18127,9 @@
     "name": "Talisman",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17030,6 +18171,9 @@
     "name": "Tax",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17072,6 +18216,9 @@
     "name": "Taxman",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17114,6 +18261,9 @@
     "name": "Teacher",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17156,6 +18306,9 @@
     "name": "Temple",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -17202,6 +18355,9 @@
     "name": "The Earth's Gift",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17248,6 +18404,9 @@
     "name": "The Field's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17289,6 +18448,9 @@
     "name": "The Flame's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17335,6 +18497,9 @@
     "name": "The Forest's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17381,6 +18546,9 @@
     "name": "The Moon's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17422,6 +18590,9 @@
     "name": "The Mountain's Gift",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17468,6 +18639,9 @@
     "name": "The River's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17514,6 +18688,9 @@
     "name": "The Sea's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17560,6 +18737,9 @@
     "name": "The Sky's Gift",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17601,6 +18781,9 @@
     "name": "The Sun's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17642,6 +18825,9 @@
     "name": "The Swamp's Gift",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17692,6 +18878,9 @@
     "name": "The Wind's Gift",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17733,6 +18922,9 @@
     "name": "Throne Room",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17774,6 +18966,9 @@
     "name": "Tomb",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -17817,6 +19012,9 @@
     "name": "Tormentor",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17864,6 +19062,9 @@
     "name": "Torturer",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17915,6 +19116,9 @@
     "name": "Tournament",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17956,6 +19160,9 @@
     "name": "Tower",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -17998,6 +19205,10 @@
     "name": "Tracker",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+      "Pouch"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18039,6 +19250,9 @@
     "name": "Trade",
     "junk": false,
     "gain": 2,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18085,6 +19299,9 @@
     "name": "Trade Route",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 1,
@@ -18127,6 +19344,9 @@
     "name": "Trader",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18168,6 +19388,9 @@
     "name": "Trading Post",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18219,6 +19442,9 @@
     "name": "Tragic Hero",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18260,6 +19486,9 @@
     "name": "Training",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18307,6 +19536,9 @@
     "name": "Transmogrify",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18348,6 +19580,9 @@
     "name": "Transmute",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18394,6 +19629,9 @@
     "name": "Travelling Fair",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18441,6 +19679,9 @@
     "name": "Treasure Hunter",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18482,6 +19723,9 @@
     "name": "Treasure Map",
     "junk": false,
     "gain": 4,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18523,6 +19767,9 @@
     "name": "Treasure Trove",
     "junk": false,
     "gain": 2,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18574,6 +19821,9 @@
     "name": "Treasury",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18615,6 +19865,9 @@
     "name": "Triumph",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18656,6 +19909,9 @@
     "name": "Triumphal Arch",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18708,6 +19964,9 @@
     "name": "Trusty Steed",
     "junk": false,
     "gain": 4,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18750,6 +20009,9 @@
     "name": "Tunnel",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18791,6 +20053,9 @@
     "name": "Twice Miserable",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18837,6 +20102,9 @@
     "name": "University",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18888,6 +20156,9 @@
     "name": "Upgrade",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18940,6 +20211,9 @@
     "name": "Urchin",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18991,6 +20265,9 @@
     "name": "Vagrant",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19034,6 +20311,9 @@
     "name": "Vampire",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19075,6 +20355,9 @@
     "name": "Vassal",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19125,6 +20408,9 @@
     "name": "Vault",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19166,6 +20452,9 @@
     "name": "Venture",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19217,6 +20506,9 @@
     "name": "Villa",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19268,6 +20560,9 @@
     "name": "Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19309,6 +20604,9 @@
     "name": "Vineyard",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19350,6 +20648,9 @@
     "name": "Wall",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19401,6 +20702,9 @@
     "name": "Walled Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19452,6 +20756,9 @@
     "name": "Wandering Minstrel",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19493,6 +20800,9 @@
     "name": "War",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19548,6 +20858,9 @@
     "name": "Warehouse",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19596,6 +20909,9 @@
     "name": "Warrior",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19643,6 +20959,9 @@
     "name": "Watchtower",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19684,6 +21003,9 @@
     "name": "Wedding",
     "junk": false,
     "gain": 1,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -19733,6 +21055,9 @@
     "name": "Werewolf",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19785,6 +21110,9 @@
     "name": "Wharf",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19832,6 +21160,9 @@
     "name": "Wild Hunt",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 1,
       "coin": 0,
@@ -19884,6 +21215,9 @@
     "name": "Will-o'-Wisp",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19925,6 +21259,9 @@
     "name": "Windfall",
     "junk": false,
     "gain": 3,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -19972,6 +21309,9 @@
     "name": "Wine Merchant",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20018,6 +21358,9 @@
     "name": "Wish",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20073,6 +21416,9 @@
     "name": "Wishing Well",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20120,6 +21466,9 @@
     "name": "Witch",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20161,6 +21510,9 @@
     "name": "Wolf Den",
     "junk": false,
     "gain": 0,
+    "supply": false,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20217,6 +21569,9 @@
     "name": "Worker's Village",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20258,6 +21613,9 @@
     "name": "Workshop",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20305,6 +21663,9 @@
     "name": "Young Witch",
     "junk": true,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20357,6 +21718,9 @@
     "name": "Zombie Apprentice",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20399,6 +21763,9 @@
     "name": "Zombie Mason",
     "junk": false,
     "gain": 1,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20451,6 +21818,9 @@
     "name": "Zombie Spy",
     "junk": false,
     "gain": 0,
+    "supply": true,
+    "related": [
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
