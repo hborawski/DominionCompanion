@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="iSQ-U0-PIH">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -57,16 +58,16 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR5-AH-90F">
-                                            <rect key="frame" x="104" y="18" width="42" height="20"/>
+                                            <rect key="frame" x="106" y="18" width="42" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bku-re-QjT">
-                                            <rect key="frame" x="58" y="18" width="30" height="20"/>
+                                            <rect key="frame" x="58" y="12" width="32" height="32"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-IK-jP4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -76,9 +77,10 @@
                                                 <constraint firstItem="gyK-IK-jP4" firstAttribute="leading" secondItem="bku-re-QjT" secondAttribute="leading" id="0ZE-f3-obk"/>
                                                 <constraint firstItem="gyK-IK-jP4" firstAttribute="top" secondItem="bku-re-QjT" secondAttribute="top" id="20p-bI-e9r"/>
                                                 <constraint firstAttribute="bottom" secondItem="gyK-IK-jP4" secondAttribute="bottom" id="A5o-x7-aZD"/>
+                                                <constraint firstAttribute="height" constant="32" id="GG1-vS-IrL"/>
                                                 <constraint firstAttribute="trailing" secondItem="gyK-IK-jP4" secondAttribute="trailing" id="I3z-1Z-kFX"/>
                                                 <constraint firstItem="gyK-IK-jP4" firstAttribute="centerY" secondItem="bku-re-QjT" secondAttribute="centerY" id="Rfz-Wm-kLE"/>
-                                                <constraint firstAttribute="width" constant="30" id="gMF-oQ-uWq"/>
+                                                <constraint firstAttribute="width" constant="32" id="gMF-oQ-uWq"/>
                                             </constraints>
                                         </view>
                                     </subviews>

@@ -134,8 +134,8 @@
             timestampString = "590273579.597453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -636,8 +636,8 @@
             timestampString = "590275075.800779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "makeColorView(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -653,8 +653,8 @@
             timestampString = "590275075.800826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "makeColorView(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -789,8 +789,8 @@
             timestampString = "590273579.60435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "CardData"
             landmarkType = "3">
             <Locations>
@@ -1160,8 +1160,8 @@
             filePath = "DominionCompanion/Models/CardData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "cardsFromChosenExpansions"
             landmarkType = "24">
             <Locations>
@@ -1208,8 +1208,8 @@
             filePath = "DominionCompanion/Models/CardData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "cardsFromChosenExpansions"
             landmarkType = "24">
          </BreakpointContent>
@@ -1356,6 +1356,22 @@
             endingLineNumber = "101"
             landmarkName = "handleSwitch(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "735BE08E-E312-48FE-8880-12EA0751B239"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Card.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "relatedCards"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

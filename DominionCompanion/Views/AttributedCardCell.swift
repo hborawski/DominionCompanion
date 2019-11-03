@@ -18,25 +18,57 @@ class AttributedCardCell : UITableViewCell {
     func setData(_ card: Card, favorite: Bool = false) {
         self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
-        self.costLabel.text = "\(card.cost)"
+        if let layers = costBackground.layer.sublayers, layers.count > 1, let last = costBackground.layer.sublayers?.last {
+            costBackground.layer.sublayers = [last]
+        }
         makeColorView(card.types)
-        makeCostView()
+        if card.debt > 0 {
+            self.costLabel.text = "\(card.debt)"
+            makeDebtView()
+        } else {
+            self.costLabel.text = "\(card.cost)"
+            makeCostView()
+        }
+    }
+    
+    func makeDebtView() {
+        guard let costBackground = self.costBackground,
+            let costLabel = self.costLabel else { return }
+        let dimension = costLabel.frame.width
+        let hexPath = UIBezierPath()
+        hexPath.move(to: CGPoint(x: dimension/4, y: 0))
+        hexPath.addLine(to: CGPoint(x: 3*(dimension/4), y: 0))
+        hexPath.addLine(to: CGPoint(x: dimension, y: dimension/2))
+        hexPath.addLine(to: CGPoint(x: 3*(dimension/4), y: dimension))
+        hexPath.addLine(to: CGPoint(x: dimension/4, y: dimension))
+        hexPath.addLine(to: CGPoint(x: 0, y: dimension/2))
+        hexPath.addLine(to: CGPoint(x: dimension/4, y: 0))
+        let layer = CAShapeLayer()
+        layer.fillColor = UIColor(named: "Debt")?.cgColor
+        layer.path = hexPath.cgPath
+        costBackground.layer.insertSublayer(layer, at: 0)
+        costBackground.layoutIfNeeded()
     }
     
     func makeCostView() {
         guard let costBackground = self.costBackground,
             let costLabel = self.costLabel else { return }
         let dimension = costLabel.frame.width
-        let circleView = UIView()
-        costBackground.insertSubview(circleView, at: 0)
-        
-        circleView.layer.cornerRadius = dimension / 2
-        circleView.translatesAutoresizingMaskIntoConstraints = false
-        circleView.heightAnchor.constraint(equalToConstant: dimension).isActive = true
-        circleView.widthAnchor.constraint(equalToConstant: dimension).isActive = true
-        circleView.centerXAnchor.constraint(equalTo: costLabel.centerXAnchor).isActive = true
-        circleView.centerYAnchor.constraint(equalTo: costLabel.centerYAnchor).isActive = true
-        circleView.backgroundColor = UIColor(named: "Treasure")
+        let layer = CAShapeLayer()
+        let path = UIBezierPath(arcCenter: CGPoint(x: dimension/2, y: dimension/2), radius: dimension/2, startAngle: 0, endAngle: 360, clockwise: true)
+        layer.path = path.cgPath
+        layer.fillColor = UIColor(named: "Treasure")?.cgColor
+        costBackground.layer.insertSublayer(layer, at: 0)
+//        let circleView = UIView()
+//        costBackground.insertSubview(circleView, at: 0)
+//
+//        circleView.layer.cornerRadius = dimension / 2
+//        circleView.translatesAutoresizingMaskIntoConstraints = false
+//        circleView.heightAnchor.constraint(equalToConstant: dimension).isActive = true
+//        circleView.widthAnchor.constraint(equalToConstant: dimension).isActive = true
+//        circleView.centerXAnchor.constraint(equalTo: costLabel.centerXAnchor).isActive = true
+//        circleView.centerYAnchor.constraint(equalTo: costLabel.centerYAnchor).isActive = true
+//        circleView.backgroundColor = UIColor(named: "Treasure")
         costBackground.layoutIfNeeded()
         
     }

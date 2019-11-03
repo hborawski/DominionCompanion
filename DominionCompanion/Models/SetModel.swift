@@ -31,7 +31,7 @@ struct SetModel {
        }
     var debt: Bool {
         get {
-            return self.cards.filter({$0.debt > 0}).count > 0
+            return self.cards.filter({$0.tokens.debt == true}).count > 0
         }
     }
     var victoryTokens: Bool {

@@ -35,6 +35,8 @@ class CardData {
     
     let allTypes: [String]
     
+    let kingdomTypes: [String]
+    
     let allLandmarks: [Card]
     
     let allEvents: [Card]
@@ -81,8 +83,12 @@ class CardData {
         self.allLandmarks = self.allCards.filter { $0.types.contains("Landmark") }
         self.allEvents = self.allCards.filter { $0.types.contains("Event") }
         self.allAttributes = CardProperty.allCases
-        self.allTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
+        self.kingdomTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
             return Array(Set(allTypes).union(Set(types)))
         }).sorted()
+        self.allTypes = self.allCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
+            return Array(Set(allTypes).union(Set(types)))
+        }).sorted()
+        
     }
 }

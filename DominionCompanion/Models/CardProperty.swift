@@ -63,7 +63,7 @@ enum CardProperty: String, Codable {
             case .expansion:
                 return CardData.shared.allExpansions
             case .type:
-                return CardData.shared.allTypes
+                return CardData.shared.kingdomTypes
             case .trash:
                 return ["true", "false"]
             case .victoryTokens:

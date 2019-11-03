@@ -12,6 +12,8 @@ import UIKit
 struct Tokens: Codable {
     var victory: Int
     var coin: Int
+    var embargo: Bool
+    var debt: Bool
     var journey: Bool
     var minusCard: Bool
     var minusCoin: Bool
@@ -41,9 +43,15 @@ struct Card: Codable {
     
     var relatedCards: [Card] {
         get {
-            return CardData.shared.allCards.filter { (card) -> Bool in
-                return self.related.contains(card.name)
+            return related.reduce([]) { (cards, related) -> [Card] in
+                guard !CardData.shared.allTypes.contains(related) else {
+                    return CardData.shared.allCards.filter { $0.types.contains(related) }
+                }
+                return CardData.shared.allCards.filter { $0.name == related }
             }
+//            return CardData.shared.allCards.filter { (card) -> Bool in
+//                return self.related.contains(card.name)
+//            }
         }
     }
 }
