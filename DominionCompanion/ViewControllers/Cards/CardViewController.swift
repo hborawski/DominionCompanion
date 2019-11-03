@@ -12,10 +12,12 @@ class CardViewController: UIViewController {
     var card: Card?
     var excludeMode: Bool = false
     
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var expansionLabel: UILabel!
-    @IBOutlet var textLabel: UILabel!
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var relatedButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let card = self.card else { return }
@@ -28,6 +30,8 @@ class CardViewController: UIViewController {
         if let image = card.image() {
             self.imageView.image = image
         }
+        
+        self.relatedButton.isHidden = card.relatedCards.count == 0
     }
     
     func setupPinButton() {

@@ -2771,6 +2771,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Page",
+      "Treasure Hunter",
+      "Warrior",
+      "Hero"
     ],
     "tokens": {
       "victory": 0,
@@ -4966,6 +4970,10 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Peasant",
+      "Soldier",
+      "Fugitive",
+      "Teacher"
     ],
     "tokens": {
       "victory": 0,
@@ -7244,6 +7252,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Peasant",
+      "Soldier",
+      "Disciple",
+      "Teacher"
     ],
     "tokens": {
       "victory": 0,
@@ -8855,6 +8867,10 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Page",
+      "Treasure Hunter",
+      "Warrior",
+      "Champion"
     ],
     "tokens": {
       "victory": 0,
@@ -13145,6 +13161,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Treasure Hunter",
+      "Warrior",
+      "Hero",
+      "Champion"
     ],
     "tokens": {
       "victory": 0,
@@ -13546,6 +13566,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Soldier",
+      "Fugitive",
+      "Disciple",
+      "Teacher"
     ],
     "tokens": {
       "victory": 0,
@@ -17295,6 +17319,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Peasant",
+      "Fugitive",
+      "Disciple",
+      "Teacher"
     ],
     "tokens": {
       "victory": 0,
@@ -18263,6 +18291,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Peasant",
+      "Soldier",
+      "Fugitive",
+      "Disciple"
     ],
     "tokens": {
       "victory": 0,
@@ -19674,13 +19706,17 @@
       "thumb": "http://wiki.dominionstrategy.com/images/thumb/c/ce/Treasure_Hunter.jpg/200px-Treasure_Hunter.jpg",
       "full": "http://wiki.dominionstrategy.com/images/c/ce/Treasure_Hunter.jpg"
     },
-    "text": "+1 Action; +. Gain a Silver per card the player to your right gained in his last turn. — When you discard this from play, you may exchange it for a Warrior. (This is not in the Supply.) ",
+    "text": "+1 Action; +1 Coin. Gain a Silver per card the player to your right gained in his last turn. — When you discard this from play, you may exchange it for a Warrior. (This is not in the Supply.) ",
     "trash": false,
     "name": "Treasure Hunter",
     "junk": false,
     "gain": 1,
     "supply": true,
     "related": [
+      "Page",
+      "Warrior",
+      "Hero",
+      "Champion"
     ],
     "tokens": {
       "victory": 0,
@@ -20911,6 +20947,10 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Page",
+      "Treasure Hunter",
+      "Hero",
+      "Champion"
     ],
     "tokens": {
       "victory": 0,
