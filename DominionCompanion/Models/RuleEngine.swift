@@ -98,11 +98,11 @@ class RuleEngine {
         self.rules.remove(at: index)
     }
     
-    func updateFilter( _ index: Int, _ newFilter: SetRule) {
+    func updateRule( _ index: Int, _ newFilter: SetRule) {
         self.rules[index] = newFilter
     }
     
-    func getFilter(_ index: Int) -> SetRule? {
+    func getRule(_ index: Int) -> SetRule? {
         guard index < self.rules.count else { return nil }
         return self.rules[index]
     }

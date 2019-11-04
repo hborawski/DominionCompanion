@@ -76,7 +76,7 @@ class RuleViewController: UIViewController {
         
         // If there is an index, we are editing
         guard let index = existingFilterIndex,
-            let filter = filterEngine.getFilter(index)
+            let filter = filterEngine.getRule(index)
             else { return }
         
         self.navigationItem.title = "Edit Rule"
@@ -123,7 +123,7 @@ class RuleViewController: UIViewController {
         guard let propFilter = self.currentFilter else { return }
         let setFilter = SetRule(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
         if let index = self.existingFilterIndex {
-            filterEngine.updateFilter(index, setFilter)
+            filterEngine.updateRule(index, setFilter)
         } else {
             filterEngine.addRule(setFilter)
         }
