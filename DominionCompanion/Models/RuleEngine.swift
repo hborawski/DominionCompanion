@@ -107,13 +107,9 @@ class RuleEngine {
         return self.rules[index]
     }
     
-    // MARK: Utility Methods
-    func applyFilter(_ cards: [Card], _ filter: PropertyFilter) -> [Card] {
-        return cards.filter{filter.match($0)}
-    }
-    
-    func matchesAllFilters(_ cards: [Card], _ filters: [SetRule]) -> Bool {
-        return filters.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
+    // MARK: Utility Methods    
+    func matchesAllFilters(_ cards: [Card], _ rules: [SetRule]) -> Bool {
+        return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
             return acc && cv.match(cards)
         }
     }
@@ -123,8 +119,8 @@ class RuleEngine {
 extension RuleEngine {
     private func loadPinnedRules() -> [SetRule] {
         guard let rawData = UserDefaults.standard.data(forKey: Constants.SaveKeys.pinnedRules),
-            let filters = try? PropertyListDecoder().decode([SetRule].self, from: rawData) else { return [] }
-        return filters
+            let rules = try? PropertyListDecoder().decode([SetRule].self, from: rawData) else { return [] }
+        return rules
     }
     
     private func savePinnedRules(_ filters: [SetRule]? = nil) {
@@ -136,11 +132,11 @@ extension RuleEngine {
     func loadSavedRules() -> [SavedRule] {
         guard
             let rawData = UserDefaults.standard.data(forKey: Constants.SaveKeys.savedRules),
-            let filters = try? PropertyListDecoder().decode([SavedRule].self, from: rawData)
+            let rules = try? PropertyListDecoder().decode([SavedRule].self, from: rawData)
         else {
             return []
         }
-        return filters
+        return rules
     }
     
     func saveRules(_ filters: [SavedRule]) {
@@ -149,13 +145,13 @@ extension RuleEngine {
         }
     }
     
-    func updateSavedRules(_ filter: SavedRule) {
-        var filters = loadSavedRules()
-        guard let index = filters.firstIndex(where: { f in f.uuid == filter.uuid }) else {
+    func updateSavedRules(_ rule: SavedRule) {
+        var rules = loadSavedRules()
+        guard let index = rules.firstIndex(where: { r in r.uuid == rule.uuid }) else {
             return
         }
-        filters[index] = filter
-        saveRules(filters)
+        rules[index] = rule
+        saveRules(rules)
     }
 }
 
