@@ -43,11 +43,11 @@
             <objects>
                 <viewController title="New Rule" id="ENp-aH-L9J" customClass="RuleViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJH-Si-9Ri">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k9o-H4-Njo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="462"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="H5a-Dq-BMW">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -167,6 +167,112 @@
             </objects>
             <point key="canvasLocation" x="4282" y="-381"/>
         </scene>
+        <!--Set Rule View Controller-->
+        <scene sceneID="ME9-50-5BP">
+            <objects>
+                <tableViewController id="STX-LM-nHG" customClass="SetRuleViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="TNj-SJ-Cqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rangeCell" id="o4e-MT-9cq" customClass="RangeCell" customModule="DominionCompanion" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.5" width="374" height="216.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o4e-MT-9cq" id="gII-yq-Isw">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="216.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cJi-Ar-8fb">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="216.5"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syf-W1-7us">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="216.5"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="o4e-MT-9cq" id="QBg-K1-Nsl"/>
+                                                        <outlet property="delegate" destination="o4e-MT-9cq" id="SAV-c5-FJC"/>
+                                                    </connections>
+                                                </pickerView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-La-gWC">
+                                                    <rect key="frame" x="187" y="0.0" width="187" height="216.5"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="o4e-MT-9cq" id="d6I-mn-6cO"/>
+                                                        <outlet property="delegate" destination="o4e-MT-9cq" id="Qaa-L9-SXe"/>
+                                                    </connections>
+                                                </pickerView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cJi-Ar-8fb" secondAttribute="trailing" id="5dm-bc-D5P"/>
+                                        <constraint firstItem="cJi-Ar-8fb" firstAttribute="top" secondItem="gII-yq-Isw" secondAttribute="top" id="PJE-N7-Y5i"/>
+                                        <constraint firstItem="cJi-Ar-8fb" firstAttribute="leading" secondItem="gII-yq-Isw" secondAttribute="leading" id="j2v-Bz-jYy"/>
+                                        <constraint firstAttribute="bottom" secondItem="cJi-Ar-8fb" secondAttribute="bottom" id="yhj-gw-1iA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="operationPicker" destination="syf-W1-7us" id="DnQ-By-ufS"/>
+                                    <outlet property="valuePicker" destination="tRo-La-gWC" id="BYH-AL-54K"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filterCell" id="mD6-nS-CoI" customClass="FilterCell" customModule="DominionCompanion" customModuleProvider="target">
+                                <rect key="frame" x="20" y="272" width="374" height="216.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mD6-nS-CoI" id="86L-FX-hgM">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="216.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NZ6-xg-Wrc">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="216.5"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lC2-3q-uEy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="216.5"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="mD6-nS-CoI" id="nmW-71-CF6"/>
+                                                        <outlet property="delegate" destination="mD6-nS-CoI" id="MJa-Pi-VJ1"/>
+                                                    </connections>
+                                                </pickerView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o90-ci-4eS">
+                                                    <rect key="frame" x="124.5" y="0.0" width="125" height="216.5"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="mD6-nS-CoI" id="Ezo-XQ-Rlk"/>
+                                                        <outlet property="delegate" destination="mD6-nS-CoI" id="nFx-1r-9Lo"/>
+                                                    </connections>
+                                                </pickerView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1e-sF-bHX">
+                                                    <rect key="frame" x="249.5" y="0.0" width="124.5" height="216.5"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="mD6-nS-CoI" id="Qoh-ps-VJ8"/>
+                                                        <outlet property="delegate" destination="mD6-nS-CoI" id="9Hl-hS-tS1"/>
+                                                    </connections>
+                                                </pickerView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NZ6-xg-Wrc" firstAttribute="top" secondItem="86L-FX-hgM" secondAttribute="top" id="05x-og-eBp"/>
+                                        <constraint firstAttribute="trailing" secondItem="NZ6-xg-Wrc" secondAttribute="trailing" id="AJp-0K-93b"/>
+                                        <constraint firstItem="NZ6-xg-Wrc" firstAttribute="leading" secondItem="86L-FX-hgM" secondAttribute="leading" id="C5h-d6-asf"/>
+                                        <constraint firstAttribute="bottom" secondItem="NZ6-xg-Wrc" secondAttribute="bottom" id="EYi-Yu-Lce"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="operationPicker" destination="o90-ci-4eS" id="Vvf-4u-XeH"/>
+                                    <outlet property="propertyPicker" destination="lC2-3q-uEy" id="YaU-eq-wJ5"/>
+                                    <outlet property="valuePicker" destination="Y1e-sF-bHX" id="fof-Th-xno"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="STX-LM-nHG" id="yIr-00-W7k"/>
+                            <outlet property="delegate" destination="STX-LM-nHG" id="6OT-Rq-Fib"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="A69-lW-XBa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfn-g1-2m5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5223.188405797102" y="-377.00892857142856"/>
+        </scene>
         <!--Cards-->
         <scene sceneID="xBT-YD-s0m">
             <objects>
@@ -253,7 +359,7 @@
                                     <outlet property="operationLabel" destination="znw-Pe-9tV" id="W4s-IO-ewF"/>
                                     <outlet property="propertyLabel" destination="JbL-B5-ldI" id="SdJ-lp-QAT"/>
                                     <outlet property="valueLabel" destination="OPJ-Df-zsa" id="NyZ-gO-xge"/>
-                                    <segue destination="ENp-aH-L9J" kind="show" identifier="EditFilter" id="0NQ-ZY-BIN"/>
+                                    <segue destination="STX-LM-nHG" kind="show" identifier="EditRule" id="L14-ky-ar6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -264,8 +370,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Filters" id="YeE-cs-mQ6"/>
                     <connections>
-                        <segue destination="ENp-aH-L9J" kind="show" identifier="NewFilter" id="biV-Fe-SR5"/>
                         <segue destination="Hnx-KC-b7Z" kind="show" identifier="SavedFilters" id="djR-2N-HR3"/>
+                        <segue destination="STX-LM-nHG" kind="show" identifier="NewFilter" id="o7L-3y-M7G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLS-2c-Byf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,6 +386,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="biV-Fe-SR5"/>
+        <segue reference="L14-ky-ar6"/>
     </inferredMetricsTieBreakers>
 </document>

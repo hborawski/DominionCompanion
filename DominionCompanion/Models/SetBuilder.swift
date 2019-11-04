@@ -14,10 +14,10 @@ class SetBuilder {
     var currentSet: [SetBuilderSection] {
         get {
             let cards = getFullSet()
-            
+            let sectionTitle = RuleEngine.shared.rules.count > 0 ? "Cards Matching Any Rules" : "All Cards"
             var defaults = [
                 CardSection(title: "Set", cards: cards, pinnedCards: pinnedCards),
-                CardSection(title: "All Cards", cards: cardPool, pinnedCards: pinnedCards, canShuffle: false)
+                CardSection(title: sectionTitle, cards: cardPool, pinnedCards: pinnedCards, canShuffle: false)
             ]
             
             if maxEvents > 0 {

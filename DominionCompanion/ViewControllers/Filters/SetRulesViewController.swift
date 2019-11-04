@@ -72,13 +72,11 @@ class SetRulesViewController: UITableViewController {
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let filterViewController = segue.destination as? RuleViewController else { return }
-        filterViewController.filterEngine = self.ruleEngine
+        guard let filterViewController = segue.destination as? SetRuleViewController else { return }
+        filterViewController.ruleEngine = self.ruleEngine
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
-        if segue.identifier == "EditFilter",
-            let filterViewController = segue.destination as? RuleViewController
-        {
-            filterViewController.existingFilterIndex = indexPath.row
+        if segue.identifier == "EditRule" {
+            filterViewController.existingRuleIndex = indexPath.row
         }
     }
 }

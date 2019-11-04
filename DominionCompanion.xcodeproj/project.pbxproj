@@ -26,6 +26,9 @@
 		AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */; };
 		AF1B6ECF232D9F2400ADA74D /* BooleanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */; };
 		AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */; };
+		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
+		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
+		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
 		AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FC1A123651D92003EB7ED /* GameplaySetupViewController.swift */; };
 		AF80D6FD235BCDE200FDC4D6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D6FC235BCDE200FDC4D6 /* Settings.storyboard */; };
 		AF80D700235BCE6800FDC4D6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D6FF235BCE6800FDC4D6 /* SettingsTableViewController.swift */; };
@@ -91,6 +94,9 @@
 		AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilder.swift; sourceTree = "<group>"; };
 		AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanFilter.swift; sourceTree = "<group>"; };
 		AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsViewController.swift; sourceTree = "<group>"; };
+		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
+		AF71F69D236FB33500BCB9EA /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		AF71F69F236FB40200BCB9EA /* RangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCell.swift; sourceTree = "<group>"; };
 		AF7FC1A123651D92003EB7ED /* GameplaySetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetupViewController.swift; sourceTree = "<group>"; };
 		AF80D6FC235BCDE200FDC4D6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		AF80D6FF235BCE6800FDC4D6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 			children = (
 				AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */,
 				AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */,
+				AF71F69D236FB33500BCB9EA /* FilterCell.swift */,
+				AF71F69F236FB40200BCB9EA /* RangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				AF1B6EB7232442AA00ADA74D /* SetRulesViewController.swift */,
 				AF1B6EB923244BCE00ADA74D /* RuleViewController.swift */,
 				AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */,
+				AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -456,8 +465,10 @@
 				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
 				AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */,
+				AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */,
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
 				AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */,
+				AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
 				AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
@@ -469,6 +480,7 @@
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AF1B6ECF232D9F2400ADA74D /* BooleanFilter.swift in Sources */,
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
+				AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,

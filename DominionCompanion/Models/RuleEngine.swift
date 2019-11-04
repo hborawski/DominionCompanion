@@ -90,16 +90,16 @@ class RuleEngine {
         }
     }
     
-    func addRule(_ filter: SetRule) {
-        self.rules.append(filter)
+    func addRule(_ rule: SetRule) {
+        self.rules.append(rule)
     }
     
     func removeRule(_ index: Int) {
         self.rules.remove(at: index)
     }
     
-    func updateRule( _ index: Int, _ newFilter: SetRule) {
-        self.rules[index] = newFilter
+    func updateRule( _ index: Int, _ newRule: SetRule) {
+        self.rules[index] = newRule
     }
     
     func getRule(_ index: Int) -> SetRule? {
