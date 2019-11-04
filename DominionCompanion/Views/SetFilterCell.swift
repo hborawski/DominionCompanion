@@ -23,6 +23,5 @@ class SetFilterCell : UITableViewCell {
         self.propertyLabel.text = "\(filter.propertyFilter.property)"
         self.operationLabel.text = filter.propertyFilter.operation.rawValue
         self.valueLabel.text = filter.propertyFilter.stringValue
-        self.cardIcon.tintColor = UIColor(named: "Glyph")
     }
 }

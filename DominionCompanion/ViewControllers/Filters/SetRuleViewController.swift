@@ -35,6 +35,7 @@ class SetRuleViewController: UITableViewController {
             UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFilter(_:)))
         ]
         self.navigationItem.rightBarButtonItems = barButtonItems
+        self.navigationItem.title = "Set Rule"
         
         if existingRuleIndex == nil, filters.count == 0 {
             filters.append(NumberFilter(property: .cost, value: "0", operation: .greater))
