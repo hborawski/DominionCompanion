@@ -19,6 +19,16 @@ class SetRuleViewController: UITableViewController {
     var cardOperation: FilterOperation = .greater
     var cardValue: Int = 0
     
+    var matchingCards: [Card] {
+        get {
+            return filters.reduce(CardData.shared.cardsFromChosenExpansions) { (cards, filter) -> [Card] in
+                let cardSet = Set(cards)
+                let matchingFilter = Set(CardData.shared.cardsFromChosenExpansions.filter { filter.match($0) })
+                return Array(cardSet.intersection(matchingFilter))
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         let barButtonItems: [UIBarButtonItem] = [
             UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveRule)),
@@ -34,12 +44,14 @@ class SetRuleViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
+            return 1
+        case 1:
             return 1
         default:
             return filters.count
@@ -49,6 +61,12 @@ class SetRuleViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail")
+            cell?.accessoryType = .disclosureIndicator
+            cell?.detailTextLabel?.text = "\(self.matchingCards.count)"
+            cell?.textLabel?.text = "Matching Cards"
+            return cell!
+        case 1:
             return getRangeCell(tableView)
         default:
             return getFilterCell(tableView, row: indexPath.row)
@@ -86,6 +104,11 @@ class SetRuleViewController: UITableViewController {
         }
         self.navigationController?.popViewController(animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? CardsViewController else { return }
+        destination.cardsToDisplay = matchingCards
+    }
 }
 
 extension SetRuleViewController: RangeDelegate {
@@ -104,5 +127,6 @@ extension SetRuleViewController: RangeDelegate {
 extension SetRuleViewController: FilterCellDelegate {
     func updateFilter(at index: Int, filter: PropertyFilter) {
         filters[index] = filter
+        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
 }
