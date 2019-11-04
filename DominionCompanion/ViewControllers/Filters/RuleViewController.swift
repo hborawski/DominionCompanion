@@ -72,12 +72,14 @@ class RuleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationItem.title = "New Rule"
+        
         // If there is an index, we are editing
         guard let index = existingFilterIndex,
             let filter = filterEngine.getFilter(index)
             else { return }
         
-        self.title = "Edit Rule"
+        self.navigationItem.title = "Edit Rule"
         
         
         self.cardOperation = filter.operation
@@ -123,7 +125,7 @@ class RuleViewController: UIViewController {
         if let index = self.existingFilterIndex {
             filterEngine.updateFilter(index, setFilter)
         } else {
-            filterEngine.addFilter(setFilter)
+            filterEngine.addRule(setFilter)
         }
         self.navigationController?.popViewController(animated: true)
     }

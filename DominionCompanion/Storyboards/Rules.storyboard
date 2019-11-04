@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Saved Filter Sets-->
+        <!--Saved Rule Sets-->
         <scene sceneID="yJS-jP-EeX">
             <objects>
-                <tableViewController id="Hnx-KC-b7Z" customClass="SavedFiltersTableViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Saved Rule Sets" id="Hnx-KC-b7Z" customClass="SavedRulesTableViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Led-7b-C4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,7 @@
         <!--Rules-->
         <scene sceneID="Fh7-oh-xSP">
             <objects>
-                <tableViewController storyboardIdentifier="SetFiltersViewController" title="Rules" id="bcv-fv-4yR" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SetRulesViewController" title="Rules" id="bcv-fv-4yR" customClass="SetRulesViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bk8-4p-FDt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

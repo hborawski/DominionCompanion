@@ -29,7 +29,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-        rulesButton.setTitle("Filters (\(RuleEngine.shared.rules.count))", for: .normal)
+        rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
         toggleSetupButton()
     }
     

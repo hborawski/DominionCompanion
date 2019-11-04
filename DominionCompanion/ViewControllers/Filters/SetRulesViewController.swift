@@ -1,5 +1,5 @@
 //
-//  SetFiltersViewController.swift
+//  SetRulesViewController.swift
 //  DominionCompanion
 //
 //  Created by Harris Borawski on 9/7/19.
@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class SetFiltersViewController: UITableViewController {
-    var filterEngine: RuleEngine = RuleEngine.shared
+class SetRulesViewController: UITableViewController {
+    var ruleEngine: RuleEngine = RuleEngine.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,13 @@ class SetFiltersViewController: UITableViewController {
             UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newItem(_:)))
         ]
         
-        if !filterEngine.editing {
+        if !ruleEngine.editing {
             barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(savedFilters(_:))))
         } else {
             barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveFilter(_:))))
         }
         self.navigationItem.rightBarButtonItems = barButtonItems
+        self.navigationItem.title = "Set Rules"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,8 +41,8 @@ class SetFiltersViewController: UITableViewController {
     }
     
     @objc func saveFilter(_ sender: UIBarButtonItem) {
-        guard let savedFilter = filterEngine.savedRule else { return }
-        let filter = SavedRule(name: savedFilter.name, rules: filterEngine.rules, uuid: savedFilter.uuid)
+        guard let savedFilter = ruleEngine.savedRule else { return }
+        let filter = SavedRule(name: savedFilter.name, rules: ruleEngine.rules, uuid: savedFilter.uuid)
         RuleEngine.shared.updateSavedRules(filter)
     }
     
@@ -51,18 +52,18 @@ class SetFiltersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filterEngine.rules.count
+        return ruleEngine.rules.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SetFilterCell") as? SetFilterCell else { return UITableViewCell()}
-        cell.setData(filter: filterEngine.rules[indexPath.row])
+        cell.setData(filter: ruleEngine.rules[indexPath.row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
-            self.filterEngine.removeFilter(indexPath.row)
+            self.ruleEngine.removeRule(indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             completion(true)
         }
@@ -72,7 +73,7 @@ class SetFiltersViewController: UITableViewController {
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let filterViewController = segue.destination as? RuleViewController else { return }
-        filterViewController.filterEngine = self.filterEngine
+        filterViewController.filterEngine = self.ruleEngine
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
         if segue.identifier == "EditFilter",
             let filterViewController = segue.destination as? RuleViewController

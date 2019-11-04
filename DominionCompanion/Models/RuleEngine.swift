@@ -90,11 +90,11 @@ class RuleEngine {
         }
     }
     
-    func addFilter(_ filter: SetRule) {
+    func addRule(_ filter: SetRule) {
         self.rules.append(filter)
     }
     
-    func removeFilter(_ index: Int) {
+    func removeRule(_ index: Int) {
         self.rules.remove(at: index)
     }
     

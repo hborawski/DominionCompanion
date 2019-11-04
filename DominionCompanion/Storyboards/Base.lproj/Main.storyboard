@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="2691" y="-115"/>
         </scene>
-        <!--Filters-->
+        <!--Rules-->
         <scene sceneID="VGO-82-Pcq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Filters" id="uiQ-5C-bVn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Rules" id="uiQ-5C-bVn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cXx-SW-kRe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6JK-uw-XRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUs-mi-8rm">
                                                 <rect key="frame" x="255.33333333333334" y="0.0" width="119.66666666666666" height="44"/>
-                                                <state key="normal" title="Filters"/>
+                                                <state key="normal" title="Rules"/>
                                                 <connections>
                                                     <segue destination="uiQ-5C-bVn" kind="show" id="NS1-ET-eLY"/>
                                                 </connections>

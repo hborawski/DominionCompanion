@@ -1,5 +1,5 @@
 //
-//  Filter.swift
+//  SetRule.swift
 //  DominionCompanion
 //
 //  Created by Harris Borawski on 9/7/19.
