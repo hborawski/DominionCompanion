@@ -90,6 +90,17 @@ class SetRuleViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let pin = UIContextualAction(style: .normal, title: "Delete") { (action, view, completion) in
+            self.filters.remove(at: indexPath.row)
+            tableView.reloadData()
+            completion(true)
+        }
+        pin.image = UIImage(named: "Delete")
+        pin.backgroundColor = .systemRed
+        return UISwipeActionsConfiguration(actions: [pin])
+    }
+    
     @objc func addFilter(_ sender: UIBarButtonItem) {
         filters.append(NumberFilter(property: .cost, value: "0", operation: .greater))
         tableView.reloadData()
