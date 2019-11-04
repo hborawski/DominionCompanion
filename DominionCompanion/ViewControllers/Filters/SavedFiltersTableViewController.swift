@@ -13,9 +13,9 @@ class SavedFiltersTableViewController: UITableViewController {
     
     var tempFilterName: String = ""
     
-    var savedFilters: [SavedFilter] = [] {
+    var savedFilters: [SavedRule] = [] {
         didSet {
-            FilterEngine.shared.saveFilters(self.savedFilters)
+            RuleEngine.shared.saveRules(self.savedFilters)
             self.tableView.reloadData()
         }
     }
@@ -28,7 +28,7 @@ class SavedFiltersTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        savedFilters = FilterEngine.shared.loadSavedFilters()
+        savedFilters = RuleEngine.shared.loadSavedRules()
     }
     
     
@@ -39,7 +39,7 @@ class SavedFiltersTableViewController: UITableViewController {
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in alert.dismiss(animated: true, completion: nil)}))
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
-            self.savedFilters.append(SavedFilter(name: self.tempFilterName, filters: FilterEngine.shared.filters))
+            self.savedFilters.append(SavedRule(name: self.tempFilterName, rules: RuleEngine.shared.rules))
             self.tempFilterName = ""
         }))
         self.present(alert, animated: true)
@@ -62,12 +62,12 @@ class SavedFiltersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let replace = UIContextualAction(style: .normal, title: "Replace", handler: { (action, view, completion) in
-            FilterEngine.shared.filters = self.savedFilters[indexPath.row].filters
+            RuleEngine.shared.rules = self.savedFilters[indexPath.row].rules
             self.navigationController?.popViewController(animated: true)
         })
         replace.backgroundColor = .systemBlue
         let append = UIContextualAction(style: .normal, title: "Append", handler: { (action, view, completion) in
-            FilterEngine.shared.filters = FilterEngine.shared.filters + self.savedFilters[indexPath.row].filters
+            RuleEngine.shared.rules = RuleEngine.shared.rules + self.savedFilters[indexPath.row].rules
             self.navigationController?.popViewController(animated: true)
         })
         append.backgroundColor = .systemTeal
@@ -87,7 +87,7 @@ class SavedFiltersTableViewController: UITableViewController {
             renameAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in renameAlert.dismiss(animated: true, completion: nil)}))
             renameAlert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
                 let savedFilter = self.savedFilters[indexPath.row]
-                let filter = SavedFilter(name: self.tempFilterName, filters: savedFilter.filters, uuid: savedFilter.uuid)
+                let filter = SavedRule(name: self.tempFilterName, rules: savedFilter.rules, uuid: savedFilter.uuid)
                 self.savedFilters[indexPath.row] = filter
                 self.tempFilterName = ""
             }))
@@ -105,7 +105,7 @@ class SavedFiltersTableViewController: UITableViewController {
         guard let filtersVC = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "SetFiltersViewController") as? SetFiltersViewController else {
             return
         }
-        filtersVC.filterEngine = FilterEngine(filter)
+        filtersVC.filterEngine = RuleEngine(filter)
         self.navigationController?.pushViewController(filtersVC, animated: true)
     }
     

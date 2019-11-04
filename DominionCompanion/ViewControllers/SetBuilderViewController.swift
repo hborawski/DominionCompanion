@@ -12,7 +12,7 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var filtersButton: UIButton!
+    @IBOutlet var rulesButton: UIButton!
     @IBOutlet var gameplaySetupButton: UIButton!
     
     var shuffling: Bool = false
@@ -29,7 +29,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-        filtersButton.setTitle("Filters (\(FilterEngine.shared.filters.count))", for: .normal)
+        rulesButton.setTitle("Filters (\(RuleEngine.shared.rules.count))", for: .normal)
         toggleSetupButton()
     }
     

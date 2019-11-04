@@ -284,8 +284,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Set Builder" id="k0y-Ht-sh0"/>
                     <connections>
-                        <outlet property="filtersButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="gameplaySetupButton" destination="cSf-Wo-2uU" id="IVs-wt-jkG"/>
+                        <outlet property="rulesButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
                         <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>

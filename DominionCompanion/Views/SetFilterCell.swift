@@ -17,7 +17,7 @@ class SetFilterCell : UITableViewCell {
     @IBOutlet var valueLabel: UILabel!
     @IBOutlet weak var cardIcon: UIImageView!
     
-    func setData(filter: SetFilter) {
+    func setData(filter: SetRule) {
         self.cardOperationLabel.text = filter.operation.rawValue
         self.cardCountLabel.text = "\(filter.value)"
         self.propertyLabel.text = "\(filter.propertyFilter.property)"

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SetFiltersViewController: UITableViewController {
-    var filterEngine: FilterEngine = FilterEngine.shared
+    var filterEngine: RuleEngine = RuleEngine.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,9 @@ class SetFiltersViewController: UITableViewController {
     }
     
     @objc func saveFilter(_ sender: UIBarButtonItem) {
-        guard let savedFilter = filterEngine.savedFilter else { return }
-        let filter = SavedFilter(name: savedFilter.name, filters: filterEngine.filters, uuid: savedFilter.uuid)
-        FilterEngine.shared.updateSavedFilter(filter)
+        guard let savedFilter = filterEngine.savedRule else { return }
+        let filter = SavedRule(name: savedFilter.name, rules: filterEngine.rules, uuid: savedFilter.uuid)
+        RuleEngine.shared.updateSavedRules(filter)
     }
     
     // MARK: UITableViewController Methods
@@ -51,12 +51,12 @@ class SetFiltersViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filterEngine.filters.count
+        return filterEngine.rules.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SetFilterCell") as? SetFilterCell else { return UITableViewCell()}
-        cell.setData(filter: filterEngine.filters[indexPath.row])
+        cell.setData(filter: filterEngine.rules[indexPath.row])
         return cell
     }
     
@@ -71,11 +71,11 @@ class SetFiltersViewController: UITableViewController {
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let filterViewController = segue.destination as? FilterViewController else { return }
+        guard let filterViewController = segue.destination as? RuleViewController else { return }
         filterViewController.filterEngine = self.filterEngine
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
         if segue.identifier == "EditFilter",
-            let filterViewController = segue.destination as? FilterViewController
+            let filterViewController = segue.destination as? RuleViewController
         {
             filterViewController.existingFilterIndex = indexPath.row
         }

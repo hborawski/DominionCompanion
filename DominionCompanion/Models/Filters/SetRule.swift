@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SetFilter: Codable {
+struct SetRule: Codable {
     var value: Int
     var operation: FilterOperation
     var propertyFilter: PropertyFilter

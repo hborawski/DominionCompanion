@@ -38,7 +38,7 @@ class SetBuilder {
     
     var cardPool: [Card] {
         get {
-            return FilterEngine.shared.matchAnyFilter.sorted(by: Utilities.alphabeticSort(card1:card2:))
+            return RuleEngine.shared.matchAnyRule.sorted(by: Utilities.alphabeticSort(card1:card2:))
         }
     }
     
@@ -168,7 +168,7 @@ class SetBuilder {
     }
     
     func shuffleSet(_ completion: @escaping () -> ()) {
-        FilterEngine.shared.getMatchingSet(pinnedCards) { cards in
+        RuleEngine.shared.getMatchingSet(pinnedCards) { cards in
             self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
             self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
             self.randomEvents = CardData.shared.allEvents.shuffled()

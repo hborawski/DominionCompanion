@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FilterViewController: UIViewController {
+class RuleViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var cardOperationPicker: UIPickerView!
     @IBOutlet weak var cardValuePicker: UIPickerView!
@@ -21,7 +21,7 @@ class FilterViewController: UIViewController {
     
     @IBOutlet weak var matchingCardLabel: UILabel!
     
-    var filterEngine: FilterEngine = FilterEngine.shared
+    var filterEngine: RuleEngine = RuleEngine.shared
     
     var existingFilterIndex: Int?
 
@@ -64,7 +64,7 @@ class FilterViewController: UIViewController {
             self.selectedValue = value
             self.updateEntryView()
         }
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addFilter(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addRule(_:)))
         
         self.valueTextField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
     }
@@ -77,9 +77,8 @@ class FilterViewController: UIViewController {
             let filter = filterEngine.getFilter(index)
             else { return }
         
-        self.title = "Edit Filter"
+        self.title = "Edit Rule"
         
-//        guard self.selectedValue == "" else { return }
         
         self.cardOperation = filter.operation
         self.cardValue = filter.value
@@ -118,9 +117,9 @@ class FilterViewController: UIViewController {
     }
     
     // MARK: Done Button Handler
-    @objc func addFilter(_ sender: UIBarButtonItem) {
+    @objc func addRule(_ sender: UIBarButtonItem) {
         guard let propFilter = self.currentFilter else { return }
-        let setFilter = SetFilter(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
+        let setFilter = SetRule(value: cardValue, operation: cardOperation, propertyFilter: propFilter)
         if let index = self.existingFilterIndex {
             filterEngine.updateFilter(index, setFilter)
         } else {
@@ -165,7 +164,7 @@ class FilterViewController: UIViewController {
 }
 
 // MARK: UIPickerViewDataSource
-extension FilterViewController: UIPickerViewDataSource {
+extension RuleViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -203,7 +202,7 @@ extension FilterViewController: UIPickerViewDataSource {
 }
 
 // MARK: UIPickerViewDelegate
-extension FilterViewController: UIPickerViewDelegate {
+extension RuleViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let updateSelectedValue = { (_ position: Int) -> Void in
             guard let all = self.selectedProperty?.all, all.count > 0 else { return }
@@ -243,7 +242,7 @@ extension FilterViewController: UIPickerViewDelegate {
 }
 
 // MARK: UITextFieldDelegate
-extension FilterViewController: UITextFieldDelegate {
+extension RuleViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -153,7 +153,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,7 +170,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
             <Locations>
                <Location
@@ -221,7 +221,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -255,7 +255,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -628,23 +628,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "668C235B-055A-4D6A-A574-A73BCE4D3B9C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DominionCompanion/Views/AttributedCardCell.swift"
-            timestampString = "590275075.800779"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "makeColorView(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5C457083-8A01-4CA7-A9E0-3ACBDF386B42"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -653,8 +636,8 @@
             timestampString = "590275075.800826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "makeColorView(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1087,7 +1070,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "filters"
+            landmarkName = "rules"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1144,8 +1127,8 @@
             filePath = "DominionCompanion/ViewControllers/Settings/GlobalExclusionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1242,7 +1225,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1258,7 +1241,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "matchAnyFilter"
+            landmarkName = "matchAnyRule"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1372,6 +1355,22 @@
             endingLineNumber = "47"
             landmarkName = "relatedCards"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E05DED6-04EA-434D-AE61-AED4F246D8B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Views/AttributedCardCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "makeDebtView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

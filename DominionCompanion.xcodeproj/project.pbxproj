@@ -10,11 +10,11 @@
 		AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */; };
 		AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
-		AF1B6EB1232432A700ADA74D /* FilterEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB0232432A700ADA74D /* FilterEngine.swift */; };
-		AF1B6EB32324334F00ADA74D /* SetFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetFilter.swift */; };
+		AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB0232432A700ADA74D /* RuleEngine.swift */; };
+		AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
 		AF1B6EB623243FAA00ADA74D /* SetFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */; };
 		AF1B6EB8232442AA00ADA74D /* SetFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB7232442AA00ADA74D /* SetFiltersViewController.swift */; };
-		AF1B6EBA23244BCE00ADA74D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB923244BCE00ADA74D /* FilterViewController.swift */; };
+		AF1B6EBA23244BCE00ADA74D /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB923244BCE00ADA74D /* RuleViewController.swift */; };
 		AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */; };
 		AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
 		AF1B6EC123244FEF00ADA74D /* NumberFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC023244FEF00ADA74D /* NumberFilter.swift */; };
@@ -75,11 +75,11 @@
 		AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderViewController.swift; sourceTree = "<group>"; };
 		AF1B6EAB2324226800ADA74D /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		AF1B6EAE232428ED00ADA74D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		AF1B6EB0232432A700ADA74D /* FilterEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEngine.swift; sourceTree = "<group>"; };
-		AF1B6EB22324334F00ADA74D /* SetFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFilter.swift; sourceTree = "<group>"; };
+		AF1B6EB0232432A700ADA74D /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
+		AF1B6EB22324334F00ADA74D /* SetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRule.swift; sourceTree = "<group>"; };
 		AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFilterCell.swift; sourceTree = "<group>"; };
 		AF1B6EB7232442AA00ADA74D /* SetFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFiltersViewController.swift; sourceTree = "<group>"; };
-		AF1B6EB923244BCE00ADA74D /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		AF1B6EB923244BCE00ADA74D /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFilter.swift; sourceTree = "<group>"; };
 		AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOperation.swift; sourceTree = "<group>"; };
 		AF1B6EC023244FEF00ADA74D /* NumberFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFilter.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				AF1B6EBB23244FB600ADA74D /* Filters */,
 				AFE8EE7422A4B830008E09B2 /* Card.swift */,
 				AF1B6EAB2324226800ADA74D /* CardData.swift */,
-				AF1B6EB0232432A700ADA74D /* FilterEngine.swift */,
+				AF1B6EB0232432A700ADA74D /* RuleEngine.swift */,
 				AF1B6EC6232463FD00ADA74D /* CardProperty.swift */,
 				AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */,
 				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
@@ -218,7 +218,7 @@
 		AF1B6EBB23244FB600ADA74D /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				AF1B6EB22324334F00ADA74D /* SetFilter.swift */,
+				AF1B6EB22324334F00ADA74D /* SetRule.swift */,
 				AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */,
 				AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */,
 				AF1B6EC023244FEF00ADA74D /* NumberFilter.swift */,
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1B6EB7232442AA00ADA74D /* SetFiltersViewController.swift */,
-				AF1B6EB923244BCE00ADA74D /* FilterViewController.swift */,
+				AF1B6EB923244BCE00ADA74D /* RuleViewController.swift */,
 				AFB14778235B9F3100CDA293 /* SavedFiltersTableViewController.swift */,
 			);
 			path = Filters;
@@ -455,7 +455,7 @@
 			files = (
 				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
-				AF1B6EB1232432A700ADA74D /* FilterEngine.swift in Sources */,
+				AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */,
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
 				AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
@@ -471,7 +471,7 @@
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
-				AF1B6EB32324334F00ADA74D /* SetFilter.swift in Sources */,
+				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,
 				AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */,
 				AFB14779235B9F3100CDA293 /* SavedFiltersTableViewController.swift in Sources */,
@@ -482,7 +482,7 @@
 				AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */,
 				AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */,
 				AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */,
-				AF1B6EBA23244BCE00ADA74D /* FilterViewController.swift in Sources */,
+				AF1B6EBA23244BCE00ADA74D /* RuleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

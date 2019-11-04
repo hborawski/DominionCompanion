@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="4281" y="-1102"/>
         </scene>
-        <!--New Filter-->
+        <!--New Rule-->
         <scene sceneID="GdO-qJ-DNv">
             <objects>
-                <viewController title="New Filter" id="ENp-aH-L9J" customClass="FilterViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Rule" id="ENp-aH-L9J" customClass="RuleViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJH-Si-9Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="4262" y="66"/>
         </scene>
-        <!--Filters-->
+        <!--Rules-->
         <scene sceneID="Fh7-oh-xSP">
             <objects>
-                <tableViewController storyboardIdentifier="SetFiltersViewController" title="Filters" id="bcv-fv-4yR" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SetFiltersViewController" title="Rules" id="bcv-fv-4yR" customClass="SetFiltersViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bk8-4p-FDt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

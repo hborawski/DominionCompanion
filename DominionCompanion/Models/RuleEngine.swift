@@ -35,9 +35,9 @@ class RuleEngine {
     var matchAnyRule: [Card] {
         get {
             guard rules.count > 0 else { return cardData }
-            let cards = rules.reduce([]) { (cards: [Card], rule: SetRule) -> [Card] in
+            let cards = rules.reduce([]) { (cards: [Card], filter: SetRule) -> [Card] in
                 let cardSet = Set(cards)
-                let filtered = rule.matchingCards(cardData)
+                let filtered = filter.matchingCards(cardData)
                 let filterSet = Set(filtered)
                 return Array(cardSet.union(filterSet))
             }
@@ -47,9 +47,9 @@ class RuleEngine {
     
     var matchAllRules: [Card] {
         get {
-            let cards = rules.reduce(cardData) { (cards: [Card], rule: SetRule) -> [Card] in
+            let cards = rules.reduce(cardData) { (cards: [Card], filter: SetRule) -> [Card] in
                 let cardSet = Set(cards)
-                let filtered = rule.matchingCards(cardData)
+                let filtered = filter.matchingCards(cardData)
                 let filterSet = Set(filtered)
                 return Array(cardSet.intersection(filterSet))
             }
@@ -62,9 +62,9 @@ class RuleEngine {
         self.rules = self.loadPinnedRules()
     }
     
-    init(_ savedFilter: SavedRule) {
-        self.rules = savedFilter.rules
-        self.savedRule = savedFilter
+    init(_ savedRule: SavedRule) {
+        self.rules = savedRule.rules
+        self.savedRule = savedRule
     }
     
     // MARK: Public API
@@ -149,7 +149,7 @@ extension RuleEngine {
         }
     }
     
-    func updateSavedFilter(_ filter: SavedRule) {
+    func updateSavedRules(_ filter: SavedRule) {
         var filters = loadSavedRules()
         guard let index = filters.firstIndex(where: { f in f.uuid == filter.uuid }) else {
             return
@@ -159,7 +159,7 @@ extension RuleEngine {
     }
 }
 
-// MARK: SavedRule
+// MARK: SavedFilter
 struct SavedRule: Codable {
     var name: String
     var rules: [SetRule]
