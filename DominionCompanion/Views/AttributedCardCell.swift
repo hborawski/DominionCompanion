@@ -15,28 +15,32 @@ class AttributedCardCell : UITableViewCell {
     @IBOutlet weak var cardColorView: UIStackView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var debtLabel: UILabel!
+    @IBOutlet weak var debtBackground: UIView!
+    
     func setData(_ card: Card, favorite: Bool = false) {
         self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
         makeColorView(card.types)
         if card.debt > 0 {
-            self.costLabel.text = "\(card.debt)"
+            self.debtLabel.text = "\(card.debt)"
             makeDebtView()
+            debtBackground.isHidden = false
+            costBackground.isHidden = true
         } else {
             self.costLabel.text = "\(card.cost)"
             makeCostView()
+            debtBackground.isHidden = true
+            costBackground.isHidden = false
         }
     }
     
     func makeDebtView() {
         guard
-            let costBackground = self.costBackground,
-            let costLabel = self.costLabel else { return }
-        
-        if costBackground.subviews[0].tag == 2000 {
-            costBackground.subviews[0].removeFromSuperview()
-        }
-        let dimension = costLabel.frame.width
+            let debtBackground = self.debtBackground,
+            let debtLabel = self.debtLabel else { return }
+
+        let dimension = debtLabel.frame.width
         let hexPath = UIBezierPath()
         hexPath.move(to: CGPoint(x: dimension/4, y: 0))
         hexPath.addLine(to: CGPoint(x: 3*(dimension/4), y: 0))
@@ -48,8 +52,8 @@ class AttributedCardCell : UITableViewCell {
         let layer = CAShapeLayer()
         layer.fillColor = UIColor(named: "Debt")?.cgColor
         layer.path = hexPath.cgPath
-        costBackground.layer.insertSublayer(layer, at: 0)
-        costBackground.layoutIfNeeded()
+        debtBackground.layer.insertSublayer(layer, at: 0)
+        debtBackground.layoutIfNeeded()
     }
     
     func makeCostView() {
@@ -57,9 +61,6 @@ class AttributedCardCell : UITableViewCell {
             costBackground.subviews.count == 1,
             let costBackground = self.costBackground,
             let costLabel = self.costLabel else { return }
-        if let layers = costBackground.layer.sublayers, layers.count > 1 {
-            layers[0].removeFromSuperlayer()
-        }
         let dimension = costLabel.frame.width
         let circleView = UIView()
         circleView.tag = 2000

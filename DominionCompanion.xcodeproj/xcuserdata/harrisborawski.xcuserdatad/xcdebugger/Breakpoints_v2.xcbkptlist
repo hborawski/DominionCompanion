@@ -636,8 +636,8 @@
             timestampString = "590275075.800826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "makeColorView(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1367,8 +1367,8 @@
             filePath = "DominionCompanion/Views/AttributedCardCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "makeDebtView()"
             landmarkType = "7">
          </BreakpointContent>

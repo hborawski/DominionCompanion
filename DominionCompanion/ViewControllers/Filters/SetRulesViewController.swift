@@ -33,7 +33,7 @@ class SetRulesViewController: UITableViewController {
     }
     
     @objc func newItem(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "NewFilter", sender: self)
+        self.performSegue(withIdentifier: "NewRule", sender: self)
     }
     
     @objc func savedFilters(_ sender: UIBarButtonItem) {

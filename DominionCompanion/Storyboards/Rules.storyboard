@@ -414,7 +414,7 @@
                     <navigationItem key="navigationItem" title="Filters" id="YeE-cs-mQ6"/>
                     <connections>
                         <segue destination="Hnx-KC-b7Z" kind="show" identifier="SavedFilters" id="djR-2N-HR3"/>
-                        <segue destination="STX-LM-nHG" kind="show" identifier="NewFilter" id="o7L-3y-M7G"/>
+                        <segue destination="STX-LM-nHG" kind="show" identifier="NewRule" id="o7L-3y-M7G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLS-2c-Byf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,6 +433,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ATO-qh-3cY"/>
-        <segue reference="L14-ky-ar6"/>
+        <segue reference="o7L-3y-M7G"/>
     </inferredMetricsTieBreakers>
 </document>
