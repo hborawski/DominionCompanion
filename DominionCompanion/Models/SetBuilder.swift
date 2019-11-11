@@ -93,6 +93,10 @@ class SetBuilder {
     
     var setComplete: Bool {
         get {
+            print(pinnedCards.count)
+            print(maxCards)
+            print(maxEvents)
+            print(maxLandmarks)
             return (pinnedCards.count == maxCards) && (pinnedEvents.count >= maxEvents) && (pinnedLandmarks.count >= maxLandmarks)
         }
     }
@@ -185,7 +189,7 @@ class SetBuilder {
     private func getFullSet() -> [Card] {
         guard randomCards.count > 0 else { return pinnedCards }
         let openSlots = maxCards - pinnedCards.count
-        guard openSlots > 0 else { return pinnedCards }
+        guard openSlots > 0 else { return pinnedCards.sorted(by: getSortFunction()) }
         let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1
         let randoms = Array(randomCards[0...numberToPick])
         return pinnedCards.sorted(by: getSortFunction()) + randoms.sorted(by: getSortFunction())
@@ -232,7 +236,7 @@ struct CardSection: SetBuilderSection {
                 let pinned = self.pinnedCards.contains(card)
                 return SetBuilderCardRow(card: card, pinned: pinned, pinAction: {
                     print("Pinning \(card.name)")
-                    pinned ? SetBuilder.shared.unpinCard(c): SetBuilder.shared.pinCard(c)
+                    pinned ? SetBuilder.shared.unpinCard(c) : SetBuilder.shared.pinCard(c)
                 })
             }
         }

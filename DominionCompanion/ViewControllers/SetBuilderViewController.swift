@@ -85,8 +85,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             cardData.pinAction()
-            self.toggleSetupButton()
             tableView.reloadData()
+            self.toggleSetupButton()
             completion(true)
         }
         pin.image = cardData.pinned ? UIImage(named: "Delete") : UIImage(named: "Checkmark")
@@ -115,8 +115,14 @@ extension SetBuilderViewController {
     }
     
     func toggleSetupButton() {
-        UIView.animate(withDuration: 0.2) {
-            self.gameplaySetupButton.isHidden = !SetBuilder.shared.setComplete
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.2) {
+                if self.gameplaySetupButton.isHidden, SetBuilder.shared.setComplete {
+                    self.gameplaySetupButton.isHidden = false
+                } else if !self.gameplaySetupButton.isHidden, !SetBuilder.shared.setComplete {
+                    self.gameplaySetupButton.isHidden = true
+                }
+            }
         }
     }
 }
