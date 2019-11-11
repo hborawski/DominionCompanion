@@ -43,15 +43,24 @@ struct Card: Codable {
     
     var relatedCards: [Card] {
         get {
-            return related.reduce([]) { (cards, related) -> [Card] in
-                guard !CardData.shared.allTypes.contains(related) else {
-                    return Array(Set(cards).union(Set(CardData.shared.allCards.filter { $0.types.contains(related) })))
-                }
-                return cards + CardData.shared.allCards.filter { $0.name == related }
-            }
-//            return CardData.shared.allCards.filter { (card) -> Bool in
-//                return self.related.contains(card.name)
+//            return related.reduce([]) { (cards, related) -> [Card] in
+//                guard !CardData.shared.allTypes.contains(related) else {
+//                    return Array(Set(cards).union(Set(CardData.shared.allCards.filter { $0.types.contains(related) })))
+//                }
+//                return cards + CardData.shared.allCards.filter { $0.name == related }
 //            }
+            let cards = CardData.shared.allCards.filter { (card) -> Bool in
+                return self.related.contains(card.name)
+            }
+            if self.types.contains("Fate") {
+                return cards + CardData.shared.allCards.filter{ $0.types.contains("Boon") }
+            }
+            
+            if self.types.contains("Doom") {
+                return cards + CardData.shared.allCards.filter{ $0.types.contains("Hex") }
+            }
+            
+            return cards
         }
     }
 }
