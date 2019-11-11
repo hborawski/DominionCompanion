@@ -9,9 +9,10 @@
 import Foundation
 
 enum CardProperty: String, Codable {
-    static var allCases : [CardProperty] = [.cost, .debt, .actions, .buys, .cards, .expansion, .type, .trash, .victoryTokens]
+    static var allCases : [CardProperty] = [.cost, .debt, .potion, .actions, .buys, .cards, .expansion, .type, .trash, .victoryTokens]
     case cost = "Cost"
     case debt = "Debt"
+    case potion = "Potion"
     case expansion = "Expansion"
     case type = "Type"
     case buys = "+ Buys"
@@ -29,6 +30,8 @@ enum CardProperty: String, Codable {
                 return NumberFilter.self
             case .debt:
                 return NumberFilter.self
+            case .potion:
+                return BooleanFilter.self
             case .actions:
                 return NumberFilter.self
             case .buys:
@@ -54,6 +57,8 @@ enum CardProperty: String, Codable {
                 return Array(0...CardData.shared.maxPrice).map { "\($0)" }
             case .debt:
                 return Array(0...CardData.shared.maxDebt).map { "\($0)" }
+            case .potion:
+                return ["true", "false"]
             case .actions:
                 return Array(0...CardData.shared.maxActions).map { "\($0)" }
             case .buys:

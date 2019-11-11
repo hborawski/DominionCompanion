@@ -34,6 +34,11 @@ struct SetModel {
             return self.cards.filter({$0.tokens.debt == true}).count > 0
         }
     }
+    var potions: Bool {
+        get {
+            return self.cards.filter({$0.potion == true}).count > 0
+        }
+    }
     var victoryTokens: Bool {
         get {
             return self.cards.filter({$0.tokens.victory > 0}).count > 0

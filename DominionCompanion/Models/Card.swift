@@ -29,6 +29,7 @@ struct Tokens: Codable {
 struct Card: Codable {
     var cost: Int
     var debt: Int
+    var potion: Bool
     var actions: Int
     var buys: Int
     var cards: Int
@@ -43,12 +44,6 @@ struct Card: Codable {
     
     var relatedCards: [Card] {
         get {
-//            return related.reduce([]) { (cards, related) -> [Card] in
-//                guard !CardData.shared.allTypes.contains(related) else {
-//                    return Array(Set(cards).union(Set(CardData.shared.allCards.filter { $0.types.contains(related) })))
-//                }
-//                return cards + CardData.shared.allCards.filter { $0.name == related }
-//            }
             let cards = CardData.shared.allCards.filter { (card) -> Bool in
                 return self.related.contains(card.name)
             }
@@ -72,6 +67,8 @@ extension Card {
             return self.cost
         case .debt:
             return self.debt
+        case .potion:
+            return self.potion
         case .actions:
             return self.actions
         case .buys:
