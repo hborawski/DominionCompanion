@@ -1900,6 +1900,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon"
     ],
     "tokens": {
       "victory": 0,
@@ -5472,6 +5473,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon"
     ],
     "tokens": {
       "victory": 0,
@@ -7104,6 +7106,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon",
       "Lucky Coin",
       "Lost in the Woods"
     ],
@@ -9765,6 +9768,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon"
     ],
     "tokens": {
       "victory": 0,
@@ -14460,6 +14464,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon",
       "Goat"
     ],
     "tokens": {
@@ -16508,6 +16513,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon"
     ],
     "tokens": {
       "victory": 0,
@@ -20072,6 +20078,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Boon",
       "Pouch"
     ],
     "tokens": {

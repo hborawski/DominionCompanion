@@ -45,9 +45,9 @@ struct Card: Codable {
         get {
             return related.reduce([]) { (cards, related) -> [Card] in
                 guard !CardData.shared.allTypes.contains(related) else {
-                    return CardData.shared.allCards.filter { $0.types.contains(related) }
+                    return Array(Set(cards).union(Set(CardData.shared.allCards.filter { $0.types.contains(related) })))
                 }
-                return CardData.shared.allCards.filter { $0.name == related }
+                return cards + CardData.shared.allCards.filter { $0.name == related }
             }
 //            return CardData.shared.allCards.filter { (card) -> Bool in
 //                return self.related.contains(card.name)
