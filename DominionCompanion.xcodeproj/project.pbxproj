@@ -26,9 +26,21 @@
 		AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */; };
 		AF1B6ECF232D9F2400ADA74D /* BooleanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */; };
 		AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */; };
+		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
+		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
+		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
+		AF6AA08A2381C72300AC3BEA /* NumberFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC023244FEF00ADA74D /* NumberFilter.swift */; };
+		AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */; };
+		AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
+		AF6AA08D2381C72F00AC3BEA /* BooleanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECE232D9F2400ADA74D /* BooleanFilter.swift */; };
+		AF6AA08E2381C73200AC3BEA /* ListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC22324502500ADA74D /* ListFilter.swift */; };
+		AF6AA08F2381C73500AC3BEA /* StringFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC42324515D00ADA74D /* StringFilter.swift */; };
+		AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
+		AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
 		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
 		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
+		AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
 		AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FC1A123651D92003EB7ED /* GameplaySetupViewController.swift */; };
 		AF80D6FD235BCDE200FDC4D6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D6FC235BCDE200FDC4D6 /* Settings.storyboard */; };
 		AF80D700235BCE6800FDC4D6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D6FF235BCE6800FDC4D6 /* SettingsTableViewController.swift */; };
@@ -97,6 +109,7 @@
 		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
 		AF71F69D236FB33500BCB9EA /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		AF71F69F236FB40200BCB9EA /* RangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCell.swift; sourceTree = "<group>"; };
+		AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTest.swift; sourceTree = "<group>"; };
 		AF7FC1A123651D92003EB7ED /* GameplaySetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetupViewController.swift; sourceTree = "<group>"; };
 		AF80D6FC235BCDE200FDC4D6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		AF80D6FF235BCE6800FDC4D6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +250,21 @@
 			path = Filters;
 			sourceTree = "<group>";
 		};
+		AF6AA0922381C9DB00AC3BEA /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		AF6AA0932381C9E800AC3BEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF6AA0922381C9DB00AC3BEA /* Filters */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AF80D6FE235BCE5600FDC4D6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,8 +335,10 @@
 		AFE8EE5122A4843C008E09B2 /* DominionCompanionTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF6AA0932381C9E800AC3BEA /* Models */,
 				AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */,
 				AFE8EE5422A4843C008E09B2 /* Info.plist */,
+				AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */,
 			);
 			path = DominionCompanionTests;
 			sourceTree = "<group>";
@@ -502,8 +532,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */,
+				AF6AA08E2381C73200AC3BEA /* ListFilter.swift in Sources */,
+				AF6AA08F2381C73500AC3BEA /* StringFilter.swift in Sources */,
+				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
+				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
+				AF6AA08D2381C72F00AC3BEA /* BooleanFilter.swift in Sources */,
+				AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
+				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
 				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
+				AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */,
+				AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */,
+				AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */,
+				AF6AA08A2381C72300AC3BEA /* NumberFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +750,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -728,6 +771,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -747,6 +791,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,6 +811,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63EF4WWG2U;
 				INFOPLIST_FILE = DominionCompanionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
