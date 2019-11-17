@@ -57,12 +57,7 @@ struct SetRule: Codable {
     }
     
     private func hasMatch(_ cards: [Card]) -> Bool {
-        if let _ = cards.firstIndex(where: { propertyFilter.match($0) }) {
-            return true
-        } else {
-            return false
-        }
-//        return nil != cards.firstIndex { propertyFilter.match($0) }
+        return nil != cards.firstIndex { propertyFilter.match($0) }
     }
     
     func match(_ cards: [Card]) -> Bool {
