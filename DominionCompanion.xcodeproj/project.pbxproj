@@ -42,6 +42,7 @@
 		AF6AA09B2381CE4E00AC3BEA /* NumberFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */; };
 		AF6AA09D2381D01000AC3BEA /* BooleanFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */; };
 		AF6AA09F2381D08900AC3BEA /* ListFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */; };
+		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
 		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
 		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
 		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
@@ -116,6 +117,7 @@
 		AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterTest.swift; sourceTree = "<group>"; };
+		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
 		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
 		AF71F69D236FB33500BCB9EA /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		AF71F69F236FB40200BCB9EA /* RangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCell.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */,
 				AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */,
 				AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */,
+				AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				AF6AA09F2381D08900AC3BEA /* ListFilterTest.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
+				AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */,
 				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
 				AF6AA09D2381D01000AC3BEA /* BooleanFilterTest.swift in Sources */,
 				AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */,
