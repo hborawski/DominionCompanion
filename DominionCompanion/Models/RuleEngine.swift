@@ -57,6 +57,8 @@ class RuleEngine {
         }
     }
     
+    var editingRule: SetRule?
+    
     
     init() {
         self.rules = self.loadPinnedRules()
@@ -80,7 +82,7 @@ class RuleEngine {
         DispatchQueue.global(qos: .background).async {
             var attempts = 0
             var testSet = Array(self.cardData.shuffled()[0...9])
-            while !self.matchesAllFilters(testSet, self.rules) && attempts < 2000 {
+            while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
                 testSet = Array(self.cardData.shuffled()[0...9])
                 attempts += 1
             }
@@ -108,7 +110,7 @@ class RuleEngine {
     }
     
     // MARK: Utility Methods    
-    func matchesAllFilters(_ cards: [Card], _ rules: [SetRule]) -> Bool {
+    func matchesAllRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
         return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
             return acc && cv.match(cards)
         }

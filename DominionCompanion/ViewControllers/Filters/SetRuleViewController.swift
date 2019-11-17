@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class SetRuleViewController: UITableViewController {
-    var filters: [PropertyFilter] = []
+    let defaultRule = CardRule(type: .number, property: .cost, operation: .greater, comparisonValue: "0")
+    var rules: [CardRule] = []
     
     var existingRuleIndex: Int?
     
@@ -21,9 +22,9 @@ class SetRuleViewController: UITableViewController {
     
     var matchingCards: [Card] {
         get {
-            return filters.reduce(CardData.shared.cardsFromChosenExpansions) { (cards, filter) -> [Card] in
+            return rules.reduce(CardData.shared.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
                 let cardSet = Set(cards)
-                let matchingFilter = Set(CardData.shared.cardsFromChosenExpansions.filter { filter.match($0) })
+                let matchingFilter = Set(CardData.shared.cardsFromChosenExpansions.filter { rule.matches(card: $0) })
                 return Array(cardSet.intersection(matchingFilter))
             }
         }
@@ -37,10 +38,13 @@ class SetRuleViewController: UITableViewController {
         self.navigationItem.rightBarButtonItems = barButtonItems
         self.navigationItem.title = "Set Rule"
         
-        if existingRuleIndex == nil, filters.count == 0 {
-            filters.append(NumberFilter(property: .cost, value: "0", operation: .greater))
+        if existingRuleIndex == nil, rules.count == 0 {
+            rules.append(defaultRule)
         } else if let index = existingRuleIndex {
-            filters = [ruleEngine.rules[index].propertyFilter]
+            let rule = ruleEngine.rules[index]
+            rules = rule.cardRules
+            cardOperation = rule.operation
+            cardValue = rule.value
         }
     }
     
@@ -55,7 +59,7 @@ class SetRuleViewController: UITableViewController {
         case 1:
             return 1
         default:
-            return filters.count
+            return rules.count
         }
     }
     
@@ -87,13 +91,13 @@ class SetRuleViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell") as? FilterCell else { return UITableViewCell() }
         cell.delegate = self
         cell.index = row
-        cell.setup(filters[row])
+        cell.setup(rules[row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let pin = UIContextualAction(style: .normal, title: "Delete") { (action, view, completion) in
-            self.filters.remove(at: indexPath.row)
+            self.rules.remove(at: indexPath.row)
             tableView.reloadData()
             completion(true)
         }
@@ -103,12 +107,12 @@ class SetRuleViewController: UITableViewController {
     }
     
     @objc func addFilter(_ sender: UIBarButtonItem) {
-        filters.append(NumberFilter(property: .cost, value: "0", operation: .greater))
+        rules.append(defaultRule)
         tableView.reloadData()
     }
     
     @objc func saveRule(_ sender: UIBarButtonItem) {
-        let rule = SetRule(value: cardValue, operation: cardOperation, propertyFilter: filters[0])
+        let rule = SetRule(value: cardValue, operation: cardOperation, cardRules: rules)
         if let index = existingRuleIndex {
             ruleEngine.updateRule(index, rule)
         } else {
@@ -123,6 +127,7 @@ class SetRuleViewController: UITableViewController {
     }
 }
 
+// MARK: Range Cell Delegate
 extension SetRuleViewController: RangeDelegate {
     func setOperation(_ operation: FilterOperation) {
         cardOperation = operation
@@ -136,9 +141,10 @@ extension SetRuleViewController: RangeDelegate {
     }
 }
 
+//MARK: Filter Cell Delegate
 extension SetRuleViewController: FilterCellDelegate {
-    func updateFilter(at index: Int, filter: PropertyFilter) {
-        filters[index] = filter
+    func updateFilter(at index: Int, rule: CardRule) {
+        rules[index] = rule
         tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
 }

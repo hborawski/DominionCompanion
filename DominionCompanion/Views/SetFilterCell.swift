@@ -20,8 +20,8 @@ class SetFilterCell : UITableViewCell {
     func setData(filter: SetRule) {
         self.cardOperationLabel.text = filter.operation.rawValue
         self.cardCountLabel.text = "\(filter.value)"
-        self.propertyLabel.text = "\(filter.propertyFilter.property)"
-        self.operationLabel.text = filter.propertyFilter.operation.rawValue
-        self.valueLabel.text = filter.propertyFilter.stringValue
+        self.propertyLabel.text = "\(filter.cardRules[0].property)"
+        self.operationLabel.text = filter.cardRules[0].operation.rawValue
+        self.valueLabel.text = filter.cardRules[0].comparisonValue
     }
 }

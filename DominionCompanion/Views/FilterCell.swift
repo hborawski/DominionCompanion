@@ -16,33 +16,33 @@ class FilterCell: UITableViewCell {
     
     var property: CardProperty = .cost {
         didSet {
-            delegate?.updateFilter(at: self.index, filter: self.currentFilter)
+            delegate?.updateFilter(at: self.index, rule: self.currentRule)
         }
     }
     var operation: FilterOperation = .greater {
         didSet {
-            delegate?.updateFilter(at: self.index, filter: self.currentFilter)
+            delegate?.updateFilter(at: self.index, rule: self.currentRule)
         }
     }
     var value: String = "0" {
         didSet {
-            delegate?.updateFilter(at: self.index, filter: self.currentFilter)
+            delegate?.updateFilter(at: self.index, rule: self.currentRule)
         }
     }
-    var currentFilter: PropertyFilter {
+    
+    var currentRule: CardRule {
         get {
-            let T = self.property.inputType
-            return T.init(property: property, value: value, operation: operation)
+            return CardRule(type: .number, property: property, operation: operation, comparisonValue: value)
         }
     }
     
     var index: Int = 0
     var delegate: FilterCellDelegate?
     
-    func setup(_ filter: PropertyFilter) {
+    func setup(_ filter: CardRule) {
         self.property = filter.property
         self.operation = filter.operation
-        self.value = filter.stringValue
+        self.value = filter.comparisonValue
         propertyPicker.reloadAllComponents()
         if let propIndex = CardData.shared.allAttributes.index(of: property) {
             propertyPicker.selectRow(propIndex, inComponent: 0, animated: false)
@@ -60,7 +60,7 @@ class FilterCell: UITableViewCell {
 }
 
 protocol FilterCellDelegate {
-    func updateFilter(at index: Int, filter: PropertyFilter) -> Void
+    func updateFilter(at index: Int, rule: CardRule) -> Void
 }
 
 extension FilterCell: UIPickerViewDataSource {

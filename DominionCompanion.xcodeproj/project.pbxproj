@@ -43,6 +43,8 @@
 		AF6AA09D2381D01000AC3BEA /* BooleanFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */; };
 		AF6AA09F2381D08900AC3BEA /* ListFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */; };
 		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
+		AF6AA0A62381E6DB00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
+		AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
 		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
 		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
 		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
@@ -118,6 +120,7 @@
 		AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
+		AF6AA0A42381E30A00AC3BEA /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
 		AF71F69D236FB33500BCB9EA /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		AF71F69F236FB40200BCB9EA /* RangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCell.swift; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 		AF1B6EA8232421B300ADA74D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF6AA0A22381E2F600AC3BEA /* Rules */,
 				AF1B6EBB23244FB600ADA74D /* Filters */,
 				AFE8EE7422A4B830008E09B2 /* Card.swift */,
 				AF1B6EAB2324226800ADA74D /* CardData.swift */,
@@ -280,6 +284,14 @@
 				AF6AA0922381C9DB00AC3BEA /* Filters */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AF6AA0A22381E2F600AC3BEA /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				AF6AA0A42381E30A00AC3BEA /* Rule.swift */,
+			);
+			path = Rules;
 			sourceTree = "<group>";
 		};
 		AF80D6FE235BCE5600FDC4D6 /* Settings */ = {
@@ -525,6 +537,7 @@
 				AF1B6EC123244FEF00ADA74D /* NumberFilter.swift in Sources */,
 				AF1B6EC52324515D00ADA74D /* StringFilter.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
+				AF6AA0A62381E6DB00AC3BEA /* Rule.swift in Sources */,
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AF1B6ECF232D9F2400ADA74D /* BooleanFilter.swift in Sources */,
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
@@ -556,6 +569,7 @@
 				AF6AA08F2381C73500AC3BEA /* StringFilter.swift in Sources */,
 				AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */,
 				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
+				AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */,
 				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
 				AF6AA08D2381C72F00AC3BEA /* BooleanFilter.swift in Sources */,
 				AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */,

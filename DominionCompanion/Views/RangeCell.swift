@@ -46,7 +46,7 @@ extension RangeCell: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
         case operationPicker:
-            return NumberFilter.availableOperations[row].rawValue
+            return RuleType.number.availableOperations[row].rawValue
         case valuePicker:
             return "\(row)"
         default:
