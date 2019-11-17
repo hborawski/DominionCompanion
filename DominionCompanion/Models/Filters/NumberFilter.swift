@@ -70,7 +70,7 @@ struct NumberFilter: PropertyFilter, Codable {
         case .lessOrEqual:
             return cardValue <= value
         case .less:
-            return cardValue > value
+            return cardValue < value
         case .notEqual:
             return cardValue != value
         }
