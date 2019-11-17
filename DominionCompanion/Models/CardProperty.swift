@@ -23,29 +23,29 @@ enum CardProperty: String, Codable {
     
     
     
-    var inputType: PropertyFilter.Type {
+    var inputType: RuleType {
         get {
             switch self {
             case .cost:
-                return NumberFilter.self
+                return .number
             case .debt:
-                return NumberFilter.self
+                return .number
             case .potion:
-                return BooleanFilter.self
+                return .boolean
             case .actions:
-                return NumberFilter.self
+                return .number
             case .buys:
-                return NumberFilter.self
+                return .number
             case .cards:
-                return NumberFilter.self
+                return .number
             case .expansion:
-                return StringFilter.self
+                return .string
             case .type:
-                return ListFilter.self
+                return .string
             case .trash:
-                return BooleanFilter.self
+                return .boolean
             case .victoryTokens:
-                return NumberFilter.self
+                return .number
             }
         }
     }

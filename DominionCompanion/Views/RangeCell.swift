@@ -18,7 +18,7 @@ class RangeCell: UITableViewCell {
     func setup(operation: FilterOperation, value: Int) {
         operationPicker.reloadAllComponents()
         valuePicker.reloadAllComponents()
-        if let opIndex = NumberFilter.availableOperations.index(of: operation) {
+        if let opIndex = RuleType.number.availableOperations.index(of: operation) {
             operationPicker.selectRow(opIndex, inComponent: 0, animated: false)
         }
         valuePicker.selectRow(value, inComponent: 0, animated: false)
@@ -35,7 +35,7 @@ extension RangeCell: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case operationPicker:
-            delegate?.setOperation(NumberFilter.availableOperations[row])
+            delegate?.setOperation(RuleType.number.availableOperations[row])
         case valuePicker:
             delegate?.setValue(row)
         default:
@@ -63,7 +63,7 @@ extension RangeCell: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
         case operationPicker:
-            return NumberFilter.availableOperations.count
+            return RuleType.number.availableOperations.count
         case valuePicker:
             return 11
         default:

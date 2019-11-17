@@ -44,6 +44,7 @@ class SetRulesViewController: UITableViewController {
         guard let savedFilter = ruleEngine.savedRule else { return }
         let filter = SavedRule(name: savedFilter.name, rules: ruleEngine.rules, uuid: savedFilter.uuid)
         RuleEngine.shared.updateSavedRules(filter)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: UITableViewController Methods
