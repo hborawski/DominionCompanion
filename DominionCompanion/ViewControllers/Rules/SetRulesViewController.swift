@@ -58,7 +58,7 @@ class SetRulesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SetFilterCell") as? SetFilterCell else { return UITableViewCell()}
-        cell.setData(filter: ruleEngine.rules[indexPath.row])
+        cell.setData(rule: ruleEngine.rules[indexPath.row])
         return cell
     }
     

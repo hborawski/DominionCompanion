@@ -223,24 +223,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbL-B5-ldI">
-                                            <rect key="frame" x="301" y="19.5" width="36" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znw-Pe-9tV">
-                                            <rect key="frame" x="345" y="19.5" width="22" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPJ-Df-zsa">
-                                            <rect key="frame" x="375" y="19.5" width="11" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card" translatesAutoresizingMaskIntoConstraints="NO" id="ZCi-GU-cEp">
                                             <rect key="frame" x="8" y="15" width="30" height="30"/>
                                             <color key="tintColor" name="Glyph"/>
@@ -249,19 +231,22 @@
                                                 <constraint firstAttribute="height" constant="30" id="mnb-uW-CBb"/>
                                             </constraints>
                                         </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-jq-DOe">
+                                            <rect key="frame" x="240" y="8" width="150" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="lZG-qZ-zRk"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="OPJ-Df-zsa" firstAttribute="leading" secondItem="znw-Pe-9tV" secondAttribute="trailing" constant="8" id="2x8-1z-E4W"/>
-                                        <constraint firstItem="znw-Pe-9tV" firstAttribute="centerY" secondItem="ZCi-GU-cEp" secondAttribute="centerY" id="5R2-dC-IOL"/>
                                         <constraint firstItem="T2H-QF-mrf" firstAttribute="centerY" secondItem="ZCi-GU-cEp" secondAttribute="centerY" id="9By-KI-DKk"/>
-                                        <constraint firstItem="JbL-B5-ldI" firstAttribute="centerY" secondItem="ZCi-GU-cEp" secondAttribute="centerY" id="BpL-AG-zev"/>
+                                        <constraint firstAttribute="bottom" secondItem="HIf-jq-DOe" secondAttribute="bottom" constant="8" id="AvZ-zd-RjD"/>
                                         <constraint firstItem="0cY-Oz-8Oo" firstAttribute="centerY" secondItem="ZCi-GU-cEp" secondAttribute="centerY" id="Coz-yo-hFa"/>
+                                        <constraint firstItem="HIf-jq-DOe" firstAttribute="top" secondItem="fBd-wn-qGr" secondAttribute="top" constant="8" id="Eno-29-NUo"/>
                                         <constraint firstItem="T2H-QF-mrf" firstAttribute="leading" secondItem="ZCi-GU-cEp" secondAttribute="trailing" constant="8" id="F8y-Ll-PhJ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OPJ-Df-zsa" secondAttribute="trailing" constant="8" id="LOT-d7-vCF"/>
-                                        <constraint firstItem="OPJ-Df-zsa" firstAttribute="centerY" secondItem="ZCi-GU-cEp" secondAttribute="centerY" id="aRL-ok-A35"/>
+                                        <constraint firstAttribute="trailing" secondItem="HIf-jq-DOe" secondAttribute="trailing" constant="24" id="WCC-Ko-gni"/>
                                         <constraint firstItem="ZCi-GU-cEp" firstAttribute="centerY" secondItem="fBd-wn-qGr" secondAttribute="centerY" id="d1m-yG-Rji"/>
                                         <constraint firstItem="0cY-Oz-8Oo" firstAttribute="leading" secondItem="T2H-QF-mrf" secondAttribute="trailing" constant="8" id="eIo-Uu-T8i"/>
-                                        <constraint firstItem="znw-Pe-9tV" firstAttribute="leading" secondItem="JbL-B5-ldI" secondAttribute="trailing" constant="8" id="jiS-Cj-BkS"/>
                                         <constraint firstItem="ZCi-GU-cEp" firstAttribute="leading" secondItem="fBd-wn-qGr" secondAttribute="leading" constant="8" id="qQ5-8v-vUv"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -269,9 +254,7 @@
                                     <outlet property="cardCountLabel" destination="0cY-Oz-8Oo" id="g4U-rD-iv5"/>
                                     <outlet property="cardIcon" destination="ZCi-GU-cEp" id="G2q-Ew-LkF"/>
                                     <outlet property="cardOperationLabel" destination="T2H-QF-mrf" id="D6i-qf-DiV"/>
-                                    <outlet property="operationLabel" destination="znw-Pe-9tV" id="W4s-IO-ewF"/>
-                                    <outlet property="propertyLabel" destination="JbL-B5-ldI" id="SdJ-lp-QAT"/>
-                                    <outlet property="valueLabel" destination="OPJ-Df-zsa" id="NyZ-gO-xge"/>
+                                    <outlet property="ruleStack" destination="HIf-jq-DOe" id="cIw-Jb-I6a"/>
                                     <segue destination="STX-LM-nHG" kind="show" identifier="EditRule" id="L14-ky-ar6"/>
                                 </connections>
                             </tableViewCell>
@@ -289,7 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLS-2c-Byf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3397.5999999999999" y="-381.2807881773399"/>
+            <point key="canvasLocation" x="3397.1014492753625" y="-381.69642857142856"/>
         </scene>
     </scenes>
     <resources>
