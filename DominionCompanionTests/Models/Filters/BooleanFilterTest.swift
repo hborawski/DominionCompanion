@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import XCTest
+
+class BooleanFilterTest: XCTestCase {
+    func testFilterMatches() {
+        let filter = BooleanFilter(property: .trash, value: "true", operation: .equal)
+        XCTAssert(filter.match(TestData.trashCard))
+    }
+    func testFilterDoesntMatch() {
+        let filter = BooleanFilter(property: .trash, value: "true", operation: .equal)
+        XCTAssertFalse(filter.match(TestData.actionCard))
+    }
+}

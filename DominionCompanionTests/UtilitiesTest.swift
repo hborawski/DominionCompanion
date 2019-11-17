@@ -12,10 +12,9 @@ import XCTest
 @testable import DominionCompanion
 
 class UtilitiesTest: XCTestCase {
-    static let noTokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false)
-    let card1 = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Cantrip", text: "Example Card", expansion: "Test", types: ["Action"], trash: false, tokens: noTokens, supply: true, related: [])
-    let card2 = Card(cost: 5, debt: 0, potion: false, actions: 1, buys: 0, cards: 2, name: "Laboratory", text: "Example Card", expansion: "Test", types: ["Action"], trash: false, tokens: noTokens, supply: true, related: [])
-    let card3 = Card(cost: 6, debt: 0, potion: false, actions: 0, buys: 0, cards: 0, name: "Gold", text: "Example Card", expansion: "Test", types: ["Treasure"], trash: false, tokens: noTokens, supply: true, related: [])
+    let card1 = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Cantrip", text: "Example Card", expansion: "Test", types: ["Action"], trash: false, tokens: TestData.noTokens, supply: true, related: [])
+    let card2 = Card(cost: 5, debt: 0, potion: false, actions: 1, buys: 0, cards: 2, name: "Laboratory", text: "Example Card", expansion: "Test", types: ["Action"], trash: false, tokens: TestData.noTokens, supply: true, related: [])
+    let card3 = Card(cost: 6, debt: 0, potion: false, actions: 0, buys: 0, cards: 0, name: "Gold", text: "Example Card", expansion: "Test", types: ["Treasure"], trash: false, tokens: TestData.noTokens, supply: true, related: [])
     
     func testAlphabeticSort() {
         let expected = [card1, card3, card2]
