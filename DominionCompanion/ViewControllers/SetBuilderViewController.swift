@@ -17,6 +17,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     var shuffling: Bool = false
     
+    var currentSet: [SetBuilderSection] = []
+    
     // MARK: Setup
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]
         gameplaySetupButton.layer.cornerRadius = 6.0
+        self.currentSet = SetBuilder.shared.currentSet
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +51,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.reloadData()
         SetBuilder.shared.shuffleSet {
             self.shuffling = false
+            self.currentSet = SetBuilder.shared.currentSet
             self.tableView.reloadData()
         }
     }
@@ -55,22 +59,22 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return SetBuilder.shared.currentSet[section].title
+        return currentSet[section].title
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return SetBuilder.shared.currentSet.count
+        return currentSet.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = SetBuilder.shared.currentSet[section]
+        let section = currentSet[section]
         return (shuffling && section.canShuffle) ? 1 : section.cards.count
     }
     
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = SetBuilder.shared.currentSet[indexPath.section]
+        let section = currentSet[indexPath.section]
         if shuffling == true && section.canShuffle {
             return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
         }
@@ -81,7 +85,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let cardData = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row]
+        let cardData = currentSet[indexPath.section].rows[indexPath.row]
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             cardData.pinAction()
@@ -99,7 +103,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "ViewCard",
             let cardVC = segue.destination as? CardViewController
         {
-            cardVC.card = SetBuilder.shared.currentSet[indexPath.section].rows[indexPath.row].card
+            cardVC.card = currentSet[indexPath.section].rows[indexPath.row].card
             return
         }
         if segue.identifier == "GoToGameplaySetup", let gameplayVC = segue.destination as? GameplaySetupViewController {
