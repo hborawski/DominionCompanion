@@ -39,7 +39,7 @@ enum CardProperty: String, Codable {
             case .cards:
                 return NumberFilter.self
             case .expansion:
-                return ListFilter.self
+                return StringFilter.self
             case .type:
                 return ListFilter.self
             case .trash:

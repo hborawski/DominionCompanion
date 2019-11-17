@@ -76,7 +76,7 @@ extension Card {
         case .cards:
             return self.cards
         case .expansion:
-            return [self.expansion]
+            return self.expansion
         case .type:
             return self.types
         case .trash:
