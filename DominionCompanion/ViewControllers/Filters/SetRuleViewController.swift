@@ -96,6 +96,7 @@ class SetRuleViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard rules.count > 1 else { return nil }
         let pin = UIContextualAction(style: .normal, title: "Delete") { (action, view, completion) in
             self.rules.remove(at: indexPath.row)
             tableView.reloadData()
