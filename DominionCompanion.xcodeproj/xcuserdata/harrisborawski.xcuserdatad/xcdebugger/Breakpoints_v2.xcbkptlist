@@ -32,8 +32,8 @@
             timestampString = "590273579.5965281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Locations>
@@ -602,8 +602,8 @@
             timestampString = "590273579.603142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "SetBuilderViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -670,8 +670,8 @@
             timestampString = "590273579.603922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -755,8 +755,8 @@
             timestampString = "590273579.604272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1319,8 +1319,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:trailingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1383,8 +1383,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1515,6 +1515,214 @@
             endingLineNumber = "66"
             landmarkName = "tableView(_:trailingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F87C5AA-9CE3-4DA3-8C81-7F8BB54802D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/SetBuilder.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "currentSet"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D96A7029-A1D8-4C14-9F0D-3D474A3EEAF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Filters/SetRule.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "match(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D96A7029-A1D8-4C14-9F0D-3D474A3EEAF5 - 6aa7001ddbf9487"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanion.SetRule.match(Swift.Array&lt;DominionCompanion.Card&gt;) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Filters/SetRule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  uuid = "D96A7029-A1D8-4C14-9F0D-3D474A3EEAF5 - 78d3ed682780098f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanionTests.SetRule.match(Swift.Array&lt;DominionCompanionTests.Card&gt;) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanionTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Filters/SetRule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "103">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18D6B17E-A78D-4C37-8C93-7874468A8389"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanionTests/Models/Filters/SetRuleTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "testFilterMatches()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "390D7C31-23FF-4625-A5AA-1D133DB920F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Rules/Rule.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "matches(card:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "390D7C31-23FF-4625-A5AA-1D133DB920F8 - d819e5632946fbce"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanion.CardRule.matches(card: DominionCompanion.Card) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Rules/Rule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "87">
+               </Location>
+               <Location
+                  uuid = "390D7C31-23FF-4625-A5AA-1D133DB920F8 - ddc749e2543d6106"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanionTests.CardRule.matches(card: DominionCompanionTests.Card) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanionTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Rules/Rule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5B753E5-5D0C-41C9-A79C-96CAF1CAB693"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Rules/Rule.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "listMatches(card:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7127876D-FE45-4DF7-AC1B-3B229B3D354B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanionTests/Models/Filters/SetRuleTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "testFilterMatches()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9907799C-8F43-443B-BD73-1820665F9B4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/Rules/Rule.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "stringMatches(card:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9907799C-8F43-443B-BD73-1820665F9B4C - eb6f3503deb99881"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanion.CardRule.(stringMatches in _FDD5C9297E068B56B8E17CAA9EC32EEB)(card: DominionCompanion.Card) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Rules/Rule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "9907799C-8F43-443B-BD73-1820665F9B4C - c78daf149c3d11db"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanionTests.CardRule.(stringMatches in _36D30A71460E15B87145B84C8757C45D)(card: DominionCompanionTests.Card) -&gt; Swift.Bool"
+                  moduleName = "DominionCompanionTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/Rules/Rule.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

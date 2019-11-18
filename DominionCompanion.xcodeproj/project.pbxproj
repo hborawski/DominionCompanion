@@ -28,11 +28,7 @@
 		AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
 		AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
 		AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
-		AF6AA0972381CD3500AC3BEA /* StringFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0962381CD3500AC3BEA /* StringFilterTest.swift */; };
 		AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
-		AF6AA09B2381CE4E00AC3BEA /* NumberFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */; };
-		AF6AA09D2381D01000AC3BEA /* BooleanFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */; };
-		AF6AA09F2381D08900AC3BEA /* ListFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */; };
 		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
 		AF6AA0A62381E6DB00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
 		AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
@@ -100,11 +96,7 @@
 		AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedCardCell.swift; sourceTree = "<group>"; };
 		AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilder.swift; sourceTree = "<group>"; };
 		AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsViewController.swift; sourceTree = "<group>"; };
-		AF6AA0962381CD3500AC3BEA /* StringFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
-		AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFilterTest.swift; sourceTree = "<group>"; };
-		AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanFilterTest.swift; sourceTree = "<group>"; };
-		AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterTest.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
@@ -251,10 +243,6 @@
 		AF6AA0922381C9DB00AC3BEA /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0962381CD3500AC3BEA /* StringFilterTest.swift */,
-				AF6AA09A2381CE4E00AC3BEA /* NumberFilterTest.swift */,
-				AF6AA09C2381D01000AC3BEA /* BooleanFilterTest.swift */,
-				AF6AA09E2381D08800AC3BEA /* ListFilterTest.swift */,
 				AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */,
 			);
 			path = Filters;
@@ -539,22 +527,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6AA09B2381CE4E00AC3BEA /* NumberFilterTest.swift in Sources */,
 				AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */,
 				AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */,
 				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
 				AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */,
 				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
 				AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */,
-				AF6AA09F2381D08900AC3BEA /* ListFilterTest.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
 				AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */,
 				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
-				AF6AA09D2381D01000AC3BEA /* BooleanFilterTest.swift in Sources */,
 				AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */,
 				AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */,
-				AF6AA0972381CD3500AC3BEA /* StringFilterTest.swift in Sources */,
 				AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

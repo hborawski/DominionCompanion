@@ -19,6 +19,7 @@ enum RuleType: Int, Codable {
     case number
     case boolean
     case string
+    case list
     
     var availableOperations: [FilterOperation] {
         get {
@@ -36,6 +37,8 @@ enum RuleType: Int, Codable {
                 return [.equal]
             case .string:
                 return [.equal, .notEqual]
+            case .list:
+                return [.equal, .notEqual]
             }
         }
     }
@@ -50,6 +53,8 @@ extension CardRule {
             return numberMatches(card: card)
         case .string:
             return stringMatches(card: card)
+        case .list:
+            return listMatches(card: card)
         }
     }
     
@@ -89,6 +94,18 @@ extension CardRule {
     }
     
     private func stringMatches(card: Card) -> Bool {
+        guard let cardValue = card.getProperty(self.property) as? String else { return false }
+        switch self.operation {
+        case .equal:
+            return cardValue == self.comparisonValue
+        case .notEqual:
+            return cardValue != self.comparisonValue
+        default:
+            return false
+        }
+    }
+    
+    private func listMatches(card: Card) -> Bool {
         guard let cardValue = card.getProperty(self.property) as? [String] else { return false }
         switch self.operation {
         case .equal:

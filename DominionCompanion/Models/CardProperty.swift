@@ -41,7 +41,7 @@ enum CardProperty: String, Codable {
             case .expansion:
                 return .string
             case .type:
-                return .string
+                return .list
             case .trash:
                 return .boolean
             case .victoryTokens:

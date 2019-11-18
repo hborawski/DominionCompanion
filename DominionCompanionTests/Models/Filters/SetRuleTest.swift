@@ -11,9 +11,9 @@ import XCTest
 
 class SetRuleTest: XCTestCase {
     func testFilterMatches() {
-        let filter = StringFilter(property: .expansion, value: "Test", operation: .equal)
+        let cardRule = CardRule(type: .string, property: .expansion, operation: .equal, comparisonValue: "Test")
         
-        let rule = SetRule(value: 1, operation: .greater, propertyFilter: filter)
+        let rule = SetRule(value: 1, operation: .greater, cardRules: [cardRule])
         
         XCTAssert(rule.match([TestData.actionCard, TestData.treasureCard]))
         XCTAssert(rule.match([TestData.actionCard, TestData.treasureCard, TestData.actionCardExpansion2]))
