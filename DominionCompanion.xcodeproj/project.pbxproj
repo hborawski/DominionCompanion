@@ -14,7 +14,6 @@
 		AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
 		AF1B6EB623243FAA00ADA74D /* SetFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */; };
 		AF1B6EB8232442AA00ADA74D /* SetRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB7232442AA00ADA74D /* SetRulesViewController.swift */; };
-		AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */; };
 		AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
 		AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1B6EC82324945D00ADA74D /* Icons.xcassets */; };
@@ -24,14 +23,13 @@
 		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
-		AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */; };
 		AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
 		AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
 		AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
 		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
-		AF6AA0A62381E6DB00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
-		AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Rule.swift */; };
+		AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
+		AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
 		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
 		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
 		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
@@ -89,7 +87,6 @@
 		AF1B6EB22324334F00ADA74D /* SetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRule.swift; sourceTree = "<group>"; };
 		AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFilterCell.swift; sourceTree = "<group>"; };
 		AF1B6EB7232442AA00ADA74D /* SetRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRulesViewController.swift; sourceTree = "<group>"; };
-		AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFilter.swift; sourceTree = "<group>"; };
 		AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOperation.swift; sourceTree = "<group>"; };
 		AF1B6EC6232463FD00ADA74D /* CardProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProperty.swift; sourceTree = "<group>"; };
 		AF1B6EC82324945D00ADA74D /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -98,7 +95,7 @@
 		AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsViewController.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
-		AF6AA0A42381E30A00AC3BEA /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		AF6AA0A42381E30A00AC3BEA /* CardRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRule.swift; sourceTree = "<group>"; };
 		AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleViewController.swift; sourceTree = "<group>"; };
 		AF71F69D236FB33500BCB9EA /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		AF71F69F236FB40200BCB9EA /* RangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCell.swift; sourceTree = "<group>"; };
@@ -234,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				AF1B6EB22324334F00ADA74D /* SetRule.swift */,
-				AF1B6EBC23244FC800ADA74D /* PropertyFilter.swift */,
 				AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */,
 			);
 			path = Filters;
@@ -259,7 +255,7 @@
 		AF6AA0A22381E2F600AC3BEA /* Rules */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0A42381E30A00AC3BEA /* Rule.swift */,
+				AF6AA0A42381E30A00AC3BEA /* CardRule.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -496,7 +492,6 @@
 				AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */,
 				AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */,
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
-				AF1B6EBD23244FC800ADA74D /* PropertyFilter.swift in Sources */,
 				AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
 				AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */,
@@ -504,7 +499,7 @@
 				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
-				AF6AA0A62381E6DB00AC3BEA /* Rule.swift in Sources */,
+				AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */,
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
 				AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */,
@@ -530,9 +525,8 @@
 				AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */,
 				AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */,
 				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
-				AF6AA0A72381E6DF00AC3BEA /* Rule.swift in Sources */,
+				AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */,
 				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
-				AF6AA08B2381C72600AC3BEA /* PropertyFilter.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
 				AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */,
