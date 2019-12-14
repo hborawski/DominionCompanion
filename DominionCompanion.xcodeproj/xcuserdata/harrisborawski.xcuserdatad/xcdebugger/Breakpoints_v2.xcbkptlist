@@ -34,8 +34,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
+            landmarkName = "SetBuilderViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "0415D7E9-6BD8-4908-9721-EB58D5E91895 - dd554b31289cf4bb"

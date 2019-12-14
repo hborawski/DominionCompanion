@@ -60,6 +60,7 @@
 		AFE8EE7322A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
 		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
 		AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
+		AFF0A9F223A55F7400056218 /* AttributedCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF0A9F123A55F7400056218 /* AttributedCardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		AFE8EE7122A4AFBE008E09B2 /* cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cards; sourceTree = "<group>"; };
 		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AFF0A9F123A55F7400056218 /* AttributedCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributedCardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */,
 				AF71F69D236FB33500BCB9EA /* FilterCell.swift */,
 				AF71F69F236FB40200BCB9EA /* RangeCell.swift */,
+				AFF0A9F123A55F7400056218 /* AttributedCardCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */,
 				AFE8EE7222A4AFBE008E09B2 /* cards in Resources */,
 				AF80D70E2364E32F00FDC4D6 /* GameplaySetup.storyboard in Resources */,
+				AFF0A9F223A55F7400056218 /* AttributedCardCell.xib in Resources */,
 				AF80D704235C05E300FDC4D6 /* Cards.storyboard in Resources */,
 				AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */,
 				AF80D706235C144800FDC4D6 /* Rules.storyboard in Resources */,

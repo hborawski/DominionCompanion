@@ -22,6 +22,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Setup
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
         self.shuffleSet()
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]

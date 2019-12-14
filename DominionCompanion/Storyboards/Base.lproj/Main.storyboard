@@ -36,7 +36,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kz1-hw-hd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="713"/>
+            <point key="canvasLocation" x="1765" y="445"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jdn-v4-8FJ">
@@ -206,90 +206,6 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attributedCardCell" rowHeight="56" id="ifs-jN-WQz" customClass="AttributedCardCell" customModule="DominionCompanion" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="99" width="375" height="56"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ifs-jN-WQz" id="W0f-FV-idh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-NG-09W">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="56"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="JhK-oQ-fjg"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mL-EU-Fa3">
-                                                            <rect key="frame" x="106" y="18" width="41.666666666666657" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzY-CQ-3Ud" userLabel="Debt Background">
-                                                            <rect key="frame" x="58" y="12" width="32" height="32"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFO-mK-16U" userLabel="Debt Label">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="32" id="EEf-Av-4Gr"/>
-                                                                <constraint firstAttribute="height" constant="32" id="MnT-iA-NVd"/>
-                                                                <constraint firstItem="ZFO-mK-16U" firstAttribute="top" secondItem="hzY-CQ-3Ud" secondAttribute="top" id="OVz-sq-c3V"/>
-                                                                <constraint firstItem="ZFO-mK-16U" firstAttribute="leading" secondItem="hzY-CQ-3Ud" secondAttribute="leading" id="QzK-6L-Em1"/>
-                                                                <constraint firstAttribute="trailing" secondItem="ZFO-mK-16U" secondAttribute="trailing" id="aQp-uE-FJv"/>
-                                                                <constraint firstAttribute="bottom" secondItem="ZFO-mK-16U" secondAttribute="bottom" id="dsg-WM-DWK"/>
-                                                                <constraint firstItem="ZFO-mK-16U" firstAttribute="centerX" secondItem="hzY-CQ-3Ud" secondAttribute="centerX" id="nYL-4M-hSV"/>
-                                                                <constraint firstItem="ZFO-mK-16U" firstAttribute="centerY" secondItem="hzY-CQ-3Ud" secondAttribute="centerY" id="xnm-Zg-xub"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enp-jO-4nq">
-                                                            <rect key="frame" x="58" y="12" width="32" height="32"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-K2-Cre">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="1ml-s3-KNS"/>
-                                                                <constraint firstItem="6ic-K2-Cre" firstAttribute="top" secondItem="enp-jO-4nq" secondAttribute="top" id="4oD-xR-wu0"/>
-                                                                <constraint firstAttribute="bottom" secondItem="6ic-K2-Cre" secondAttribute="bottom" id="Anh-j7-jXI"/>
-                                                                <constraint firstAttribute="width" constant="32" id="Jts-db-3sF"/>
-                                                                <constraint firstItem="6ic-K2-Cre" firstAttribute="centerY" secondItem="enp-jO-4nq" secondAttribute="centerY" id="mrb-ht-N4C"/>
-                                                                <constraint firstAttribute="trailing" secondItem="6ic-K2-Cre" secondAttribute="trailing" id="oHT-RY-tmI"/>
-                                                                <constraint firstItem="6ic-K2-Cre" firstAttribute="leading" secondItem="enp-jO-4nq" secondAttribute="leading" id="zvs-0k-7HS"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="6mL-EU-Fa3" firstAttribute="leading" secondItem="enp-jO-4nq" secondAttribute="trailing" constant="16" id="4bo-mh-jPt"/>
-                                                        <constraint firstItem="6mL-EU-Fa3" firstAttribute="centerY" secondItem="W0f-FV-idh" secondAttribute="centerY" id="F1Q-yB-Ok7"/>
-                                                        <constraint firstItem="hzY-CQ-3Ud" firstAttribute="centerY" secondItem="W0f-FV-idh" secondAttribute="centerY" id="HhE-7s-ysW"/>
-                                                        <constraint firstItem="enp-jO-4nq" firstAttribute="centerY" secondItem="hzY-CQ-3Ud" secondAttribute="centerY" id="LYw-Nl-XZK"/>
-                                                        <constraint firstItem="ffg-NG-09W" firstAttribute="leading" secondItem="W0f-FV-idh" secondAttribute="leading" id="OpF-Te-pw4"/>
-                                                        <constraint firstItem="ffg-NG-09W" firstAttribute="top" secondItem="W0f-FV-idh" secondAttribute="top" id="fEi-iT-SKC"/>
-                                                        <constraint firstItem="enp-jO-4nq" firstAttribute="leading" secondItem="ffg-NG-09W" secondAttribute="trailing" constant="8" id="ha6-PO-5Pd"/>
-                                                        <constraint firstItem="hzY-CQ-3Ud" firstAttribute="centerX" secondItem="enp-jO-4nq" secondAttribute="centerX" id="ncH-0w-mit"/>
-                                                        <constraint firstItem="enp-jO-4nq" firstAttribute="centerY" secondItem="W0f-FV-idh" secondAttribute="centerY" id="rdb-aT-w0T"/>
-                                                        <constraint firstAttribute="bottom" secondItem="ffg-NG-09W" secondAttribute="bottom" id="wJ5-Ro-4nV"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="cardColorView" destination="ffg-NG-09W" id="Ys0-P6-bFq"/>
-                                                    <outlet property="costBackground" destination="enp-jO-4nq" id="GB7-Jq-FJp"/>
-                                                    <outlet property="costLabel" destination="6ic-K2-Cre" id="Lxm-Pb-FJ7"/>
-                                                    <outlet property="debtBackground" destination="hzY-CQ-3Ud" id="ar2-VS-Wwc"/>
-                                                    <outlet property="debtLabel" destination="ZFO-mK-16U" id="Mad-7a-XV2"/>
-                                                    <outlet property="nameLabel" destination="6mL-EU-Fa3" id="Ldc-Ie-b1s"/>
-                                                    <segue destination="Fpl-ex-jgG" kind="show" identifier="ViewCard" id="1IB-Dm-9D5"/>
-                                                </connections>
-                                            </tableViewCell>
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="2F7-bz-VMJ" id="AUk-Qe-e9K"/>
@@ -348,6 +264,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jpY-1W-paC"/>
+        <segue reference="aIl-BN-Vth"/>
     </inferredMetricsTieBreakers>
 </document>
