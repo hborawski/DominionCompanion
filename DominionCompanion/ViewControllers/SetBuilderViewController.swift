@@ -100,13 +100,17 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
-        if segue.identifier == "ViewCard",
+        if
+            segue.identifier == "ViewCard",
             let cardVC = segue.destination as? CardViewController
         {
             cardVC.card = currentSet[indexPath.section].rows[indexPath.row].card
             return
         }
-        if segue.identifier == "GoToGameplaySetup", let gameplayVC = segue.destination as? GameplaySetupViewController {
+        if
+            segue.identifier == "GoToGameplaySetup",
+            let gameplayVC = segue.destination as? GameplaySetupViewController
+        {
             gameplayVC.setModel = SetBuilder.shared.getFinalSet()
             return
         }

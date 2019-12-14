@@ -15,7 +15,14 @@ struct SetModel {
     
     // MARK: Cards for this set
     var cards: [Card]
-    var notInSupply: [Card]
+    var notInSupply: [Card] {
+        get {
+            return self.cards.map({$0.relatedCards}).reduce([]) { (relatedCards, nextRelated) -> [Card] in
+                let cardSet = Set(relatedCards + nextRelated)
+                return Array(cardSet)
+            }
+        }
+    }
     
     // MARK: General Required Extras
     var colonies: Bool

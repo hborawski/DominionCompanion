@@ -182,7 +182,7 @@ class SetBuilder {
     
     func getFinalSet() -> SetModel {
         let colonies = UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies)
-        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, notInSupply: [], colonies: colonies)
+        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, colonies: colonies)
     }
     
     // MARK: Private
