@@ -54,10 +54,7 @@ class CardsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else {
-            print("couldn't get a cell")
-            return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
         guard let card = self.cardData?[indexPath.row] else { return cell }
         cell.setData(card)
         if excludeMode, CardData.shared.excludedCards.contains(card) {
@@ -86,6 +83,11 @@ class CardsViewController: UITableViewController {
             return UISwipeActionsConfiguration(actions: [pin])
         }
         return nil
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        self.performSegue(withIdentifier: "ViewCard", sender: cell)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

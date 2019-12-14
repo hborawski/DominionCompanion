@@ -74,6 +74,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: UITableViewDelegate
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        self.performSegue(withIdentifier: "ViewCard", sender: cell)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = currentSet[indexPath.section]
         if shuffling == true && section.canShuffle {
@@ -90,6 +95,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             cardData.pinAction()
+            self.currentSet = SetBuilder.shared.currentSet
             tableView.reloadData()
             self.toggleSetupButton()
             completion(true)

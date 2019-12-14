@@ -231,6 +231,7 @@
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
                         <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>
+                        <segue destination="Fpl-ex-jgG" kind="show" identifier="ViewCard" id="Nd1-9U-sxv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZZ-e6-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
