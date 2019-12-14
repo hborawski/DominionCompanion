@@ -17,7 +17,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     var shuffling: Bool = false
     
-    var currentSet: [SetBuilderSection] = []
+    var currentSet: [SetBuilderSection] {
+        get {
+            return SetBuilder.shared.currentSet
+        }
+    }
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -27,7 +31,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]
         gameplaySetupButton.layer.cornerRadius = 6.0
-        self.currentSet = SetBuilder.shared.currentSet
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +55,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.reloadData()
         SetBuilder.shared.shuffleSet {
             self.shuffling = false
-            self.currentSet = SetBuilder.shared.currentSet
             self.tableView.reloadData()
         }
     }
@@ -95,7 +97,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.shuffling == false else { return }
             cardData.pinAction()
-            self.currentSet = SetBuilder.shared.currentSet
             tableView.reloadData()
             self.toggleSetupButton()
             completion(true)
@@ -106,9 +107,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
         if
             segue.identifier == "ViewCard",
+            let selectedCell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: selectedCell),
             let cardVC = segue.destination as? CardViewController
         {
             cardVC.card = currentSet[indexPath.section].rows[indexPath.row].card
