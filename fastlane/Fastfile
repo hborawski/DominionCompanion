@@ -23,11 +23,11 @@ platform :ios do
       output_directory: 'reports',
       code_coverage: true
     )
-    slather(
+    xcov(
       output_directory: 'reports/coverage',
-      html: true,
+      html_report: true,
       scheme: 'DominionCompanion',
-      proj: 'DominionCompanion.xcodeproj'
+      project: 'DominionCompanion.xcodeproj'
     )
   end
 end
