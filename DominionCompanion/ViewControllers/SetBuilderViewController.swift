@@ -17,11 +17,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     var shuffling: Bool = false
     
-    var currentSet: [SetBuilderSection] {
-        get {
-            return SetBuilder.shared.currentSet
-        }
-    }
+    var currentSet: [SetBuilderSection] = []
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -38,6 +34,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.reloadData()
         rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
         toggleSetupButton()
+        self.currentSet = SetBuilder.shared.currentSet
     }
     
     // MARK: Button Handlers
@@ -55,6 +52,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.reloadData()
         SetBuilder.shared.shuffleSet {
             self.shuffling = false
+            self.currentSet = SetBuilder.shared.currentSet
             self.tableView.reloadData()
         }
     }
@@ -99,6 +97,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             cardData.pinAction()
             tableView.reloadData()
             self.toggleSetupButton()
+            self.currentSet = SetBuilder.shared.currentSet
             completion(true)
         }
         pin.image = cardData.pinned ? UIImage(named: "Delete") : UIImage(named: "Checkmark")

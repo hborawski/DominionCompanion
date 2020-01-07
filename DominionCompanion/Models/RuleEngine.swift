@@ -34,10 +34,11 @@ class RuleEngine {
     
     var matchAnyRule: [Card] {
         get {
-            guard rules.count > 0 else { return cardData }
+            let cardCopy = self.cardData
+            guard rules.count > 0 else { return cardCopy }
             let cards = rules.reduce([]) { (cards: [Card], filter: SetRule) -> [Card] in
                 let cardSet = Set(cards)
-                let filtered = filter.matchingCards(cardData)
+                let filtered = filter.matchingCards(cardCopy)
                 let filterSet = Set(filtered)
                 return Array(cardSet.union(filterSet))
             }
@@ -47,9 +48,10 @@ class RuleEngine {
     
     var matchAllRules: [Card] {
         get {
-            let cards = rules.reduce(cardData) { (cards: [Card], filter: SetRule) -> [Card] in
+            let cardCopy = self.cardData
+            let cards = rules.reduce(cardCopy) { (cards: [Card], filter: SetRule) -> [Card] in
                 let cardSet = Set(cards)
-                let filtered = filter.matchingCards(cardData)
+                let filtered = filter.matchingCards(cardCopy)
                 let filterSet = Set(filtered)
                 return Array(cardSet.intersection(filterSet))
             }
@@ -71,19 +73,20 @@ class RuleEngine {
     
     // MARK: Public API
     func getMatchingSet(_ pinned: [Card], _ completion: @escaping ([Card]) -> Void) {
-        guard self.cardData.count >= 10 else {
+        let cardCopy = self.cardData
+        guard cardCopy.count >= 10 else {
             completion([])
             return
         }
         guard rules.count > 0 else {
-            completion(Array(cardData.shuffled()[0...9]))
+            completion(Array(cardCopy.shuffled()[0...9]))
             return
         }
         DispatchQueue.global(qos: .background).async {
             var attempts = 0
-            var testSet = Array(self.cardData.shuffled()[0...9])
+            var testSet = Array(cardCopy.shuffled()[0...9])
             while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
-                testSet = Array(self.cardData.shuffled()[0...9])
+                testSet = Array(cardCopy.shuffled()[0...9])
                 attempts += 1
             }
             DispatchQueue.main.async {

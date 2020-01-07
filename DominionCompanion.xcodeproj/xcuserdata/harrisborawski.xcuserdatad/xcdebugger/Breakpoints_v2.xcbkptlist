@@ -32,10 +32,10 @@
             timestampString = "590273579.5965281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "SetBuilderViewController"
-            landmarkType = "3">
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "0415D7E9-6BD8-4908-9721-EB58D5E91895 - dd554b31289cf4bb"
@@ -602,10 +602,10 @@
             timestampString = "590273579.603142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "SetBuilderViewController"
-            landmarkType = "3">
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -670,9 +670,9 @@
             timestampString = "590273579.603922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -757,8 +757,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
+            landmarkName = "SetBuilderViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1319,8 +1319,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "tableView(_:trailingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1383,8 +1383,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1735,8 +1735,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "tableView(_:trailingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1751,8 +1751,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1767,8 +1767,8 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1783,10 +1783,10 @@
             filePath = "DominionCompanion/ViewControllers/SetBuilderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "goToGameplaySetup(_:)"
-            landmarkType = "7">
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "SetBuilderViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1803,6 +1803,54 @@
             endingLineNumber = "38"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D90D9BA-A68B-467B-8330-CA810C28F860"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/CardData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "cardsFromChosenExpansions"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0D90D9BA-A68B-467B-8330-CA810C28F860 - df59f6f89c4ada71"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DominionCompanion.CardData.cardsFromChosenExpansions.getter : Swift.Array&lt;DominionCompanion.Card&gt;"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "0D90D9BA-A68B-467B-8330-CA810C28F860 - 512630a68dc2391e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DominionCompanion.Card) -&gt; Swift.Bool in DominionCompanion.CardData.cardsFromChosenExpansions.getter : Swift.Array&lt;DominionCompanion.Card&gt;"
+                  moduleName = "DominionCompanion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/Models/CardData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
