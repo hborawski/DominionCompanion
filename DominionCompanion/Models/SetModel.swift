@@ -74,8 +74,8 @@ struct SetModel {
         }
         
         var sections = [
-            GameplaySection(title: "In Supply", rows: self.cards.map(getAttributedCardCell)),
-            GameplaySection(title: "Not In Supply", rows: self.notInSupply.map(getAttributedCardCell))
+            GameplaySection(title: "In Supply", rows: self.cards.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell)),
+            GameplaySection(title: "Not In Supply", rows: self.notInSupply.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell))
         ]
         
         if landmarks.count > 0 {
@@ -107,6 +107,10 @@ struct SetModel {
             tokens.append("Coin Tokens")
         }
         return tokens
+    }
+    
+    func sortByExpansionAndCost(card1: Card, card2: Card) -> Bool {
+        return card1.expansion == card2.expansion ? (card1.cost < card2.cost) : (card1.expansion < card2.expansion)
     }
 }
 
