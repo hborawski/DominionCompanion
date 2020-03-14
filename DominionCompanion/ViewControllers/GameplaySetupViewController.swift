@@ -12,52 +12,21 @@ import UIKit
 class GameplaySetupViewController: UITableViewController {
     var setModel: SetModel?
     
+    var tableData: [GameplaySection] = []
+    
     override func viewDidLoad() {
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
+        guard let model = setModel else { return }
+        tableData = model.getSections(tableView: tableView)
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "In Supply"
-        case 1:
-            return "Not In Supply"
-        default:
-            return ""
-        }
-    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { tableData[section].title }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+    override func numberOfSections(in tableView: UITableView) -> Int { tableData.count }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let model = setModel else { return 0 }
-        switch section {
-        case 0:
-            return model.cards.count
-        case 1:
-            return model.notInSupply.count
-        default:
-            return 0
-        }
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { tableData[section].rows.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let model = setModel,
-            let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell
-        else { return UITableViewCell() }
-        switch indexPath.section {
-        case 0:
-            let card = model.cards[indexPath.row]
-            cell.setData(card)
-        case 1:
-            let card = model.notInSupply[indexPath.row]
-            cell.setData(card)
-        default:
-            return cell
-        }
-        return cell
+        return tableData[indexPath.section].rows[indexPath.row]
     }
 }

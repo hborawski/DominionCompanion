@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct SetModel {
     // MARK: Specific Set Wide Effects
@@ -56,4 +57,60 @@ struct SetModel {
             return self.cards.filter({$0.tokens.coin > 0}).count > 0
         }
     }
+    
+    func getSections(tableView: UITableView) -> [GameplaySection] {
+        let getAttributedCardCell = { (card: Card) -> UITableViewCell in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else {
+                return UITableViewCell()
+            }
+            cell.setData(card, favorite: false, showExpansion: true)
+            return cell
+        }
+        
+        let getBasicCell = { (text: String) -> UITableViewCell in
+            let cell = UITableViewCell()
+            cell.textLabel?.text = text
+            return cell
+        }
+        
+        var sections = [
+            GameplaySection(title: "In Supply", rows: self.cards.map(getAttributedCardCell)),
+            GameplaySection(title: "Not In Supply", rows: self.notInSupply.map(getAttributedCardCell))
+        ]
+        
+        if landmarks.count > 0 {
+            sections.append(GameplaySection(title: "Landmarks", rows: self.landmarks.map(getAttributedCardCell)))
+        }
+
+        if events.count > 0 {
+            sections.append(GameplaySection(title: "Events", rows: self.events.map(getAttributedCardCell)))
+        }
+        
+        let tokens = getTokens()
+        if tokens.count > 0 {
+            sections.append(GameplaySection(title: "Tokens", rows: tokens.map(getBasicCell)))
+        }
+        
+        return sections
+    }
+    
+    func getTokens() -> [String] {
+        var tokens: [String] = []
+        
+        if debt {
+            tokens.append("Debt Tokens")
+        }
+        if victoryTokens {
+            tokens.append("Victory Tokens")
+        }
+        if coinTokens {
+            tokens.append("Coin Tokens")
+        }
+        return tokens
+    }
+}
+
+struct GameplaySection {
+    let title: String
+    let rows: [UITableViewCell]
 }

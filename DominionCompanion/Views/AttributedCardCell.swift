@@ -14,11 +14,12 @@ class AttributedCardCell : UITableViewCell {
     @IBOutlet weak var costBackground: UIView!
     @IBOutlet weak var cardColorView: UIStackView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var expansionLabel: UILabel!
     
     @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var debtBackground: UIView!
     
-    func setData(_ card: Card, favorite: Bool = false) {
+    func setData(_ card: Card, favorite: Bool = false, showExpansion: Bool = false) {
         self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
         makeColorView(card.types)
@@ -32,6 +33,13 @@ class AttributedCardCell : UITableViewCell {
             makeCostView()
             debtBackground.isHidden = true
             costBackground.isHidden = false
+        }
+        
+        if showExpansion {
+            expansionLabel.isHidden = false
+            expansionLabel.text = card.expansion
+        } else {
+            expansionLabel.isHidden = true
         }
     }
     

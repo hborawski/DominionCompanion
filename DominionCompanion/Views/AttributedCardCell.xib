@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -69,6 +69,12 @@
                             <constraint firstAttribute="height" constant="32" id="kcU-P3-Rol"/>
                         </constraints>
                     </view>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x0-yU-Cu2">
+                        <rect key="frame" x="325" y="17.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="el5-YL-jQU" firstAttribute="leading" secondItem="FeK-pw-tpN" secondAttribute="trailing" constant="8" id="0Xh-DH-tze"/>
@@ -76,6 +82,8 @@
                     <constraint firstItem="d2T-y6-jYv" firstAttribute="centerY" secondItem="oYq-g3-6Es" secondAttribute="centerY" id="204-H9-JKP"/>
                     <constraint firstItem="FeK-pw-tpN" firstAttribute="top" secondItem="oYq-g3-6Es" secondAttribute="top" id="4i2-84-oRm"/>
                     <constraint firstItem="el5-YL-jQU" firstAttribute="centerY" secondItem="d2T-y6-jYv" secondAttribute="centerY" id="984-ID-xGi"/>
+                    <constraint firstAttribute="trailing" secondItem="1x0-yU-Cu2" secondAttribute="trailing" constant="8" id="E0u-kt-DFs"/>
+                    <constraint firstItem="1x0-yU-Cu2" firstAttribute="centerY" secondItem="1b9-JX-Azk" secondAttribute="centerY" id="NCY-Ku-bku"/>
                     <constraint firstItem="d2T-y6-jYv" firstAttribute="centerX" secondItem="el5-YL-jQU" secondAttribute="centerX" id="Uyl-dd-dMY"/>
                     <constraint firstAttribute="bottom" secondItem="FeK-pw-tpN" secondAttribute="bottom" id="Zrp-lq-c42"/>
                     <constraint firstItem="el5-YL-jQU" firstAttribute="centerY" secondItem="oYq-g3-6Es" secondAttribute="centerY" id="eSb-mz-NFY"/>
@@ -89,6 +97,7 @@
                 <outlet property="costLabel" destination="Tpr-Yg-SeX" id="i9I-6t-pC1"/>
                 <outlet property="debtBackground" destination="d2T-y6-jYv" id="dpM-ok-jzY"/>
                 <outlet property="debtLabel" destination="Skz-OV-VV9" id="Tec-rp-j3p"/>
+                <outlet property="expansionLabel" destination="1x0-yU-Cu2" id="a1R-6d-w6E"/>
                 <outlet property="nameLabel" destination="1b9-JX-Azk" id="dv1-s9-EuK"/>
             </connections>
             <point key="canvasLocation" x="-499" y="-209"/>
