@@ -23,7 +23,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
-        self.shuffleSet()
+        if !SetBuilder.shared.setComplete {
+            self.shuffleSet()
+        }
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]
         gameplaySetupButton.layer.cornerRadius = 6.0

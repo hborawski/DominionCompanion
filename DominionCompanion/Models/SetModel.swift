@@ -75,9 +75,12 @@ struct SetModel {
         }
         
         var sections = [
-            GameplaySection(title: "In Supply", rows: self.cards.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell)),
-            GameplaySection(title: "Not In Supply", rows: self.notInSupply.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell))
+            GameplaySection(title: "In Supply", rows: self.cards.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell))
         ]
+        
+        if notInSupply.count > 0 {
+            sections.append(GameplaySection(title: "Not In Supply", rows: self.notInSupply.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell)))
+        }
         
         if landmarks.count > 0 {
             sections.append(GameplaySection(title: "Landmarks", rows: self.landmarks.map(getAttributedCardCell)))
