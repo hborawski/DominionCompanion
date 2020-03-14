@@ -91,6 +91,11 @@ struct SetModel {
             sections.append(GameplaySection(title: "Tokens", rows: tokens.map(getBasicCell)))
         }
         
+        let additionalMechanics = getAdditionalMechanics()
+        if additionalMechanics.count > 0 {
+            sections.append(GameplaySection(title: "Additional Mechanics", rows: additionalMechanics.map(getBasicCell)))
+        }
+        
         return sections
     }
     
@@ -107,6 +112,24 @@ struct SetModel {
             tokens.append("Coin Tokens")
         }
         return tokens
+    }
+    
+    func getAdditionalMechanics() -> [String] {
+        var mechanics: [String] = []
+        
+        if boons {
+            mechanics.append("Boons")
+        }
+        
+        if hexes {
+            mechanics.append("Hexes")
+        }
+        
+        if potions {
+            mechanics.append("Potion")
+        }
+        
+        return mechanics
     }
     
     func sortByExpansionAndCost(card1: Card, card2: Card) -> Bool {
