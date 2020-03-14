@@ -76,10 +76,12 @@ class AttributedCardCell : UITableViewCell {
 
         circleView.layer.cornerRadius = dimension / 2
         circleView.translatesAutoresizingMaskIntoConstraints = false
-        circleView.heightAnchor.constraint(equalToConstant: dimension).isActive = true
-        circleView.widthAnchor.constraint(equalToConstant: dimension).isActive = true
-        circleView.centerXAnchor.constraint(equalTo: costLabel.centerXAnchor).isActive = true
-        circleView.centerYAnchor.constraint(equalTo: costLabel.centerYAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            circleView.heightAnchor.constraint(equalToConstant: dimension),
+            circleView.widthAnchor.constraint(equalToConstant: dimension),
+            circleView.centerXAnchor.constraint(equalTo: costLabel.centerXAnchor),
+            circleView.centerYAnchor.constraint(equalTo: costLabel.centerYAnchor)
+        ])
         circleView.backgroundColor = UIColor(named: "Treasure")
         costBackground.layoutIfNeeded()
         
