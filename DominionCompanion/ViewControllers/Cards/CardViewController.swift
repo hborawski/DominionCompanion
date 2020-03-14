@@ -39,12 +39,15 @@ class CardViewController: UIViewController {
         let add = UIBarButtonItem(image: UIImage(named: "Checkmark"), style: .plain, target: self, action: #selector(doPin(_:)))
         let remove = UIBarButtonItem(image: UIImage(named: "Delete"), style: .plain, target: self, action: excludeMode ? #selector(doExclude(_:)) : #selector(doPin(_:)))
         guard let card = self.card else { return }
+        if !SetBuilder.shared.pinnedCards.contains(card), !excludeMode, SetBuilder.shared.setComplete {
+            self.navigationItem.rightBarButtonItem = nil
+            return
+        }
         if
             !excludeMode && SetBuilder.shared.pinnedCards.contains(card) ||
             excludeMode && CardData.shared.excludedCards.contains(card)
         {
             self.navigationItem.rightBarButtonItem = remove
-            
         } else {
             self.navigationItem.rightBarButtonItem = excludeMode ? exclude : add
         }
