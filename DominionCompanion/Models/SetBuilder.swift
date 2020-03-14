@@ -187,7 +187,7 @@ class SetBuilder {
     
     // MARK: Private
     private func getFullSet() -> [Card] {
-        guard randomCards.count > 0 else { return pinnedCards }
+        guard randomCards.count > 0 else { return pinnedCards.sorted(by: getSortFunction()) }
         let openSlots = maxCards - pinnedCards.count
         guard openSlots > 0 else { return pinnedCards.sorted(by: getSortFunction()) }
         let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1

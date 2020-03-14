@@ -33,10 +33,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.currentSet = SetBuilder.shared.currentSet
         self.tableView.reloadData()
         rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
         toggleSetupButton()
-        self.currentSet = SetBuilder.shared.currentSet
     }
     
     // MARK: Button Handlers
