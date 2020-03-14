@@ -34,18 +34,18 @@ struct SetModel {
         }
     }
     var hexes: Bool {
-           get {
-               return self.cards.filter({$0.types.contains("Doom")}).count > 0
-           }
-       }
-    var debt: Bool {
         get {
-            return self.cards.filter({$0.tokens.debt == true}).count > 0
+            return self.cards.filter({$0.types.contains("Doom")}).count > 0
         }
     }
     var potions: Bool {
         get {
-            return self.cards.filter({$0.potion == true}).count > 0
+            return self.cards.filter({$0.potion}).count > 0
+        }
+    }
+    var debt: Bool {
+        get {
+            return self.cards.filter({$0.tokens.debt}).count > 0
         }
     }
     var victoryTokens: Bool {
@@ -56,6 +56,61 @@ struct SetModel {
     var coinTokens: Bool {
         get {
             return self.cards.filter({$0.tokens.coin > 0}).count > 0
+        }
+    }
+    var embargoTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.embargo}).count > 0
+        }
+    }
+    var journeyToken: Bool {
+        get {
+            return self.cards.filter({$0.tokens.journey}).count > 0
+        }
+    }
+    var minusCardTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.minusCard}).count > 0
+        }
+    }
+    var minusCoinTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.embargo}).count > 0
+        }
+    }
+    var plusCardTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.plusCard}).count > 0
+        }
+    }
+    var plusActionTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.plusAction}).count > 0
+        }
+    }
+    var plusBuyTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.plusBuy}).count > 0
+        }
+    }
+    var plusCoinTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.plusCoin}).count > 0
+        }
+    }
+    var minusCostTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.minusCost}).count > 0
+        }
+    }
+    var trashingTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.trashing}).count > 0
+        }
+    }
+    var estateTokens: Bool {
+        get {
+            return self.cards.filter({$0.tokens.estate}).count > 0
         }
     }
     
@@ -106,15 +161,20 @@ struct SetModel {
     func getTokens() -> [String] {
         var tokens: [String] = []
         
-        if debt {
-            tokens.append("Debt Tokens")
-        }
-        if victoryTokens {
-            tokens.append("Victory Tokens")
-        }
-        if coinTokens {
-            tokens.append("Coin Tokens")
-        }
+        if debt { tokens.append("Debt Tokens") }
+        if victoryTokens { tokens.append("Victory Tokens") }
+        if coinTokens { tokens.append("Coin Tokens") }
+        if embargoTokens { tokens.append("Embargo Tokens") }
+        if journeyToken { tokens.append("Journey Token") }
+        if minusCardTokens { tokens.append("-Card Token") }
+        if minusCoinTokens { tokens.append("-Coin Token") }
+        if plusCardTokens { tokens.append("+Card Token") }
+        if plusActionTokens { tokens.append("+Action Token") }
+        if plusBuyTokens { tokens.append("+Buy Token") }
+        if plusCoinTokens { tokens.append("+Coin Token") }
+        if minusCostTokens { tokens.append("-Cost Token") }
+        if trashingTokens { tokens.append("Trashing Token") }
+        if estateTokens { tokens.append("Estate Token") }
         return tokens
     }
     
