@@ -19,7 +19,8 @@ struct SetModel {
     var notInSupply: [Card] {
         get {
             return self.cards.map({$0.relatedCards}).reduce([]) { (relatedCards, nextRelated) -> [Card] in
-                let cardSet = Set(relatedCards + nextRelated)
+                let next = nextRelated.filter({Set($0.types).intersection(Set(Constants.notGameplayRelatedTypes)).count == 0})
+                let cardSet = Set(relatedCards + next)
                 return Array(cardSet)
             }
         }

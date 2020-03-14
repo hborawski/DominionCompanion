@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     static let nonKingdomTypes = ["Boon", "Curse", "Event", "Heirloom", "Hex", "Landmark", "Prize", "Ruins", "Shelter", "State"]
+    static let notGameplayRelatedTypes = ["Boon", "Hex"]
     struct SaveKeys {
         static let pinnedRules = "pinnedRules"
         static let savedRules = "savedRules"
