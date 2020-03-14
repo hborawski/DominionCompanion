@@ -108,6 +108,7 @@ class SetBuilder {
         self.randomEvents = CardData.shared.allEvents.shuffled()
         self.pinnedCards = []
         self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
+        self.fullSet = getFullSet()
     }
     
     func pinCard(_ card: Card) {

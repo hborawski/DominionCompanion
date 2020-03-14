@@ -28,6 +28,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         }
         let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
         self.navigationItem.rightBarButtonItems = [settings]
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showShareMenu))
         gameplaySetupButton.layer.cornerRadius = 6.0
     }
     
@@ -46,6 +47,21 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     @objc func openSettings(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "ShowSettings", sender: self)
+    }
+    
+    @objc func showShareMenu() {
+        let alertController = UIAlertController(title: "Set Sharing", message: "", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Scan a code", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "ScanQRCode", sender: nil)
+        }))
+        alertController.addAction(UIAlertAction(title: "Generate a code", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "GenerateQRCode", sender: SetBuilder.shared.fullSet)
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            alertController.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alertController, animated: true)
     }
     
     func shuffleSet() {
@@ -123,6 +139,20 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         {
             gameplayVC.setModel = SetBuilder.shared.getFinalSet()
             return
+        }
+        if
+            segue.identifier == "GenerateQRCode",
+            let shareVC = segue.destination as? ShareSetViewController,
+            let set = sender as? [Card]
+        {
+            shareVC.cards = set
+            return
+        }
+        
+        if segue.identifier == "ScanQRCode", let scanVC = segue.destination as? ScanSetViewController {
+            scanVC.importSucceeded = {
+                self.viewWillAppear(true)
+            }
         }
     }
 }

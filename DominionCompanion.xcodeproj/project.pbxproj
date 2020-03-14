@@ -46,6 +46,9 @@
 		AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */; };
 		AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */; };
 		AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */; };
+		AFD4615E241C9426007720EA /* QRCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4615D241C9426007720EA /* QRCodes.storyboard */; };
+		AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46160241C945E007720EA /* ShareSetViewController.swift */; };
+		AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46162241D5D22007720EA /* ScanSetViewController.swift */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */; };
 		AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4122A4843B008E09B2 /* Main.storyboard */; };
@@ -113,6 +116,9 @@
 		AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuModel.swift; sourceTree = "<group>"; };
 		AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingTableViewController.swift; sourceTree = "<group>"; };
 		AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRulesTableViewController.swift; sourceTree = "<group>"; };
+		AFD4615D241C9426007720EA /* QRCodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodes.storyboard; sourceTree = "<group>"; };
+		AFD46160241C945E007720EA /* ShareSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSetViewController.swift; sourceTree = "<group>"; };
+		AFD46162241D5D22007720EA /* ScanSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSetViewController.swift; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE3F22A4843B008E09B2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		AF1B6EA7232421A000ADA74D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFD4615F241C9455007720EA /* Sharing */,
 				AF80D6FE235BCE5600FDC4D6 /* Settings */,
 				AFB14777235B9F0D00CDA293 /* Cards */,
 				AFB14776235B9EFC00CDA293 /* Rules */,
@@ -196,6 +203,7 @@
 				AF80D703235C05E300FDC4D6 /* Cards.storyboard */,
 				AF80D705235C144800FDC4D6 /* Rules.storyboard */,
 				AF80D70D2364E32F00FDC4D6 /* GameplaySetup.storyboard */,
+				AFD4615D241C9426007720EA /* QRCodes.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -290,6 +298,15 @@
 				AFE8EE6E22A4982D008E09B2 /* CardsViewController.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		AFD4615F241C9455007720EA /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				AFD46160241C945E007720EA /* ShareSetViewController.swift */,
+				AFD46162241D5D22007720EA /* ScanSetViewController.swift */,
+			);
+			path = Sharing;
 			sourceTree = "<group>";
 		};
 		AFE8EE3122A4843B008E09B2 = {
@@ -459,6 +476,7 @@
 				AFE8EE4322A4843B008E09B2 /* Main.storyboard in Resources */,
 				AFE8EE7222A4AFBE008E09B2 /* cards in Resources */,
 				AF80D70E2364E32F00FDC4D6 /* GameplaySetup.storyboard in Resources */,
+				AFD4615E241C9426007720EA /* QRCodes.storyboard in Resources */,
 				AFF0A9F223A55F7400056218 /* AttributedCardCell.xib in Resources */,
 				AF80D704235C05E300FDC4D6 /* Cards.storyboard in Resources */,
 				AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */,
@@ -504,10 +522,12 @@
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */,
+				AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */,
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
 				AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
+				AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,

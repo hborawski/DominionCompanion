@@ -58,6 +58,22 @@
             </objects>
             <point key="canvasLocation" x="2691" y="-115"/>
         </scene>
+        <!--ScanSetViewController-->
+        <scene sceneID="gPy-lR-Lqm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QRCodes" referencedIdentifier="ScanSetViewController" id="foP-jC-2Cm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecQ-2x-BxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-775"/>
+        </scene>
+        <!--ShareSetViewController-->
+        <scene sceneID="Kxg-RL-WnJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QRCodes" referencedIdentifier="ShareSetViewController" id="h2Y-BS-LlO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJx-fK-0FJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2407" y="-718"/>
+        </scene>
         <!--Rules-->
         <scene sceneID="VGO-82-Pcq">
             <objects>
@@ -232,6 +248,8 @@
                         <segue destination="JAb-gU-f70" kind="show" identifier="ShowSettings" id="e66-lv-GfX"/>
                         <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>
                         <segue destination="Fpl-ex-jgG" kind="show" identifier="ViewCard" id="Nd1-9U-sxv"/>
+                        <segue destination="h2Y-BS-LlO" kind="presentation" identifier="GenerateQRCode" id="RJv-BA-F1N"/>
+                        <segue destination="foP-jC-2Cm" kind="presentation" identifier="ScanQRCode" id="wgd-ab-fDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZZ-e6-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
