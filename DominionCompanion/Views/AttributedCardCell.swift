@@ -91,21 +91,20 @@ class AttributedCardCell : UITableViewCell {
         cardColorView.arrangedSubviews.forEach{ subview in
             subview.removeFromSuperview()
         }
-        let width = cardColorView.frame.width / CGFloat(colors.count)
+
         colors.forEach { color in
             guard let uiColor = UIColor(named: color) else { return }
-            addStripToView(uiColor, view: cardColorView, width: width)
+            addStripToView(uiColor, view: cardColorView)
         }
         cardColorView.layoutIfNeeded()
     }
     
-    func addStripToView(_ color: UIColor, view parentView: UIStackView, width: CGFloat) {
+    func addStripToView(_ color: UIColor, view parentView: UIStackView) {
         let view = UIView()
         parentView.addArrangedSubview(view)
         
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalTo: parentView.heightAnchor).isActive = true
-        view.widthAnchor.constraint(equalToConstant: width).isActive = true
         view.backgroundColor = color
     }
 }
