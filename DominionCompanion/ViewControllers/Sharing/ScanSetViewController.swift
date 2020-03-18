@@ -51,10 +51,13 @@ class ScanSetViewController: UIViewController {
         captureSession.startRunning()
     }
     
-    func showAlert(cards: [Card]) {
+    func showAlert(model: SetModel) {
         let alert = UIAlertController(title: "Set Found!", message: "Would you like to import the set over your currently pinned cards?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (action) in
-            SetBuilder.shared.pinnedCards = cards
+            SetBuilder.shared.pinnedCards = model.cards
+            SetBuilder.shared.pinnedEvents = model.events
+            SetBuilder.shared.pinnedLandmarks = model.landmarks
+            SetBuilder.shared.pinnedProjects = model.projects
             self.importSucceeded?()
             self.dismiss(animated: true)
         }))
@@ -78,13 +81,9 @@ extension ScanSetViewController: AVCaptureMetadataOutputObjectsDelegate {
             let metaData = metadataObjects.first,
             let readableObject = metaData as? AVMetadataMachineReadableCodeObject,
             let stringData = readableObject.stringValue?.data(using: .utf8),
-            let cardNames = try? JSONDecoder().decode([String].self, from: stringData)
+            let set = try? JSONDecoder().decode(ShareableSet.self, from: stringData)
         else { return dismiss(animated: true) }
         
-        let cards = cardNames.compactMap { (name) -> Card? in
-            return CardData.shared.kingdomCards.first(where: {$0.name == name})
-        }
-        
-        showAlert(cards: cards)
+        showAlert(model: set.getSetModel())
     }
 }

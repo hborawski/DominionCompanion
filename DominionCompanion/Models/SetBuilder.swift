@@ -77,6 +77,9 @@ class SetBuilder {
             return self.loadPinned(Constants.SaveKeys.pinnedEvents)
         }
         set {
+            if newValue.count != maxEvents {
+                UserDefaults.standard.set(newValue.count, forKey: Constants.SaveKeys.settingsNumEvents)
+            }
             self.savePinned(newValue, key: Constants.SaveKeys.pinnedEvents)
         }
     }
@@ -229,7 +232,13 @@ class SetBuilder {
     
     func getFinalSet() -> SetModel {
         let colonies = UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies)
-        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, projects: pinnedProjects, cards: pinnedCards, colonies: colonies)
+        return SetModel(
+            landmarks: Array(pinnedLandmarks[..<maxLandmarks]),
+            events: Array(pinnedEvents[..<maxEvents]),
+            projects: Array(pinnedProjects[..<maxProjects]),
+            cards: pinnedCards,
+            colonies: colonies
+        )
     }
     
     // MARK: Private

@@ -12,14 +12,14 @@ import UIKit
 class ShareSetViewController: UIViewController {
     @IBOutlet weak var qrImageView: UIImageView!
     
-    var cards: [Card] = []
+    var set = ShareableSet(cards: [], events: [], landmarks: [], projects: [])
     override func viewDidLoad() {
-        guard let image = generateQRCode(from: cards.map({$0.name})) else { return }
+        guard let image = generateQRCode(from: set) else { return }
         qrImageView.image = image
     }
     
-    func generateQRCode(from string: [String]) -> UIImage? {
-        guard let data = try? JSONEncoder().encode(string) else { return nil }
+    func generateQRCode(from set: ShareableSet) -> UIImage? {
+        guard let data = try? JSONEncoder().encode(set) else { return nil }
 
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         filter.setValue(data, forKey: "inputMessage")

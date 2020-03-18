@@ -55,7 +55,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             self.performSegue(withIdentifier: "ScanQRCode", sender: nil)
         }))
         alertController.addAction(UIAlertAction(title: "Generate a code", style: .default, handler: { (action) in
-            self.performSegue(withIdentifier: "GenerateQRCode", sender: SetBuilder.shared.fullSet)
+            self.performSegue(withIdentifier: "GenerateQRCode", sender: SetBuilder.shared.getFinalSet().getShareable())
         }))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             alertController.dismiss(animated: true, completion: nil)
@@ -143,9 +143,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         if
             segue.identifier == "GenerateQRCode",
             let shareVC = segue.destination as? ShareSetViewController,
-            let set = sender as? [Card]
+            let set = sender as? ShareableSet
         {
-            shareVC.cards = set
+            shareVC.set = set
             return
         }
         

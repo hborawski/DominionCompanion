@@ -568,8 +568,8 @@
             timestampString = "590273579.6029201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "pinCard(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -585,8 +585,8 @@
             timestampString = "590273579.603081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "SetBuilder"
             landmarkType = "3">
          </BreakpointContent>
@@ -636,8 +636,8 @@
             timestampString = "590273579.603801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "maxProjects"
             landmarkType = "24">
          </BreakpointContent>
@@ -1190,8 +1190,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1238,8 +1238,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "getFullSet()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1254,10 +1254,10 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "getFullSet()"
-            landmarkType = "7">
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "SetBuilder"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "A190040F-B987-4587-8915-E96A29B36C4E - e34108bade5a08a3"
@@ -1382,8 +1382,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "pinnedProjects"
             landmarkType = "24">
          </BreakpointContent>
@@ -1398,8 +1398,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "pinnedEvents"
             landmarkType = "24">
          </BreakpointContent>
@@ -1414,8 +1414,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "unpinProject(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1926,8 +1926,8 @@
             filePath = "DominionCompanion/Models/SetBuilder.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "unpinCard(_:)"
             landmarkType = "7">
             <Locations>
@@ -1990,8 +1990,8 @@
             filePath = "DominionCompanion/ViewControllers/Sharing/ScanSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "metadataOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1999,49 +1999,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EECA050D-3E6E-4668-9502-6887BF61B349"
+            uuid = "B03FDA71-7C66-4968-96E3-15E60761B263"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DominionCompanion/ViewControllers/Sharing/ScanSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "metadataOutput(_:didOutput:from:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "showAlert(model:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EECA050D-3E6E-4668-9502-6887BF61B349 - aa776a7b7d37426b"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DominionCompanion.ScanSetViewController.metadataOutput(_: __C.AVCaptureMetadataOutput, didOutput: Swift.Array&lt;__C.AVMetadataObject&gt;, from: __C.AVCaptureConnection) -&gt; ()"
-                  moduleName = "DominionCompanion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/ViewControllers/Sharing/ScanSetViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "1712">
-               </Location>
-               <Location
-                  uuid = "EECA050D-3E6E-4668-9502-6887BF61B349 - 544f0554a5bbd213"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Optional&lt;DominionCompanion.Card&gt; in DominionCompanion.ScanSetViewController.metadataOutput(_: __C.AVCaptureMetadataOutput, didOutput: Swift.Array&lt;__C.AVMetadataObject&gt;, from: __C.AVCaptureConnection) -&gt; ()"
-                  moduleName = "DominionCompanion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrisborawski/Development/dominion/DominionCompanion/DominionCompanion/ViewControllers/Sharing/ScanSetViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "099D6F4E-276E-4EAB-A778-D0F7A0F18C68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DominionCompanion/Models/SetModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "getSetModel()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

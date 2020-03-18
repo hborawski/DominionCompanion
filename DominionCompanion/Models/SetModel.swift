@@ -204,6 +204,44 @@ struct SetModel {
     func sortByExpansionAndCost(card1: Card, card2: Card) -> Bool {
         return card1.expansion == card2.expansion ? (card1.cost < card2.cost) : (card1.expansion < card2.expansion)
     }
+    
+    func getShareable() -> ShareableSet {
+        return ShareableSet(
+            cards: self.cards.map({$0.name}),
+            events: self.events.map({$0.name}),
+            landmarks: self.landmarks.map({$0.name}),
+            projects: self.projects.map({$0.name})
+        )
+    }
+}
+
+struct ShareableSet: Codable {
+    let cards: [String]
+    let events: [String]
+    let landmarks: [String]
+    let projects: [String]
+}
+
+extension ShareableSet {
+    func getSetModel() -> SetModel {
+        let cards = self.cards.compactMap { (name) -> Card? in
+            return CardData.shared.kingdomCards.first(where: {$0.name == name})
+        }
+        
+        let events = self.events.compactMap { (name) -> Card? in
+            return CardData.shared.allCards.first(where: {$0.name == name})
+        }
+        
+        let landmarks = self.landmarks.compactMap { (name) -> Card? in
+            return CardData.shared.allCards.first(where: {$0.name == name})
+        }
+        
+        let projects = self.projects.compactMap { (name) -> Card? in
+            return CardData.shared.allCards.first(where: {$0.name == name})
+        }
+        
+        return SetModel(landmarks: landmarks, events: events, projects: projects, cards: cards, colonies: false)
+    }
 }
 
 struct GameplaySection {
