@@ -24,6 +24,7 @@ struct Tokens: Codable {
     var minusCost: Bool
     var trashing: Bool
     var estate: Bool
+    var villagers: Bool
 }
 
 struct Card: Codable {
