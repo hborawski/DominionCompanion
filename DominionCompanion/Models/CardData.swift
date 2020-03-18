@@ -41,6 +41,8 @@ class CardData {
     
     let allEvents: [Card]
     
+    let allProjects: [Card]
+    
     // MARK: Maxes for creating picker inputs
     let maxPrice: Int
     let maxDebt: Int
@@ -82,6 +84,7 @@ class CardData {
         self.allExpansions = Array(Set(self.kingdomCards.map({$0.expansion}).filter { $0 != "" })).sorted()
         self.allLandmarks = self.allCards.filter { $0.types.contains("Landmark") }
         self.allEvents = self.allCards.filter { $0.types.contains("Event") }
+        self.allProjects = self.allCards.filter { $0.types.contains("Project") }
         self.allAttributes = CardProperty.allCases
         self.kingdomTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
             return Array(Set(allTypes).union(Set(types)))

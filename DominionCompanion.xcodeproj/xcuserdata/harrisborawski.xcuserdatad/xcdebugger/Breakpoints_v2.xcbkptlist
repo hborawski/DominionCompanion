@@ -570,8 +570,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
             endingLineNumber = "156"
-            landmarkName = "SetBuilder"
-            landmarkType = "3">
+            landmarkName = "pinCard(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -587,8 +587,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "randomCards"
-            landmarkType = "24">
+            landmarkName = "SetBuilder"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -638,7 +638,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "randomCards"
+            landmarkName = "maxProjects"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1192,7 +1192,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
             endingLineNumber = "132"
-            landmarkName = "pinLandmark(_:)"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1240,8 +1240,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "rows"
-            landmarkType = "24">
+            landmarkName = "getFullSet()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1256,8 +1256,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "235"
             endingLineNumber = "235"
-            landmarkName = "rows"
-            landmarkType = "24">
+            landmarkName = "getFullSet()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "A190040F-B987-4587-8915-E96A29B36C4E - e34108bade5a08a3"
@@ -1384,7 +1384,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "setComplete"
+            landmarkName = "pinnedProjects"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1400,7 +1400,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "pinnedCards"
+            landmarkName = "pinnedEvents"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1416,7 +1416,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "192"
             endingLineNumber = "192"
-            landmarkName = "getFullSet()"
+            landmarkName = "unpinProject(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1928,7 +1928,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "getSortFunction()"
+            landmarkName = "unpinCard(_:)"
             landmarkType = "7">
             <Locations>
                <Location

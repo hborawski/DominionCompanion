@@ -18,7 +18,8 @@ class SettingsTableViewController: UITableViewController {
         MenuSection(title: "Additional Mechanics", items: [
             MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
-            MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"])
+            MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
+            MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"])
         ]),
         MenuSection(title: "Miscellaneous", items: [
             MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: ["alphabetical", "cost"]),

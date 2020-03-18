@@ -22,7 +22,7 @@ class CardsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
-        self.rawCardData = self.cardsToDisplay ?? CardData.shared.kingdomCards
+        self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
         self.filterCards("")
     }
     

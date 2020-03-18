@@ -30,6 +30,11 @@ class SetBuilder {
                 defaults.insert(CardSection(title: "Landmarks", cards: displayed, pinnedCards: pinnedLandmarks), at: 0)
             }
             
+            if maxProjects > 0 {
+                let displayed = Array((pinnedProjects + randomProjects.filter { !pinnedProjects.contains($0) } )[0...(maxProjects - 1)])
+                defaults.insert(CardSection(title: "Projects", cards: displayed, pinnedCards: pinnedProjects), at: 0)
+            }
+            
             return defaults
         }
     }
@@ -76,6 +81,23 @@ class SetBuilder {
         }
     }
     
+    var maxProjects: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumProjects)
+        }
+    }
+    
+    var randomProjects: [Card] = []
+    
+    var pinnedProjects: [Card] {
+        get {
+            return self.loadPinned(Constants.SaveKeys.pinnedProjects)
+        }
+        set {
+            self.savePinned(newValue, key: Constants.SaveKeys.pinnedProjects)
+        }
+    }
+    
     var pinnedCards: [Card] {
         didSet {
             fullSet = getFullSet()
@@ -97,7 +119,8 @@ class SetBuilder {
             print(maxCards)
             print(maxEvents)
             print(maxLandmarks)
-            return (pinnedCards.count == maxCards) && (pinnedEvents.count >= maxEvents) && (pinnedLandmarks.count >= maxLandmarks)
+            print(maxProjects)
+            return (pinnedCards.count == maxCards) && (pinnedEvents.count >= maxEvents) && (pinnedLandmarks.count >= maxLandmarks) && (pinnedProjects.count >= maxProjects)
         }
     }
     
@@ -106,6 +129,7 @@ class SetBuilder {
         self.randomCards = []
         self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
         self.randomEvents = CardData.shared.allEvents.shuffled()
+        self.randomProjects = CardData.shared.allProjects.shuffled()
         self.pinnedCards = []
         self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
         self.fullSet = getFullSet()
@@ -118,6 +142,10 @@ class SetBuilder {
         }
         if card.types.contains("Event") {
             pinEvent(card)
+            return
+        }
+        if card.types.contains("Project") {
+            pinProject(card)
             return
         }
         guard pinnedCards.count < maxCards else { return }
@@ -154,6 +182,19 @@ class SetBuilder {
         pinnedEvents.remove(at: index)
     }
     
+    func pinProject(_ card: Card) {
+        guard !pinnedProjects.contains(card) else { return }
+        pinnedProjects.append(card)
+    }
+    
+    func unpinProject(_ card: Card) {
+        guard
+            pinnedProjects.contains(card),
+            let index = pinnedProjects.firstIndex(of: card)
+            else { return }
+        pinnedProjects.remove(at: index)
+    }
+    
     func unpinCard(_ card: Card) {
         if card.types.contains("Landmark") {
             unpinLandmark(card)
@@ -161,6 +202,10 @@ class SetBuilder {
         }
         if card.types.contains("Event") {
             unpinEvent(card)
+            return
+        }
+        if card.types.contains("Project") {
+            unpinProject(card)
             return
         }
         guard pinnedCards.contains(card) else { return }
@@ -177,13 +222,14 @@ class SetBuilder {
             self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
             self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
             self.randomEvents = CardData.shared.allEvents.shuffled()
+            self.randomProjects = CardData.shared.allProjects.shuffled()
             completion()
         }
     }
     
     func getFinalSet() -> SetModel {
         let colonies = UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies)
-        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, cards: pinnedCards, colonies: colonies)
+        return SetModel(landmarks: pinnedLandmarks, events: pinnedEvents, projects: pinnedProjects, cards: pinnedCards, colonies: colonies)
     }
     
     // MARK: Private

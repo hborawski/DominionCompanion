@@ -13,6 +13,7 @@ struct SetModel {
     // MARK: Specific Set Wide Effects
     var landmarks: [Card]
     var events: [Card]
+    var projects: [Card]
     
     // MARK: Cards for this set
     var cards: [Card]
@@ -55,7 +56,7 @@ struct SetModel {
     }
     var coinTokens: Bool {
         get {
-            return self.cards.filter({$0.tokens.coin > 0}).count > 0
+            return self.cards.filter({$0.tokens.coin > 0}).count > 0 || self.projects.filter({$0.tokens.coin != 0}).count > 0
         }
     }
     var embargoTokens: Bool {
@@ -143,6 +144,10 @@ struct SetModel {
 
         if events.count > 0 {
             sections.append(GameplaySection(title: "Events", rows: self.events.map(getAttributedCardCell)))
+        }
+        
+        if projects.count > 0 {
+            sections.append(GameplaySection(title: "Projects", rows: self.projects.map(getAttributedCardCell)))
         }
         
         let tokens = getTokens()
