@@ -77,9 +77,6 @@ class SetBuilder {
             return self.loadPinned(Constants.SaveKeys.pinnedEvents)
         }
         set {
-            if newValue.count != maxEvents {
-                UserDefaults.standard.set(newValue.count, forKey: Constants.SaveKeys.settingsNumEvents)
-            }
             self.savePinned(newValue, key: Constants.SaveKeys.pinnedEvents)
         }
     }
@@ -134,6 +131,7 @@ class SetBuilder {
         self.fullSet = getFullSet()
     }
     
+    // MARK: Pinning
     func pin(_ card: Card) {
         switch true {
         case card.types.contains("Landmark"):
@@ -198,24 +196,27 @@ class SetBuilder {
     }
     
     func unpinCard(_ card: Card) {
-        if card.types.contains("Landmark") {
-            unpinLandmark(card)
-            return
-        }
-        if card.types.contains("Event") {
-            unpinEvent(card)
-            return
-        }
-        if card.types.contains("Project") {
-            unpinProject(card)
-            return
-        }
-        guard pinnedCards.contains(card) else { return }
-        guard let index = pinnedCards.index(of: card) else { return }
+        guard
+            pinnedCards.contains(card),
+            let index = pinnedCards.index(of: card)
+        else { return }
         pinnedCards.remove(at: index)
         randomCards.insert(card, at: 0)
         if randomCards.count > maxCards - pinnedCards.count {
             randomCards.remove(at: randomCards.count - 1)
+        }
+    }
+    
+    func unpin(_ card: Card) {
+        switch true {
+        case card.types.contains("Landmark"):
+            unpinLandmark(card)
+        case card.types.contains("Event"):
+            unpinEvent(card)
+        case card.types.contains("Project"):
+            unpinProject(card)
+        default:
+            unpinCard(card)
         }
     }
     
@@ -291,7 +292,7 @@ struct CardSection: SetBuilderSection {
                 let pinned = self.pinnedCards.contains(card)
                 return SetBuilderCardRow(card: card, pinned: pinned, pinAction: {
                     print("Pinning \(card.name)")
-                    pinned ? SetBuilder.shared.unpinCard(c) : SetBuilder.shared.pin(c)
+                    pinned ? SetBuilder.shared.unpin(c) : SetBuilder.shared.pin(c)
                 })
             }
         }

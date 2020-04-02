@@ -56,7 +56,7 @@ class CardViewController: UIViewController {
     @objc func doPin(_ sender: UIBarButtonItem) {
         guard let card = self.card else { return }
         if card.pinned {
-            SetBuilder.shared.unpinCard(card)
+            SetBuilder.shared.unpin(card)
         } else {
             SetBuilder.shared.pin(card)
         }
