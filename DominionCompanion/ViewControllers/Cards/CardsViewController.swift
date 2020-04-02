@@ -9,8 +9,6 @@
 import UIKit
 
 class CardsViewController: UITableViewController {
-    
-    @IBOutlet weak var searchBar: UISearchBar!
     var showSearch = false
     
     var excludeMode: Bool = false
@@ -19,17 +17,25 @@ class CardsViewController: UITableViewController {
     var rawCardData : [Card] = []
     var cardData: [Card]? = []
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
         self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
         self.filterCards("")
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Card name..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if showSearch {
-            searchBar.becomeFirstResponder()
+            searchController.searchBar.becomeFirstResponder()
             showSearch = false
         }
     }
@@ -102,12 +108,8 @@ class CardsViewController: UITableViewController {
     }
 }
 
-extension CardsViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.filterCards(searchText)
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+extension CardsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        self.filterCards(searchController.searchBar.text ?? "")
     }
 }

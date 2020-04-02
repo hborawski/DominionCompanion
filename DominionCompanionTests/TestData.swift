@@ -10,9 +10,9 @@ import Foundation
 
 class TestData {
     // MARK: Token Utilities
-    static let noTokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false)
-    static let victoryTokens = Tokens(victory: 1, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false)
-    static let coinTokens = Tokens(victory: 0, coin: 1, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false)
+    static let noTokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
+    static let victoryTokens = Tokens(victory: 1, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
+    static let coinTokens = Tokens(victory: 0, coin: 1, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
     
     // MARK: Generic Cards
     static let actionCard = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Action", text: "Action Card", expansion: "Test", types: ["Action"], trash: false, tokens: TestData.noTokens, supply: true, related: [])

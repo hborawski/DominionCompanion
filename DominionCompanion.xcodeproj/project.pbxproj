@@ -30,6 +30,10 @@
 		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
 		AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
 		AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
+		AF6BE27824359B9B005F85E1 /* SetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */; };
+		AF6BE27924359BAB005F85E1 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
+		AF6BE27A24359BB1005F85E1 /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB0232432A700ADA74D /* RuleEngine.swift */; };
+		AF6BE27B24359BBD005F85E1 /* AttributedCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */; };
 		AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69B236FB19700BCB9EA /* SetRuleViewController.swift */; };
 		AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69D236FB33500BCB9EA /* FilterCell.swift */; };
 		AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71F69F236FB40200BCB9EA /* RangeCell.swift */; };
@@ -546,10 +550,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6BE27824359B9B005F85E1 /* SetBuilder.swift in Sources */,
 				AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */,
+				AF6BE27924359BAB005F85E1 /* SetModel.swift in Sources */,
 				AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */,
 				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
+				AF6BE27B24359BBD005F85E1 /* AttributedCardCell.swift in Sources */,
 				AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */,
+				AF6BE27A24359BB1005F85E1 /* RuleEngine.swift in Sources */,
 				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
 				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
 				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
