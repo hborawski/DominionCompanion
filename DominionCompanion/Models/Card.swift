@@ -56,6 +56,10 @@ struct Card: Codable {
                 return cards + CardData.shared.allCards.filter{ $0.types.contains("Hex") }
             }
             
+            if self.types.contains("Looter") {
+                return cards + CardData.shared.allCards.filter{ $0.types.contains("Ruins") }
+            }
+            
             return cards
         }
     }

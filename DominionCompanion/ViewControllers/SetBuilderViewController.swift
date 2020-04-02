@@ -54,7 +54,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @objc func showShareMenu() {
-        let alertController = UIAlertController(title: "Set Sharing", message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(
+            title: "Set Sharing",
+            message: "Share the current set, or import a friend's set using a QR code and your devices camera.",
+            preferredStyle: .actionSheet
+        )
         alertController.addAction(UIAlertAction(title: "Scan a code", style: .default, handler: { (action) in
             self.performSegue(withIdentifier: "ScanQRCode", sender: nil)
         }))

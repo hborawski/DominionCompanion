@@ -31,6 +31,7 @@ struct SetModel {
     var colonies: Bool
     var boons: Bool { self.cards.filter({$0.types.contains("Fate")}).count > 0 }
     var hexes: Bool { self.cards.filter({$0.types.contains("Doom")}).count > 0 }
+    var ruins: Bool { self.cards.filter({$0.types.contains("Looter")}).count > 0 }
     var potions: Bool { self.cards.filter({$0.potion}).count > 0 }
     var debt: Bool { self.cards.filter({$0.tokens.debt}).count > 0 }
     var victoryTokens: Bool { self.cards.filter({$0.tokens.victory > 0}).count > 0 }
@@ -126,6 +127,10 @@ struct SetModel {
         
         if hexes {
             mechanics.append("Hexes")
+        }
+        
+        if ruins {
+            mechanics.append("Ruins")
         }
         
         if potions {
