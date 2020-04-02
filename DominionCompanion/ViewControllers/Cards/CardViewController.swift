@@ -38,13 +38,13 @@ class CardViewController: UIViewController {
         let exclude = UIBarButtonItem(image: UIImage(named: "Exclude"), style: .plain, target: self, action: #selector(doExclude(_:)))
         let add = UIBarButtonItem(image: UIImage(named: "Checkmark"), style: .plain, target: self, action: #selector(doPin(_:)))
         let remove = UIBarButtonItem(image: UIImage(named: "Delete"), style: .plain, target: self, action: excludeMode ? #selector(doExclude(_:)) : #selector(doPin(_:)))
-        guard let card = self.card else { return }
-        if !SetBuilder.shared.pinnedCards.contains(card), !excludeMode, SetBuilder.shared.setComplete {
+        guard let card = self.card, card.canPin else { return }
+        if !card.pinned, !excludeMode, SetBuilder.shared.setComplete {
             self.navigationItem.rightBarButtonItem = nil
             return
         }
         if
-            !excludeMode && SetBuilder.shared.pinnedCards.contains(card) ||
+            !excludeMode && card.pinned ||
             excludeMode && CardData.shared.excludedCards.contains(card)
         {
             self.navigationItem.rightBarButtonItem = remove
@@ -55,7 +55,7 @@ class CardViewController: UIViewController {
     
     @objc func doPin(_ sender: UIBarButtonItem) {
         guard let card = self.card else { return }
-        if SetBuilder.shared.pinnedCards.contains(card) {
+        if card.pinned {
             SetBuilder.shared.unpinCard(card)
         } else {
             SetBuilder.shared.pinCard(card)

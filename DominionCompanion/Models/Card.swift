@@ -60,7 +60,32 @@ struct Card: Codable {
                 return cards + CardData.shared.allCards.filter{ $0.types.contains("Ruins") }
             }
             
+            if self.types.contains("Castle") {
+                return cards + CardData.shared.allCards.filter{ $0.types.contains("Castle") }
+            }
+            
             return cards
+        }
+    }
+    
+    var pinned: Bool {
+        if types.contains("Event") {
+            return SetBuilder.shared.pinnedEvents.contains(self)
+        }
+        if types.contains("Landmark") {
+            return SetBuilder.shared.pinnedLandmarks.contains(self)
+        }
+        if types.contains("Project") {
+            return SetBuilder.shared.pinnedProjects.contains(self)
+        }
+        return SetBuilder.shared.pinnedCards.contains(self)
+    }
+    
+    var canPin: Bool {
+        if Set(["Event", "Landmark", "Project"]).intersection(Set(types)).count != 0 {
+            return true
+        } else {
+            return supply
         }
     }
 }

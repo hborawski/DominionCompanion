@@ -14439,7 +14439,7 @@
     "name": "Small Castle",
     "junk": false,
     "gain": 1,
-    "supply": false,
+    "supply": true,
     "related": [
     ],
     "tokens": {
