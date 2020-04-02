@@ -101,14 +101,14 @@ class SetBuilder {
         }
     }
     
-    var pinnedCards: [Card] {
+    var pinnedCards: [Card] = [] {
         didSet {
             fullSet = getFullSet()
             self.savePinned(self.pinnedCards, key: Constants.SaveKeys.pinnedCards)
         }
     }
     
-    var randomCards: [Card] {
+    var randomCards: [Card] = [] {
         didSet {
             fullSet = getFullSet()
         }
@@ -118,22 +118,18 @@ class SetBuilder {
     
     var setComplete: Bool {
         get {
-            print(pinnedCards.count)
-            print(maxCards)
-            print(maxEvents)
-            print(maxLandmarks)
-            print(maxProjects)
-            return (pinnedCards.count == maxCards) && (pinnedEvents.count >= maxEvents) && (pinnedLandmarks.count >= maxLandmarks) && (pinnedProjects.count >= maxProjects)
+            return (pinnedCards.count == maxCards) &&
+                   (pinnedEvents.count >= maxEvents) &&
+                   (pinnedLandmarks.count >= maxLandmarks) &&
+                   (pinnedProjects.count >= maxProjects)
         }
     }
     
     
     init() {
-        self.randomCards = []
         self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
         self.randomEvents = CardData.shared.allEvents.shuffled()
         self.randomProjects = CardData.shared.allProjects.shuffled()
-        self.pinnedCards = []
         self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
         self.fullSet = getFullSet()
     }

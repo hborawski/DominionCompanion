@@ -29,91 +29,23 @@ struct SetModel {
     
     // MARK: General Required Extras
     var colonies: Bool
-    var boons: Bool {
-        get {
-            return self.cards.filter({$0.types.contains("Fate")}).count > 0
-        }
-    }
-    var hexes: Bool {
-        get {
-            return self.cards.filter({$0.types.contains("Doom")}).count > 0
-        }
-    }
-    var potions: Bool {
-        get {
-            return self.cards.filter({$0.potion}).count > 0
-        }
-    }
-    var debt: Bool {
-        get {
-            return self.cards.filter({$0.tokens.debt}).count > 0
-        }
-    }
-    var victoryTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.victory > 0}).count > 0
-        }
-    }
-    var coinTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.coin > 0}).count > 0 || self.projects.filter({$0.tokens.coin != 0}).count > 0
-        }
-    }
-    var embargoTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.embargo}).count > 0
-        }
-    }
-    var journeyToken: Bool {
-        get {
-            return self.cards.filter({$0.tokens.journey}).count > 0
-        }
-    }
-    var minusCardTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.minusCard}).count > 0
-        }
-    }
-    var minusCoinTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.embargo}).count > 0
-        }
-    }
-    var plusCardTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.plusCard}).count > 0
-        }
-    }
-    var plusActionTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.plusAction}).count > 0
-        }
-    }
-    var plusBuyTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.plusBuy}).count > 0
-        }
-    }
-    var plusCoinTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.plusCoin}).count > 0
-        }
-    }
-    var minusCostTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.minusCost}).count > 0
-        }
-    }
-    var trashingTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.trashing}).count > 0
-        }
-    }
-    var estateTokens: Bool {
-        get {
-            return self.cards.filter({$0.tokens.estate}).count > 0
-        }
-    }
+    var boons: Bool { self.cards.filter({$0.types.contains("Fate")}).count > 0 }
+    var hexes: Bool { self.cards.filter({$0.types.contains("Doom")}).count > 0 }
+    var potions: Bool { self.cards.filter({$0.potion}).count > 0 }
+    var debt: Bool { self.cards.filter({$0.tokens.debt}).count > 0 }
+    var victoryTokens: Bool { self.cards.filter({$0.tokens.victory > 0}).count > 0 }
+    var coinTokens: Bool { self.cards.filter({$0.tokens.coin > 0}).count > 0 || self.projects.filter({$0.tokens.coin != 0}).count > 0 }
+    var embargoTokens: Bool { self.cards.filter({$0.tokens.embargo}).count > 0 }
+    var journeyToken: Bool { self.cards.filter({$0.tokens.journey}).count > 0 }
+    var minusCardTokens: Bool { self.cards.filter({$0.tokens.minusCard}).count > 0 }
+    var minusCoinTokens: Bool { self.cards.filter({$0.tokens.embargo}).count > 0 }
+    var plusCardTokens: Bool { self.cards.filter({$0.tokens.plusCard}).count > 0 }
+    var plusActionTokens: Bool { self.cards.filter({$0.tokens.plusAction}).count > 0 }
+    var plusBuyTokens: Bool { self.cards.filter({$0.tokens.plusBuy}).count > 0 }
+    var plusCoinTokens: Bool { self.cards.filter({$0.tokens.plusCoin}).count > 0 }
+    var minusCostTokens: Bool { self.cards.filter({$0.tokens.minusCost}).count > 0 }
+    var trashingTokens: Bool { self.cards.filter({$0.tokens.trashing}).count > 0 }
+    var estateTokens: Bool { self.cards.filter({$0.tokens.estate}).count > 0 }
     
     func getSections(tableView: UITableView) -> [GameplaySection] {
         let getAttributedCardCell = { (card: Card) -> UITableViewCell in
@@ -121,12 +53,14 @@ struct SetModel {
                 return UITableViewCell()
             }
             cell.setData(card, favorite: false, showExpansion: true)
+            cell.selectionStyle = .none
             return cell
         }
         
         let getBasicCell = { (text: String) -> UITableViewCell in
             let cell = UITableViewCell()
             cell.textLabel?.text = text
+            cell.selectionStyle = .none
             return cell
         }
         

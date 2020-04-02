@@ -24,15 +24,18 @@ class AttributedCardCell : UITableViewCell {
         self.nameLabel.text = card.name
         makeColorView(card.types)
         if card.debt > 0 {
-            self.debtLabel.text = "\(card.debt)"
+            debtLabel.text = "\(card.debt)"
             makeDebtView()
             debtBackground.isHidden = false
             costBackground.isHidden = true
-        } else {
-            self.costLabel.text = "\(card.cost)"
+        } else if card.cost >= 0 {
+            costLabel.text = "\(card.cost)"
             makeCostView()
             debtBackground.isHidden = true
             costBackground.isHidden = false
+        } else {
+            costLabel.text = ""
+            debtLabel.text = ""
         }
         
         if showExpansion {
