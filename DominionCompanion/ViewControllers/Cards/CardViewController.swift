@@ -58,7 +58,7 @@ class CardViewController: UIViewController {
         if card.pinned {
             SetBuilder.shared.unpinCard(card)
         } else {
-            SetBuilder.shared.pinCard(card)
+            SetBuilder.shared.pin(card)
         }
         setupPinButton()
     }

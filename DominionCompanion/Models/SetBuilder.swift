@@ -127,28 +127,31 @@ class SetBuilder {
     
     
     init() {
-        self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
-        self.randomEvents = CardData.shared.allEvents.shuffled()
-        self.randomProjects = CardData.shared.allProjects.shuffled()
+        self.randomLandmarks = pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
+        self.randomEvents = pinnedEvents + CardData.shared.allEvents.shuffled()
+        self.randomProjects = pinnedProjects + CardData.shared.allProjects.shuffled()
         self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
         self.fullSet = getFullSet()
     }
     
-    func pinCard(_ card: Card) {
-        if card.types.contains("Landmark") {
+    func pin(_ card: Card) {
+        switch true {
+        case card.types.contains("Landmark"):
             pinLandmark(card)
-            return
-        }
-        if card.types.contains("Event") {
+        case card.types.contains("Event"):
             pinEvent(card)
-            return
-        }
-        if card.types.contains("Project") {
+        case card.types.contains("Project"):
             pinProject(card)
-            return
+        default:
+            pinCard(card)
         }
-        guard pinnedCards.count < maxCards else { return }
-        guard !pinnedCards.contains(card) else { return }
+    }
+    
+    func pinCard(_ card: Card) {
+        guard
+            pinnedCards.count < maxCards,
+            !pinnedCards.contains(card)
+        else { return }
         pinnedCards.append(card)
         if let index = randomCards.index(of: card) {
             randomCards.remove(at: index)
@@ -219,9 +222,9 @@ class SetBuilder {
     func shuffleSet(_ completion: @escaping () -> ()) {
         RuleEngine.shared.getMatchingSet(pinnedCards) { cards in
             self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
-            self.randomLandmarks = CardData.shared.allLandmarks.shuffled()
-            self.randomEvents = CardData.shared.allEvents.shuffled()
-            self.randomProjects = CardData.shared.allProjects.shuffled()
+            self.randomLandmarks = self.pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
+            self.randomEvents = self.pinnedEvents + CardData.shared.allEvents.shuffled()
+            self.randomProjects = self.pinnedProjects + CardData.shared.allProjects.shuffled()
             completion()
         }
     }
@@ -288,7 +291,7 @@ struct CardSection: SetBuilderSection {
                 let pinned = self.pinnedCards.contains(card)
                 return SetBuilderCardRow(card: card, pinned: pinned, pinAction: {
                     print("Pinning \(card.name)")
-                    pinned ? SetBuilder.shared.unpinCard(c) : SetBuilder.shared.pinCard(c)
+                    pinned ? SetBuilder.shared.unpinCard(c) : SetBuilder.shared.pin(c)
                 })
             }
         }
