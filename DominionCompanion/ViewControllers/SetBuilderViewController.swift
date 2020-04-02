@@ -15,9 +15,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet var rulesButton: UIButton!
     @IBOutlet var gameplaySetupButton: UIButton!
     
-    var shuffling: Bool = false
-    
     var currentSet: [SetBuilderSection] = []
+    
+    var refreshControl = UIRefreshControl()
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -30,6 +30,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.navigationItem.rightBarButtonItems = [settings]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showShareMenu))
         gameplaySetupButton.layer.cornerRadius = 6.0
+        
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(shuffleSet), for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +44,9 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     // MARK: Button Handlers
-    @IBAction func shuffleSet(_ sender: UIButton) {
-        self.shuffleSet()
+    @IBAction func shuffleSetButtonTapped(_ sender: UIButton) {
+        refreshControl.beginRefreshing()
+        refreshControl.sendActions(for: .valueChanged)
     }
     
     @objc func openSettings(_ sender: UIBarButtonItem) {
@@ -64,12 +68,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.present(alertController, animated: true)
     }
     
-    func shuffleSet() {
-        guard shuffling == false else { return }
-        self.shuffling = true
+    @objc func shuffleSet() {
         self.tableView.reloadData()
         SetBuilder.shared.shuffleSet {
-            self.shuffling = false
+            self.refreshControl.endRefreshing()
             self.currentSet = SetBuilder.shared.currentSet
             self.tableView.reloadData()
         }
@@ -87,7 +89,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = currentSet[section]
-        return (shuffling && section.canShuffle) ? 1 : section.cards.count
+        return (refreshControl.isRefreshing && section.canShuffle) ? 1 : section.cards.count
     }
     
     // MARK: UITableViewDelegate
@@ -99,7 +101,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = currentSet[indexPath.section]
-        if shuffling == true && section.canShuffle {
+        if refreshControl.isRefreshing && section.canShuffle {
             return tableView.dequeueReusableCell(withIdentifier: "loadingCell") ?? UITableViewCell()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
@@ -111,7 +113,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let cardData = currentSet[indexPath.section].rows[indexPath.row]
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
-            guard self.shuffling == false else { return }
+            guard self.refreshControl.isRefreshing == false else { return }
             cardData.pinAction()
             tableView.reloadData()
             self.toggleSetupButton()

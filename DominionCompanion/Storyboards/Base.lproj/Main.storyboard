@@ -161,7 +161,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="44"/>
                                                 <state key="normal" title="Shuffle Set"/>
                                                 <connections>
-                                                    <action selector="shuffleSet:" destination="2F7-bz-VMJ" eventType="primaryActionTriggered" id="KIj-6P-NO5"/>
+                                                    <action selector="shuffleSetButtonTapped:" destination="2F7-bz-VMJ" eventType="touchUpInside" id="BdR-PJ-48o"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwE-ix-fBL">
