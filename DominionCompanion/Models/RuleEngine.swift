@@ -7,22 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class RuleEngine {
     public static let shared : RuleEngine = RuleEngine()
     var savedRule: SavedRule?
     
-    var editing: Bool {
-        get {
-            return savedRule != nil
-        }
-    }
+    var editing: Bool { savedRule != nil }
     
-    var cardData : [Card] {
-        get {
-            return CardData.shared.cardsFromChosenExpansions
-        }
-    }
+    var cardData : [Card] { CardData.shared.cardsFromChosenExpansions }
     
     var rules: [SetRule] = [] {
         didSet {
@@ -33,30 +26,26 @@ class RuleEngine {
     }
     
     var matchAnyRule: [Card] {
-        get {
-            let cardCopy = self.cardData
-            guard rules.count > 0 else { return cardCopy }
-            let cards = rules.reduce([]) { (cards: [Card], filter: SetRule) -> [Card] in
-                let cardSet = Set(cards)
-                let filtered = filter.matchingCards(cardCopy)
-                let filterSet = Set(filtered)
-                return Array(cardSet.union(filterSet))
-            }
-            return cards
+        let cardCopy = self.cardData
+        guard rules.count > 0 else { return cardCopy }
+        let cards = rules.reduce([]) { (cards: [Card], filter: SetRule) -> [Card] in
+            let cardSet = Set(cards)
+            let filtered = filter.matchingCards(cardCopy)
+            let filterSet = Set(filtered)
+            return Array(cardSet.union(filterSet))
         }
+        return cards
     }
     
     var matchAllRules: [Card] {
-        get {
-            let cardCopy = self.cardData
-            let cards = rules.reduce(cardCopy) { (cards: [Card], filter: SetRule) -> [Card] in
-                let cardSet = Set(cards)
-                let filtered = filter.matchingCards(cardCopy)
-                let filterSet = Set(filtered)
-                return Array(cardSet.intersection(filterSet))
-            }
-            return cards
+        let cardCopy = self.cardData
+        let cards = rules.reduce(cardCopy) { (cards: [Card], filter: SetRule) -> [Card] in
+            let cardSet = Set(cards)
+            let filtered = filter.matchingCards(cardCopy)
+            let filterSet = Set(filtered)
+            return Array(cardSet.intersection(filterSet))
         }
+        return cards
     }
     
     var editingRule: SetRule?
@@ -84,12 +73,15 @@ class RuleEngine {
             let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
             var testSet = generator.next()
             var finalSet: [Card] = []
+            let start = CACurrentMediaTime()
             while let set = testSet {
                 finalSet = pinned + set
                 if self.matchesAllRules(finalSet, self.rules) {
+                    print("found set in \(CACurrentMediaTime() - start) seconds and \(attempts) attempts")
                     break
                 }
                 testSet = generator.next()
+                attempts += 1
             }
 //            while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
 //                testSet = Array(cardCopy.shuffled()[0...9])
