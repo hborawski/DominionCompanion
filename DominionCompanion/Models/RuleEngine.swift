@@ -73,24 +73,30 @@ class RuleEngine {
     
     // MARK: Public API
     func getMatchingSet(_ pinned: [Card], _ completion: @escaping ([Card]) -> Void) {
+        guard pinned.count < 10 else { return completion(pinned) }
         let cardCopy = self.cardData
-        guard cardCopy.count >= 10 else {
-            completion([])
-            return
-        }
+        guard cardCopy.count >= 10 else { return completion([]) }
         guard rules.count > 0 else {
-            completion(Array(cardCopy.shuffled()[0...9]))
-            return
+            return completion(pinned + Array(cardCopy.shuffled()[0..<pinned.count]))
         }
         DispatchQueue.global(qos: .background).async {
             var attempts = 0
-            var testSet = Array(cardCopy.shuffled()[0...9])
-            while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
-                testSet = Array(cardCopy.shuffled()[0...9])
-                attempts += 1
+            let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
+            var testSet = generator.next()
+            var finalSet: [Card] = []
+            while let set = testSet {
+                finalSet = pinned + set
+                if self.matchesAllRules(finalSet, self.rules) {
+                    break
+                }
+                testSet = generator.next()
             }
+//            while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
+//                testSet = Array(cardCopy.shuffled()[0...9])
+//                attempts += 1
+//            }
             DispatchQueue.main.async {
-                completion(testSet)
+                completion(finalSet)
             }
         }
     }

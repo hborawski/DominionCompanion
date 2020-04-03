@@ -27,4 +27,14 @@ class UtilitiesTest: XCTestCase {
         let actual = [card2, card1, card3].sorted(by: Utilities.priceSort(card1:card2:))
         XCTAssertTrue(expected == actual)
     }
+    
+    func testGenerator() {
+        let data = CardData.shared.kingdomCards
+        let generator: CombinationGenerator<Card> = CombinationGenerator(data, size: 10)
+        var combo = generator.next()
+        while combo != nil {
+            print(combo?.map { $0.name })
+            combo = generator.next()
+        }
+    }
 }
