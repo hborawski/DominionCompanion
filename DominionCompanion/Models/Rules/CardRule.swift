@@ -88,6 +88,8 @@ extension CardRule {
         switch self.operation {
         case .equal:
             return cardValue == value
+        case .notEqual:
+            return cardValue != value
         default:
             return false
         }

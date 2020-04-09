@@ -26,8 +26,8 @@ struct SetRule: Codable {
     }
     
     func match(_ cards: [Card]) -> Bool {
-        guard self.hasMatch(cards) else { return false }
         let setValue = self.matchingCards(cards).count
+        guard setValue > 0 else { return false }
         switch self.operation {
         case .greater:
             return setValue > value
@@ -38,9 +38,47 @@ struct SetRule: Codable {
         case .lessOrEqual:
             return setValue <= value
         case .less:
-            return setValue > value
+            return setValue < value
         case .notEqual:
             return setValue != value
+        }
+    }
+    
+    func inverseMatch(_ cards: [Card]) -> Bool {
+        let setValue = self.matchingCards(cards).count
+        let comparisonValue = 10 - value
+        switch self.operation {
+        case .greater:
+            return setValue <= (10 - value)
+        case .greaterOrEqual:
+            return setValue <= (10 - (value - 1))
+        case .equal:
+            return setValue != comparisonValue
+        case .lessOrEqual:
+            return setValue <= value
+        case .less:
+            return setValue < value
+        case .notEqual:
+            return setValue == comparisonValue
+        }
+    }
+    
+    func satisfaction(_ cards: [Card]) -> Double {
+        let setValue = Double(self.matchingCards(cards).count)
+        let desiredValue = Double(value)
+        switch self.operation {
+        case .greater:
+            return setValue > desiredValue ? 1.0 : setValue / desiredValue
+        case .greaterOrEqual:
+            return setValue >= desiredValue ? 1.0 : setValue / desiredValue
+        case .equal:
+            return setValue >= desiredValue ? 1.0 : setValue / desiredValue
+        case .lessOrEqual:
+            return setValue / desiredValue
+        case .less:
+            return setValue / (desiredValue - 1.0)
+        case .notEqual:
+            return setValue / desiredValue
         }
     }
 }

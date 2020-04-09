@@ -69,27 +69,55 @@ class RuleEngine {
             return completion(pinned + Array(cardCopy.shuffled()[0..<pinned.count]))
         }
         DispatchQueue.global(qos: .background).async {
-            var attempts = 0
-            let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
-            var testSet = generator.next()
-            var finalSet: [Card] = []
-            let start = CACurrentMediaTime()
-            while let set = testSet {
-                finalSet = pinned + set
-                if self.matchesAllRules(finalSet, self.rules) {
-                    print("found set in \(CACurrentMediaTime() - start) seconds and \(attempts) attempts")
-                    break
+            var workingCards = cardCopy.shuffled()
+            var finalSet: [Card] = pinned
+            var satisfaction: Double = 0.0
+            while finalSet.count < 10 {
+                guard let nextCard = workingCards.popLast() else {
+                    workingCards = cardCopy.shuffled()
+                    continue
                 }
-                testSet = generator.next()
-                attempts += 1
+                print("Trying card: \(nextCard.name)")
+                let tempSet = finalSet + [nextCard]
+                if
+                    self.inverseMatchRules(tempSet, self.rules),
+                    (self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0)
+                {
+                    print("Satisfaction: \(self.ruleSatisfaction(tempSet, self.rules))")
+                    print("Adding card to set: \(nextCard.name)")
+                    finalSet = tempSet
+                    satisfaction = self.ruleSatisfaction(finalSet, self.rules)
+                } else {
+                    print("Card did not match set: \(nextCard.name), satisfaction: \(satisfaction), count: \(finalSet.count)")
+                }
+                if (finalSet.count == 10 && satisfaction < 1.0) {
+                    finalSet = pinned
+                    satisfaction = 0.0
+                    workingCards = cardCopy.shuffled()
+                }
             }
-//            while !self.matchesAllRules(testSet, self.rules) && attempts < 2000 {
-//                testSet = Array(cardCopy.shuffled()[0...9])
-//                attempts += 1
-//            }
             DispatchQueue.main.async {
+                print("Final Satisfaction: \(self.ruleSatisfaction(finalSet, self.rules))")
+                print(finalSet.map({$0.name}).joined(separator: "|"))
                 completion(finalSet)
             }
+//            var attempts = 0
+//            let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
+//            var testSet = generator.next()
+//            var finalSet: [Card] = []
+//            let start = CACurrentMediaTime()
+//            while let set = testSet {
+//                finalSet = pinned + set
+//                if self.matchesAllRules(finalSet, self.rules) {
+//                    print("found set in \(CACurrentMediaTime() - start) seconds and \(attempts) attempts")
+//                    break
+//                }
+//                testSet = generator.next()
+//                attempts += 1
+//            }
+//            DispatchQueue.main.async {
+//                completion(finalSet)
+//            }
         }
     }
     
@@ -115,6 +143,18 @@ class RuleEngine {
         return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
             return acc && cv.match(cards)
         }
+    }
+    
+    func inverseMatchRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
+        return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
+            return acc && cv.inverseMatch(cards)
+        }
+    }
+    
+    func ruleSatisfaction(_ cards: [Card], _ rules: [SetRule]) -> Double {
+        let satisfactions = rules.compactMap { $0.satisfaction(cards) }
+//        print(satisfactions)
+        return satisfactions.reduce(0.0, +) / Double(rules.count)
     }
 }
 
