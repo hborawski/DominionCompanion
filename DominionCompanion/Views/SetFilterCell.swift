@@ -18,6 +18,15 @@ class SetFilterCell : UITableViewCell {
     func setData(rule: SetRule) {
         self.cardOperationLabel.text = rule.operation.rawValue
         self.cardCountLabel.text = "\(rule.value)"
+        if rule.satisfaction(RuleEngine.shared.cardData) < 1.0 {
+            self.cardCountLabel.textColor = .red
+        } else {
+            if #available(iOS 13, *) {
+                self.cardCountLabel.textColor = .label
+            } else {
+                self.cardCountLabel.textColor = .black
+            }
+        }
         ruleStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
         rule.cardRules.forEach { rule in
             let label = UILabel()

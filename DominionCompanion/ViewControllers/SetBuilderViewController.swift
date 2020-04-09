@@ -72,12 +72,36 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.present(alertController, animated: true)
     }
     
+    func showErrorAlert(message: String) {
+        let alertController = UIAlertController(
+            title: "Error Building Set",
+            message: message,
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(
+            title: "Ok", style: .cancel, handler: {_ in alertController.dismiss(animated: true, completion: nil)}
+        ))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @objc func shuffleSet() {
         self.tableView.reloadData()
-        SetBuilder.shared.shuffleSet {
-            self.refreshControl.endRefreshing()
-            self.currentSet = SetBuilder.shared.currentSet
-            self.tableView.reloadData()
+        SetBuilder.shared.shuffleSet { result in
+            switch result {
+            case .success:
+                self.refreshControl.endRefreshing()
+                self.currentSet = SetBuilder.shared.currentSet
+                self.tableView.reloadData()
+            case .failure(let error):
+                self.refreshControl.endRefreshing()
+                switch error {
+                case .failedToBuild(let reason):
+                    self.showErrorAlert(message: reason)
+                    return
+                default:
+                    return
+                }
+            }
         }
     }
     

@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+enum SetBuilderError: Error {
+    case failedToBuild(reason: String)
+}
 class SetBuilder {
     public static var shared: SetBuilder = SetBuilder()
     
@@ -220,13 +222,23 @@ class SetBuilder {
         }
     }
     
-    func shuffleSet(_ completion: @escaping () -> ()) {
-        RuleEngine.shared.getMatchingSet(pinnedCards) { cards in
-            self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
-            self.randomLandmarks = self.pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
-            self.randomEvents = self.pinnedEvents + CardData.shared.allEvents.shuffled()
-            self.randomProjects = self.pinnedProjects + CardData.shared.allProjects.shuffled()
-            completion()
+    func shuffleSet(_ completion: @escaping (Result<Bool, SetBuilderError>) -> ()) {
+        RuleEngine.shared.getMatchingSet(pinnedCards) { result in
+            switch result {
+            case .success(let cards):
+                self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
+                self.randomLandmarks = self.pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
+                self.randomEvents = self.pinnedEvents + CardData.shared.allEvents.shuffled()
+                self.randomProjects = self.pinnedProjects + CardData.shared.allProjects.shuffled()
+                completion(.success(true))
+            case .failure(let error):
+                switch error {
+                case .notSatisfiable:
+                    completion(.failure(.failedToBuild(reason: "One or more rules are not satisfiable from available cards")))
+                default:
+                    completion(.failure(.failedToBuild(reason: "Unknown Error Occurred")))
+                }
+            }
         }
     }
     

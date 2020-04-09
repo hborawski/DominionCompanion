@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
-
+enum RuleEngineError: Error {
+    case notSatisfiable
+}
 class RuleEngine {
     public static let shared : RuleEngine = RuleEngine()
     var savedRule: SavedRule?
@@ -61,12 +63,16 @@ class RuleEngine {
     }
     
     // MARK: Public API
-    func getMatchingSet(_ pinned: [Card], _ completion: @escaping ([Card]) -> Void) {
-        guard pinned.count < 10 else { return completion(pinned) }
+    func getMatchingSet(_ pinned: [Card], _ completion: @escaping (Result<[Card], RuleEngineError>) -> Void) {
+        guard pinned.count < 10 else { return completion(.success(pinned)) }
         let cardCopy = self.cardData
-        guard cardCopy.count >= 10 else { return completion([]) }
+        guard cardCopy.count >= 10 else { return completion(.success([])) }
         guard rules.count > 0 else {
-            return completion(pinned + Array(cardCopy.shuffled()[0..<pinned.count]))
+            return completion(.success(pinned + Array(cardCopy.shuffled()[0..<(10 - pinned.count)])))
+        }
+        guard ruleSatisfaction(cardCopy, self.rules) == 1.0 else {
+            print("Cant make a set with these rules")
+            return completion(.failure(.notSatisfiable))
         }
         DispatchQueue.global(qos: .background).async {
             var workingCards = cardCopy.shuffled()
@@ -99,7 +105,7 @@ class RuleEngine {
             DispatchQueue.main.async {
                 print("Final Satisfaction: \(self.ruleSatisfaction(finalSet, self.rules))")
                 print(finalSet.map({$0.name}).joined(separator: "|"))
-                completion(finalSet)
+                completion(.success(finalSet))
             }
 //            var attempts = 0
 //            let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
