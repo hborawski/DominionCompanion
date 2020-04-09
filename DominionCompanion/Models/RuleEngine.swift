@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 enum RuleEngineError: Error {
     case notSatisfiable
+    case tooManyAttempts
 }
 class RuleEngine {
     public static let shared : RuleEngine = RuleEngine()
@@ -78,13 +79,37 @@ class RuleEngine {
             var workingCards = cardCopy.shuffled()
             var finalSet: [Card] = pinned
             var satisfaction: Double = 0.0
+            
+            // How many attempts have been made for the current set
+            // to prevent looping forever trying to find 1 more card but it's not possible
+            var currentAttempts = 0
+            
+            // Total number of attempts to create a set
+            var totalAttempts = 0
             while finalSet.count < 10 {
-                guard let nextCard = workingCards.popLast() else {
+                guard totalAttempts < 100 else {
+                    return completion(.failure(.tooManyAttempts))
+                }
+                guard currentAttempts < 10 else {
+                    finalSet = pinned
+                    satisfaction = 0.0
                     workingCards = cardCopy.shuffled()
+                    currentAttempts = 0
                     continue
                 }
-                print("Trying card: \(nextCard.name)")
+                // If there is no next card, circle back to cards that have been attempted before
+                guard let nextCard = workingCards.popLast() else {
+                    workingCards = cardCopy.shuffled()
+                    currentAttempts += 1
+                    totalAttempts += 1
+                    continue
+                }
+                // The potential next version of the set being built
                 let tempSet = finalSet + [nextCard]
+                
+                // If it doesn't break the rules
+                // and the satisfaction is either already met, or has increased
+                // then proceed with this set
                 if
                     self.inverseMatchRules(tempSet, self.rules),
                     (self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0)
@@ -96,6 +121,8 @@ class RuleEngine {
                 } else {
                     print("Card did not match set: \(nextCard.name), satisfaction: \(satisfaction), count: \(finalSet.count)")
                 }
+                // If we fill the set but not all the rules are statisfied
+                // reset and try again
                 if (finalSet.count == 10 && satisfaction < 1.0) {
                     finalSet = pinned
                     satisfaction = 0.0

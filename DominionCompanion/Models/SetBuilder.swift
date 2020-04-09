@@ -234,9 +234,9 @@ class SetBuilder {
             case .failure(let error):
                 switch error {
                 case .notSatisfiable:
-                    completion(.failure(.failedToBuild(reason: "One or more rules are not satisfiable from available cards")))
-                default:
-                    completion(.failure(.failedToBuild(reason: "Unknown Error Occurred")))
+                    completion(.failure(.failedToBuild(reason: "One or more rules are not satisfiable from available cards.")))
+                case .tooManyAttempts:
+                    completion(.failure(.failedToBuild(reason: "Rules are individually valid but not satisfiable together.")))
                 }
             }
         }
