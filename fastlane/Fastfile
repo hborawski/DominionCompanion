@@ -30,4 +30,17 @@ platform :ios do
       project: 'DominionCompanion.xcodeproj'
     )
   end
+
+  desc 'Release to TestFlight'
+  lane :beta_release do
+    increment_build_number
+    build_ios_app(
+      scheme: 'DominionCompanion',
+      project: 'DominionCompanion.xcodeproj',
+      output_directory: 'build'
+    )
+    commit_version_bump
+    upload_to_testflight
+
+  end
 end
