@@ -39,8 +39,8 @@ platform :ios do
       project: 'DominionCompanion.xcodeproj',
       output_directory: 'build'
     )
-    commit_version_bump
     upload_to_testflight
+    commit_version_bump
 
   end
 end
