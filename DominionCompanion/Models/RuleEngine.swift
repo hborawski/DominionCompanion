@@ -71,13 +71,14 @@ class RuleEngine {
         guard rules.count > 0 else {
             return completion(.success(pinned + Array(cardCopy.shuffled()[0..<(10 - pinned.count)])))
         }
-        guard ruleSatisfaction(cardCopy, self.rules) == 1.0 else {
+        guard rulesCanBeSatisfied(cardCopy, self.rules) else {
             print("Cant make a set with these rules")
             return completion(.failure(.notSatisfiable))
         }
         DispatchQueue.global(qos: .background).async {
             var workingCards = cardCopy.shuffled()
             var finalSet: [Card] = pinned
+            var ruleSatisfactions: [Double] = self.rules.map { $0.satisfaction(pinned) }
             var satisfaction: Double = 0.0
             
             // How many attempts have been made for the current set
@@ -93,6 +94,7 @@ class RuleEngine {
                 guard currentAttempts < 10 else {
                     finalSet = pinned
                     satisfaction = 0.0
+                    ruleSatisfactions = self.rules.map { $0.satisfaction(pinned) }
                     workingCards = cardCopy.shuffled()
                     currentAttempts = 0
                     continue
@@ -107,17 +109,28 @@ class RuleEngine {
                 // The potential next version of the set being built
                 let tempSet = finalSet + [nextCard]
                 
+                // Calculate satisfactions for each rule
+                let newSatisfactions = self.rules.map { $0.satisfaction(tempSet) }
+                
+                let satisfactionDiff = newSatisfactions.enumerated().map { (index, sat) in
+                    return sat - ruleSatisfactions[index]
+                }
+                
+                let satisfactionDecrease: Bool = satisfactionDiff.first(where: { $0 < 0.0 }) != nil
+                
                 // If it doesn't break the rules
                 // and the satisfaction is either already met, or has increased
                 // then proceed with this set
                 if
                     self.inverseMatchRules(tempSet, self.rules),
-                    (self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0)
+                    !satisfactionDecrease,
+                    self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0
                 {
                     print("Satisfaction: \(self.ruleSatisfaction(tempSet, self.rules))")
                     print("Adding card to set: \(nextCard.name)")
                     finalSet = tempSet
                     satisfaction = self.ruleSatisfaction(finalSet, self.rules)
+                    ruleSatisfactions = newSatisfactions
                 } else {
                     print("Card did not match set: \(nextCard.name), satisfaction: \(satisfaction), count: \(finalSet.count)")
                 }
@@ -127,6 +140,7 @@ class RuleEngine {
                     finalSet = pinned
                     satisfaction = 0.0
                     workingCards = cardCopy.shuffled()
+                    ruleSatisfactions = self.rules.map { $0.satisfaction(pinned) }
                 }
             }
             DispatchQueue.main.async {
@@ -188,6 +202,10 @@ class RuleEngine {
         let satisfactions = rules.compactMap { $0.satisfaction(cards) }
 //        print(satisfactions)
         return satisfactions.reduce(0.0, +) / Double(rules.count)
+    }
+    
+    func rulesCanBeSatisfied(_ cards: [Card], _ rules: [SetRule]) -> Bool {
+        return rules.first(where: { !$0.satisfiable(cards) }) == nil
     }
 }
 

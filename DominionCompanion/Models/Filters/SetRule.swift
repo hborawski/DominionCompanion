@@ -72,13 +72,31 @@ struct SetRule: Codable {
         case .greaterOrEqual:
             return setValue >= desiredValue ? 1.0 : setValue / desiredValue
         case .equal:
-            return setValue >= desiredValue ? 1.0 : setValue / desiredValue
+            return setValue > desiredValue ? desiredValue / setValue : setValue / desiredValue
         case .lessOrEqual:
             return setValue / desiredValue
         case .less:
             return setValue / (desiredValue - 1.0)
         case .notEqual:
             return setValue / desiredValue
+        }
+    }
+    
+    func satisfiable(_ cards: [Card]) -> Bool {
+        let setValue = self.matchingCards(cards).count
+        switch self.operation {
+        case .greater:
+            return setValue > value
+        case .greaterOrEqual:
+            fallthrough
+        case .equal:
+            fallthrough
+        case .lessOrEqual:
+            fallthrough
+        case .less:
+            return setValue >= value
+        case .notEqual:
+            return value == 0 ? setValue > 0 : true
         }
     }
 }
