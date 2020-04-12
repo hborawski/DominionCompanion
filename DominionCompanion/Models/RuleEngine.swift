@@ -102,6 +102,9 @@ class RuleEngine {
                     totalAttempts += 1
                     continue
                 }
+                
+                // make sure we dont have the card already in the set
+                guard !finalSet.contains(nextCard) else { continue }
                 // The potential next version of the set being built
                 let tempSet = finalSet + [nextCard]
                 
