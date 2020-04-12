@@ -2727,7 +2727,7 @@
     "name": "Colony",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -2927,7 +2927,7 @@
     "name": "Copper",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -4522,7 +4522,7 @@
     "name": "Duchy",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -5048,7 +5048,7 @@
     "name": "Estate",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -6518,7 +6518,7 @@
     "name": "Gold",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -11800,7 +11800,7 @@
     "name": "Platinum",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -12365,7 +12365,7 @@
     "name": "Province",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -14145,7 +14145,7 @@
     "name": "Silver",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {

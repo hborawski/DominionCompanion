@@ -99,13 +99,8 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @objc func handleSwitch(_ sender: UISwitch) {
-        guard let tag = SettingToggle.init(rawValue: sender.tag) else { return }
-        switch tag {
-        case .colonies:
-            let key = tagToKey[tag] ?? ""
-            UserDefaults.standard.set(sender.isOn, forKey: key)
-            return
-        }
+        guard let tag = SettingToggle.init(rawValue: sender.tag), let key = tagToKey[tag] else { return }
+        UserDefaults.standard.set(sender.isOn, forKey: key)
     }
     
     func makeSwitch(_ menuItem: MenuItem) -> UISwitch {

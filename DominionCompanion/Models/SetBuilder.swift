@@ -222,6 +222,7 @@ class SetBuilder {
         }
     }
     
+    // MARK: Set Shuffle
     func shuffleSet(_ completion: @escaping (Result<Bool, SetBuilderError>) -> ()) {
         RuleEngine.shared.getMatchingSet(pinnedCards) { result in
             switch result {
@@ -242,14 +243,13 @@ class SetBuilder {
         }
     }
     
+    // MARK: Final Set
     func getFinalSet() -> SetModel {
-        let colonies = UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies)
         return SetModel(
             landmarks: Array(pinnedLandmarks[..<maxLandmarks]),
             events: Array(pinnedEvents[..<maxEvents]),
             projects: Array(pinnedProjects[..<maxProjects]),
-            cards: pinnedCards,
-            colonies: colonies
+            cards: pinnedCards
         )
     }
     

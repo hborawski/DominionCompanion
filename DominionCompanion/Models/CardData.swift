@@ -37,11 +37,17 @@ class CardData {
     
     let kingdomTypes: [String]
     
-    let allLandmarks: [Card]
+    var allLandmarks: [Card] {
+        self.allCards.filter({ $0.types.contains("Landmark") }).filter({!excludedCards.contains($0)})
+    }
     
-    let allEvents: [Card]
+    var allEvents: [Card] {
+        self.allCards.filter({ $0.types.contains("Event") }).filter({!excludedCards.contains($0)})
+    }
     
-    let allProjects: [Card]
+    var allProjects: [Card] {
+        self.allCards.filter({ $0.types.contains("Project") }).filter({!excludedCards.contains($0)})
+    }
     
     // MARK: Maxes for creating picker inputs
     let maxPrice: Int
@@ -71,10 +77,11 @@ class CardData {
             self.allCards = []
         }
         self.kingdomCards = self.allCards.filter { (card: Card) -> Bool in
-            return Set(Constants.nonKingdomTypes).intersection(Set(card.types)).count == 0
+            return card.supply
+//            return Set(Constants.nonKingdomTypes).intersection(Set(card.types)).count == 0
         }
         
-        self.maxPrice = self.kingdomCards.map({$0.cost}).max(by: {$0<$1}) ?? 0
+        self.maxPrice = self.kingdomCards.map({$0.cost}).max(by: <) ?? 0
         self.maxDebt = self.kingdomCards.map({$0.debt}).max(by: {$0<$1}) ?? 0
         self.maxActions = self.kingdomCards.map({$0.actions}).max(by: {$0<$1}) ?? 0
         self.maxBuys = self.kingdomCards.map({$0.buys}).max(by: {$0<$1}) ?? 0
@@ -82,9 +89,6 @@ class CardData {
         self.maxVictoryTokens = self.kingdomCards.map({$0.tokens.victory}).max(by: {$0<$1}) ?? 0
 
         self.allExpansions = Array(Set(self.kingdomCards.map({$0.expansion}).filter { $0 != "" })).sorted()
-        self.allLandmarks = self.allCards.filter { $0.types.contains("Landmark") }
-        self.allEvents = self.allCards.filter { $0.types.contains("Event") }
-        self.allProjects = self.allCards.filter { $0.types.contains("Project") }
         self.allAttributes = CardProperty.allCases
         self.kingdomTypes = self.kingdomCards.map({$0.types}).reduce([], { (types: [String], allTypes: [String]) -> [String] in
             return Array(Set(allTypes).union(Set(types)))

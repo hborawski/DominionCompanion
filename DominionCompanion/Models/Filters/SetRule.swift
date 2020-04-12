@@ -74,9 +74,9 @@ struct SetRule: Codable {
         case .equal:
             return setValue > desiredValue ? desiredValue / setValue : setValue / desiredValue
         case .lessOrEqual:
-            return setValue / desiredValue
+            return setValue > desiredValue ? 0.0 : 1.0
         case .less:
-            return setValue / (desiredValue - 1.0)
+            return setValue >= desiredValue ? 0.0 : 1.0
         case .notEqual:
             return setValue / desiredValue
         }
@@ -90,11 +90,11 @@ struct SetRule: Codable {
         case .greaterOrEqual:
             fallthrough
         case .equal:
-            fallthrough
+            return setValue >= value
         case .lessOrEqual:
             fallthrough
         case .less:
-            return setValue >= value
+            return setValue >= 0
         case .notEqual:
             return value == 0 ? setValue > 0 : true
         }

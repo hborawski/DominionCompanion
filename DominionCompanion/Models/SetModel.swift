@@ -28,7 +28,16 @@ struct SetModel {
     }
     
     // MARK: General Required Extras
-    var colonies: Bool
+    var colonies: Bool {
+        guard !UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies) else { return true }
+        let chance = cards.filter({$0.expansion == "Prosperity"}).count
+        
+        return chance > Int.random(in: 0...10)
+    }
+    var shelters: Bool {
+        let chance = cards.filter({$0.expansion == "Dark Ages"}).count
+        return chance > Int.random(in: 0...10)
+    }
     var boons: Bool { self.cards.filter({$0.types.contains("Fate")}).count > 0 }
     var hexes: Bool { self.cards.filter({$0.types.contains("Doom")}).count > 0 }
     var ruins: Bool { self.cards.filter({$0.types.contains("Looter")}).count > 0 }
@@ -47,7 +56,9 @@ struct SetModel {
     var minusCostTokens: Bool { self.cards.filter({$0.tokens.minusCost}).count > 0 }
     var trashingTokens: Bool { self.cards.filter({$0.tokens.trashing}).count > 0 }
     var estateTokens: Bool { self.cards.filter({$0.tokens.estate}).count > 0 }
+    var projectTokens: Bool { projects.count > 0 }
     
+    // MARK: ViewModel
     func getSections(tableView: UITableView) -> [GameplaySection] {
         let getAttributedCardCell = { (card: Card) -> UITableViewCell in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else {
@@ -95,9 +106,14 @@ struct SetModel {
             sections.append(GameplaySection(title: "Additional Mechanics", rows: additionalMechanics.map(getBasicCell)))
         }
         
+        if colonies {
+            sections.append(GameplaySection(title: "Victory and Treasure", rows: ["Colonies", "Platinum"].map(getBasicCell)))
+        }
+        
         return sections
     }
     
+    // MARK: Helpers
     func getTokens() -> [String] {
         var tokens: [String] = []
         
@@ -115,6 +131,7 @@ struct SetModel {
         if minusCostTokens { tokens.append("-Cost Token") }
         if trashingTokens { tokens.append("Trashing Token") }
         if estateTokens { tokens.append("Estate Token") }
+        if projectTokens { tokens.append("Wooden Project Cubes") }
         return tokens
     }
     
@@ -137,6 +154,10 @@ struct SetModel {
             mechanics.append("Potion")
         }
         
+        if shelters {
+            mechanics.append("Shelters")
+        }
+        
         return mechanics
     }
     
@@ -154,6 +175,7 @@ struct SetModel {
     }
 }
 
+// MARK: Sharing
 struct ShareableSet: Codable {
     let cards: [String]
     let events: [String]
@@ -179,7 +201,7 @@ extension ShareableSet {
             return CardData.shared.allCards.first(where: {$0.name == name})
         }
         
-        return SetModel(landmarks: landmarks, events: events, projects: projects, cards: cards, colonies: false)
+        return SetModel(landmarks: landmarks, events: events, projects: projects, cards: cards)
     }
 }
 

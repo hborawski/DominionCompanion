@@ -8,8 +8,7 @@
 
 import Foundation
 
-enum CardProperty: String, Codable {
-    static var allCases : [CardProperty] = [.cost, .debt, .potion, .actions, .buys, .cards, .expansion, .type, .trash, .victoryTokens]
+enum CardProperty: String, Codable, CaseIterable {
     case cost = "Cost"
     case debt = "Debt"
     case potion = "Potion"

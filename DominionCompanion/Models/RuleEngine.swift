@@ -51,9 +51,6 @@ class RuleEngine {
         return cards
     }
     
-    var editingRule: SetRule?
-    
-    
     init() {
         self.rules = self.loadPinnedRules()
     }
@@ -65,9 +62,8 @@ class RuleEngine {
     
     // MARK: Public API
     func getMatchingSet(_ pinned: [Card], _ completion: @escaping (Result<[Card], RuleEngineError>) -> Void) {
-        guard pinned.count < 10 else { return completion(.success(pinned)) }
+        guard pinned.count < 10, self.cardData.count >= 10 else { return completion(.success(pinned)) }
         let cardCopy = self.cardData
-        guard cardCopy.count >= 10 else { return completion(.success([])) }
         guard rules.count > 0 else {
             return completion(.success(pinned + Array(cardCopy.shuffled()[0..<(10 - pinned.count)])))
         }
@@ -91,7 +87,7 @@ class RuleEngine {
                 guard totalAttempts < 100 else {
                     return completion(.failure(.tooManyAttempts))
                 }
-                guard currentAttempts < 10 else {
+                guard currentAttempts < 5 else {
                     finalSet = pinned
                     satisfaction = 0.0
                     ruleSatisfactions = self.rules.map { $0.satisfaction(pinned) }
@@ -116,14 +112,14 @@ class RuleEngine {
                     return sat - ruleSatisfactions[index]
                 }
                 
-                let satisfactionDecrease: Bool = satisfactionDiff.first(where: { $0 < 0.0 }) != nil
+                let satisfactionDecreased: Bool = satisfactionDiff.first(where: { $0 < 0.0 }) != nil
                 
                 // If it doesn't break the rules
                 // and the satisfaction is either already met, or has increased
                 // then proceed with this set
                 if
                     self.inverseMatchRules(tempSet, self.rules),
-                    !satisfactionDecrease,
+                    !satisfactionDecreased,
                     self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0
                 {
                     print("Satisfaction: \(self.ruleSatisfaction(tempSet, self.rules))")
@@ -148,23 +144,6 @@ class RuleEngine {
                 print(finalSet.map({$0.name}).joined(separator: "|"))
                 completion(.success(finalSet))
             }
-//            var attempts = 0
-//            let generator = CombinationGenerator<Card>(cardCopy.shuffled(), size: 10 - pinned.count)
-//            var testSet = generator.next()
-//            var finalSet: [Card] = []
-//            let start = CACurrentMediaTime()
-//            while let set = testSet {
-//                finalSet = pinned + set
-//                if self.matchesAllRules(finalSet, self.rules) {
-//                    print("found set in \(CACurrentMediaTime() - start) seconds and \(attempts) attempts")
-//                    break
-//                }
-//                testSet = generator.next()
-//                attempts += 1
-//            }
-//            DispatchQueue.main.async {
-//                completion(finalSet)
-//            }
         }
     }
     
@@ -185,13 +164,7 @@ class RuleEngine {
         return self.rules[index]
     }
     
-    // MARK: Utility Methods    
-    func matchesAllRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
-        return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
-            return acc && cv.match(cards)
-        }
-    }
-    
+    // MARK: Utility Methods
     func inverseMatchRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
         return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
             return acc && cv.inverseMatch(cards)
@@ -200,7 +173,6 @@ class RuleEngine {
     
     func ruleSatisfaction(_ cards: [Card], _ rules: [SetRule]) -> Double {
         let satisfactions = rules.compactMap { $0.satisfaction(cards) }
-//        print(satisfactions)
         return satisfactions.reduce(0.0, +) / Double(rules.count)
     }
     
@@ -233,8 +205,8 @@ extension RuleEngine {
         return rules
     }
     
-    func saveRules(_ filters: [SavedRule]) {
-        if let data = try? PropertyListEncoder().encode(filters) {
+    func saveRules(_ rules: [SavedRule]) {
+        if let data = try? PropertyListEncoder().encode(rules) {
             UserDefaults.standard.set(data, forKey: Constants.SaveKeys.savedRules)
         }
     }
