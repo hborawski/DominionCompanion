@@ -50,6 +50,7 @@
 		AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */; };
 		AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */; };
 		AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */; };
+		AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB96A992443E6DA00F2046D /* Settings.swift */; };
 		AFD4615E241C9426007720EA /* QRCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4615D241C9426007720EA /* QRCodes.storyboard */; };
 		AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46160241C945E007720EA /* ShareSetViewController.swift */; };
 		AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46162241D5D22007720EA /* ScanSetViewController.swift */; };
@@ -120,6 +121,7 @@
 		AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuModel.swift; sourceTree = "<group>"; };
 		AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingTableViewController.swift; sourceTree = "<group>"; };
 		AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRulesTableViewController.swift; sourceTree = "<group>"; };
+		AFB96A992443E6DA00F2046D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AFD4615D241C9426007720EA /* QRCodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodes.storyboard; sourceTree = "<group>"; };
 		AFD46160241C945E007720EA /* ShareSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSetViewController.swift; sourceTree = "<group>"; };
 		AFD46162241D5D22007720EA /* ScanSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSetViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */,
 				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
 				AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */,
+				AFB96A992443E6DA00F2046D /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,
+				AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */,
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,
 				AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */,
 				AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */,

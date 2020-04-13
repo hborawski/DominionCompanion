@@ -29,7 +29,7 @@ struct SetModel {
     
     // MARK: General Required Extras
     var colonies: Bool {
-        guard !UserDefaults.standard.bool(forKey: Constants.SaveKeys.settingsColonies) else { return true }
+        guard !Settings.shared.colonies else { return true }
         let chance = cards.filter({$0.expansion == "Prosperity"}).count
         
         return chance > Int.random(in: 0...10)
