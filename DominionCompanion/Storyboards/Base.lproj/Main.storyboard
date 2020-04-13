@@ -42,7 +42,7 @@
         <scene sceneID="jdn-v4-8FJ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" id="JAb-gU-f70" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="mEj-1Q-XR7"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="mEj-1Q-XR7"/>
                     <navigationItem key="navigationItem" id="tZO-7y-zB9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcE-9G-Fqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,7 +196,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="n6W-Ed-Rkw">
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="n6W-Ed-Rkw">
                                                             <rect key="frame" x="177.66666666666666" y="12" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="EwG-Hf-M1v"/>
@@ -265,12 +265,11 @@
     <resources>
         <image name="Card" width="30" height="30"/>
         <image name="Deck" width="30" height="30"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aIl-BN-Vth"/>
+        <segue reference="jpY-1W-paC"/>
     </inferredMetricsTieBreakers>
 </document>

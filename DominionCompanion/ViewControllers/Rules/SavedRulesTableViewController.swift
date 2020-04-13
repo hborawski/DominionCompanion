@@ -56,7 +56,7 @@ class SavedRulesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
+        let cell = UITableViewCell()
         cell.textLabel?.text = savedRules[indexPath.row].name
         return cell
     }

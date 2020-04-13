@@ -29,7 +29,7 @@ class GlobalExclusionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
+        let cell = UITableViewCell()
         cell.textLabel?.text = CardData.shared.excludedCards[indexPath.row].name
         return cell
     }
