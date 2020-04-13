@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -219,7 +218,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lO0-X7-TLF" firstAttribute="leading" secondItem="JoZ-Fs-gFN" secondAttribute="leading" id="CJc-ld-eCR"/>
                             <constraint firstItem="lO0-X7-TLF" firstAttribute="top" secondItem="JoZ-Fs-gFN" secondAttribute="top" id="WBF-z6-Zwa"/>
@@ -265,9 +264,6 @@
     <resources>
         <image name="Card" width="30" height="30"/>
         <image name="Deck" width="30" height="30"/>
-        <namedColor name="Background">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jpY-1W-paC"/>

@@ -50,7 +50,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="114" height="90.5"/>
                                                     <color key="tintColor" name="Glyph"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="0et-U9-xJJ"/>
                                                         <constraint firstAttribute="width" constant="60" id="h8y-I1-1nw"/>
                                                     </constraints>
                                                 </imageView>
