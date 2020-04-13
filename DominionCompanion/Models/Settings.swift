@@ -25,10 +25,7 @@ struct UserDefaultsBacked<Value> {
     let key: String
     
     var wrappedValue: Value {
-        get {
-            guard let val = UserDefaults.standard.object(forKey: key) as? Value else { return value }
-            return val
-        }
+        get { (UserDefaults.standard.object(forKey: key) as? Value) ?? value }
         set { UserDefaults.standard.set(newValue, forKey: key) }
     }
     
