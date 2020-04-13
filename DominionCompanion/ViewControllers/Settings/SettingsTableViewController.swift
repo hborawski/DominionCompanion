@@ -115,7 +115,3 @@ class SettingsTableViewController: UITableViewController {
 enum SettingToggle: Int {
     case colonies = 1
 }
-
-//struct Settings: Codable {
-//    var excluded: [String]
-//}

@@ -185,12 +185,9 @@
 		AF1B6EA8232421B300ADA74D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF2BB9752443E27D00438C3B /* CardData */,
 				AF6AA0A22381E2F600AC3BEA /* Rules */,
-				AF1B6EBB23244FB600ADA74D /* Filters */,
-				AFE8EE7422A4B830008E09B2 /* Card.swift */,
-				AF1B6EAB2324226800ADA74D /* CardData.swift */,
 				AF1B6EB0232432A700ADA74D /* RuleEngine.swift */,
-				AF1B6EC6232463FD00ADA74D /* CardProperty.swift */,
 				AF1B6ECC2325A4F400ADA74D /* SetBuilder.swift */,
 				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
 				AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */,
@@ -233,36 +230,36 @@
 		AF1B6EB423243F7E00ADA74D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */,
 				AF1B6ECA232495AA00ADA74D /* AttributedCardCell.swift */,
-				AF71F69D236FB33500BCB9EA /* FilterCell.swift */,
-				AF71F69F236FB40200BCB9EA /* RangeCell.swift */,
 				AFF0A9F123A55F7400056218 /* AttributedCardCell.xib */,
+				AF71F69D236FB33500BCB9EA /* FilterCell.swift */,
+				AF1B6EB523243FAA00ADA74D /* SetFilterCell.swift */,
+				AF71F69F236FB40200BCB9EA /* RangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AF1B6EBB23244FB600ADA74D /* Filters */ = {
+		AF2BB9752443E27D00438C3B /* CardData */ = {
 			isa = PBXGroup;
 			children = (
-				AF1B6EB22324334F00ADA74D /* SetRule.swift */,
-				AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */,
+				AFE8EE7422A4B830008E09B2 /* Card.swift */,
+				AF1B6EAB2324226800ADA74D /* CardData.swift */,
 			);
-			path = Filters;
+			path = CardData;
 			sourceTree = "<group>";
 		};
-		AF6AA0922381C9DB00AC3BEA /* Filters */ = {
+		AF6AA0922381C9DB00AC3BEA /* Rules */ = {
 			isa = PBXGroup;
 			children = (
 				AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */,
 			);
-			path = Filters;
+			path = Rules;
 			sourceTree = "<group>";
 		};
 		AF6AA0932381C9E800AC3BEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0922381C9DB00AC3BEA /* Filters */,
+				AF6AA0922381C9DB00AC3BEA /* Rules */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				AF6AA0A42381E30A00AC3BEA /* CardRule.swift */,
+				AF1B6EB22324334F00ADA74D /* SetRule.swift */,
+				AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */,
+				AF1B6EC6232463FD00ADA74D /* CardProperty.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
