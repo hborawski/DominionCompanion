@@ -246,10 +246,10 @@ class SetBuilder {
     // MARK: Final Set
     func getFinalSet() -> SetModel {
         return SetModel(
-            landmarks: Array(pinnedLandmarks[..<maxLandmarks]),
-            events: Array(pinnedEvents[..<maxEvents]),
-            projects: Array(pinnedProjects[..<maxProjects]),
-            cards: pinnedCards
+            landmarks: Array(randomLandmarks[..<maxLandmarks]),
+            events: Array(randomEvents[..<maxEvents]),
+            projects: Array(randomProjects[..<maxProjects]),
+            cards: getFullSet()
         )
     }
     

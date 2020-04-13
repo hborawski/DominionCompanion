@@ -26,8 +26,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         if !SetBuilder.shared.setComplete {
             self.shuffleSet()
         }
-        let settings = UIBarButtonItem(image: UIImage.init(named: "settings"), style: .plain, target: self, action: #selector(openSettings(_:)))
-        self.navigationItem.rightBarButtonItems = [settings]
+        let gameplaySetup = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(goToGameplaySetup(_:)))
+        self.navigationItem.rightBarButtonItems = [gameplaySetup]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showShareMenu))
         gameplaySetupButton.layer.cornerRadius = 6.0
         
@@ -40,17 +40,12 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.currentSet = SetBuilder.shared.currentSet
         self.tableView.reloadData()
         rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
-        toggleSetupButton()
     }
     
     // MARK: Button Handlers
     @IBAction func shuffleSetButtonTapped(_ sender: UIButton) {
         refreshControl.beginRefreshing()
         refreshControl.sendActions(for: .valueChanged)
-    }
-    
-    @objc func openSettings(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "ShowSettings", sender: self)
     }
     
     @objc func showShareMenu() {
@@ -146,7 +141,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             guard self.refreshControl.isRefreshing == false else { return }
             cardData.pinAction()
             tableView.reloadData()
-            self.toggleSetupButton()
             self.currentSet = SetBuilder.shared.currentSet
             completion(true)
         }
@@ -169,7 +163,11 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             segue.identifier == "GoToGameplaySetup",
             let gameplayVC = segue.destination as? GameplaySetupViewController
         {
-            gameplayVC.setModel = SetBuilder.shared.getFinalSet()
+            let finalSet = SetBuilder.shared.getFinalSet()
+            for card in finalSet.cards {
+                SetBuilder.shared.pin(card)
+            }
+            gameplayVC.setModel = finalSet
             return
         }
         if
@@ -190,19 +188,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
 }
 
 extension SetBuilderViewController {
-    @IBAction func goToGameplaySetup(_ sender: UIButton) {
+    @IBAction func goToGameplaySetup(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "GoToGameplaySetup", sender: self)
-    }
-    
-    func toggleSetupButton() {
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.2) {
-                if self.gameplaySetupButton.isHidden, SetBuilder.shared.setComplete {
-                    self.gameplaySetupButton.isHidden = false
-                } else if !self.gameplaySetupButton.isHidden, !SetBuilder.shared.setComplete {
-                    self.gameplaySetupButton.isHidden = true
-                }
-            }
-        }
     }
 }
