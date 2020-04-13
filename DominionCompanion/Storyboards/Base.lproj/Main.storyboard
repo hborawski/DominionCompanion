@@ -184,19 +184,6 @@
                                             <constraint firstAttribute="height" constant="44" id="eLR-b8-rtR"/>
                                         </constraints>
                                     </stackView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSf-Wo-2uU">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="DmH-Yy-ceS"/>
-                                        </constraints>
-                                        <state key="normal" title="Ready To Play">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToGameplaySetup:" destination="2F7-bz-VMJ" eventType="touchUpInside" id="J4L-vy-g5w"/>
-                                        </connections>
-                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="d7d-1I-lk4">
                                         <rect key="frame" x="0.0" y="44" width="375" height="597"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -243,7 +230,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Set Builder" id="k0y-Ht-sh0"/>
                     <connections>
-                        <outlet property="gameplaySetupButton" destination="cSf-Wo-2uU" id="IVs-wt-jkG"/>
                         <outlet property="rulesButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>

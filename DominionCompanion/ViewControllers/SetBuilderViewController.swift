@@ -13,7 +13,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
     @IBOutlet var rulesButton: UIButton!
-    @IBOutlet var gameplaySetupButton: UIButton!
     
     var currentSet: [SetBuilderSection] = []
     
@@ -29,7 +28,6 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let gameplaySetup = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(goToGameplaySetup(_:)))
         self.navigationItem.rightBarButtonItems = [gameplaySetup]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showShareMenu))
-        gameplaySetupButton.layer.cornerRadius = 6.0
         
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(shuffleSet), for: .valueChanged)
