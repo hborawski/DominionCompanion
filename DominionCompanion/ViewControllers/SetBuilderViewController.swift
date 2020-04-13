@@ -42,6 +42,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: Button Handlers
     @IBAction func shuffleSetButtonTapped(_ sender: UIButton) {
+        guard !SetBuilder.shared.setComplete else { return }
         refreshControl.beginRefreshing()
         refreshControl.sendActions(for: .valueChanged)
     }
