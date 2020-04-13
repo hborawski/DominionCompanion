@@ -103,8 +103,9 @@ class RuleEngine {
                     continue
                 }
                 
-                // make sure we dont have the card already in the set
+                // make sure we dont have the card already in the set (if it was pinned for example)
                 guard !finalSet.contains(nextCard) else { continue }
+
                 // The potential next version of the set being built
                 let tempSet = finalSet + [nextCard]
                 
@@ -160,11 +161,6 @@ class RuleEngine {
     
     func updateRule( _ index: Int, _ newRule: SetRule) {
         self.rules[index] = newRule
-    }
-    
-    func getRule(_ index: Int) -> SetRule? {
-        guard index < self.rules.count else { return nil }
-        return self.rules[index]
     }
     
     // MARK: Utility Methods
