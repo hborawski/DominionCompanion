@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 
 class SetRuleTest: XCTestCase {
-    func testFilterMatches() {
+    func testMatch() {
         let cardRule = CardRule(type: .string, property: .expansion, operation: .equal, comparisonValue: "Test")
         
         let rule = SetRule(value: 1, operation: .greater, cardRules: [cardRule])
@@ -18,5 +18,13 @@ class SetRuleTest: XCTestCase {
         XCTAssert(rule.match([TestData.actionCard, TestData.treasureCard]))
         XCTAssert(rule.match([TestData.actionCard, TestData.treasureCard, TestData.actionCardExpansion2]))
         XCTAssertFalse(rule.match([TestData.actionCardExpansion2, TestData.actionDurationCardExpansion2]))
+    }
+    
+    func testInverseMatch() {
+        let cardRule = CardRule(type: .number, property: .cost, operation: .equal, comparisonValue: "2")
+        
+        let rule = SetRule(value: 1, operation: .greater, cardRules: [cardRule])
+        let set = [TestData.cost2Card]
+        XCTAssert(rule.inverseMatch(set))
     }
 }

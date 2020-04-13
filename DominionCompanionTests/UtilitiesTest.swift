@@ -19,22 +19,12 @@ class UtilitiesTest: XCTestCase {
     func testAlphabeticSort() {
         let expected = [card1, card3, card2]
         let actual = [card2, card1, card3].sorted(by: Utilities.alphabeticSort(card1:card2:))
-        XCTAssertTrue(expected == actual)
+        XCTAssertEqual(expected, actual)
     }
     
     func testCostSort() {
         let expected = [card1, card2, card3]
         let actual = [card2, card1, card3].sorted(by: Utilities.priceSort(card1:card2:))
-        XCTAssertTrue(expected == actual)
-    }
-    
-    func testGenerator() {
-        let data = CardData.shared.kingdomCards
-        let generator: CombinationGenerator<Card> = CombinationGenerator(data, size: 10)
-        var combo = generator.next()
-        while combo != nil {
-            print(combo?.map { $0.name })
-            combo = generator.next()
-        }
+        XCTAssertEqual(expected, actual)
     }
 }
