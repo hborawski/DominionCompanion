@@ -120,8 +120,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        self.performSegue(withIdentifier: "ViewCard", sender: cell)
+        self.performSegue(withIdentifier: "ViewCard", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -151,8 +150,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             segue.identifier == "ViewCard",
-            let selectedCell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: selectedCell),
+            let indexPath = sender as? IndexPath,
             let cardVC = segue.destination as? CardViewController
         {
             cardVC.card = currentSet[indexPath.section].rows[indexPath.row].card
