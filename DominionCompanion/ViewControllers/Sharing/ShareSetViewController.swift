@@ -19,13 +19,16 @@ class ShareSetViewController: UIViewController {
     }
     
     func generateQRCode(from set: ShareableSet) -> UIImage? {
-        guard let data = try? JSONEncoder().encode(set) else { return nil }
-
-        guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+        guard
+            let data = try? JSONEncoder().encode(set),
+            let filter = CIFilter(name: "CIQRCodeGenerator")
+        else { return nil }
         filter.setValue(data, forKey: "inputMessage")
-        let transform = CGAffineTransform(scaleX: 3, y: 3)
 
-        guard let output = filter.outputImage?.transformed(by: transform) else { return nil }
+        guard
+            let output = filter.outputImage?.transformed(by: CGAffineTransform(scaleX: 3, y: 3))
+        else { return nil }
+        
         return UIImage(ciImage: output)
     }
     
