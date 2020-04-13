@@ -46,6 +46,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         refreshControl.sendActions(for: .valueChanged)
     }
     
+    // MARK: Alerts
     @objc func showShareMenu() {
         let alertController = UIAlertController(
             title: "Set Sharing",
@@ -77,6 +78,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         self.present(alertController, animated: true, completion: completion)
     }
     
+    // MARK: Shuffling
     @objc func shuffleSet() {
         tableView.reloadData()
         SetBuilder.shared.shuffleSet { result in
@@ -147,6 +149,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         return UISwipeActionsConfiguration(actions: [pin])
     }
     
+    // MARK: Segue Prep
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             segue.identifier == "ViewCard",
@@ -178,7 +181,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         
         if segue.identifier == "ScanQRCode", let scanVC = segue.destination as? ScanSetViewController {
             scanVC.importSucceeded = {
-                self.viewWillAppear(true)
+                self.updateSetDisplay()
             }
         }
     }
