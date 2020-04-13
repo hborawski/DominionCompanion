@@ -23,5 +23,6 @@ struct Constants {
         static let settingsNumLandmarks = "settings_numberOfLandmarks"
         static let settingsColonies = "settings_colonies"
         static let settingsSortMode = "settings_sortMode"
+        static let settingsPinCards = "settings_pincards"
     }
 }

@@ -264,8 +264,7 @@ class SetBuilder {
     }
     
     private func getSortFunction() -> ((Card, Card) -> Bool) {
-        let sortMode = UserDefaults.standard.string(forKey: Constants.SaveKeys.settingsSortMode)
-        switch sortMode {
+        switch Settings.shared.sortMode {
         case "cost":
             return Utilities.priceSort(card1:card2:)
         default:

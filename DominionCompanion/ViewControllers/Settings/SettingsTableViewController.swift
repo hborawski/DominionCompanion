@@ -11,10 +11,15 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     let tagToKey: [SettingToggle: String] = [
-        .colonies: Constants.SaveKeys.settingsColonies
+        .colonies: Constants.SaveKeys.settingsColonies,
+        .pincards: Constants.SaveKeys.settingsPinCards
     ]
     var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
+        MenuSection(title: "App Behavior", items: [
+            MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
+            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: ["alphabetical", "cost"])
+        ]),
         MenuSection(title: "Additional Mechanics", items: [
             MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
@@ -22,7 +27,6 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"])
         ]),
         MenuSection(title: "Miscellaneous", items: [
-            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: ["alphabetical", "cost"]),
             MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions")
         ])
     ]
@@ -115,4 +119,5 @@ class SettingsTableViewController: UITableViewController {
 
 enum SettingToggle: Int {
     case colonies = 1
+    case pincards = 2
 }

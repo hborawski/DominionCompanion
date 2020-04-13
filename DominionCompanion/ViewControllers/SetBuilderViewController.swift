@@ -164,8 +164,10 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
             let gameplayVC = segue.destination as? GameplaySetupViewController
         {
             let finalSet = SetBuilder.shared.getFinalSet()
-            for card in finalSet.cards {
-                SetBuilder.shared.pin(card)
+            if Settings.shared.pincardsForSetup {
+                for card in finalSet.cards {
+                    SetBuilder.shared.pin(card)
+                }
             }
             gameplayVC.setModel = finalSet
             return

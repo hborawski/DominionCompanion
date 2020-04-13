@@ -12,6 +12,10 @@ class Settings {
     static let shared = Settings()
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsColonies) var colonies: Bool = false
+    
+    @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
+    
+    @UserDefaultsBacked(Constants.SaveKeys.settingsSortMode) var sortMode: String = "cost"
 }
 
 
