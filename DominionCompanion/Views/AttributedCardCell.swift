@@ -34,6 +34,8 @@ class AttributedCardCell : UITableViewCell {
             debtBackground.isHidden = true
             costBackground.isHidden = false
         } else {
+            debtBackground.isHidden = true
+            costBackground.isHidden = true
             costLabel.text = ""
             debtLabel.text = ""
         }
