@@ -28,6 +28,7 @@ class SettingsTableViewController: UITableViewController {
     ]
     override func viewDidLoad() {
         self.navigationItem.title = "Settings"
+        navigationController?.navigationBar.prefersLargeTitles = true
         for key in tagToKey.keys {
             let s = UISwitch()
             s.tag = key.rawValue
