@@ -35,8 +35,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.currentSet = SetBuilder.shared.currentSet
-        self.tableView.reloadData()
+        updateSetDisplay()
         rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
     }
     
@@ -79,7 +78,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @objc func shuffleSet() {
-        self.tableView.reloadData()
+        tableView.reloadData()
         SetBuilder.shared.shuffleSet { result in
             DispatchQueue.main.async {
                 switch result {
@@ -87,18 +86,20 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
                     switch error {
                     case .failedToBuild(let reason):
                         self.showErrorAlert(message: reason) {
-                            self.refreshControl.endRefreshing()
-                            self.currentSet = SetBuilder.shared.currentSet
-                            self.tableView.reloadData()
+                            self.updateSetDisplay()
                         }
                     }
                 case .success:
-                    self.refreshControl.endRefreshing()
-                    self.currentSet = SetBuilder.shared.currentSet
-                    self.tableView.reloadData()
+                    self.updateSetDisplay()
                 }
             }
         }
+    }
+    
+    func updateSetDisplay() {
+        self.refreshControl.endRefreshing()
+        self.currentSet = SetBuilder.shared.currentSet
+        self.tableView.reloadData()
     }
     
     // MARK: UITableViewDataSource
@@ -139,8 +140,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         let pin = UIContextualAction(style: .normal, title: cardData.pinned ? "Unpin" : "Pin") { (action, view, completion) in
             guard self.refreshControl.isRefreshing == false else { return }
             cardData.pinAction()
-            tableView.reloadData()
-            self.currentSet = SetBuilder.shared.currentSet
+            self.updateSetDisplay()
             completion(true)
         }
         pin.image = cardData.pinned ? UIImage(named: "Delete") : UIImage(named: "Checkmark")
