@@ -17977,7 +17977,7 @@
     "name": "Wish",
     "junk": false,
     "gain": 1,
-    "supply": true,
+    "supply": false,
     "related": [
       "Leprechaun"
     ],
