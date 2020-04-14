@@ -3374,7 +3374,6 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Ruins"
     ],
     "tokens": {
       "victory": 0,
@@ -3791,7 +3790,6 @@
     "gain": 2,
     "supply": true,
     "related": [
-      "Ruins"
     ],
     "tokens": {
       "victory": 0,
@@ -9243,8 +9241,7 @@
     "gain": 1,
     "supply": true,
     "related": [
-      "Spoils",
-      "Ruins"
+      "Spoils"
     ],
     "tokens": {
       "victory": 0,
