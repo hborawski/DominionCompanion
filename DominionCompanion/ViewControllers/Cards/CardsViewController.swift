@@ -15,7 +15,7 @@ class CardsViewController: UITableViewController {
     
     var cardsToDisplay : [Card]? = nil
     var rawCardData : [Card] = []
-    var cardData: [Card]? = []
+    var cardData: [Card] = []
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -50,18 +50,13 @@ class CardsViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    override func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = cardData?.count else { return 0 }
-        return count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { cardData.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
-        guard let card = self.cardData?[indexPath.row] else { return cell }
+        let card = self.cardData[indexPath.row]
         cell.setData(card)
         if excludeMode, CardData.shared.excludedCards.contains(card) {
             cell.accessoryView = UIImageView(image: UIImage(named: "Exclude"))
@@ -72,7 +67,7 @@ class CardsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        guard let card = self.cardData?[indexPath.row] else { return nil }
+        let card = self.cardData[indexPath.row]
         if excludeMode {
             let excluded = CardData.shared.excludedCards.contains(card)
             let pin = UIContextualAction(style: .normal, title:  excluded ? "Exclude" : "Include") { (action, view, completion) in
@@ -99,10 +94,9 @@ class CardsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: selectedCell) else { return }
         if segue.identifier == "ViewCard",
-            let cardVC = segue.destination as? CardViewController,
-            let card = self.cardData?[indexPath.row]
+            let cardVC = segue.destination as? CardViewController
         {
-            cardVC.card = card
+            cardVC.card = self.cardData[indexPath.row]
             cardVC.excludeMode = excludeMode
         }
     }
