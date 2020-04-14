@@ -39,7 +39,14 @@ platform :ios do
       project: 'DominionCompanion.xcodeproj',
       output_directory: 'build'
     )
-    upload_to_testflight
+    upload_to_testflight(
+      beta_app_review_info: {
+        contact_email: "dominioncompanion@gmail.com",
+        contact_first_name: "Harris",
+        contact_last_name: "Borawski",
+        contact_phone: "8604781448"
+      }
+    )
     commit_version_bump
 
   end
