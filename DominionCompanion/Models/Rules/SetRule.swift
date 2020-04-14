@@ -43,10 +43,12 @@ struct SetRule: Codable {
         let desiredValue = Double(value)
         switch self.operation {
         case .greater:
+            guard desiredValue > 0 else { return 1.0 }
             return setValue > desiredValue ? 1.0 : setValue / desiredValue
         case .greaterOrEqual:
             return setValue >= desiredValue ? 1.0 : setValue / desiredValue
         case .equal:
+            guard desiredValue > 0 else { return setValue > 0 ? 0.0 : 1.0 }
             return setValue > desiredValue ? desiredValue / setValue : setValue / desiredValue
         case .lessOrEqual:
             return setValue > desiredValue ? 0.0 : 1.0
