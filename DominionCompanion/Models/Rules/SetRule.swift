@@ -19,31 +19,6 @@ struct SetRule: Codable {
         }
     }
     
-    private func hasMatch(_ cards: [Card]) -> Bool {
-        return nil != cardRules.firstIndex { rule in
-            return nil != cards.firstIndex { rule.matches(card: $0) }
-        }
-    }
-    
-    func match(_ cards: [Card]) -> Bool {
-        let setValue = self.matchingCards(cards).count
-        guard setValue > 0 else { return false }
-        switch self.operation {
-        case .greater:
-            return setValue > value
-        case .greaterOrEqual:
-            return setValue >= value
-        case .equal:
-            return setValue == value
-        case .lessOrEqual:
-            return setValue <= value
-        case .less:
-            return setValue < value
-        case .notEqual:
-            return setValue != value
-        }
-    }
-    
     func inverseMatch(_ cards: [Card]) -> Bool {
         let setValue = self.matchingCards(cards).count
         let comparisonValue = 10 - value
