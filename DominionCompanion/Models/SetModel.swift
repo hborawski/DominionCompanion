@@ -108,8 +108,17 @@ struct SetModel {
             sections.append(GameplaySection(title: "Additional Mechanics", rows: additionalMechanics.map(getBasicCell)))
         }
         
+        var victories: [UITableViewCell] = []
+        if shelters {
+            victories.append(getBasicCell("Shelters"))
+        }
         if colonies {
-            sections.append(GameplaySection(title: "Victory and Treasure", rows: ["Colonies", "Platinum"].map(getBasicCell)))
+            let colonyPlatinum = CardData.shared.allCards.filter({ ["Colony", "Platinum"].contains($0.name)})
+            victories.append(contentsOf: colonyPlatinum.map(getAttributedCardCell))
+        }
+        
+        if victories.count > 0 {
+            sections.append(GameplaySection(title: "Victory and Treasure", rows: victories))
         }
         
         return sections
@@ -154,10 +163,6 @@ struct SetModel {
         
         if potions {
             mechanics.append("Potion")
-        }
-        
-        if shelters {
-            mechanics.append("Shelters")
         }
         
         return mechanics

@@ -77,11 +77,11 @@ class SetRuleViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail")
-            cell?.accessoryType = .disclosureIndicator
-            cell?.detailTextLabel?.text = "\(self.matchingCards.count)"
-            cell?.textLabel?.text = "Matching Cards"
-            return cell!
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail") else { return UITableViewCell() }
+            cell.accessoryType = .disclosureIndicator
+            cell.detailTextLabel?.text = "\(self.matchingCards.count)"
+            cell.textLabel?.text = "Matching Cards"
+            return cell
         case 1:
             return getRangeCell(tableView)
         default:
