@@ -11,6 +11,7 @@ import Foundation
 class Settings {
     static let shared = Settings()
     
+    @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
     @UserDefaultsBacked(Constants.SaveKeys.settingsColonies) var colonies: Bool = false
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false

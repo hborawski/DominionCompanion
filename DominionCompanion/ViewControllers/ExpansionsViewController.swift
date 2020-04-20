@@ -10,21 +10,6 @@ import Foundation
 import UIKit
 
 class ExpansionsViewController : UITableViewController {
-    
-    var chosenExpansions : [String] = [] {
-        didSet {
-            UserDefaults.standard.setValue(self.chosenExpansions, forKey: "expansions")
-            self.tableView.reloadData()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] else { return }
-        self.chosenExpansions = expansions
-        
-    }
-    
     // MARK: TableViewController
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -38,17 +23,18 @@ class ExpansionsViewController : UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "blankCell") else { return UITableViewCell() }
         let expansion = CardData.shared.allExpansions[indexPath.row]
         cell.textLabel?.text = expansion
-        cell.accessoryType = self.chosenExpansions.contains(expansion) ? .checkmark : .none
+        cell.accessoryType = Settings.shared.chosenExpansions.contains(expansion) ? .checkmark : .none
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let expansion = CardData.shared.allExpansions[indexPath.row]
-        guard self.chosenExpansions.contains(expansion) else {
-            self.chosenExpansions.append(expansion)
-            return
+        guard Settings.shared.chosenExpansions.contains(expansion) else {
+            Settings.shared.chosenExpansions.append(expansion)
+            return tableView.reloadData()
         }
-        self.chosenExpansions = self.chosenExpansions.filter { $0 != expansion }
+        Settings.shared.chosenExpansions = Settings.shared.chosenExpansions.filter { $0 != expansion }
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

@@ -12,7 +12,8 @@ import UIKit
 class SetBuilderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var rulesButton: UIButton!
+    @IBOutlet weak var rulesButton: UIButton!
+    @IBOutlet weak var expansionsButton: UIButton!
     
     var currentSet: [SetBuilderSection] = []
     
@@ -37,6 +38,8 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         super.viewWillAppear(animated)
         updateSetDisplay()
         rulesButton.setTitle("Rules (\(RuleEngine.shared.rules.count))", for: .normal)
+        let numberOfExpansions = Settings.shared.chosenExpansions.count > 0 ? Settings.shared.chosenExpansions.count : CardData.shared.allExpansions.count
+        expansionsButton.setTitle("Expansions (\(numberOfExpansions))", for: .normal)
     }
     
     // MARK: Button Handlers

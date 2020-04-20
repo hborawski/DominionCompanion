@@ -59,7 +59,7 @@ class CardData {
     
     var cardsFromChosenExpansions: [Card] {
         get {
-            let expansions = UserDefaults.standard.array(forKey: "expansions") as? [String] ?? self.allExpansions
+            let expansions = Settings.shared.chosenExpansions.count > 0 ? Settings.shared.chosenExpansions : self.allExpansions
             guard expansions.count > 0 else { return kingdomCards.filter { !excludedCards.contains($0) } }
             let cards = self.kingdomCards.filter { expansions.contains($0.expansion) && !excludedCards.contains($0) }
             return cards

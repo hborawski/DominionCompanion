@@ -229,6 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Set Builder" id="k0y-Ht-sh0"/>
                     <connections>
+                        <outlet property="expansionsButton" destination="IwE-ix-fBL" id="WQW-US-hy7"/>
                         <outlet property="rulesButton" destination="dUs-mi-8rm" id="zKC-WH-qc2"/>
                         <outlet property="tableView" destination="d7d-1I-lk4" id="5tE-Ug-YwK"/>
                         <segue destination="g35-Go-5Lx" kind="show" identifier="GoToGameplaySetup" id="GGJ-ul-faj"/>
