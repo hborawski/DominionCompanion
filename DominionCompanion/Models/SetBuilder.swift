@@ -57,14 +57,8 @@ class SetBuilder {
     
     var randomLandmarks: [Card] = []
     
-    var pinnedLandmarks: [Card] {
-        get {
-            return self.loadPinned(Constants.SaveKeys.pinnedLandmarks)
-        }
-        set {
-            self.savePinned(newValue, key: Constants.SaveKeys.pinnedLandmarks)
-        }
-    }
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLandmarks)
+    var pinnedLandmarks: [Card] = []
     
     var maxEvents: Int {
         get {
@@ -74,14 +68,8 @@ class SetBuilder {
     
     var randomEvents: [Card] = []
     
-    var pinnedEvents: [Card] {
-        get {
-            return self.loadPinned(Constants.SaveKeys.pinnedEvents)
-        }
-        set {
-            self.savePinned(newValue, key: Constants.SaveKeys.pinnedEvents)
-        }
-    }
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedEvents)
+    var pinnedEvents: [Card] = []
     
     var maxProjects: Int {
         get {
@@ -91,19 +79,13 @@ class SetBuilder {
     
     var randomProjects: [Card] = []
     
-    var pinnedProjects: [Card] {
-        get {
-            return self.loadPinned(Constants.SaveKeys.pinnedProjects)
-        }
-        set {
-            self.savePinned(newValue, key: Constants.SaveKeys.pinnedProjects)
-        }
-    }
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedProjects)
+    var pinnedProjects: [Card] = []
     
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedCards)
     var pinnedCards: [Card] = [] {
         didSet {
             fullSet = getFullSet()
-            self.savePinned(self.pinnedCards, key: Constants.SaveKeys.pinnedCards)
         }
     }
     
@@ -129,7 +111,6 @@ class SetBuilder {
         self.randomLandmarks = pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
         self.randomEvents = pinnedEvents + CardData.shared.allEvents.shuffled()
         self.randomProjects = pinnedProjects + CardData.shared.allProjects.shuffled()
-        self.pinnedCards = loadPinned(Constants.SaveKeys.pinnedCards)
         self.fullSet = getFullSet()
     }
     
@@ -262,18 +243,6 @@ class SetBuilder {
         let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1
         let randoms = Array(randomCards[0...numberToPick])
         return pinnedCards.sorted(by: sortFn) + randoms.sorted(by: sortFn)
-    }
-    
-    private func loadPinned(_ key: String) -> [Card] {
-        guard let rawData = UserDefaults.standard.data(forKey: key),
-            let cards = try? PropertyListDecoder().decode([Card].self, from: rawData) else { return [] }
-        return cards
-    }
-    
-    private func savePinned(_ cards: [Card], key: String) {
-        if let data = try? PropertyListEncoder().encode(cards) {
-            UserDefaults.standard.set(data, forKey: key)
-        }
     }
 }
 

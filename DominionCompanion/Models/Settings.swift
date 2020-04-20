@@ -12,6 +12,7 @@ class Settings {
     static let shared = Settings()
     
     @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
+    
     @UserDefaultsBacked(Constants.SaveKeys.settingsColonies) var colonies: Bool = false
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
@@ -59,21 +60,6 @@ struct UserDefaultsBackedEnum<Value> where Value: RawRepresentable {
     }
 }
 
-
-var excludedCards: [Card] {
-    get {
-        guard
-            let rawData = UserDefaults.standard.data(forKey: "excludedCards"),
-            let cards = try? PropertyListDecoder().decode([Card].self, from: rawData)
-        else { return [] }
-        return cards
-    }
-    set {
-        if let data = try? PropertyListEncoder().encode(newValue) {
-            UserDefaults.standard.set(data, forKey: "excludedCards")
-        }
-    }
-}
 @propertyWrapper
 struct UserDefaultsBackedCodable<Value> where Value: Codable {
     var value: Value
