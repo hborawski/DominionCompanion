@@ -113,6 +113,8 @@ extension Card {
             return self.trash
         case .victoryTokens:
             return self.tokens.victory
+        case .coinTokens:
+            return self.tokens.coin
         }
     }
     

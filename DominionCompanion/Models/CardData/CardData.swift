@@ -44,6 +44,7 @@ class CardData {
     let maxBuys: Int
     let maxCards: Int
     let maxVictoryTokens: Int
+    let maxCoinTokens: Int
     
     var cardsFromChosenExpansions: [Card] {
         get {
@@ -75,6 +76,7 @@ class CardData {
         self.maxBuys = self.kingdomCards.map({$0.buys}).max(by: <) ?? 0
         self.maxCards = self.kingdomCards.map({$0.cards}).max(by: <) ?? 0
         self.maxVictoryTokens = self.kingdomCards.map({$0.tokens.victory}).max(by: <) ?? 0
+        self.maxCoinTokens = self.kingdomCards.map({$0.tokens.coin}).max(by: <) ?? 0
 
         self.allExpansions = Array(Set(self.kingdomCards.map({$0.expansion}).filter { $0 != "" })).sorted()
         self.allAttributes = CardProperty.allCases
