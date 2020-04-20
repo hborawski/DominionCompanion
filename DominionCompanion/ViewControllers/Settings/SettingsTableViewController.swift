@@ -12,13 +12,16 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     let tagToKey: [SettingToggle: String] = [
         .colonies: Constants.SaveKeys.settingsColonies,
-        .pincards: Constants.SaveKeys.settingsPinCards
+        .pincards: Constants.SaveKeys.settingsPinCards,
+        .showExpansions: Constants.SaveKeys.settingsShowExpansionsWhenBuilding
     ]
     var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
         MenuSection(title: "App Behavior", items: [
             MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
-            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: ["alphabetical", "cost"])
+            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: SortMode.allCases.map{ $0.rawValue }),
+            MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue }),
+            MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions)
         ]),
         MenuSection(title: "Additional Mechanics", items: [
             MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
@@ -120,4 +123,5 @@ class SettingsTableViewController: UITableViewController {
 enum SettingToggle: Int {
     case colonies = 1
     case pincards = 2
+    case showExpansions = 3
 }

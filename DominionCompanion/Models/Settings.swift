@@ -15,7 +15,11 @@ class Settings {
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
     
-    @UserDefaultsBacked(Constants.SaveKeys.settingsSortMode) var sortMode: String = "cost"
+    @UserDefaultsBacked(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansionsWhenBuilding: Bool = false
+    
+    @UserDefaultsBackedEnum(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
+    
+    @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .expansion
 }
 
 
@@ -27,6 +31,25 @@ struct UserDefaultsBacked<Value> {
     var wrappedValue: Value {
         get { (UserDefaults.standard.object(forKey: key) as? Value) ?? value }
         set { UserDefaults.standard.set(newValue, forKey: key) }
+    }
+    
+    init(wrappedValue value: Value, _ key: String) {
+        self.value = value
+        self.key = key
+    }
+}
+
+@propertyWrapper
+struct UserDefaultsBackedEnum<Value> where Value: RawRepresentable {
+    var value: Value
+    let key: String
+    
+    var wrappedValue: Value {
+        get {
+            let rawValue = UserDefaults.standard.object(forKey: key) as? Value.RawValue
+            return Value.init(rawValue: rawValue ?? value.rawValue) ?? value
+        }
+        set { UserDefaults.standard.set(newValue.rawValue, forKey: key) }
     }
     
     init(wrappedValue value: Value, _ key: String) {

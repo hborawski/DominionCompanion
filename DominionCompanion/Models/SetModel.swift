@@ -60,6 +60,8 @@ struct SetModel {
     
     // MARK: ViewModel
     func getSections(tableView: UITableView) -> [GameplaySection] {
+        
+        let sortFn = Settings.shared.gameplaySortMode.sortFunction()
         let getAttributedCardCell = { (card: Card) -> UITableViewCell in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else {
                 return UITableViewCell()
@@ -77,11 +79,11 @@ struct SetModel {
         }
         
         var sections = [
-            GameplaySection(title: "In Supply", rows: self.cards.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell))
+            GameplaySection(title: "In Supply", rows: self.cards.sorted(by: sortFn).map(getAttributedCardCell))
         ]
         
         if notInSupply.count > 0 {
-            sections.append(GameplaySection(title: "Not In Supply", rows: self.notInSupply.sorted(by: sortByExpansionAndCost(card1:card2:)).map(getAttributedCardCell)))
+            sections.append(GameplaySection(title: "Not In Supply", rows: self.notInSupply.sorted(by: sortFn).map(getAttributedCardCell)))
         }
         
         if landmarks.count > 0 {
@@ -159,10 +161,6 @@ struct SetModel {
         }
         
         return mechanics
-    }
-    
-    func sortByExpansionAndCost(card1: Card, card2: Card) -> Bool {
-        return card1.expansion == card2.expansion ? (card1.cost < card2.cost) : (card1.expansion < card2.expansion)
     }
     
     func getShareable() -> ShareableSet {

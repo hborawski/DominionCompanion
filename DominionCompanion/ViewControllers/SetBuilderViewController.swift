@@ -132,7 +132,7 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
         let card = section.rows[indexPath.row]
-        cell.setData(card.card, favorite: card.pinned)
+        cell.setData(card.card, favorite: card.pinned, showExpansion: Settings.shared.showExpansionsWhenBuilding ? true : (Settings.shared.sortMode == .expansion))
         return cell
     }
     

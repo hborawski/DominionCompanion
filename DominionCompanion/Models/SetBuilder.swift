@@ -255,22 +255,13 @@ class SetBuilder {
     
     // MARK: Private
     private func getFullSet() -> [Card] {
-        guard randomCards.count > 0 else { return pinnedCards.sorted(by: getSortFunction()) }
+        let sortFn = Settings.shared.sortMode.sortFunction()
+        guard randomCards.count > 0 else { return pinnedCards.sorted(by: sortFn) }
         let openSlots = maxCards - pinnedCards.count
-        guard openSlots > 0 else { return pinnedCards.sorted(by: getSortFunction()) }
+        guard openSlots > 0 else { return pinnedCards.sorted(by: sortFn) }
         let numberToPick = (openSlots < randomCards.count ? openSlots : randomCards.count) - 1
         let randoms = Array(randomCards[0...numberToPick])
-        return pinnedCards.sorted(by: getSortFunction()) + randoms.sorted(by: getSortFunction())
-    }
-    
-    private func getSortFunction() -> ((Card, Card) -> Bool) {
-        switch Settings.shared.sortMode {
-        case "cost":
-            return Utilities.priceSort(card1:card2:)
-        default:
-            return Utilities.alphabeticSort(card1:card2:)
-            
-        }
+        return pinnedCards.sorted(by: sortFn) + randoms.sorted(by: sortFn)
     }
     
     private func loadPinned(_ key: String) -> [Card] {
