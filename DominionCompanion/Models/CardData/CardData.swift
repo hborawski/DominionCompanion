@@ -10,20 +10,8 @@ import Foundation
 class CardData {
     public static let shared: CardData = CardData()
     
-    var excludedCards: [Card] {
-        get {
-            guard
-                let rawData = UserDefaults.standard.data(forKey: "excludedCards"),
-                let cards = try? PropertyListDecoder().decode([Card].self, from: rawData)
-            else { return [] }
-            return cards
-        }
-        set {
-            if let data = try? PropertyListEncoder().encode(newValue) {
-                UserDefaults.standard.set(data, forKey: "excludedCards")
-            }
-        }
-    }
+    @UserDefaultsBackedCodable(Constants.SaveKeys.savedExcludedCards)
+    var excludedCards: [Card] = []
     
     let allCards: [Card]
     

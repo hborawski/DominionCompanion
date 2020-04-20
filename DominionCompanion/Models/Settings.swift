@@ -58,3 +58,44 @@ struct UserDefaultsBackedEnum<Value> where Value: RawRepresentable {
         self.key = key
     }
 }
+
+
+var excludedCards: [Card] {
+    get {
+        guard
+            let rawData = UserDefaults.standard.data(forKey: "excludedCards"),
+            let cards = try? PropertyListDecoder().decode([Card].self, from: rawData)
+        else { return [] }
+        return cards
+    }
+    set {
+        if let data = try? PropertyListEncoder().encode(newValue) {
+            UserDefaults.standard.set(data, forKey: "excludedCards")
+        }
+    }
+}
+@propertyWrapper
+struct UserDefaultsBackedCodable<Value> where Value: Codable {
+    var value: Value
+    let key: String
+    
+    var wrappedValue: Value {
+        get {
+            guard
+                let rawData = UserDefaults.standard.data(forKey: key),
+                let savedValue = try? PropertyListDecoder().decode(Value.self, from: rawData)
+            else { return value }
+            return savedValue
+        }
+        set {
+            if let data = try? PropertyListEncoder().encode(newValue) {
+                UserDefaults.standard.set(data, forKey: key)
+            }
+        }
+    }
+    
+    init(wrappedValue value: Value, _ key: String) {
+        self.value = value
+        self.key = key
+    }
+}

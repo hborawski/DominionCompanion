@@ -27,5 +27,7 @@ struct Constants {
         static let settingsSortMode = "settings_sortMode"
         static let settingsGameplaySortMode = "settings_gameplaySortMode"
         static let settingsPinCards = "settings_pincards"
+        
+        static let savedExcludedCards = "excludedCards"
     }
 }
