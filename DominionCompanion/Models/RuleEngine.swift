@@ -20,10 +20,16 @@ class RuleEngine {
     
     var cardData : [Card] { CardData.shared.cardsFromChosenExpansions }
     
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules)
+    var pinnedRules: [SetRule] = []
+    
+    @UserDefaultsBackedCodable(Constants.SaveKeys.savedRules)
+    var savedRules: [SavedRule] = []
+    
     var rules: [SetRule] = [] {
         didSet {
             if !editing {
-                self.savePinnedRules()
+                pinnedRules = self.rules
             }
         }
     }
@@ -52,7 +58,7 @@ class RuleEngine {
     }
     
     init() {
-        self.rules = self.loadPinnedRules()
+        self.rules = pinnedRules
     }
     
     init(_ savedRule: SavedRule) {
@@ -163,6 +169,13 @@ class RuleEngine {
         self.rules[index] = newRule
     }
     
+    func updateSavedRules(_ rule: SavedRule) {
+        guard let index = savedRules.firstIndex(where: { r in r.uuid == rule.uuid }) else {
+            return
+        }
+        savedRules[index] = rule
+    }
+    
     // MARK: Utility Methods
     func inverseMatchRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
         return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
@@ -180,45 +193,6 @@ class RuleEngine {
     }
 }
 
-// MARK: UserDefaults saving
-extension RuleEngine {
-    private func loadPinnedRules() -> [SetRule] {
-        guard let rawData = UserDefaults.standard.data(forKey: Constants.SaveKeys.pinnedRules),
-            let rules = try? PropertyListDecoder().decode([SetRule].self, from: rawData) else { return [] }
-        return rules
-    }
-    
-    private func savePinnedRules(_ filters: [SetRule]? = nil) {
-        if let data = try? PropertyListEncoder().encode(filters ?? self.rules) {
-            UserDefaults.standard.set(data, forKey: Constants.SaveKeys.pinnedRules)
-        }
-    }
-    
-    func loadSavedRules() -> [SavedRule] {
-        guard
-            let rawData = UserDefaults.standard.data(forKey: Constants.SaveKeys.savedRules),
-            let rules = try? PropertyListDecoder().decode([SavedRule].self, from: rawData)
-        else {
-            return []
-        }
-        return rules
-    }
-    
-    func saveRules(_ rules: [SavedRule]) {
-        if let data = try? PropertyListEncoder().encode(rules) {
-            UserDefaults.standard.set(data, forKey: Constants.SaveKeys.savedRules)
-        }
-    }
-    
-    func updateSavedRules(_ rule: SavedRule) {
-        var rules = loadSavedRules()
-        guard let index = rules.firstIndex(where: { r in r.uuid == rule.uuid }) else {
-            return
-        }
-        rules[index] = rule
-        saveRules(rules)
-    }
-}
 
 // MARK: SavedFilter
 struct SavedRule: Codable {

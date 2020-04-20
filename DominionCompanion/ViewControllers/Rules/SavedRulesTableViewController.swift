@@ -15,7 +15,7 @@ class SavedRulesTableViewController: UITableViewController {
     
     var savedRules: [SavedRule] = [] {
         didSet {
-            RuleEngine.shared.saveRules(self.savedRules)
+            RuleEngine.shared.savedRules = self.savedRules
             self.tableView.reloadData()
         }
     }
@@ -29,7 +29,7 @@ class SavedRulesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        savedRules = RuleEngine.shared.loadSavedRules()
+        savedRules = RuleEngine.shared.savedRules
     }
     
     
