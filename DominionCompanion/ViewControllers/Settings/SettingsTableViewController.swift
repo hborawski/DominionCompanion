@@ -20,8 +20,8 @@ class SettingsTableViewController: UITableViewController {
         MenuSection(title: "App Behavior", items: [
             MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
             MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: SortMode.allCases.map{ $0.rawValue }),
-            MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue }),
-            MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions)
+            MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions),
+            MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue })
         ]),
         MenuSection(title: "Additional Mechanics", items: [
             MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
