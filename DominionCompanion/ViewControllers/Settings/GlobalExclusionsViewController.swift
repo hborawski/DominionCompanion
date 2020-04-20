@@ -15,6 +15,8 @@ class GlobalExclusionViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "Excluded Cards"
         navigationItem.largeTitleDisplayMode = .never
+        
+        tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,8 +31,9 @@ class GlobalExclusionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = CardData.shared.excludedCards[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "attributedCardCell") as? AttributedCardCell else { return UITableViewCell() }
+        cell.setData(CardData.shared.excludedCards[indexPath.row])
+        cell.accessoryView = UIImageView(image: UIImage(named: "Exclude"))
         return cell
     }
     
@@ -45,6 +48,10 @@ class GlobalExclusionViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [pin])
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ViewCard", sender: CardData.shared.excludedCards[indexPath.row])
+    }
+    
     @objc func addNewExclusion(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "ExcludeCards", sender: self)
     }
@@ -54,11 +61,10 @@ class GlobalExclusionViewController: UITableViewController {
             destination.excludeMode = true
         } else if
             let destination = segue.destination as? CardViewController,
-            let selectedCell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: selectedCell)
+            let card = sender as? Card
         {
             destination.excludeMode = true
-            destination.card = CardData.shared.excludedCards[indexPath.row]
+            destination.card = card
         }
     }
 }
