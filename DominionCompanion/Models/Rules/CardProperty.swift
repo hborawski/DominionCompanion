@@ -71,7 +71,7 @@ enum CardProperty: String, Codable, CaseIterable {
             case .trash:
                 return ["true", "false"]
             case .victoryTokens:
-                return Array(0...CardData.shared.maxCards).map { "\($0)" }
+                return Array(0...CardData.shared.maxVictoryTokens).map { "\($0)" }
             }
         }
     }
