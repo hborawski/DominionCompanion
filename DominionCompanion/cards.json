@@ -14459,6 +14459,47 @@
   },
   {
     "potion": false,
+    "cost": 3,
+    "id": "3f0a6611-04f0-4fdf-bef7-936c1df5a9a2",
+    "debt": 0,
+    "expansion": "Empires",
+    "types": [
+      "Victory",
+      "Castle"
+    ],
+    "coins": 0,
+    "cards": 0,
+    "categories": [],
+    "buys": 0,
+    "actions": 0,
+    "text": "Sort the Castle pile by cost, putting the more expensive Castles on the bottom. For a 2-player game, use only one of each Castle. Only the top card of the pile can be gained or bought.",
+    "trash": true,
+    "name": "Castles",
+    "junk": false,
+    "gain": 0,
+    "supply": true,
+    "related": [
+    ],
+    "tokens": {
+      "victory": 0,
+      "coin": 0,
+      "embargo": false,
+      "debt": false,
+      "journey": false,
+      "minusCard": false,
+      "minusCoin": false,
+      "plusCard": false,
+      "plusAction": false,
+      "plusBuy": false,
+      "plusCoin": false,
+      "minusCost": false,
+      "trashing": false,
+      "estate": false,
+      "villagers": false
+    }
+  },
+  {
+    "potion": false,
     "cost": 5,
     "id": "d58dbc5f-a992-4450-85cd-d6bb79072eac",
     "debt": 0,
@@ -14478,7 +14519,7 @@
     "name": "Small Castle",
     "junk": false,
     "gain": 1,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
