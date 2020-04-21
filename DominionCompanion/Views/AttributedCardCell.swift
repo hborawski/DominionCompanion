@@ -54,14 +54,18 @@ class AttributedCardCell : UITableViewCell {
             let debtLabel = self.debtLabel else { return }
 
         let dimension = debtLabel.frame.width
+        let segmentLength = dimension / 2
+        let short = cos(CGFloat(Double.pi/3)) * segmentLength
+        let tall = sin(CGFloat(Double.pi/3)) * segmentLength
+        let buffer = (dimension - (tall * 2)) / 2
         let hexPath = UIBezierPath()
-        hexPath.move(to: CGPoint(x: dimension/4, y: 0))
-        hexPath.addLine(to: CGPoint(x: 3*(dimension/4), y: 0))
-        hexPath.addLine(to: CGPoint(x: dimension, y: dimension/2))
-        hexPath.addLine(to: CGPoint(x: 3*(dimension/4), y: dimension))
-        hexPath.addLine(to: CGPoint(x: dimension/4, y: dimension))
-        hexPath.addLine(to: CGPoint(x: 0, y: dimension/2))
-        hexPath.addLine(to: CGPoint(x: dimension/4, y: 0))
+        hexPath.move(to: CGPoint(x: short, y: buffer))
+        hexPath.addLine(to: CGPoint(x: short + segmentLength, y: buffer))        // -
+        hexPath.addLine(to: CGPoint(x: dimension, y: buffer + tall))                 // \
+        hexPath.addLine(to: CGPoint(x: segmentLength + short, y: buffer + tall*2))   // /
+        hexPath.addLine(to: CGPoint(x: short, y: buffer + tall*2))                   // _
+        hexPath.addLine(to: CGPoint(x: 0, y: buffer + tall))                         // \
+        hexPath.addLine(to: CGPoint(x: short, y: buffer))                        // /
         let layer = CAShapeLayer()
         layer.fillColor = UIColor(named: "Debt")?.cgColor
         layer.path = hexPath.cgPath
