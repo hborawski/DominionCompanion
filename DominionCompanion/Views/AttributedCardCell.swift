@@ -55,9 +55,9 @@ class AttributedCardCell : UITableViewCell {
 
         let dimension = debtLabel.frame.width
         let segmentLength = dimension / 2
-        let short = cos(CGFloat(Double.pi/3)) * segmentLength
-        let tall = sin(CGFloat(Double.pi/3)) * segmentLength
-        let buffer = (dimension - (tall * 2)) / 2
+        let short = cos(CGFloat(Double.pi/3)) * segmentLength // the short distance horizontally
+        let tall = sin(CGFloat(Double.pi/3)) * segmentLength // the distance between the midpoint and the top/bottom lines
+        let buffer = (dimension - (tall * 2)) / 2 // since this wont fill a square view, there is a buffer between the top of the view and the top line
         let hexPath = UIBezierPath()
         hexPath.move(to: CGPoint(x: short, y: buffer))
         hexPath.addLine(to: CGPoint(x: short + segmentLength, y: buffer))        // -
