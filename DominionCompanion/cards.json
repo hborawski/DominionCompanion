@@ -3560,6 +3560,48 @@
   {
     "potion": false,
     "cost": 5,
+    "id": "ada363da-879d-420d-9c6f-193ee8f7dd64",
+    "debt": 0,
+    "expansion": "Dark Ages",
+    "types": [
+      "Action",
+      "Attack",
+      "Knight"
+    ],
+    "coins": 0,
+    "cards": 0,
+    "categories": [],
+    "buys": 0,
+    "actions": 0,
+    "text": "Shuffle the Knights pile before each game with it. Keep it face down except for the top card, which is the only one that can be bought or gained.",
+    "trash": false,
+    "name": "Knights",
+    "junk": false,
+    "gain": 0,
+    "supply": true,
+    "related": [
+    ],
+    "tokens": {
+      "victory": 0,
+      "coin": 0,
+      "embargo": false,
+      "debt": false,
+      "journey": false,
+      "minusCard": false,
+      "minusCoin": false,
+      "plusCard": false,
+      "plusAction": false,
+      "plusBuy": false,
+      "plusCoin": false,
+      "minusCost": false,
+      "trashing": false,
+      "estate": false,
+      "villagers": false
+    }
+  },
+  {
+    "potion": false,
+    "cost": 5,
     "id": "6d0d317b-b6f0-4814-876a-24ecaff11712",
     "debt": 0,
     "expansion": "Dark Ages",
@@ -3578,7 +3620,7 @@
     "name": "Dame Anna",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {

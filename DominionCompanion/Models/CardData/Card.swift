@@ -65,7 +65,7 @@ struct Card: Codable {
             }
             
             if self.types.contains("Knight") {
-                return cards + CardData.shared.allCards.filter{ $0.types.contains("Knight") }
+                return cards + CardData.shared.allCards.filter{ $0.types.contains("Knight") && $0.name != name }
             }
             
             return cards

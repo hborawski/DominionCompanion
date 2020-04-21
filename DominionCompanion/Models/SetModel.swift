@@ -23,7 +23,7 @@ struct SetModel {
                 let next = nextRelated.filter({Set($0.types).intersection(Set(Constants.notGameplayRelatedTypes)).count == 0})
                 let cardSet = Set(relatedCards + next)
                 return Array(cardSet)
-            }
+            }.filter { Set(["Knight", "Castle"]).intersection(Set($0.types)).count == 0 } // Knights and Castles are special and technically in the supply
         }
     }
     
