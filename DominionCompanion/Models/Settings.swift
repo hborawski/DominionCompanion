@@ -15,6 +15,8 @@ class Settings {
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsColonies) var colonies: Bool = false
     
+    @UserDefaultsBacked(Constants.SaveKeys.settingsShelters) var shelters: Bool = false
+    
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansionsWhenBuilding: Bool = false
