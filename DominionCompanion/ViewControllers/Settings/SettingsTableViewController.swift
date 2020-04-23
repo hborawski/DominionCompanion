@@ -25,8 +25,8 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue })
         ]),
         MenuSection(title: "Additional Mechanics", items: [
-            MenuItem(title: "Always Use Colonies", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
-            MenuItem(title: "Always Use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
+            MenuItem(title: "Always use Colonies/Platinum", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
+            MenuItem(title: "Always use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
             MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"])
