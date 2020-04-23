@@ -18,6 +18,7 @@ enum CardProperty: String, Codable, CaseIterable {
     case actions = "+ Actions"
     case cards = "+ Cards"
     case trash = "Trash"
+    case exile = "Exile"
     case victoryTokens = "Victory Tokens"
     case coinTokens = "Coin Tokens"
     
@@ -43,6 +44,8 @@ enum CardProperty: String, Codable, CaseIterable {
             case .type:
                 return .list
             case .trash:
+                return .boolean
+            case .exile:
                 return .boolean
             case .victoryTokens:
                 return .number
@@ -72,6 +75,8 @@ enum CardProperty: String, Codable, CaseIterable {
             case .type:
                 return CardData.shared.kingdomTypes
             case .trash:
+                return ["true", "false"]
+            case .exile:
                 return ["true", "false"]
             case .victoryTokens:
                 return Array(0...CardData.shared.maxVictoryTokens).map { "\($0)" }

@@ -39,6 +39,7 @@ struct Card: Codable {
     var expansion: String
     var types: [String]
     var trash: Bool
+    var exile: Bool
     var tokens: Tokens
     var supply: Bool
     var related: [String]
@@ -115,6 +116,8 @@ extension Card {
             return self.types
         case .trash:
             return self.trash
+        case .exile:
+            return self.exile
         case .victoryTokens:
             return self.tokens.victory
         case .coinTokens:
