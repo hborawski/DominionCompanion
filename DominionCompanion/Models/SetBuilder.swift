@@ -37,6 +37,11 @@ class SetBuilder {
                 defaults.insert(CardSection(title: "Projects", cards: displayed, pinnedCards: pinnedProjects), at: 0)
             }
             
+            if maxWays > 0 {
+                let displayed = Array((pinnedWays + randomWays.filter { !pinnedWays.contains($0) } )[0...(maxWays - 1)])
+                defaults.insert(CardSection(title: "Ways", cards: displayed, pinnedCards: pinnedWays), at: 0)
+            }
+            
             return defaults
         }
     }
@@ -82,6 +87,17 @@ class SetBuilder {
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedProjects)
     var pinnedProjects: [Card] = []
     
+    var maxWays: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumWays)
+        }
+    }
+    
+    var randomWays: [Card] = []
+    
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedWays)
+    var pinnedWays: [Card] = []
+    
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedCards)
     var pinnedCards: [Card] = [] {
         didSet {
@@ -111,6 +127,7 @@ class SetBuilder {
         self.randomLandmarks = pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
         self.randomEvents = pinnedEvents + CardData.shared.allEvents.shuffled()
         self.randomProjects = pinnedProjects + CardData.shared.allProjects.shuffled()
+        self.randomWays = pinnedWays + CardData.shared.allWays.shuffled()
         self.fullSet = getFullSet()
     }
     
@@ -123,6 +140,8 @@ class SetBuilder {
             pinEvent(card)
         case card.types.contains("Project"):
             pinProject(card)
+        case card.types.contains("Way"):
+            pinWay(card)
         default:
             pinCard(card)
         }
@@ -178,6 +197,19 @@ class SetBuilder {
         pinnedProjects.remove(at: index)
     }
     
+    func pinWay(_ card: Card) {
+        guard !pinnedWays.contains(card) else { return }
+        pinnedWays.append(card)
+    }
+    
+    func unpinWay(_ card: Card) {
+        guard
+            pinnedWays.contains(card),
+            let index = pinnedWays.firstIndex(of: card)
+            else { return }
+        pinnedWays.remove(at: index)
+    }
+    
     func unpinCard(_ card: Card) {
         guard
             pinnedCards.contains(card),
@@ -198,6 +230,8 @@ class SetBuilder {
             unpinEvent(card)
         case card.types.contains("Project"):
             unpinProject(card)
+        case card.types.contains("Way"):
+            unpinWay(card)
         default:
             unpinCard(card)
         }
@@ -212,6 +246,7 @@ class SetBuilder {
                 self.randomLandmarks = self.pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
                 self.randomEvents = self.pinnedEvents + CardData.shared.allEvents.shuffled()
                 self.randomProjects = self.pinnedProjects + CardData.shared.allProjects.shuffled()
+                self.randomWays = self.pinnedWays + CardData.shared.allWays.shuffled()
                 completion(.success(true))
             case .failure(let error):
                 switch error {
@@ -230,6 +265,7 @@ class SetBuilder {
             landmarks: Array(randomLandmarks[..<maxLandmarks]),
             events: Array(randomEvents[..<maxEvents]),
             projects: Array(randomProjects[..<maxProjects]),
+            ways: Array(randomWays[..<maxWays]),
             cards: getFullSet()
         )
     }

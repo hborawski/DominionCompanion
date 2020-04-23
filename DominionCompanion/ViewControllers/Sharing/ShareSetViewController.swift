@@ -12,7 +12,7 @@ import UIKit
 class ShareSetViewController: UIViewController {
     @IBOutlet weak var qrImageView: UIImageView!
     
-    var set = ShareableSet(cards: [], events: [], landmarks: [], projects: [])
+    var set = ShareableSet(cards: [], events: [], landmarks: [], projects: [], ways: [])
     override func viewDidLoad() {
         guard let image = generateQRCode(from: set) else { return }
         qrImageView.image = image

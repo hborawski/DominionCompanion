@@ -86,7 +86,7 @@ struct Card: Codable {
     }
     
     var canPin: Bool {
-        if Set(["Event", "Landmark", "Project"]).intersection(Set(types)).count != 0 {
+        if Set(["Event", "Landmark", "Project", "Way"]).intersection(Set(types)).count != 0 {
             return true
         } else {
             return supply

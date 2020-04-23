@@ -37,6 +37,10 @@ class CardData {
         self.allCards.filter({ $0.types.contains("Project") }).filter({!excludedCards.contains($0)})
     }
     
+    var allWays: [Card] {
+        self.allCards.filter({ $0.types.contains("Way") }).filter({!excludedCards.contains($0)})
+    }
+    
     // MARK: Maxes for creating picker inputs
     let maxPrice: Int
     let maxDebt: Int

@@ -40,7 +40,7 @@ class ExpansionsViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let view = UIContextualAction(style: .normal, title: "View Cards") { (action, view, completion) in
             let expansion = CardData.shared.allExpansions[indexPath.row]
-            let cards = CardData.shared.kingdomCards.filter { $0.expansion == expansion }
+            let cards = CardData.shared.allCards.filter { $0.expansion == expansion }
             self.performSegue(withIdentifier: "ViewCards", sender: cards)
         }
         view.image = UIImage(named: "Card")

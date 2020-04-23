@@ -29,7 +29,8 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Always use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
-            MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"])
+            MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"]),
+            MenuItem(title: "Ways", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumWays, values: ["0", "1"])
         ]),
         MenuSection(title: "Miscellaneous", items: [
             MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions")

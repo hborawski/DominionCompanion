@@ -14,6 +14,7 @@ struct SetModel {
     var landmarks: [Card]
     var events: [Card]
     var projects: [Card]
+    var ways: [Card]
     
     // MARK: Cards for this set
     var cards: [Card]
@@ -174,7 +175,8 @@ struct SetModel {
             cards: self.cards.map({$0.name}),
             events: self.events.map({$0.name}),
             landmarks: self.landmarks.map({$0.name}),
-            projects: self.projects.map({$0.name})
+            projects: self.projects.map({$0.name}),
+            ways: self.ways.map({$0.name})
         )
     }
 }
@@ -185,6 +187,7 @@ struct ShareableSet: Codable {
     let events: [String]
     let landmarks: [String]
     let projects: [String]
+    let ways: [String]
 }
 
 extension ShareableSet {
@@ -205,7 +208,11 @@ extension ShareableSet {
             return CardData.shared.allCards.first(where: {$0.name == name})
         }
         
-        return SetModel(landmarks: landmarks, events: events, projects: projects, cards: cards)
+        let ways = self.ways.compactMap { (name) -> Card? in
+            return CardData.shared.allCards.first(where: {$0.name == name})
+        }
+        
+        return SetModel(landmarks: landmarks, events: events, projects: projects, ways: ways, cards: cards)
     }
 }
 
