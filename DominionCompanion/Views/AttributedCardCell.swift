@@ -113,9 +113,6 @@ class AttributedCardCell : UITableViewCell {
     func addStripToView(_ color: UIColor, view parentView: UIStackView) {
         let view = UIView()
         parentView.addArrangedSubview(view)
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalTo: parentView.heightAnchor).isActive = true
         view.backgroundColor = color
     }
 }
