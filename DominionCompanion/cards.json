@@ -2199,7 +2199,8 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Rocks"
+      "Rocks",
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -3455,7 +3456,8 @@
     "gain": 0,
     "supply": false,
     "related": [
-      "Pooka"
+      "Pooka",
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -3872,6 +3874,7 @@
     "gain": 0,
     "supply": false,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 1,
@@ -4719,13 +4722,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "+2 Coins. Trash this card. Put an Embargo token on top of a Supply pile. When a player buys a card, he gains a Curse card per Embargo token on that pile. ",
+    "text": "+2 Coins. Trash this card. Put an Embargo token on top of a Supply pile. When a player buys a card, they gain a Curse card per Embargo token on that pile. ",
     "trash": true,
     "name": "Embargo",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -5375,6 +5379,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -5779,6 +5784,7 @@
     "gain": 1,
     "supply": false,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -6430,13 +6436,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "Turn your Journey token over (it starts face up). If it's face down, +1 Coin. If it's face up, +5 Coins, and each other player reveals the top card of his deck, trashes it if it costs from 3 Coins to 6 Coins, and otherwise discards it and gains a Curse. ",
+    "text": "Turn your Journey token over (it starts face up). If it's face down, +1 Coin. If it's face up, +5 Coins, and each other player reveals the top card of their deck, trashes it if it costs from 3 Coins to 6 Coins, and otherwise discards it and gains a Curse. ",
     "trash": false,
     "name": "Giant",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -7945,6 +7952,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -7985,6 +7993,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -8303,13 +8312,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "+2 Coins. Each other player discards the top card of his deck. If it’s a Victory card he gains a Curse. Otherwise either he gains a copy of the discarded card or you do, your choice. ",
+    "text": "+2 Coins. Each other player discards the top card of his deck. If it’s a Victory card they gain a Curse. Otherwise either they gain a copy of the discarded card or you do, your choice. ",
     "trash": false,
     "name": "Jester",
     "junk": true,
     "gain": 1,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -8835,6 +8845,7 @@
     "gain": 1,
     "supply": false,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -10367,13 +10378,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "+2 Coins. Each other player may discard a Curse. If he doesn’t, he gains a Curse and a Copper. ",
+    "text": "+2 Coins. Each other player may discard a Curse. If they don't, they gain a Curse and a Copper. ",
     "trash": false,
     "name": "Mountebank",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -11761,6 +11773,7 @@
     "gain": 0,
     "supply": false,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -12972,6 +12985,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -13012,6 +13026,7 @@
     "gain": 1,
     "supply": false,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 1,
@@ -13814,13 +13829,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "Each other player discards the top card of his deck, then gains a Curse card, putting it on top of his deck. ",
+    "text": "Each other player discards the top card of their deck, then gains a Curse card, putting it on top of his deck. ",
     "trash": false,
     "name": "Sea Hag",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -14688,6 +14704,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -15206,13 +15223,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "Until your next turn, when any other player buys a card, he gains a Curse. At the start of your next turn, +3 Coins. ",
+    "text": "Until your next turn, when any other player buys a card, they gain a Curse. At the start of your next turn, +3 Coins. ",
     "trash": false,
     "name": "Swamp Hag",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -16147,6 +16165,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -18141,6 +18160,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -18295,13 +18315,14 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "+2 Cards. Discard 2 cards. Each other player may reveal a Bane card from his hand. If they can't, they gains a Curse. Setup: Add an extra Kingdom card pile costing 2 or 3 to the Supply. Cards from that pile are Bane cards. ",
+    "text": "+2 Cards. Discard 2 cards. Each other player may reveal a Bane card from his hand. If they can't, they gain a Curse. Setup: Add an extra Kingdom card pile costing 2 or 3 to the Supply. Cards from that pile are Bane cards. ",
     "trash": false,
     "name": "Young Witch",
     "junk": true,
     "gain": 0,
     "supply": true,
     "related": [
+      "Curse"
     ],
     "tokens": {
       "victory": 0,
@@ -18707,7 +18728,9 @@
     "junk": true,
     "gain": 0,
     "supply": true,
-    "related": [],
+    "related": [
+      "Curse"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -18903,7 +18926,9 @@
     "junk": true,
     "gain": 0,
     "supply": true,
-    "related": [],
+    "related": [
+      "Curse"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -20432,13 +20457,15 @@
     "categories": [],
     "buys": 0,
     "actions": 0,
-    "text": "+2 Cards. If it isn't your turb, each other player gains a curse. - When another player gains a victory card, you may play this from your hand.",
+    "text": "+2 Cards. If it isn't your turn, each other player gains a curse. - When another player gains a victory card, you may play this from your hand.",
     "trash": false,
     "name": "Black Cat",
     "junk": false,
     "gain": 0,
     "supply": true,
-    "related": [],
+    "related": [
+      "Curse"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -21081,7 +21108,9 @@
     "junk": true,
     "gain": 0,
     "supply": true,
-    "related": [],
+    "related": [
+      "Curse"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
@@ -21674,7 +21703,9 @@
     "junk": true,
     "gain": 0,
     "supply": false,
-    "related": [],
+    "related": [
+      "Curse"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
