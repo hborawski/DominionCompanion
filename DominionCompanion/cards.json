@@ -21304,7 +21304,9 @@
     "id": "e94669c4-9afa-4895-9172-a647643f398f",
     "debt": 0,
     "expansion": "Menagerie",
-    "types": [],
+    "types": [
+      "Action"
+    ],
     "coins": 3,
     "cards": 0,
     "categories": [],
