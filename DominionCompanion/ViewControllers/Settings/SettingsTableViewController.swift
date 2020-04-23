@@ -76,6 +76,7 @@ class SettingsTableViewController: UITableViewController {
         case .list:
             cell.accessoryType = .disclosureIndicator
             cell.detailTextLabel?.text = UserDefaults.standard.string(forKey: menuItem.saveKey) ?? ""
+            cell.detailTextLabel?.alpha = 0.5
         case .toggle:
             cell.selectionStyle = .none
             cell.accessoryType = .none
