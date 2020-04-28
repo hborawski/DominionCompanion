@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CardViewController: UIViewController {
     var card: Card?
@@ -89,7 +90,8 @@ class CardViewController: UIViewController {
             let path = card.name.replacingOccurrences(of: " ", with: "_").addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
             let url = URL(string: "http://wiki.dominionstrategy.com/index.php/\(path)")
         else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        let safariView = SFSafariViewController(url: url)
+        navigationController?.present(safariView, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
