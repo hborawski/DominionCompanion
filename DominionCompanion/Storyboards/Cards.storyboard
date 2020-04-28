@@ -89,7 +89,7 @@
                                 <rect key="frame" x="346" y="10" width="52" height="30"/>
                                 <state key="normal" title="Related"/>
                                 <connections>
-                                    <segue destination="Gkf-rx-sHk" kind="show" id="rEs-OD-rCv"/>
+                                    <segue destination="Gkf-rx-sHk" kind="show" identifier="ViewCards" id="rEs-OD-rCv"/>
                                 </connections>
                             </button>
                         </subviews>

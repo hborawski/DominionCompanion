@@ -22,10 +22,14 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         guard let card = self.card else { return }
         
+        let expansionGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewExpansionCards(_:)))
+        
         setupPinButton()
         
         self.nameLabel.text = card.name
         self.expansionLabel.text = card.expansion
+        self.expansionLabel.addGestureRecognizer(expansionGestureRecognizer)
+        self.expansionLabel.isUserInteractionEnabled = true
         self.textLabel?.text = card.text
         if let image = card.image() {
             self.imageView.image = image
@@ -73,9 +77,15 @@ class CardViewController: UIViewController {
         setupPinButton()
     }
     
+    @objc func viewExpansionCards(_ sender: UITapGestureRecognizer) {
+        guard let card = self.card else { return }
+        let cards = CardData.shared.allCards.filter { $0.expansion == card.expansion }
+        performSegue(withIdentifier: "ViewCards", sender: cards)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let card = self.card, let destination = segue.destination as? CardsViewController else { return }
-        destination.cardsToDisplay = card.relatedCards
+        destination.cardsToDisplay = (sender as? [Card]) ?? card.relatedCards
     }
 }
 
