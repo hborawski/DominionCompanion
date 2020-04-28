@@ -29,6 +29,7 @@ class SettingsTableViewController: UITableViewController {
         MenuSection(title: "Additional Mechanics", items: [
             MenuItem(title: "Always use Colonies/Platinum", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Always use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
+            MenuItem(title: "Maximum Landscape Cards", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsMaxLandscape, values: ["0", "1", "2"]),
             MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
             MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"]),

@@ -50,6 +50,12 @@ class SetBuilder {
         }
     }
     
+    var maxLandscape: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsMaxLandscape)
+        }
+    }
+    
     var maxLandmarks: Int {
         get {
             return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumLandmarks)
@@ -246,6 +252,7 @@ class SetBuilder {
     }
     
     func getLandscapeCards() -> [Card] {
+        guard maxLandscape > 0 else { return [] }
         let pool = (CardData.shared.allEvents + CardData.shared.allLandmarks + CardData.shared.allProjects + CardData.shared.allWays).shuffled()
         var landscapes: [Card] = pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays
         for card in pool {
@@ -253,7 +260,7 @@ class SetBuilder {
             if areLandscapesValid(temp) {
                 landscapes.append(card)
             }
-            if landscapes.count == 2 { break }
+            if landscapes.count == maxLandscape { break }
         }
         return landscapes
     }

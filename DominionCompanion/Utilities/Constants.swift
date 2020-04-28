@@ -20,6 +20,7 @@ struct Constants {
         static let pinnedProjects = "pinnedProjects"
         static let pinnedEvents = "pinnedEvents"
         static let pinnedWays = "pinnedWays"
+        static let settingsMaxLandscape = "settings_maxLandscape"
         static let settingsNumEvents = "settings_numberOfEvents"
         static let settingsNumProjects = "settings_numberOfProjects"
         static let settingsNumLandmarks = "settings_numberOfLandmarks"
