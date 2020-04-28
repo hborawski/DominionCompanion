@@ -19,14 +19,7 @@ class SettingsTableViewController: UITableViewController {
     ]
     var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
-        MenuSection(title: "App Behavior", items: [
-            MenuItem(title: "Hide Wiki links", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsHideWikiLink, values: [], tag: .hideWikiLink),
-            MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
-            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: SortMode.allCases.map{ $0.rawValue }),
-            MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions),
-            MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue })
-        ]),
-        MenuSection(title: "Additional Mechanics", items: [
+        MenuSection(title: "Set Building Mechanics", items: [
             MenuItem(title: "Always use Colonies/Platinum", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsColonies, values: [], tag: .colonies),
             MenuItem(title: "Always use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
             MenuItem(title: "Maximum Landscape Cards", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsMaxLandscape, values: ["0", "1", "2"]),
@@ -34,6 +27,13 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
             MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"]),
             MenuItem(title: "Ways", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumWays, values: ["0", "1"])
+        ]),
+        MenuSection(title: "App Behavior", items: [
+            MenuItem(title: "Hide Wiki links", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsHideWikiLink, values: [], tag: .hideWikiLink),
+            MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
+            MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: SortMode.allCases.map{ $0.rawValue }),
+            MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions),
+            MenuItem(title: "Gameplay Setup Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsGameplaySortMode, values: SortMode.allCases.map{ $0.rawValue })
         ]),
         MenuSection(title: "Miscellaneous", items: [
             MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions")
