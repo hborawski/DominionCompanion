@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,6 +69,7 @@
                     <connections>
                         <segue destination="Sk1-w9-lu9" kind="show" identifier="GlobalExclusions" id="FFl-Ig-Kkk"/>
                         <segue destination="2iJ-15-KvJ" kind="show" identifier="ShowSettingsList" id="Luc-h6-bmY"/>
+                        <segue destination="yAH-yc-NrG" kind="show" identifier="Disclosures" id="M7s-wf-58K"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A67-C2-yxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,6 +110,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="044-Qy-EgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="-12"/>
+        </scene>
+        <!--Disclosures View Controller-->
+        <scene sceneID="ly7-uz-j1a">
+            <objects>
+                <viewController id="yAH-yc-NrG" customClass="DisclosuresViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XDp-Dz-VSY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMP-vO-D5Q">
+                                <rect key="frame" x="16" y="279" width="51.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All glyph icons from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEu-tL-rvG">
+                                <rect key="frame" x="16" y="313.5" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFS-od-3Wn">
+                                <rect key="frame" x="16" y="104" width="99" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dominion and all related images and intellectual property is the creation and property of Rio Grande Games" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jz-Jl-0AR">
+                                <rect key="frame" x="16" y="149" width="382" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rio Grande Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfk-Fy-l4o">
+                                <rect key="frame" x="135.5" y="226" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="icons8.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hio-Nu-2T1">
+                                <rect key="frame" x="175" y="313.5" width="88" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hio-Nu-2T1" firstAttribute="leading" secondItem="cEu-tL-rvG" secondAttribute="trailing" constant="8" id="48P-kL-wbm"/>
+                            <constraint firstItem="cEu-tL-rvG" firstAttribute="top" secondItem="YMP-vO-D5Q" secondAttribute="bottom" constant="8" id="AeD-OC-Vp1"/>
+                            <constraint firstItem="cEu-tL-rvG" firstAttribute="leading" secondItem="KY4-0H-B2b" secondAttribute="leading" constant="16" id="Dv5-Zf-MKK"/>
+                            <constraint firstItem="vfk-Fy-l4o" firstAttribute="top" secondItem="4jz-Jl-0AR" secondAttribute="bottom" constant="16" id="Fsa-Ll-Sir"/>
+                            <constraint firstItem="4jz-Jl-0AR" firstAttribute="leading" secondItem="KY4-0H-B2b" secondAttribute="leading" constant="16" id="SyK-Se-nk5"/>
+                            <constraint firstItem="YMP-vO-D5Q" firstAttribute="top" secondItem="vfk-Fy-l4o" secondAttribute="bottom" constant="32" id="TxM-aJ-bRG"/>
+                            <constraint firstItem="YMP-vO-D5Q" firstAttribute="leading" secondItem="KY4-0H-B2b" secondAttribute="leading" constant="16" id="bB8-wd-OKH"/>
+                            <constraint firstAttribute="trailing" secondItem="4jz-Jl-0AR" secondAttribute="trailing" constant="16" id="c8i-0Z-scy"/>
+                            <constraint firstItem="FFS-od-3Wn" firstAttribute="top" secondItem="KY4-0H-B2b" secondAttribute="top" constant="16" id="iZ5-sz-H6A"/>
+                            <constraint firstItem="vfk-Fy-l4o" firstAttribute="centerX" secondItem="4jz-Jl-0AR" secondAttribute="centerX" id="n20-T8-Nmg"/>
+                            <constraint firstItem="4jz-Jl-0AR" firstAttribute="top" secondItem="FFS-od-3Wn" secondAttribute="bottom" constant="16" id="uN3-at-vLp"/>
+                            <constraint firstItem="Hio-Nu-2T1" firstAttribute="centerY" secondItem="cEu-tL-rvG" secondAttribute="centerY" id="z0K-vQ-5lB"/>
+                            <constraint firstItem="FFS-od-3Wn" firstAttribute="leading" secondItem="KY4-0H-B2b" secondAttribute="leading" constant="16" id="zf5-eC-Aqk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KY4-0H-B2b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Unj-LO-FBt"/>
+                    <connections>
+                        <outlet property="icons8Label" destination="Hio-Nu-2T1" id="D4R-hj-Ezy"/>
+                        <outlet property="rioGrandeLabel" destination="vfk-Fy-l4o" id="OnD-Ef-Ku4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5z-6e-qfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="668"/>
         </scene>
         <!--List Setting Table View Controller-->
         <scene sceneID="Iac-7C-gP3">
