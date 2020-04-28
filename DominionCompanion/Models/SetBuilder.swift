@@ -99,19 +99,9 @@ class SetBuilder {
     var pinnedWays: [Card] = []
     
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedCards)
-    var pinnedCards: [Card] = [] {
-        didSet {
-            fullSet = getFullSet()
-        }
-    }
+    var pinnedCards: [Card] = []
     
-    var randomCards: [Card] = [] {
-        didSet {
-            fullSet = getFullSet()
-        }
-    }
-    
-    var fullSet: [Card] = []
+    var randomCards: [Card] = []
     
     var setComplete: Bool {
         get {
@@ -128,7 +118,6 @@ class SetBuilder {
         self.randomEvents = pinnedEvents + CardData.shared.allEvents.shuffled()
         self.randomProjects = pinnedProjects + CardData.shared.allProjects.shuffled()
         self.randomWays = pinnedWays + CardData.shared.allWays.shuffled()
-        self.fullSet = getFullSet()
     }
     
     // MARK: Pinning
