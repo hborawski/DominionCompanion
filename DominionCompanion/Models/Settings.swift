@@ -19,6 +19,8 @@ class Settings {
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
     
+    @UserDefaultsBacked(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLink: Bool = false
+    
     @UserDefaultsBacked(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansionsWhenBuilding: Bool = false
     
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost

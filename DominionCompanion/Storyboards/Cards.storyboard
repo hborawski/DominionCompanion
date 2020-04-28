@@ -82,6 +82,13 @@
                                     <segue destination="Gkf-rx-sHk" kind="show" identifier="ViewCards" id="rEs-OD-rCv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-UK-dBf">
+                                <rect key="frame" x="368" y="44" width="30" height="30"/>
+                                <state key="normal" title="Wiki"/>
+                                <connections>
+                                    <action selector="openWikiPage" destination="soE-fn-EoZ" eventType="touchUpInside" id="WyW-az-rPI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
@@ -89,6 +96,7 @@
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="top" secondItem="jbm-sp-eX6" secondAttribute="bottom" constant="4" id="ETf-a7-QEr"/>
                             <constraint firstItem="DbJ-9E-AEO" firstAttribute="centerX" secondItem="jTC-rk-BCd" secondAttribute="centerX" id="ILM-x3-yrg"/>
                             <constraint firstItem="7xV-wh-ZgO" firstAttribute="trailing" secondItem="IZA-d6-eIu" secondAttribute="trailing" constant="16" id="ObQ-l6-Wvr"/>
+                            <constraint firstItem="7xV-wh-ZgO" firstAttribute="trailing" secondItem="8EF-UK-dBf" secondAttribute="trailing" constant="16" id="Y65-Se-aEx"/>
                             <constraint firstItem="DbJ-9E-AEO" firstAttribute="top" secondItem="GGO-Ty-S1p" secondAttribute="bottom" constant="8" id="Z7g-Mj-OPN"/>
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="leading" secondItem="7xV-wh-ZgO" secondAttribute="leading" constant="8" id="bKm-tg-cYi"/>
                             <constraint firstItem="jbm-sp-eX6" firstAttribute="top" secondItem="7xV-wh-ZgO" secondAttribute="top" constant="8" id="bnD-u5-SEW"/>
@@ -96,6 +104,7 @@
                             <constraint firstItem="IZA-d6-eIu" firstAttribute="centerY" secondItem="jbm-sp-eX6" secondAttribute="centerY" id="iyL-Vv-KMV"/>
                             <constraint firstItem="jbm-sp-eX6" firstAttribute="leading" secondItem="7xV-wh-ZgO" secondAttribute="leading" constant="8" id="oEr-du-QX7"/>
                             <constraint firstItem="7xV-wh-ZgO" firstAttribute="bottom" secondItem="DbJ-9E-AEO" secondAttribute="bottom" constant="8" id="pa7-Bd-ICh"/>
+                            <constraint firstItem="8EF-UK-dBf" firstAttribute="top" secondItem="IZA-d6-eIu" secondAttribute="bottom" constant="4" id="unv-xl-Rx0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7xV-wh-ZgO"/>
                     </view>
@@ -105,11 +114,12 @@
                         <outlet property="imageView" destination="DbJ-9E-AEO" id="KvT-1b-IOl"/>
                         <outlet property="nameLabel" destination="jbm-sp-eX6" id="DUV-Zr-POC"/>
                         <outlet property="relatedButton" destination="IZA-d6-eIu" id="MfO-to-dKZ"/>
+                        <outlet property="wikiButton" destination="8EF-UK-dBf" id="gxA-N4-Bzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1P-2S-suz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3449" y="445"/>
+            <point key="canvasLocation" x="3447.826086956522" y="444.64285714285711"/>
         </scene>
     </scenes>
     <resources>

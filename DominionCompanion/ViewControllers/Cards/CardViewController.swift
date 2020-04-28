@@ -14,9 +14,9 @@ class CardViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var expansionLabel: UILabel!
-    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var relatedButton: UIButton!
+    @IBOutlet weak var wikiButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class CardViewController: UIViewController {
         self.expansionLabel.text = card.expansion
         self.expansionLabel.addGestureRecognizer(expansionGestureRecognizer)
         self.expansionLabel.isUserInteractionEnabled = true
-        self.textLabel?.text = card.text
         if let image = card.image() {
             self.imageView.image = image
         }
         
         self.relatedButton.isHidden = card.relatedCards.count == 0
+        self.wikiButton.isHidden = Settings.shared.hideWikiLink
     }
     
     func setupPinButton() {
@@ -81,6 +81,15 @@ class CardViewController: UIViewController {
         guard let card = self.card else { return }
         let cards = CardData.shared.allCards.filter { $0.expansion == card.expansion }
         performSegue(withIdentifier: "ViewCards", sender: cards)
+    }
+    
+    @IBAction func openWikiPage() {
+        guard
+            let card = self.card,
+            let path = card.name.replacingOccurrences(of: " ", with: "_").addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+            let url = URL(string: "http://wiki.dominionstrategy.com/index.php/\(path)")
+        else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -14,11 +14,13 @@ class SettingsTableViewController: UITableViewController {
         .colonies: Constants.SaveKeys.settingsColonies,
         .shelters: Constants.SaveKeys.settingsShelters,
         .pincards: Constants.SaveKeys.settingsPinCards,
-        .showExpansions: Constants.SaveKeys.settingsShowExpansionsWhenBuilding
+        .showExpansions: Constants.SaveKeys.settingsShowExpansionsWhenBuilding,
+        .hideWikiLink: Constants.SaveKeys.settingsHideWikiLink
     ]
     var tagToSwitch: [SettingToggle: UISwitch] = [:]
     let allSettings: [MenuSection] = [
         MenuSection(title: "App Behavior", items: [
+            MenuItem(title: "Hide Wiki links", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsHideWikiLink, values: [], tag: .hideWikiLink),
             MenuItem(title: "Pin all cards for setup", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsPinCards, values: [], tag: .pincards),
             MenuItem(title: "Set Builder Sort Mode", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsSortMode, values: SortMode.allCases.map{ $0.rawValue }),
             MenuItem(title: "Show Expansions in Set Builder", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShowExpansionsWhenBuilding, values: [], tag: .showExpansions),
@@ -132,4 +134,5 @@ enum SettingToggle: Int {
     case shelters = 2
     case pincards = 3
     case showExpansions = 4
+    case hideWikiLink = 5
 }
