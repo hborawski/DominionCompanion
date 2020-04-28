@@ -84,18 +84,8 @@ class SetBuilder {
     var setComplete: Bool {
         get {
             return (pinnedCards.count == maxCards) &&
-                   (pinnedEvents.count >= maxEvents) &&
-                   (pinnedLandmarks.count >= maxLandmarks) &&
-                   (pinnedProjects.count >= maxProjects)
+                (pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays).count >= maxLandscape
         }
-    }
-    
-    
-    init() {
-        self.randomLandmarks = pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
-        self.randomEvents = pinnedEvents + CardData.shared.allEvents.shuffled()
-        self.randomProjects = pinnedProjects + CardData.shared.allProjects.shuffled()
-        self.randomWays = pinnedWays + CardData.shared.allWays.shuffled()
     }
     
     // MARK: Pinning
