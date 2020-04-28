@@ -253,7 +253,10 @@ class SetBuilder {
     
     func getLandscapeCards() -> [Card] {
         guard maxLandscape > 0 else { return [] }
-        let pool = (CardData.shared.allEvents + CardData.shared.allLandmarks + CardData.shared.allProjects + CardData.shared.allWays).shuffled()
+        let pool = (CardData.shared.allEvents + CardData.shared.allLandmarks + CardData.shared.allProjects + CardData.shared.allWays).filter({ (card) -> Bool in
+            guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
+            return Settings.shared.chosenExpansions.contains(card.expansion)
+            }).shuffled()
         var landscapes: [Card] = pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays
         for card in pool {
             let temp = landscapes + [card]

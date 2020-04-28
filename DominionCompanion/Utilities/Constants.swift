@@ -27,6 +27,7 @@ struct Constants {
         static let settingsNumWays = "settings_numberOfWays"
         static let settingsColonies = "settings_colonies"
         static let settingsShelters = "settings_shelters"
+        static let settingsAnyLandscape = "settings_anyLandscape"
         static let settingsShowExpansionsWhenBuilding = "settings_showExpansionsWhenBuilding"
         static let settingsSortMode = "settings_sortMode"
         static let settingsGameplaySortMode = "settings_gameplaySortMode"

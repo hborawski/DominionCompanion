@@ -17,6 +17,8 @@ class Settings {
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsShelters) var shelters: Bool = false
     
+    @UserDefaultsBacked(Constants.SaveKeys.settingsAnyLandscape) var useAnyLandscape: Bool = false
+    
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLink: Bool = false
