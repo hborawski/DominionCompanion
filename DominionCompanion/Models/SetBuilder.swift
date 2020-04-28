@@ -22,24 +22,20 @@ class SetBuilder {
                 CardSection(title: sectionTitle, cards: cardPool, pinnedCards: pinnedCards, canShuffle: false)
             ]
             
-            if maxEvents > 0 {
-                let displayed = Array((pinnedEvents + randomEvents.filter { !pinnedEvents.contains($0) } )[0...(maxEvents - 1)])
-                defaults.insert(CardSection(title: "Events", cards: displayed, pinnedCards: pinnedEvents), at: 0)
+            if maxEvents > 0, randomEvents.count > 0 {
+                defaults.insert(CardSection(title: "Events", cards: randomEvents, pinnedCards: pinnedEvents), at: 0)
             }
             
-            if maxLandmarks > 0 {
-                let displayed = Array((pinnedLandmarks + randomLandmarks.filter { !pinnedLandmarks.contains($0) } )[0...(maxLandmarks - 1)])
-                defaults.insert(CardSection(title: "Landmarks", cards: displayed, pinnedCards: pinnedLandmarks), at: 0)
+            if maxLandmarks > 0, randomLandmarks.count > 0 {
+                defaults.insert(CardSection(title: "Landmarks", cards: randomLandmarks, pinnedCards: pinnedLandmarks), at: 0)
             }
             
-            if maxProjects > 0 {
-                let displayed = Array((pinnedProjects + randomProjects.filter { !pinnedProjects.contains($0) } )[0...(maxProjects - 1)])
-                defaults.insert(CardSection(title: "Projects", cards: displayed, pinnedCards: pinnedProjects), at: 0)
+            if maxProjects > 0, randomProjects.count > 0 {
+                defaults.insert(CardSection(title: "Projects", cards: randomProjects, pinnedCards: pinnedProjects), at: 0)
             }
             
-            if maxWays > 0 {
-                let displayed = Array((pinnedWays + randomWays.filter { !pinnedWays.contains($0) } )[0...(maxWays - 1)])
-                defaults.insert(CardSection(title: "Ways", cards: displayed, pinnedCards: pinnedWays), at: 0)
+            if maxWays > 0, randomWays.count > 0 {
+                defaults.insert(CardSection(title: "Ways", cards: randomWays, pinnedCards: pinnedWays), at: 0)
             }
             
             return defaults
@@ -232,10 +228,11 @@ class SetBuilder {
             switch result {
             case .success(let cards):
                 self.randomCards = cards.filter { !self.pinnedCards.contains($0) }
-                self.randomLandmarks = self.pinnedLandmarks + CardData.shared.allLandmarks.shuffled()
-                self.randomEvents = self.pinnedEvents + CardData.shared.allEvents.shuffled()
-                self.randomProjects = self.pinnedProjects + CardData.shared.allProjects.shuffled()
-                self.randomWays = self.pinnedWays + CardData.shared.allWays.shuffled()
+                let landscapeCards = self.getLandscapeCards()
+                self.randomLandmarks = landscapeCards.filter { $0.types.contains("Landmark") }
+                self.randomEvents = landscapeCards.filter { $0.types.contains("Event") }
+                self.randomProjects = landscapeCards.filter { $0.types.contains("Project") }
+                self.randomWays = landscapeCards.filter { $0.types.contains("Way") }
                 completion(.success(true))
             case .failure(let error):
                 switch error {
@@ -246,6 +243,29 @@ class SetBuilder {
                 }
             }
         }
+    }
+    
+    func getLandscapeCards() -> [Card] {
+        let pool = (CardData.shared.allEvents + CardData.shared.allLandmarks + CardData.shared.allProjects + CardData.shared.allWays).shuffled()
+        var landscapes: [Card] = pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays
+        for card in pool {
+            let temp = landscapes + [card]
+            if areLandscapesValid(temp) {
+                landscapes.append(card)
+            }
+            if landscapes.count == 2 { break }
+        }
+        return landscapes
+    }
+    
+    func areLandscapesValid(_ landscapes: [Card]) -> Bool {
+        guard
+            (landscapes.filter { $0.types.contains("Event") }).count <= maxEvents,
+            (landscapes.filter { $0.types.contains("Landmark") }).count <= maxLandmarks,
+            (landscapes.filter { $0.types.contains("Project") }).count <= maxProjects,
+            (landscapes.filter { $0.types.contains("Way") }).count <= maxWays
+        else { return false }
+        return true
     }
     
     // MARK: Final Set
