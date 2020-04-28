@@ -18,7 +18,7 @@ class SetBuilder {
             let cards = getFullSet()
             let sectionTitle = RuleEngine.shared.rules.count > 0 ? "Cards Matching Any Rules" : "All Cards"
             var defaults = [
-                CardSection(title: "Set", cards: cards, pinnedCards: pinnedCards),
+                CardSection(title: "Kingdom Cards", cards: cards, pinnedCards: pinnedCards),
                 CardSection(title: sectionTitle, cards: cardPool, pinnedCards: pinnedCards, canShuffle: false)
             ]
             
@@ -44,56 +44,32 @@ class SetBuilder {
     
     var maxCards = 10
     
-    var cardPool: [Card] {
-        get {
-            return RuleEngine.shared.matchAnyRule.sorted(by: Utilities.alphabeticSort(card1:card2:))
-        }
-    }
+    var cardPool: [Card] {  RuleEngine.shared.matchAnyRule.sorted(by: Utilities.alphabeticSort(card1:card2:)) }
     
-    var maxLandscape: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsMaxLandscape)
-        }
-    }
+    var maxLandscape: Int { UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsMaxLandscape) }
     
-    var maxLandmarks: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumLandmarks)
-        }
-    }
+    var maxLandmarks: Int { UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumLandmarks) }
     
     var randomLandmarks: [Card] = []
     
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLandmarks)
     var pinnedLandmarks: [Card] = []
     
-    var maxEvents: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumEvents)
-        }
-    }
+    var maxEvents: Int { UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumEvents) }
     
     var randomEvents: [Card] = []
     
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedEvents)
     var pinnedEvents: [Card] = []
     
-    var maxProjects: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumProjects)
-        }
-    }
+    var maxProjects: Int { UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumProjects) }
     
     var randomProjects: [Card] = []
     
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedProjects)
     var pinnedProjects: [Card] = []
     
-    var maxWays: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumWays)
-        }
-    }
+    var maxWays: Int { UserDefaults.standard.integer(forKey: Constants.SaveKeys.settingsNumWays) }
     
     var randomWays: [Card] = []
     
