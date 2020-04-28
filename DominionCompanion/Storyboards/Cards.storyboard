@@ -67,18 +67,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-9E-AEO">
-                                <rect key="frame" x="-36" y="74.5" width="486" height="676.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DbJ-9E-AEO" secondAttribute="height" multiplier="359:500" id="1iS-ky-6Md"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="450" id="svL-Hv-pzS"/>
-                                </constraints>
+                                <rect key="frame" x="8" y="74.5" width="398" height="725.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="this is a bunch of text just to test how this is going to wrap" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pim-a8-Q2L" userLabel="Description Label">
-                                <rect key="frame" x="8" y="759" width="398" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Expansion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGO-Ty-S1p">
                                 <rect key="frame" x="8" y="45.5" width="78.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,18 +85,17 @@
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="pim-a8-Q2L" firstAttribute="top" secondItem="DbJ-9E-AEO" secondAttribute="bottom" constant="8" id="85C-9a-7qb"/>
+                            <constraint firstAttribute="trailing" secondItem="DbJ-9E-AEO" secondAttribute="trailing" constant="8" id="8Cy-Y5-1sD"/>
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="top" secondItem="jbm-sp-eX6" secondAttribute="bottom" constant="4" id="ETf-a7-QEr"/>
-                            <constraint firstItem="7xV-wh-ZgO" firstAttribute="bottom" secondItem="pim-a8-Q2L" secondAttribute="bottom" constant="8" id="GQf-ja-VOb"/>
                             <constraint firstItem="DbJ-9E-AEO" firstAttribute="centerX" secondItem="jTC-rk-BCd" secondAttribute="centerX" id="ILM-x3-yrg"/>
                             <constraint firstItem="7xV-wh-ZgO" firstAttribute="trailing" secondItem="IZA-d6-eIu" secondAttribute="trailing" constant="16" id="ObQ-l6-Wvr"/>
+                            <constraint firstItem="DbJ-9E-AEO" firstAttribute="top" secondItem="GGO-Ty-S1p" secondAttribute="bottom" constant="8" id="Z7g-Mj-OPN"/>
                             <constraint firstItem="GGO-Ty-S1p" firstAttribute="leading" secondItem="7xV-wh-ZgO" secondAttribute="leading" constant="8" id="bKm-tg-cYi"/>
                             <constraint firstItem="jbm-sp-eX6" firstAttribute="top" secondItem="7xV-wh-ZgO" secondAttribute="top" constant="8" id="bnD-u5-SEW"/>
-                            <constraint firstItem="pim-a8-Q2L" firstAttribute="leading" secondItem="jTC-rk-BCd" secondAttribute="leading" constant="8" id="gct-2a-VAZ"/>
+                            <constraint firstItem="DbJ-9E-AEO" firstAttribute="leading" secondItem="jTC-rk-BCd" secondAttribute="leading" constant="8" id="cDL-p3-VST"/>
                             <constraint firstItem="IZA-d6-eIu" firstAttribute="centerY" secondItem="jbm-sp-eX6" secondAttribute="centerY" id="iyL-Vv-KMV"/>
-                            <constraint firstAttribute="trailing" secondItem="pim-a8-Q2L" secondAttribute="trailing" constant="8" id="nZS-gj-Zr9"/>
                             <constraint firstItem="jbm-sp-eX6" firstAttribute="leading" secondItem="7xV-wh-ZgO" secondAttribute="leading" constant="8" id="oEr-du-QX7"/>
-                            <constraint firstItem="DbJ-9E-AEO" firstAttribute="top" secondItem="GGO-Ty-S1p" secondAttribute="bottom" constant="8" id="r4O-rM-Oqj"/>
+                            <constraint firstItem="7xV-wh-ZgO" firstAttribute="bottom" secondItem="DbJ-9E-AEO" secondAttribute="bottom" constant="8" id="pa7-Bd-ICh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7xV-wh-ZgO"/>
                     </view>
@@ -116,7 +105,6 @@
                         <outlet property="imageView" destination="DbJ-9E-AEO" id="KvT-1b-IOl"/>
                         <outlet property="nameLabel" destination="jbm-sp-eX6" id="DUV-Zr-POC"/>
                         <outlet property="relatedButton" destination="IZA-d6-eIu" id="MfO-to-dKZ"/>
-                        <outlet property="textLabel" destination="pim-a8-Q2L" id="ua1-r2-lNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1P-2S-suz" userLabel="First Responder" sceneMemberID="firstResponder"/>
