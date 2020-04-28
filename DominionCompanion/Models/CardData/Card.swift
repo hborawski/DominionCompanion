@@ -83,6 +83,9 @@ struct Card: Codable {
         if types.contains("Project") {
             return SetBuilder.shared.pinnedProjects.contains(self)
         }
+        if types.contains("Way") {
+            return SetBuilder.shared.pinnedWays.contains(self)
+        }
         return SetBuilder.shared.pinnedCards.contains(self)
     }
     
