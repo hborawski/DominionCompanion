@@ -15,6 +15,7 @@ class DisclosuresViewController: UIViewController {
     
     override func viewDidLoad() {
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "Disclosures"
         underlineAndAttachGesture(label: icons8Label, destination: "https://icons8.com")
         underlineAndAttachGesture(label: rioGrandeLabel, destination: "https://www.riograndegames.com/")
     }
