@@ -100,6 +100,10 @@ struct SetModel {
             sections.append(GameplaySection(title: "Projects", rows: self.projects.map(getAttributedCardCell)))
         }
         
+        if ways.count > 0 {
+            sections.append(GameplaySection(title: "Ways", rows: self.ways.map(getAttributedCardCell)))
+        }
+        
         let tokens = getTokens()
         if tokens.count > 0 {
             sections.append(GameplaySection(title: "Tokens", rows: tokens.map(getBasicCell)))
