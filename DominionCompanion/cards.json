@@ -2380,7 +2380,7 @@
     "name": "Champion",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Page",
       "Treasure Hunter",
@@ -4343,7 +4343,7 @@
     "name": "Disciple",
     "junk": false,
     "gain": 1,
-    "supply": true,
+    "supply": false,
     "related": [
       "Peasant",
       "Soldier",
@@ -6343,7 +6343,7 @@
     "name": "Fugitive",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Peasant",
       "Soldier",
@@ -7725,7 +7725,7 @@
     "name": "Hero",
     "junk": false,
     "gain": 1,
-    "supply": true,
+    "supply": false,
     "related": [
       "Page",
       "Treasure Hunter",
@@ -15018,7 +15018,7 @@
     "name": "Soldier",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Peasant",
       "Fugitive",
@@ -15854,7 +15854,7 @@
     "name": "Teacher",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Peasant",
       "Soldier",
@@ -17101,7 +17101,7 @@
     "name": "Treasure Hunter",
     "junk": false,
     "gain": 1,
-    "supply": true,
+    "supply": false,
     "related": [
       "Page",
       "Warrior",
@@ -18139,7 +18139,7 @@
     "name": "Warrior",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Page",
       "Treasure Hunter",
