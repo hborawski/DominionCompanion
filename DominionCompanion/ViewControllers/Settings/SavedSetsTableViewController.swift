@@ -25,7 +25,7 @@ class SavedSetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "Saved Sets"
         navigationItem.largeTitleDisplayMode = .never
-        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
     }
     
@@ -75,5 +75,12 @@ extension SavedSetsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.searchText = searchText
         self.tableView.reloadData()
+    }
+}
+
+extension SavedSetsTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        searchText = searchController.searchBar.text ?? ""
+        tableView.reloadData()
     }
 }
