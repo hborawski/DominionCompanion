@@ -39,14 +39,8 @@ class SavedSetsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { savedSets.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail") else { return UITableViewCell() }
-        let model = savedSets[indexPath.row].getSetModel()
-        let date = savedSets[indexPath.row].date
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd, YYYY"
-        cell.textLabel?.text = "\(savedSets[indexPath.row].name) - \(model.expansions.joined(separator: " | "))"
-        cell.detailTextLabel?.text = formatter.string(from: date)
-        cell.detailTextLabel?.alpha = 0.5
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "savedSetCell") as? SavedSetCell else { return UITableViewCell() }
+        cell.configure(savedSets[indexPath.row])
         return cell
     }
     

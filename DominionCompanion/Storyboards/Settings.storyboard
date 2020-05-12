@@ -145,6 +145,49 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSetCell" rowHeight="89" id="G4y-h8-JtZ" customClass="SavedSetCell" customModule="DominionCompanion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4y-h8-JtZ" id="UWc-P6-7Nd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rER-vC-BKZ">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-A3-Rj4">
+                                            <rect key="frame" x="352" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hap-QO-bQX">
+                                            <rect key="frame" x="20" y="50" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QXS-A3-Rj4" firstAttribute="top" secondItem="UWc-P6-7Nd" secondAttribute="topMargin" id="35P-0a-mkW"/>
+                                        <constraint firstItem="rER-vC-BKZ" firstAttribute="leading" secondItem="UWc-P6-7Nd" secondAttribute="leadingMargin" id="MNT-El-6zc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Hap-QO-bQX" secondAttribute="trailing" id="OpN-wZ-Yy3"/>
+                                        <constraint firstItem="rER-vC-BKZ" firstAttribute="top" secondItem="UWc-P6-7Nd" secondAttribute="topMargin" id="SVN-d3-8sT"/>
+                                        <constraint firstItem="QXS-A3-Rj4" firstAttribute="trailing" secondItem="UWc-P6-7Nd" secondAttribute="trailingMargin" id="VPY-iW-kVA"/>
+                                        <constraint firstItem="Hap-QO-bQX" firstAttribute="top" secondItem="rER-vC-BKZ" secondAttribute="bottom" constant="4" id="cUP-D0-Idn"/>
+                                        <constraint firstItem="Hap-QO-bQX" firstAttribute="leading" secondItem="UWc-P6-7Nd" secondAttribute="leadingMargin" id="kcz-Cu-tdn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Hap-QO-bQX" secondAttribute="bottom" id="tce-nE-Hvb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="QXS-A3-Rj4" id="daq-b1-dCS"/>
+                                    <outlet property="expansionLabel" destination="Hap-QO-bQX" id="lS1-Py-cPT"/>
+                                    <outlet property="nameLabel" destination="rER-vC-BKZ" id="wZM-gA-gGe"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="g6q-LJ-N2y" id="7SM-tQ-P4L"/>
@@ -158,7 +201,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5A-AM-9qL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-512" y="849"/>
+            <point key="canvasLocation" x="-513.04347826086962" y="848.4375"/>
         </scene>
         <!--GameplaySetup-->
         <scene sceneID="nBz-TN-GaI">
