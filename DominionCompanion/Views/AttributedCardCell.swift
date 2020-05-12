@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class AttributedCardCell : UITableViewCell {
+    var card: Card?
+
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var costBackground: UIView!
     @IBOutlet weak var cardColorView: UIStackView!
@@ -20,6 +22,7 @@ class AttributedCardCell : UITableViewCell {
     @IBOutlet weak var debtBackground: UIView!
     
     func setData(_ card: Card, favorite: Bool = false, showExpansion: Bool = false) {
+        self.card = card
         self.accessoryType = favorite ? .checkmark : .none
         self.nameLabel.text = card.name
         makeColorView(card.types)

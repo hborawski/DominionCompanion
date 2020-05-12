@@ -38,6 +38,11 @@ class GameplaySetupViewController: UITableViewController {
         return tableData[indexPath.section].rows[indexPath.row]
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? AttributedCardCell else { return }
+        performSegue(withIdentifier: "ViewCard", sender: cell.card)
+    }
+    
     @objc func saveSet() {
         let alert = UIAlertController(title: "Save Set", message: "Save this set to recall it later for setup", preferredStyle: .alert)
         alert.addTextField { $0.delegate = self }
@@ -52,6 +57,11 @@ class GameplaySetupViewController: UITableViewController {
             self.savedSetName = ""
         }))
         present(alert, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? CardViewController, let card = sender as? Card else { return }
+        vc.card = card
     }
 }
 
