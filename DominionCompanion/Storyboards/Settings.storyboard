@@ -70,6 +70,7 @@
                         <segue destination="Sk1-w9-lu9" kind="show" identifier="GlobalExclusions" id="FFl-Ig-Kkk"/>
                         <segue destination="2iJ-15-KvJ" kind="show" identifier="ShowSettingsList" id="Luc-h6-bmY"/>
                         <segue destination="yAH-yc-NrG" kind="show" identifier="Disclosures" id="M7s-wf-58K"/>
+                        <segue destination="g6q-LJ-N2y" kind="show" identifier="SavedSets" id="XH0-XY-nxu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A67-C2-yxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,6 +111,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="044-Qy-EgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="-12"/>
+        </scene>
+        <!--Saved Sets Table View Controller-->
+        <scene sceneID="eSY-Rj-kMi">
+            <objects>
+                <tableViewController id="g6q-LJ-N2y" customClass="SavedSetsTableViewController" customModule="DominionCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KEA-Wx-AVh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bER-Zn-nib">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bER-Zn-nib" id="SAG-a7-3n7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g6q-LJ-N2y" id="7SM-tQ-P4L"/>
+                            <outlet property="delegate" destination="g6q-LJ-N2y" id="BIg-hH-d1J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YzN-HJ-VkH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5A-AM-9qL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="849"/>
         </scene>
         <!--Disclosures View Controller-->
         <scene sceneID="ly7-uz-j1a">

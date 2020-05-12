@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class GameplaySetupViewController: UITableViewController {
+    var savedSetName: String = ""
+    
     var setModel: SetModel?
     
     var tableData: [GameplaySection] = []
@@ -32,8 +34,24 @@ class GameplaySetupViewController: UITableViewController {
     }
     
     @objc func saveSet() {
-        guard let model = setModel else { return }
-        
-        SavedSets.shared.saveSet(name: "example", model: model)
+        let alert = UIAlertController(title: "Save Set", message: "Save this set to recall it later for setup", preferredStyle: .alert)
+        alert.addTextField { $0.delegate = self }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            self.savedSetName = ""
+            alert.dismiss(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
+            guard let model = self.setModel else { return }
+            
+            SavedSets.shared.saveSet(name: self.savedSetName, model: model)
+            self.savedSetName = ""
+        }))
+        present(alert, animated: true)
+    }
+}
+
+extension GameplaySetupViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        savedSetName = textField.text ?? ""
     }
 }

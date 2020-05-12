@@ -41,7 +41,8 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Global Exclude List", destinationType: .viewController, destination: "GlobalExclusions")
         ]),
         MenuSection(title: "", items: [
-            MenuItem(title: "Disclosures", destinationType: .viewController, destination: "Disclosures")
+            MenuItem(title: "Disclosures", destinationType: .viewController, destination: "Disclosures"),
+            MenuItem(title: "Saved Sets", destinationType: .viewController, destination: "SavedSets")
         ])
     ]
     override func viewDidLoad() {

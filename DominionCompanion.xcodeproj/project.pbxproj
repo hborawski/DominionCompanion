@@ -56,6 +56,7 @@
 		AFC1BA68246A25F800298F75 /* SavedSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1BA67246A25F800298F75 /* SavedSets.swift */; };
 		AFD02B8C246A331A00D14D61 /* SavedSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B8A246A331A00D14D61 /* SavedSet+CoreDataClass.swift */; };
 		AFD02B8D246A331A00D14D61 /* SavedSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B8B246A331A00D14D61 /* SavedSet+CoreDataProperties.swift */; };
+		AFD02B8F246A363400D14D61 /* SavedSetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B8E246A363400D14D61 /* SavedSetsTableViewController.swift */; };
 		AFD4615E241C9426007720EA /* QRCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4615D241C9426007720EA /* QRCodes.storyboard */; };
 		AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46160241C945E007720EA /* ShareSetViewController.swift */; };
 		AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46162241D5D22007720EA /* ScanSetViewController.swift */; };
@@ -132,6 +133,7 @@
 		AFC1BA67246A25F800298F75 /* SavedSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSets.swift; sourceTree = "<group>"; };
 		AFD02B8A246A331A00D14D61 /* SavedSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AFD02B8B246A331A00D14D61 /* SavedSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFD02B8E246A363400D14D61 /* SavedSetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSetsTableViewController.swift; sourceTree = "<group>"; };
 		AFD4615D241C9426007720EA /* QRCodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodes.storyboard; sourceTree = "<group>"; };
 		AFD46160241C945E007720EA /* ShareSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSetViewController.swift; sourceTree = "<group>"; };
 		AFD46162241D5D22007720EA /* ScanSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSetViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				AF80D701235C040100FDC4D6 /* GlobalExclusionsViewController.swift */,
 				AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */,
 				AFAB6EB52457B64900F09799 /* DisclosuresViewController.swift */,
+				AFD02B8E246A363400D14D61 /* SavedSetsTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,
 				AFC1BA68246A25F800298F75 /* SavedSets.swift in Sources */,
 				AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */,
+				AFD02B8F246A363400D14D61 /* SavedSetsTableViewController.swift in Sources */,
 				AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */,
 				AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */,
 				AF1B6EB623243FAA00ADA74D /* SetFilterCell.swift in Sources */,

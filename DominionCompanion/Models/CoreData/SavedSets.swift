@@ -48,6 +48,12 @@ class SavedSets {
         reloadSavedSets()
     }
     
+    func delete(savedSet: SavedSet) {
+        container.viewContext.delete(savedSet)
+        saveContext()
+        reloadSavedSets()
+    }
+    
     private func reloadSavedSets() {
         let request: NSFetchRequest<SavedSet> = SavedSet.fetchRequest()
         let sort = NSSortDescriptor(key: "date", ascending: false)
