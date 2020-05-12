@@ -36,4 +36,15 @@ class SavedSetsTableViewController: UITableViewController {
         }
         return UISwipeActionsConfiguration(actions: [delete])
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = savedSets[indexPath.row].getSetModel()
+        performSegue(withIdentifier: "SetupSet", sender: model)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let model = sender as? SetModel, let vc = segue.destination as? GameplaySetupViewController else { return }
+        vc.displayingSavedSet = true
+        vc.setModel = model
+    }
 }

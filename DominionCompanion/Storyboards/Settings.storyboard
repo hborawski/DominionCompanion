@@ -136,10 +136,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="YzN-HJ-VkH"/>
+                    <connections>
+                        <segue destination="m71-BL-BTo" kind="show" identifier="SetupSet" id="CfV-LI-Tpt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5A-AM-9qL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-512" y="849"/>
+        </scene>
+        <!--GameplaySetup-->
+        <scene sceneID="nBz-TN-GaI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameplaySetup" id="m71-BL-BTo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QqD-wK-89y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVD-EH-ctW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-496" y="1328"/>
         </scene>
         <!--Disclosures View Controller-->
         <scene sceneID="ly7-uz-j1a">

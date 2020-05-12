@@ -12,15 +12,20 @@ import UIKit
 class GameplaySetupViewController: UITableViewController {
     var savedSetName: String = ""
     
+    var displayingSavedSet = false
+    
     var setModel: SetModel?
     
     var tableData: [GameplaySection] = []
     
     override func viewDidLoad() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSet))
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
+        
         guard let model = setModel else { return }
         tableData = model.getSections(tableView: tableView)
+        
+        guard !displayingSavedSet else { return }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSet))
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { tableData[section].title }
