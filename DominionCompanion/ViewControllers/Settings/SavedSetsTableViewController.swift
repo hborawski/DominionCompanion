@@ -10,11 +10,28 @@ import Foundation
 import UIKit
 
 class SavedSetsTableViewController: UITableViewController {
-    var savedSets: [SavedSet] { SavedSets.shared.savedSets }
+    var searchController: UISearchController = UISearchController()
+    
+    var searchText = ""
+    
+    var savedSets: [SavedSet] {
+        SavedSets.shared.savedSets.filter{savedSet in
+            guard searchText != "" else { return true }
+            let matchesExpansion = savedSet.getSetModel().expansions.first { $0.lowercased().contains(searchText.lowercased()) } != nil
+            return matchesExpansion || savedSet.name.lowercased().contains(searchText.lowercased())
+        }
+    }
     
     override func viewDidLoad() {
         self.navigationItem.title = "Saved Sets"
         navigationItem.largeTitleDisplayMode = .never
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
@@ -51,5 +68,12 @@ class SavedSetsTableViewController: UITableViewController {
         guard let model = sender as? SetModel, let vc = segue.destination as? GameplaySetupViewController else { return }
         vc.displayingSavedSet = true
         vc.setModel = model
+    }
+}
+
+extension SavedSetsTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchText = searchText
+        self.tableView.reloadData()
     }
 }
