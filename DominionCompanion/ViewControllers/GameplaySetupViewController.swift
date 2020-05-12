@@ -15,6 +15,7 @@ class GameplaySetupViewController: UITableViewController {
     var tableData: [GameplaySection] = []
     
     override func viewDidLoad() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSet))
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
         guard let model = setModel else { return }
         tableData = model.getSections(tableView: tableView)
@@ -28,5 +29,11 @@ class GameplaySetupViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableData[indexPath.section].rows[indexPath.row]
+    }
+    
+    @objc func saveSet() {
+        guard let model = setModel else { return }
+        
+        SavedSets.shared.saveSet(name: "example", model: model)
     }
 }

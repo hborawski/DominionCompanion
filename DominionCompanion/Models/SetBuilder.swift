@@ -247,10 +247,10 @@ class SetBuilder {
     // MARK: Final Set
     func getFinalSet() -> SetModel {
         return SetModel(
-            landmarks: Array(randomLandmarks[..<maxLandmarks]),
-            events: Array(randomEvents[..<maxEvents]),
-            projects: Array(randomProjects[..<maxProjects]),
-            ways: Array(randomWays[..<maxWays]),
+            landmarks: Array(randomLandmarks),
+            events: Array(randomEvents),
+            projects: Array(randomProjects),
+            ways: Array(randomWays),
             cards: getFullSet()
         )
     }
