@@ -74,7 +74,7 @@ class RuleEngine {
             return completion(.success(pinned + Array(cardCopy.shuffled()[0..<(10 - pinned.count)])))
         }
         guard rulesCanBeSatisfied(cardCopy, self.rules) else {
-            print("Cant make a set with these rules")
+            Logger.shared.w("A set cannot be made with the current rules")
             return completion(.failure(.notSatisfiable))
         }
         DispatchQueue.global(qos: .background).async {
@@ -91,6 +91,7 @@ class RuleEngine {
             var totalAttempts = 0
             while finalSet.count < 10 {
                 guard totalAttempts < 100 else {
+                    Logger.shared.w("Too many attempts to create a set")
                     return completion(.failure(.tooManyAttempts))
                 }
                 guard currentAttempts < 5 else {
@@ -132,13 +133,13 @@ class RuleEngine {
                     !satisfactionDecreased,
                     self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0
                 {
-                    print("Satisfaction: \(self.ruleSatisfaction(tempSet, self.rules))")
-                    print("Adding card to set: \(nextCard.name)")
+                    Logger.shared.t("Satisfaction: \(self.ruleSatisfaction(tempSet, self.rules))")
+                    Logger.shared.t("Adding card to set: \(nextCard.name)")
                     finalSet = tempSet
                     satisfaction = self.ruleSatisfaction(finalSet, self.rules)
                     ruleSatisfactions = newSatisfactions
                 } else {
-                    print("Card did not match set: \(nextCard.name), satisfaction: \(satisfaction), count: \(finalSet.count)")
+                    Logger.shared.t("Card did not match set: \(nextCard.name), satisfaction: \(satisfaction), count: \(finalSet.count)")
                 }
                 // If we fill the set but not all the rules are statisfied
                 // reset and try again
@@ -150,8 +151,8 @@ class RuleEngine {
                 }
             }
             DispatchQueue.main.async {
-                print("Final Satisfaction: \(self.ruleSatisfaction(finalSet, self.rules))")
-                print(finalSet.map({$0.name}).joined(separator: "|"))
+                Logger.shared.d("Final Satisfaction: \(self.ruleSatisfaction(finalSet, self.rules))")
+                Logger.shared.d(finalSet.map({$0.name}).joined(separator: "|"))
                 completion(.success(finalSet))
             }
         }

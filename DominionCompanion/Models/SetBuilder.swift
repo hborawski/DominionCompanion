@@ -90,6 +90,7 @@ class SetBuilder {
     
     // MARK: Pinning
     func pin(_ card: Card) {
+        Logger.shared.d("Pinning: \(card.name)")
         switch true {
         case card.types.contains("Landmark"):
             pinLandmark(card)
@@ -180,6 +181,7 @@ class SetBuilder {
     }
     
     func unpin(_ card: Card) {
+        Logger.shared.d("Unpinning: \(card.name)")
         switch true {
         case card.types.contains("Landmark"):
             unpinLandmark(card)
@@ -283,7 +285,6 @@ struct CardSection: SetBuilderSection {
                 let card = c
                 let pinned = self.pinnedCards.contains(card)
                 return SetBuilderCardRow(card: card, pinned: pinned, pinAction: {
-                    print("Pinning \(card.name)")
                     pinned ? SetBuilder.shared.unpin(c) : SetBuilder.shared.pin(c)
                 })
             }

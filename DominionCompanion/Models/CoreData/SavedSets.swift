@@ -18,10 +18,9 @@ class SavedSets {
     init() {
         container.loadPersistentStores { (description, error) in
             guard error == nil else {
-                print("Error loading CoreData")
+                Logger.shared.e("Problem loading persistent stores for CoreData")
                 return
             }
-            print(String(describing: description))
         }
         reloadSavedSets()
     }
@@ -62,7 +61,7 @@ class SavedSets {
         do {
             savedSets = try container.viewContext.fetch(request)
         } catch {
-            print("Loading saved sets failed")
+            Logger.shared.e("Loading saved sets failed")
         }
     }
 
@@ -71,7 +70,7 @@ class SavedSets {
             do {
                 try container.viewContext.save()
             } catch {
-                print("An error occurred while saving: \(error)")
+                Logger.shared.e("Saving CoreData context error: \(error)")
             }
         }
     }

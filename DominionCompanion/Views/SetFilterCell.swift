@@ -25,12 +25,11 @@ class SetFilterCell : UITableViewCell {
             label.text = "\(rule.property.rawValue) \(rule.operation.rawValue) \(rule.comparisonValue)"
             ruleStack.addArrangedSubview(label)
         }
-        setLabelColor()
+        setLabelColor(rule)
     }
     
-    func setLabelColor() {
+    func setLabelColor(_ rule: SetRule) {
         DispatchQueue.global(qos: .background).async {
-            guard let rule = self.rule else { return }
             if !rule.satisfiable(RuleEngine.shared.cardData) {
                 DispatchQueue.main.async {
                     self.cardCountLabel.textColor = .red
