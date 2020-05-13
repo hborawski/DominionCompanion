@@ -25,10 +25,10 @@ class SettingsTableViewController: UITableViewController {
             MenuItem(title: "Always use Shelters with Dark Ages", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsShelters, values: [], tag: .shelters),
             MenuItem(title: "Maximum Landscape Cards", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsMaxLandscape, values: ["0", "1", "2"]),
             MenuItem(title: "Use Any Landscape Cards", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsAnyLandscape, values: [], tag: .anyLandscape),
-            MenuItem(title: "Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
-            MenuItem(title: "Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
-            MenuItem(title: "Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"]),
-            MenuItem(title: "Ways", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumWays, values: ["0", "1"])
+            MenuItem(title: "Max Landmarks", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumLandmarks, values: ["0", "1", "2"]),
+            MenuItem(title: "Max Events", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumEvents, values: ["0", "1", "2"]),
+            MenuItem(title: "Max Projects", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumProjects, values: ["0", "1", "2"]),
+            MenuItem(title: "Max Ways", destinationType: .list, destination: "", saveKey: Constants.SaveKeys.settingsNumWays, values: ["0", "1"])
         ]),
         MenuSection(title: "App Behavior", items: [
             MenuItem(title: "Hide Wiki links", destinationType: .toggle, destination: "", saveKey: Constants.SaveKeys.settingsHideWikiLink, values: [], tag: .hideWikiLink),
