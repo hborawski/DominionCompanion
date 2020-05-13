@@ -47,8 +47,10 @@ class SavedRulesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail") else { return UITableViewCell() }
         cell.textLabel?.text = savedRules[indexPath.row].name
+        cell.detailTextLabel?.text = "\(savedRules[indexPath.row].rules.count) rules"
+        cell.detailTextLabel?.alpha = 0.5
         return cell
     }
     
