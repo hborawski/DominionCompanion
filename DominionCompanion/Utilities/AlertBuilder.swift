@@ -13,7 +13,10 @@ class AlertBuilder {
     static func withTextField(title: String, message: String = "", defaultText: String = "Save", completion: @escaping (String) -> Void = {_ in}) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let textHandler = AlertTextHandler()
-        alertController.addTextField(configurationHandler: { $0.delegate = textHandler})
+        alertController.addTextField(configurationHandler: { textField in
+            textField.delegate = textHandler
+            textField.placeholder = "Name..."
+        })
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in alertController.dismiss(animated: true) } ))
         alertController.addAction(UIAlertAction(title: defaultText, style: .default, handler: { _ in completion(textHandler.text) } ))
         return alertController
