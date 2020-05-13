@@ -69,10 +69,7 @@ class CardData {
         } else {
             self.allCards = []
         }
-        self.kingdomCards = self.allCards.filter { (card: Card) -> Bool in
-            return card.supply
-//            return Set(Constants.nonKingdomTypes).intersection(Set(card.types)).count == 0
-        }
+        self.kingdomCards = self.allCards.filter { $0.supply }
         
         self.maxPrice = self.kingdomCards.map({$0.cost}).max(by: <) ?? 0
         self.maxDebt = self.kingdomCards.map({$0.debt}).max(by: <) ?? 0
