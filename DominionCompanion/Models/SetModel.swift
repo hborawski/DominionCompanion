@@ -71,7 +71,6 @@ struct SetModel {
                 return UITableViewCell()
             }
             cell.setData(card, favorite: false, showExpansion: true)
-            cell.selectionStyle = .none
             return cell
         }
         

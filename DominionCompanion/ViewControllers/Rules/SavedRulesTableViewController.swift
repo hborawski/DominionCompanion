@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 
 class SavedRulesTableViewController: UITableViewController {
-    
-    var tempRuleName: String = ""
-    
     var savedRules: [SavedRule] = [] {
         didSet {
             RuleEngine.shared.savedRules = self.savedRules
@@ -34,15 +31,9 @@ class SavedRulesTableViewController: UITableViewController {
     
     
     @objc func saveRuleSet(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Save", message: "Save Current Rules", preferredStyle: .alert)
-        alert.addTextField { (field) in
-            field.delegate = self
+        let alert = AlertBuilder.withTextField(title: "Save", message: "Save current set rules") { value in
+            self.savedRules.append(SavedRule(name: value, rules: RuleEngine.shared.rules))
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in alert.dismiss(animated: true, completion: nil)}))
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
-            self.savedRules.append(SavedRule(name: self.tempRuleName, rules: RuleEngine.shared.rules))
-            self.tempRuleName = ""
-        }))
         self.present(alert, animated: true)
     }
 
@@ -84,16 +75,10 @@ class SavedRulesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let rename = UIContextualAction(style: .normal, title: "Rename") { (action, view, completion) in
-            let renameAlert = UIAlertController(title: "Rename", message: "Rename saved rule set", preferredStyle: .alert)
-            renameAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in renameAlert.dismiss(animated: true, completion: nil)}))
-            renameAlert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
+            let renameAlert = AlertBuilder.withTextField(title: "Rename", message: "Rename saved rule set", defaultText: "Rename") { value in
                 let savedRule = self.savedRules[indexPath.row]
-                let rule = SavedRule(name: self.tempRuleName, rules: savedRule.rules, uuid: savedRule.uuid)
+                let rule = SavedRule(name: value, rules: savedRule.rules, uuid: savedRule.uuid)
                 self.savedRules[indexPath.row] = rule
-                self.tempRuleName = ""
-            }))
-            renameAlert.addTextField { (field) in
-                field.delegate = self
             }
             self.present(renameAlert, animated: true)
         }
@@ -110,10 +95,4 @@ class SavedRulesTableViewController: UITableViewController {
         self.navigationController?.pushViewController(rulesVC, animated: true)
     }
     
-}
-
-extension SavedRulesTableViewController: UITextFieldDelegate {
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        tempRuleName = textField.text ?? ""
-    }
 }
