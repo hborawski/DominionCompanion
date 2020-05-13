@@ -135,7 +135,7 @@ class SetRuleViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? CardsViewController else { return }
-        destination.cardsToDisplay = matchingCards
+        destination.rawCardData = matchingCards
     }
 }
 

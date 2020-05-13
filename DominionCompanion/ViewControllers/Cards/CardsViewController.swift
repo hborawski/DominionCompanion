@@ -13,8 +13,7 @@ class CardsViewController: UITableViewController {
     
     var excludeMode: Bool = false
     
-    var cardsToDisplay : [Card]? = nil
-    var rawCardData : [Card] = []
+    var rawCardData : [Card] = CardData.shared.allCards
     var cardData: [Card] = []
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -22,7 +21,6 @@ class CardsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "AttributedCardCell", bundle: nil), forCellReuseIdentifier: "attributedCardCell")
-        self.rawCardData = self.cardsToDisplay ?? CardData.shared.allCards
         self.filterCards("")
         
         searchController.searchResultsUpdater = self

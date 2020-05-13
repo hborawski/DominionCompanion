@@ -96,7 +96,7 @@ class CardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let card = self.card, let destination = segue.destination as? CardsViewController else { return }
-        destination.cardsToDisplay = (sender as? [Card]) ?? card.relatedCards
+        destination.rawCardData = (sender as? [Card]) ?? card.relatedCards
     }
 }
 

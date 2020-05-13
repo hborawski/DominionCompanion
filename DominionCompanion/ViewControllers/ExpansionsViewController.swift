@@ -52,6 +52,6 @@ class ExpansionsViewController : UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier, identifier == "ViewCards", let destination = segue.destination as? CardsViewController else { return }
         guard let cards = sender as? [Card] else { return }
-        destination.cardsToDisplay = cards
+        destination.rawCardData = cards
     }
 }
