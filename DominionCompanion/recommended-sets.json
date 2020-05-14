@@ -3889,5 +3889,184 @@
         "landmarks": [],
         "projects": [],
         "ways": []
+    },
+    {
+        "name": "Basic Intro",
+        "cards": [
+            "Castles",
+            "Chariot Race",
+            "City Quarter",
+            "Engineer",
+            "Farmers' Market",
+            "Forum",
+            "Legionary",
+            "Patrician",
+            "Sacrifice",
+            "Villa"
+        ],
+        "events": [
+            "Wedding"
+        ],
+        "landmarks": [
+            "Tower"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Advanced Intro",
+        "cards": [
+            "Archive",
+            "Capital",
+            "Catapult",
+            "Crown",
+            "Enchantress",
+            "Gladiator",
+            "Groundskeeper",
+            "Royal Blacksmith",
+            "Settlers",
+            "Temple"
+        ],
+        "events": [],
+        "landmarks": [
+            "Arena",
+            "Triumphal Arch"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Luftschloss",
+        "cards": [
+            "Cemetery",
+            "Changeling",
+            "Exorcist",
+            "Fool",
+            "Shepherd",
+            "Archive",
+            "Castles",
+            "Catapult",
+            "Engineer",
+            "Temple"
+        ],
+        "events": [],
+        "landmarks": [
+            "Tomb"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Pooka Pranks",
+        "cards": [
+            "Faithful Hound",
+            "Ghost Town",
+            "Pixie",
+            "Pooka",
+            "Skulk",
+            "Chariot Race",
+            "Forum",
+            "Groundskeeper",
+            "Sacrifice",
+            "Settlers"
+        ],
+        "events": [
+            "Banquet"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Exploring the City",
+        "cards": [
+            "Cargo Ship",
+            "Experiment",
+            "Mountain Village",
+            "Priest",
+            "Sculptor",
+            "City Quarter",
+            "Farmers' Market",
+            "Groundskeeper",
+            "Sacrifice",
+            "Wild Hunt"
+        ],
+        "events": [],
+        "landmarks": [
+            "Battlefield"
+        ],
+        "projects": [
+            "Exploration"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Navigating the Sewers",
+        "cards": [
+            "Acting Troupe",
+            "Flag Bearer",
+            "Improve",
+            "Old Witch",
+            "Scepter",
+            "Chariot Race",
+            "Enchantress",
+            "Gladiator",
+            "Patrician",
+            "Villa"
+        ],
+        "events": [
+            "Ritual"
+        ],
+        "landmarks": [],
+        "projects": [
+            "Sewers"
+        ],
+        "ways": []
+    },
+    {
+        "name": "No Money Down",
+        "cards": [
+            "Animal Fair",
+            "Cavalry",
+            "Sleigh",
+            "Stockpile",
+            "Wayfarer",
+            "Catapult",
+            "City Quarter",
+            "Crown",
+            "Engineer",
+            "Villa"
+        ],
+        "events": [
+            "Advance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Pig"
+        ]
+    },
+    {
+        "name": "Detours and Shortcuts",
+        "cards": [
+            "Camel Train",
+            "Fisherman",
+            "Gatekeeper",
+            "Sanctuary",
+            "Snowy Village",
+            "Enchantress",
+            "Overlord",
+            "Sacrifice",
+            "Settlers",
+            "Wild Hunt"
+        ],
+        "events": [
+            "Transport"
+        ],
+        "landmarks": [
+            "Triumphal Arch"
+        ],
+        "projects": [],
+        "ways": []
     }
 ]
