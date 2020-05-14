@@ -1876,5 +1876,323 @@
         "ways": [
             "Way of the Monkey"
         ]
+    },
+    {
+        "name": "Counting Contest",
+        "cards": [
+            "Apothecary",
+            "Golem",
+            "Herbalist",
+            "Philosopher's Stone",
+            "Bank",
+            "Counting House",
+            "Goons",
+            "Hoard",
+            "Rabble",
+            "Quarry"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Lower Learning",
+        "cards": [
+            "Apprentice",
+            "Familiar",
+            "University",
+            "Vineyard",
+            "Bishop",
+            "Mint",
+            "Peddler",
+            "Talisman",
+            "Worker's Village",
+            "Vault"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Clown College",
+        "cards": [
+            "Alchemist",
+            "Familiar",
+            "Golem",
+            "Philosopher's Stone",
+            "University",
+            "Harvest",
+            "Horse Traders",
+            "Jester",
+            "Menagerie",
+            "Remake"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Wine and Dine",
+        "cards": [
+            "Apothecary",
+            "Apprentice",
+            "Scrying Pool",
+            "Transmute",
+            "Vineyard",
+            "Fairgrounds",
+            "Hamlet",
+            "Horn of Plenty",
+            "Hunting Party",
+            "Young Witch"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Schemes and Dreams",
+        "cards": [
+            "Apothecary",
+            "Apprentice",
+            "Herbalist",
+            "Philosopher's Stone",
+            "Transmute",
+            "Duchess",
+            "Fool's Gold",
+            "Ill-Gotten Gains",
+            "Jack of all Trades",
+            "Scheme"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Wine Country",
+        "cards": [
+            "Apprentice",
+            "Familiar",
+            "Golem",
+            "University",
+            "Vineyard",
+            "Crossroads",
+            "Farmland",
+            "Haggler",
+            "Highway",
+            "Nomad Camp"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Infestations",
+        "cards": [
+            "Apprentice",
+            "Scrying Pool",
+            "Transmute",
+            "Vineyard",
+            "Armory",
+            "Cultist",
+            "Feodum",
+            "Market Square",
+            "Rats",
+            "Wandering Minstrel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Lamentations",
+        "cards": [
+            "Apothecary",
+            "Golem",
+            "Herbalist",
+            "University",
+            "Beggar",
+            "Catacombs",
+            "Counterfeit",
+            "Forager",
+            "Ironmonger",
+            "Pillage"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Illuminati",
+        "cards": [
+            "Apprentice",
+            "Golem",
+            "Philosopher's Stone",
+            "Scrying Pool",
+            "University",
+            "Butcher",
+            "Herald",
+            "Masterpiece",
+            "Merchant Guild",
+            "Stonemason"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Tonics and Toxins",
+        "cards": [
+            "Alchemist",
+            "Familiar",
+            "Herbalist",
+            "Transmute",
+            "Vineyard",
+            "Baker",
+            "Candlestick Maker",
+            "Doctor",
+            "Plaza",
+            "Soothsayer"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Haste Potion",
+        "cards": [
+            "Apprentice",
+            "Scrying Pool",
+            "Transmute",
+            "University",
+            "Vineyard",
+            "Magpie",
+            "Messenger",
+            "Port",
+            "Royal Carriage",
+            "Treasure Trove"
+        ],
+        "events": [
+            "Plan"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Cursecatchers",
+        "cards": [
+            "Apothecary",
+            "Familiar",
+            "Golem",
+            "Herbalist",
+            "Philosopher's Stone",
+            "Amulet",
+            "Bridge Troll",
+            "Caravan Guard",
+            "Peasant",
+            "Ratcatcher"
+        ],
+        "events": [
+            "Save",
+            "Trade"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Collectors",
+        "cards": [
+            "Apothecary",
+            "Apprentice",
+            "Herbalist",
+            "Transmute",
+            "University",
+            "City Quarter",
+            "Crown",
+            "Encampment",
+            "Enchantress",
+            "Farmers' Market"
+        ],
+        "events": [],
+        "landmarks": [
+            "Collonade",
+            "Museum"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Nightmare Fuel",
+        "cards": [
+            "Alchemist",
+            "Apprentice",
+            "Transmute",
+            "Vineyard",
+            "Bard",
+            "Blessed Village",
+            "Cemetery",
+            "Sacred Grove",
+            "Skulk",
+            "Tracker"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Peek-A-Boo",
+        "cards": [
+            "Cargo Ship",
+            "Improve",
+            "Lackeys",
+            "Patron",
+            "Sculptor",
+            "Silk Merchant",
+            "Alchemist",
+            "Apothecary",
+            "Golem",
+            "Scrying Pool"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Cathedral"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Class of 20",
+        "cards": [
+            "Cavalry",
+            "Coven",
+            "Hunting Lodge",
+            "Kiln",
+            "Livery",
+            "Snowy Village",
+            "Wayfarer",
+            "Transmute",
+            "Vineyard",
+            "University"
+        ],
+        "events": [
+            "Delay"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Owl"
+        ]
     }
 ]
