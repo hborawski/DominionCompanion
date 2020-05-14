@@ -39,13 +39,14 @@ class CardsViewController: UITableViewController {
     }
     
     func filterCards(_ searchText: String) {
-        self.cardData = self.rawCardData
-            .filter { card -> Bool in
-                guard searchText != "" else { return true }
-                return card.name.lowercased().contains(searchText.lowercased())
-            }
+        DispatchQueue.global().async {
+            self.cardData = self.rawCardData
+            .filter { searchText == "" ? true : $0.name.lowercased().contains(searchText.lowercased()) }
             .sorted(by: Utilities.alphabeticSort(card1:card2:))
-        self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
