@@ -4196,4 +4196,93 @@
             "Way of the Chameleon"
         ]
     },
+    {
+        "name": "Overture",
+        "cards": [
+            "Acting Troupe",
+            "Experiment",
+            "Flag Bearer",
+            "Hideout",
+            "Improve",
+            "Inventor",
+            "Lackeys",
+            "Old Witch",
+            "Seer",
+            "Treasurer"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Fair"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Prelude",
+        "cards": [
+            "Border Guard",
+            "Cargo Ship",
+            "Ducat",
+            "Mountain Village",
+            "Priest",
+            "Recruiter",
+            "Sculptor",
+            "Silk Merchant",
+            "Swashbuckler",
+            "Villain"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Citadel",
+            "Star Chart"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Biding Time",
+        "cards": [
+            "Cavalry",
+            "Coven",
+            "Displace",
+            "Fisherman",
+            "Goatherd",
+            "Ducat",
+            "Priest",
+            "Recruiter",
+            "Scepter",
+            "Swashbuckler"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Sinister Plot"
+        ],
+        "ways": [
+            "Way of the Turtle"
+        ]
+    },
+    {
+        "name": "Villager Madness",
+        "cards": [
+            "Cardinal",
+            "Groom",
+            "Kiln",
+            "Livery",
+            "Wayfarer",
+            "Border Guard",
+            "Flag Bearer",
+            "Patron",
+            "Silk Merchant",
+            "Spices"
+        ],
+        "events": [
+            "Demand"
+        ],
+        "landmarks": [],
+        "projects": [
+            "Academy"
+        ],
+        "ways": []
+    }
 ]
