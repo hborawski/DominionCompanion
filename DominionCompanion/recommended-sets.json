@@ -1,0 +1,749 @@
+[
+    {
+        "name": "First Game",
+        "cards": [
+            "Cellar",
+            "Market",
+            "Merchant",
+            "Militia",
+            "Mine",
+            "Moat",
+            "Remodel",
+            "Smithy",
+            "Village",
+            "Workshop"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Size Distortion",
+        "cards": [
+            "Artisan",
+            "Bandit",
+            "Bureaucrat",
+            "Chapel",
+            "Festival",
+            "Gardens",
+            "Sentry",
+            "Throne Room",
+            "Witch",
+            "Workshop"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Deck Top",
+        "cards": [
+            "Artisan",
+            "Bureaucrat",
+            "Council Room",
+            "Festival",
+            "Harbinger",
+            "Laboratory",
+            "Moneylender",
+            "Sentry",
+            "Vassal",
+            "Village"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Sleight of Hand",
+        "cards": [
+            "Cellar",
+            "Council Room",
+            "Festival",
+            "Gardens",
+            "Library",
+            "Harbinger",
+            "Militia",
+            "Poacher",
+            "Smithy",
+            "Throne Room"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Improvements",
+        "cards": [
+            "Artisan",
+            "Cellar",
+            "Market",
+            "Merchant",
+            "Mine",
+            "Moat",
+            "Moneylender",
+            "Poacher",
+            "Remodel",
+            "Workshop"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Silver and Gold",
+        "cards": [
+            "Bandit",
+            "Bureaucrat",
+            "Chapel",
+            "Harbinger",
+            "Laboratory",
+            "Merchant",
+            "Mine",
+            "Moneylender",
+            "Throne Room",
+            "Vassal"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Underlings",
+        "cards": [
+            "Cellar",
+            "Festival",
+            "Library",
+            "Sentry",
+            "Vassal",
+            "Courtier",
+            "Diplomat",
+            "Minion",
+            "Nobles",
+            "Pawn"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Grand Scheme",
+        "cards": [
+            "Artisan",
+            "Council Room",
+            "Market",
+            "Militia",
+            "Workshop",
+            "Bridge",
+            "Mill",
+            "Mining Village",
+            "Patrol",
+            "Shanty Town"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Deconstruction",
+        "cards": [
+            "Bandit",
+            "Mine",
+            "Remodel",
+            "Throne Room",
+            "Village",
+            "Diplomat",
+            "Harem",
+            "Lurker",
+            "Replace",
+            "Swindler"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Reach for Tomorrow",
+        "cards": [
+            "Artisan",
+            "Cellar",
+            "Council Room",
+            "Vassal",
+            "Village",
+            "Cutpurse",
+            "Ghost Ship",
+            "Lookout",
+            "Sea Hag",
+            "Treasure Map"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Repetition",
+        "cards": [
+            "Festival",
+            "Harbinger",
+            "Militia",
+            "Workshop",
+            "Caravan",
+            "Explorer",
+            "Outpost",
+            "Pearl Diver",
+            "Pirate Ship",
+            "Treasury"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Give and Take",
+        "cards": [
+            "Library",
+            "Market",
+            "Moneylender",
+            "Witch",
+            "Ambassador",
+            "Fishing Village",
+            "Haven",
+            "Island",
+            "Salvager",
+            "Smugglers"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Forbidden Arts",
+        "cards": [
+            "Bandit",
+            "Cellar",
+            "Council Room",
+            "Gardens",
+            "Laboratory",
+            "Throne Room",
+            "Apprentice",
+            "Familiar",
+            "Possession",
+            "University"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Potion Mixers",
+        "cards": [
+            "Cellar",
+            "Festival",
+            "Militia",
+            "Poacher",
+            "Smithy",
+            "Alchemist",
+            "Apothecary",
+            "Golem",
+            "Herbalist",
+            "Transmute"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Chemistry Lesson",
+        "cards": [
+            "Bureaucrat",
+            "Market",
+            "Moat",
+            "Remodel",
+            "Vassal",
+            "Witch",
+            "Alchemist",
+            "Golem",
+            "Philosopher's Stone",
+            "University"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Biggest Money",
+        "cards": [
+            "Artisan",
+            "Harbinger",
+            "Laboratory",
+            "Mine",
+            "Moneylender",
+            "Bank",
+            "Grand Market",
+            "Mint",
+            "Royal Seal",
+            "Venture"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The King's Army",
+        "cards": [
+            "Bureaucrat",
+            "Council Room",
+            "Merchant",
+            "Moat",
+            "Village",
+            "Expand",
+            "Goons",
+            "King's Court",
+            "Rabble",
+            "Vault"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Good Life",
+        "cards": [
+            "Artisan",
+            "Bureaucrat",
+            "Cellar",
+            "Gardens",
+            "Village",
+            "Contraband",
+            "Counting House",
+            "Hoard",
+            "Monument",
+            "Mountebank"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Bounty of the Hunt",
+        "cards": [
+            "Cellar",
+            "Festival",
+            "Militia",
+            "Moneylender",
+            "Smithy",
+            "Harvest",
+            "Horn of Plenty",
+            "Menagerie",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Bad Omens",
+        "cards": [
+            "Bureaucrat",
+            "Laboratory",
+            "Merchant",
+            "Poacher",
+            "Throne Room",
+            "Fortune Teller",
+            "Hamlet",
+            "Horn of Plenty",
+            "Jester",
+            "Remake"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Jester's Workshop",
+        "cards": [
+            "Artisan",
+            "Laboratory",
+            "Market",
+            "Remodel",
+            "Workshop",
+            "Fairgrounds",
+            "Farming Village",
+            "Horse Traders",
+            "Jester",
+            "Young Witch"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Highway Robbery",
+        "cards": [
+            "Cellar",
+            "Library",
+            "Moneylender",
+            "Throne Room",
+            "Workshop",
+            "Highway",
+            "Inn",
+            "Margrave",
+            "Noble Brigand",
+            "Oasis"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Adventures Abroad",
+        "cards": [
+            "Festival",
+            "Laboratory",
+            "Remodel",
+            "Sentry",
+            "Vassal",
+            "Crossroads",
+            "Farmland",
+            "Fool's Gold",
+            "Oracle",
+            "Spice Merchant"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "High and Low",
+        "cards": [
+            "Cellar",
+            "Moneylender",
+            "Throne Room",
+            "Witch",
+            "Workshop",
+            "Hermit",
+            "Hunting Grounds",
+            "Mystic",
+            "Poor House",
+            "Wandering Minstrel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Chivalry and Revelry",
+        "cards": [
+            "Festival",
+            "Gardens",
+            "Laboratory",
+            "Library",
+            "Remodel",
+            "Altar",
+            "Knights",
+            "Rats",
+            "Scavenger",
+            "Squire"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Arts and Crafts",
+        "cards": [
+            "Laboratory",
+            "Cellar",
+            "Workshop",
+            "Festival",
+            "Moneylender",
+            "Stonemason",
+            "Advisor",
+            "Baker",
+            "Journeyman",
+            "Merchant Guild"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Clean Living",
+        "cards": [
+            "Bandit",
+            "Militia",
+            "Moneylender",
+            "Gardens",
+            "Village",
+            "Butcher",
+            "Baker",
+            "Candlestick Maker",
+            "Doctor",
+            "Soothsayer"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Gilding the Lily",
+        "cards": [
+            "Library",
+            "Merchant",
+            "Remodel",
+            "Market",
+            "Sentry",
+            "Plaza",
+            "Masterpiece",
+            "Candlestick Maker",
+            "Taxman",
+            "Herald"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Level Up",
+        "cards": [
+            "Market",
+            "Merchant",
+            "Militia",
+            "Throne Room",
+            "Workshop",
+            "Dungeon",
+            "Gear",
+            "Guide",
+            "Lost City",
+            "Miser"
+        ],
+        "events": [
+            "Training"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Son of Size Distortion",
+        "cards": [
+            "Bandit",
+            "Bureaucrat",
+            "Gardens",
+            "Moneylender",
+            "Witch",
+            "Amulet",
+            "Duplicate",
+            "Giant",
+            "Messenger",
+            "Treasure Trove"
+        ],
+        "events": [
+            "Bonfire",
+            "Raid"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Everything in Moderation",
+        "cards": [
+            "Cellar",
+            "Library",
+            "Remodel",
+            "Village",
+            "Workshop",
+            "Enchantress",
+            "Forum",
+            "Legionary",
+            "Overlord",
+            "Temple"
+        ],
+        "events": [
+            "Windfall"
+        ],
+        "landmarks": [
+            "Orchard"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Silver Bullets",
+        "cards": [
+            "Bureaucrat",
+            "Gardens",
+            "Laboratory",
+            "Market",
+            "Moneylender",
+            "Catapult",
+            "Charm",
+            "Farmers' Market",
+            "Groundskeeper",
+            "Patrician"
+        ],
+        "events": [
+            "Conquest"
+        ],
+        "landmarks": [
+            "Aqueduct"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Night Shift",
+        "cards": [
+            "Bandit",
+            "Gardens",
+            "Mine",
+            "Poacher",
+            "Smithy",
+            "Druid",
+            "Exorcist",
+            "Ghost Town",
+            "Idol",
+            "Night Watchman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Idle Hands",
+        "cards": [
+            "Cellar",
+            "Harbinger",
+            "Market",
+            "Merchant",
+            "Moneylender",
+            "Bard",
+            "Conclave",
+            "Cursed Village",
+            "Devil's Workshop",
+            "Tragic Hero"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "It Takes a Villager",
+        "cards": [
+            "Market",
+            "Merchant",
+            "Mine",
+            "Smithy",
+            "Vassal",
+            "Acting Troupe",
+            "Cargo Ship",
+            "Recruiter",
+            "Seer",
+            "Treasurer"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Road Network"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Capture the Flag",
+        "cards": [
+            "Cellar",
+            "Festival",
+            "Harbinger",
+            "Remodel",
+            "Workshop",
+            "Flag Bearer",
+            "Lackeys",
+            "Scholar",
+            "Swashbuckler",
+            "Villain"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Barracks",
+            "Pageant"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Pony Express",
+        "cards": [
+            "Artisan",
+            "Cellar",
+            "Market",
+            "Mine",
+            "Village",
+            "Barge",
+            "Destrier",
+            "Paddock",
+            "Stockpile",
+            "Supplies"
+        ],
+        "events": [
+            "Stampede"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Seal"
+        ]
+    },
+    {
+        "name": "Garden of Cats",
+        "cards": [
+            "Bandit",
+            "Gardens",
+            "Harbinger",
+            "Merchant",
+            "Moat",
+            "Black Cat",
+            "Displace",
+            "Sanctuary",
+            "Scrap",
+            "Snowy Village"
+        ],
+        "events": [
+            "Toil"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Mole"
+        ]
+    }
+]

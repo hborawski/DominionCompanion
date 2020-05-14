@@ -110,9 +110,12 @@ struct SetModel {
             sections.append(GameplaySection(title: "Tokens", rows: tokens.map(getBasicCell)))
         }
         
-        let additionalMechanics = getAdditionalMechanics()
+        var additionalMechanics = getAdditionalMechanics().map(getBasicCell)
+        if potions, let potion = CardData.shared.allCards.first(where: { $0.name == "Potion" }) {
+            additionalMechanics.append(getAttributedCardCell(potion))
+        }
         if additionalMechanics.count > 0 {
-            sections.append(GameplaySection(title: "Additional Mechanics", rows: additionalMechanics.map(getBasicCell)))
+            sections.append(GameplaySection(title: "Additional Mechanics", rows: additionalMechanics))
         }
         
         var victories: [UITableViewCell] = []
@@ -167,11 +170,7 @@ struct SetModel {
         if ruins {
             mechanics.append("Ruins")
         }
-        
-        if potions {
-            mechanics.append("Potion")
-        }
-        
+
         return mechanics
     }
     
@@ -193,6 +192,8 @@ struct ShareableSet: Codable {
     let landmarks: [String]
     let projects: [String]
     let ways: [String]
+    
+    var name: String?
 }
 
 extension ShareableSet {

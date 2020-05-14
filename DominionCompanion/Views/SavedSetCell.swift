@@ -25,4 +25,12 @@ class SavedSetCell: UITableViewCell {
         self.expansionLabel.text = model.expansions.joined(separator: ", ")
         self.expansionLabel.alpha = 0.7
     }
+    
+    func configure(_ sharedSet: ShareableSet) {
+        let model = sharedSet.getSetModel()
+        self.nameLabel.text = sharedSet.name
+        self.dateLabel.text = ""
+        self.expansionLabel.text = model.expansions.joined(separator: ", ")
+        self.expansionLabel.alpha = 0.7
+    }
 }

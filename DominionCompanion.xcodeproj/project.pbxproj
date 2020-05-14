@@ -60,6 +60,8 @@
 		AFD02B91246A65E200D14D61 /* SavedSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B90246A65E200D14D61 /* SavedSetCell.swift */; };
 		AFD02B93246B75C400D14D61 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B92246B75C400D14D61 /* AlertBuilder.swift */; };
 		AFD02B95246C727A00D14D61 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B94246C727A00D14D61 /* Logger.swift */; };
+		AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B96246CB87900D14D61 /* RecommendedSets.swift */; };
+		AFD02B99246CB9CB00D14D61 /* recommended-sets.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD02B98246CB9CB00D14D61 /* recommended-sets.json */; };
 		AFD4615E241C9426007720EA /* QRCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4615D241C9426007720EA /* QRCodes.storyboard */; };
 		AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46160241C945E007720EA /* ShareSetViewController.swift */; };
 		AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46162241D5D22007720EA /* ScanSetViewController.swift */; };
@@ -140,6 +142,8 @@
 		AFD02B90246A65E200D14D61 /* SavedSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSetCell.swift; sourceTree = "<group>"; };
 		AFD02B92246B75C400D14D61 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		AFD02B94246C727A00D14D61 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		AFD02B96246CB87900D14D61 /* RecommendedSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSets.swift; sourceTree = "<group>"; };
+		AFD02B98246CB9CB00D14D61 /* recommended-sets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "recommended-sets.json"; sourceTree = "<group>"; };
 		AFD4615D241C9426007720EA /* QRCodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodes.storyboard; sourceTree = "<group>"; };
 		AFD46160241C945E007720EA /* ShareSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSetViewController.swift; sourceTree = "<group>"; };
 		AFD46162241D5D22007720EA /* ScanSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSetViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 			children = (
 				AFE8EE7422A4B830008E09B2 /* Card.swift */,
 				AF1B6EAB2324226800ADA74D /* CardData.swift */,
+				AFD02B96246CB87900D14D61 /* RecommendedSets.swift */,
 			);
 			path = CardData;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				AF1B6EAD232428DE00ADA74D /* Utilities */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
 				AFE8EE6B22A49517008E09B2 /* cards.json */,
+				AFD02B98246CB9CB00D14D61 /* recommended-sets.json */,
 			);
 			path = DominionCompanion;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				AF80D704235C05E300FDC4D6 /* Cards.storyboard in Resources */,
 				AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */,
 				AF80D706235C144800FDC4D6 /* Rules.storyboard in Resources */,
+				AFD02B99246CB9CB00D14D61 /* recommended-sets.json in Resources */,
 				AFE8EE6C22A49517008E09B2 /* cards.json in Resources */,
 				AF80D6FD235BCDE200FDC4D6 /* Settings.storyboard in Resources */,
 			);
@@ -564,6 +571,7 @@
 				AFAB6EB62457B64900F09799 /* DisclosuresViewController.swift in Sources */,
 				AFD02B8C246A331A00D14D61 /* SavedSet+CoreDataClass.swift in Sources */,
 				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
+				AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AFD02B95246C727A00D14D61 /* Logger.swift in Sources */,

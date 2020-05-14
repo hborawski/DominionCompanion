@@ -19149,7 +19149,9 @@
     "junk": false,
     "gain": 0,
     "supply": true,
-    "related": [],
+    "related": [
+      "Flag"
+    ],
     "tokens": {
       "victory": 0,
       "coin": 0,
