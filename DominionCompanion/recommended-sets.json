@@ -2126,7 +2126,7 @@
         ],
         "events": [],
         "landmarks": [
-            "Collonade",
+            "Colonnade",
             "Museum"
         ],
         "projects": [],
@@ -2617,6 +2617,309 @@
         "projects": [],
         "ways": [
             "Way of the Otter"
+        ]
+    },
+    {
+        "name": "Blue Harvest",
+        "cards": [
+            "Hamlet",
+            "Horn of Plenty",
+            "Horse Traders",
+            "Jester",
+            "Tournament",
+            "Fool's Gold",
+            "Mandarin",
+            "Noble Brigand",
+            "Trader",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Traveling Circus",
+        "cards": [
+            "Fairgrounds",
+            "Farming Village",
+            "Hunting Party",
+            "Jester",
+            "Menagerie",
+            "Border Village",
+            "Embassy",
+            "Fool's Gold",
+            "Nomad Camp",
+            "Oasis"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Dark Carnival",
+        "cards": [
+            "Band of Mistfits",
+            "Cultist",
+            "Fortress",
+            "Hermit",
+            "Junk Dealer",
+            "Knights",
+            "Fairgrounds",
+            "Hamlet",
+            "Horn of Plenty",
+            "Menagerie"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "To the Victor",
+        "cards": [
+            "Bandit Camp",
+            "Counterfeit",
+            "Death Cart",
+            "Marauder",
+            "Pillage",
+            "Sage",
+            "Harvest",
+            "Hunting Party",
+            "Remake",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Misfortune",
+        "cards": [
+            "Advisor",
+            "Candlestick Maker",
+            "Doctor",
+            "Fairgrounds",
+            "Farming Village",
+            "Fortune Teller",
+            "Horse Traders",
+            "Jester",
+            "Soothsayer",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Baking Contest",
+        "cards": [
+            "Baker",
+            "Farming Village",
+            "Harvest",
+            "Herald",
+            "Journeyman",
+            "Masterpiece",
+            "Menagerie",
+            "Remake",
+            "Stonemason",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Hero's Return",
+        "cards": [
+            "Artificer",
+            "Miser",
+            "Page",
+            "Ranger",
+            "Relic",
+            "Fairgrounds",
+            "Farming Village",
+            "Horse Traders",
+            "Jester",
+            "Menagerie"
+        ],
+        "events": [
+            "Travelling Fair"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Seacraft and Witchcraft",
+        "cards": [
+            "Peasant",
+            "Storyteller",
+            "Swamp Hag",
+            "Transmogrify",
+            "Wine Merchant",
+            "Fortune Teller",
+            "Hamlet",
+            "Horn of Plenty",
+            "Tournament",
+            "Young Witch"
+        ],
+        "events": [
+            "Ferry",
+            "Seaway"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Zookeepers",
+        "cards": [
+            "Overlord",
+            "Sacrifice",
+            "Settlers",
+            "Villa",
+            "Wild Hunt",
+            "Fairgrounds",
+            "Horse Traders",
+            "Menagerie",
+            "Jester",
+            "Tournament"
+        ],
+        "events": [
+            "Annex"
+        ],
+        "landmarks": [
+            "Colonnade"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Endless Fair",
+        "cards": [
+            "Devil's Workshop",
+            "Exorcist",
+            "Monastery",
+            "Pixie",
+            "Shepherd",
+            "Baker",
+            "Fairgrounds",
+            "Farming Village",
+            "Fortune Teller",
+            "Merchant Guild"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Happy Chaos",
+        "cards": [
+            "Blessed Village",
+            "Changeling",
+            "Fool",
+            "Faithful Hound",
+            "Sacred Grove",
+            "Doctor",
+            "Harvest",
+            "Herald",
+            "Jester",
+            "Masterpiece"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Combo Corner",
+        "cards": [
+            "Ducat",
+            "Experiment",
+            "Hideout",
+            "Sculptor",
+            "Seer",
+            "Herald",
+            "Horn of Plenty",
+            "Horse Traders",
+            "Jester",
+            "Stonemason"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Canal"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Filling the Coffers",
+        "cards": [
+            "Priest",
+            "Recruiter",
+            "Spices",
+            "Swashbuckler",
+            "Treasurer",
+            "Baker",
+            "Butcher",
+            "Menagerie",
+            "Merchant Guild",
+            "Plaza"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "City Gate",
+            "Star Chart"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Living in Exile",
+        "cards": [
+            "Gatekeeper",
+            "Hostelry",
+            "Livery",
+            "Scrap",
+            "Stockpile",
+            "Fairgrounds",
+            "Hamlet",
+            "Jester",
+            "Journeyman",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Mule"
+        ]
+    },
+    {
+        "name": "Thrill of the Hunt",
+        "cards": [
+            "Black Cat",
+            "Bounty Hunter",
+            "Camel Train",
+            "Mastermind",
+            "Village Green",
+            "Butcher",
+            "Horse Traders",
+            "Hunting Party",
+            "Menagerie",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Rat"
         ]
     }
 ]
