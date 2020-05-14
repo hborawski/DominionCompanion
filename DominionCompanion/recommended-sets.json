@@ -3288,5 +3288,385 @@
         "ways": [
             "Way of the Mouse"
         ]
+    },
+    {
+        "name": "Grim Parade",
+        "cards": [
+            "Armory",
+            "Band of Mistfits",
+            "Catacombs",
+            "Cultist",
+            "Forager",
+            "Fortress",
+            "Hunting Grounds",
+            "Knights",
+            "Market Square",
+            "Procession"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Chess With Death",
+        "cards": [
+            "Bandit Camp",
+            "Graverobber",
+            "Junk Dealer",
+            "Mystic",
+            "Pillage",
+            "Rats",
+            "Sage",
+            "Scavenger",
+            "Storeroom",
+            "Vagrant"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Stoneground",
+        "cards": [
+            "Hunting Grounds",
+            "Ironmonger",
+            "Procession",
+            "Marauder",
+            "Rogue",
+            "Advisor",
+            "Baker",
+            "Candlestick Maker",
+            "Plaza",
+            "Stonemason"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Class Struggle",
+        "cards": [
+            "Feodum",
+            "Fortress",
+            "Knights",
+            "Market Square",
+            "Poor House",
+            "Butcher",
+            "Doctor",
+            "Journeyman",
+            "Merchant Guild",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Cemetery Plaza",
+        "cards": [
+            "Amulet",
+            "Caravan Guard",
+            "Hireling",
+            "Peasant",
+            "Relic",
+            "Graverobber",
+            "Marauder",
+            "Procession",
+            "Rogue",
+            "Wandering Minstrel"
+        ],
+        "events": [
+            "Alms"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Groovy Decay",
+        "cards": [
+            "Dungeon",
+            "Haunted Woods",
+            "Ratcatcher",
+            "Raze",
+            "Transmogrify",
+            "Cultist",
+            "Death Cart",
+            "Fortress",
+            "Knights",
+            "Rats"
+        ],
+        "events": [
+            "Lost Arts",
+            "Pathfinding"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Tomb of the Rat King",
+        "cards": [
+            "Castles",
+            "Chariot Race",
+            "City Quarter",
+            "Legionary",
+            "Sacrifice",
+            "Death Cart",
+            "Fortress",
+            "Pillage",
+            "Rats",
+            "Storeroom"
+        ],
+        "events": [
+            "Advance"
+        ],
+        "landmarks": [
+            "Tomb"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Triumph of the Bandit King",
+        "cards": [
+            "Capital",
+            "Charm",
+            "Engineer",
+            "Groundskeeper",
+            "Legionary",
+            "Bandit Camp",
+            "Catacombs",
+            "Hunting Grounds",
+            "Market Square",
+            "Procession"
+        ],
+        "events": [
+            "Triumph"
+        ],
+        "landmarks": [
+            "Defiled Shrine"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Squire's Ritual",
+        "cards": [
+            "Archive",
+            "Catapult",
+            "Crown",
+            "Patrician",
+            "Settlers",
+            "Feodum",
+            "Hermit",
+            "Ironmonger",
+            "Rogue",
+            "Squire"
+        ],
+        "events": [
+            "Ritual"
+        ],
+        "landmarks": [
+            "Museum"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Grave Matters",
+        "cards": [
+            "Cemetery",
+            "Cursed Village",
+            "Necromancer",
+            "Skulk",
+            "Tormenter",
+            "Armory",
+            "Forager",
+            "Graverobber",
+            "Market Square",
+            "Squire"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Rats and Bats",
+        "cards": [
+            "Changeling",
+            "Devil's Workshop",
+            "Sacred Grove",
+            "Tracker",
+            "Vampire",
+            "Catacombs",
+            "Count",
+            "Fortress",
+            "Hermit",
+            "Rats"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Stargazing",
+        "cards": [
+            "Border Guard",
+            "Patron",
+            "Seer",
+            "Silk Merchant",
+            "Swashbuckler",
+            "Hermit",
+            "Mystic",
+            "Procession",
+            "Sage",
+            "Wandering Minstrel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Star Chart"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Sewer Rats",
+        "cards": [
+            "Flag Bearer",
+            "Improve",
+            "Lackeys",
+            "Mountain Village",
+            "Research",
+            "Count",
+            "Counterfeit",
+            "Cultist",
+            "Graverobber",
+            "Rats"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Crop Rotation",
+            "Sewers"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Friendly Carnage",
+        "cards": [
+            "Animal Fair",
+            "Cardinal",
+            "Falconer",
+            "Goatherd",
+            "Hunting Lodge",
+            "Altar",
+            "Beggar",
+            "Catacombs",
+            "Fortress",
+            "Market Square"
+        ],
+        "events": [
+            "Ride"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Camel"
+        ]
+    },
+    {
+        "name": "Gift Horses",
+        "cards": [
+            "Camel Train",
+            "Destrier",
+            "Displace",
+            "Paddock",
+            "Scrap",
+            "Hunting Grounds",
+            "Pillage",
+            "Rats",
+            "Sage",
+            "Squire"
+        ],
+        "events": [
+            "Bargain"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Butterfly"
+        ]
+    },
+    {
+        "name": "Spendthrift",
+        "cards": [
+            "Artificer",
+            "Gear",
+            "Magpie",
+            "Miser",
+            "Storyteller",
+            "Doctor",
+            "Masterpiece",
+            "Merchant Guild",
+            "Soothsayer",
+            "Stonemason"
+        ],
+        "events": [
+            "Lost Arts"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Queen of Tan",
+        "cards": [
+            "Coin of the Realm",
+            "Duplicate",
+            "Guide",
+            "Ratcatcher",
+            "Royal Carriage",
+            "Advisor",
+            "Butcher",
+            "Candlestick Maker",
+            "Herald",
+            "Journeyman"
+        ],
+        "events": [
+            "Pathfinding",
+            "Save"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Cash Flow",
+        "cards": [
+            "Castles",
+            "City Quarter",
+            "Engineer",
+            "Gladiator",
+            "Royal Blacksmith",
+            "Baker",
+            "Butcher",
+            "Doctor",
+            "Herald",
+            "Soothsayer"
+        ],
+        "events": [],
+        "landmarks": [
+            "Baths",
+            "Mountain Pass"
+        ],
+        "projects": [],
+        "ways": []
     }
 ]
