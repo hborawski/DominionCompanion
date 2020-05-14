@@ -2921,5 +2921,372 @@
         "ways": [
             "Way of the Rat"
         ]
+    },
+    {
+        "name": "Introduction",
+        "cards": [
+            "Cache",
+            "Crossroads",
+            "Develop",
+            "Haggler",
+            "Jack of all Trades",
+            "Margrave",
+            "Nomad Camp",
+            "Oasis",
+            "Spice Merchant",
+            "Stables"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Fair Trades",
+        "cards": [
+            "Border Village",
+            "Cartographer",
+            "Develop",
+            "Duchess",
+            "Farmland",
+            "Ill-Gotten Gains",
+            "Noble Brigand",
+            "Silk Road",
+            "Stables",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Bargains",
+        "cards": [
+            "Border Village",
+            "Cache",
+            "Duchess",
+            "Fool's Gold",
+            "Haggler",
+            "Highway",
+            "Nomad Camp",
+            "Scheme",
+            "Spice Merchant",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Gambits",
+        "cards": [
+            "Cartographer",
+            "Crossroads",
+            "Embassy",
+            "Inn",
+            "Jack of all Trades",
+            "Mandarin",
+            "Nomad Camp",
+            "Oasis",
+            "Oracle",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Far From Home",
+        "cards": [
+            "Cartographer",
+            "Develop",
+            "Embassy",
+            "Fool's Gold",
+            "Haggler",
+            "Beggar",
+            "Count",
+            "Feodum",
+            "Marauder",
+            "Wandering Minstrel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Expeditions",
+        "cards": [
+            "Crossroads",
+            "Farmland",
+            "Highway",
+            "Spice Merchant",
+            "Tunnel",
+            "Altar",
+            "Catacombs",
+            "Ironmonger",
+            "Poor House",
+            "Storeroom"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Exchanges",
+        "cards": [
+            "Butcher",
+            "Herald",
+            "Masterpiece",
+            "Soothsayer",
+            "Stonemason",
+            "Border Village",
+            "Develop",
+            "Ill-Gotten Gains",
+            "Stables",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Road to Riches",
+        "cards": [
+            "Advisor",
+            "Baker",
+            "Candlestick Maker",
+            "Journeyman",
+            "Merchant Guild",
+            "Crossroads",
+            "Farmland",
+            "Highway",
+            "Spice Merchant",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Traders and Raiders",
+        "cards": [
+            "Haunted Woods",
+            "Lost City",
+            "Page",
+            "Port",
+            "Wine Merchant",
+            "Develop",
+            "Farmland",
+            "Haggler",
+            "Spice Merchant",
+            "Trader"
+        ],
+        "events": [
+            "Raid"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Journeys",
+        "cards": [
+            "Bridge Troll",
+            "Distant Lands",
+            "Giant",
+            "Guide",
+            "Ranger",
+            "Cartographer",
+            "Crossroads",
+            "Highway",
+            "Inn",
+            "Silk Road"
+        ],
+        "events": [
+            "Expedition",
+            "Inheritance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Simple Plans",
+        "cards": [
+            "Catapult",
+            "Forum",
+            "Patrician",
+            "Temple",
+            "Villa",
+            "Border Village",
+            "Develop",
+            "Haggler",
+            "Ill-Gotten Gains",
+            "Stables"
+        ],
+        "events": [
+            "Donate"
+        ],
+        "landmarks": [
+            "Labyrinth"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Expansion",
+        "cards": [
+            "Castles",
+            "Charm",
+            "Encampment",
+            "Engineer",
+            "Legionary",
+            "Cache",
+            "Farmland",
+            "Highway",
+            "Spice Merchant",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [
+            "Battlefield",
+            "Fountain"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Search Party",
+        "cards": [
+            "Cobbler",
+            "Conclave",
+            "Druid",
+            "Faithful Hound",
+            "Werewolf",
+            "Cartographer",
+            "Highway",
+            "Inn",
+            "Oasis",
+            "Scheme"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Counting Sheep",
+        "cards": [
+            "Bard",
+            "Crypt",
+            "Leprechaun",
+            "Pooka",
+            "Shepherd",
+            "Crossroads",
+            "Farmland",
+            "Haggler",
+            "Noble Brigand",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Sweetened Deals",
+        "cards": [
+            "Flag Bearer",
+            "Lackeys",
+            "Mountain Village",
+            "Silk Merchant",
+            "Spices",
+            "Cartographer",
+            "Develop",
+            "Farmland",
+            "Haggler",
+            "Spice Merchant"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Silos"
+        ],
+        "ways": []
+    },
+    {
+        "name": "A Penny Saved",
+        "cards": [
+            "Ducat",
+            "Patron",
+            "Scepter",
+            "Seer",
+            "Swashbuckler",
+            "Cache",
+            "Crossroads",
+            "Noble Brigand",
+            "Oasis",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Barracks",
+            "Guildhall"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Big Blue",
+        "cards": [
+            "Black Cat",
+            "Falconer",
+            "Sheepdog",
+            "Sleigh",
+            "Village Green",
+            "Cartographer",
+            "Fool's Gold",
+            "Margrave",
+            "Trader",
+            "Tunnel"
+        ],
+        "events": [
+            "Banish"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Turtle"
+        ]
+    },
+    {
+        "name": "Intersection",
+        "cards": [
+            "Cardinal",
+            "Hostelry",
+            "Livery",
+            "Mastermind",
+            "Supplies",
+            "Develop",
+            "Farmland",
+            "Haggler",
+            "Nomad Camp",
+            "Stables"
+        ],
+        "events": [
+            "Gamble"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Mouse"
+        ]
     }
 ]
