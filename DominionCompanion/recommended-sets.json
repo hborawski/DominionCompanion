@@ -3668,5 +3668,226 @@
         ],
         "projects": [],
         "ways": []
+    },
+    {
+        "name": "Gentle Intro",
+        "cards": [
+            "Amulet",
+            "Distant Lands",
+            "Dungeon",
+            "Duplicate",
+            "Giant",
+            "Hireling",
+            "Port",
+            "Ranger",
+            "Ratcatcher",
+            "Treasure Trove"
+        ],
+        "events": [
+            "Scouting Party"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Expert Intro",
+        "cards": [
+            "Caravan Guard",
+            "Coin of the Realm",
+            "Haunted Woods",
+            "Lost City",
+            "Magpie",
+            "Peasant",
+            "Raze",
+            "Swamp Hag",
+            "Transmogrify",
+            "Wine Merchant"
+        ],
+        "events": [
+            "Mission",
+            "Plan"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Area Control",
+        "cards": [
+            "Capital",
+            "Catapult",
+            "Charm",
+            "Crown",
+            "Farmers' Market",
+            "Coin of the Realm",
+            "Page",
+            "Relic",
+            "Treasure Trove",
+            "Wine Merchant"
+        ],
+        "events": [
+            "Banquet"
+        ],
+        "landmarks": [
+            "Keep"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "No Money No Problems",
+        "cards": [
+            "Archive",
+            "Encampment",
+            "Royal Blacksmith",
+            "Temple",
+            "Villa",
+            "Dungeon",
+            "Duplicate",
+            "Hireling",
+            "Peasant",
+            "Transmogrify"
+        ],
+        "events": [
+            "Mission"
+        ],
+        "landmarks": [
+            "Bandit Fort"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Monster Mash",
+        "cards": [
+            "Conclave",
+            "Guardian",
+            "Pixie",
+            "Vampire",
+            "Werewolf",
+            "Bridge Troll",
+            "Giant",
+            "Messenger",
+            "Ratcatcher",
+            "Storyteller"
+        ],
+        "events": [
+            "Quest"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Lost in the Woods",
+        "cards": [
+            "Blessed Village",
+            "Druid",
+            "Fool",
+            "Sacred Grove",
+            "Tracker",
+            "Caravan Guard",
+            "Guide",
+            "Haunted Woods",
+            "Hireling",
+            "Ranger"
+        ],
+        "events": [
+            "Pilgrimmage"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Progress",
+        "cards": [
+            "Experiment",
+            "Improve",
+            "Recruiter",
+            "Seer",
+            "Silk Merchant",
+            "Hireling",
+            "Ranger",
+            "Raze",
+            "Swamp Hag",
+            "Transmogrify"
+        ],
+        "events": [
+            "Training"
+        ],
+        "landmarks": [],
+        "projects": [
+            "Piazza"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Once Upon a Time",
+        "cards": [
+            "Acting Troupe",
+            "Lackeys",
+            "Priest",
+            "Sculptor",
+            "Spices",
+            "Distant Lands",
+            "Duplicate",
+            "Haunted Woods",
+            "Royal Carriage",
+            "Storyteller"
+        ],
+        "events": [
+            "Ferry"
+        ],
+        "landmarks": [],
+        "projects": [
+            "Innovation"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Horse Feathers",
+        "cards": [
+            "Destrier",
+            "Displace",
+            "Falconer",
+            "Sleigh",
+            "Stockpile",
+            "Magpie",
+            "Ranger",
+            "Ratcatcher",
+            "Relic",
+            "Royal Carriage"
+        ],
+        "events": [
+            "Pilgrimmage"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Ox"
+        ]
+    },
+    {
+        "name": "Sooner or Later",
+        "cards": [
+            "Barge",
+            "Gatekeeper",
+            "Groom",
+            "Mastermind",
+            "Village Green",
+            "Amulet",
+            "Caravan Guard",
+            "Dungeon",
+            "Giant",
+            "Raze"
+        ],
+        "events": [
+            "Mission"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
     }
 ]
