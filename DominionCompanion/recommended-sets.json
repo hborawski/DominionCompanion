@@ -745,5 +745,635 @@
         "ways": [
             "Way of the Mole"
         ]
+    },
+    {
+        "name": "Victory Dance",
+        "cards": [
+            "Baron",
+            "Courtier",
+            "Duke",
+            "Harem",
+            "Ironworks",
+            "Masquerade",
+            "Mill",
+            "Nobles",
+            "Patrol",
+            "Replace"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Plot Thickens",
+        "cards": [
+            "Conspirator",
+            "Ironworks",
+            "Lurker",
+            "Pawn",
+            "Mining Village",
+            "Secret Passage",
+            "Steward",
+            "Swindler",
+            "Torturer",
+            "Trading Post"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Best Wishes",
+        "cards": [
+            "Baron",
+            "Conspirator",
+            "Courtyard",
+            "Diplomat",
+            "Duke",
+            "Secret Passage",
+            "Shanty Town",
+            "Torturer",
+            "Upgrade",
+            "Wishing Well"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "A Star to Steer By",
+        "cards": [
+            "Secret Passage",
+            "Diplomat",
+            "Swindler",
+            "Wishing Well",
+            "Courtier",
+            "Lookout",
+            "Treasure Map",
+            "Ghost Ship",
+            "Haven",
+            "Outpost"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Shore Patrol",
+        "cards": [
+            "Patrol",
+            "Replace",
+            "Shanty Town",
+            "Trading Post",
+            "Pawn",
+            "Island",
+            "Wharf",
+            "Cutpurse",
+            "Lighthouse",
+            "Warehouse"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Bridge Crossing",
+        "cards": [
+            "Lurker",
+            "Nobles",
+            "Duke",
+            "Conspirator",
+            "Bridge",
+            "Salvager",
+            "Embargo",
+            "Smugglers",
+            "Native Village",
+            "Treasury"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Servants",
+        "cards": [
+            "Conspirator",
+            "Mill",
+            "Minion",
+            "Pawn",
+            "Steward",
+            "Golem",
+            "Possession",
+            "Scrying Pool",
+            "Transmute",
+            "Vineyard"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Secret Research",
+        "cards": [
+            "Bridge",
+            "Masquerade",
+            "Minion",
+            "Nobles",
+            "Shanty Town",
+            "Torturer",
+            "Familiar",
+            "Herbalist",
+            "Philosopher's Stone",
+            "University"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Pools, Tools, and Fools",
+        "cards": [
+            "Baron",
+            "Ironworks",
+            "Lurker",
+            "Nobles",
+            "Trading Post",
+            "Wishing Well",
+            "Apothecary",
+            "Apprentice",
+            "Golem",
+            "Scrying Pool"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Paths to Victory",
+        "cards": [
+            "Bishop",
+            "Counting House",
+            "Goons",
+            "Monument",
+            "Peddler",
+            "Baron",
+            "Harem",
+            "Pawn",
+            "Shanty Town",
+            "Upgrade"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "All Along the Watchtower",
+        "cards": [
+            "Hoard",
+            "Talisman",
+            "Trade Route",
+            "Vault",
+            "Watchtower",
+            "Bridge",
+            "Mill",
+            "Mining Village",
+            "Pawn",
+            "Torturer"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Lucky Seven",
+        "cards": [
+            "Bank",
+            "Expand",
+            "Forge",
+            "King's Court",
+            "Vault",
+            "Bridge",
+            "Lurker",
+            "Patrol",
+            "Swindler",
+            "Wishing Well"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Last Laughs",
+        "cards": [
+            "Farming Village",
+            "Harvest",
+            "Horse Traders",
+            "Hunting Grounds",
+            "Jester",
+            "Minion",
+            "Nobles",
+            "Pawn",
+            "Steward",
+            "Swindler"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Spice of Life",
+        "cards": [
+            "Fairgrounds",
+            "Horn of Plenty",
+            "Remake",
+            "Tournament",
+            "Young Witch",
+            "Courtier",
+            "Courtyard",
+            "Diplomat",
+            "Mining Village",
+            "Replace"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Small Victories",
+        "cards": [
+            "Fortune Teller",
+            "Hamlet",
+            "Hunting Party",
+            "Remake",
+            "Tournament",
+            "Conspirator",
+            "Duke",
+            "Harem",
+            "Pawn",
+            "Secret Passage"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Money for Nothing",
+        "cards": [
+            "Replace",
+            "Patrol",
+            "Pawn",
+            "Shanty Town",
+            "Torturer",
+            "Cache",
+            "Cartographer",
+            "Jack of all Trades",
+            "Silk Road",
+            "Tunnel"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The Duke's Ball",
+        "cards": [
+            "Conspirator",
+            "Duke",
+            "Harem",
+            "Masquerade",
+            "Upgrade",
+            "Duchess",
+            "Haggler",
+            "Inn",
+            "Noble Brigand",
+            "Scheme"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Prophecy",
+        "cards": [
+            "Armory",
+            "Ironmonger",
+            "Mystic",
+            "Rebuild",
+            "Vagrant",
+            "Baron",
+            "Conspirator",
+            "Nobles",
+            "Secret Passage",
+            "Wishing Well"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Invasion",
+        "cards": [
+            "Beggar",
+            "Marauder",
+            "Rogue",
+            "Squire",
+            "Urchin",
+            "Diplomat",
+            "Harem",
+            "Swindler",
+            "Torturer",
+            "Upgrade"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Name that Card",
+        "cards": [
+            "Baker",
+            "Doctor",
+            "Plaza",
+            "Advisor",
+            "Masterpiece",
+            "Courtyard",
+            "Harem",
+            "Nobles",
+            "Replace",
+            "Wishing Well"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Tricks of the Trade",
+        "cards": [
+            "Stonemason",
+            "Herald",
+            "Soothsayer",
+            "Journeyman",
+            "Butcher",
+            "Conspirator",
+            "Masquerade",
+            "Mill",
+            "Nobles",
+            "Secret Passage"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Decisions, Decisions",
+        "cards": [
+            "Merchant Guild",
+            "Candlestick Maker",
+            "Masterpiece",
+            "Taxman",
+            "Butcher",
+            "Bridge",
+            "Pawn",
+            "Mining Village",
+            "Upgrade",
+            "Duke"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Royalty Factory",
+        "cards": [
+            "Bridge Troll",
+            "Duplicate",
+            "Page",
+            "Raze",
+            "Royal Carriage",
+            "Conspirator",
+            "Courtier",
+            "Harem",
+            "Nobles",
+            "Swindler"
+        ],
+        "events": [
+            "Pilgrimmage"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Masters of Finance",
+        "cards": [
+            "Artificer",
+            "Distant Lands",
+            "Gear",
+            "Transmogrify",
+            "Wine Merchant",
+            "Bridge",
+            "Pawn",
+            "Shanty Town",
+            "Steward",
+            "Upgrade"
+        ],
+        "events": [
+            "Ball",
+            "Borrow"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Delicious Torture",
+        "cards": [
+            "Castles",
+            "Crown",
+            "Enchantress",
+            "Sacrifice",
+            "Settlers",
+            "Baron",
+            "Bridge",
+            "Harem",
+            "Ironworks",
+            "Torturer"
+        ],
+        "events": [
+            "Banquet"
+        ],
+        "landmarks": [
+            "Arena"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Buddy System",
+        "cards": [
+            "Archive",
+            "Capital",
+            "Catapult",
+            "Engineer",
+            "Forum",
+            "Masquerade",
+            "Mining Village",
+            "Nobles",
+            "Pawn",
+            "Trading Post"
+        ],
+        "events": [
+            "Salt the Earth"
+        ],
+        "landmarks": [
+            "Wolf Den"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Shadowy Figures",
+        "cards": [
+            "Cobbler",
+            "Conclave",
+            "Faithful Hound",
+            "Shepherd",
+            "Tragic Hero",
+            "Bridge",
+            "Conspirator",
+            "Mill",
+            "Nobles",
+            "Secret Passage"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Impending Doom",
+        "cards": [
+            "Leprechaun",
+            "Monastery",
+            "Necromancer",
+            "Tormenter",
+            "Werewolf",
+            "Courtier",
+            "Lurker",
+            "Mining Village",
+            "Swindler",
+            "Upgrade"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Memento Mori",
+        "cards": [
+            "Experiment",
+            "Flag Bearer",
+            "Patron",
+            "Recruiter",
+            "Silk Merchant",
+            "Ironworks",
+            "Lurker",
+            "Patrol",
+            "Swindler",
+            "Upgrade"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Citadel"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Clockwork Court",
+        "cards": [
+            "Acting Troupe",
+            "Inventor",
+            "Research",
+            "Scepter",
+            "Scholar",
+            "Courtier",
+            "Mining Village",
+            "Nobles",
+            "Replace",
+            "Steward"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Fleet",
+            "Sinister Plot"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Dog and Pony Show",
+        "cards": [
+            "Camel Train",
+            "Cavalry",
+            "Goatherd",
+            "Paddock",
+            "Sheepdog",
+            "Mill",
+            "Nobles",
+            "Pawn",
+            "Torturer",
+            "Upgrade"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Horse"
+        ]
+    },
+    {
+        "name": "Explosions",
+        "cards": [
+            "Animal Fair",
+            "Bounty Hunter",
+            "Coven",
+            "Hunting Lodge",
+            "Scrap",
+            "Courtyard",
+            "Diplomat",
+            "Lurker",
+            "Replace",
+            "Wishing Well"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Squirrel"
+        ]
     }
 ]
