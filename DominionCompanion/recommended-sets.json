@@ -1375,5 +1375,506 @@
         "ways": [
             "Way of the Squirrel"
         ]
+    },
+    {
+        "name": "High Seas",
+        "cards": [
+            "Bazaar",
+            "Caravan",
+            "Embargo",
+            "Explorer",
+            "Haven",
+            "Island",
+            "Lookout",
+            "Pirate Ship",
+            "Smugglers",
+            "Wharf"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Buried Treasure",
+        "cards": [
+            "Ambassador",
+            "Cutpurse",
+            "Fishing Village",
+            "Lighthouse",
+            "Outpost",
+            "Pearl Diver",
+            "Tactician",
+            "Treasure Map",
+            "Warehouse",
+            "Wharf"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Shipwrecks",
+        "cards": [
+            "Ghost Ship",
+            "Merchant Ship",
+            "Native Village",
+            "Navigator",
+            "Pearl Diver",
+            "Salvager",
+            "Sea Hag",
+            "Smugglers",
+            "Treasury",
+            "Warehouse"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Forewarned",
+        "cards": [
+            "Cutpurse",
+            "Embargo",
+            "Ghost Ship",
+            "Native Village",
+            "Treasure Map",
+            "Apothecary",
+            "Golem",
+            "Possession",
+            "Scrying Pool",
+            "Transmute"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Gummed Up",
+        "cards": [
+            "Ambassador",
+            "Haven",
+            "Sea Hag",
+            "Smugglers",
+            "Warehouse",
+            "Apprentice",
+            "Familiar",
+            "Herbalist",
+            "Philosopher's Stone",
+            "Vineyard"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Exploding Kingdom",
+        "cards": [
+            "Bishop",
+            "City",
+            "Grand Market",
+            "King's Court",
+            "Quarry",
+            "Fishing Village",
+            "Lookout",
+            "Outpost",
+            "Tactician",
+            "Wharf"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Pirate Bay",
+        "cards": [
+            "Expand",
+            "Hoard",
+            "Mint",
+            "Trade Route",
+            "Watchtower",
+            "Bazaar",
+            "Lighthouse",
+            "Pirate Ship",
+            "Smugglers",
+            "Warehouse"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Collector",
+        "cards": [
+            "Embargo",
+            "Fishing Village",
+            "Merchant Ship",
+            "Navigator",
+            "Smugglers",
+            "Fairgrounds",
+            "Farming Village",
+            "Fortune Teller",
+            "Harvest",
+            "Hunting Party"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Collider",
+        "cards": [
+            "Lighthouse",
+            "Salvager",
+            "Treasure Map",
+            "Treasury",
+            "Warehouse",
+            "Menagerie",
+            "Horn of Plenty",
+            "Horse Traders",
+            "Jester",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Travelers",
+        "cards": [
+            "Cutpurse",
+            "Island",
+            "Lookout",
+            "Merchant Ship",
+            "Warehouse",
+            "Cartographer",
+            "Crossroads",
+            "Farmland",
+            "Silk Road",
+            "Stables"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Diplomacy",
+        "cards": [
+            "Ambassador",
+            "Bazaar",
+            "Caravan",
+            "Embargo",
+            "Smugglers",
+            "Embassy",
+            "Farmland",
+            "Ill-Gotten Gains",
+            "Noble Brigand",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Watery Graves",
+        "cards": [
+            "Count",
+            "Graverobber",
+            "Hermit",
+            "Scavenger",
+            "Urchin",
+            "Native Village",
+            "Pirate Ship",
+            "Salvager",
+            "Treasure Map",
+            "Treasury"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Treasury Peasants",
+        "cards": [
+            "Death Cart",
+            "Feodum",
+            "Poor House",
+            "Urchin",
+            "Vagrant",
+            "Fishing Village",
+            "Haven",
+            "Island",
+            "Lookout",
+            "Warehouse"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Ghosts and Taxes",
+        "cards": [
+            "Cutpurse",
+            "Ghost Ship",
+            "Haven",
+            "Outpost",
+            "Smugglers",
+            "Butcher",
+            "Candlestick Maker",
+            "Herald",
+            "Soothsayer",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Island Builder",
+        "cards": [
+            "Island",
+            "Native Village",
+            "Salvager",
+            "Tactician",
+            "Treasury",
+            "Baker",
+            "Doctor",
+            "Merchant Guild",
+            "Plaza",
+            "Stonemason"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Prince of Orange",
+        "cards": [
+            "Amulet",
+            "Dungeon",
+            "Haunted Woods",
+            "Page",
+            "Swamp Hag",
+            "Caravan",
+            "Fishing Village",
+            "Merchant Ship",
+            "Tactician",
+            "Treasure Map"
+        ],
+        "events": [
+            "Mission"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Gifts and Mathoms",
+        "cards": [
+            "Bridge Troll",
+            "Caravan Guard",
+            "Hireling",
+            "Lost City",
+            "Messenger",
+            "Ambassador",
+            "Embargo",
+            "Haven",
+            "Salvager",
+            "Smugglers"
+        ],
+        "events": [
+            "Expedition",
+            "Quest"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Boxed In",
+        "cards": [
+            "Castles",
+            "Chariot Race",
+            "Encampment",
+            "Enchantress",
+            "Gladiator",
+            "Salvager",
+            "Smugglers",
+            "Tactician",
+            "Warehouse",
+            "Wharf"
+        ],
+        "events": [
+            "Tax"
+        ],
+        "landmarks": [
+            "Wall"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "King of the Sea",
+        "cards": [
+            "Archive",
+            "Farmers' Market",
+            "Overlord",
+            "Temple",
+            "Wild Hunt",
+            "Explorer",
+            "Haven",
+            "Native Village",
+            "Pirate Ship",
+            "Sea Hag"
+        ],
+        "events": [
+            "Delve"
+        ],
+        "landmarks": [
+            "Fountain"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "The New Black",
+        "cards": [
+            "Cobbler",
+            "Den of Sin",
+            "Ghost Town",
+            "Raider",
+            "Secret Cave",
+            "Caravan",
+            "Haven",
+            "Merchant Ship",
+            "Outpost",
+            "Tactician"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Forbidden Isle",
+        "cards": [
+            "Blessed Village",
+            "Cemetery",
+            "Idol",
+            "Tracker",
+            "Tragic Hero",
+            "Fishing Village",
+            "Ghost Ship",
+            "Lookout",
+            "Salvager",
+            "Treasure Map"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Free Shipping",
+        "cards": [
+            "Acting Troupe",
+            "Cargo Ship",
+            "Lackeys",
+            "Research",
+            "Spices",
+            "Embargo",
+            "Island",
+            "Outpost",
+            "Smugglers",
+            "Wharf"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Innovation"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Digging for Treasure",
+        "cards": [
+            "Border Guard",
+            "Flag Bearer",
+            "Inventor",
+            "Sculptor",
+            "Swashbuckler",
+            "Caravan",
+            "Native Village",
+            "Salvager",
+            "Tactician",
+            "Treasure Map"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Crop Rotation",
+            "Silos"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Innsmouth",
+        "cards": [
+            "Animal Fair",
+            "Barge",
+            "Coven",
+            "Fisherman",
+            "Sheepdog",
+            "Caravan",
+            "Explorer",
+            "Fishing Village",
+            "Haven",
+            "Treasure Map"
+        ],
+        "events": [
+            "Invest"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Goat"
+        ]
+    },
+    {
+        "name": "Ruritania",
+        "cards": [
+            "Bounty Hunter",
+            "Cavalry",
+            "Falconer",
+            "Sleigh",
+            "Village Green",
+            "Lookout",
+            "Smugglers",
+            "Outpost",
+            "Tactician",
+            "Warehouse"
+        ],
+        "events": [
+            "Alliance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Monkey"
+        ]
     }
 ]
