@@ -2194,5 +2194,429 @@
         "ways": [
             "Way of the Owl"
         ]
+    },
+    {
+        "name": "Beginners",
+        "cards": [
+            "Bank",
+            "Counting House",
+            "Expand",
+            "Goons",
+            "Monument",
+            "Rabble",
+            "Royal Seal",
+            "Venture",
+            "Watchtower",
+            "Worker's Village"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Friendly Interactive",
+        "cards": [
+            "Bishop",
+            "City",
+            "Contraband",
+            "Forge",
+            "Hoard",
+            "Peddler",
+            "Royal Seal",
+            "Trade Route",
+            "Vault",
+            "Worker's Village"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Big Actions",
+        "cards": [
+            "City",
+            "Expand",
+            "Grand Market",
+            "King's Court",
+            "Loan",
+            "Mint",
+            "Quarry",
+            "Rabble",
+            "Talisman",
+            "Vault"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Detours",
+        "cards": [
+            "Rabble",
+            "Peddler",
+            "Hoard",
+            "Trade Route",
+            "Venture",
+            "Farming Village",
+            "Horn of Plenty",
+            "Jester",
+            "Remake",
+            "Tournament"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Instant Gratification",
+        "cards": [
+            "Bishop",
+            "Expand",
+            "Hoard",
+            "Mint",
+            "Watchtower",
+            "Farmland",
+            "Haggler",
+            "Ill-Gotten Gains",
+            "Noble Brigand",
+            "Trader"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Trasure Trove",
+        "cards": [
+            "Bank",
+            "Monument",
+            "Royal Seal",
+            "Trade Route",
+            "Venture",
+            "Cache",
+            "Develop",
+            "Fool's Gold",
+            "Ill-Gotten Gains",
+            "Mandarin"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "One Man's Trash",
+        "cards": [
+            "Counterfeit",
+            "Forager",
+            "Graverobber",
+            "Market Square",
+            "Rogue",
+            "City",
+            "Grand Market",
+            "Monument",
+            "Talisman",
+            "Venture"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Honor Among Thieves",
+        "cards": [
+            "Bandit Camp",
+            "Procession",
+            "Rebuild",
+            "Rogue",
+            "Squire",
+            "Forge",
+            "Hoard",
+            "Peddler",
+            "Quarry",
+            "Watchtower"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Quarrymen",
+        "cards": [
+            "City",
+            "Expand",
+            "Grand Market",
+            "Mountebank",
+            "Quarry",
+            "Baker",
+            "Merchant Guild",
+            "Soothsayer",
+            "Stonemason",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Metal and Meat",
+        "cards": [
+            "Forge",
+            "King's Court",
+            "Monument",
+            "Venture",
+            "Watchtower",
+            "Butcher",
+            "Candlestick Maker",
+            "Plaza",
+            "Stonemason",
+            "Taxman"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Penny Pinching",
+        "cards": [
+            "Bank",
+            "Counting House",
+            "Goons",
+            "Peddler",
+            "Royal Seal",
+            "Advisor",
+            "Doctor",
+            "Herald",
+            "Journeyman",
+            "Merchant Guild"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Last Will and Monument",
+        "cards": [
+            "Coin of the Realm",
+            "Dungeon",
+            "Messenger",
+            "Relic",
+            "Treasure Trove",
+            "Bishop",
+            "Counting House",
+            "Monument",
+            "Rabble",
+            "Vault"
+        ],
+        "events": [
+            "Inheritance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Think Big",
+        "cards": [
+            "Distant Lands",
+            "Giant",
+            "Hireling",
+            "Miser",
+            "Storyteller",
+            "Contraband",
+            "Expand",
+            "Hoard",
+            "King's Court",
+            "Peddler"
+        ],
+        "events": [
+            "Ball",
+            "Ferry"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Big Time",
+        "cards": [
+            "Capital",
+            "Gladiator",
+            "Patrician",
+            "Royal Blacksmith",
+            "Villa",
+            "Bank",
+            "Forge",
+            "Grand Market",
+            "Loan",
+            "Royal Seal"
+        ],
+        "events": [
+            "Dominate"
+        ],
+        "landmarks": [
+            "Obelisk"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Gilded Gates",
+        "cards": [
+            "Chariot Race",
+            "City Quarter",
+            "Encampment",
+            "Groundskeeper",
+            "Wild Hunt",
+            "Bishop",
+            "Monument",
+            "Mint",
+            "Peddler",
+            "Talisman"
+        ],
+        "events": [],
+        "landmarks": [
+            "Basilica",
+            "Palace"
+        ],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Treasures of the Night",
+        "cards": [
+            "Crypt",
+            "Guardian",
+            "Night Watchman",
+            "Raider",
+            "Vampire",
+            "Bank",
+            "Contraband",
+            "Loan",
+            "Royal Seal",
+            "Venture"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Day at the Races",
+        "cards": [
+            "Blessed Village",
+            "Cemetery",
+            "Druid",
+            "Tormenter",
+            "Tragic Hero",
+            "Bishop",
+            "Peddler",
+            "Talisman",
+            "Trade Route",
+            "Watchtower"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Dreamers of Dreams",
+        "cards": [
+            "Cargo Ship",
+            "Old Witch",
+            "Priest",
+            "Scepter",
+            "Scholar",
+            "Expand",
+            "Monument",
+            "Vault",
+            "Watchtower",
+            "Worker's Village"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Academy"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Movers and Shakers",
+        "cards": [
+            "Hideout",
+            "Patron",
+            "Research",
+            "Treasurer",
+            "Villain",
+            "Bank",
+            "City",
+            "Grand Market",
+            "Loan",
+            "Rabble"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Capitalism",
+            "Citadel"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Limited Time Offer",
+        "cards": [
+            "Destrier",
+            "Displace",
+            "Fisherman",
+            "Supplies",
+            "Wayfarer",
+            "Grand Market",
+            "Mint",
+            "Peddler",
+            "Talisman",
+            "Worker's Village"
+        ],
+        "events": [
+            "Desperation"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Frog"
+        ]
+    },
+    {
+        "name": "Birth of a Nation",
+        "cards": [
+            "Animal Fair",
+            "Camel Train",
+            "Mastermind",
+            "Paddock",
+            "Stockpile",
+            "City",
+            "Monument",
+            "Quarry",
+            "Rabble",
+            "Trade Route"
+        ],
+        "events": [
+            "Reap"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Otter"
+        ]
     }
 ]
