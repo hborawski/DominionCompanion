@@ -4284,5 +4284,51 @@
             "Academy"
         ],
         "ways": []
+    },
+    {
+        "name": "Intro to Horses",
+        "cards": [
+            "Animal Fair",
+            "Barge",
+            "Destrier",
+            "Goatherd",
+            "Hostelry",
+            "Livery"
+            "Paddock",
+            "Scrap",
+            "Sheepdog",
+            "Supplies"
+        ],
+        "events": [
+            "Enhance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Sheep"
+        ]
+    },
+    {
+        "name": "Intro to Exile",
+        "cards": [
+            "Black Cat",
+            "Bounty Hunter",
+            "Camel Train",
+            "Cardinal",
+            "Falconer",
+            "Mastermind",
+            "Sanctuary",
+            "Snowy Village",
+            "Stockpile",
+            "Wayfarer"
+        ],
+        "events": [
+            "March"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Worm"
+        ]
     }
 ]
