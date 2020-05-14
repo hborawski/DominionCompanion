@@ -12,6 +12,7 @@ import UIKit
 struct SetModel {
     // MARK: Utility
     var expansions: [String] { Array(Set(self.cards.map { $0.expansion })).sorted(by: <)}
+    var expansionString: String { self.expansions.joined(separator: " ") }
     // MARK: Specific Set Wide Effects
     var landmarks: [Card]
     var events: [Card]

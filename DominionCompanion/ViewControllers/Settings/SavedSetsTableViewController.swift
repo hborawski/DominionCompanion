@@ -16,7 +16,7 @@ class SavedSetsTableViewController: UITableViewController {
     
     var searchText = ""
     
-    var savedSets: [SavedSet] {
+    var rawSavedSets: [SavedSet] {
         SavedSets.shared.savedSets.filter{savedSet in
             guard searchText != "" else { return true }
             let matchesExpansion = savedSet.getSetModel().expansions.first { $0.lowercased().contains(searchText.lowercased()) } != nil
@@ -24,7 +24,7 @@ class SavedSetsTableViewController: UITableViewController {
         }
     }
     
-    var recommendedSets: [ShareableSet] {
+    var rawRecommendedSets: [ShareableSet] {
         RecommendedSets.shared.sets.filter { shareableSet in
             guard searchText != "" else { return true }
             let matchesExpansion = shareableSet.getSetModel().expansions.first { $0.lowercased().contains(searchText.lowercased()) } != nil
@@ -32,10 +32,24 @@ class SavedSetsTableViewController: UITableViewController {
         }
     }
     
+    var savedSets: [SavedSet] = []
+    var recommendedSets: [ShareableSet] = []
+
+    func updateSets() {
+        DispatchQueue.global().async {
+            self.savedSets = self.rawSavedSets
+            self.recommendedSets = self.rawRecommendedSets
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
     override func viewDidLoad() {
         self.navigationItem.title = "Sets"
         navigationItem.largeTitleDisplayMode = .never
         searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         
         segmentedControl.selectedSegmentIndex = 0
@@ -44,7 +58,7 @@ class SavedSetsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        updateSets()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
@@ -65,7 +79,7 @@ class SavedSetsTableViewController: UITableViewController {
         guard segmentedControl.selectedSegmentIndex == 0 else { return nil }
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             SavedSets.shared.delete(savedSet: self.savedSets[indexPath.row])
-            self.tableView.reloadData()
+            self.updateSets()
             completion(true)
         }
         return UISwipeActionsConfiguration(actions: [delete])
@@ -87,20 +101,13 @@ class SavedSetsTableViewController: UITableViewController {
     }
     
     @objc func segmentedSelected(_ sender: UISegmentedControl) {
-        tableView.reloadData()
-    }
-}
-
-extension SavedSetsTableViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchText = searchText
-        self.tableView.reloadData()
+        updateSets()
     }
 }
 
 extension SavedSetsTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         searchText = searchController.searchBar.text ?? ""
-        tableView.reloadData()
+        updateSets()
     }
 }
