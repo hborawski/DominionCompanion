@@ -4068,5 +4068,132 @@
         ],
         "projects": [],
         "ways": []
-    }
+    },
+    {
+        "name": "Dusk",
+        "cards": [
+            "Blessed Village",
+            "Cobbler",
+            "Den of Sin",
+            "Faithful Hound",
+            "Fool",
+            "Monastery",
+            "Night Watchman",
+            "Shepherd",
+            "Tormenter",
+            "Tragic Hero"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Midnight",
+        "cards": [
+            "Conclave",
+            "Crypt",
+            "Cursed Village",
+            "Devil's Workshop",
+            "Druid",
+            "Exorcist",
+            "Leprechaun",
+            "Pooka",
+            "Raider",
+            "Secret Cave"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [],
+        "ways": []
+    },
+    {
+        "name": "Becoming a Monster",
+        "cards": [
+            "Experiment",
+            "Mountain Village",
+            "Old Witch",
+            "Research",
+            "Spices",
+            "Devil's Workshop",
+            "Monastery",
+            "Shepherd",
+            "Skulk",
+            "Tragic Hero"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Exploration"
+        ],
+        "ways": []
+    },
+    {
+        "name": "True Believers",
+        "cards": [
+            "Border Guard",
+            "Cargo Ship",
+            "Scholar",
+            "Sculptor",
+            "Villain",
+            "Blessed Village",
+            "Crypt",
+            "Faithful Hound",
+            "Sacred Grove",
+            "Secret Cave"
+        ],
+        "events": [],
+        "landmarks": [],
+        "projects": [
+            "Cathedral",
+            "Piazza"
+        ],
+        "ways": []
+    },
+    {
+        "name": "Seize the Night",
+        "cards": [
+            "Barge",
+            "Falconer",
+            "Hostelry",
+            "Sheepdog",
+            "Supplies",
+            "Cobbler",
+            "Devil's Workshop",
+            "Exorcist",
+            "Monastery",
+            "Skulk"
+        ],
+        "events": [
+            "Seize the Day"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Sheep"
+        ]
+    },
+    {
+        "name": "Animal Crackers",
+        "cards": [
+            "Black Cat",
+            "Goatherd",
+            "Groom",
+            "Hunting Lodge",
+            "Kiln",
+            "Faithful Hound",
+            "Pixie",
+            "Pooka",
+            "Sacred Grove",
+            "Shepherd"
+        ],
+        "events": [
+            "Enhance"
+        ],
+        "landmarks": [],
+        "projects": [],
+        "ways": [
+            "Way of the Chameleon"
+        ]
+    },
 ]
