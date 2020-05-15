@@ -22,8 +22,11 @@ class GameplaySetupViewController: UITableViewController {
         guard let model = setModel else { return }
         tableData = model.getSections(tableView: tableView)
         
-        guard !displayingSavedSet else { return }
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSet))
+        if displayingSavedSet {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(pinSet))
+        } else {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSet))
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { tableData[section].title }
@@ -47,6 +50,20 @@ class GameplaySetupViewController: UITableViewController {
             SavedSets.shared.saveSet(name: value, model: model)
         }
         present(alert, animated: true)
+    }
+    
+    @objc func pinSet() {
+        let alert = AlertBuilder.confirmation(title: "Import to Set Builder", confirmText: "Import", message: "Import this set to the set builder to start with these cards as a base for a new set?") {
+            guard let model = self.setModel else { return }
+            SetBuilder.shared.pinnedCards = model.cards
+            SetBuilder.shared.pinnedEvents = model.events
+            SetBuilder.shared.pinnedLandmarks = model.landmarks
+            SetBuilder.shared.pinnedProjects = model.projects
+            SetBuilder.shared.pinnedWays = model.ways
+            guard let root = self.navigationController?.tabBarController else { return }
+            root.selectedIndex = 0
+        }
+        self.present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

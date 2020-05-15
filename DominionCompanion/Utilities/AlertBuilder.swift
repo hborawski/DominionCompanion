@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class AlertBuilder {
+    static func confirmation(title: String, confirmText: String, message: String, completion: @escaping () -> Void) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in alertController.dismiss(animated: true) } ))
+        alertController.addAction(UIAlertAction(title: confirmText, style: .default, handler: { _ in completion() } ))
+        return alertController
+    }
+    
     static func withTextField(title: String, message: String = "", defaultText: String = "Save", completion: @escaping (String) -> Void = {_ in}) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let textHandler = AlertTextHandler()

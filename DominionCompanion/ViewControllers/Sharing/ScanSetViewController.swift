@@ -58,6 +58,7 @@ class ScanSetViewController: UIViewController {
             SetBuilder.shared.pinnedEvents = model.events
             SetBuilder.shared.pinnedLandmarks = model.landmarks
             SetBuilder.shared.pinnedProjects = model.projects
+            SetBuilder.shared.pinnedWays = model.ways
             self.importSucceeded?()
             self.dismiss(animated: true)
         }))
