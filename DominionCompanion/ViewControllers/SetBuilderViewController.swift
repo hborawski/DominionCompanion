@@ -51,22 +51,15 @@ class SetBuilderViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: Alerts
     @objc func showShareMenu() {
-        let alertController = UIAlertController(
+        let alert = AlertBuilder.asSheet(
             title: "Set Sharing",
-            message: "Share the current set, or import a friend's set using a QR code and your devices camera.",
-            preferredStyle: .actionSheet
-        )
-        alertController.addAction(UIAlertAction(title: "Scan a code", style: .default, handler: { (action) in
-            self.performSegue(withIdentifier: "ScanQRCode", sender: nil)
-        }))
-        alertController.addAction(UIAlertAction(title: "Generate a code", style: .default, handler: { (action) in
-            self.performSegue(withIdentifier: "GenerateQRCode", sender: SetBuilder.shared.getFinalSet().getShareable())
-        }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            alertController.dismiss(animated: true, completion: nil)
-        }))
-        
-        self.present(alertController, animated: true)
+            actions: [
+                ("Scan a Code", {self.performSegue(withIdentifier: "ScanQRCode", sender: nil)}),
+                ("Generate a Code", {self.performSegue(withIdentifier: "GenerateQRCode", sender: SetBuilder.shared.getFinalSet().getShareable())})
+            ],
+            message: "Share the current set, or import a friend's set using a QR code and your devices camera."
+         )
+        self.present(alert, animated: true)
     }
     
     func showErrorAlert(message: String, completion: (() -> Void)? = nil) {
