@@ -22,6 +22,7 @@
                     </tableView>
                     <connections>
                         <segue destination="GkP-XQ-z3O" kind="show" identifier="ViewCard" id="S4O-MV-tAi"/>
+                        <segue destination="dp1-Fn-YSs" kind="presentation" identifier="GenerateQRCode" id="Hqz-mu-w2O"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7o-xh-hkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -37,6 +38,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjh-na-tAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="-108"/>
+        </scene>
+        <!--ShareSetViewController-->
+        <scene sceneID="gsc-h3-CcJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="QRCodes" storyboardName="QRCodes" referencedIdentifier="ShareSetViewController" id="dp1-Fn-YSs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UgF-Nn-Ew3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8k-8K-eOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="54"/>
         </scene>
     </scenes>
 </document>

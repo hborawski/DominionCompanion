@@ -53,20 +53,35 @@ class GameplaySetupViewController: UITableViewController {
     }
     
     @objc func pinSet() {
-        let alert = AlertBuilder.confirmation(title: "Import to Set Builder", confirmText: "Import", message: "Import this set to the set builder to start with these cards as a base for a new set?") {
-            guard let model = self.setModel else { return }
-            SetBuilder.shared.pinnedCards = model.cards
-            SetBuilder.shared.pinnedEvents = model.events
-            SetBuilder.shared.pinnedLandmarks = model.landmarks
-            SetBuilder.shared.pinnedProjects = model.projects
-            SetBuilder.shared.pinnedWays = model.ways
-            guard let root = self.navigationController?.tabBarController else { return }
-            root.selectedIndex = 0
-        }
+        let alert = AlertBuilder.asSheet(
+            title: "Export Set",
+            actions: [
+                ("Set Builder", {
+                    guard let model = self.setModel else { return }
+                    SetBuilder.shared.pinnedCards = model.cards
+                    SetBuilder.shared.pinnedEvents = model.events
+                    SetBuilder.shared.pinnedLandmarks = model.landmarks
+                    SetBuilder.shared.pinnedProjects = model.projects
+                    SetBuilder.shared.pinnedWays = model.ways
+                    guard let root = self.navigationController?.tabBarController else { return }
+                    root.selectedIndex = 0
+                }),
+                ("Generate QR Code", {self.performSegue(withIdentifier: "GenerateQRCode", sender: self.setModel?.getShareable())})
+            ],
+            message: "Export this set to the Set Builder or as a QR Code for a friend"
+        )
         self.present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+            segue.identifier == "GenerateQRCode",
+            let shareVC = segue.destination as? ShareSetViewController,
+            let set = sender as? ShareableSet
+        {
+            shareVC.set = set
+            return
+        }
         guard let vc = segue.destination as? CardViewController, let card = sender as? Card else { return }
         vc.card = card
     }
