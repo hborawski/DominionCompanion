@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let cardsViewController = navController.topViewController as? CardsViewController
             else { return false }
         cardsViewController.showSearch = true
+        cardsViewController.navigationItem.searchController?.searchBar.becomeFirstResponder()
         return true
     }
 
