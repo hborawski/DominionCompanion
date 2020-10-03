@@ -23,36 +23,58 @@ struct CardView: View {
     
     @ViewBuilder
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                NavigationLink(
-                    destination: CardsView(
-                        cards: cardData.allCards.filter { $0.expansion == card.expansion },
-                        title: card.expansion
-                    )
-                ) {
-                    HStack {
-                        Image(systemName: "cube.box")
-                        Text(card.expansion)
+        VStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    NavigationLink(
+                        destination: CardsView(
+                            cards: cardData.allCards.filter { $0.expansion == card.expansion },
+                            title: card.expansion
+                        )
+                    ) {
+                        HStack {
+                            Image(systemName: "cube.box")
+                            Text(card.expansion)
+                        }
+                    }.buttonStyle(PlainButtonStyle())
+                    Spacer()
+                    if let url = link, !hideWikiLink {
+                        HStack {
+                            Image(systemName: "globe").foregroundColor(.blue)
+                            Link("Wiki", destination: url)
+                        }
+                        .padding(.trailing, 24)
                     }
-                }.buttonStyle(PlainButtonStyle())
-                Spacer()
-                if let url = link, !hideWikiLink {
-                    HStack {
-                        Image(systemName: "globe").foregroundColor(.blue)
-                        Link("Wiki", destination: url)
-                    }
-                    .padding(.trailing, 24)
                 }
+                .padding(.vertical, 8)
+                .padding(.leading, 24)
+                Spacer()
+                Image(uiImage: card.image() ?? UIImage())
+                    .resizable()
+                    .cornerRadius(8)
+                    .padding(.horizontal, 24)
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
             }
-            .padding(.leading, 24)
-            Spacer()
-            Image(uiImage: card.image() ?? UIImage())
-                .resizable()
-                .cornerRadius(8)
-                .padding(24)
-                .aspectRatio(contentMode: .fit)
-            Spacer()
+            if card.relatedCards.count > 0 {
+                VStack(alignment: .center) {
+                    NavigationLink(
+                        destination: CardsView(
+                            cards: card.relatedCards,
+                            title: "Related Cards"
+                        )
+                    ) {
+                        HStack {
+                            Image("Card")
+                            Text("Related Cards")
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.blue)
+                    .padding(.bottom, 8)
+                }
+                .padding(0)
+            }
         }
         .navigationTitle(Text(card.name))
     }

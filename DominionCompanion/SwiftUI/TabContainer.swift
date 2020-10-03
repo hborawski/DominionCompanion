@@ -13,13 +13,13 @@ struct TabContainer: View {
     var body: some View {
         TabView {
             SetBuilderView().tabItem {
-                Image(uiImage: UIImage(named: "Deck") ?? UIImage())
+                Image("Deck")
                 Text("Set Builder")
             }
             NavigationView {
                 CardsView(cards: cardData.allCards)
             }.tabItem {
-                Image(uiImage: UIImage(named: "Card") ?? UIImage())
+                Image("Card")
                 Text("Cards")
             }
             SettingsView().tabItem {
