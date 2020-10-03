@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1A5E0425254D6F0050DE4E /* DominionCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */; };
+		AF1A5E102525500B0050DE4E /* TabContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E0F2525500B0050DE4E /* TabContainer.swift */; };
+		AF1A5E15252550AE0050DE4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E14252550AE0050DE4E /* SettingsView.swift */; };
+		AF1A5E1A252550EE0050DE4E /* SetBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E19252550EE0050DE4E /* SetBuilderView.swift */; };
+		AF1A5E1F252551FE0050DE4E /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E1E252551FE0050DE4E /* CardsView.swift */; };
+		AF1A5E242525537A0050DE4E /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E232525537A0050DE4E /* CardRow.swift */; };
+		AF1A5E29252559700050DE4E /* CostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E28252559700050DE4E /* CostView.swift */; };
+		AF1A5E2E25255B320050DE4E /* DebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E2D25255B320050DE4E /* DebtView.swift */; };
+		AF1A5E3425255F140050DE4E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E3325255F140050DE4E /* CardView.swift */; };
+		AF1A5E3C252581D60050DE4E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E3B252581D60050DE4E /* SearchBar.swift */; };
+		AF1A5E452525886D0050DE4E /* ListChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E442525886D0050DE4E /* ListChoice.swift */; };
+		AF1A5E4D25259A5D0050DE4E /* SetBuilderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */; };
+		AF1A5E5A2528FF460050DE4E /* ExpansionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A5E592528FF460050DE4E /* ExpansionSelection.swift */; };
 		AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */; };
 		AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
@@ -100,6 +113,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanion.swift; sourceTree = "<group>"; };
+		AF1A5E0F2525500B0050DE4E /* TabContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainer.swift; sourceTree = "<group>"; };
+		AF1A5E14252550AE0050DE4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AF1A5E19252550EE0050DE4E /* SetBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderView.swift; sourceTree = "<group>"; };
+		AF1A5E1E252551FE0050DE4E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		AF1A5E232525537A0050DE4E /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
+		AF1A5E28252559700050DE4E /* CostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostView.swift; sourceTree = "<group>"; };
+		AF1A5E2D25255B320050DE4E /* DebtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtView.swift; sourceTree = "<group>"; };
+		AF1A5E3325255F140050DE4E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AF1A5E3B252581D60050DE4E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		AF1A5E442525886D0050DE4E /* ListChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChoice.swift; sourceTree = "<group>"; };
+		AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderModel.swift; sourceTree = "<group>"; };
+		AF1A5E592528FF460050DE4E /* ExpansionSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionSelection.swift; sourceTree = "<group>"; };
 		AF1B6EA52324219900ADA74D /* SetBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderViewController.swift; sourceTree = "<group>"; };
 		AF1B6EAB2324226800ADA74D /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		AF1B6EAE232428ED00ADA74D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -192,6 +218,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1A5E0B25254FDB0050DE4E /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A5E43252588600050DE4E /* Settings */,
+				AF1A5E3225255EFF0050DE4E /* Cards */,
+				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
+				AF1A5E0F2525500B0050DE4E /* TabContainer.swift */,
+				AF1A5E19252550EE0050DE4E /* SetBuilderView.swift */,
+				AF1A5E3B252581D60050DE4E /* SearchBar.swift */,
+				AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */,
+				AF1A5E592528FF460050DE4E /* ExpansionSelection.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		AF1A5E3225255EFF0050DE4E /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A5E1E252551FE0050DE4E /* CardsView.swift */,
+				AF1A5E232525537A0050DE4E /* CardRow.swift */,
+				AF1A5E28252559700050DE4E /* CostView.swift */,
+				AF1A5E2D25255B320050DE4E /* DebtView.swift */,
+				AF1A5E3325255F140050DE4E /* CardView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		AF1A5E43252588600050DE4E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A5E14252550AE0050DE4E /* SettingsView.swift */,
+				AF1A5E442525886D0050DE4E /* ListChoice.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AF1B6EA7232421A000ADA74D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +441,7 @@
 		AFE8EE3C22A4843B008E09B2 /* DominionCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				AF1A5E0B25254FDB0050DE4E /* SwiftUI */,
 				AF1B6EAA232421F500ADA74D /* Assets */,
 				AFE8EE7122A4AFBE008E09B2 /* cards */,
 				AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */,
@@ -561,35 +624,48 @@
 				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
 				AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */,
+				AF1A5E4D25259A5D0050DE4E /* SetBuilderModel.swift in Sources */,
 				AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */,
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
 				AF71F6A0236FB40200BCB9EA /* RangeCell.swift in Sources */,
+				AF1A5E452525886D0050DE4E /* ListChoice.swift in Sources */,
 				AFD02B8D246A331A00D14D61 /* SavedSet+CoreDataProperties.swift in Sources */,
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
+				AF1A5E5A2528FF460050DE4E /* ExpansionSelection.swift in Sources */,
+				AF1A5E1A252550EE0050DE4E /* SetBuilderView.swift in Sources */,
 				AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */,
 				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
 				AFAB6EB62457B64900F09799 /* DisclosuresViewController.swift in Sources */,
 				AFD02B8C246A331A00D14D61 /* SavedSet+CoreDataClass.swift in Sources */,
 				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
+				AF1A5E3425255F140050DE4E /* CardView.swift in Sources */,
 				AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AFD02B95246C727A00D14D61 /* Logger.swift in Sources */,
 				AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */,
+				AF1A5E242525537A0050DE4E /* CardRow.swift in Sources */,
 				AFD46161241C945E007720EA /* ShareSetViewController.swift in Sources */,
 				AF1B6ECB232495AA00ADA74D /* AttributedCardCell.swift in Sources */,
 				AFD02B93246B75C400D14D61 /* AlertBuilder.swift in Sources */,
+				AF1A5E15252550AE0050DE4E /* SettingsView.swift in Sources */,
 				AF80D702235C040100FDC4D6 /* GlobalExclusionsViewController.swift in Sources */,
 				AF71F69E236FB33500BCB9EA /* FilterCell.swift in Sources */,
+				AF1A5E2E25255B320050DE4E /* DebtView.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
+				AF1A5E102525500B0050DE4E /* TabContainer.swift in Sources */,
 				AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */,
+				AF1A5E29252559700050DE4E /* CostView.swift in Sources */,
+				AF1A5E3C252581D60050DE4E /* SearchBar.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
+				AF1A5E0425254D6F0050DE4E /* DominionCompanion.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,
 				AFD02B91246A65E200D14D61 /* SavedSetCell.swift in Sources */,
 				AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */,
 				AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */,
 				AFC1BA68246A25F800298F75 /* SavedSets.swift in Sources */,
 				AF7FC1A223651D92003EB7ED /* GameplaySetupViewController.swift in Sources */,
+				AF1A5E1F252551FE0050DE4E /* CardsView.swift in Sources */,
 				AFD02B8F246A363400D14D61 /* SavedSetsTableViewController.swift in Sources */,
 				AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */,
 				AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */,
@@ -793,6 +869,7 @@
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 66V79CSGDL;
 				INFOPLIST_FILE = DominionCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -815,6 +892,7 @@
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 66V79CSGDL;
 				INFOPLIST_FILE = DominionCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

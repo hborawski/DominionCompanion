@@ -32,13 +32,16 @@ class Settings {
 
 
 @propertyWrapper
-struct UserDefaultsBacked<Value> {
+class UserDefaultsBacked<Value>: ObservableObject {
     var value: Value
     let key: String
     
     var wrappedValue: Value {
         get { (UserDefaults.standard.object(forKey: key) as? Value) ?? value }
-        set { UserDefaults.standard.set(newValue, forKey: key) }
+        set {
+            objectWillChange.send()
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
     }
     
     init(wrappedValue value: Value, _ key: String) {

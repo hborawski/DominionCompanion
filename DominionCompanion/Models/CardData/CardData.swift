@@ -7,7 +7,9 @@
 //
 
 import Foundation
-class CardData {
+import Combine
+
+class CardData: ObservableObject {
     public static let shared: CardData = CardData()
     
     @UserDefaultsBackedCodable(Constants.SaveKeys.savedExcludedCards)
