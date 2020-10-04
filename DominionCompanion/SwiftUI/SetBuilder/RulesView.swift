@@ -18,7 +18,7 @@ struct RulesView: View {
                 NavigationLink(destination: RuleView(rule: rule)) {
                     RuleRow(rule: rule)
                 }
-            }
+            }.onDelete(perform: { setBuilder.rules.remove(atOffsets: $0)})
         }
         .navigationTitle("Set Rules")
         .navigationBarItems(trailing: HStack {
