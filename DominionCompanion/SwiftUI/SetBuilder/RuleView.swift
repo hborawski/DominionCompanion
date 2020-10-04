@@ -22,9 +22,9 @@ struct RuleView: View {
     
     var matchingCards: [Card] {
         get {
-            return rules.reduce(CardData.shared.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
+            return rules.reduce(cardData.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
                 let cardSet = Set(cards)
-                let matchingFilter = Set(CardData.shared.cardsFromChosenExpansions.filter { rule.matches(card: $0) })
+                let matchingFilter = Set(cardData.cardsFromChosenExpansions.filter { rule.matches(card: $0) })
                 return Array(cardSet.intersection(matchingFilter))
             }
         }
