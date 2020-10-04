@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CardRule: Codable {
+struct CardRule: Codable, Hashable {
     var type: RuleType
     var property: CardProperty
     var operation: FilterOperation

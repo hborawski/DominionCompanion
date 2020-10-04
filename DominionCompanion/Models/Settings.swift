@@ -70,7 +70,7 @@ struct UserDefaultsBackedEnum<Value> where Value: RawRepresentable {
 }
 
 @propertyWrapper
-struct UserDefaultsBackedCodable<Value> where Value: Codable {
+class UserDefaultsBackedCodable<Value>: ObservableObject where Value: Codable {
     var value: Value
     let key: String
     
@@ -84,6 +84,7 @@ struct UserDefaultsBackedCodable<Value> where Value: Codable {
         }
         set {
             if let data = try? PropertyListEncoder().encode(newValue) {
+                objectWillChange.send()
                 UserDefaults.standard.set(data, forKey: key)
             }
         }

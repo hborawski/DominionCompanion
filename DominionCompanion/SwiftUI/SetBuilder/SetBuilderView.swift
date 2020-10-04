@@ -11,24 +11,29 @@ import SwiftUI
 struct SetBuilderView: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
     
+    @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
+    
     @State var selectExpansions = false
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
                     Button("Shuffle") {
-                        setBuilder.getSet()
-                    }
-                    Button("Expansions") {
-                        self.selectExpansions.toggle()
-                    }
-                    Button("Rules") {
-                        
-                    }
+                        setBuilder.shuffle()
+                    }.frame(maxWidth: .infinity)
+                    NavigationLink(destination: ExpansionSelection()) {
+                        Image(systemName: "cube.box")
+                        Text("Expansions")
+                    }.frame(maxWidth: .infinity)
+                    NavigationLink(destination: RulesView()) {
+                        Image(systemName: "list.dash")
+                        Text("Rules (\(setBuilder.rules.count))")
+                    }.frame(maxWidth: .infinity)
                 }
+                .padding(.top, 10)
                 List {
                     Section(header: Text("Cards")) {
-                        ForEach(setBuilder.currentSet, id: \.name) { card in
+                        ForEach(setBuilder.currentSet.sorted(by: sortMode.sortFunction()), id: \.name) { card in
                             CardRow(card: card).listRowInsets(EdgeInsets())
                         }.onDelete(perform: { indexSet in
                             print(indexSet)
@@ -38,9 +43,6 @@ struct SetBuilderView: View {
             }
             .navigationTitle("Set Builder")
             .navigationBarTitleDisplayMode(.inline)
-            .sheet(isPresented: $selectExpansions, content: {
-                ExpansionSelection(show: $selectExpansions)
-            })
         }
     }
 }
