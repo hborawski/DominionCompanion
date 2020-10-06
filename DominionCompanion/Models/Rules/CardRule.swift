@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct CardRule: Codable, Hashable {
-    var type: RuleType
+struct CardRule: Codable, Hashable, Identifiable {
+    var id = UUID()
+    var type: RuleType { property.inputType }
     var property: CardProperty
     var operation: FilterOperation
     var comparisonValue: String

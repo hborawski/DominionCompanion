@@ -8,10 +8,44 @@
 
 import Foundation
 
-struct SetRule: Codable, Hashable {
-    var value: Int
-    var operation: FilterOperation
-    var cardRules: [CardRule]
+class SetRule: Codable, Hashable, ObservableObject, Identifiable {
+    var id = UUID()
+    static func == (lhs: SetRule, rhs: SetRule) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    enum SetRuleCodingKeys: CodingKey {
+        case value
+        case operation
+        case cardRules
+    }
+    required init(from decoder: Decoder) throws {
+        let container  = try decoder.container(keyedBy: SetRuleCodingKeys.self)
+        self.value = try container.decode(Int.self, forKey: .value)
+        self.operation = try container.decode(FilterOperation.self, forKey: .operation)
+        self.cardRules = try container.decode([CardRule].self, forKey: .cardRules)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: SetRuleCodingKeys.self)
+        try container.encode(self.value, forKey: .value)
+        try container.encode(self.operation, forKey: .operation)
+        try container.encode(self.cardRules, forKey: .cardRules)
+    }
+    
+    init(value: Int, operation: FilterOperation, cardRules: [CardRule]) {
+        self.value = value
+        self.operation = operation
+        self.cardRules = cardRules
+    }
+
+    @Published var value: Int
+    @Published var operation: FilterOperation
+    @Published var cardRules: [CardRule]
     
     func matchingCards(_ cards: [Card]) -> [Card] {
         return cardRules.reduce(cards) { (cards, rule) -> [Card] in

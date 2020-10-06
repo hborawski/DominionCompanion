@@ -22,10 +22,20 @@ struct RulesView: View {
         }
         .navigationTitle("Set Rules")
         .navigationBarItems(trailing: HStack {
-            NavigationLink(destination: RuleView()) {
+            Button(action: {
+                self.editing.toggle()
+            }, label: {
                 Image(systemName: "plus")
-            }
+            })
         })
+        .background(
+            NavigationLink(
+                destination: RuleView(),
+                isActive: $editing,
+                label: {
+                    EmptyView()
+                })
+        )
     }
 }
 

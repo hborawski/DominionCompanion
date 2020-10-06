@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SetRuleViewController: UITableViewController {
-    let defaultRule = CardRule(type: .number, property: .cost, operation: .greater, comparisonValue: "0")
+    let defaultRule = CardRule(property: .cost, operation: .greater, comparisonValue: "0")
     var rules: [CardRule] = []
     
     var existingRuleIndex: Int?

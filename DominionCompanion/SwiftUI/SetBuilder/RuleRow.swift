@@ -33,7 +33,7 @@ struct RuleRow: View {
 
 struct RuleRow_Previews: PreviewProvider {
     static let rule = SetRule(value: 2, operation: .greaterOrEqual, cardRules: [
-        CardRule(type: .number, property: .actions, operation: .greater, comparisonValue: "1")
+        CardRule(property: .actions, operation: .greater, comparisonValue: "1")
     ])
     static var previews: some View {
         List {

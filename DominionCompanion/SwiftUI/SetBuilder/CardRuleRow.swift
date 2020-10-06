@@ -9,27 +9,37 @@
 import SwiftUI
 
 struct CardRuleRow: View {
-    @Binding var rule: CardRule
+    @Binding var property: CardProperty
+    
+    @Binding var operation: FilterOperation
+    
+    @Binding var value: String
+    
+    var onDelete: (() -> Void)?
     
     @EnvironmentObject var cardData: CardData
 
+    @ViewBuilder
     var body: some View {
-            Picker("Property", selection: $rule.property) {
-                ForEach(cardData.allAttributes, id: \.self) { attr in
-                    Text(attr.rawValue)
-                }
-            }
-            Picker("Operator", selection: $rule.operation) {
-                ForEach(rule.property.inputType.availableOperations, id: \.self) { operation in
-                    Text(operation.rawValue)
-                }
-            }
-            Picker("Value", selection: $rule.comparisonValue) {
-                ForEach(rule.property.all, id: \.self) { value in
-                    Text(value)
-                }
+        Picker("Property", selection: $property) {
+            ForEach(cardData.allAttributes, id: \.self) { attr in
+                Text(attr.rawValue)
             }
         }
+        Picker("Operator", selection: $operation) {
+            ForEach(property.inputType.availableOperations, id: \.self) { operation in
+                Text(operation.rawValue)
+            }
+        }
+        Picker("Value", selection: $value) {
+            ForEach(property.all, id: \.self) { value in
+                Text(value)
+            }
+        }
+        if onDelete != nil {
+            Button("Delete") { self.onDelete?() }
+        }
+    }
 }
 
 //struct CardRuleRow_Previews: PreviewProvider {

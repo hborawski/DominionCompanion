@@ -32,7 +32,7 @@ class FilterCell: UITableViewCell {
     
     var currentRule: CardRule {
         get {
-            return CardRule(type: property.inputType, property: property, operation: operation, comparisonValue: value)
+            return CardRule(property: property, operation: operation, comparisonValue: value)
         }
     }
     
