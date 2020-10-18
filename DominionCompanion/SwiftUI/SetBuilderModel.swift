@@ -16,7 +16,15 @@ class SetBuilderModel: ObservableObject {
     @Published var rules: [SetRule] = []
     
     
-    @Published var currentSet: [Card] = []
+    @Published var cards: [Card] = []
+    
+    @Published var landscape: [Card] = []
+    
+    @UserDefaultsBacked(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumLandmarks) var maxLandmarks: Int = 0
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumProjects) var maxProjects: Int = 0
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumWays) var maxWays: Int = 0
     
     init(_ cardData: CardData) {
         self.cardData = cardData
@@ -28,11 +36,13 @@ class SetBuilderModel: ObservableObject {
         getMatchingSet([]) { result in
             switch result {
             case .success(let cards):
-                Just(cards).receive(on: RunLoop.main).assign(to: \.currentSet, on: self).store(in: &self.bag)
+                Just(cards).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
             case .failure(let error):
                 print(error)
             }
         }
+        
+        Just(getLandscapeCards()).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
     }
     
     
@@ -125,6 +135,34 @@ class SetBuilderModel: ObservableObject {
                 completion(.success(finalSet))
             }
         }
+    }
+    
+    func getLandscapeCards() -> [Card] {
+        guard maxLandscape > 0 else { return [] }
+        let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
+            guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
+            return Settings.shared.chosenExpansions.contains(card.expansion)
+            }).shuffled()
+//        var landscapes: [Card] = pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays
+        var landscapes: [Card] = []
+        for card in pool {
+            let temp = landscapes + [card]
+            if areLandscapesValid(temp) {
+                landscapes.append(card)
+            }
+            if landscapes.count == maxLandscape { break }
+        }
+        return landscapes
+    }
+    
+    func areLandscapesValid(_ landscapes: [Card]) -> Bool {
+        guard
+            (landscapes.filter { $0.types.contains("Event") }).count <= maxEvents,
+            (landscapes.filter { $0.types.contains("Landmark") }).count <= maxLandmarks,
+            (landscapes.filter { $0.types.contains("Project") }).count <= maxProjects,
+            (landscapes.filter { $0.types.contains("Way") }).count <= maxWays
+        else { return false }
+        return true
     }
     
     // MARK: Utility Methods

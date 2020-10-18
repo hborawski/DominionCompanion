@@ -12,8 +12,7 @@ struct SetBuilderView: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
     
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
-    
-    @State var selectExpansions = false
+
     var body: some View {
         NavigationView {
             VStack {
@@ -32,12 +31,15 @@ struct SetBuilderView: View {
                 }
                 .padding(.top, 10)
                 List {
-                    Section(header: Text("Cards")) {
-                        ForEach(setBuilder.currentSet.sorted(by: sortMode.sortFunction()), id: \.name) { card in
+                    Section(header: Text("Landscape Cards")) {
+                        ForEach(setBuilder.landscape, id: \.name) { card in
                             CardRow(card: card).listRowInsets(EdgeInsets())
-                        }.onDelete(perform: { indexSet in
-                            print(indexSet)
-                        })
+                        }
+                    }
+                    Section(header: Text("Cards")) {
+                        ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
+                            CardRow(card: card).listRowInsets(EdgeInsets())
+                        }
                     }
                 }.listStyle(GroupedListStyle())
             }
