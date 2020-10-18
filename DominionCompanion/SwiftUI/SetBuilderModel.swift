@@ -192,7 +192,7 @@ class SetBuilderModel: ObservableObject {
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
             return Settings.shared.chosenExpansions.contains(card.expansion)
-            }).shuffled()
+        }).shuffled().filter { !pinned.contains($0) }
         var landscapes: [Card] = pinned
         for card in pool {
             let temp = landscapes + [card]
