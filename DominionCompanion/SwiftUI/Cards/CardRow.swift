@@ -52,18 +52,27 @@ struct CardRow_Previews: PreviewProvider {
     static let card = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
     static let card2 = Card(cost: 4, debt: 4, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
     static var previews: some View {
-        List {
-            CardRow(card: card) {
-                Button(action: {}, label: {
-                    Image(systemName: "checkmark.circle")
-                })
-            }.listRowInsets(EdgeInsets())
-            
-            CardRow(card: card2) {
-                Button(action: {}, label: {
-                    Image(systemName: "checkmark.circle.fill")
-                })    
-            }.listRowInsets(EdgeInsets())
-        }
+        let cardData = CardData()
+        let cards = Array(cardData.allCards.shuffled()[0...4])
+        return List {
+            Section(header: Text("Unpinned")) {
+                ForEach(cards, id: \.name) { card in
+                    CardRow(card: card) {
+                        Button(action: {}, label: {
+                            Image(systemName: "checkmark.circle")
+                        })
+                    }.listRowInsets(EdgeInsets())
+                }
+            }
+            Section(header: Text("Pinned")) {
+                ForEach(cards, id: \.name) { card in
+                    CardRow(card: card) {
+                        Button(action: {}, label: {
+                            Image(systemName: "checkmark.circle.fill")
+                        })
+                    }.listRowInsets(EdgeInsets())
+                }
+            }
+        }.listStyle(GroupedListStyle())
     }
 }

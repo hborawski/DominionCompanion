@@ -16,30 +16,30 @@ struct SearchBar: View {
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: 8)
-            .foregroundColor(Color(.systemGray6))
-            .padding(8)
-            .frame(minWidth: 10, idealWidth: 20, maxWidth: nil, minHeight: 20, idealHeight: 56, maxHeight: 56, alignment: .center)
-            .overlay(HStack {
-                Image(systemName: "magnifyingglass").foregroundColor(Color(.systemGray))
-                    .padding(.leading, 16)
-                TextField("Search", text: $text).foregroundColor(.primary).onTapGesture {
-                    self.editing = true
+                .foregroundColor(Color(.systemGray6))
+                .padding(8)
+                .frame(minWidth: 10, idealWidth: 20, maxWidth: nil, minHeight: 20, idealHeight: 56, maxHeight: 56, alignment: .center)
+                .overlay(HStack {
+                    Image(systemName: "magnifyingglass").foregroundColor(Color(.systemGray))
+                        .padding(.leading, 16)
+                    TextField("Search", text: $text).foregroundColor(.primary).onTapGesture {
+                        self.editing = true
                     }.autocapitalization(.none).disableAutocorrection(true)
-                if !self.text.isEmpty {
-                    Button(action: {
-                        self.text = ""
-                    }) {
-                        Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray)).padding(.trailing, 16)
+                    if !self.text.isEmpty {
+                        Button(action: {
+                            self.text = ""
+                        }) {
+                            Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray)).padding(.trailing, 16)
+                        }
                     }
-                }
-            })
+                })
                 .animation(.spring())
             if editing {
                 Button(action: {
                     self.editing = false
                     self.text = ""
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-
+                    
                 }) {
                     Text("Cancel").foregroundColor(Color(.systemGray))
                 }.padding(.trailing, 8)
