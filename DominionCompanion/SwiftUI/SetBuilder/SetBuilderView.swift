@@ -13,6 +13,7 @@ struct SetBuilderView: View {
     
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
 
+    @ViewBuilder
     var body: some View {
         NavigationView {
             VStack {
@@ -33,13 +34,14 @@ struct SetBuilderView: View {
                 List {
                     Section(header: Text("Landscape Cards")) {
                         ForEach(setBuilder.landscape, id: \.name) { card in
+                            let pinButton = Button(action: {setBuilder.pin(card)}, label: {
+                                Image(systemName: setBuilder.pinnedLandscape.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                            }).buttonStyle(PlainButtonStyle())
                             NavigationLink(
-                                destination: CardView(card: card),
+                                destination: CardView(card: card) { pinButton },
                                 label: {
                                     CardRow(card: card) {
-                                        Button(action: {setBuilder.pin(card)}, label: {
-                                            Image(systemName: setBuilder.pinnedLandscape.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
-                                        }).buttonStyle(PlainButtonStyle())
+                                        pinButton
                                     }
                                 })
                                 .buttonStyle(PlainButtonStyle())
@@ -48,13 +50,14 @@ struct SetBuilderView: View {
                     }
                     Section(header: Text("Cards")) {
                         ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
+                            let pinButton = Button(action: {setBuilder.pin(card)}, label: {
+                                Image(systemName: setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                            }).buttonStyle(PlainButtonStyle())
                             NavigationLink(
-                                destination: CardView(card: card),
+                                destination: CardView(card: card) { pinButton },
                                 label: {
                                     CardRow(card: card) {
-                                        Button(action: {setBuilder.pin(card)}, label: {
-                                            Image(systemName: setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
-                                        }).buttonStyle(PlainButtonStyle())
+                                        pinButton
                                     }
                                 })
                                 .buttonStyle(PlainButtonStyle())

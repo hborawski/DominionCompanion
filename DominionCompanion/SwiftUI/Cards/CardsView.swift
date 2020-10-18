@@ -9,16 +9,25 @@
 import SwiftUI
 
 struct CardsView: View {
+    @EnvironmentObject var setBuilder: SetBuilderModel
+
     var cards: [Card]
     
     var title: String?
     
     @State var searchText: String = ""
+    
+    @ViewBuilder
     var body: some View {
         List {
             SearchBar(text: $searchText)
             ForEach(cards.filter { searchText != "" ? $0.name.lowercased().contains(searchText) : true }, id: \.name) { card in
-                NavigationLink(destination: CardView(card: card)) {
+                let pinButton = Button(action: {setBuilder.pin(card)}, label: {
+                    Image(systemName: setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                }).buttonStyle(PlainButtonStyle())
+                NavigationLink(
+                    destination: CardView(card: card) { pinButton }
+                ) {
                     CardRow(card: card) { EmptyView() }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))

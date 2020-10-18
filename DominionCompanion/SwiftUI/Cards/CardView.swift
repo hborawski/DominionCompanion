@@ -8,10 +8,13 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct CardView<T>: View where T: View {
     @AppStorage(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLink: Bool = false
     @EnvironmentObject var cardData: CardData
     var card: Card
+    
+    var accessory: (() -> T) = { EmptyView() as! T }
+    
     var link: URL? {
         guard
             let path = card.name.replacingOccurrences(of: " ", with: "_").addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
@@ -77,6 +80,7 @@ struct CardView: View {
             }
         }
         .navigationTitle(Text(card.name))
+        .navigationBarItems(trailing: self.accessory())
     }
 }
 
@@ -85,7 +89,7 @@ struct CardView_Previews: PreviewProvider {
     static let card = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 0, name: "Village", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
     static var previews: some View {
         NavigationView {
-            CardView(card: card)
+            CardView<EmptyView>(card: card)
         }
     }
 }

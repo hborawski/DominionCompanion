@@ -31,6 +31,14 @@ class SetBuilderModel: ObservableObject {
     
     init(_ cardData: CardData) {
         self.cardData = cardData
+        
+        $pinnedCards.sink { (pinned) in
+            Just(Array(Set(pinned).union(Set(self.cards)))).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
+        }.store(in: &bag)
+        
+        $pinnedLandscape.sink { (pinned) in
+            Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
+        }.store(in: &bag)
     }
     
     func pin(_ card: Card) {
