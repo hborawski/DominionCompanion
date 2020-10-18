@@ -25,7 +25,11 @@ struct GlobalExclusions: View {
     var body: some View {
         let pinButton = { card in
             Button(action: {self.exclude(card)}, label: {
-                Image(systemName: cardData.excluded.contains(card) ? "xmark.circle.fill" : "xmark.circle").foregroundColor(.blue)
+                if cardData.excluded.contains(card) {
+                    Image(systemName: "xmark.circle.fill").foregroundColor(.red)
+                } else {
+                    Image(systemName: "xmark.circle").foregroundColor(.gray)
+                }
             }).buttonStyle(PlainButtonStyle())
         }
         List {
@@ -62,7 +66,7 @@ struct GlobalExclusions: View {
 struct GlobalExclusions_Previews: PreviewProvider {
     static var previews: some View {
         let cardData = CardData()
-        cardData.excluded = Array(cardData.allCards.shuffled()[0...9])
+        cardData.excluded = Array(cardData.allCards[0...9])
         return GlobalExclusions().environmentObject(cardData)
     }
 }

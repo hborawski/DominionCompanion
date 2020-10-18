@@ -18,7 +18,11 @@ struct NavigationCardRow: View {
     var body: some View {
         let pinButton = { c in
             Button(action: {setBuilder.pin(c)}, label: {
-                Image(systemName: setBuilder.pinnedCards.contains(c) || setBuilder.pinnedLandscape.contains(c) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                if setBuilder.pinnedCards.contains(c) || setBuilder.pinnedLandscape.contains(c) {
+                    Image(systemName: "checkmark.circle.fill").foregroundColor(.blue)
+                } else {
+                    Image(systemName: "checkmark.circle").foregroundColor(.gray)
+                }
             }).buttonStyle(PlainButtonStyle())
         }
         NavigationLink(
@@ -44,8 +48,10 @@ struct NavigationCardRow_Previews: PreviewProvider {
     static var previews: some View {
         let cardData = CardData()
         let model = SetBuilderModel(cardData)
+        model.pinnedCards.append(cardData.allCards[1])
         return List {
-            NavigationCardRow(card: cardData.allCards.shuffled()[0]).environmentObject(model)
+            NavigationCardRow(card: cardData.allCards[0]).environmentObject(model)
+            NavigationCardRow(card: cardData.allCards[1]).environmentObject(model)
         }
     }
 }
