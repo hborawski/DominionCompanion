@@ -25,7 +25,7 @@ struct DebtView: View {
             path.addLine(to: CGPoint(x: 0, y: buffer + tall))                         // \
             path.addLine(to: CGPoint(x: short, y: buffer))
         }.foregroundColor(Color(UIColor(named: "Debt") ?? UIColor()))
-        .overlay(Text("\(value)"))
+        .overlay(Text("\(value)").foregroundColor(.black))
         .frame(width: 36, height: 36)
     }
 }

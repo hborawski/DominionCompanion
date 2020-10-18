@@ -13,7 +13,7 @@ struct CostView: View {
     var body: some View {
         Circle()
             .foregroundColor(Color(UIColor(named: "Treasure") ?? UIColor()))
-            .overlay(Text("\(value)"))
+            .overlay(Text("\(value)").foregroundColor(.black))
             .frame(width: 36)
     }
 }
