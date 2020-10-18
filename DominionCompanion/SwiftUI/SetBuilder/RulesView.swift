@@ -41,6 +41,13 @@ struct RulesView: View {
 
 struct RulesView_Previews: PreviewProvider {
     static var previews: some View {
-        RulesView()
+        let cardData = CardData()
+        let model = SetBuilderModel(cardData)
+        model.rules = [
+            SetRule(value: 2, operation: .greater, cardRules: [
+                CardRule(property: .actions, operation: .equal, comparisonValue: "2")
+            ])
+        ]
+        return RulesView().environmentObject(model)
     }
 }

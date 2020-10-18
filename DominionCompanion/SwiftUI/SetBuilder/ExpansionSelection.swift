@@ -41,8 +41,8 @@ struct ExpansionSelection: View {
     }
 }
 
-//struct ExpansionSelection_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExpansionSelection()
-//    }
-//}
+struct ExpansionSelection_Previews: PreviewProvider {
+    static var previews: some View {
+        ExpansionSelection().environmentObject(CardData())
+    }
+}

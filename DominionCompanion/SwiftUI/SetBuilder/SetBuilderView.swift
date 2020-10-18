@@ -14,7 +14,7 @@ struct SetBuilderView: View {
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansion: Bool = false
-
+    
     @State var setup = false
     
     @ViewBuilder
@@ -51,26 +51,31 @@ struct SetBuilderView: View {
             .navigationTitle("Set Builder")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: HStack {
-                        Button(action: {
-                            self.setup.toggle()
-                        }, label: {
-                            Image(systemName: "play.fill")
-                        })
+                Button(action: {
+                    self.setup.toggle()
+                }, label: {
+                    Image(systemName: "play.fill")
+                })
+            })
+            .background(
+                NavigationLink(
+                    destination: GameplaySetup(model: setBuilder.finalSet),
+                    isActive: $setup,
+                    label: {
+                        EmptyView()
                     })
-                    .background(
-                        NavigationLink(
-                            destination: GameplaySetup(model: setBuilder.finalSet),
-                            isActive: $setup,
-                            label: {
-                                EmptyView()
-                            })
-                    )
+            )
         }
     }
 }
 
 struct SetBuilderView_Previews: PreviewProvider {
     static var previews: some View {
-        SetBuilderView().environmentObject(SetBuilderModel(CardData()))
+        let cardData = CardData()
+        let model = SetBuilderModel(cardData)
+        model.pinnedCards = Array(cardData.cardsFromChosenExpansions.shuffled()[0...9])
+        model.pinnedLandscape = [cardData.allEvents[0]]
+        model.pinnedLandscape.append(cardData.allWays[0])
+        return SetBuilderView().environmentObject(model)
     }
 }

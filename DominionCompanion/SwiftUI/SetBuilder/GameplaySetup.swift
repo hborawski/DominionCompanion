@@ -86,8 +86,15 @@ struct GameplaySetup: View {
 
 struct GameplaySetup_Previews: PreviewProvider {
     static var previews: some View {
-        GameplaySetup(
-            model: SetModel(landmarks: [], events: [], projects: [], ways: [], cards: [])
-        )
+        let cardData = CardData()
+        return GameplaySetup(
+            model: SetModel(
+                landmarks: [],
+                events: [],
+                projects: [],
+                ways: [],
+                cards: Array(cardData.cardsFromChosenExpansions.shuffled()[0...9])
+            )
+        ).environmentObject(cardData)
     }
 }

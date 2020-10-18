@@ -42,8 +42,10 @@ struct CardRuleRow: View {
     }
 }
 
-//struct CardRuleRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardRuleRow()
-//    }
-//}
+struct CardRuleRow_Previews: PreviewProvider {
+    static let defaultRule = CardRule(property: .cost, operation: .greater, comparisonValue: "0")
+    @ObservedObject static var rule: SetRule = SetRule(value: 0, operation: .greater, cardRules: [defaultRule])
+    static var previews: some View {
+        CardRuleRow(property: $rule.cardRules[0].property, operation: $rule.cardRules[0].operation, value: $rule.cardRules[0].comparisonValue).environmentObject(CardData())
+    }
+}

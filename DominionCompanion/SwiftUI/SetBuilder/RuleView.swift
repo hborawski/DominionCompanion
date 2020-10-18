@@ -86,8 +86,10 @@ struct RuleView: View {
     }
 }
 
-//struct RuleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RuleView()
-//    }
-//}
+struct RuleView_Previews: PreviewProvider {
+    static var previews: some View {
+        let cardData = CardData()
+        let model = SetBuilderModel(cardData)
+        return RuleView().environmentObject(cardData).environmentObject(model)
+    }
+}

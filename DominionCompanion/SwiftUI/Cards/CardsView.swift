@@ -43,11 +43,10 @@ struct CardsView<T>: View where T: View {
 }
 
 struct CardsView_Previews: PreviewProvider {
-    static let tokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
-    static let card = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action", "Duration"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
     static var previews: some View {
-        NavigationView {
-            CardsView<EmptyView>(cards: [card])
+        let cardData = CardData()
+        return NavigationView {
+            CardsView<EmptyView>(cards: cardData.allCards)
         }
     }
 }

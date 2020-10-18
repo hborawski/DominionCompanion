@@ -195,8 +195,7 @@ class SetBuilderModel: ObservableObject {
         }).shuffled().filter { !pinned.contains($0) }
         var landscapes: [Card] = pinned
         for card in pool {
-            let temp = landscapes + [card]
-            if areLandscapesValid(temp) {
+            if areLandscapesValid(landscapes + [card]) {
                 landscapes.append(card)
             }
             if landscapes.count == maxLandscape { break }

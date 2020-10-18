@@ -40,8 +40,12 @@ struct NavigationCardRow: View {
     }
 }
 
-//struct NavigationCardRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationCardRow()
-//    }
-//}
+struct NavigationCardRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let cardData = CardData()
+        let model = SetBuilderModel(cardData)
+        return List {
+            NavigationCardRow(card: cardData.allCards.shuffled()[0]).environmentObject(model)
+        }
+    }
+}

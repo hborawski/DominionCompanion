@@ -61,6 +61,8 @@ struct GlobalExclusions: View {
 
 struct GlobalExclusions_Previews: PreviewProvider {
     static var previews: some View {
-        GlobalExclusions()
+        let cardData = CardData()
+        cardData.excluded = Array(cardData.allCards.shuffled()[0...9])
+        return GlobalExclusions().environmentObject(cardData)
     }
 }

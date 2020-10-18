@@ -38,6 +38,8 @@ struct TabContainer: View {
 
 struct TabContainer_Previews: PreviewProvider {
     static var previews: some View {
-        TabContainer()
+        let cardData = CardData()
+        let model = SetBuilderModel(cardData)
+        return TabContainer().environmentObject(cardData).environmentObject(model)
     }
 }

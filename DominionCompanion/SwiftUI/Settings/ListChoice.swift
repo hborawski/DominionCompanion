@@ -45,6 +45,8 @@ struct ListChoice: View {
 
 struct ListChoice_Previews: PreviewProvider {
     static var previews: some View {
-        ListChoice(title: "Test", value: "1", values: ["0", "1", "2"]) {_ in}
+        List {
+            ListChoice(title: "Test", value: "1", values: ["0", "1", "2"]) {_ in}
+        }
     }
 }
