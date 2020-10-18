@@ -19,7 +19,7 @@ struct CardsView: View {
             SearchBar(text: $searchText)
             ForEach(cards.filter { searchText != "" ? $0.name.lowercased().contains(searchText) : true }, id: \.name) { card in
                 NavigationLink(destination: CardView(card: card)) {
-                    CardRow(card: card)
+                    CardRow(card: card) { EmptyView() }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
             }

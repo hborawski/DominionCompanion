@@ -33,12 +33,32 @@ struct SetBuilderView: View {
                 List {
                     Section(header: Text("Landscape Cards")) {
                         ForEach(setBuilder.landscape, id: \.name) { card in
-                            CardRow(card: card).listRowInsets(EdgeInsets())
+                            NavigationLink(
+                                destination: CardView(card: card),
+                                label: {
+                                    CardRow(card: card) {
+                                        Button(action: {setBuilder.pin(card)}, label: {
+                                            Image(systemName: setBuilder.pinnedLandscape.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                                        }).buttonStyle(PlainButtonStyle())
+                                    }
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                         }
                     }
                     Section(header: Text("Cards")) {
                         ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                            CardRow(card: card).listRowInsets(EdgeInsets())
+                            NavigationLink(
+                                destination: CardView(card: card),
+                                label: {
+                                    CardRow(card: card) {
+                                        Button(action: {setBuilder.pin(card)}, label: {
+                                            Image(systemName: setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                                        }).buttonStyle(PlainButtonStyle())
+                                    }
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
                         }
                     }
                 }.listStyle(GroupedListStyle())
@@ -51,6 +71,6 @@ struct SetBuilderView: View {
 
 struct SetBuilderView_Previews: PreviewProvider {
     static var previews: some View {
-        SetBuilderView()
+        SetBuilderView().environmentObject(SetBuilderModel(CardData()))
     }
 }

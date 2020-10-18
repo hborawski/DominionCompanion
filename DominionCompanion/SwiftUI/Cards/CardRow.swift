@@ -8,13 +8,16 @@
 
 import SwiftUI
 
-struct CardRow: View {
+struct CardRow<T>: View where T: View {
     var card: Card
+    
+    var accessory: () -> T
     
     var colors: [UIColor]
     
-    init(card: Card) {
+    init(card: Card, @ViewBuilder accessory: @escaping () -> T) {
         self.card = card
+        self.accessory = accessory
         colors = card.types.compactMap { UIColor(named: $0) }
     }
 
@@ -38,6 +41,8 @@ struct CardRow: View {
                 DebtView(value: card.debt)
             }
             Text(card.name)
+            Spacer()
+            self.accessory().padding(.trailing, 10)
         }
     }
 }
@@ -48,8 +53,12 @@ struct CardRow_Previews: PreviewProvider {
     static let card2 = Card(cost: 4, debt: 4, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
     static var previews: some View {
         List {
-            CardRow(card: card).listRowInsets(EdgeInsets())
-            CardRow(card: card2).listRowInsets(EdgeInsets())
+            CardRow(card: card) { Button(action: {}, label: {
+                Image(systemName: "checkmark.circle")
+            }) }.listRowInsets(EdgeInsets())
+            CardRow(card: card2) { Button(action: {}, label: {
+                Image(systemName: "checkmark.circle.fill")
+            }) }.listRowInsets(EdgeInsets())
         }
     }
 }

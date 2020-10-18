@@ -15,8 +15,11 @@ class SetBuilderModel: ObservableObject {
     
     @Published var rules: [SetRule] = []
     
-    
     @Published var cards: [Card] = []
+    
+    @Published var pinnedCards: [Card] = []
+    
+    @Published var pinnedLandscape: [Card] = []
     
     @Published var landscape: [Card] = []
     
@@ -30,10 +33,24 @@ class SetBuilderModel: ObservableObject {
         self.cardData = cardData
     }
     
-    func shuffle() {
-//        Just(Array(cardData.cardsFromChosenExpansions.shuffled()[0..<10])).receive(on: RunLoop.main).assign(to: \.currentSet, on: self).store(in: &bag)
-        
-        getMatchingSet([]) { result in
+    func pin(_ card: Card) {
+        if Set(["Landmark", "Project", "Event", "Way"]).intersection(Set(card.types)).count == 0 {
+            if pinnedCards.contains(card) {
+                Just(pinnedCards.filter { $0.name != card.name}).receive(on: RunLoop.main).assign(to: \.pinnedCards, on: self).store(in: &bag)
+            } else {
+                Just(pinnedCards + [card]).receive(on: RunLoop.main).assign(to: \.pinnedCards, on: self).store(in: &bag)
+            }
+        } else {
+            if pinnedLandscape.contains(card) {
+                Just(pinnedLandscape.filter { $0.name != card.name}).receive(on: RunLoop.main).assign(to: \.pinnedLandscape, on: self).store(in: &bag)
+            } else {
+                Just(pinnedLandscape + [card]).receive(on: RunLoop.main).assign(to: \.pinnedLandscape, on: self).store(in: &bag)
+            }
+        }
+    }
+    
+    func shuffle() {        
+        getMatchingSet(pinnedCards) { result in
             switch result {
             case .success(let cards):
                 Just(cards).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
@@ -42,7 +59,7 @@ class SetBuilderModel: ObservableObject {
             }
         }
         
-        Just(getLandscapeCards()).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
+        Just(getLandscapeCards(pinnedLandscape)).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
     }
     
     
@@ -50,7 +67,7 @@ class SetBuilderModel: ObservableObject {
         guard pinned.count < 10, self.cardData.cardsFromChosenExpansions.count >= 10 else { return completion(.success(pinned)) }
         let cardCopy = self.cardData.cardsFromChosenExpansions
         guard rules.count > 0 else {
-            return completion(.success(pinned + Array(cardCopy.shuffled()[0..<(10 - pinned.count)])))
+            return completion(.success(pinned + Array(cardCopy.shuffled().filter { !pinned.contains($0) }[0..<(10 - pinned.count)])))
         }
         guard rulesCanBeSatisfied(cardCopy, self.rules) else {
             Logger.shared.w("A set cannot be made with the current rules")
@@ -137,14 +154,13 @@ class SetBuilderModel: ObservableObject {
         }
     }
     
-    func getLandscapeCards() -> [Card] {
+    func getLandscapeCards(_ pinned: [Card]) -> [Card] {
         guard maxLandscape > 0 else { return [] }
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
             return Settings.shared.chosenExpansions.contains(card.expansion)
             }).shuffled()
-//        var landscapes: [Card] = pinnedEvents + pinnedLandmarks + pinnedProjects + pinnedWays
-        var landscapes: [Card] = []
+        var landscapes: [Card] = pinned
         for card in pool {
             let temp = landscapes + [card]
             if areLandscapesValid(temp) {
