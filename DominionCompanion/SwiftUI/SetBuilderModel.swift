@@ -13,6 +13,8 @@ class SetBuilderModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let cardData: CardData
     
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [SetRule] = []
+    
     @Published var rules: [SetRule] = []
     
     @Published var cards: [Card] = []
@@ -43,6 +45,14 @@ class SetBuilderModel: ObservableObject {
             if Set(pinned).intersection(Set(self.landscape)).count != pinned.count {
                 Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
             }
+        }.store(in: &bag)
+        
+        // Load from UserDefaults
+        rules = pinnedRules
+        
+        // When it's updated, save to UserDefaults
+        $rules.sink { rules in
+            self.pinnedRules = rules
         }.store(in: &bag)
     }
     
