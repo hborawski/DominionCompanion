@@ -21,19 +21,24 @@ struct GlobalExclusions: View {
 
     @State var newExclusion: Bool = false
     
+    @ViewBuilder
     var body: some View {
+        let pinButton = { card in
+            Button(action: {self.exclude(card)}, label: {
+                Image(systemName: cardData.excluded.contains(card) ? "xmark.circle.fill" : "xmark.circle").foregroundColor(.blue)
+            }).buttonStyle(PlainButtonStyle())
+        }
         List {
             ForEach(cardData.excluded, id: \.name) { card in
-                let pinButton = Button(action: {self.exclude(card)}, label: {
-                    Image(systemName: cardData.excluded.contains(card) ? "xmark.circle.fill" : "xmark.circle").foregroundColor(.blue)
-                }).buttonStyle(PlainButtonStyle())
                 NavigationLink(
-                    destination: CardView(card: card) { _ in pinButton }
+                    destination: CardView(card: card, accessory: pinButton)
                 ) {
-                    CardRow(card: card) { pinButton }
+                    CardRow(card: card) { EmptyView() }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
-            }
+            }.onDelete(perform: { indexSet in
+                cardData.excluded.remove(atOffsets: indexSet)
+            })
         }
         .navigationTitle(Text("Excluded Cards"))
         .navigationBarItems(trailing: HStack {
@@ -45,11 +50,7 @@ struct GlobalExclusions: View {
         })
         .background(
             NavigationLink(
-                destination: CardsView(cards: cardData.allCards, title: "Exclude Card", accessory: { card in
-                    Button(action: {self.exclude(card)}, label: {
-                        Image(systemName: cardData.excluded.contains(card) ? "xmark.circle.fill" : "xmark.circle").foregroundColor(.blue)
-                    }).buttonStyle(PlainButtonStyle())
-                }, showOnRow: true),
+                destination: CardsView(cards: cardData.allCards, title: "Exclude Card", accessory: pinButton, showOnRow: true),
                 isActive: $newExclusion,
                 label: {
                     EmptyView()
