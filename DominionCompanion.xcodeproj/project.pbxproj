@@ -38,6 +38,8 @@
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* CardRuleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* CardRuleRow.swift */; };
 		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
+		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
+		AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */; };
 		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
@@ -149,6 +151,8 @@
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* CardRuleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRuleRow.swift; sourceTree = "<group>"; };
 		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
+		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
+		AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCardRow.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* CardRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRule.swift; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 				AF1A5E672529101C0050DE4E /* RuleRow.swift */,
 				AF4E49F7252916FE00410D10 /* RuleView.swift */,
 				AF4E49FC25291D3100410D10 /* CardRuleRow.swift */,
+				AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */,
+				AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */,
 			);
 			path = SetBuilder;
 			sourceTree = "<group>";
@@ -648,6 +654,7 @@
 				AFE8EE4022A4843B008E09B2 /* CardViewController.swift in Sources */,
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
 				AF1B6EB1232432A700ADA74D /* RuleEngine.swift in Sources */,
+				AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */,
 				AF1A5E4D25259A5D0050DE4E /* SetBuilderModel.swift in Sources */,
 				AF71F69C236FB19700BCB9EA /* SetRuleViewController.swift in Sources */,
 				AF1B6EA62324219900ADA74D /* SetBuilderViewController.swift in Sources */,
@@ -683,6 +690,7 @@
 				AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */,
 				AF1A5E29252559700050DE4E /* CostView.swift in Sources */,
 				AF1A5E3C252581D60050DE4E /* SearchBar.swift in Sources */,
+				AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,
 				AF1A5E0425254D6F0050DE4E /* DominionCompanion.swift in Sources */,
 				AF1B6EB32324334F00ADA74D /* SetRule.swift in Sources */,

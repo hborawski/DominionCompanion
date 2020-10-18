@@ -31,6 +31,16 @@ class SetBuilderModel: ObservableObject {
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumProjects) var maxProjects: Int = 0
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumWays) var maxWays: Int = 0
     
+    var finalSet: SetModel {
+        SetModel(
+            landmarks: landscape.filter { $0.types.contains("Landmark")},
+            events: landscape.filter { $0.types.contains("Event")},
+            projects: landscape.filter { $0.types.contains("Project")},
+            ways: landscape.filter { $0.types.contains("Way")},
+            cards: cards
+        )
+    }
+    
     init(_ cardData: CardData) {
         self.cardData = cardData
         
