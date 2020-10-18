@@ -33,11 +33,16 @@ class SetBuilderModel: ObservableObject {
         self.cardData = cardData
         
         $pinnedCards.sink { (pinned) in
-            Just(Array(Set(pinned).union(Set(self.cards)))).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
+            // Only update if the newly pinned card is not already in the set of cards (pinned from search)
+            if Set(pinned).intersection(Set(self.cards)).count != pinned.count {
+                Just(Array(Set(pinned).union(Set(self.cards)))).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
+            }
         }.store(in: &bag)
         
         $pinnedLandscape.sink { (pinned) in
-            Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
+            if Set(pinned).intersection(Set(self.landscape)).count != pinned.count {
+                Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
+            }
         }.store(in: &bag)
     }
     
