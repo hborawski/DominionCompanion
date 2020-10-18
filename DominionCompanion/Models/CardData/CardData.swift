@@ -15,6 +15,8 @@ class CardData: ObservableObject {
     @UserDefaultsBackedCodable(Constants.SaveKeys.savedExcludedCards)
     var excludedCards: [Card] = []
     
+    @Published var excluded: [Card] = []
+    
     let allCards: [Card]
     
     var kingdomCards: [Card]
@@ -61,6 +63,8 @@ class CardData: ObservableObject {
         }
     }
     
+    private var bag = Set<AnyCancellable>()
+    
     init() {
         if
             let path = Bundle.main.path(forResource: "cards", ofType: "json"),
@@ -90,5 +94,7 @@ class CardData: ObservableObject {
             return Array(Set(allTypes).union(Set(types)))
         }).sorted()
         
+        excluded = excludedCards
+        $excluded.sink { self.excludedCards = $0 }.store(in: &bag)
     }
 }

@@ -13,7 +13,7 @@ struct CardView<T>: View where T: View {
     @EnvironmentObject var cardData: CardData
     var card: Card
     
-    var accessory: (() -> T) = { EmptyView() as! T }
+    var accessory: ((Card) -> T) = { _ in EmptyView() as! T }
     
     var link: URL? {
         guard
@@ -32,7 +32,8 @@ struct CardView<T>: View where T: View {
                     NavigationLink(
                         destination: CardsView(
                             cards: cardData.allCards.filter { $0.expansion == card.expansion },
-                            title: card.expansion
+                            title: card.expansion,
+                            accessory: self.accessory
                         )
                     ) {
                         HStack {
@@ -64,7 +65,8 @@ struct CardView<T>: View where T: View {
                     NavigationLink(
                         destination: CardsView(
                             cards: card.relatedCards,
-                            title: "Related Cards"
+                            title: "Related Cards",
+                            accessory: self.accessory
                         )
                     ) {
                         HStack {
@@ -80,7 +82,7 @@ struct CardView<T>: View where T: View {
             }
         }
         .navigationTitle(Text(card.name))
-        .navigationBarItems(trailing: self.accessory())
+        .navigationBarItems(trailing: self.accessory(self.card))
     }
 }
 

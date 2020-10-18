@@ -10,6 +10,8 @@ import SwiftUI
 
 struct TabContainer: View {
     @EnvironmentObject var cardData: CardData
+    @EnvironmentObject var setBuilder: SetBuilderModel
+
     var body: some View {
         TabView {
             SetBuilderView().tabItem {
@@ -17,7 +19,11 @@ struct TabContainer: View {
                 Text("Set Builder")
             }
             NavigationView {
-                CardsView(cards: cardData.allCards)
+                CardsView(cards: cardData.allCards, title: nil, accessory: { card in
+                    Button(action: {setBuilder.pin(card)}, label: {
+                        Image(systemName: setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
+                    }).buttonStyle(PlainButtonStyle())
+                }, showOnRow: false)
             }.tabItem {
                 Image("Card")
                 Text("Cards")

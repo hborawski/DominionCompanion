@@ -37,6 +37,7 @@
 		AF1B6ED1232DB1AD00ADA74D /* ExpansionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */; };
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* CardRuleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* CardRuleRow.swift */; };
+		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
 		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
@@ -147,6 +148,7 @@
 		AF1B6ED0232DB1AD00ADA74D /* ExpansionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionsViewController.swift; sourceTree = "<group>"; };
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* CardRuleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRuleRow.swift; sourceTree = "<group>"; };
+		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* CardRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRule.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			children = (
 				AF1A5E14252550AE0050DE4E /* SettingsView.swift */,
 				AF1A5E442525886D0050DE4E /* ListChoice.swift */,
+				AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
 				AF1A5E102525500B0050DE4E /* TabContainer.swift in Sources */,
 				AFD46163241D5D22007720EA /* ScanSetViewController.swift in Sources */,
+				AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */,
 				AF1A5E29252559700050DE4E /* CostView.swift in Sources */,
 				AF1A5E3C252581D60050DE4E /* SearchBar.swift in Sources */,
 				AFE8EE6F22A4982D008E09B2 /* CardsViewController.swift in Sources */,

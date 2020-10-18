@@ -33,7 +33,7 @@ struct RuleView: View {
     var body: some View {
         return Form {
             Section(header: Text("Matching Cards")) {
-                NavigationLink(destination: CardsView(cards: matchingCards)) {
+                NavigationLink(destination: CardsView<EmptyView>(cards: matchingCards)) {
                     Text("\(matchingCards.count)")
                 }
             }

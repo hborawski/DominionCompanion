@@ -69,7 +69,9 @@ struct SettingsView: View {
                     }
                 }
                 Section(header: Text("Miscellaneous")) {
-                    
+                    NavigationLink(destination: GlobalExclusions()) {
+                        Text("Global Exclusions")
+                    }
                 }
             }
             .listStyle(GroupedListStyle())
