@@ -25,22 +25,32 @@ struct NavigationCardRow: View {
                 }
             }).buttonStyle(PlainButtonStyle())
         }
-        NavigationLink(
-            destination: CardView(card: card, accessory: pinButton),
-            label: {
-                if self.showExpansion {
+        let pinned = setBuilder.pinnedCards.contains(card) || setBuilder.pinnedLandscape.contains(card)
+        let image = Image(systemName: pinned ? "xmark" : "checkmark")
+        let color = pinned ? Color.red : Color.blue
+        SwipableRow(
+            actions: [
+                (0, image, color, {setBuilder.pin(card)}),
+            ]
+        ) {
+            NavigationLink(
+                destination: CardView(card: card, accessory: pinButton),
+                label: {
                     CardRow(card: card) {
                         HStack {
-                            Text(card.expansion).foregroundColor(.gray)
-                            pinButton(card)
+                            if self.showExpansion {
+                                Text(card.expansion).foregroundColor(.gray)
+                            }
+                            if setBuilder.pinnedCards.contains(card) || setBuilder.pinnedLandscape.contains(card) {
+                                Image(systemName: "checkmark").foregroundColor(.blue).padding(.trailing, 0)
+                            }
                         }
                     }
-                } else {
-                    CardRow(card: card) { pinButton(card) }
-                }
-            })
-            .buttonStyle(PlainButtonStyle())
-            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                })
+                .background(Color(.secondarySystemGroupedBackground))
+                .buttonStyle(PlainButtonStyle())
+        }
+        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
     }
 }
 

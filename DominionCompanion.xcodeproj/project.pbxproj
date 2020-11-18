@@ -40,6 +40,7 @@
 		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
 		AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */; };
+		AF60BC6D253D0CA200DC50DE /* SwipableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */; };
 		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
 		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
@@ -153,6 +154,7 @@
 		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
 		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
 		AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCardRow.swift; sourceTree = "<group>"; };
+		AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableRow.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* CardRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRule.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				AF1A5E0F2525500B0050DE4E /* TabContainer.swift */,
 				AF1A5E3B252581D60050DE4E /* SearchBar.swift */,
 				AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */,
+				AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				AF1A5E3425255F140050DE4E /* CardView.swift in Sources */,
 				AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
+				AF60BC6D253D0CA200DC50DE /* SwipableRow.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AFD02B95246C727A00D14D61 /* Logger.swift in Sources */,
 				AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */,
