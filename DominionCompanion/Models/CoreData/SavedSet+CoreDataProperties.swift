@@ -50,4 +50,11 @@ extension SavedSet {
         
         return SetModel(landmarks: landmarks, events: events, projects: projects, ways: ways, cards: cards)
     }
+    
+    var formattedDate: String {
+        let date = self.date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd, YYYY"
+        return formatter.string(from: date)
+    }
 }

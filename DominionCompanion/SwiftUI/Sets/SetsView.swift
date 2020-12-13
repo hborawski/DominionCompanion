@@ -11,27 +11,26 @@ import SwiftUI
 struct SetsView: View {
     var recommendedSets = RecommendedSets.shared
     
+    var savedSets = SavedSets.shared.savedSets
+    
     @State var searchText: String = ""
+    @State var setType = 0
+    
+    @ViewBuilder
     var body: some View {
         NavigationView {
-            List {
+            VStack(spacing: 0) {
                 SearchBar(text: $searchText)
-                ForEach(recommendedSets.sets.filter { set in
-                    guard searchText != "" else { return true }
-                    let matchesExpansion = set.getSetModel().expansions.first { $0.lowercased().contains(searchText.lowercased()) } != nil
-                    return matchesExpansion || set.name?.lowercased().contains(searchText.lowercased()) ?? false
-                }, id: \.self) { set in
-                    let model = set.getSetModel()
-                    NavigationLink(
-                        destination: GameplaySetup(model: model),
-                        label: {
-                            VStack(alignment: .leading) {
-                                Text(set.name ?? "")
-                                Text(model.expansions.joined(separator: ", ")).foregroundColor(.gray)
-                            }
-                        })
+                Picker(selection: $setType, label: EmptyView()) {
+                    Text("Recommended").tag(0)
+                    Text("Saved").tag(1)
+                }.pickerStyle(SegmentedPickerStyle())
+                if setType == 0 {
+                    RecommendedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
+                } else {
+                    SavedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
                 }
-            }.navigationTitle(Text("Recommended Sets"))
+            }.navigationTitle(Text("\(setType == 0 ? "Recommended" : "Saved") Sets"))
         }
     }
 }

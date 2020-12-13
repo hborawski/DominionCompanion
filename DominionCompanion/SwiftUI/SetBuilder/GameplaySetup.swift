@@ -15,6 +15,10 @@ struct GameplaySetup: View {
     
     var model: SetModel
     
+    @State var saveModal: Bool = false
+    
+    @State var saveText: String = ""
+    
     @ViewBuilder
     var body: some View {
         List {
@@ -81,7 +85,18 @@ struct GameplaySetup: View {
                 }
             }
         }.listStyle(InsetGroupedListStyle())
+        .alert(isPresented: $saveModal, TextAlert(title: "Save Set", action: { saveName in
+            guard let name = saveName else { return }
+            SavedSets.shared.saveSet(name: name, model: model)
+        }))
         .navigationTitle(Text("Gameplay Setup"))
+        .navigationBarItems(trailing: HStack {
+            Button(action: {
+                saveModal.toggle()
+            }, label: {
+                Text("Save")
+            })
+        })
     }
 }
 
