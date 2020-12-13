@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct SavedSetsView: View {
-    var savedSets: SavedSets = SavedSets.shared
     @Binding var searchText: String
     
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @FetchRequest(entity: SavedSet.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var sets: FetchedResults<SavedSet>
     @ViewBuilder
     var body: some View {
         List {
-            ForEach(savedSets.savedSets.filter { set in
+            ForEach(sets.filter { set in
                 guard searchText != "" else { return true }
                 let matchesExpansion = set.getSetModel().expansions.first { $0.lowercased().contains(searchText.lowercased()) } != nil
                 return matchesExpansion || set.name.lowercased().contains(searchText.lowercased()) 
@@ -34,7 +36,12 @@ struct SavedSetsView: View {
                     })
             }.onDelete(perform: { indexSet in
                 for index in indexSet {
-                    savedSets.delete(savedSet: savedSets.savedSets[index])
+                    managedObjectContext.delete(sets[index])
+                }
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    Logger.shared.e("Error Deleting set")
                 }
             })
         }

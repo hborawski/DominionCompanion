@@ -8,11 +8,7 @@
 
 import SwiftUI
 
-struct SetsView: View {
-    var recommendedSets = RecommendedSets.shared
-    
-    var savedSets = SavedSets.shared.savedSets
-    
+struct SetsView: View {    
     @State var searchText: String = ""
     @State var setType = 0
     
