@@ -26,13 +26,13 @@ struct NavigationCardRow: View {
             }).buttonStyle(PlainButtonStyle())
         }
         let pinned = setBuilder.pinnedCards.contains(card) || setBuilder.pinnedLandscape.contains(card)
-        let image = Image(systemName: pinned ? "xmark" : "checkmark")
-        let color = pinned ? Color.red : Color.blue
-        SwipableRow(
-            actions: [
-                (0, image, color, {setBuilder.pin(card)}),
-            ]
-        ) {
+//        let image = Image(systemName: pinned ? "xmark" : "checkmark")
+//        let color = pinned ? Color.red : Color.blue
+//        SwipableRow(
+//            actions: [
+//                (0, image, color, {setBuilder.pin(card)}),
+//            ]
+//        ) {
             NavigationLink(
                 destination: CardView(card: card, accessory: pinButton),
                 label: {
@@ -49,8 +49,23 @@ struct NavigationCardRow: View {
                 })
                 .background(Color(.secondarySystemGroupedBackground))
                 .buttonStyle(PlainButtonStyle())
-        }
-        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
+                .contextMenu {
+                    Button(action: {
+                        setBuilder.pin(card)
+                    }, label: {
+                        pinned ?
+                            HStack {
+                                Image(systemName: "xmark")
+                                Text("Unpin")
+                            } :
+                            HStack {
+                                Image(systemName: "checkmark")
+                                Text("Pin")
+                            }
+                    })
+                }
+//        }
+        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 8))
     }
 }
 
