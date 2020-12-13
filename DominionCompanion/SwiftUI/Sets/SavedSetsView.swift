@@ -31,6 +31,7 @@ struct SavedSetsView: View {
                                 Text(set.name)
                                 Text(model.expansions.joined(separator: ", ")).foregroundColor(.gray)
                             }
+                            Spacer()
                             Text(set.formattedDate)
                         }
                     })
