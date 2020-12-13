@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RuleRow: View {
-    var rule: SetRule
+    @ObservedObject var rule: SetRule
     var body: some View {
         HStack {
             HStack {
