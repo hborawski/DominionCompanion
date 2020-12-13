@@ -22,9 +22,12 @@ struct SetBuilderView: View {
         NavigationView {
             VStack {
                 HStack {
-                    Button("Shuffle") {
+                    Button(action: {
                         setBuilder.shuffle()
-                    }.frame(maxWidth: .infinity)
+                    }, label: {
+                        Image(systemName: "shuffle")
+                        Text("Shuffle")
+                    }).frame(maxWidth: .infinity)
                     NavigationLink(destination: ExpansionSelection()) {
                         Image(systemName: "cube.box")
                         Text("Expansions")
@@ -76,6 +79,9 @@ struct SetBuilderView_Previews: PreviewProvider {
         model.pinnedCards = Array(cardData.cardsFromChosenExpansions.shuffled()[0...9])
         model.pinnedLandscape = [cardData.allEvents[0]]
         model.pinnedLandscape.append(cardData.allWays[0])
-        return SetBuilderView().environmentObject(model)
+        return Group {
+            SetBuilderView().environmentObject(model)
+            SetBuilderView().environmentObject(model)
+        }
     }
 }
