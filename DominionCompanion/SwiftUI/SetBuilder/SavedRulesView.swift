@@ -27,12 +27,12 @@ struct SavedRulesView: View {
                 }
                 .contextMenu {
                     Button(action: {
-                        setBuilder.rules = savedRuleSet.decodedRules
+                        setBuilder.rules = savedRuleSet.rules
                     }, label: {
                         Text("Replace Current Rules")
                     })
                     Button(action: {
-                        setBuilder.rules = setBuilder.rules + savedRuleSet.decodedRules
+                        setBuilder.rules = setBuilder.rules + savedRuleSet.rules
                     }, label: {
                         Text("Append to Current Rules")
                     })
@@ -50,15 +50,9 @@ struct SavedRulesView: View {
         .alert(isPresented: $saveModal, TextAlert(title: "Save Current Rules", action: { saveName in
             guard let name = saveName else { return }
             do {
-                let encoder = JSONEncoder()
-                let rules: [String] = try setBuilder.rules.map { rule in
-                    let ruleData = try encoder.encode(rule)
-                    let stringRule = String(data: ruleData, encoding: .utf8)
-                    return stringRule!
-                }
                 let savedSet = SavedRuleSet(context: managedObjectContext)
                 savedSet.name = name
-                savedSet.rules = rules
+                savedSet.rules = setBuilder.rules
                 try managedObjectContext.save()
             } catch(let error) {
                 Logger.shared.e("\(error)")
