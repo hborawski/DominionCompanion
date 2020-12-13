@@ -48,6 +48,8 @@ struct RulesView_Previews: PreviewProvider {
                 CardRule(property: .actions, operation: .equal, comparisonValue: "2")
             ])
         ]
-        return RulesView().environmentObject(model)
+        return NavigationView {
+            RulesView().environmentObject(model)
+        }
     }
 }
