@@ -10,8 +10,9 @@ import SwiftUI
 
 struct RulesView: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
-    
+
     @State var editing = false
+    @State var savedRules = false
     var body: some View {
         List {
             ForEach(setBuilder.rules, id: \.self) { rule in
@@ -27,11 +28,24 @@ struct RulesView: View {
             }, label: {
                 Image(systemName: "plus")
             })
+            Button(action: {
+                self.savedRules.toggle()
+            }, label: {
+                Image(systemName: "list.dash")
+            })
         })
         .background(
             NavigationLink(
                 destination: RuleView(),
                 isActive: $editing,
+                label: {
+                    EmptyView()
+                })
+        )
+        .background(
+            NavigationLink(
+                destination: SavedRulesView(),
+                isActive: $savedRules,
                 label: {
                     EmptyView()
                 })
