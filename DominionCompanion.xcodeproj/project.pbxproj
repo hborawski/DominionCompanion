@@ -70,6 +70,7 @@
 		AF80D70E2364E32F00FDC4D6 /* GameplaySetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80D70D2364E32F00FDC4D6 /* GameplaySetup.storyboard */; };
 		AF80D7122364E4CC00FDC4D6 /* SettingsMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */; };
 		AF80D7142364E7C000FDC4D6 /* ListSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */; };
+		AFA6638925858D5F00E641D8 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6638825858D5F00E641D8 /* SetsView.swift */; };
 		AFAB6EB62457B64900F09799 /* DisclosuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB6EB52457B64900F09799 /* DisclosuresViewController.swift */; };
 		AFB14779235B9F3100CDA293 /* SavedRulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */; };
 		AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB96A992443E6DA00F2046D /* Settings.swift */; };
@@ -173,6 +174,7 @@
 		AF80D70D2364E32F00FDC4D6 /* GameplaySetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameplaySetup.storyboard; sourceTree = "<group>"; };
 		AF80D7112364E4CC00FDC4D6 /* SettingsMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenuModel.swift; sourceTree = "<group>"; };
 		AF80D7132364E7C000FDC4D6 /* ListSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingTableViewController.swift; sourceTree = "<group>"; };
+		AFA6638825858D5F00E641D8 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		AFAB6EB52457B64900F09799 /* DisclosuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosuresViewController.swift; sourceTree = "<group>"; };
 		AFB14778235B9F3100CDA293 /* SavedRulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRulesTableViewController.swift; sourceTree = "<group>"; };
 		AFB96A992443E6DA00F2046D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		AF1A5E0B25254FDB0050DE4E /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6638725858D4900E641D8 /* Sets */,
 				AF1A5E5E25290FAC0050DE4E /* SetBuilder */,
 				AF1A5E43252588600050DE4E /* Settings */,
 				AF1A5E3225255EFF0050DE4E /* Cards */,
@@ -409,6 +412,14 @@
 				AFD02B8E246A363400D14D61 /* SavedSetsTableViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		AFA6638725858D4900E641D8 /* Sets */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6638825858D5F00E641D8 /* SetsView.swift */,
+			);
+			path = Sets;
 			sourceTree = "<group>";
 		};
 		AFB14776235B9EFC00CDA293 /* Rules */ = {
@@ -677,6 +688,7 @@
 				AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
 				AF60BC6D253D0CA200DC50DE /* SwipableRow.swift in Sources */,
+				AFA6638925858D5F00E641D8 /* SetsView.swift in Sources */,
 				AF1B6ECD2325A4F400ADA74D /* SetBuilder.swift in Sources */,
 				AFD02B95246C727A00D14D61 /* Logger.swift in Sources */,
 				AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */,

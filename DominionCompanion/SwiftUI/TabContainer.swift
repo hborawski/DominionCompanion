@@ -28,6 +28,10 @@ struct TabContainer: View {
                 Image("Card")
                 Text("Cards")
             }
+            SetsView().tabItem {
+                Image(systemName: "list.dash")
+                Text("Sets")
+            }
             SettingsView().tabItem {
                 Image(systemName: "gear")
                 Text("Settings")

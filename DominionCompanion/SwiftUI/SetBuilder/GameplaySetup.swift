@@ -81,6 +81,7 @@ struct GameplaySetup: View {
                 }
             }
         }.listStyle(InsetGroupedListStyle())
+        .navigationTitle(Text("Gameplay Setup"))
     }
 }
 

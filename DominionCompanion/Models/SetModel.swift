@@ -197,6 +197,8 @@ struct ShareableSet: Codable {
     var name: String?
 }
 
+extension ShareableSet: Hashable {}
+
 extension ShareableSet {
     func getSetModel() -> SetModel {
         let cards = self.cards.compactMap { (name) -> Card? in
