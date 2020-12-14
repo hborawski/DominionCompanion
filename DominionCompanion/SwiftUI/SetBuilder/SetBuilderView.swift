@@ -53,13 +53,15 @@ struct SetBuilderView: View {
             }
             .navigationTitle("Set Builder")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: HStack {
-                Button(action: {
-                    self.setup.toggle()
-                }, label: {
-                    Image(systemName: "play.fill")
-                })
-            })
+            .toolbar {
+                ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                    Button(action: {
+                        self.setup.toggle()
+                    }, label: {
+                        Image(systemName: "play.fill")
+                    })
+                }
+            }
             .background(
                 NavigationLink(
                     destination: GameplaySetup(model: setBuilder.finalSet),

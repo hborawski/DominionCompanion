@@ -45,13 +45,15 @@ struct GlobalExclusions: View {
             })
         }
         .navigationTitle(Text("Excluded Cards"))
-        .navigationBarItems(trailing: HStack {
-            Button(action: {
-                self.newExclusion.toggle()
-            }, label: {
-                Image(systemName: "plus")
-            })
-        })
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                Button(action: {
+                    self.newExclusion.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
+        }
         .background(
             NavigationLink(
                 destination: CardsView(cards: cardData.allCards, title: "Exclude Card", accessory: pinButton, showOnRow: true),

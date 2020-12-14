@@ -22,18 +22,22 @@ struct RulesView: View {
             }.onDelete(perform: { setBuilder.rules.remove(atOffsets: $0)})
         }
         .navigationTitle("Set Rules")
-        .navigationBarItems(trailing: HStack {
-            Button(action: {
-                self.savedRules.toggle()
-            }, label: {
-                Image(systemName: "list.dash")
-            }).padding(.trailing, 8)
-            Button(action: {
-                self.editing.toggle()
-            }, label: {
-                Image(systemName: "plus")
-            })
-        })
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                Button(action: {
+                    self.savedRules.toggle()
+                }, label: {
+                    Image(systemName: "list.dash")
+                })
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                Button(action: {
+                    self.editing.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
+        }
         .background(
             NavigationLink(
                 destination: RuleView(),

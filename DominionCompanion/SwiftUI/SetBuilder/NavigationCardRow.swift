@@ -34,7 +34,7 @@ struct NavigationCardRow: View {
 //            ]
 //        ) {
             NavigationLink(
-                destination: CardView(card: card, accessory: pinButton),
+                destination: CardView(card: card, accessory: pinButton).navigationBarTitleDisplayMode(.large),
                 label: {
                     CardRow(card: card) {
                         HStack {
