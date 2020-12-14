@@ -80,8 +80,8 @@ struct SetBuilderView_Previews: PreviewProvider {
         model.pinnedLandscape = [cardData.allEvents[0]]
         model.pinnedLandscape.append(cardData.allWays[0])
         return Group {
-            SetBuilderView().environmentObject(model)
-            SetBuilderView().environmentObject(model)
+            SetBuilderView().preferredColorScheme(.light).environmentObject(model)
+            SetBuilderView().preferredColorScheme(.dark).environmentObject(model)
         }
     }
 }
