@@ -16,7 +16,7 @@ struct RulesView: View {
     var body: some View {
         List {
             ForEach(setBuilder.rules, id: \.self) { rule in
-                NavigationLink(destination: RuleView(rule: rule)) {
+                NavigationLink(destination: RuleView(existing: rule)) {
                     RuleRow(rule: rule)
                 }
             }.onDelete(perform: { setBuilder.rules.remove(atOffsets: $0)})
@@ -24,14 +24,14 @@ struct RulesView: View {
         .navigationTitle("Set Rules")
         .navigationBarItems(trailing: HStack {
             Button(action: {
-                self.editing.toggle()
-            }, label: {
-                Image(systemName: "plus")
-            })
-            Button(action: {
                 self.savedRules.toggle()
             }, label: {
                 Image(systemName: "list.dash")
+            }).padding(.trailing, 8)
+            Button(action: {
+                self.editing.toggle()
+            }, label: {
+                Image(systemName: "plus")
             })
         })
         .background(

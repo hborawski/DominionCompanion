@@ -8,12 +8,45 @@
 
 import Foundation
 
-struct CardRule: Codable, Hashable, Identifiable {
+class CardRule: Codable, Hashable, Identifiable, ObservableObject {
+    static func == (lhs: CardRule, rhs: CardRule) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     var id = UUID()
     var type: RuleType { property.inputType }
-    var property: CardProperty
-    var operation: FilterOperation
-    var comparisonValue: String
+    @Published var property: CardProperty
+    @Published var operation: FilterOperation
+    @Published var comparisonValue: String
+    
+    init(property: CardProperty, operation: FilterOperation, comparisonValue: String) {
+        self.property = property
+        self.operation = operation
+        self.comparisonValue = comparisonValue
+    }
+    
+    enum CardRuleCodingKeys: CodingKey {
+        case property
+        case operation
+        case comparisonValue
+    }
+    required init(from decoder: Decoder) throws {
+        let container  = try decoder.container(keyedBy: CardRuleCodingKeys.self)
+        self.property = try container.decode(CardProperty.self, forKey: .property)
+        self.operation = try container.decode(FilterOperation.self, forKey: .operation)
+        self.comparisonValue = try container.decode(String.self, forKey: .comparisonValue)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CardRuleCodingKeys.self)
+        try container.encode(self.property, forKey: .property)
+        try container.encode(self.operation, forKey: .operation)
+        try container.encode(self.comparisonValue, forKey: .comparisonValue)
+    }
 }
 
 enum RuleType: Int, Codable {

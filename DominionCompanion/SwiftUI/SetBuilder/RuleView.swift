@@ -11,7 +11,11 @@ import SwiftUI
 struct RuleView: View {
     static let defaultRule = CardRule(property: .cost, operation: .greater, comparisonValue: "0")
     
-    @ObservedObject var rule: SetRule = SetRule(value: 0, operation: .greater, cardRules: [RuleView.defaultRule])
+    var existing: SetRule?
+    
+    var rule: SetRule {
+        SetRule(value: 0, operation: .greater, cardRules: conditions)
+    }
 
 
     var matchingCards: [Card] {
@@ -23,6 +27,14 @@ struct RuleView: View {
             }
         }
     }
+    
+    @State var operation: FilterOperation = .greaterOrEqual
+    
+    @State var value: Int = 0
+    
+    @State var conditions: [CardRule] = [CardRule(property: .cost, operation: .greater, comparisonValue: "0")]
+    
+    @State var id: UUID? = nil
 
     
     @EnvironmentObject var cardData: CardData
@@ -41,12 +53,12 @@ struct RuleView: View {
                 Image("Card")
                 Text("Cards to match in set")
             }) {
-                Picker("Operation", selection: $rule.operation) {
+                Picker("Operation", selection: $operation) {
                     ForEach(RuleType.number.availableOperations, id: \.self) { operation in
                         Text(operation.rawValue)
                     }
                 }
-                Picker("Number Of Cards", selection: $rule.value) {
+                Picker("Number Of Cards", selection: $value) {
                     ForEach(Array(0...11), id: \.self) { number in
                         Text("\(number)")
                     }
@@ -54,19 +66,16 @@ struct RuleView: View {
             }
             Section(header: Text("Conditions")) {
                 Button("Add Condition") {
-                    rule.cardRules.append(CardRule(property: .cost, operation: .greater, comparisonValue: "0"))
+                    conditions.append(CardRule(property: .cost, operation: .greater, comparisonValue: "0"))
                 }
             }
-            
-            ForEach(Array(zip(rule.cardRules.indices, rule.cardRules)), id: \.1.id) { index, rule in
+            ForEach(conditions, id: \.id) { condition in
                 Section {
                     CardRuleRow(
-                        property: $rule.cardRules[index].property,
-                        operation: $rule.cardRules[index].operation,
-                        value: $rule.cardRules[index].comparisonValue,
-                        onDelete: self.rule.cardRules.count > 1 ?
+                        rule: condition,
+                        onDelete: self.conditions.count > 1 ?
                         {
-                            self.rule.cardRules.remove(at: index)
+                            self.conditions = self.conditions.filter { $0.id != condition.id }
                         }:
                         nil
                     )
@@ -75,14 +84,23 @@ struct RuleView: View {
         }
         .navigationBarItems(trailing: HStack {
             Button("Save") {
-                if let index = setBuilder.rules.firstIndex(where: {$0.id == self.rule.id}) {
-                    setBuilder.rules[index] = rule
+                let newRule = SetRule(value: value, operation: operation, cardRules: conditions)
+                if let index = setBuilder.rules.firstIndex(where: {$0.id == self.id}) {
+                    setBuilder.rules[index] = newRule
                 } else {
-                    setBuilder.rules.append(rule)
+                    setBuilder.rules.append(newRule)
                 }
                 self.presentationMode.wrappedValue.dismiss()
             }
         })
+        .onAppear {
+            if let existingRule = existing, id == nil {
+                operation = existingRule.operation
+                value = existingRule.value
+                conditions = existingRule.cardRules
+                id = existingRule.id
+            }
+        }
     }
 }
 
