@@ -17,10 +17,10 @@ class Logger {
         formatter.dateFormat = "MM-dd-YYYY HH:mm:ss"
     }
     
-    var level: Level = .telemetry
+    var level: Level = .trace
     
     func t(_ message: String) {
-        log(level: .telemetry, message: message)
+        log(level: .trace, message: message)
     }
     
     func d(_ message: String) {
@@ -47,7 +47,7 @@ class Logger {
 }
 
 enum Level: String {
-    case telemetry
+    case trace
     case debug
     case info
     case warning
@@ -55,12 +55,12 @@ enum Level: String {
     
     func shouldLog(at currentLevel: Level) -> Bool {
         switch self {
-        case .telemetry:
-            return currentLevel == .telemetry
+        case .trace:
+            return currentLevel == .trace
         case .debug:
-            return currentLevel == .telemetry || currentLevel == .debug
+            return currentLevel == .trace || currentLevel == .debug
         case .info:
-            return [Level.telemetry, Level.debug, Level.info].contains(currentLevel)
+            return [Level.trace, Level.debug, Level.info].contains(currentLevel)
         case .warning:
             return currentLevel != .error
         case .error:
