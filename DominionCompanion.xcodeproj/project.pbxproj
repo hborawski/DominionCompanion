@@ -52,7 +52,6 @@
 		AFD02B95246C727A00D14D61 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B94246C727A00D14D61 /* Logger.swift */; };
 		AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02B96246CB87900D14D61 /* RecommendedSets.swift */; };
 		AFD02B99246CB9CB00D14D61 /* recommended-sets.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD02B98246CB9CB00D14D61 /* recommended-sets.json */; };
-		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4522A4843C008E09B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4422A4843C008E09B2 /* Assets.xcassets */; };
 		AFE8EE6C22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
 		AFE8EE7222A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
@@ -123,7 +122,6 @@
 		AFD02B96246CB87900D14D61 /* RecommendedSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSets.swift; sourceTree = "<group>"; };
 		AFD02B98246CB9CB00D14D61 /* recommended-sets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "recommended-sets.json"; sourceTree = "<group>"; };
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE4422A4843C008E09B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE8EE4922A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanionTests.swift; sourceTree = "<group>"; };
@@ -154,18 +152,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF1A5E0B25254FDB0050DE4E /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				AF1B6EA8232421B300ADA74D /* models */,
-				AFA7787E25C4CBDF0065D231 /* viewModels */,
-				AFA7785F25C4CA710065D231 /* views */,
-				AFA7785E25C4CA610065D231 /* utilities */,
-				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
 		AF1A5E3225255EFF0050DE4E /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,10 +342,13 @@
 		AFE8EE3C22A4843B008E09B2 /* DominionCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				AF1A5E0B25254FDB0050DE4E /* SwiftUI */,
 				AF1B6EAA232421F500ADA74D /* Assets */,
+				AF1B6EA8232421B300ADA74D /* models */,
+				AFA7787E25C4CBDF0065D231 /* viewModels */,
+				AFA7785F25C4CA710065D231 /* views */,
+				AFA7785E25C4CA610065D231 /* utilities */,
+				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
 				AFE8EE7122A4AFBE008E09B2 /* cards */,
-				AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
 				AFE8EE6B22A49517008E09B2 /* cards.json */,
 				AFD02B98246CB9CB00D14D61 /* recommended-sets.json */,
@@ -502,7 +491,6 @@
 				AF1B6EAF232428ED00ADA74D /* Utilities.swift in Sources */,
 				AF1A5E5A2528FF460050DE4E /* ExpansionSelection.swift in Sources */,
 				AF1A5E1A252550EE0050DE4E /* SetBuilderView.swift in Sources */,
-				AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */,
 				AFCA84162586A1C0008BBAE3 /* RecommendedSetsView.swift in Sources */,
 				AFD02B8C246A331A00D14D61 /* SavedSet+CoreDataClass.swift in Sources */,
 				AF1A5E6025290FBE0050DE4E /* RulesView.swift in Sources */,
