@@ -124,8 +124,6 @@
 		AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE4422A4843C008E09B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE8EE4922A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanionTests.swift; sourceTree = "<group>"; };
-		AFE8EE5422A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE8EE6B22A49517008E09B2 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		AFE8EE7122A4AFBE008E09B2 /* cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cards; sourceTree = "<group>"; };
 		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -327,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				AFE8EE3C22A4843B008E09B2 /* DominionCompanion */,
-				AFE8EE5122A4843C008E09B2 /* DominionCompanionTests */,
 				AFE908D925C4D1D300E8334E /* UnitTests */,
 				AFE8EE3B22A4843B008E09B2 /* Products */,
 			);
@@ -354,15 +351,6 @@
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
 			);
 			path = DominionCompanion;
-			sourceTree = "<group>";
-		};
-		AFE8EE5122A4843C008E09B2 /* DominionCompanionTests */ = {
-			isa = PBXGroup;
-			children = (
-				AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */,
-				AFE8EE5422A4843C008E09B2 /* Info.plist */,
-			);
-			path = DominionCompanionTests;
 			sourceTree = "<group>";
 		};
 		AFE908D925C4D1D300E8334E /* UnitTests */ = {
