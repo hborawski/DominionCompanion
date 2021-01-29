@@ -34,18 +34,7 @@
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
 		AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */; };
 		AF60BC6D253D0CA200DC50DE /* SwipableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */; };
-		AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAB2324226800ADA74D /* CardData.swift */; };
-		AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
-		AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EBE23244FE000ADA74D /* FilterOperation.swift */; };
-		AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EB22324334F00ADA74D /* SetRule.swift */; };
-		AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EAE232428ED00ADA74D /* Utilities.swift */; };
-		AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
-		AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
-		AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
 		AF6AA0A62381E6DB00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
-		AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* CardRule.swift */; };
-		AF6BE27924359BAB005F85E1 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
-		AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
 		AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
 		AFA6638925858D5F00E641D8 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6638825858D5F00E641D8 /* SetsView.swift */; };
@@ -65,25 +54,17 @@
 		AFD02B99246CB9CB00D14D61 /* recommended-sets.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD02B98246CB9CB00D14D61 /* recommended-sets.json */; };
 		AFE8EE3E22A4843B008E09B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */; };
 		AFE8EE4522A4843C008E09B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE4422A4843C008E09B2 /* Assets.xcassets */; };
-		AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */; };
-		AFE8EE5E22A4843C008E09B2 /* DominionCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE5D22A4843C008E09B2 /* DominionCompanionUITests.swift */; };
 		AFE8EE6C22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
-		AFE8EE6D22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
 		AFE8EE7222A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
-		AFE8EE7322A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
 		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
-		AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
+		AFE908DB25C4D1D300E8334E /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE908DA25C4D1D300E8334E /* UnitTests.swift */; };
+		AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
+		AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
+		AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AFE8EE4F22A4843C008E09B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFE8EE3222A4843B008E09B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFE8EE3922A4843B008E09B2;
-			remoteInfo = DominionCompanion;
-		};
-		AFE8EE5A22A4843C008E09B2 /* PBXContainerItemProxy */ = {
+		AFE908DD25C4D1D300E8334E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFE8EE3222A4843B008E09B2 /* Project object */;
 			proxyType = 1;
@@ -145,15 +126,14 @@
 		AFE8EE3D22A4843B008E09B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE8EE4422A4843C008E09B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE8EE4922A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFE8EE4E22A4843C008E09B2 /* DominionCompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionCompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanionTests.swift; sourceTree = "<group>"; };
 		AFE8EE5422A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFE8EE5922A4843C008E09B2 /* DominionCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DominionCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFE8EE5D22A4843C008E09B2 /* DominionCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominionCompanionUITests.swift; sourceTree = "<group>"; };
-		AFE8EE5F22A4843C008E09B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE8EE6B22A49517008E09B2 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		AFE8EE7122A4AFBE008E09B2 /* cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cards; sourceTree = "<group>"; };
 		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AFE908D825C4D1D300E8334E /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE908DA25C4D1D300E8334E /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
+		AFE908DC25C4D1D300E8334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,14 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFE8EE4B22A4843C008E09B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFE8EE5622A4843C008E09B2 /* Frameworks */ = {
+		AFE908D525C4D1D300E8334E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +339,7 @@
 			children = (
 				AFE8EE3C22A4843B008E09B2 /* DominionCompanion */,
 				AFE8EE5122A4843C008E09B2 /* DominionCompanionTests */,
-				AFE8EE5C22A4843C008E09B2 /* DominionCompanionUITests */,
+				AFE908D925C4D1D300E8334E /* UnitTests */,
 				AFE8EE3B22A4843B008E09B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -375,8 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */,
-				AFE8EE4E22A4843C008E09B2 /* DominionCompanionTests.xctest */,
-				AFE8EE5922A4843C008E09B2 /* DominionCompanionUITests.xctest */,
+				AFE908D825C4D1D300E8334E /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,22 +370,22 @@
 		AFE8EE5122A4843C008E09B2 /* DominionCompanionTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0932381C9E800AC3BEA /* Models */,
 				AFE8EE5222A4843C008E09B2 /* DominionCompanionTests.swift */,
 				AFE8EE5422A4843C008E09B2 /* Info.plist */,
-				AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */,
-				AF6AA0982381CD6B00AC3BEA /* TestData.swift */,
 			);
 			path = DominionCompanionTests;
 			sourceTree = "<group>";
 		};
-		AFE8EE5C22A4843C008E09B2 /* DominionCompanionUITests */ = {
+		AFE908D925C4D1D300E8334E /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFE8EE5D22A4843C008E09B2 /* DominionCompanionUITests.swift */,
-				AFE8EE5F22A4843C008E09B2 /* Info.plist */,
+				AF6AA0932381C9E800AC3BEA /* Models */,
+				AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */,
+				AF6AA0982381CD6B00AC3BEA /* TestData.swift */,
+				AFE908DA25C4D1D300E8334E /* UnitTests.swift */,
+				AFE908DC25C4D1D300E8334E /* Info.plist */,
 			);
-			path = DominionCompanionUITests;
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,41 +408,23 @@
 			productReference = AFE8EE3A22A4843B008E09B2 /* DominionCompanion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFE8EE4D22A4843C008E09B2 /* DominionCompanionTests */ = {
+		AFE908D725C4D1D300E8334E /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFE8EE6522A4843C008E09B2 /* Build configuration list for PBXNativeTarget "DominionCompanionTests" */;
+			buildConfigurationList = AFE908E125C4D1D300E8334E /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
-				AFE8EE4A22A4843C008E09B2 /* Sources */,
-				AFE8EE4B22A4843C008E09B2 /* Frameworks */,
-				AFE8EE4C22A4843C008E09B2 /* Resources */,
+				AFE908D425C4D1D300E8334E /* Sources */,
+				AFE908D525C4D1D300E8334E /* Frameworks */,
+				AFE908D625C4D1D300E8334E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AFE8EE5022A4843C008E09B2 /* PBXTargetDependency */,
+				AFE908DE25C4D1D300E8334E /* PBXTargetDependency */,
 			);
-			name = DominionCompanionTests;
-			productName = DominionCompanionTests;
-			productReference = AFE8EE4E22A4843C008E09B2 /* DominionCompanionTests.xctest */;
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = AFE908D825C4D1D300E8334E /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AFE8EE5822A4843C008E09B2 /* DominionCompanionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFE8EE6822A4843C008E09B2 /* Build configuration list for PBXNativeTarget "DominionCompanionUITests" */;
-			buildPhases = (
-				AFE8EE5522A4843C008E09B2 /* Sources */,
-				AFE8EE5622A4843C008E09B2 /* Frameworks */,
-				AFE8EE5722A4843C008E09B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AFE8EE5B22A4843C008E09B2 /* PBXTargetDependency */,
-			);
-			name = DominionCompanionUITests;
-			productName = DominionCompanionUITests;
-			productReference = AFE8EE5922A4843C008E09B2 /* DominionCompanionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -478,19 +432,15 @@
 		AFE8EE3222A4843B008E09B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Harris Borawski";
 				TargetAttributes = {
 					AFE8EE3922A4843B008E09B2 = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					AFE8EE4D22A4843C008E09B2 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = AFE8EE3922A4843B008E09B2;
-					};
-					AFE8EE5822A4843C008E09B2 = {
-						CreatedOnToolsVersion = 10.0;
+					AFE908D725C4D1D300E8334E = {
+						CreatedOnToolsVersion = 12.4;
 						TestTargetID = AFE8EE3922A4843B008E09B2;
 					};
 				};
@@ -509,8 +459,7 @@
 			projectRoot = "";
 			targets = (
 				AFE8EE3922A4843B008E09B2 /* DominionCompanion */,
-				AFE8EE4D22A4843C008E09B2 /* DominionCompanionTests */,
-				AFE8EE5822A4843C008E09B2 /* DominionCompanionUITests */,
+				AFE908D725C4D1D300E8334E /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -528,16 +477,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFE8EE4C22A4843C008E09B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFE8EE7322A4AFBE008E09B2 /* cards in Resources */,
-				AFE8EE6D22A49517008E09B2 /* cards.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFE8EE5722A4843C008E09B2 /* Resources */ = {
+		AFE908D625C4D1D300E8334E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -599,46 +539,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFE8EE4A22A4843C008E09B2 /* Sources */ = {
+		AFE908D425C4D1D300E8334E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6AA0882381C71900AC3BEA /* CardProperty.swift in Sources */,
-				AF6BE27924359BAB005F85E1 /* SetModel.swift in Sources */,
-				AF6AA0992381CD6B00AC3BEA /* TestData.swift in Sources */,
-				AF6AA0892381C72100AC3BEA /* FilterOperation.swift in Sources */,
-				AF6AA0A72381E6DF00AC3BEA /* CardRule.swift in Sources */,
-				AF6AA0902381C76A00AC3BEA /* Utilities.swift in Sources */,
-				AFE8EE7622A4B830008E09B2 /* Card.swift in Sources */,
-				AF6AA0872381C71300AC3BEA /* CardData.swift in Sources */,
-				AF6AA0A12381D1DF00AC3BEA /* SetRuleTest.swift in Sources */,
-				AFE8EE5322A4843C008E09B2 /* DominionCompanionTests.swift in Sources */,
-				AF7BD7002381C5F2003A11E2 /* UtilitiesTest.swift in Sources */,
-				AF6AA0912381C76F00AC3BEA /* Constants.swift in Sources */,
-				AF6AA08C2381C72900AC3BEA /* SetRule.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFE8EE5522A4843C008E09B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFE8EE5E22A4843C008E09B2 /* DominionCompanionUITests.swift in Sources */,
+				AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */,
+				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
+				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
+				AFE908DB25C4D1D300E8334E /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AFE8EE5022A4843C008E09B2 /* PBXTargetDependency */ = {
+		AFE908DE25C4D1D300E8334E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AFE8EE3922A4843B008E09B2 /* DominionCompanion */;
-			targetProxy = AFE8EE4F22A4843C008E09B2 /* PBXContainerItemProxy */;
-		};
-		AFE8EE5B22A4843C008E09B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFE8EE3922A4843B008E09B2 /* DominionCompanion */;
-			targetProxy = AFE8EE5A22A4843C008E09B2 /* PBXContainerItemProxy */;
+			targetProxy = AFE908DD25C4D1D300E8334E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,7 +612,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -749,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -805,85 +723,47 @@
 			};
 			name = Release;
 		};
-		AFE8EE6622A4843C008E09B2 /* Debug */ = {
+		AFE908DF25C4D1D300E8334E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66V79CSGDL;
-				INFOPLIST_FILE = DominionCompanionTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.DominionCompanionTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.dominionCompanion.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DominionCompanion.app/DominionCompanion";
 			};
 			name = Debug;
 		};
-		AFE8EE6722A4843C008E09B2 /* Release */ = {
+		AFE908E025C4D1D300E8334E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63EF4WWG2U;
-				INFOPLIST_FILE = DominionCompanionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.DominionCompanionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DominionCompanion.app/DominionCompanion";
-			};
-			name = Release;
-		};
-		AFE8EE6922A4843C008E09B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66V79CSGDL;
-				INFOPLIST_FILE = DominionCompanionUITests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.DominionCompanionUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.dominionCompanion.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DominionCompanion;
-			};
-			name = Debug;
-		};
-		AFE8EE6A22A4843C008E09B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63EF4WWG2U;
-				INFOPLIST_FILE = DominionCompanionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrisborawski.DominionCompanionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DominionCompanion;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DominionCompanion.app/DominionCompanion";
 			};
 			name = Release;
 		};
@@ -908,20 +788,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFE8EE6522A4843C008E09B2 /* Build configuration list for PBXNativeTarget "DominionCompanionTests" */ = {
+		AFE908E125C4D1D300E8334E /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFE8EE6622A4843C008E09B2 /* Debug */,
-				AFE8EE6722A4843C008E09B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFE8EE6822A4843C008E09B2 /* Build configuration list for PBXNativeTarget "DominionCompanionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFE8EE6922A4843C008E09B2 /* Debug */,
-				AFE8EE6A22A4843C008E09B2 /* Release */,
+				AFE908DF25C4D1D300E8334E /* Debug */,
+				AFE908E025C4D1D300E8334E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
