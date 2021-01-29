@@ -23,12 +23,18 @@ platform :ios do
       output_directory: 'reports',
       code_coverage: true
     )
-    xcov(
-      output_directory: 'reports/coverage',
-      html_report: true,
+    slather(
+      proj: 'DominionCompanion.xcodeproj',
       scheme: 'DominionCompanion',
-      project: 'DominionCompanion.xcodeproj'
+      output_directory: 'reports/coverage',
+      html: true
     )
+    # xcov(
+    #   output_directory: 'reports/coverage',
+    #   html_report: true,
+    #   scheme: 'DominionCompanion',
+    #   project: 'DominionCompanion.xcodeproj'
+    # )
   end
 
   desc 'Release to TestFlight'

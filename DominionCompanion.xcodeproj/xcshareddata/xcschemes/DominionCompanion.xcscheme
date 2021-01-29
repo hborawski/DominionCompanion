@@ -33,26 +33,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFE8EE4D22A4843C008E09B2"
-               BuildableName = "DominionCompanionTests.xctest"
-               BlueprintName = "DominionCompanionTests"
-               ReferencedContainer = "container:DominionCompanion.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFE8EE5822A4843C008E09B2"
-               BuildableName = "DominionCompanionUITests.xctest"
-               BlueprintName = "DominionCompanionUITests"
-               ReferencedContainer = "container:DominionCompanion.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "AFE908D725C4D1D300E8334E"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
