@@ -198,6 +198,9 @@
 		AF1B6EAA232421F500ADA74D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AFE8EE7122A4AFBE008E09B2 /* cards */,
+				AFE8EE6B22A49517008E09B2 /* cards.json */,
+				AFD02B98246CB9CB00D14D61 /* recommended-sets.json */,
 				AF1B6EC82324945D00ADA74D /* Icons.xcassets */,
 				AFE8EE4422A4843C008E09B2 /* Assets.xcassets */,
 			);
@@ -348,10 +351,7 @@
 				AFA7785F25C4CA710065D231 /* views */,
 				AFA7785E25C4CA610065D231 /* utilities */,
 				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
-				AFE8EE7122A4AFBE008E09B2 /* cards */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
-				AFE8EE6B22A49517008E09B2 /* cards.json */,
-				AFD02B98246CB9CB00D14D61 /* recommended-sets.json */,
 			);
 			path = DominionCompanion;
 			sourceTree = "<group>";
