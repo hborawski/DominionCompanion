@@ -1,3 +1,5 @@
+// From https://gist.github.com/chriseidhof/cb662d2161a59a0cd5babf78e3562272
+
 //
 //  ContentView.swift
 //
