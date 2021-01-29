@@ -73,22 +73,6 @@ struct Card: Codable {
         }
     }
     
-    var pinned: Bool {
-        if types.contains("Event") {
-            return SetBuilder.shared.pinnedEvents.contains(self)
-        }
-        if types.contains("Landmark") {
-            return SetBuilder.shared.pinnedLandmarks.contains(self)
-        }
-        if types.contains("Project") {
-            return SetBuilder.shared.pinnedProjects.contains(self)
-        }
-        if types.contains("Way") {
-            return SetBuilder.shared.pinnedWays.contains(self)
-        }
-        return SetBuilder.shared.pinnedCards.contains(self)
-    }
-    
     var canPin: Bool {
         if Set(["Event", "Landmark", "Project", "Way"]).intersection(Set(types)).count != 0 {
             return true

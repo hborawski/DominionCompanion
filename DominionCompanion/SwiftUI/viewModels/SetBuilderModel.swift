@@ -9,6 +9,11 @@
 import Foundation
 import Combine
 
+enum RuleEngineError: Error {
+    case notSatisfiable
+    case tooManyAttempts
+}
+
 class SetBuilderModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let cardData: CardData
