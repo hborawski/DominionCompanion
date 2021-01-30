@@ -16,25 +16,32 @@
 default_platform(:ios)
 
 platform :ios do
+  desc 'Debug Build'
+  lane :build do
+    build_ios_app(
+      configuration: 'Debug',
+      output_directory: 'build',
+      export_method: 'development',
+      scheme: 'DominionCompanion',
+      project: 'DominionCompanion.xcodeproj',
+      clean: true
+    )
+  end
   desc 'Unit Tests'
   lane :test do
     scan(
       scheme: 'DominionCompanion',
       output_directory: 'reports',
+      clean: true,
       code_coverage: true
     )
     slather(
       proj: 'DominionCompanion.xcodeproj',
       scheme: 'DominionCompanion',
       output_directory: 'reports/coverage',
+      ignore: ['DominionCompanion/views/**/*'],
       html: true
     )
-    # xcov(
-    #   output_directory: 'reports/coverage',
-    #   html_report: true,
-    #   scheme: 'DominionCompanion',
-    #   project: 'DominionCompanion.xcodeproj'
-    # )
   end
 
   desc 'Release to TestFlight'

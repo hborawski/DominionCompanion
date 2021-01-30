@@ -60,6 +60,7 @@
 		AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
 		AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
 		AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
+		AFE9090725C4D9F500E8334E /* CardRuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE9090625C4D9F500E8334E /* CardRuleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		AFE908D825C4D1D300E8334E /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE908DA25C4D1D300E8334E /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		AFE908DC25C4D1D300E8334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE9090625C4D9F500E8334E /* CardRuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRuleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */,
+				AFE9090625C4D9F500E8334E /* CardRuleTests.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -267,7 +270,7 @@
 		AFA7785F25C4CA710065D231 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AF1A5E0F2525500B0050DE4E /* TabContainer.swift */,
+				AFE9090A25C4E40200E8334E /* Containers */,
 				AFA7788225C4CC5A0065D231 /* utilities */,
 				AFA7788325C4CC930065D231 /* Rules */,
 				AFA6638725858D4900E641D8 /* Sets */,
@@ -347,7 +350,6 @@
 				AFA7787E25C4CBDF0065D231 /* viewModels */,
 				AFA7785F25C4CA710065D231 /* views */,
 				AFA7785E25C4CA610065D231 /* utilities */,
-				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
 				AFE8EE4922A4843C008E09B2 /* Info.plist */,
 			);
 			path = DominionCompanion;
@@ -363,6 +365,15 @@
 				AFE908DC25C4D1D300E8334E /* Info.plist */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		AFE9090A25C4E40200E8334E /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A5E0F2525500B0050DE4E /* TabContainer.swift */,
+				AF1A5E0325254D6F0050DE4E /* DominionCompanion.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +534,7 @@
 				AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */,
 				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
+				AFE9090725C4D9F500E8334E /* CardRuleTests.swift in Sources */,
 				AFE908DB25C4D1D300E8334E /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

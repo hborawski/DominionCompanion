@@ -27,6 +27,8 @@ class TestData {
     static let treasureCard = Card(cost: 3, debt: 0, potion: false, actions: 0, buys: 0, cards: 0, name: "Treasure", text: "Treasure Card", expansion: "Test", types: ["Treasure"], trash: false, exile: false, tokens: TestData.noTokens, supply: true, related: [])
     
     // MARK: Cost specific cards
+    static let cost1Card = Card(cost: 1, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Action", text: "Action Card", expansion: "Test", types: ["Action"], trash: false, exile: false, tokens: TestData.noTokens, supply: true, related: [])
+    
     static let cost2Card = Card(cost: 2, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Action", text: "Action Card", expansion: "Test", types: ["Action"], trash: false, exile: false, tokens: TestData.noTokens, supply: true, related: [])
     
     static let cost3Card = Card(cost: 3, debt: 0, potion: false, actions: 1, buys: 0, cards: 1, name: "Action", text: "Action Card", expansion: "Test", types: ["Action"], trash: false, exile: false, tokens: TestData.noTokens, supply: true, related: [])
