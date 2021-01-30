@@ -52,7 +52,13 @@ class SetRule: Codable, Hashable, ObservableObject, Identifiable {
             return cards.filter { rule.matches(card: $0) }
         }
     }
-    
+
+    /**
+     Checks if the given set of cards won't violate the CardRules / value
+     - parameters:
+        - cards: The set of cards to check against
+     - returns: Whether or not the set of cards violates the rules
+     */
     func inverseMatch(_ cards: [Card]) -> Bool {
         let setValue = self.matchingCards(cards).count
         let comparisonValue = Settings.shared.maxKingdomCards - value
@@ -71,7 +77,15 @@ class SetRule: Codable, Hashable, ObservableObject, Identifiable {
             return setValue != value
         }
     }
-    
+
+    /**
+     Calculates the satisfaction of the rule
+     Satisfaction is represented as a Double where 0 has no rule satisfied
+     and 1.0 all rules have their conditions met
+     - parameters:
+        - cards: The cards to check for satisfaction
+     - returns: The satisfaction of the cards
+     */
     func satisfaction(_ cards: [Card]) -> Double {
         let setValue = Double(self.matchingCards(cards).count)
         let desiredValue = Double(value)
@@ -92,7 +106,13 @@ class SetRule: Codable, Hashable, ObservableObject, Identifiable {
             return setValue == desiredValue ? 0.0 : 1.0
         }
     }
-    
+
+    /**
+     Checks whether or not a set of cards can satisfy the rules
+     - parameters:
+        - cards: The cards to check for satisfaction
+     - returns: Whether or not the cards can satisfy the rules
+     */
     func satisfiable(_ cards: [Card]) -> Bool {
         let setValue = self.matchingCards(cards).count
         switch self.operation {
