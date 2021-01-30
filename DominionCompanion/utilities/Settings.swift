@@ -11,6 +11,8 @@ import Foundation
 class Settings {
     static let shared = Settings()
     
+    @UserDefaultsBacked(Constants.SaveKeys.maxKingdomCards) var maxKingdomCards: Int = 10
+    
     @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsColonies) var colonies: Bool = false

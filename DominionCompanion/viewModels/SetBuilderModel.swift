@@ -102,10 +102,22 @@ class SetBuilderModel: ObservableObject {
     
     
     func getMatchingSet(_ pinned: [Card], _ completion: @escaping (Result<[Card], RuleEngineError>) -> Void) {
-        guard pinned.count < 10, self.cardData.cardsFromChosenExpansions.count >= 10 else { return completion(.success(pinned)) }
+        guard
+            pinned.count < Settings.shared.maxKingdomCards,
+            self.cardData.cardsFromChosenExpansions.count >= Settings.shared.maxKingdomCards
+        else { return completion(.success(pinned)) }
+        
         let cardCopy = self.cardData.cardsFromChosenExpansions
         guard rules.count > 0 else {
-            return completion(.success(pinned + Array(cardCopy.shuffled().filter { !pinned.contains($0) }[0..<(10 - pinned.count)])))
+            return completion(
+                .success(
+                    pinned + Array(
+                        cardCopy.shuffled().filter {
+                            !pinned.contains($0)
+                        }[0..<(Settings.shared.maxKingdomCards - pinned.count)]
+                    )
+                )
+            )
         }
         guard rulesCanBeSatisfied(cardCopy, self.rules) else {
             Logger.shared.w("A set cannot be made with the current rules")
@@ -123,7 +135,7 @@ class SetBuilderModel: ObservableObject {
             
             // Total number of attempts to create a set
             var totalAttempts = 0
-            while finalSet.count < 10 {
+            while finalSet.count < Settings.shared.maxKingdomCards {
                 guard totalAttempts < 100 else {
                     Logger.shared.w("Too many attempts to create a set")
                     return completion(.failure(.tooManyAttempts))
@@ -177,7 +189,7 @@ class SetBuilderModel: ObservableObject {
                 }
                 // If we fill the set but not all the rules are statisfied
                 // reset and try again
-                if (finalSet.count == 10 && satisfaction < 1.0) {
+                if (finalSet.count == Settings.shared.maxKingdomCards && satisfaction < 1.0) {
                     finalSet = pinned
                     satisfaction = 0.0
                     workingCards = cardCopy.shuffled()

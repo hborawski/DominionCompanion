@@ -55,12 +55,12 @@ class SetRule: Codable, Hashable, ObservableObject, Identifiable {
     
     func inverseMatch(_ cards: [Card]) -> Bool {
         let setValue = self.matchingCards(cards).count
-        let comparisonValue = 10 - value
+        let comparisonValue = Settings.shared.maxKingdomCards - value
         switch self.operation {
         case .greater:
-            return setValue <= (10 - value)
+            return setValue <= (Settings.shared.maxKingdomCards - value)
         case .greaterOrEqual:
-            return setValue <= (10 - (value - 1))
+            return setValue <= (Settings.shared.maxKingdomCards - (value - 1))
         case .equal:
             return setValue != comparisonValue
         case .lessOrEqual:
