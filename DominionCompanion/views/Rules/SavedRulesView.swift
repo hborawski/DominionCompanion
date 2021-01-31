@@ -50,9 +50,7 @@ struct SavedRulesView: View {
         .alert(isPresented: $saveModal, TextAlert(title: "Save Current Rules", action: { saveName in
             guard let name = saveName else { return }
             do {
-                let savedSet = SavedRuleSet(context: managedObjectContext)
-                savedSet.name = name
-                savedSet.rules = setBuilder.rules
+                let _ = SavedRuleSet(context: managedObjectContext).with(name: name, rules: setBuilder.rules)
                 try managedObjectContext.save()
             } catch(let error) {
                 Logger.shared.e("\(error)")

@@ -53,6 +53,12 @@ extension SavedRuleSet {
             Logger.shared.e("Error Saving Rule Set")
         }
     }
+
+    func with(name: String, rules: [Rule]) -> SavedRuleSet {
+        self.name = name
+        self.rules = rules
+        return self
+    }
 }
 
 extension SavedRuleSet : Identifiable {

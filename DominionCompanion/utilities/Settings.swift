@@ -30,6 +30,17 @@ class Settings {
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .expansion
+
+    // For restoring setbuilder state when opening/closing
+    @UserDefaultsBackedCodable(Constants.SaveKeys.currentCards) var currentCards: [Card] = []
+
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedCards) var pinnedCards: [Card] = []
+
+    @UserDefaultsBackedCodable(Constants.SaveKeys.currentLandscape) var currentLandscape: [Card] = []
+
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLanscape) var pinnedLanscape: [Card] = []
+
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [Rule] = []
 }
 
 

@@ -14,13 +14,15 @@ struct Constants {
     struct SaveKeys {
         static let maxKingdomCards = "maxKingdomCards"
         static let chosenExpansions = "expansions"
+        
         static let pinnedRules = "pinnedRules"
         static let savedRules = "savedRules"
+
+        static let currentCards = "currentCards"
+        static let currentLandscape = "currentLandscape"
         static let pinnedCards = "pinnedCards"
-        static let pinnedLandmarks = "pinnedLandmarks"
-        static let pinnedProjects = "pinnedProjects"
-        static let pinnedEvents = "pinnedEvents"
-        static let pinnedWays = "pinnedWays"
+        static let pinnedLanscape = "pinnedLandscape"
+
         static let settingsMaxLandscape = "settings_maxLandscape"
         static let settingsNumEvents = "settings_numberOfEvents"
         static let settingsNumProjects = "settings_numberOfProjects"

@@ -18,17 +18,15 @@ class SetBuilderModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let cardData: CardData
     
-    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [Rule] = []
+    @Published var rules: [Rule] = Settings.shared.pinnedRules
     
-    @Published var rules: [Rule] = []
+    @Published var cards: [Card] = Settings.shared.currentCards
     
-    @Published var cards: [Card] = []
+    @Published var pinnedCards: [Card] = Settings.shared.pinnedCards
+
+    @Published var landscape: [Card] = Settings.shared.currentLandscape
     
-    @Published var pinnedCards: [Card] = []
-    
-    @Published var pinnedLandscape: [Card] = []
-    
-    @Published var landscape: [Card] = []
+    @Published var pinnedLandscape: [Card] = Settings.shared.pinnedLanscape
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
@@ -54,20 +52,27 @@ class SetBuilderModel: ObservableObject {
             if Set(pinned).intersection(Set(self.cards)).count != pinned.count {
                 Just(Array(Set(pinned).union(Set(self.cards)))).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
             }
+            Settings.shared.pinnedCards = pinned
         }.store(in: &bag)
         
         $pinnedLandscape.sink { (pinned) in
             if Set(pinned).intersection(Set(self.landscape)).count != pinned.count {
                 Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
             }
+            Settings.shared.pinnedLanscape = pinned
         }.store(in: &bag)
-        
-        // Load from UserDefaults
-        rules = pinnedRules
         
         // When it's updated, save to UserDefaults
         $rules.sink { rules in
-            self.pinnedRules = rules
+            Settings.shared.pinnedRules = rules
+        }.store(in: &bag)
+
+        $cards.sink { (cards) in
+            Settings.shared.currentCards = cards
+        }.store(in: &bag)
+
+        $landscape.sink { (cards) in
+            Settings.shared.currentLandscape = cards
         }.store(in: &bag)
     }
     
