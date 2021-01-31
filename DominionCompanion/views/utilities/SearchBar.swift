@@ -17,11 +17,11 @@ struct SearchBar: View {
         HStack {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(Color(.systemGray6))
-                .padding(8)
+                .padding(.vertical, 8)
                 .frame(minWidth: 10, idealWidth: 20, maxWidth: nil, minHeight: 20, idealHeight: 56, maxHeight: 56, alignment: .center)
                 .overlay(HStack {
                     Image(systemName: "magnifyingglass").foregroundColor(Color(.systemGray))
-                        .padding(.leading, 16)
+                        .padding(.leading, 8)
                     TextField("Search", text: $text).foregroundColor(.primary).onTapGesture {
                         self.editing = true
                     }.autocapitalization(.none).disableAutocorrection(true)
@@ -29,7 +29,7 @@ struct SearchBar: View {
                         Button(action: {
                             self.text = ""
                         }) {
-                            Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray)).padding(.trailing, 16)
+                            Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray)).padding(.trailing, 8)
                         }
                     }
                 })
@@ -53,6 +53,6 @@ struct SearchBar_Previews: PreviewProvider {
         VStack {
             SearchBar(text: .constant("Hello World"), editing: true)
             SearchBar(text: .constant(""))
-        }
+        }.environmentObject(CardData())
     }
 }
