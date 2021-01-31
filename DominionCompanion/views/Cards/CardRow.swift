@@ -35,10 +35,12 @@ struct CardRow<T>: View where T: View {
             .fixedSize(horizontal: true, vertical: false)
             .frame(width: 50)
             .padding(0)
-            if card.debt == 0, card.cost >= 0{
+            if card.debt == 0, card.cost >= 0, !card.potion {
                 CostView(value: card.cost)
             } else if card.debt > 0 {
                 DebtView(value: card.debt)
+            } else if card.potion {
+                PotionView(value: card.cost).padding(0)
             } else {
                 Circle()
                     .foregroundColor(.clear)
@@ -61,19 +63,13 @@ struct CardRow_Previews: PreviewProvider {
         return List {
             Section(header: Text("Unpinned")) {
                 ForEach(cards, id: \.name) { card in
-                    CardRow(card: card) {
-                        Button(action: {}, label: {
-                            Image(systemName: "checkmark.circle")
-                        })
-                    }.listRowInsets(EdgeInsets())
+                    CardRow(card: card){EmptyView()}.listRowInsets(EdgeInsets())
                 }
             }
             Section(header: Text("Pinned")) {
                 ForEach(cards, id: \.name) { card in
                     CardRow(card: card) {
-                        Button(action: {}, label: {
-                            Image(systemName: "checkmark.circle.fill")
-                        })
+                        Image(systemName: "checkmark").foregroundColor(.blue)
                     }.listRowInsets(EdgeInsets())
                 }
             }
