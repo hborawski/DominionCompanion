@@ -20,9 +20,9 @@ struct RuleView: View {
 
     var matchingCards: [Card] {
         get {
-            return rule.conditions.reduce(cardData.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
+            return rule.conditions.reduce(cardData.cardsFromChosenExpansions) { (cards, condition) -> [Card] in
                 let cardSet = Set(cards)
-                let matchingFilter = Set(cardData.cardsFromChosenExpansions.filter { rule.matches(card: $0) })
+                let matchingFilter = Set(cardData.cardsFromChosenExpansions.filter { condition.matches(card: $0) })
                 return Array(cardSet.intersection(matchingFilter))
             }
         }
@@ -72,7 +72,7 @@ struct RuleView: View {
             ForEach(conditions, id: \.id) { condition in
                 Section {
                     ConditionRow(
-                        rule: condition,
+                        condition: condition,
                         onDelete: self.conditions.count > 1 ?
                         {
                             self.conditions = self.conditions.filter { $0.id != condition.id }

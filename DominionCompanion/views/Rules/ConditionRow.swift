@@ -9,12 +9,7 @@
 import SwiftUI
 
 struct ConditionRow: View {
-    @ObservedObject var rule: Condition
-//    @Binding var property: CardProperty
-//
-//    @Binding var operation: FilterOperation
-//
-//    @Binding var value: String
+    @ObservedObject var condition: Condition
     
     var onDelete: (() -> Void)?
     
@@ -22,18 +17,18 @@ struct ConditionRow: View {
 
     @ViewBuilder
     var body: some View {
-        Picker("Property", selection: $rule.property) {
+        Picker("Property", selection: $condition.property) {
             ForEach(cardData.allAttributes, id: \.self) { attr in
                 Text(attr.rawValue)
             }
         }
-        Picker("Operator", selection: $rule.operation) {
-            ForEach(rule.property.inputType.availableOperations, id: \.self) { operation in
+        Picker("Operator", selection: $condition.operation) {
+            ForEach(condition.property.inputType.availableOperations, id: \.self) { operation in
                 Text(operation.rawValue)
             }
         }
-        Picker("Value", selection: $rule.comparisonValue) {
-            ForEach(rule.property.all, id: \.self) { value in
+        Picker("Value", selection: $condition.comparisonValue) {
+            ForEach(condition.property.all, id: \.self) { value in
                 Text(value)
             }
         }
@@ -48,7 +43,7 @@ struct ConditionRow_Previews: PreviewProvider {
     @ObservedObject static var rule: Rule = Rule(value: 0, operation: .greater, conditions: [defaultRule])
     static var previews: some View {
         Form {
-            ConditionRow(rule: defaultRule)
+            ConditionRow(condition: defaultRule)
         }
     }
 }
