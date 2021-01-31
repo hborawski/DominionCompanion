@@ -56,7 +56,6 @@
 		AFE8EE6C22A49517008E09B2 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE6B22A49517008E09B2 /* cards.json */; };
 		AFE8EE7222A4AFBE008E09B2 /* cards in Resources */ = {isa = PBXBuildFile; fileRef = AFE8EE7122A4AFBE008E09B2 /* cards */; };
 		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
-		AFE908DB25C4D1D300E8334E /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE908DA25C4D1D300E8334E /* UnitTests.swift */; };
 		AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
 		AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
 		AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
@@ -129,7 +128,6 @@
 		AFE8EE7122A4AFBE008E09B2 /* cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cards; sourceTree = "<group>"; };
 		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AFE908D825C4D1D300E8334E /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFE908DA25C4D1D300E8334E /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		AFE908DC25C4D1D300E8334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE9090625C4D9F500E8334E /* CardRuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRuleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,7 +359,6 @@
 				AF6AA0932381C9E800AC3BEA /* Models */,
 				AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */,
 				AF6AA0982381CD6B00AC3BEA /* TestData.swift */,
-				AFE908DA25C4D1D300E8334E /* UnitTests.swift */,
 				AFE908DC25C4D1D300E8334E /* Info.plist */,
 			);
 			path = UnitTests;
@@ -535,7 +532,6 @@
 				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
 				AFE9090725C4D9F500E8334E /* CardRuleTests.swift in Sources */,
-				AFE908DB25C4D1D300E8334E /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
