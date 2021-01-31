@@ -12,6 +12,10 @@ struct ExpansionSelection: View {
     @EnvironmentObject var cardData: CardData
     
     @ObservedObject @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
+
+    @State var selectedExpansion = ""
+
+    @State var viewExpansion = false
     
     @ViewBuilder
     var body: some View {
@@ -34,10 +38,26 @@ struct ExpansionSelection: View {
                         chosenExpansions.append(expansion)
                     }
                 })
+                .contextMenu {
+                    Button(action: {
+                        selectedExpansion = expansion
+                        viewExpansion = true
+                    }, label: {
+                        Text("View Cards")
+                    })
+                }
             }
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Expansions")
+        .background(
+            NavigationLink(
+                destination: CardsView(cards: cardData.allCards.filter { $0.expansion == selectedExpansion }, title: selectedExpansion) {_ in EmptyView()},
+                isActive: $viewExpansion,
+                label: {
+                    EmptyView()
+                })
+        )
     }
 }
 
