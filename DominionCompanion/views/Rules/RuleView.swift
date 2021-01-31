@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct RuleView: View {
-    static let defaultRule = CardRule(property: .cost, operation: .greater, comparisonValue: "0")
+    static let defaultRule = Condition(property: .cost, operation: .greater, comparisonValue: "0")
     
-    var existing: SetRule?
+    var existing: Rule?
     
-    var rule: SetRule {
-        SetRule(value: 0, operation: .greater, cardRules: conditions)
+    var rule: Rule {
+        Rule(value: 0, operation: .greater, conditions: conditions)
     }
 
 
     var matchingCards: [Card] {
         get {
-            return rule.cardRules.reduce(cardData.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
+            return rule.conditions.reduce(cardData.cardsFromChosenExpansions) { (cards, rule) -> [Card] in
                 let cardSet = Set(cards)
                 let matchingFilter = Set(cardData.cardsFromChosenExpansions.filter { rule.matches(card: $0) })
                 return Array(cardSet.intersection(matchingFilter))
@@ -32,7 +32,7 @@ struct RuleView: View {
     
     @State var value: Int = 0
     
-    @State var conditions: [CardRule] = [CardRule(property: .cost, operation: .greater, comparisonValue: "0")]
+    @State var conditions: [Condition] = [Condition(property: .cost, operation: .greater, comparisonValue: "0")]
     
     @State var id: UUID? = nil
 
@@ -66,12 +66,12 @@ struct RuleView: View {
             }
             Section(header: Text("Conditions")) {
                 Button("Add Condition") {
-                    conditions.append(CardRule(property: .cost, operation: .greater, comparisonValue: "0"))
+                    conditions.append(Condition(property: .cost, operation: .greater, comparisonValue: "0"))
                 }
             }
             ForEach(conditions, id: \.id) { condition in
                 Section {
-                    CardRuleRow(
+                    ConditionRow(
                         rule: condition,
                         onDelete: self.conditions.count > 1 ?
                         {
@@ -84,7 +84,7 @@ struct RuleView: View {
         }
         .navigationBarItems(trailing: HStack {
             Button("Save") {
-                let newRule = SetRule(value: value, operation: operation, cardRules: conditions)
+                let newRule = Rule(value: value, operation: operation, conditions: conditions)
                 if let index = setBuilder.rules.firstIndex(where: {$0.id == self.id}) {
                     setBuilder.rules[index] = newRule
                 } else {
@@ -97,7 +97,7 @@ struct RuleView: View {
             if let existingRule = existing, id == nil {
                 operation = existingRule.operation
                 value = existingRule.value
-                conditions = existingRule.cardRules
+                conditions = existingRule.conditions
                 id = existingRule.id
             }
         }

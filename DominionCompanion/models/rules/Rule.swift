@@ -8,9 +8,9 @@
 
 import Foundation
 
-class SetRule: Codable, Hashable, ObservableObject, Identifiable {
+class Rule: Codable, Hashable, ObservableObject, Identifiable {
     var id = UUID()
-    static func == (lhs: SetRule, rhs: SetRule) -> Bool {
+    static func == (lhs: Rule, rhs: Rule) -> Bool {
         return lhs.id == rhs.id
     }
     
@@ -21,40 +21,40 @@ class SetRule: Codable, Hashable, ObservableObject, Identifiable {
     enum SetRuleCodingKeys: CodingKey {
         case value
         case operation
-        case cardRules
+        case conditions
     }
     required init(from decoder: Decoder) throws {
         let container  = try decoder.container(keyedBy: SetRuleCodingKeys.self)
         self.value = try container.decode(Int.self, forKey: .value)
         self.operation = try container.decode(FilterOperation.self, forKey: .operation)
-        self.cardRules = try container.decode([CardRule].self, forKey: .cardRules)
+        self.conditions = try container.decode([Condition].self, forKey: .conditions)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: SetRuleCodingKeys.self)
         try container.encode(self.value, forKey: .value)
         try container.encode(self.operation, forKey: .operation)
-        try container.encode(self.cardRules, forKey: .cardRules)
+        try container.encode(self.conditions, forKey: .conditions)
     }
     
-    init(value: Int, operation: FilterOperation, cardRules: [CardRule]) {
+    init(value: Int, operation: FilterOperation, conditions: [Condition]) {
         self.value = value
         self.operation = operation
-        self.cardRules = cardRules
+        self.conditions = conditions
     }
 
     @Published var value: Int
     @Published var operation: FilterOperation
-    @Published var cardRules: [CardRule]
+    @Published var conditions: [Condition]
     
     func matchingCards(_ cards: [Card]) -> [Card] {
-        return cardRules.reduce(cards) { (cards, rule) -> [Card] in
+        return conditions.reduce(cards) { (cards, rule) -> [Card] in
             return cards.filter { rule.matches(card: $0) }
         }
     }
 
     /**
-     Checks if the given set of cards won't violate the CardRules / value
+     Checks if the given set of cards won't violate the Conditions / value
      - parameters:
         - cards: The set of cards to check against
      - returns: Whether or not the set of cards violates the rules

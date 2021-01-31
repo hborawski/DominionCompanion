@@ -1,5 +1,5 @@
 //
-//  CardRuleRow.swift
+//  ConditionRow.swift
 //  DominionCompanion
 //
 //  Created by Harris Borawski on 10/3/20.
@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct CardRuleRow: View {
-    @ObservedObject var rule: CardRule
+struct ConditionRow: View {
+    @ObservedObject var rule: Condition
 //    @Binding var property: CardProperty
 //
 //    @Binding var operation: FilterOperation
@@ -43,13 +43,12 @@ struct CardRuleRow: View {
     }
 }
 
-struct CardRuleRow_Previews: PreviewProvider {
-    static let defaultRule = CardRule(property: .cost, operation: .greater, comparisonValue: "0")
-    @ObservedObject static var rule: SetRule = SetRule(value: 0, operation: .greater, cardRules: [defaultRule])
+struct ConditionRow_Previews: PreviewProvider {
+    static let defaultRule = Condition(property: .cost, operation: .greater, comparisonValue: "0")
+    @ObservedObject static var rule: Rule = Rule(value: 0, operation: .greater, conditions: [defaultRule])
     static var previews: some View {
         Form {
-//            CardRuleRow(property: $rule.cardRules[0].property, operation: $rule.cardRules[0].operation, value: $rule.cardRules[0].comparisonValue).environmentObject(CardData())
-            CardRuleRow(rule: defaultRule)
+            ConditionRow(rule: defaultRule)
         }
     }
 }

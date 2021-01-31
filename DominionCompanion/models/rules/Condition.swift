@@ -8,8 +8,8 @@
 
 import Foundation
 
-class CardRule: Codable, Hashable, Identifiable, ObservableObject {
-    static func == (lhs: CardRule, rhs: CardRule) -> Bool {
+class Condition: Codable, Hashable, Identifiable, ObservableObject {
+    static func == (lhs: Condition, rhs: Condition) -> Bool {
         return lhs.id == rhs.id
     }
     
@@ -29,20 +29,20 @@ class CardRule: Codable, Hashable, Identifiable, ObservableObject {
         self.comparisonValue = comparisonValue
     }
     
-    enum CardRuleCodingKeys: CodingKey {
+    enum ConditionCodingKeys: CodingKey {
         case property
         case operation
         case comparisonValue
     }
     required init(from decoder: Decoder) throws {
-        let container  = try decoder.container(keyedBy: CardRuleCodingKeys.self)
+        let container  = try decoder.container(keyedBy: ConditionCodingKeys.self)
         self.property = try container.decode(CardProperty.self, forKey: .property)
         self.operation = try container.decode(FilterOperation.self, forKey: .operation)
         self.comparisonValue = try container.decode(String.self, forKey: .comparisonValue)
     }
     
     func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CardRuleCodingKeys.self)
+        var container = encoder.container(keyedBy: ConditionCodingKeys.self)
         try container.encode(self.property, forKey: .property)
         try container.encode(self.operation, forKey: .operation)
         try container.encode(self.comparisonValue, forKey: .comparisonValue)
@@ -78,7 +78,7 @@ enum RuleType: Int, Codable {
     }
 }
 
-extension CardRule {
+extension Condition {
     func matches(card: Card) -> Bool {
         switch self.type {
         case .boolean:

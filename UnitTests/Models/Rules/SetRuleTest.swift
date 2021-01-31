@@ -12,8 +12,8 @@ import XCTest
 
 class SetRuleTest: XCTestCase {
     func testEquality() {
-        let rule1 = SetRule(value: 1, operation: .equal, cardRules: [])
-        let rule2 = SetRule(value: 1, operation: .equal, cardRules: [])
+        let rule1 = Rule(value: 1, operation: .equal, conditions: [])
+        let rule2 = Rule(value: 1, operation: .equal, conditions: [])
 
         XCTAssertTrue(rule1 == rule1)
         XCTAssertFalse(rule1 == rule2)
@@ -24,25 +24,25 @@ class SetRuleTest: XCTestCase {
         {
             "value": 1,
             "operation": "=",
-            "cardRules": []
+            "conditions": []
         }
         """
 
         guard
             let data = json.data(using: .utf8),
-            let rule = try? JSONDecoder().decode(SetRule.self, from: data)
+            let rule = try? JSONDecoder().decode(Rule.self, from: data)
         else {
             return XCTFail()
         }
 
         XCTAssertEqual(rule.value, 1)
         XCTAssertEqual(rule.operation, .equal)
-        XCTAssertEqual(rule.cardRules, [])
+        XCTAssertEqual(rule.conditions, [])
 
     }
 
     func testEncode() {
-        let rule = SetRule(value: 1, operation: .equal, cardRules: [])
+        let rule = Rule(value: 1, operation: .equal, conditions: [])
 
         guard
             let data = try? JSONEncoder().encode(rule),
@@ -56,9 +56,9 @@ class SetRuleTest: XCTestCase {
     }
 
     func testInverseMatch() {
-        let cardRule = CardRule(property: .cost, operation: .equal, comparisonValue: "2")
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
         
-        let rule = SetRule(value: 1, operation: .greater, cardRules: [cardRule])
+        let rule = Rule(value: 1, operation: .greater, conditions: [condition])
         let set = [TestData.cost2Card]
         XCTAssert(rule.inverseMatch(set))
     }

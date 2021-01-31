@@ -20,13 +20,13 @@ extension SavedRuleSet {
     @NSManaged public var name: String
     @NSManaged public var encodedRules: [String]
     
-    var rules: [SetRule] {
+    var rules: [Rule] {
         get {
             let decoder = JSONDecoder()
             return encodedRules.compactMap { stringRule in
                 guard
                     let data = stringRule.data(using: .utf8),
-                    let rule = try? decoder.decode(SetRule.self, from: data)
+                    let rule = try? decoder.decode(Rule.self, from: data)
                 else { return nil }
                 return rule
             }

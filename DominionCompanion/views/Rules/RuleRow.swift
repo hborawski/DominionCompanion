@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RuleRow: View {
-    @ObservedObject var rule: SetRule
+    @ObservedObject var rule: Rule
     var body: some View {
         HStack {
             HStack {
@@ -19,11 +19,11 @@ struct RuleRow: View {
             }
             Spacer()
             VStack {
-                ForEach(rule.cardRules, id: \.self) { cardRule in
+                ForEach(rule.conditions, id: \.self) { condition in
                     HStack {
-                        Text(cardRule.property.rawValue)
-                        Text(cardRule.operation.rawValue)
-                        Text(cardRule.comparisonValue)
+                        Text(condition.property.rawValue)
+                        Text(condition.operation.rawValue)
+                        Text(condition.comparisonValue)
                     }
                 }
             }
@@ -32,9 +32,9 @@ struct RuleRow: View {
 }
 
 struct RuleRow_Previews: PreviewProvider {
-    static let rule = SetRule(value: 2, operation: .greaterOrEqual, cardRules: [
-        CardRule(property: .actions, operation: .greater, comparisonValue: "1"),
-        CardRule(property: .cards, operation: .equal, comparisonValue: "2")
+    static let rule = Rule(value: 2, operation: .greaterOrEqual, conditions: [
+        Condition(property: .actions, operation: .greater, comparisonValue: "1"),
+        Condition(property: .cards, operation: .equal, comparisonValue: "2")
     ])
     static var previews: some View {
         List {

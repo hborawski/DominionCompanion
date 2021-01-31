@@ -18,9 +18,9 @@ class SetBuilderModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let cardData: CardData
     
-    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [SetRule] = []
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [Rule] = []
     
-    @Published var rules: [SetRule] = []
+    @Published var rules: [Rule] = []
     
     @Published var cards: [Card] = []
     
@@ -231,18 +231,18 @@ class SetBuilderModel: ObservableObject {
     }
     
     // MARK: Utility Methods
-    func inverseMatchRules(_ cards: [Card], _ rules: [SetRule]) -> Bool {
-        return rules.reduce(true) { (acc: Bool, cv: SetRule) -> Bool in
+    func inverseMatchRules(_ cards: [Card], _ rules: [Rule]) -> Bool {
+        return rules.reduce(true) { (acc: Bool, cv: Rule) -> Bool in
             return acc && cv.inverseMatch(cards)
         }
     }
     
-    func ruleSatisfaction(_ cards: [Card], _ rules: [SetRule]) -> Double {
+    func ruleSatisfaction(_ cards: [Card], _ rules: [Rule]) -> Double {
         let satisfactions = rules.compactMap { $0.satisfaction(cards) }
         return satisfactions.reduce(0.0, +) / Double(rules.count)
     }
     
-    func rulesCanBeSatisfied(_ cards: [Card], _ rules: [SetRule]) -> Bool {
+    func rulesCanBeSatisfied(_ cards: [Card], _ rules: [Rule]) -> Bool {
         return rules.first(where: { !$0.satisfiable(cards) }) == nil
     }
 }

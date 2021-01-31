@@ -62,8 +62,8 @@ struct RulesView_Previews: PreviewProvider {
         let cardData = CardData()
         let model = SetBuilderModel(cardData)
         model.rules = [
-            SetRule(value: 2, operation: .greater, cardRules: [
-                CardRule(property: .actions, operation: .equal, comparisonValue: "2")
+            Rule(value: 2, operation: .greater, conditions: [
+                Condition(property: .actions, operation: .equal, comparisonValue: "2")
             ])
         ]
         return NavigationView {

@@ -1,5 +1,5 @@
 //
-//  CardRuleTests.swift
+//  ConditionTests.swift
 //  UnitTests
 //
 //  Created by Harris Borawski on 1/29/21.
@@ -11,10 +11,10 @@ import XCTest
 
 @testable import DominionCompanion
 
-class CardRuleTests: XCTestCase {
+class ConditionTests: XCTestCase {
     func testEquality() {
-        let rule1 = CardRule(property: .actions, operation: .equal, comparisonValue: "1")
-        let rule2 = CardRule(property: .actions, operation: .equal, comparisonValue: "1")
+        let rule1 = Condition(property: .actions, operation: .equal, comparisonValue: "1")
+        let rule2 = Condition(property: .actions, operation: .equal, comparisonValue: "1")
         
         XCTAssertTrue(rule1 == rule1)
         XCTAssertFalse(rule1 == rule2)
@@ -30,18 +30,18 @@ class CardRuleTests: XCTestCase {
         """
         guard
             let data = json.data(using: .utf8),
-            let cardRule = try? JSONDecoder().decode(CardRule.self, from: data)
+            let condition = try? JSONDecoder().decode(Condition.self, from: data)
         else {
             return XCTFail()
         }
         
-        XCTAssertEqual(cardRule.property, .actions)
-        XCTAssertEqual(cardRule.operation, .equal)
-        XCTAssertEqual(cardRule.comparisonValue, "1")
+        XCTAssertEqual(condition.property, .actions)
+        XCTAssertEqual(condition.operation, .equal)
+        XCTAssertEqual(condition.comparisonValue, "1")
     }
     
     func testEncode() {
-        let rule = CardRule(property: .actions, operation: .equal, comparisonValue: "1")
+        let rule = Condition(property: .actions, operation: .equal, comparisonValue: "1")
         
         guard
             let data = try? JSONEncoder().encode(rule),
@@ -55,12 +55,12 @@ class CardRuleTests: XCTestCase {
     }
     
     func testNumberMatching() {
-        let greaterRule = CardRule(property: .cost, operation: .greater, comparisonValue: "3")
-        let greaterOrEqualRule = CardRule(property: .cost, operation: .greaterOrEqual, comparisonValue: "3")
-        let equalRule = CardRule(property: .cost, operation: .equal, comparisonValue: "3")
-        let lessOrEqualRule = CardRule(property: .cost, operation: .lessOrEqual, comparisonValue: "3")
-        let lessRule = CardRule(property: .cost, operation: .less, comparisonValue: "3")
-        let notEqualRule = CardRule(property: .cost, operation: .notEqual, comparisonValue: "3")
+        let greaterRule = Condition(property: .cost, operation: .greater, comparisonValue: "3")
+        let greaterOrEqualRule = Condition(property: .cost, operation: .greaterOrEqual, comparisonValue: "3")
+        let equalRule = Condition(property: .cost, operation: .equal, comparisonValue: "3")
+        let lessOrEqualRule = Condition(property: .cost, operation: .lessOrEqual, comparisonValue: "3")
+        let lessRule = Condition(property: .cost, operation: .less, comparisonValue: "3")
+        let notEqualRule = Condition(property: .cost, operation: .notEqual, comparisonValue: "3")
         
         XCTAssertFalse(greaterRule.matches(card: TestData.cost3Card))
         XCTAssertTrue(greaterRule.matches(card: TestData.cost4Card))
@@ -84,9 +84,9 @@ class CardRuleTests: XCTestCase {
     }
     
     func testBoolMatching() {
-        let equalRule = CardRule(property: .trash, operation: .equal, comparisonValue: "true")
-        let notEqualRule = CardRule(property: .trash, operation: .notEqual, comparisonValue: "true")
-        let lessRule = CardRule(property: .trash, operation: .less, comparisonValue: "true")
+        let equalRule = Condition(property: .trash, operation: .equal, comparisonValue: "true")
+        let notEqualRule = Condition(property: .trash, operation: .notEqual, comparisonValue: "true")
+        let lessRule = Condition(property: .trash, operation: .less, comparisonValue: "true")
         
         XCTAssertFalse(equalRule.matches(card: TestData.actionCard))
         XCTAssertTrue(equalRule.matches(card: TestData.actionDurationCard))
@@ -99,9 +99,9 @@ class CardRuleTests: XCTestCase {
     }
     
     func testStringMatching() {
-        let equalRule = CardRule(property: .expansion, operation: .equal, comparisonValue: "Test2")
-        let notEqualRule = CardRule(property: .expansion, operation: .notEqual, comparisonValue: "Test2")
-        let lessRule = CardRule(property: .expansion, operation: .less, comparisonValue: "Test2")
+        let equalRule = Condition(property: .expansion, operation: .equal, comparisonValue: "Test2")
+        let notEqualRule = Condition(property: .expansion, operation: .notEqual, comparisonValue: "Test2")
+        let lessRule = Condition(property: .expansion, operation: .less, comparisonValue: "Test2")
         
         XCTAssertFalse(equalRule.matches(card: TestData.actionCard))
         XCTAssertTrue(equalRule.matches(card: TestData.actionCardExpansion2))
@@ -114,9 +114,9 @@ class CardRuleTests: XCTestCase {
     }
     
     func testListMatching() {
-        let equalRule = CardRule(property: .type, operation: .equal, comparisonValue: "Duration")
-        let notEqualRule = CardRule(property: .type, operation: .notEqual, comparisonValue: "Duration")
-        let lessRule = CardRule(property: .type, operation: .less, comparisonValue: "Duration")
+        let equalRule = Condition(property: .type, operation: .equal, comparisonValue: "Duration")
+        let notEqualRule = Condition(property: .type, operation: .notEqual, comparisonValue: "Duration")
+        let lessRule = Condition(property: .type, operation: .less, comparisonValue: "Duration")
         
         XCTAssertFalse(equalRule.matches(card: TestData.actionCard))
         XCTAssertTrue(equalRule.matches(card: TestData.actionDurationCard))
