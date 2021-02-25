@@ -11,9 +11,9 @@ import SwiftUI
 struct TabContainer: View {
     @EnvironmentObject var cardData: CardData
     @EnvironmentObject var setBuilder: SetBuilderModel
-    
+    @State var selectedTab = 1
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             SetBuilderView().tabItem {
                 Image("Deck")
                 Text("Set Builder")
@@ -28,7 +28,7 @@ struct TabContainer: View {
                 Image("Card")
                 Text("Cards")
             }
-            SetsView().tabItem {
+            SetsView(selectedTab: $selectedTab).tabItem {
                 Image(systemName: "list.dash")
                 Text("Sets")
             }

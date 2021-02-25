@@ -74,15 +74,7 @@ struct GameplaySetup: View {
         }.listStyle(InsetGroupedListStyle())
         .alert(isPresented: $saveModal, TextAlert(title: "Save Set", action: { saveName in
             guard let name = saveName else { return }
-            let set = SavedSet(context: managedObjectContext)
-            set.name = name
-            set.date = Date()
-            
-            set.cards = model.cards.map({$0.name})
-            set.events = model.events.map({$0.name})
-            set.landmarks = model.landmarks.map({$0.name})
-            set.projects = model.projects.map({$0.name})
-            set.ways = model.ways.map({$0.name})
+            let set = SavedSet(context: managedObjectContext).with(name: name, model: model)
             
             let lastId = sets.sorted(by: { (set1, set2) -> Bool in
                 set1.id < set2.id

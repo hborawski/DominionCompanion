@@ -91,6 +91,13 @@ class SetBuilderModel: ObservableObject {
             }
         }
     }
+
+    func accept(model: SetModel) {
+        Just([]).assign(to: \.pinnedCards, on: self).store(in: &bag)
+        Just([]).assign(to: \.pinnedLandscape, on: self).store(in: &bag)
+        Just(model.cards).assign(to: \.cards, on: self).store(in: &bag)
+        Just(model.landmarks + model.events + model.projects + model.ways).assign(to: \.landscape, on: self).store(in: &bag)
+    }
     
     func shuffle() {        
         getMatchingSet(pinnedCards) { result in

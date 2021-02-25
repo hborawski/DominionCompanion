@@ -57,4 +57,17 @@ extension SavedSet {
         formatter.dateFormat = "MMM dd, YYYY"
         return formatter.string(from: date)
     }
+
+    func with(name: String, model: SetModel) -> SavedSet {
+        self.name = name
+        self.date = Date()
+
+        self.cards = model.cards.map({$0.name})
+        self.events = model.events.map({$0.name})
+        self.landmarks = model.landmarks.map({$0.name})
+        self.projects = model.projects.map({$0.name})
+        self.ways = model.ways.map({$0.name})
+
+        return self
+    }
 }

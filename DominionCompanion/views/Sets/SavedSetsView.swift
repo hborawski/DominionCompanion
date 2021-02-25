@@ -10,6 +10,8 @@ import SwiftUI
 
 struct SavedSetsView: View {
     @Binding var searchText: String
+    @Binding var selectedTab: Int
+    @EnvironmentObject var setBuilder: SetBuilderModel
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -24,7 +26,14 @@ struct SavedSetsView: View {
             }, id: \.self) { set in
                 let model = set.getSetModel()
                 NavigationLink(
-                    destination: GameplaySetup(model: model),
+                    destination: GameplaySetup(model: model).navigationBarItems(trailing: HStack {
+                        Button(action: {
+                            setBuilder.accept(model: model)
+                            selectedTab = 1
+                        }) {
+                            Image(systemName: "square.and.arrow.up.on.square")
+                        }
+                    }),
                     label: {
                         HStack {
                             VStack(alignment: .leading) {
@@ -51,6 +60,6 @@ struct SavedSetsView: View {
 
 struct SavedSetsView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedSetsView(searchText: .constant(""))
+        SavedSetsView(searchText: .constant(""), selectedTab: .constant(1))
     }
 }

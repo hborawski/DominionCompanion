@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct SetsView: View {    
+struct SetsView: View {
+    @Binding var selectedTab: Int
     @State var searchText: String = ""
     @State var setType = 0
     
@@ -24,7 +25,7 @@ struct SetsView: View {
                 if setType == 0 {
                     RecommendedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
                 } else {
-                    SavedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
+                    SavedSetsView(searchText: $searchText, selectedTab: $selectedTab).listStyle(GroupedListStyle())
                 }
             }.navigationTitle(Text("\(setType == 0 ? "Recommended" : "Saved") Sets"))
         }
@@ -33,6 +34,6 @@ struct SetsView: View {
 
 struct SetsView_Previews: PreviewProvider {
     static var previews: some View {
-        SetsView()
+        SetsView(selectedTab: .constant(1))
     }
 }
