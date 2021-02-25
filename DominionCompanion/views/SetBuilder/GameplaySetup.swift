@@ -21,49 +21,33 @@ struct GameplaySetup: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: SavedSet.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)]) var sets: FetchedResults<SavedSet>
-    
+
+    func cardSection(_ title: String, _ cards: [Card]) -> some View {
+        return Section(header: Text(title)) {
+            ForEach(cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
+                CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
+            }
+        }
+    }
+
     @ViewBuilder
     var body: some View {
         List {
-            Section(header: Text("In Supply")) {
-                ForEach(model.cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                    CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                }
-            }
+            cardSection("In Supply", model.cards)
             if model.notInSupply.count > 0 {
-                Section(header: Text("Not In Supply")) {
-                    ForEach(model.notInSupply.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                        CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                    }
-                }
+                cardSection("Not In Supply", model.notInSupply)
             }
             if model.landmarks.count > 0 {
-                Section(header: Text("Landmarks")) {
-                    ForEach(model.landmarks.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                        CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                    }
-                }
+                cardSection("Landmarks", model.landmarks)
             }
             if model.events.count > 0 {
-                Section(header: Text("Events")) {
-                    ForEach(model.events.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                        CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                    }
-                }
+                cardSection("Events", model.events)
             }
             if model.projects.count > 0 {
-                Section(header: Text("Projects")) {
-                    ForEach(model.projects.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                        CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                    }
-                }
+                cardSection("Projects", model.projects)
             }
             if model.ways.count > 0 {
-                Section(header: Text("Ways")) {
-                    ForEach(model.ways.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                        CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                    }
-                }
+                cardSection("Ways", model.ways)
             }
             if model.getTokens().count > 0 {
                 Section(header: Text("Tokens")) {

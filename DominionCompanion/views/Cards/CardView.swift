@@ -11,6 +11,7 @@ import SwiftUI
 struct CardView<T>: View where T: View {
     @AppStorage(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLink: Bool = false
     @EnvironmentObject var cardData: CardData
+    @EnvironmentObject var setBuilder: SetBuilderModel
     var card: Card
     
     var accessory: ((Card) -> T) = { _ in EmptyView() as! T }

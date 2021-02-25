@@ -41,7 +41,6 @@
 		AFA6638925858D5F00E641D8 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6638825858D5F00E641D8 /* SetsView.swift */; };
 		AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB96A992443E6DA00F2046D /* Settings.swift */; };
 		AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFC1BA64246A24E400298F75 /* SavedSets.xcdatamodeld */; };
-		AFC1BA68246A25F800298F75 /* SavedSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1BA67246A25F800298F75 /* SavedSets.swift */; };
 		AFCA84162586A1C0008BBAE3 /* RecommendedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */; };
 		AFCA841B2586A279008BBAE3 /* SavedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */; };
 		AFCA84202586A514008BBAE3 /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA841F2586A514008BBAE3 /* TextAlert.swift */; };
@@ -111,7 +110,6 @@
 		AFA6638825858D5F00E641D8 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		AFB96A992443E6DA00F2046D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AFC1BA65246A24E400298F75 /* SavedSets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSets.xcdatamodel; sourceTree = "<group>"; };
-		AFC1BA67246A25F800298F75 /* SavedSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSets.swift; sourceTree = "<group>"; };
 		AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSetsView.swift; sourceTree = "<group>"; };
 		AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSetsView.swift; sourceTree = "<group>"; };
 		AFCA841F2586A514008BBAE3 /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 				AFD02B8A246A331A00D14D61 /* SavedSet+CoreDataClass.swift */,
 				AFD02B8B246A331A00D14D61 /* SavedSet+CoreDataProperties.swift */,
 				AFC1BA64246A24E400298F75 /* SavedSets.xcdatamodeld */,
-				AFC1BA67246A25F800298F75 /* SavedSets.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -518,7 +515,6 @@
 				AF1B6EB32324334F00ADA74D /* Rule.swift in Sources */,
 				AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */,
 				AFCA84372586BF41008BBAE3 /* SavedRulesView.swift in Sources */,
-				AFC1BA68246A25F800298F75 /* SavedSets.swift in Sources */,
 				AF1A5E1F252551FE0050DE4E /* CardsView.swift in Sources */,
 				AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */,
 				AF1A5E682529101C0050DE4E /* RuleRow.swift in Sources */,

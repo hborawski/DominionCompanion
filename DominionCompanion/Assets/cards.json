@@ -6643,9 +6643,7 @@
     "junk": false,
     "gain": 0,
     "supply": true,
-    "related": [
-      "Fortune"
-    ],
+    "related": [],
     "tokens": {
       "victory": 0,
       "coin": 0,
