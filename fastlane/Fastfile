@@ -27,6 +27,7 @@ platform :ios do
       clean: true
     )
   end
+
   desc 'Unit Tests'
   lane :test do
     scan(
@@ -35,12 +36,17 @@ platform :ios do
       clean: true,
       code_coverage: true
     )
+  end
+
+  desc "Code Coverage"
+  lane :coverage do |options|
     slather(
       proj: 'DominionCompanion.xcodeproj',
       scheme: 'DominionCompanion',
       output_directory: 'reports/coverage',
       ignore: ['DominionCompanion/views/**/*'],
-      html: true
+      html: true,
+      show: options[:show] || false
     )
   end
 

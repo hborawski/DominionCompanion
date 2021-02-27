@@ -40,6 +40,11 @@
 		AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
 		AFA6638925858D5F00E641D8 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6638825858D5F00E641D8 /* SetsView.swift */; };
 		AFB96A9A2443E6DA00F2046D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB96A992443E6DA00F2046D /* Settings.swift */; };
+		AFBD15A825EAE51E0002275A /* RecommendedSetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15A725EAE51E0002275A /* RecommendedSetsTests.swift */; };
+		AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15AB25EAE5710002275A /* CardTests.swift */; };
+		AFBD15B025EAEAFE0002275A /* CardDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15AF25EAEAFE0002275A /* CardDataTests.swift */; };
+		AFBD15B425EAEC880002275A /* CardPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15B325EAEC880002275A /* CardPropertyTests.swift */; };
+		AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15B925EAF02C0002275A /* RuleTypeTests.swift */; };
 		AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFC1BA64246A24E400298F75 /* SavedSets.xcdatamodeld */; };
 		AFCA84162586A1C0008BBAE3 /* RecommendedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */; };
 		AFCA841B2586A279008BBAE3 /* SavedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */; };
@@ -58,8 +63,8 @@
 		AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8EE7422A4B830008E09B2 /* Card.swift */; };
 		AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */; };
 		AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0982381CD6B00AC3BEA /* TestData.swift */; };
-		AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */; };
-		AFE9090725C4D9F500E8334E /* CardRuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE9090625C4D9F500E8334E /* CardRuleTests.swift */; };
+		AFE908F125C4D22800E8334E /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A02381D1DF00AC3BEA /* RuleTests.swift */; };
+		AFE9090725C4D9F500E8334E /* ConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE9090625C4D9F500E8334E /* ConditionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,13 +107,18 @@
 		AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCardRow.swift; sourceTree = "<group>"; };
 		AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableRow.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
-		AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRuleTest.swift; sourceTree = "<group>"; };
+		AF6AA0A02381D1DF00AC3BEA /* RuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTest.swift; sourceTree = "<group>"; };
 		AF80D7092364DA9800FDC4D6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF80D70B2364DD7100FDC4D6 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
 		AFA6638825858D5F00E641D8 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		AFB96A992443E6DA00F2046D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		AFBD15A725EAE51E0002275A /* RecommendedSetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSetsTests.swift; sourceTree = "<group>"; };
+		AFBD15AB25EAE5710002275A /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		AFBD15AF25EAEAFE0002275A /* CardDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataTests.swift; sourceTree = "<group>"; };
+		AFBD15B325EAEC880002275A /* CardPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPropertyTests.swift; sourceTree = "<group>"; };
+		AFBD15B925EAF02C0002275A /* RuleTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTypeTests.swift; sourceTree = "<group>"; };
 		AFC1BA65246A24E400298F75 /* SavedSets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSets.xcdatamodel; sourceTree = "<group>"; };
 		AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSetsView.swift; sourceTree = "<group>"; };
 		AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSetsView.swift; sourceTree = "<group>"; };
@@ -129,7 +139,7 @@
 		AFE8EE7422A4B830008E09B2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AFE908D825C4D1D300E8334E /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE908DC25C4D1D300E8334E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFE9090625C4D9F500E8334E /* CardRuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRuleTests.swift; sourceTree = "<group>"; };
+		AFE9090625C4D9F500E8334E /* ConditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,19 +226,22 @@
 			path = cards;
 			sourceTree = "<group>";
 		};
-		AF6AA0922381C9DB00AC3BEA /* Rules */ = {
+		AF6AA0922381C9DB00AC3BEA /* rules */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0A02381D1DF00AC3BEA /* SetRuleTest.swift */,
-				AFE9090625C4D9F500E8334E /* CardRuleTests.swift */,
+				AF6AA0A02381D1DF00AC3BEA /* RuleTests.swift */,
+				AFE9090625C4D9F500E8334E /* ConditionTests.swift */,
+				AFBD15B325EAEC880002275A /* CardPropertyTests.swift */,
+				AFBD15B925EAF02C0002275A /* RuleTypeTests.swift */,
 			);
-			path = Rules;
+			path = rules;
 			sourceTree = "<group>";
 		};
 		AF6AA0932381C9E800AC3BEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0922381C9DB00AC3BEA /* Rules */,
+				AFBD15A225EAE4FD0002275A /* cards */,
+				AF6AA0922381C9DB00AC3BEA /* rules */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,6 +321,16 @@
 				AFCA84362586BF41008BBAE3 /* SavedRulesView.swift */,
 			);
 			path = Rules;
+			sourceTree = "<group>";
+		};
+		AFBD15A225EAE4FD0002275A /* cards */ = {
+			isa = PBXGroup;
+			children = (
+				AFBD15A725EAE51E0002275A /* RecommendedSetsTests.swift */,
+				AFBD15AB25EAE5710002275A /* CardTests.swift */,
+				AFBD15AF25EAEAFE0002275A /* CardDataTests.swift */,
+			);
+			path = cards;
 			sourceTree = "<group>";
 		};
 		AFC1BA63246A24CB00298F75 /* CoreData */ = {
@@ -528,10 +551,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE908F125C4D22800E8334E /* SetRuleTest.swift in Sources */,
+				AFBD15B025EAEAFE0002275A /* CardDataTests.swift in Sources */,
+				AFE908F125C4D22800E8334E /* RuleTests.swift in Sources */,
 				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
+				AFBD15A825EAE51E0002275A /* RecommendedSetsTests.swift in Sources */,
+				AFBD15B425EAEC880002275A /* CardPropertyTests.swift in Sources */,
+				AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */,
+				AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
-				AFE9090725C4D9F500E8334E /* CardRuleTests.swift in Sources */,
+				AFE9090725C4D9F500E8334E /* ConditionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

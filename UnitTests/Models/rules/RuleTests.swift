@@ -1,5 +1,5 @@
 //
-//  SetRuleTest.swift
+//  RuleTests.swift
 //  DominionCompanionTests
 //
 //  Created by Harris Borawski on 11/17/19.
@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 @testable import DominionCompanion
 
-class SetRuleTest: XCTestCase {
+class RuleTests: XCTestCase {
     func testEquality() {
         let rule1 = Rule(value: 1, operation: .equal, conditions: [])
         let rule2 = Rule(value: 1, operation: .equal, conditions: [])
@@ -61,5 +61,8 @@ class SetRuleTest: XCTestCase {
         let rule = Rule(value: 1, operation: .greater, conditions: [condition])
         let set = [TestData.cost2Card]
         XCTAssert(rule.inverseMatch(set))
+
+        let rule2 = Rule(value: 1, operation: .greaterOrEqual, conditions: [condition])
+        XCTAssert(rule2.inverseMatch(set))
     }
 }

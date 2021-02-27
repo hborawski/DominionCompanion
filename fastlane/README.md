@@ -26,6 +26,11 @@ Debug Build
 fastlane ios test
 ```
 Unit Tests
+### ios coverage
+```
+fastlane ios coverage
+```
+Code Coverage
 ### ios beta_release
 ```
 fastlane ios beta_release
