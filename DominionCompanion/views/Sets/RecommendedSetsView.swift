@@ -11,6 +11,9 @@ import SwiftUI
 struct RecommendedSetsView: View {
     var recommendedSets = RecommendedSets.shared.sets
     @Binding var searchText: String
+    @Binding var selectedTab: Int
+    @EnvironmentObject var setBuilder: SetBuilderModel
+
     var body: some View {
         List {
             ForEach(recommendedSets.filter { set in
@@ -20,7 +23,14 @@ struct RecommendedSetsView: View {
             }, id: \.self) { set in
                 let model = set.getSetModel()
                 NavigationLink(
-                    destination: GameplaySetup(model: model),
+                    destination: GameplaySetup(model: model).navigationBarItems(trailing: HStack {
+                        Button(action: {
+                            setBuilder.accept(model: model)
+                            selectedTab = 1
+                        }) {
+                            Image(systemName: "square.and.arrow.up.on.square")
+                        }
+                    }),
                     label: {
                         VStack(alignment: .leading) {
                             Text(set.name ?? "")
@@ -34,6 +44,6 @@ struct RecommendedSetsView: View {
 
 struct RecommendedSetsView_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedSetsView(searchText: .constant(""))
+        RecommendedSetsView(searchText: .constant(""), selectedTab: .constant(0))
     }
 }

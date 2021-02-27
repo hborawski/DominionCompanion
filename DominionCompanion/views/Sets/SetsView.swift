@@ -23,7 +23,7 @@ struct SetsView: View {
                     Text("Saved").tag(1)
                 }.pickerStyle(SegmentedPickerStyle())
                 if setType == 0 {
-                    RecommendedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
+                    RecommendedSetsView(searchText: $searchText, selectedTab: $selectedTab).listStyle(GroupedListStyle())
                 } else {
                     SavedSetsView(searchText: $searchText, selectedTab: $selectedTab).listStyle(GroupedListStyle())
                 }
