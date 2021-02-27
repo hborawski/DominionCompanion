@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct RuleView: View {
-    static let defaultRule = Condition(property: .cost, operation: .greater, comparisonValue: "0")
+struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
+    @ObservedObject var ruleBuilder: Builder
     
     var existing: Rule?
     
@@ -38,8 +38,6 @@ struct RuleView: View {
 
     
     @EnvironmentObject var cardData: CardData
-    
-    @EnvironmentObject var setBuilder: SetBuilderModel
     
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -85,11 +83,10 @@ struct RuleView: View {
         .navigationBarItems(trailing: HStack {
             Button("Save") {
                 let newRule = Rule(value: value, operation: operation, conditions: conditions)
-                if let index = setBuilder.rules.firstIndex(where: {$0.id == self.id}) {
-                    setBuilder.rules[index] = newRule
-                } else {
-                    setBuilder.rules.append(newRule)
+                if let id = self.id {
+                    newRule.id = id
                 }
+                ruleBuilder.addRule(newRule)
                 self.presentationMode.wrappedValue.dismiss()
             }
         })
@@ -108,6 +105,6 @@ struct RuleView_Previews: PreviewProvider {
     static var previews: some View {
         let cardData = CardData()
         let model = SetBuilderModel(cardData)
-        return RuleView().environmentObject(cardData).environmentObject(model)
+        return RuleView(ruleBuilder: model).environmentObject(cardData)
     }
 }

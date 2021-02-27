@@ -61,6 +61,20 @@ extension SavedRuleSet {
     }
 }
 
+extension SavedRuleSet: RuleBuilder {
+    func removeRule(_ indexSet: IndexSet) {
+        self.rules.remove(atOffsets: indexSet)
+    }
+
+    func addRule(_ rule: Rule) {
+        if let index = rules.firstIndex(where: {$0.id == rule.id}) {
+            rules[index] = rule
+        } else {
+            rules.append(rule)
+        }
+    }
+}
+
 extension SavedRuleSet : Identifiable {
 
 }

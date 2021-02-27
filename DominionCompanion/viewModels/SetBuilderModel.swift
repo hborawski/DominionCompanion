@@ -14,7 +14,13 @@ enum RuleEngineError: Error {
     case tooManyAttempts
 }
 
-class SetBuilderModel: ObservableObject {
+protocol RuleBuilder {
+    var rules: [Rule] { get set }
+    func removeRule(_: IndexSet)
+    func addRule(_: Rule)
+}
+
+class SetBuilderModel: ObservableObject, RuleBuilder {
     private var bag = Set<AnyCancellable>()
     private let cardData: CardData
     
@@ -256,5 +262,17 @@ class SetBuilderModel: ObservableObject {
     
     func rulesCanBeSatisfied(_ cards: [Card], _ rules: [Rule]) -> Bool {
         return rules.first(where: { !$0.satisfiable(cards) }) == nil
+    }
+
+    func removeRule(_ indexSet: IndexSet) {
+        self.rules.remove(atOffsets: indexSet)
+    }
+
+    func addRule(_ rule: Rule) {
+        if let index = rules.firstIndex(where: {$0.id == rule.id}) {
+            rules[index] = rule
+        } else {
+            rules.append(rule)
+        }
     }
 }

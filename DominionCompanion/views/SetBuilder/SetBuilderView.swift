@@ -32,7 +32,7 @@ struct SetBuilderView: View {
                         Image(systemName: "cube.box")
                         Text("Expansions")
                     }.frame(maxWidth: .infinity)
-                    NavigationLink(destination: RulesView()) {
+                    NavigationLink(destination: RulesView(ruleBuilder: setBuilder)) {
                         Image(systemName: "list.dash")
                         Text("Rules (\(setBuilder.rules.count))")
                     }.frame(maxWidth: .infinity)

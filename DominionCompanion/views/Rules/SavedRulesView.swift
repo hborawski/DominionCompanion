@@ -20,22 +20,27 @@ struct SavedRulesView: View {
     var body: some View {
         List {
             ForEach(savedRuleSets, id: \.self) { savedRuleSet in
-                HStack {
-                    Text(savedRuleSet.name)
-                    Spacer()
-                    Text("\(savedRuleSet.rules.count) rules").foregroundColor(.secondary)
+                let saveButton = Button(action: {savedRuleSet.saveRules()}) {
+                    Image(systemName: "checkmark.seal")
                 }
-                .contextMenu {
-                    Button(action: {
-                        setBuilder.rules = savedRuleSet.rules
-                    }, label: {
-                        Text("Replace Current Rules")
-                    })
-                    Button(action: {
-                        setBuilder.rules = setBuilder.rules + savedRuleSet.rules
-                    }, label: {
-                        Text("Append to Current Rules")
-                    })
+                NavigationLink(destination: RulesView(ruleBuilder: savedRuleSet, toolbarItem: saveButton)) {
+                    HStack {
+                        Text(savedRuleSet.name)
+                        Spacer()
+                        Text("\(savedRuleSet.rules.count) rules").foregroundColor(.secondary)
+                    }
+                    .contextMenu {
+                        Button(action: {
+                            setBuilder.rules = savedRuleSet.rules
+                        }, label: {
+                            Text("Replace Current Rules")
+                        })
+                        Button(action: {
+                            setBuilder.rules = setBuilder.rules + savedRuleSet.rules
+                        }, label: {
+                            Text("Append to Current Rules")
+                        })
+                    }
                 }
             }
             .onDelete(perform: { indexSet in

@@ -8,39 +8,42 @@
 
 import SwiftUI
 
-struct RulesView: View {
-    @EnvironmentObject var setBuilder: SetBuilderModel
+struct RulesView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
+    @ObservedObject var ruleBuilder: Builder
+
+    var toolbarItem: Button<Image>? = nil
 
     @State var editing = false
     @State var savedRules = false
+    @ViewBuilder
     var body: some View {
         List {
-            ForEach(setBuilder.rules, id: \.self) { rule in
-                NavigationLink(destination: RuleView(existing: rule)) {
+            ForEach(ruleBuilder.rules, id: \.self) { rule in
+                NavigationLink(destination: RuleView(ruleBuilder: ruleBuilder, existing: rule)) {
                     RuleRow(rule: rule)
                 }
-            }.onDelete(perform: { setBuilder.rules.remove(atOffsets: $0)})
+            }.onDelete(perform: { ruleBuilder.removeRule($0) })
         }
         .navigationTitle("Set Rules")
-        .toolbar {
-            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+        .navigationBarItems(trailing: HStack {
+            if let button = toolbarItem {
+                button
+            } else {
                 Button(action: {
                     self.savedRules.toggle()
                 }, label: {
                     Image(systemName: "list.dash")
                 })
             }
-            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
-                Button(action: {
-                    self.editing.toggle()
-                }, label: {
-                    Image(systemName: "plus")
-                })
-            }
-        }
+            Button(action: {
+                self.editing.toggle()
+            }, label: {
+                Image(systemName: "plus")
+            })
+        })
         .background(
             NavigationLink(
-                destination: RuleView(),
+                destination: RuleView(ruleBuilder: ruleBuilder),
                 isActive: $editing,
                 label: {
                     EmptyView()
@@ -67,7 +70,7 @@ struct RulesView_Previews: PreviewProvider {
             ])
         ]
         return NavigationView {
-            RulesView().environmentObject(model)
+            RulesView(ruleBuilder: model)
         }
     }
 }
