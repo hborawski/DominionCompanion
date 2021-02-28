@@ -53,11 +53,7 @@ platform :ios do
   desc 'Release to TestFlight'
   lane :beta_release do
     increment_build_number
-    build_ios_app(
-      scheme: 'DominionCompanion',
-      project: 'DominionCompanion.xcodeproj',
-      output_directory: 'build'
-    )
+    build(release: true)
     upload_to_testflight(
       beta_app_review_info: {
         contact_email: "dominioncompanion@gmail.com",
