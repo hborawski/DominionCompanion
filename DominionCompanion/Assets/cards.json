@@ -9349,7 +9349,7 @@
     "name": "Madman",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
       "Hermit"
     ],
