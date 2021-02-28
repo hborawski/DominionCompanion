@@ -35,7 +35,7 @@ struct Toasted: ViewModifier {
             ZStack(alignment: .center) {
                 content.environmentObject(toastModel).blur(radius: toastModel.showing ? 2 : 0)
                 VStack {
-                    Text(toastModel.message).multilineTextAlignment(.center).padding()
+                    Text(toastModel.message).multilineTextAlignment(.center).padding().animation(.none)
                 }
                 .frame(minWidth: 200)
                 .frame(height: geometry.size.height / 6)

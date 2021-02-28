@@ -56,7 +56,7 @@ struct SettingsView: View {
                 Section(header: Text("App Behavior")) {
                     Toggle("Hide Wiki Links", isOn: $hideWikiLinks)
                     Toggle("Pin all cards for setup", isOn: $pinCardsForSetup)
-                    ListChoice(title: "Sort Mode", value: sortMode.rawValue, values: SortMode.allCases.map{$0.rawValue}) { val in
+                    ListChoice(title: "Set Builder Sort Mode", value: sortMode.rawValue, values: SortMode.allCases.map{$0.rawValue}) { val in
                         if let mode = SortMode(rawValue: val) {
                             sortMode = mode
                         }
