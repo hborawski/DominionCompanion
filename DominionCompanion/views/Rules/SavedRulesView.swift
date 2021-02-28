@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SavedRulesView: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
+    @EnvironmentObject var toastModel: ToastModel
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -20,7 +21,10 @@ struct SavedRulesView: View {
     var body: some View {
         List {
             ForEach(savedRuleSets, id: \.self) { savedRuleSet in
-                let saveButton = Button(action: {savedRuleSet.saveRules()}) {
+                let saveButton = Button(action: {
+                    savedRuleSet.saveRules()
+                    toastModel.show(message: "Saved", for: 1.0)
+                }) {
                     Image(systemName: "checkmark.seal")
                 }
                 NavigationLink(destination: RulesView(ruleBuilder: savedRuleSet, toolbarItem: saveButton)) {

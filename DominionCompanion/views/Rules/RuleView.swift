@@ -58,7 +58,7 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                     }
                 }
                 Picker("Number Of Cards", selection: $value) {
-                    ForEach(Array(0...11), id: \.self) { number in
+                    ForEach(Array(0...Settings.shared.maxKingdomCards), id: \.self) { number in
                         Text("\(number)")
                     }
                 }

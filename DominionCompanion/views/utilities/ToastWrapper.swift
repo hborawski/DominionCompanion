@@ -37,6 +37,7 @@ struct Toasted: ViewModifier {
                 VStack {
                     Text(toastModel.message).multilineTextAlignment(.center).padding()
                 }
+                .frame(minWidth: 200)
                 .frame(height: geometry.size.height / 6)
                 .background(Color.secondary.colorInvert())
                 .foregroundColor(Color.primary)
