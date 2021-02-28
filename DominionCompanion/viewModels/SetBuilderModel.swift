@@ -193,7 +193,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
                 // and the satisfaction is either already met, or has increased
                 // then proceed with this set
                 if
-                    self.inverseMatchRules(tempSet, self.rules),
+//                    self.inverseMatchRules(tempSet, self.rules),
                     !satisfactionDecreased,
                     self.ruleSatisfaction(tempSet, self.rules) > satisfaction || satisfaction == 1.0
                 {
@@ -249,11 +249,11 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     }
     
     // MARK: Utility Methods
-    func inverseMatchRules(_ cards: [Card], _ rules: [Rule]) -> Bool {
-        return rules.reduce(true) { (acc: Bool, cv: Rule) -> Bool in
-            return acc && cv.inverseMatch(cards)
-        }
-    }
+//    func inverseMatchRules(_ cards: [Card], _ rules: [Rule]) -> Bool {
+//        return rules.reduce(true) { (acc: Bool, cv: Rule) -> Bool in
+//            return acc && cv.inverseMatch(cards)
+//        }
+//    }
     
     func ruleSatisfaction(_ cards: [Card], _ rules: [Rule]) -> Double {
         let satisfactions = rules.compactMap { $0.satisfaction(cards) }

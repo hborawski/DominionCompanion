@@ -55,14 +55,159 @@ class RuleTests: XCTestCase {
         XCTAssertTrue(string.contains("="))
     }
 
-    func testInverseMatch() {
+    // MARK: Inverted Match Testing
+    // Checks to see if the set violates the rule
+    func testSatisfactionGreater() {
         let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
         
-        let rule = Rule(value: 1, operation: .greater, conditions: [condition])
-        let set = [TestData.cost2Card]
-        XCTAssert(rule.inverseMatch(set))
+        let rule = Rule(value: 2, operation: .greater, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 1.0)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card
+        ]), 0.5)
+    }
+    func testSatisfactionGreaterOrEqual() {
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
 
-        let rule2 = Rule(value: 1, operation: .greaterOrEqual, conditions: [condition])
-        XCTAssert(rule2.inverseMatch(set))
+        let rule = Rule(value: 2, operation: .greaterOrEqual, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 1.0)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card
+        ]), 0.5)
+    }
+
+    func testSatisfactionEqual() {
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
+
+        let rule = Rule(value: 2, operation: .equal, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card
+        ]), 0.5)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 2/3)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 1.0)
+    }
+
+    func testSatisfactionLessOrEqual() {
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
+
+        let rule = Rule(value: 2, operation: .lessOrEqual, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 1.0)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 0.0)
+    }
+
+    func testSatisfactionLess() {
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
+        let rule = Rule(value: 2, operation: .less, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card
+        ]), 1.0)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 0.0)
+    }
+
+    func testSatisfactionNotEqual() {
+        let condition = Condition(property: .cost, operation: .equal, comparisonValue: "2")
+        let rule = Rule(value: 2, operation: .notEqual, conditions: [condition])
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card
+        ]), 1.0)
+        XCTAssertEqual(rule.satisfaction([
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost3Card,
+            TestData.cost2Card,
+            TestData.cost2Card
+        ]), 0.0)
     }
 }

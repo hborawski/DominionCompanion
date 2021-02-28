@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
     @ObservedObject var ruleBuilder: Builder
+    @EnvironmentObject var setBuilder: SetBuilderModel
     
     var existing: Rule?
     

@@ -59,24 +59,24 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
         - cards: The set of cards to check against
      - returns: Whether or not the set of cards violates the rules
      */
-    func inverseMatch(_ cards: [Card]) -> Bool {
-        let setValue = self.matchingCards(cards).count
-        let comparisonValue = Settings.shared.maxKingdomCards - value
-        switch self.operation {
-        case .greater:
-            return setValue <= (Settings.shared.maxKingdomCards - value)
-        case .greaterOrEqual:
-            return setValue <= (Settings.shared.maxKingdomCards - (value - 1))
-        case .equal:
-            return setValue != comparisonValue
-        case .lessOrEqual:
-            return setValue <= value
-        case .less:
-            return setValue < value
-        case .notEqual:
-            return setValue != value
-        }
-    }
+//    func inverseMatch(_ cards: [Card]) -> Bool {
+//        let setValue = self.matchingCards(cards).count
+//        let comparisonValue = Settings.shared.maxKingdomCards - value
+//        switch self.operation {
+//        case .greater:
+//            return setValue <= (Settings.shared.maxKingdomCards - value)
+//        case .greaterOrEqual:
+//            return setValue <= (Settings.shared.maxKingdomCards - (value - 1))
+//        case .equal:
+//            return setValue != comparisonValue
+//        case .lessOrEqual:
+//            return setValue <= value
+//        case .less:
+//            return setValue < value
+//        case .notEqual:
+//            return setValue != value
+//        }
+//    }
 
     /**
      Calculates the satisfaction of the rule

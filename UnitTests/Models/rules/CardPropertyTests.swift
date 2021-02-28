@@ -34,6 +34,7 @@ class CardPropertyTests: XCTestCase {
         XCTAssertEqual(CardProperty.buys.all, ["0", "1", "2"])
         XCTAssertEqual(CardProperty.cards.all, ["0", "1", "2", "3", "4", "5", "6", "7"])
         XCTAssertEqual(CardProperty.expansion.all, CardData.shared.allExpansions)
+        XCTAssertEqual(CardProperty.type.all, CardData.shared.kingdomTypes)
         XCTAssertEqual(CardProperty.trash.all, ["true", "false"])
         XCTAssertEqual(CardProperty.exile.all, ["true", "false"])
         XCTAssertEqual(CardProperty.victoryTokens.all, ["0", "1", "2"])
