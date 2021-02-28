@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SetBuilderView: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
+    @EnvironmentObject var toastModel: ToastModel
     
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     

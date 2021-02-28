@@ -26,15 +26,18 @@ class ToastModel: ObservableObject {
  so any view in the hierarchy can request a toast
  */
 struct Toasted: ViewModifier {
-    @ObservedObject var toastModel = ToastModel()
+    init(_ model: ToastModel = ToastModel()) {
+        self.toastModel = model
+    }
+    @ObservedObject var toastModel: ToastModel
     func body(content: Content) -> some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
                 content.environmentObject(toastModel).blur(radius: toastModel.showing ? 2 : 0)
                 VStack {
-                    Text(toastModel.message)
+                    Text(toastModel.message).multilineTextAlignment(.center).padding()
                 }
-                .frame(width: geometry.size.width * 0.67, height: geometry.size.height / 6)
+                .frame(height: geometry.size.height / 6)
                 .background(Color.secondary.colorInvert())
                 .foregroundColor(Color.primary)
                 .cornerRadius(20)

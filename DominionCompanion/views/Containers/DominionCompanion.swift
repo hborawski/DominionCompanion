@@ -12,6 +12,7 @@ import CoreData
 @main
 struct DominionCompanion: App {
     let cardData = CardData()
+    let toastModel = ToastModel()
     var persistentContainer: NSPersistentContainer {
         let container = NSPersistentContainer(name: "SavedSets")
         container.loadPersistentStores { description, error in
@@ -24,9 +25,9 @@ struct DominionCompanion: App {
     var body: some Scene {
         WindowGroup {
             TabContainer()
-                .modifier(Toasted())
+                .modifier(Toasted(toastModel))
                 .environmentObject(cardData)
-                .environmentObject(SetBuilderModel(cardData))
+                .environmentObject(SetBuilderModel(cardData) { toastModel.show(message: $0, for: 2)})
                 .environment(\.managedObjectContext, persistentContainer.viewContext)
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification), perform: { _ in
                     let context = persistentContainer.viewContext

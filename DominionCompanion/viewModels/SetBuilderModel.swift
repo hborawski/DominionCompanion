@@ -21,8 +21,10 @@ protocol RuleBuilder {
 }
 
 class SetBuilderModel: ObservableObject, RuleBuilder {
-    private var bag = Set<AnyCancellable>()
+    public var bag = Set<AnyCancellable>()
     private let cardData: CardData
+
+    private let onError: ((String) -> Void)?
     
     @Published var rules: [Rule] = Settings.shared.pinnedRules
     
@@ -50,8 +52,9 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
         )
     }
     
-    init(_ cardData: CardData) {
+    init(_ cardData: CardData, onError: ((String) -> Void)? = nil ) {
         self.cardData = cardData
+        self.onError = onError
         
         $pinnedCards.sink { (pinned) in
             // Only update if the newly pinned card is not already in the set of cards (pinned from search)
@@ -105,12 +108,18 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
         Just(model.landmarks + model.events + model.projects + model.ways).assign(to: \.landscape, on: self).store(in: &bag)
     }
     
-    func shuffle() {        
+    func shuffle() {
         getMatchingSet(pinnedCards) { result in
             switch result {
             case .success(let cards):
                 Just(cards).receive(on: RunLoop.main).assign(to: \.cards, on: self).store(in: &self.bag)
             case .failure(let error):
+                switch error {
+                case .notSatisfiable:
+                    self.onError?("Current rules cannot be satisfied with the chosen expansions")
+                case .tooManyAttempts:
+                    self.onError?("Unable to build set in time, current rules may be too specific.")
+                }
                 print(error)
             }
         }
