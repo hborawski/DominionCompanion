@@ -34,7 +34,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
 
     @Published var landscape: [Card] = Settings.shared.currentLandscape
     
-    @Published var pinnedLandscape: [Card] = Settings.shared.pinnedLanscape
+    @Published var pinnedLandscape: [Card] = Settings.shared.pinnedLandscape
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
@@ -68,7 +68,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
             if Set(pinned).intersection(Set(self.landscape)).count != pinned.count {
                 Just(Array(Set(pinned).union(Set(self.landscape)))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &self.bag)
             }
-            Settings.shared.pinnedLanscape = pinned
+            Settings.shared.pinnedLandscape = pinned
         }.store(in: &bag)
         
         // When it's updated, save to UserDefaults

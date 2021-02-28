@@ -21,7 +21,7 @@ struct Constants {
         static let currentCards = "currentCards"
         static let currentLandscape = "currentLandscape"
         static let pinnedCards = "pinnedCards"
-        static let pinnedLanscape = "pinnedLandscape"
+        static let pinnedLandscape = "pinnedLandscape"
 
         static let settingsMaxLandscape = "settings_maxLandscape"
         static let settingsNumEvents = "settings_numberOfEvents"

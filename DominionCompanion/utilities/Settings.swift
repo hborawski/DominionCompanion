@@ -38,7 +38,7 @@ class Settings {
 
     @UserDefaultsBackedCodable(Constants.SaveKeys.currentLandscape) var currentLandscape: [Card] = []
 
-    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLanscape) var pinnedLanscape: [Card] = []
+    @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLandscape) var pinnedLandscape: [Card] = []
 
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [Rule] = []
 }

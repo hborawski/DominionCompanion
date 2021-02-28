@@ -46,6 +46,7 @@
 		AFBD15B425EAEC880002275A /* CardPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15B325EAEC880002275A /* CardPropertyTests.swift */; };
 		AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15B925EAF02C0002275A /* RuleTypeTests.swift */; };
 		AFBD15C325EB40580002275A /* ToastWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15C225EB40580002275A /* ToastWrapper.swift */; };
+		AFBD15D025EC46B50002275A /* SetBuilderModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */; };
 		AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFC1BA64246A24E400298F75 /* SavedSets.xcdatamodeld */; };
 		AFCA84162586A1C0008BBAE3 /* RecommendedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */; };
 		AFCA841B2586A279008BBAE3 /* SavedSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */; };
@@ -121,6 +122,7 @@
 		AFBD15B325EAEC880002275A /* CardPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPropertyTests.swift; sourceTree = "<group>"; };
 		AFBD15B925EAF02C0002275A /* RuleTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTypeTests.swift; sourceTree = "<group>"; };
 		AFBD15C225EB40580002275A /* ToastWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastWrapper.swift; sourceTree = "<group>"; };
+		AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderModelTests.swift; sourceTree = "<group>"; };
 		AFC1BA65246A24E400298F75 /* SavedSets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSets.xcdatamodel; sourceTree = "<group>"; };
 		AFCA84152586A1C0008BBAE3 /* RecommendedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSetsView.swift; sourceTree = "<group>"; };
 		AFCA841A2586A279008BBAE3 /* SavedSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSetsView.swift; sourceTree = "<group>"; };
@@ -239,13 +241,13 @@
 			path = rules;
 			sourceTree = "<group>";
 		};
-		AF6AA0932381C9E800AC3BEA /* Models */ = {
+		AF6AA0932381C9E800AC3BEA /* models */ = {
 			isa = PBXGroup;
 			children = (
 				AFBD15A225EAE4FD0002275A /* cards */,
 				AF6AA0922381C9DB00AC3BEA /* rules */,
 			);
-			path = Models;
+			path = models;
 			sourceTree = "<group>";
 		};
 		AF6AA0A22381E2F600AC3BEA /* rules */ = {
@@ -336,6 +338,14 @@
 			path = cards;
 			sourceTree = "<group>";
 		};
+		AFBD15CC25EC469F0002275A /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		AFC1BA63246A24CB00298F75 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,7 +392,8 @@
 		AFE908D925C4D1D300E8334E /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AA0932381C9E800AC3BEA /* Models */,
+				AFBD15CC25EC469F0002275A /* viewModels */,
+				AF6AA0932381C9E800AC3BEA /* models */,
 				AF7BD6FF2381C5F2003A11E2 /* UtilitiesTest.swift */,
 				AF6AA0982381CD6B00AC3BEA /* TestData.swift */,
 				AFE908DC25C4D1D300E8334E /* Info.plist */,
@@ -559,6 +570,7 @@
 				AFE908F125C4D22800E8334E /* RuleTests.swift in Sources */,
 				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
 				AFBD15A825EAE51E0002275A /* RecommendedSetsTests.swift in Sources */,
+				AFBD15D025EC46B50002275A /* SetBuilderModelTests.swift in Sources */,
 				AFBD15B425EAEC880002275A /* CardPropertyTests.swift in Sources */,
 				AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */,
 				AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */,
