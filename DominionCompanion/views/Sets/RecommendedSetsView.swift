@@ -11,8 +11,8 @@ import SwiftUI
 struct RecommendedSetsView: View {
     var recommendedSets = RecommendedSets.shared.sets
     @Binding var searchText: String
-    @Binding var selectedTab: Int
     @EnvironmentObject var setBuilder: SetBuilderModel
+    @EnvironmentObject var toastModel: ToastModel
 
     var body: some View {
         List {
@@ -26,7 +26,7 @@ struct RecommendedSetsView: View {
                     destination: GameplaySetup(model: model).navigationBarItems(trailing: HStack {
                         Button(action: {
                             setBuilder.accept(model: model)
-                            selectedTab = 1
+                            toastModel.show(message: "Cards sent to Set Builder")
                         }) {
                             Image(systemName: "square.and.arrow.up.on.square")
                         }
@@ -44,6 +44,6 @@ struct RecommendedSetsView: View {
 
 struct RecommendedSetsView_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedSetsView(searchText: .constant(""), selectedTab: .constant(0))
+        RecommendedSetsView(searchText: .constant(""))
     }
 }

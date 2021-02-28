@@ -24,6 +24,7 @@ struct DominionCompanion: App {
     var body: some Scene {
         WindowGroup {
             TabContainer()
+                .modifier(Toasted())
                 .environmentObject(cardData)
                 .environmentObject(SetBuilderModel(cardData))
                 .environment(\.managedObjectContext, persistentContainer.viewContext)

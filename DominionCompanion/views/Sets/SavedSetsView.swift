@@ -10,8 +10,8 @@ import SwiftUI
 
 struct SavedSetsView: View {
     @Binding var searchText: String
-    @Binding var selectedTab: Int
     @EnvironmentObject var setBuilder: SetBuilderModel
+    @EnvironmentObject var toastModel: ToastModel
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -29,7 +29,7 @@ struct SavedSetsView: View {
                     destination: GameplaySetup(model: model).navigationBarItems(trailing: HStack {
                         Button(action: {
                             setBuilder.accept(model: model)
-                            selectedTab = 1
+                            toastModel.show(message: "Cards sent to Set Builder")
                         }) {
                             Image(systemName: "square.and.arrow.up.on.square")
                         }
@@ -60,6 +60,6 @@ struct SavedSetsView: View {
 
 struct SavedSetsView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedSetsView(searchText: .constant(""), selectedTab: .constant(1))
+        SavedSetsView(searchText: .constant(""))
     }
 }

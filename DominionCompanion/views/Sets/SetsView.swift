@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SetsView: View {
-    @Binding var selectedTab: Int
     @State var searchText: String = ""
     @State var setType = 0
     
@@ -23,9 +22,9 @@ struct SetsView: View {
                     Text("Saved").tag(1)
                 }.pickerStyle(SegmentedPickerStyle())
                 if setType == 0 {
-                    RecommendedSetsView(searchText: $searchText, selectedTab: $selectedTab).listStyle(GroupedListStyle())
+                    RecommendedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
                 } else {
-                    SavedSetsView(searchText: $searchText, selectedTab: $selectedTab).listStyle(GroupedListStyle())
+                    SavedSetsView(searchText: $searchText).listStyle(GroupedListStyle())
                 }
             }.navigationTitle(Text("\(setType == 0 ? "Recommended" : "Saved") Sets"))
         }
@@ -34,6 +33,6 @@ struct SetsView: View {
 
 struct SetsView_Previews: PreviewProvider {
     static var previews: some View {
-        SetsView(selectedTab: .constant(1))
+        SetsView()
     }
 }
