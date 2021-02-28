@@ -20,7 +20,7 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane ios build
 ```
-Debug Build
+Build
 ### ios test
 ```
 fastlane ios test

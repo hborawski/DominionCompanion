@@ -16,12 +16,12 @@
 default_platform(:ios)
 
 platform :ios do
-  desc 'Debug Build'
-  lane :build do
+  desc 'Build'
+  lane :build do |options|
     build_ios_app(
-      configuration: 'Debug',
+      configuration: options[:release] == true ? 'Release' : 'Debug',
       output_directory: 'build',
-      export_method: 'development',
+      export_method: options[:release] == true ? 'app-store' : 'development',
       scheme: 'DominionCompanion',
       project: 'DominionCompanion.xcodeproj',
       clean: true
