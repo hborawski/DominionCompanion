@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '12.4'
+      - name: Ruby Setup
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.2'
+      - name: Install Dependencies
+        run: |
+          bundle install
+      - name: Certificates/Profiles
+        env:
+          MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
+          APPLE_USER: ${{secrets.APPLE_USER}}
+          GITHUB_USER: ${{secrets.GH_USER}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+        run: |
+          bundle exec fastlane certs
+      - name: Build
+        run: |
+          bundle exec fastlane build
+      - name: Test
+        run: |
+          bundle exec fastlane test
+      - name: Unit Test Results
+        uses: check-run-reporter/action@v2.0.0
+        if: ${{ always() }}
+        with:
+          token: ${{ secrets.CHECK_RUN_REPORTER_TOKEN }}
+          report: 'reports/junit.xml'
