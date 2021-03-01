@@ -50,6 +50,8 @@ platform :ios do
     scan(
       scheme: 'DominionCompanion',
       output_directory: 'reports',
+      output_types: 'junit',
+      output_files: 'junit.xml',
       clean: true,
       code_coverage: true
     )
