@@ -38,3 +38,8 @@ jobs:
       - name: Test
         run: |
           bundle exec fastlane test
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: reports/report.junit
