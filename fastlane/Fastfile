@@ -19,6 +19,7 @@ platform :ios do
   desc 'Import Certs'
   lane :certs do |options|
     match(
+      git_basic_authorization: Base64.strict_encode64("#{ENV['GITHUB_USER']}:#{ENV['GITHUB_TOKEN']}"),
       type: 'development',
       readonly: true
     )
