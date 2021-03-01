@@ -40,14 +40,24 @@ platform :ios do
 
   desc "Code Coverage"
   lane :coverage do |options|
-    slather(
+    if options[:html]
+      slather(
+        proj: 'DominionCompanion.xcodeproj',
+        scheme: 'DominionCompanion',
+        output_directory: 'reports/coverage',
+        ignore: ['DominionCompanion/views/**/*'],
+        html: true,
+        show: options[:show] || false
+      )
+    else
+      slather(
       proj: 'DominionCompanion.xcodeproj',
       scheme: 'DominionCompanion',
       output_directory: 'reports/coverage',
       ignore: ['DominionCompanion/views/**/*'],
-      html: true,
-      show: options[:show] || false
+      cobertura_xml: true
     )
+    end
   end
 
   desc 'Release to TestFlight'
