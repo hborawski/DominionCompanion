@@ -19,6 +19,7 @@ platform :ios do
   desc 'Import Certs'
   lane :certs do |options|
     match(
+      git_basic_authorization: Base64.encode64("#{ENV['GH_USER']}:#{ENV['GH_TOKEN']}"),
       type: 'development',
       readonly: true
     )
