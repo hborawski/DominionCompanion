@@ -42,5 +42,5 @@ jobs:
         uses: check-run-reporter/action@v2.0.0
         if: ${{ always() }}
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.CHECK_RUN_REPORTER_TOKEN }}
           report: 'reports/junit.xml'
