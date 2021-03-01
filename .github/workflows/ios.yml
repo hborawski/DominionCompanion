@@ -15,9 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Ruby Setup
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7.2'
+      - name: Install Dependencies
+        run: |
+          bundle install
       - name: Build
         run: |
           bundle exec fastlane build
