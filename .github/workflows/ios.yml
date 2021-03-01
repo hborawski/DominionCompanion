@@ -40,7 +40,7 @@ jobs:
           bundle exec fastlane test
       - name: Unit Test Results
         uses: check-run-reporter/action@v2.0.0
-          if: ${{ always() }}
-          with:
-            token: ${{ secrets.GH_TOKEN }}
-            report: 'reports/junit.xml'
+        if: ${{ always() }}
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          report: 'reports/junit.xml'
