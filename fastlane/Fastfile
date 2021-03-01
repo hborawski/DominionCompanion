@@ -29,7 +29,7 @@ platform :ios do
       git_basic_authorization: Base64.strict_encode64("#{ENV['GITHUB_USER']}:#{ENV['GITHUB_TOKEN']}"),
       type: 'development',
       keychain_name: 'CI_Build',
-      keychain_password: ENV['MATCH_PASSWORD']
+      keychain_password: ENV['MATCH_PASSWORD'],
       readonly: true
     )
   end
