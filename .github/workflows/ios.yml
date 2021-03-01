@@ -28,8 +28,8 @@ jobs:
         env:
           MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
           APPLE_USER: ${{secrets.APPLE_USER}}
-          GITHUB_USER: ${{secrets.GITHUB_USER}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_USER: ${{secrets.GH_USER}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
         run: |
           bundle exec fastlane certs
       - name: Build
