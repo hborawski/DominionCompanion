@@ -78,6 +78,11 @@ struct SettingsView: View {
                         Text("Global Exclusions")
                     }
                 }
+                Section(header: Text("Legal")) {
+                    NavigationLink(destination: Disclosures()) {
+                        Text("Disclosures")
+                    }
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationTitle(Text("Settings"))
