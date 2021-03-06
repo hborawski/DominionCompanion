@@ -35,7 +35,7 @@ class SetBuilderModelTests: XCTestCase {
             }
         }
 
-        wait(for: [expecation], timeout: 2)
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 
     func testGetMatchingSetImpossibleRule() {
@@ -63,7 +63,7 @@ class SetBuilderModelTests: XCTestCase {
             }
         }
 
-        wait(for: [expecation], timeout: 2)
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 
     func testGetMatchingSetOneRule() {
@@ -87,7 +87,7 @@ class SetBuilderModelTests: XCTestCase {
             }
         }
 
-        wait(for: [expecation], timeout: 2)
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 
     func testGetMatchingSetOneRuleMultipleConditions() {
@@ -112,7 +112,7 @@ class SetBuilderModelTests: XCTestCase {
             }
         }
 
-        wait(for: [expecation], timeout: 2)
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 
     func testGetMatchingSetMultipleRules() {
@@ -143,6 +143,6 @@ class SetBuilderModelTests: XCTestCase {
             }
         }
 
-        wait(for: [expecation], timeout: 2)
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 }

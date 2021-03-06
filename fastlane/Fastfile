@@ -16,6 +16,23 @@
 default_platform(:ios)
 
 platform :ios do
+  desc 'Import Certs'
+  lane :certs do |options|
+    create_keychain(
+      name: 'CI_Build',
+      default_keychain: true,
+      password: ENV['MATCH_PASSWORD'],
+      unlock: true,
+      timeout: 3600
+    )
+    match(
+      git_basic_authorization: Base64.strict_encode64("#{ENV['GITHUB_USER']}:#{ENV['GITHUB_TOKEN']}"),
+      type: 'development',
+      keychain_name: 'CI_Build',
+      keychain_password: ENV['MATCH_PASSWORD'],
+      readonly: true
+    )
+  end
   desc 'Build'
   lane :build do |options|
     build_ios_app(
@@ -33,6 +50,8 @@ platform :ios do
     scan(
       scheme: 'DominionCompanion',
       output_directory: 'reports',
+      output_types: 'junit',
+      output_files: 'junit.xml',
       clean: true,
       code_coverage: true
     )
