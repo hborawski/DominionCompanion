@@ -83,6 +83,12 @@ struct SettingsView: View {
                         Text("Disclosures")
                     }
                 }
+                Section(header: Text("About")) {
+                    HStack {
+                        Image("GitHub")
+                        Link("Code on GitHub", destination: URL(string: "https://github.com/hborawski/DominionCompanion")!)
+                    }
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationTitle(Text("Settings"))
