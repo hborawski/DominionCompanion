@@ -4,7 +4,8 @@
 
 DominionCompanion is an iOS app for building sets for the strategy game [Dominion](https://www.riograndegames.com/games/dominion/). It allows for constructing complex sets of rules for finding a set of cards to play with, and listing exactly what cards and tokens are needed to set up and play.
 
-<img src="./.github/images/SetBuilderScreen.png" alt="SetBuilderScreen" style="zoom:50%;" /><img src="./.github/images/CardScreen.png" alt="SetBuilderScreen" style="zoom:50%;" /><img src="./.github/images/GameplaySetupScreen.png" alt="SetBuilderScreen" style="zoom:50%;" />
+<img src="./.github/images/SetBuilderScreen.png" alt="SetBuilderScreen" style="zoom:50%;" /><img src="./.github/images/RuleScreen.png" alt="RuleScreen" style="zoom:50%;" />
+<img src="./.github/images/CardScreen.png" alt="CardScreen" style="zoom:50%;" /><img src="./.github/images/GameplaySetupScreen.png" alt="GameplaySetupScreen" style="zoom:50%;" />
 
 ## Features
 
