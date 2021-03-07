@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '12.4'
@@ -38,9 +40,14 @@ jobs:
       - name: Test
         run: |
           bundle exec fastlane test
+          bundle exec fastlane coverage
       - name: Unit Test Results
         uses: check-run-reporter/action@v2.0.0
         if: ${{ always() }}
         with:
           token: ${{ secrets.CHECK_RUN_REPORTER_TOKEN }}
           report: 'reports/junit.xml'
+      - name: Code Coverage
+        uses: codecov/codecov-action@v1
+        with:
+          files: ./reports/coverage/cobertura.xml
