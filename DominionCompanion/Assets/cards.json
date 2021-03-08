@@ -145,6 +145,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -393,6 +394,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -5512,7 +5514,8 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Curse"
+      "Curse",
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -6768,6 +6771,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -11851,6 +11855,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -12433,6 +12438,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -12472,7 +12478,7 @@
     "name": "Potion",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
     ],
     "tokens": {
@@ -14133,6 +14139,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -17018,6 +17025,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -17476,6 +17484,7 @@
     "gain": 1,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
@@ -17891,6 +17900,7 @@
     "gain": 0,
     "supply": true,
     "related": [
+      "Potion"
     ],
     "tokens": {
       "victory": 0,
