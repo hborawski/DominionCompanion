@@ -91,7 +91,9 @@ platform :ios do
         contact_phone: "8604781448"
       }
     )
-    commit_version_bump
+    commit_version_bump(
+      message: "Increment Build Number"
+    )
 
   end
 end
