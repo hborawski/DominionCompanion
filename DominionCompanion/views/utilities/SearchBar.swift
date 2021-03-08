@@ -30,7 +30,7 @@ struct SearchBar: View {
                             self.text = ""
                         }) {
                             Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray)).padding(.trailing, 8)
-                        }
+                        }.buttonStyle(PlainButtonStyle())
                     }
                 })
                 .animation(.spring())
@@ -42,7 +42,7 @@ struct SearchBar: View {
                     
                 }) {
                     Text("Cancel").foregroundColor(Color(.systemGray))
-                }.padding(.trailing, 8)
+                }.buttonStyle(PlainButtonStyle()).padding(.trailing, 8)
             }
         }
     }
