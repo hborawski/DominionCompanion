@@ -10,6 +10,9 @@ import Foundation
 @testable import DominionCompanion
 
 class TestData {
+    static func getCard(_ name: String) -> Card {
+        return CardData.shared.allCards.first { $0.name == name }!
+    }
     // MARK: Token Utilities
     static let noTokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
     static let victoryTokens = Tokens(victory: 1, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
