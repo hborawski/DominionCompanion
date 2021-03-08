@@ -29,6 +29,7 @@
 		AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B6EC6232463FD00ADA74D /* CardProperty.swift */; };
 		AF1B6EC92324945D00ADA74D /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1B6EC82324945D00ADA74D /* Icons.xcassets */; };
 		AF34B1AB25F42D76007E241C /* Disclosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34B1AA25F42D76007E241C /* Disclosures.swift */; };
+		AF34B1CD25F59490007E241C /* SetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34B1CC25F59490007E241C /* SetModelTests.swift */; };
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* ConditionRow.swift */; };
 		AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5855F025C7517300D7A7AE /* PotionView.swift */; };
@@ -103,6 +104,7 @@
 		AF1B6EC6232463FD00ADA74D /* CardProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProperty.swift; sourceTree = "<group>"; };
 		AF1B6EC82324945D00ADA74D /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		AF34B1AA25F42D76007E241C /* Disclosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disclosures.swift; sourceTree = "<group>"; };
+		AF34B1CC25F59490007E241C /* SetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelTests.swift; sourceTree = "<group>"; };
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* ConditionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionRow.swift; sourceTree = "<group>"; };
 		AF5855F025C7517300D7A7AE /* PotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		AF1B6EA8232421B300ADA74D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
 				AFC1BA63246A24CB00298F75 /* CoreData */,
 				AF2BB9752443E27D00438C3B /* cards */,
 				AF6AA0A22381E2F600AC3BEA /* rules */,
@@ -249,6 +252,7 @@
 			children = (
 				AFBD15A225EAE4FD0002275A /* cards */,
 				AF6AA0922381C9DB00AC3BEA /* rules */,
+				AF34B1CC25F59490007E241C /* SetModelTests.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -280,7 +284,6 @@
 				AF1B6EAE232428ED00ADA74D /* Utilities.swift */,
 				AF80D7092364DA9800FDC4D6 /* Constants.swift */,
 				AFD02B94246C727A00D14D61 /* Logger.swift */,
-				AF80D70B2364DD7100FDC4D6 /* SetModel.swift */,
 				AFB96A992443E6DA00F2046D /* Settings.swift */,
 			);
 			path = utilities;
@@ -573,6 +576,7 @@
 				AFBD15B025EAEAFE0002275A /* CardDataTests.swift in Sources */,
 				AFE908F125C4D22800E8334E /* RuleTests.swift in Sources */,
 				AFE908EA25C4D21D00E8334E /* TestData.swift in Sources */,
+				AF34B1CD25F59490007E241C /* SetModelTests.swift in Sources */,
 				AFBD15A825EAE51E0002275A /* RecommendedSetsTests.swift in Sources */,
 				AFBD15D025EC46B50002275A /* SetBuilderModelTests.swift in Sources */,
 				AFBD15B425EAEC880002275A /* CardPropertyTests.swift in Sources */,

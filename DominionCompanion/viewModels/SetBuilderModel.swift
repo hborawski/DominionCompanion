@@ -120,7 +120,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
                 case .tooManyAttempts:
                     self.onError?("Unable to build set in time, current rules may be too specific.")
                 }
-                print(error)
+                Logger.shared.e(error.localizedDescription)
             }
         }
         
@@ -225,7 +225,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
             }
             DispatchQueue.main.async {
                 Logger.shared.d("Final Satisfaction: \(self.ruleSatisfaction(finalSet, self.rules))")
-                Logger.shared.d(finalSet.map({$0.name}).joined(separator: "|"))
+                Logger.shared.i("Final Set: \(finalSet.map({$0.name}).joined(separator: "|"))")
                 completion(.success(finalSet))
             }
         }

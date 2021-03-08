@@ -12,12 +12,14 @@ import XCTest
 
 class CardTests: XCTestCase {
     func testRelatedCards() {
-        let fateCard = CardData.shared.allCards.filter { $0.name == "Druid" }.first!
-        let doomCard = CardData.shared.allCards.filter { $0.name == "Vampire" }.first!
-        let looterCard = CardData.shared.allCards.filter { $0.name == "Cultist" }.first!
-        let castleCard = CardData.shared.allCards.filter { $0.name == "Castles" }.first!
-        let knightCards = CardData.shared.allCards.filter { $0.name == "Knights" }.first!
+        let regularCard = TestData.getCard("Village")
+        let fateCard = TestData.getCard("Druid")
+        let doomCard = TestData.getCard("Vampire")
+        let looterCard = TestData.getCard("Cultist")
+        let castleCard = TestData.getCard("Castles")
+        let knightCards = TestData.getCard("Knights")
 
+        XCTAssertEqual(regularCard.relatedCards.count, 0)
         XCTAssertEqual(fateCard.relatedCards.count, 12)
         XCTAssertEqual(doomCard.relatedCards.count, 13)
         XCTAssertEqual(looterCard.relatedCards.count, 5)
@@ -26,12 +28,12 @@ class CardTests: XCTestCase {
     }
 
     func testCanPin() {
-        let supplyKingdomCard = CardData.shared.allCards.filter { $0.name == "Village" }.first!
-        let nonSupplyKingdomCard = CardData.shared.allCards.filter { $0.name == "Grand Castle" }.first!
-        let eventCard = CardData.shared.allCards.filter { $0.name == "Alms" }.first!
-        let landmarkCard = CardData.shared.allCards.filter { $0.name == "Archive" }.first!
-        let projectCard = CardData.shared.allCards.filter { $0.name == "Academy" }.first!
-        let wayCard = CardData.shared.allCards.filter { $0.name == "Way of the Rat" }.first!
+        let supplyKingdomCard = TestData.getCard("Village")
+        let nonSupplyKingdomCard = TestData.getCard("Grand Castle")
+        let eventCard = TestData.getCard("Alms")
+        let landmarkCard = TestData.getCard("Archive")
+        let projectCard = TestData.getCard("Academy")
+        let wayCard = TestData.getCard("Way of the Rat")
 
         XCTAssertEqual(supplyKingdomCard.canPin, true)
         XCTAssertEqual(nonSupplyKingdomCard.canPin, false)
@@ -42,7 +44,7 @@ class CardTests: XCTestCase {
     }
 
     func testPropertyGetter() {
-        let village = CardData.shared.allCards.filter { $0.name == "Village" }.first!
+        let village = TestData.getCard("Village")
 
         XCTAssertEqual(village.getProperty(.cost) as? Int, 3)
         XCTAssertEqual(village.getProperty(.debt) as? Int, 0)
@@ -59,14 +61,14 @@ class CardTests: XCTestCase {
     }
 
     func testImageLoading() {
-        let village = CardData.shared.allCards.filter { $0.name == "Village" }.first!
+        let village = TestData.getCard("Village")
 
         XCTAssertNotNil(village.image())
     }
 
     func testHashing() {
-        let village = CardData.shared.allCards.filter { $0.name == "Village" }.first!
-        let village2 = CardData.shared.allCards.filter { $0.name == "Village" }.first!
+        let village = TestData.getCard("Village")
+        let village2 = TestData.getCard("Village")
 
         XCTAssertEqual(village, village2)
     }

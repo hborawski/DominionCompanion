@@ -35,13 +35,14 @@ struct SetModel {
     var colonies: Bool {
         guard !Settings.shared.colonies else { return true }
         let chance = cards.filter({$0.expansion == "Prosperity"}).count
-        return chance > Int.random(in: 0...Settings.shared.maxKingdomCards)
+        guard chance > 0 else { return false }
+        return chance >= Int.random(in: 0...Settings.shared.maxKingdomCards)
     }
     var shelters: Bool {
         let chance = cards.filter({$0.expansion == "Dark Ages"}).count
         guard chance > 0 else { return false }
         guard !Settings.shared.shelters else { return true }
-        return chance > Int.random(in: 0...Settings.shared.maxKingdomCards)
+        return chance >= Int.random(in: 0...Settings.shared.maxKingdomCards)
     }
     var boons: Bool { self.cards.filter({$0.types.contains("Fate")}).count > 0 }
     var hexes: Bool { self.cards.filter({$0.types.contains("Doom")}).count > 0 }

@@ -20,6 +20,164 @@ class SetBuilderModelTests: XCTestCase {
         Settings.shared.maxKingdomCards = 10
     }
 
+    // MARK: Pinning Tests
+    func testPinCard() {
+        let data = CardData()
+
+        let model = SetBuilderModel(data)
+
+        let village = TestData.getCard("Village")
+
+        let pinnedExpectation = expectation(description: "village pinned")
+
+        model.$pinnedCards.sink { newPinned in
+            if newPinned == [village] {
+                pinnedExpectation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.pin(village)
+
+        wait(for: [pinnedExpectation], timeout: 1)
+    }
+
+    func testUnpinCard() {
+        let data = CardData()
+
+        let village = TestData.getCard("Village")
+
+        Settings.shared.pinnedCards = [village]
+
+        let model = SetBuilderModel(data)
+
+        let pinnedExpectation = expectation(description: "village pinned")
+
+        model.$pinnedCards.sink { newPinned in
+            if newPinned == [] {
+                pinnedExpectation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.pin(village)
+
+        wait(for: [pinnedExpectation], timeout: 1)
+    }
+
+    func testPinLandscape() {
+        let data = CardData()
+
+        let model = SetBuilderModel(data)
+
+        let advance = TestData.getCard("Advance")
+
+        let pinnedExpectation = expectation(description: "advance pinned")
+
+        model.$pinnedLandscape.sink { newPinned in
+            if newPinned == [advance] {
+                pinnedExpectation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.pin(advance)
+
+        wait(for: [pinnedExpectation], timeout: 1)
+    }
+
+    func testUnpinLandscape() {
+        let data = CardData()
+
+        let advance = TestData.getCard("Advance")
+
+        Settings.shared.pinnedLandscape = [advance]
+        let model = SetBuilderModel(data)
+
+
+        let pinnedExpectation = expectation(description: "advance pinned")
+
+        model.$pinnedLandscape.sink { newPinned in
+            if newPinned == [] {
+                pinnedExpectation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.pin(advance)
+
+        wait(for: [pinnedExpectation], timeout: 1)
+    }
+
+    // MARK: Accept set model tests
+
+    func testAcceptSetModel() {
+        let data = CardData()
+
+        let model = SetBuilderModel(data)
+
+        let cards = [
+            TestData.getCard("Village"),
+            TestData.getCard("Fishing Village")
+        ]
+
+        let setmodel = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: cards)
+
+        let resetExpecation = expectation(description: "pinned cards reset")
+        resetExpecation.expectedFulfillmentCount = 2
+        let setExpectation = expectation(description: "cards set")
+        model.$cards.sink { newCards in
+            if newCards == cards {
+                setExpectation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.$pinnedCards.sink { newCards in
+            if newCards == [] {
+                resetExpecation.fulfill()
+            }
+        }.store(in: &model.bag)
+
+        model.accept(model: setmodel)
+
+        wait(for: [resetExpecation, setExpectation], timeout: 1)
+    }
+
+    // MARK: shuffle tests
+
+    func testShuffle() {
+        let data = CardData()
+        let model = SetBuilderModel(data)
+
+        let cards = expectation(description: "cards set")
+        cards.expectedFulfillmentCount = 2
+        let landscape = expectation(description: "landscape set")
+        landscape.expectedFulfillmentCount = 2
+        model.$cards.sink { _ in
+            cards.fulfill()
+        }.store(in: &model.bag)
+
+        model.$landscape.sink { _ in
+            landscape.fulfill()
+        }.store(in: &model.bag)
+
+        model.shuffle()
+
+        wait(for: [cards, landscape], timeout: 1)
+    }
+
+    func testShuffleError() {
+        let data = CardData()
+        let error = expectation(description: "error sent")
+        let model = SetBuilderModel(data) { _ in
+            error.fulfill()
+        }
+
+        model.addRule(Rule(value: 10, operation: .greater, conditions: [Condition(property: .cost, operation: .greater, comparisonValue: "11")]))
+
+        model.shuffle()
+
+        wait(for: [error], timeout: 1)
+    }
+
+    // MARK: GetMatchingRules tests
+
     // Should just return random cards
     func testGetMatchingSetNoRules() {
         let data = CardData()
@@ -136,7 +294,9 @@ class SetBuilderModelTests: XCTestCase {
             switch result {
             case .success(let cards):
                 guard cards.first(where: { $0.actions >= 2 && $0.cards > 1}) != nil else { return XCTFail() }
-                guard cards.filter({ $0.cost >= 5 }).count > 3 else { return XCTFail() }
+                guard cards.filter({ $0.cost >= 5 }).count > 3 else {
+                    return XCTFail()
+                }
                 expecation.fulfill()
             case .failure:
                 XCTFail()
