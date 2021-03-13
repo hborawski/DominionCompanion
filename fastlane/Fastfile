@@ -88,7 +88,7 @@ platform :ios do
         contact_email: "dominioncompanion@gmail.com",
         contact_first_name: "Harris",
         contact_last_name: "Borawski",
-        contact_phone: "8604781448"
+        contact_phone: "#{ENV['CONTACT_NUMBER']}"
       }
     )
     commit_version_bump(
