@@ -736,6 +736,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.harrisborawski.DominionCompanion";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -759,6 +760,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.harrisborawski.DominionCompanion";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
