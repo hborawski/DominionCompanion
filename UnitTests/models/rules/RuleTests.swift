@@ -22,6 +22,7 @@ class RuleTests: XCTestCase {
     func testDecode() {
         let json = """
         {
+            "id": "123",
             "value": 1,
             "operation": "=",
             "conditions": []
@@ -35,6 +36,7 @@ class RuleTests: XCTestCase {
             return XCTFail()
         }
 
+        XCTAssertEqual(rule.id, "123")
         XCTAssertEqual(rule.value, 1)
         XCTAssertEqual(rule.operation, .equal)
         XCTAssertEqual(rule.conditions, [])
