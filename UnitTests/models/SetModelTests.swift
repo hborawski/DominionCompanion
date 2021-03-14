@@ -18,7 +18,7 @@ class SetModelTests: XCTestCase {
     }
     func testSetModelExpansions() {
         let model = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: [
-            TestData.getCard("Village"),
+            TestData.getCard("Harbinger"),
             TestData.getCard("Fishing Village")
         ])
 
