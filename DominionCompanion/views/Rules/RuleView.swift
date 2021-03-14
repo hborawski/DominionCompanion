@@ -35,7 +35,7 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
     
     @State var conditions: [Condition] = [Condition(property: .cost, operation: .greater, comparisonValue: "0")]
     
-    @State var id: UUID? = nil
+    @State var id: String? = nil
 
     
     @EnvironmentObject var cardData: CardData
