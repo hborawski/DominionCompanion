@@ -1,6 +1,8 @@
 # DominionCompanion
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hborawski/DominionCompanion/CI) ![Codecov](https://img.shields.io/codecov/c/github/hborawski/DominionCompanion)
+![iTunes App Store](https://img.shields.io/itunes/v/1493154264)![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hborawski/DominionCompanion/CI) ![Codecov](https://img.shields.io/codecov/c/github/hborawski/DominionCompanion)
+
+[Download on the App Store!](https://apps.apple.com/us/app/dominioncompanion/id1493154264)
 
 DominionCompanion is an iOS app for building sets for the strategy game [Dominion](https://www.riograndegames.com/games/dominion/). It allows for constructing complex sets of rules for finding a set of cards to play with, and listing exactly what cards and tokens are needed to set up and play.
 
