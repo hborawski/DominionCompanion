@@ -8,8 +8,9 @@
 
 import SwiftUI
 
-struct RuleRow: View {
+struct RuleRow<Builder: RuleBuilder>: View  where Builder: ObservableObject  {
     @ObservedObject var rule: Rule
+    @ObservedObject var ruleBuilder: Builder
     var body: some View {
         HStack {
             HStack {
@@ -38,7 +39,7 @@ struct RuleRow_Previews: PreviewProvider {
     ])
     static var previews: some View {
         List {
-            RuleRow(rule: rule)
+            RuleRow(rule: rule, ruleBuilder: SetBuilderModel(CardData()))
         }
     }
 }

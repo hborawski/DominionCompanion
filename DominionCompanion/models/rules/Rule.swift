@@ -9,7 +9,7 @@
 import Foundation
 
 class Rule: Codable, Hashable, ObservableObject, Identifiable {
-    var id = UUID()
+    var id: String
     static func == (lhs: Rule, rhs: Rule) -> Bool {
         return lhs.id == rhs.id
     }
@@ -19,12 +19,14 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
     }
     
     enum SetRuleCodingKeys: CodingKey {
+        case id
         case value
         case operation
         case conditions
     }
     required init(from decoder: Decoder) throws {
         let container  = try decoder.container(keyedBy: SetRuleCodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
         self.value = try container.decode(Int.self, forKey: .value)
         self.operation = try container.decode(FilterOperation.self, forKey: .operation)
         self.conditions = try container.decode([Condition].self, forKey: .conditions)
@@ -32,6 +34,7 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: SetRuleCodingKeys.self)
+        try container.encode(self.id, forKey: .id)
         try container.encode(self.value, forKey: .value)
         try container.encode(self.operation, forKey: .operation)
         try container.encode(self.conditions, forKey: .conditions)
@@ -41,6 +44,7 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
         self.value = value
         self.operation = operation
         self.conditions = conditions
+        self.id = UUID().uuidString
     }
 
     @Published var value: Int
