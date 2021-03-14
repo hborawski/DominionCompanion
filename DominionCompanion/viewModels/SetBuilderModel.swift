@@ -135,15 +135,16 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
         
         let cardCopy = self.cardData.cardsFromChosenExpansions
         guard rules.count > 0 else {
-            return completion(
-                .success(
-                    pinned + Array(
-                        cardCopy.shuffled().filter {
-                            !pinned.contains($0)
-                        }[0..<(Settings.shared.maxKingdomCards - pinned.count)]
-                    )
-                )
-            )
+            var set = pinned
+            for card in cardCopy.shuffled() {
+                let tempSet = set + [card]
+                guard Set(tempSet.map(\.expansion)).count <= Settings.shared.maxExpansions else { continue }
+                set.append(card)
+                if set.count == Settings.shared.maxKingdomCards {
+                    break
+                }
+            }
+            return completion(.success(set))
         }
         guard rulesCanBeSatisfied(cardCopy, self.rules) else {
             Logger.shared.w("A set cannot be made with the current rules")
@@ -187,6 +188,8 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
 
                 // The potential next version of the set being built
                 let tempSet = finalSet + [nextCard]
+
+                guard Set(tempSet.map(\.expansion)).count <= Settings.shared.maxExpansions else { continue }
                 
                 // Calculate satisfactions for each rule
                 let newSatisfactions = self.rules.map { $0.satisfaction(tempSet) }

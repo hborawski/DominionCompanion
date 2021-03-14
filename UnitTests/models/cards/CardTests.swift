@@ -12,7 +12,7 @@ import XCTest
 
 class CardTests: XCTestCase {
     func testRelatedCards() {
-        let regularCard = TestData.getCard("Village")
+        let regularCard = TestData.getCard("Harbinger")
         let fateCard = TestData.getCard("Druid")
         let doomCard = TestData.getCard("Vampire")
         let looterCard = TestData.getCard("Cultist")
@@ -28,7 +28,7 @@ class CardTests: XCTestCase {
     }
 
     func testCanPin() {
-        let supplyKingdomCard = TestData.getCard("Village")
+        let supplyKingdomCard = TestData.getCard("Harbinger")
         let nonSupplyKingdomCard = TestData.getCard("Grand Castle")
         let eventCard = TestData.getCard("Alms")
         let landmarkCard = TestData.getCard("Archive")
@@ -44,32 +44,32 @@ class CardTests: XCTestCase {
     }
 
     func testPropertyGetter() {
-        let village = TestData.getCard("Village")
+        let harbinger = TestData.getCard("Harbinger")
 
-        XCTAssertEqual(village.getProperty(.cost) as? Int, 3)
-        XCTAssertEqual(village.getProperty(.debt) as? Int, 0)
-        XCTAssertEqual(village.getProperty(.potion) as? Bool, false)
-        XCTAssertEqual(village.getProperty(.actions) as? Int, 2)
-        XCTAssertEqual(village.getProperty(.buys) as? Int, 0)
-        XCTAssertEqual(village.getProperty(.cards) as? Int, 1)
-        XCTAssertEqual(village.getProperty(.expansion) as? String, "Base")
-        XCTAssertEqual(village.getProperty(.type) as? [String], ["Action"])
-        XCTAssertEqual(village.getProperty(.trash) as? Bool, false)
-        XCTAssertEqual(village.getProperty(.exile) as? Bool, false)
-        XCTAssertEqual(village.getProperty(.victoryTokens) as? Int, 0)
-        XCTAssertEqual(village.getProperty(.coinTokens) as? Int, 0)
+        XCTAssertEqual(harbinger.getProperty(.cost) as? Int, 3)
+        XCTAssertEqual(harbinger.getProperty(.debt) as? Int, 0)
+        XCTAssertEqual(harbinger.getProperty(.potion) as? Bool, false)
+        XCTAssertEqual(harbinger.getProperty(.actions) as? Int, 1)
+        XCTAssertEqual(harbinger.getProperty(.buys) as? Int, 0)
+        XCTAssertEqual(harbinger.getProperty(.cards) as? Int, 1)
+        XCTAssertEqual(harbinger.getProperty(.expansion) as? String, "Base")
+        XCTAssertEqual(harbinger.getProperty(.type) as? [String], ["Action"])
+        XCTAssertEqual(harbinger.getProperty(.trash) as? Bool, false)
+        XCTAssertEqual(harbinger.getProperty(.exile) as? Bool, false)
+        XCTAssertEqual(harbinger.getProperty(.victoryTokens) as? Int, 0)
+        XCTAssertEqual(harbinger.getProperty(.coinTokens) as? Int, 0)
     }
 
     func testImageLoading() {
-        let village = TestData.getCard("Village")
+        let harbinger = TestData.getCard("Harbinger")
 
-        XCTAssertNotNil(village.image())
+        XCTAssertNotNil(harbinger.image())
     }
 
     func testHashing() {
-        let village = TestData.getCard("Village")
-        let village2 = TestData.getCard("Village")
+        let harbinger = TestData.getCard("Harbinger")
+        let harbinger2 = TestData.getCard("Harbinger")
 
-        XCTAssertEqual(village, village2)
+        XCTAssertEqual(harbinger, harbinger2)
     }
 }

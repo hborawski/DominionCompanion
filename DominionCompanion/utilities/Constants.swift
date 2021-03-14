@@ -13,6 +13,7 @@ struct Constants {
     static let notGameplayRelatedTypes = ["Boon", "Hex", "Ruins"]
     struct SaveKeys {
         static let maxKingdomCards = "maxKingdomCards"
+        static let maxExpansions = "maxExpansions"
         static let chosenExpansions = "expansions"
         
         static let pinnedRules = "pinnedRules"

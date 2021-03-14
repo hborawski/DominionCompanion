@@ -20,7 +20,7 @@ struct RulesView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
         List {
             ForEach(ruleBuilder.rules, id: \.self) { rule in
                 NavigationLink(destination: RuleView(ruleBuilder: ruleBuilder, existing: rule)) {
-                    RuleRow(rule: rule)
+                    RuleRow(rule: rule, ruleBuilder: ruleBuilder)
                 }
             }.onDelete(perform: { ruleBuilder.removeRule($0) })
         }

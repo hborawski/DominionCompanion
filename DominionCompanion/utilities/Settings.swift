@@ -12,6 +12,8 @@ class Settings {
     static let shared = Settings()
     
     @UserDefaultsBacked(Constants.SaveKeys.maxKingdomCards) var maxKingdomCards: Int = 10
+
+    @UserDefaultsBacked(Constants.SaveKeys.maxExpansions) var maxExpansions: Int = 10
     
     @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
     

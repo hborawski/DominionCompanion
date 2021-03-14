@@ -24,6 +24,7 @@ struct SettingsView: View {
     @AppStorage(Constants.SaveKeys.settingsNumWays) var maxWays: Int = 0
 
     @AppStorage(Constants.SaveKeys.maxKingdomCards) var maxKingdomCards: Int = Settings.shared.maxKingdomCards
+    @AppStorage(Constants.SaveKeys.maxExpansions) var maxExpansions: Int = Settings.shared.maxExpansions
     
     // MARK: App Behavior
     @AppStorage(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLinks: Bool = false
@@ -56,6 +57,9 @@ struct SettingsView: View {
                     }
                     ListChoice(title: "Maximum Kingdom Cards", value: "\(maxKingdomCards)", values: ["10", "11", "12", "13", "14", "15", "16"]) { val in
                         maxKingdomCards = Int(val) ?? 10
+                    }
+                    ListChoice(title: "Maximum Expansions in Set", value: "\(maxExpansions)", values: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]) { val in
+                        maxExpansions = Int(val) ?? 10
                     }
                 }
                 Section(header: Text("App Behavior")) {
