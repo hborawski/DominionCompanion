@@ -35,8 +35,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     @Published var landscape: [Card] = Settings.shared.currentLandscape
     
     @Published var pinnedLandscape: [Card] = Settings.shared.pinnedLandscape
-    
-    @UserDefaultsBacked(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
+
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumLandmarks) var maxLandmarks: Int = 0
     @UserDefaultsBacked(Constants.SaveKeys.settingsNumProjects) var maxProjects: Int = 0
@@ -232,8 +231,8 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     }
     
     func getLandscapeCards(_ pinned: [Card]) -> [Card] {
-        guard maxLandscape > 0 else { return [] }
-        let target = Int.random(in: 0...maxLandscape)
+        guard Settings.shared.maxLandscape > 0 else { return [] }
+        let target = Int.random(in: 0...Settings.shared.maxLandscape)
         guard target > 0 else { return [] }
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
