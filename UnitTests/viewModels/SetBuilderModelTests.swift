@@ -18,6 +18,7 @@ class SetBuilderModelTests: XCTestCase {
         Settings.shared.pinnedRules = []
         Settings.shared.chosenExpansions = []
         Settings.shared.maxKingdomCards = 10
+        Settings.shared.maxExpansions = 10
     }
 
     // MARK: Pinning Tests
@@ -297,6 +298,53 @@ class SetBuilderModelTests: XCTestCase {
                 guard cards.filter({ $0.cost >= 5 }).count > 3 else {
                     return XCTFail()
                 }
+                expecation.fulfill()
+            case .failure:
+                XCTFail()
+            }
+        }
+
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
+    }
+
+    func testGetMatchingSetWithExpansionLimit() {
+        Settings.shared.maxExpansions = 3
+        let data = CardData()
+        let model = SetBuilderModel(data)
+
+        let expecation = XCTestExpectation(description: "Set Matches Rule")
+        model.getMatchingSet([]) { result in
+            switch result {
+            case .success(let cards):
+                guard Set(cards.map(\.expansion)).count <= 3 else { return XCTFail() }
+                expecation.fulfill()
+            case .failure:
+                XCTFail()
+            }
+        }
+
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
+    }
+
+    func testGetMatchingSetOneRuleWithExpansionLimit() {
+        Settings.shared.maxExpansions = 3
+        let data = CardData()
+        let model = SetBuilderModel(data)
+
+        let rule = Rule(value: 1, operation: .greater, conditions: [
+            Condition(property: .actions, operation: .greaterOrEqual, comparisonValue: "2")
+        ])
+
+        model.addRule(rule)
+
+        let expecation = XCTestExpectation(description: "Set Matches Rule")
+        model.getMatchingSet([]) { result in
+            switch result {
+            case .success(let cards):
+                guard
+                    Set(cards.map(\.expansion)).count <= 3,
+                    cards.first(where: { $0.actions >= 2}) != nil
+                else { return XCTFail() }
                 expecation.fulfill()
             case .failure:
                 XCTFail()
