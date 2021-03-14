@@ -28,6 +28,7 @@ struct Tokens: Codable {
 }
 
 struct Card: Codable {
+    var id: String
     var cost: Int
     var debt: Int
     var potion: Bool
@@ -123,7 +124,7 @@ extension Card {
 
 extension Card: Hashable {
     static func == (lhs: Card, rhs: Card) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.id == rhs.id
     }
 
     func hash(into hasher: inout Hasher) {

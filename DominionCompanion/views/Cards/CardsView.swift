@@ -25,7 +25,7 @@ struct CardsView<T>: View where T: View {
     var body: some View {
         List {
             SearchBar(text: $searchText)
-            ForEach(cards.filter { searchText != "" ? $0.name.lowercased().contains(searchText) : true }, id: \.name) { card in
+            ForEach(cards.filter { searchText != "" ? $0.name.lowercased().contains(searchText) : true }, id: \.id) { card in
                 NavigationLink(
                     destination: CardView(card: card, accessory: self.accessory)
                 ) {
