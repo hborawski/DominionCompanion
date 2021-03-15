@@ -369,6 +369,7 @@ class SetBuilderModelTests: XCTestCase {
 
         let distribution = Set(sets.map(\.count))
 
+        XCTAssertEqual([], sets)
         XCTAssertEqual(Set([0,1,2]), distribution)
     }
 }
