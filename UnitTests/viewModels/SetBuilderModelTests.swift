@@ -369,6 +369,9 @@ class SetBuilderModelTests: XCTestCase {
 
         let distribution = Set(sets.map(\.count))
 
+        print(sets.map(\.count))
+        print(distribution)
+
         XCTAssertTrue(distribution.contains(0))
         XCTAssertTrue(distribution.contains(1))
         XCTAssertTrue(distribution.contains(2))
