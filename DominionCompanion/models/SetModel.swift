@@ -62,6 +62,7 @@ struct SetModel {
     var minusCostTokens: Bool { self.cards.filter({$0.tokens.minusCost}).count > 0 }
     var trashingTokens: Bool { self.cards.filter({$0.tokens.trashing}).count > 0 }
     var estateTokens: Bool { self.cards.filter({$0.tokens.estate}).count > 0 }
+    var villagers: Bool { self.cards.filter({$0.tokens.villagers}).count > 0}
     var projectTokens: Bool { projects.count > 0 }
     
     
@@ -72,6 +73,7 @@ struct SetModel {
         if debt { tokens.append("Debt Tokens") }
         if victoryTokens { tokens.append("Victory Tokens") }
         if coinTokens { tokens.append("Coin Tokens") }
+        if villagers { tokens.append("Coin Tokens (Villagers)") }
         if embargoTokens { tokens.append("Embargo Tokens") }
         if journeyToken { tokens.append("Journey Token") }
         if minusCardTokens { tokens.append("-Card Token") }
