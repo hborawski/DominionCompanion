@@ -14,7 +14,7 @@ struct SettingsView: View {
     
     @AppStorage(Constants.SaveKeys.settingsShelters) var shelters: Bool = false
     
-    @AppStorage(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
+    @AppStorage(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = Settings.shared.maxLandscape
     
     @AppStorage(Constants.SaveKeys.settingsAnyLandscape) var anyLandscape: Bool = false
     
