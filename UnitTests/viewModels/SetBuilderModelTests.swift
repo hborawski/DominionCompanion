@@ -358,6 +358,7 @@ class SetBuilderModelTests: XCTestCase {
     // MARK: getLandscapeCards tests
 
     func testGetLandscapeCards() {
+        Settings.shared.maxLandscape = 2
         let data = CardData()
         let model = SetBuilderModel(data)
 
