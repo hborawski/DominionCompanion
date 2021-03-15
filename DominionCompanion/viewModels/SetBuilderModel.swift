@@ -123,7 +123,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
             }
         }
         
-        Just(getLandscapeCards(pinnedLandscape, max: Settings.shared.maxLandscape)).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
+        Just(getLandscapeCards(pinnedLandscape, target: Int.random(in: 0...Settings.shared.maxLandscape))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
     }
     
     
@@ -233,8 +233,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
         }
     }
     
-    func getLandscapeCards(_ pinned: [Card], max: Int) -> [Card] {
-        let target = Int.random(in: 0...max)
+    func getLandscapeCards(_ pinned: [Card], target: Int) -> [Card] {
         guard target > 0 else { return [] }
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }

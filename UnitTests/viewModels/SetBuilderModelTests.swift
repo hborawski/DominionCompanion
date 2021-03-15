@@ -360,13 +360,8 @@ class SetBuilderModelTests: XCTestCase {
         let data = CardData()
         let model = SetBuilderModel(data)
 
-        var sets: [[Card]] = []
-        for _ in 0...100 {
-            sets.append(model.getLandscapeCards([], max: 2))
-        }
-
-        let distribution = Set(sets.map(\.count))
-
-        XCTAssertEqual(Set([0,1,2]), distribution)
+        XCTAssertEqual(0, model.getLandscapeCards([], target: 0).count)
+        XCTAssertEqual(1, model.getLandscapeCards([], target: 1).count)
+        XCTAssertEqual(2, model.getLandscapeCards([], target: 2).count)
     }
 }
