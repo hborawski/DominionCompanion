@@ -13,6 +13,8 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
     @EnvironmentObject var setBuilder: SetBuilderModel
     
     var existing: Rule?
+
+    var matchSet: Bool = true
     
     var rule: Rule {
         Rule(value: 0, operation: .greater, conditions: conditions)
@@ -48,18 +50,20 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                     Text("\(matchingCards.count)")
                 }
             }
-            Section(header: HStack {
-                Image("Card")
-                Text("Cards to match in set")
-            }) {
-                Picker("Operation", selection: $operation) {
-                    ForEach(RuleType.number.availableOperations, id: \.self) { operation in
-                        Text(operation.rawValue)
+            if matchSet {
+                Section(header: HStack {
+                    Image("Card")
+                    Text("Cards to match in set")
+                }) {
+                    Picker("Operation", selection: $operation) {
+                        ForEach(RuleType.number.availableOperations, id: \.self) { operation in
+                            Text(operation.rawValue)
+                        }
                     }
-                }
-                Picker("Number Of Cards", selection: $value) {
-                    ForEach(Array(0...Settings.shared.maxKingdomCards), id: \.self) { number in
-                        Text("\(number)")
+                    Picker("Number Of Cards", selection: $value) {
+                        ForEach(Array(0...Settings.shared.maxKingdomCards), id: \.self) { number in
+                            Text("\(number)")
+                        }
                     }
                 }
             }
@@ -106,6 +110,9 @@ struct RuleView_Previews: PreviewProvider {
     static var previews: some View {
         let cardData = CardData()
         let model = SetBuilderModel(cardData)
-        return RuleView(ruleBuilder: model).environmentObject(cardData)
+        return Group {
+            RuleView(ruleBuilder: model).environmentObject(cardData)
+            RuleView(ruleBuilder: model, matchSet: false).environmentObject(cardData)
+        }
     }
 }
