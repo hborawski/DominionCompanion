@@ -45,12 +45,12 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         return Form {
-            Section(header: Text("Matching Cards")) {
-                NavigationLink(destination: CardsView<EmptyView>(cards: matchingCards)) {
-                    Text("\(matchingCards.count)")
-                }
-            }
             if matchSet {
+                Section(header: Text("Matching Cards")) {
+                    NavigationLink(destination: CardsView<EmptyView>(cards: matchingCards)) {
+                        Text("\(matchingCards.count)")
+                    }
+                }
                 Section(header: HStack {
                     Image("Card")
                     Text("Cards to match in set")
