@@ -40,7 +40,7 @@ struct CardsView<T>: View where T: View {
             }
             if advancedFilter {
                 NavigationLink(
-                    destination: RuleView(ruleBuilder: cardFilter, matchSet: false),
+                    destination: RuleView(ruleBuilder: cardFilter, existing: cardFilter.rule, matchSet: false),
                     label: {
                         HStack {
                             Text("Advanced Filter:")
