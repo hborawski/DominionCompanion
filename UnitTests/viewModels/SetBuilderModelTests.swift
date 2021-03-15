@@ -362,7 +362,7 @@ class SetBuilderModelTests: XCTestCase {
         let model = SetBuilderModel(data)
 
         var sets: [[Card]] = []
-        for _ in 0...100 {
+        for _ in 0...1000 {
             sets.append(model.getLandscapeCards([]))
         }
 
@@ -371,5 +371,6 @@ class SetBuilderModelTests: XCTestCase {
         XCTAssertTrue(distribution.contains(0))
         XCTAssertTrue(distribution.contains(1))
         XCTAssertTrue(distribution.contains(2))
+        XCTAssertFalse(distribution.contains(3))
     }
 }
