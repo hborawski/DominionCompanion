@@ -37,6 +37,8 @@
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
 		AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */; };
 		AF60BC6D253D0CA200DC50DE /* SwipableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */; };
+		AF679A2125FED9D700CCF22B /* CardFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF679A2025FED9D700CCF22B /* CardFilter.swift */; };
+		AF679A2525FEDCF000CCF22B /* CardFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF679A2425FEDCF000CCF22B /* CardFilterTests.swift */; };
 		AF6AA0A62381E6DB00AC3BEA /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AA0A42381E30A00AC3BEA /* Condition.swift */; };
 		AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D7092364DA9800FDC4D6 /* Constants.swift */; };
 		AF80D70C2364DD7100FDC4D6 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D70B2364DD7100FDC4D6 /* SetModel.swift */; };
@@ -112,6 +114,8 @@
 		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
 		AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCardRow.swift; sourceTree = "<group>"; };
 		AF60BC6C253D0CA200DC50DE /* SwipableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableRow.swift; sourceTree = "<group>"; };
+		AF679A2025FED9D700CCF22B /* CardFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilter.swift; sourceTree = "<group>"; };
+		AF679A2425FEDCF000CCF22B /* CardFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilterTests.swift; sourceTree = "<group>"; };
 		AF6AA0982381CD6B00AC3BEA /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		AF6AA0A02381D1DF00AC3BEA /* RuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 		AF6AA0A42381E30A00AC3BEA /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */,
+				AF679A2025FED9D700CCF22B /* CardFilter.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */,
+				AF679A2425FEDCF000CCF22B /* CardFilterTests.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */,
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
 				AFCA842E2586BCF5008BBAE3 /* SavedRuleSet+CoreDataClass.swift in Sources */,
+				AF679A2125FED9D700CCF22B /* CardFilter.swift in Sources */,
 				AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */,
 				AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */,
 				AF1A5E4D25259A5D0050DE4E /* SetBuilderModel.swift in Sources */,
@@ -584,6 +591,7 @@
 				AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
 				AFE9090725C4D9F500E8334E /* ConditionTests.swift in Sources */,
+				AF679A2525FEDCF000CCF22B /* CardFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

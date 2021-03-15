@@ -20,12 +20,44 @@ struct CardsView<T>: View where T: View {
     var showOnRow: Bool = false
     
     @State var searchText: String = ""
+
+    @State var advancedFilter: Bool = false
+
+    @ObservedObject var cardFilter = CardFilter()
     
     @ViewBuilder
     var body: some View {
         List {
-            SearchBar(text: $searchText)
-            ForEach(cards.filter { searchText != "" ? $0.name.lowercased().contains(searchText) : true }, id: \.id) { card in
+            HStack {
+                SearchBar(text: $searchText)
+                Button(action: {
+                    self.advancedFilter.toggle()
+                }, label: {
+                    self.advancedFilter ?
+                        Image(systemName: "line.horizontal.3.decrease.circle.fill") :
+                    Image(systemName: "line.horizontal.3.decrease.circle")
+                }).buttonStyle(PlainButtonStyle()).foregroundColor(.blue)
+            }
+            if advancedFilter {
+                NavigationLink(
+                    destination: RuleView(ruleBuilder: cardFilter, matchSet: false),
+                    label: {
+                        HStack {
+                            Text("Advanced Filter:")
+                            Spacer()
+                            VStack {
+                                ForEach(cardFilter.rule.conditions, id: \.self) { condition in
+                                    HStack {
+                                        Text(condition.property.rawValue)
+                                        Text(condition.operation.rawValue)
+                                        Text(condition.comparisonValue)
+                                    }
+                                }
+                            }
+                        }
+                    })
+            }
+            ForEach(filterCards(cards), id: \.id) { card in
                 NavigationLink(
                     destination: CardView(card: card, accessory: self.accessory)
                 ) {
@@ -39,6 +71,15 @@ struct CardsView<T>: View where T: View {
             }
         }
         .navigationTitle(Text(title ?? "All Cards"))
+    }
+
+    func filterCards(_ cards: [Card]) -> [Card] {
+        if advancedFilter {
+            return cardFilter.rule.matchingCards(cards).filter({ searchText != "" ? $0.name.lowercased().contains(searchText) : true})
+        } else {
+            return cards
+                .filter({ searchText != "" ? $0.name.lowercased().contains(searchText) : true})
+        }
     }
 }
 
