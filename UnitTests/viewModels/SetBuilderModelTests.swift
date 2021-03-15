@@ -19,6 +19,11 @@ class SetBuilderModelTests: XCTestCase {
         Settings.shared.chosenExpansions = []
         Settings.shared.maxKingdomCards = 10
         Settings.shared.maxExpansions = 10
+        Settings.shared.maxLandscape = 2
+        Settings.shared.maxEvents = 2
+        Settings.shared.maxLandmarks = 2
+        Settings.shared.maxProjects = 2
+        Settings.shared.maxWays = 2
     }
 
     // MARK: Pinning Tests
@@ -357,12 +362,16 @@ class SetBuilderModelTests: XCTestCase {
     // MARK: getLandscapeCards tests
 
     func testGetLandscapeCards() {
-        Settings.shared.useAnyLandscape = true
         let data = CardData()
         let model = SetBuilderModel(data)
 
-        XCTAssertEqual(0, model.getLandscapeCards([], target: 0).count)
-        XCTAssertEqual(1, model.getLandscapeCards([], target: 1).count)
-        XCTAssertEqual(2, model.getLandscapeCards([], target: 2).count)
+        var sets: [[Card]] = []
+        for _ in 0...100 {
+            sets.append(model.getLandscapeCards([]))
+        }
+
+        let distribution = Set(sets.map(\.count))
+
+        XCTAssertEqual(Set([0,1,2]), distribution)
     }
 }

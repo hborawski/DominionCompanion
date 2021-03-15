@@ -24,6 +24,14 @@ class Settings {
     @UserDefaultsBacked(Constants.SaveKeys.settingsAnyLandscape) var useAnyLandscape: Bool = false
 
     @UserDefaultsBacked(Constants.SaveKeys.settingsMaxLandscape) var maxLandscape: Int = 0
+
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
+
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumLandmarks) var maxLandmarks: Int = 0
+
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumProjects) var maxProjects: Int = 0
+    
+    @UserDefaultsBacked(Constants.SaveKeys.settingsNumWays) var maxWays: Int = 0
     
     @UserDefaultsBacked(Constants.SaveKeys.settingsPinCards) var pincardsForSetup: Bool = false
     

@@ -35,11 +35,6 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     @Published var landscape: [Card] = Settings.shared.currentLandscape
     
     @Published var pinnedLandscape: [Card] = Settings.shared.pinnedLandscape
-
-    @UserDefaultsBacked(Constants.SaveKeys.settingsNumEvents) var maxEvents: Int = 0
-    @UserDefaultsBacked(Constants.SaveKeys.settingsNumLandmarks) var maxLandmarks: Int = 0
-    @UserDefaultsBacked(Constants.SaveKeys.settingsNumProjects) var maxProjects: Int = 0
-    @UserDefaultsBacked(Constants.SaveKeys.settingsNumWays) var maxWays: Int = 0
     
     var finalSet: SetModel {
         SetModel(
@@ -123,7 +118,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
             }
         }
         
-        Just(getLandscapeCards(pinnedLandscape, target: Int.random(in: 0...Settings.shared.maxLandscape))).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
+        Just(getLandscapeCards(pinnedLandscape)).receive(on: RunLoop.main).assign(to: \.landscape, on: self).store(in: &bag)
     }
     
     
@@ -233,7 +228,8 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
         }
     }
     
-    func getLandscapeCards(_ pinned: [Card], target: Int) -> [Card] {
+    func getLandscapeCards(_ pinned: [Card]) -> [Card] {
+        let target = Int.random(in: 0...Settings.shared.maxLandscape)
         guard target > 0 else { return [] }
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
@@ -251,10 +247,10 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     
     func areLandscapesValid(_ landscapes: [Card]) -> Bool {
         guard
-            (landscapes.filter { $0.types.contains("Event") }).count <= maxEvents,
-            (landscapes.filter { $0.types.contains("Landmark") }).count <= maxLandmarks,
-            (landscapes.filter { $0.types.contains("Project") }).count <= maxProjects,
-            (landscapes.filter { $0.types.contains("Way") }).count <= maxWays
+            (landscapes.filter { $0.types.contains("Event") }).count <= Settings.shared.maxEvents,
+            (landscapes.filter { $0.types.contains("Landmark") }).count <= Settings.shared.maxLandmarks,
+            (landscapes.filter { $0.types.contains("Project") }).count <= Settings.shared.maxProjects,
+            (landscapes.filter { $0.types.contains("Way") }).count <= Settings.shared.maxWays
         else { return false }
         return true
     }
