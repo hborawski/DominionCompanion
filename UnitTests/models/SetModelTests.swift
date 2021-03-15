@@ -106,7 +106,7 @@ class SetModelTests: XCTestCase {
             TestData.getCard("Alchemist"),
             TestData.getCard("Forge"),
             TestData.getCard("City Quarter"),
-            TestData.getCard("Village"),
+            TestData.getCard("Recruiter"),
             TestData.getCard("Bishop"),
             TestData.getCard("Cobbler"),
             TestData.getCard("Butcher")
@@ -131,6 +131,7 @@ class SetModelTests: XCTestCase {
 
         XCTAssertTrue(tokens.contains("Debt Tokens"))
         XCTAssertTrue(tokens.contains("Coin Tokens"))
+        XCTAssertTrue(tokens.contains("Coin Tokens (Villagers)"))
     }
 
     func testShareableSet() {
