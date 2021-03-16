@@ -30,6 +30,10 @@ struct SetModel {
             }.filter { Set(["Knight", "Castle"]).intersection(Set($0.types)).count == 0 } // Knights and Castles are special and technically in the supply
         }
     }
+
+    var allCards: [Card] {
+        cards + notInSupply + landmarks + events + projects + ways
+    }
     
     // MARK: General Required Extras
     var colonies: Bool {
@@ -44,25 +48,26 @@ struct SetModel {
         guard !Settings.shared.shelters else { return true }
         return chance >= Int.random(in: 0...Settings.shared.maxKingdomCards)
     }
-    var boons: Bool { self.cards.filter({$0.types.contains("Fate")}).count > 0 }
-    var hexes: Bool { self.cards.filter({$0.types.contains("Doom")}).count > 0 }
-    var ruins: Bool { self.cards.filter({$0.types.contains("Looter")}).count > 0 }
-    var potions: Bool { self.cards.filter({$0.potion}).count > 0 }
-    var debt: Bool { self.cards.filter({$0.tokens.debt}).count > 0 }
-    var victoryTokens: Bool { self.cards.filter({$0.tokens.victory > 0}).count > 0 }
-    var coinTokens: Bool { self.cards.filter({$0.tokens.coin > 0}).count > 0 || self.projects.filter({$0.tokens.coin != 0}).count > 0 }
-    var embargoTokens: Bool { self.cards.filter({$0.tokens.embargo}).count > 0 }
-    var journeyToken: Bool { self.cards.filter({$0.tokens.journey}).count > 0 }
-    var minusCardTokens: Bool { self.cards.filter({$0.tokens.minusCard}).count > 0 }
-    var minusCoinTokens: Bool { self.cards.filter({$0.tokens.embargo}).count > 0 }
-    var plusCardTokens: Bool { self.cards.filter({$0.tokens.plusCard}).count > 0 }
-    var plusActionTokens: Bool { self.cards.filter({$0.tokens.plusAction}).count > 0 }
-    var plusBuyTokens: Bool { self.cards.filter({$0.tokens.plusBuy}).count > 0 }
-    var plusCoinTokens: Bool { self.cards.filter({$0.tokens.plusCoin}).count > 0 }
-    var minusCostTokens: Bool { self.cards.filter({$0.tokens.minusCost}).count > 0 }
-    var trashingTokens: Bool { self.cards.filter({$0.tokens.trashing}).count > 0 }
-    var estateTokens: Bool { self.cards.filter({$0.tokens.estate}).count > 0 }
-    var villagers: Bool { self.cards.filter({$0.tokens.villagers}).count > 0}
+    var boons: Bool { allCards.filter({$0.types.contains("Fate")}).count > 0 }
+    var hexes: Bool { allCards.filter({$0.types.contains("Doom")}).count > 0 }
+    var ruins: Bool { allCards.filter({$0.types.contains("Looter")}).count > 0 }
+    var potions: Bool { allCards.filter({$0.potion}).count > 0 }
+    var exile: Bool { allCards.filter({$0.exile}).count > 0 }
+    var debt: Bool { allCards.filter({$0.tokens.debt}).count > 0 }
+    var victoryTokens: Bool { allCards.filter({$0.tokens.victory > 0}).count > 0 }
+    var coinTokens: Bool { allCards.filter({$0.tokens.coin > 0}).count > 0 }
+    var embargoTokens: Bool { allCards.filter({$0.tokens.embargo}).count > 0 }
+    var journeyToken: Bool { allCards.filter({$0.tokens.journey}).count > 0 }
+    var minusCardTokens: Bool { allCards.filter({$0.tokens.minusCard}).count > 0 }
+    var minusCoinTokens: Bool { allCards.filter({$0.tokens.embargo}).count > 0 }
+    var plusCardTokens: Bool { allCards.filter({$0.tokens.plusCard}).count > 0 }
+    var plusActionTokens: Bool { allCards.filter({$0.tokens.plusAction}).count > 0 }
+    var plusBuyTokens: Bool { allCards.filter({$0.tokens.plusBuy}).count > 0 }
+    var plusCoinTokens: Bool { allCards.filter({$0.tokens.plusCoin}).count > 0 }
+    var minusCostTokens: Bool { allCards.filter({$0.tokens.minusCost}).count > 0 }
+    var trashingTokens: Bool { allCards.filter({$0.tokens.trashing}).count > 0 }
+    var estateTokens: Bool { allCards.filter({$0.tokens.estate}).count > 0 }
+    var villagers: Bool { allCards.filter({$0.tokens.villagers}).count > 0}
     var projectTokens: Bool { projects.count > 0 }
     
     
@@ -102,6 +107,10 @@ struct SetModel {
         
         if ruins {
             mechanics.append("Ruins")
+        }
+
+        if exile {
+            mechanics.append("Exile Mat")
         }
 
         return mechanics

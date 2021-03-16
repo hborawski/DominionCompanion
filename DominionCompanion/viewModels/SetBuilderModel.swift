@@ -230,7 +230,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
     
     func getLandscapeCards(_ pinned: [Card]) -> [Card] {
         let target = Int.random(in: 0...Settings.shared.maxLandscape)
-        guard target > 0 else { return [] }
+        guard target > 0 else { return pinned }
         let pool = (cardData.allEvents + cardData.allLandmarks + cardData.allProjects + cardData.allWays).filter({ (card) -> Bool in
             guard !Settings.shared.useAnyLandscape, Settings.shared.chosenExpansions.count > 0 else { return true }
             return Settings.shared.chosenExpansions.contains(card.expansion)
@@ -240,7 +240,7 @@ class SetBuilderModel: ObservableObject, RuleBuilder {
             if areLandscapesValid(landscapes + [card]) {
                 landscapes.append(card)
             }
-            if landscapes.count == target { break }
+            if landscapes.count >= target { break }
         }
         return landscapes
     }
