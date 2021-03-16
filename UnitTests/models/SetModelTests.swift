@@ -109,10 +109,14 @@ class SetModelTests: XCTestCase {
             TestData.getCard("Recruiter"),
             TestData.getCard("Bishop"),
             TestData.getCard("Cobbler"),
-            TestData.getCard("Butcher")
+            TestData.getCard("Butcher"),
+            TestData.getCard("Island"),
+            TestData.getCard("Native Village"),
+            TestData.getCard("Pirate Ship"),
+            TestData.getCard("Ranger")
         ]
 
-        let model = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set)
+        let model = SetModel(landmarks: [], events: [], projects: [], ways: [TestData.getCard("Way of the Worm")], cards: set)
 
         XCTAssertTrue(model.boons)
         XCTAssertTrue(model.hexes)
@@ -126,6 +130,11 @@ class SetModelTests: XCTestCase {
         XCTAssertTrue(mechanics.contains("Boons"))
         XCTAssertTrue(mechanics.contains("Hexes"))
         XCTAssertTrue(mechanics.contains("Ruins"))
+        XCTAssertTrue(mechanics.contains("Exile Mat"))
+        XCTAssertTrue(mechanics.contains("Tavern Mat"))
+        XCTAssertTrue(mechanics.contains("Native Village Mat"))
+        XCTAssertTrue(mechanics.contains("Island Mat"))
+        XCTAssertTrue(mechanics.contains("Pirate Ship Mat"))
 
         let tokens = model.getTokens()
 
