@@ -113,6 +113,22 @@ struct SetModel {
             mechanics.append("Exile Mat")
         }
 
+        if journeyToken || minusCardTokens || minusCoinTokens || plusCardTokens || plusActionTokens || plusBuyTokens || plusCoinTokens || minusCostTokens || trashingTokens || estateTokens {
+            mechanics.append("Tavern Mat")
+        }
+
+        if allCards.first(where: {$0.name == "Island"}) != nil {
+            mechanics.append("Island Mat")
+        }
+
+        if allCards.first(where: {$0.name == "Native Village"}) != nil {
+            mechanics.append("Native Village Mat")
+        }
+
+        if allCards.first(where: {$0.name == "Pirate Ship"}) != nil {
+            mechanics.append("Pirate Ship Mat")
+        }
+
         return mechanics
     }
     
