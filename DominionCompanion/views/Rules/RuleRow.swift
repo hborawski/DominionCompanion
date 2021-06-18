@@ -13,6 +13,9 @@ struct RuleRow<Builder: RuleBuilder>: View  where Builder: ObservableObject  {
     @ObservedObject var ruleBuilder: Builder
     var body: some View {
         HStack {
+            if rule.precondition != nil {
+                Image(systemName: "questionmark.diamond")
+            }
             HStack {
                 Image("Card")
                 Text(rule.operation.rawValue)
