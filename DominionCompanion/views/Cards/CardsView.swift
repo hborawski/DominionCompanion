@@ -31,7 +31,9 @@ struct CardsView<T>: View where T: View {
             HStack {
                 SearchBar(text: $searchText)
                 Button(action: {
-                    self.advancedFilter.toggle()
+                    withAnimation {
+                        self.advancedFilter.toggle()
+                    }
                 }, label: {
                     self.advancedFilter ?
                         Image(systemName: "line.horizontal.3.decrease.circle.fill") :

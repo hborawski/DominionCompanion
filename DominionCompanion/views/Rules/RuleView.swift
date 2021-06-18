@@ -69,7 +69,9 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
             }
             Section(header: Text("Conditions")) {
                 Button("Add Condition") {
-                    conditions.append(Condition(property: .cost, operation: .greater, comparisonValue: "0"))
+                    withAnimation {
+                        conditions.append(Condition(property: .cost, operation: .greater, comparisonValue: "0"))
+                    }
                 }
             }
             ForEach(conditions, id: \.id) { condition in
@@ -78,7 +80,9 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                         condition: condition,
                         onDelete: self.conditions.count > 1 ?
                         {
-                            self.conditions = self.conditions.filter { $0.id != condition.id }
+                            withAnimation {
+                                self.conditions = self.conditions.filter { $0.id != condition.id }
+                            }
                         }:
                         nil
                     )
