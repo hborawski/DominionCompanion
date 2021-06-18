@@ -23,6 +23,7 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
         case value
         case operation
         case conditions
+        case precondition
     }
     required init(from decoder: Decoder) throws {
         let container  = try decoder.container(keyedBy: SetRuleCodingKeys.self)
@@ -30,6 +31,7 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
         self.value = try container.decode(Int.self, forKey: .value)
         self.operation = try container.decode(FilterOperation.self, forKey: .operation)
         self.conditions = try container.decode([Condition].self, forKey: .conditions)
+        self.precondition = try? container.decode(Rule.self, forKey: .precondition)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -38,18 +40,24 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
         try container.encode(self.value, forKey: .value)
         try container.encode(self.operation, forKey: .operation)
         try container.encode(self.conditions, forKey: .conditions)
+        if let rule = precondition {
+            try container.encode(rule, forKey: .precondition)
+        }
     }
     
-    init(value: Int, operation: FilterOperation, conditions: [Condition]) {
+    init(value: Int, operation: FilterOperation, conditions: [Condition], precondition: Rule? = nil) {
         self.value = value
         self.operation = operation
         self.conditions = conditions
+        self.precondition = precondition
         self.id = UUID().uuidString
     }
 
     @Published var value: Int
     @Published var operation: FilterOperation
     @Published var conditions: [Condition]
+
+    @Published var precondition: Rule?
     
     func matchingCards(_ cards: [Card]) -> [Card] {
         return conditions.reduce(cards) { (cards, rule) -> [Card] in
@@ -91,6 +99,12 @@ class Rule: Codable, Hashable, ObservableObject, Identifiable {
      - returns: The satisfaction of the cards
      */
     func satisfaction(_ cards: [Card]) -> Double {
+        // If precondition is not met, consider this rule satisfied so it wont
+        // prevent cards from being added
+        if let rule = precondition, rule.satisfaction(cards) != 1.0 {
+            Logger.shared.t("Precondition not met, ignoring rule")
+            return 1.0
+        }
         let setValue = Double(self.matchingCards(cards).count)
         let desiredValue = Double(value)
         switch self.operation {

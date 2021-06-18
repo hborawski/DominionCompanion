@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RulesView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
+struct RulesView<Builder: RuleBuilder>: View where Builder: ObservableObject {
     @ObservedObject var ruleBuilder: Builder
 
     var toolbarItem: Button<Image>? = nil

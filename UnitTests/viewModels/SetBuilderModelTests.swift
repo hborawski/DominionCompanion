@@ -312,6 +312,37 @@ class SetBuilderModelTests: XCTestCase {
         wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
     }
 
+    func testGetMatchingSetOneRuleWithPrecondition() {
+        let data = CardData()
+        let model = SetBuilderModel(data)
+
+        let rule = Rule(value: 1, operation: .greaterOrEqual, conditions: [
+            Condition(property: .type, operation: .equal, comparisonValue: "Reaction")
+        ],
+        precondition: Rule(value: 1, operation: .greaterOrEqual, conditions: [
+            Condition(property: .type, operation: .equal, comparisonValue: "Attack")
+        ])
+        )
+
+        model.addRule(rule)
+
+        let expecation = XCTestExpectation(description: "Set Matches Rule")
+        model.getMatchingSet([TestData.getCard("Torturer")]) { result in
+            switch result {
+            case .success(let cards):
+                guard
+                    cards.first(where: { $0.types.contains("Attack") }) != nil,
+                    cards.first(where: { $0.types.contains("Reaction") }) != nil
+                else { return XCTFail() }
+                expecation.fulfill()
+            case .failure:
+                XCTFail()
+            }
+        }
+
+        wait(for: [expecation], timeout: 20) // long timeout because github actions is on the slower side
+    }
+
     func testGetMatchingSetWithExpansionLimit() {
         Settings.shared.maxExpansions = 3
         let data = CardData()

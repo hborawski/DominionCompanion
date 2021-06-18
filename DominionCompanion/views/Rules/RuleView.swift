@@ -15,6 +15,14 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
     var existing: Rule?
 
     var matchSet: Bool = true
+
+    var configurePrecondition: Bool = true
+
+    var preconditionRuleBuilder = RuleViewModel()
+
+    var preconditionRule: Rule? {
+        preconditionRuleBuilder.precondition
+    }
     
     var rule: Rule {
         Rule(value: 0, operation: .greater, conditions: conditions)
@@ -66,6 +74,20 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                         }
                     }
                 }
+                if configurePrecondition {
+                    Section(header: Text("Precondition")) {
+                        NavigationLink(
+                            destination: RuleView<RuleViewModel>(ruleBuilder: preconditionRuleBuilder, existing: preconditionRule, configurePrecondition: false),
+                            label: {
+                                HStack {
+                                    Image(systemName: "questionmark.diamond")
+                                    Text("Precondition")
+                                    Spacer()
+                                    Text(preconditionRuleBuilder.precondition == nil ? "None" : "Configured").foregroundColor(.secondary)
+                                }
+                            })
+                    }
+                }
             }
             Section(header: Text("Conditions")) {
                 Button("Add Condition") {
@@ -87,7 +109,7 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
         }
         .navigationBarItems(trailing: HStack {
             Button("Save") {
-                let newRule = Rule(value: value, operation: operation, conditions: conditions)
+                let newRule = Rule(value: value, operation: operation, conditions: conditions, precondition: preconditionRuleBuilder.precondition)
                 if let id = self.id {
                     newRule.id = id
                 }
@@ -101,6 +123,9 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                 value = existingRule.value
                 conditions = existingRule.conditions
                 id = existingRule.id
+                if let pre = existingRule.precondition {
+                    preconditionRuleBuilder.addRule(pre)
+                }
             }
         }
     }

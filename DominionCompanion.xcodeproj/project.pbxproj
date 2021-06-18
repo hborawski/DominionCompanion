@@ -32,6 +32,7 @@
 		AF34B1CD25F59490007E241C /* SetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34B1CC25F59490007E241C /* SetModelTests.swift */; };
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* ConditionRow.swift */; };
+		AF540F2C267D0EE900C8ECD9 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */; };
 		AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5855F025C7517300D7A7AE /* PotionView.swift */; };
 		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
@@ -109,6 +110,7 @@
 		AF34B1CC25F59490007E241C /* SetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelTests.swift; sourceTree = "<group>"; };
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* ConditionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionRow.swift; sourceTree = "<group>"; };
+		AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
 		AF5855F025C7517300D7A7AE /* PotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionView.swift; sourceTree = "<group>"; };
 		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
 		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			children = (
 				AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */,
 				AF679A2025FED9D700CCF22B /* CardFilter.swift */,
+				AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				AF1A5E6025290FBE0050DE4E /* RulesView.swift in Sources */,
 				AF80D70A2364DA9800FDC4D6 /* Constants.swift in Sources */,
 				AF34B1AB25F42D76007E241C /* Disclosures.swift in Sources */,
+				AF540F2C267D0EE900C8ECD9 /* RuleViewModel.swift in Sources */,
 				AF1A5E3425255F140050DE4E /* CardView.swift in Sources */,
 				AFD02B97246CB87900D14D61 /* RecommendedSets.swift in Sources */,
 				AF1B6EAC2324226800ADA74D /* CardData.swift in Sources */,
