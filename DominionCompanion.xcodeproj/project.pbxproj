@@ -35,6 +35,7 @@
 		AF540F2C267D0EE900C8ECD9 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */; };
 		AF540F36267D574800C8ECD9 /* BlackMarketSimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */; };
 		AF540F3C267D577B00C8ECD9 /* BlackMarketSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F3B267D577B00C8ECD9 /* BlackMarketSimulator.swift */; };
+		AF540F40267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */; };
 		AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5855F025C7517300D7A7AE /* PotionView.swift */; };
 		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
@@ -115,6 +116,7 @@
 		AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
 		AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulatorView.swift; sourceTree = "<group>"; };
 		AF540F3B267D577B00C8ECD9 /* BlackMarketSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulator.swift; sourceTree = "<group>"; };
+		AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulatorTests.swift; sourceTree = "<group>"; };
 		AF5855F025C7517300D7A7AE /* PotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionView.swift; sourceTree = "<group>"; };
 		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
 		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */,
 				AF679A2425FEDCF000CCF22B /* CardFilterTests.swift */,
+				AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */,
 				AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
+				AF540F40267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift in Sources */,
 				AFE9090725C4D9F500E8334E /* ConditionTests.swift in Sources */,
 				AF679A2525FEDCF000CCF22B /* CardFilterTests.swift in Sources */,
 			);

@@ -23,7 +23,7 @@ class BlackMarketSimulator: ObservableObject {
     }
 
     func draw() {
-        guard deck.count > 0 else { return }
+        guard deck.count > 0 || discard.count > 0 else { return }
         if deck.count < 3, discard.count > 0 {
             deck = deck + (Settings.shared.blackMarketShuffle ? discard.shuffled() : discard)
             discard = []
