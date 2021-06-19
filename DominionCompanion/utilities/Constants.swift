@@ -39,5 +39,8 @@ struct Constants {
         static let settingsHideWikiLink = "settings_hideWikiLink"
         
         static let savedExcludedCards = "excludedCards"
+
+        static let blackMarketDeckSize = "blackMarketDeckSize"
+        static let blackMarketShuffle = "blackMarketShuffle"
     }
 }

@@ -53,6 +53,10 @@ class Settings {
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedLandscape) var pinnedLandscape: [Card] = []
 
     @UserDefaultsBackedCodable(Constants.SaveKeys.pinnedRules) var pinnedRules: [Rule] = []
+
+    @UserDefaultsBacked(Constants.SaveKeys.blackMarketDeckSize) var blackMarketDeckSize: Int = 20
+
+    @UserDefaultsBacked(Constants.SaveKeys.blackMarketShuffle) var blackMarketShuffle: Bool = false
 }
 
 

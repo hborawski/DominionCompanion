@@ -33,6 +33,9 @@
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* ConditionRow.swift */; };
 		AF540F2C267D0EE900C8ECD9 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */; };
+		AF540F36267D574800C8ECD9 /* BlackMarketSimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */; };
+		AF540F3C267D577B00C8ECD9 /* BlackMarketSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F3B267D577B00C8ECD9 /* BlackMarketSimulator.swift */; };
+		AF540F40267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */; };
 		AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5855F025C7517300D7A7AE /* PotionView.swift */; };
 		AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */; };
 		AF60BC63253CE6BD00DC50DE /* GameplaySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */; };
@@ -111,6 +114,9 @@
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* ConditionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionRow.swift; sourceTree = "<group>"; };
 		AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
+		AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulatorView.swift; sourceTree = "<group>"; };
+		AF540F3B267D577B00C8ECD9 /* BlackMarketSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulator.swift; sourceTree = "<group>"; };
+		AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketSimulatorTests.swift; sourceTree = "<group>"; };
 		AF5855F025C7517300D7A7AE /* PotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionView.swift; sourceTree = "<group>"; };
 		AF60BC5D253CDEA100DC50DE /* GlobalExclusions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExclusions.swift; sourceTree = "<group>"; };
 		AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetup.swift; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 				AF1A5E19252550EE0050DE4E /* SetBuilderView.swift */,
 				AF60BC62253CE6BD00DC50DE /* GameplaySetup.swift */,
 				AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */,
+				AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */,
 			);
 			path = SetBuilder;
 			sourceTree = "<group>";
@@ -315,6 +322,7 @@
 				AF1A5E4C25259A5D0050DE4E /* SetBuilderModel.swift */,
 				AF679A2025FED9D700CCF22B /* CardFilter.swift */,
 				AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */,
+				AF540F3B267D577B00C8ECD9 /* BlackMarketSimulator.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -357,6 +365,7 @@
 			children = (
 				AFBD15CF25EC46B50002275A /* SetBuilderModelTests.swift */,
 				AF679A2425FEDCF000CCF22B /* CardFilterTests.swift */,
+				AF540F3F267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -533,6 +542,7 @@
 				AF1B6EBF23244FE000ADA74D /* FilterOperation.swift in Sources */,
 				AFCA842E2586BCF5008BBAE3 /* SavedRuleSet+CoreDataClass.swift in Sources */,
 				AF679A2125FED9D700CCF22B /* CardFilter.swift in Sources */,
+				AF540F3C267D577B00C8ECD9 /* BlackMarketSimulator.swift in Sources */,
 				AF60BC68253CED4900DC50DE /* NavigationCardRow.swift in Sources */,
 				AF5855F125C7517300D7A7AE /* PotionView.swift in Sources */,
 				AF1A5E4D25259A5D0050DE4E /* SetBuilderModel.swift in Sources */,
@@ -562,6 +572,7 @@
 				AF1A5E2E25255B320050DE4E /* DebtView.swift in Sources */,
 				AF1B6EC7232463FD00ADA74D /* CardProperty.swift in Sources */,
 				AF1A5E102525500B0050DE4E /* TabContainer.swift in Sources */,
+				AF540F36267D574800C8ECD9 /* BlackMarketSimulatorView.swift in Sources */,
 				AF60BC5E253CDEA100DC50DE /* GlobalExclusions.swift in Sources */,
 				AFCA841B2586A279008BBAE3 /* SavedSetsView.swift in Sources */,
 				AF1A5E29252559700050DE4E /* CostView.swift in Sources */,
@@ -594,6 +605,7 @@
 				AFBD15BA25EAF02C0002275A /* RuleTypeTests.swift in Sources */,
 				AFBD15AC25EAE5710002275A /* CardTests.swift in Sources */,
 				AFE908E925C4D21D00E8334E /* UtilitiesTest.swift in Sources */,
+				AF540F40267D6CDC00C8ECD9 /* BlackMarketSimulatorTests.swift in Sources */,
 				AFE9090725C4D9F500E8334E /* ConditionTests.swift in Sources */,
 				AF679A2525FEDCF000CCF22B /* CardFilterTests.swift in Sources */,
 			);

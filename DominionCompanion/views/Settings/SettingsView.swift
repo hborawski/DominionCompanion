@@ -33,6 +33,9 @@ struct SettingsView: View {
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansions: Bool = false
     @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .cost
 
+    @AppStorage(Constants.SaveKeys.blackMarketDeckSize) var blackMarketDeckSize: Int = Settings.shared.blackMarketDeckSize
+    @AppStorage(Constants.SaveKeys.blackMarketShuffle) var blackMarketShuffle: Bool = Settings.shared.blackMarketShuffle
+
     var body: some View {
         NavigationView {
             List {
@@ -76,6 +79,12 @@ struct SettingsView: View {
                             gameplaySortMode = mode
                         }
                     }
+                }
+                Section(header: Text("Black Market")) {
+                    ListChoice(title: "Black Market Deck Size", value: "\(blackMarketDeckSize)", values: Array(0...49).map { "\($0 + 1)" }) { val in
+                        blackMarketDeckSize = Int(val) ?? 20
+                    }
+                    Toggle("Shuffle after all cards seen", isOn: $blackMarketShuffle)
                 }
                 Section(header: Text("Miscellaneous")) {
                     NavigationLink(destination: GlobalExclusions()) {
