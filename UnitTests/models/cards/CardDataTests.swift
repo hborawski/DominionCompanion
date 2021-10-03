@@ -22,8 +22,12 @@ class CardDataTests: XCTestCase {
 
     func testChoosingExpansions() {
         Settings.shared.chosenExpansions = []
-        XCTAssertEqual(CardData.shared.cardsFromChosenExpansions.count, CardData.shared.kingdomCards.count)
+        XCTAssertEqual(CardData.shared.cardsFromChosenExpansions.count, Set(CardData.shared.kingdomCards.map { $0.name }).count)
+
         Settings.shared.chosenExpansions = ["Base"]
         XCTAssertEqual(CardData.shared.cardsFromChosenExpansions.count, 26)
+
+        Settings.shared.chosenExpansions = ["Intrigue", "Intrigue (1st Edition)"]
+        XCTAssertEqual(CardData.shared.cardsFromChosenExpansions.count, 32)
     }
 }

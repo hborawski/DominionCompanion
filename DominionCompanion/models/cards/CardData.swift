@@ -53,12 +53,14 @@ class CardData: ObservableObject {
     let maxCards: Int
     let maxVictoryTokens: Int
     let maxCoinTokens: Int
-    
+
     var cardsFromChosenExpansions: [Card] {
         get {
             let expansions = Settings.shared.chosenExpansions.count > 0 ? Settings.shared.chosenExpansions : self.allExpansions
             guard expansions.count > 0 else { return kingdomCards.filter { !excludedCards.contains($0) } }
-            let cards = self.kingdomCards.filter { expansions.contains($0.expansion) && !excludedCards.contains($0) }
+            let cards = Utilities.deduplicateByName(cards:
+                self.kingdomCards.filter { expansions.contains($0.expansion) && !excludedCards.contains($0) }
+            )
             return cards
         }
     }

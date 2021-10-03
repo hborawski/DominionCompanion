@@ -22,6 +22,17 @@ class Utilities {
     public static func sortByExpansionAndName(card1: Card, card2: Card) -> Bool {
         return card1.expansion == card2.expansion ? Utilities.alphabeticSort(card1: card1, card2: card2) : (card1.expansion < card2.expansion)
     }
+
+    public static func deduplicateByName(cards: [Card]) -> [Card] {
+        var cardNames = Set<String>()
+        var deduped = Array<Card>()
+        for card in cards {
+            if cardNames.insert(card.name).inserted {
+                deduped.append(card)
+            }
+        }
+        return deduped
+    }
 }
 
 enum SortMode: String, CaseIterable {
