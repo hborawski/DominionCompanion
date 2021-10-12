@@ -876,7 +876,7 @@
     "types": [
       "Event"
     ],
-    "coins": 1,
+    "coins": 0,
     "cards": 0,
     "categories": [],
     "buys": 0,
@@ -2256,7 +2256,6 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Rocks",
       "Curse"
     ],
     "tokens": {
@@ -2581,7 +2580,7 @@
       "Action"
     ],
     "coins": 1,
-    "cards": 2,
+    "cards": 1,
     "categories": [],
     "buys": 1,
     "actions": 2,
@@ -2622,7 +2621,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 2,
@@ -2992,7 +2991,7 @@
     "types": [
       "Treasure"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 0,
@@ -3576,7 +3575,7 @@
       "Doom"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 2,
@@ -3753,7 +3752,7 @@
     "buys": 0,
     "actions": 0,
     "text": "Each other player reveals the top 2 cards of their deck, trashes one of them costing from 3 to 6, and discards the rest. If a Knight is trashed by this, trash this card. Worth 2",
-    "trash": false,
+    "trash": true,
     "exile": false,
     "name": "Dame Josephine",
     "junk": false,
@@ -4931,7 +4930,6 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Patrician"
     ],
     "tokens": {
       "victory": 2,
@@ -5586,7 +5584,7 @@
       "Action",
       "Gathering"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 1,
@@ -5628,7 +5626,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 2,
@@ -6045,7 +6043,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 1,
@@ -6255,7 +6253,7 @@
     "coins": 0,
     "cards": 3,
     "categories": [],
-    "buys": 0,
+    "buys": 1,
     "actions": 1,
     "text": "+3 Cards. +1 Action. Discard 2 cards.  — When you buy this, +1 Buy. ",
     "trash": false,
@@ -7422,8 +7420,8 @@
       "Treasure",
       "Heirloom"
     ],
-    "coins": 0,
-    "cards": -1,
+    "coins": 1,
+    "cards": 0,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -7591,7 +7589,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "cards": 1,
     "categories": [],
     "buys": 0,
@@ -7684,7 +7682,7 @@
     "name": "Hermit",
     "junk": false,
     "gain": 1,
-    "supply": false,
+    "supply": true,
     "related": [
       "Madman"
     ],
@@ -8389,10 +8387,10 @@
       "Action"
     ],
     "coins": 1,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
-    "actions": 0,
+    "actions": 1,
     "text": "Gain a card costing up to 4 Coins. If it is an... Action card, +1 Action. Treasure card, +1 Coin. Victory card, +1 Card. ",
     "trash": false,
     "exile": false,
@@ -8929,7 +8927,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -10849,6 +10847,9 @@
     "gain": 0,
     "supply": true,
     "related": [
+        "Zombie Apprentice",
+        "Zombie Mason",
+        "Zombie Spy"
     ],
     "tokens": {
       "victory": 0,
@@ -11507,7 +11508,7 @@
       "Victory",
       "Heirloom"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 0,
@@ -11603,7 +11604,6 @@
     "gain": 0,
     "supply": true,
     "related": [
-      "Emporium"
     ],
     "tokens": {
       "victory": 0,
@@ -11842,7 +11842,7 @@
     "types": [
       "Treasure"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 0,
@@ -12634,7 +12634,7 @@
       "Action",
       "Prize"
     ],
-    "coins": 2,
+    "coins": 0,
     "cards": 0,
     "categories": [],
     "buys": 1,
@@ -13390,10 +13390,9 @@
     "exile": false,
     "name": "Rocks",
     "junk": false,
-    "gain": 2,
+    "gain": 1,
     "supply": true,
     "related": [
-      "Catapult"
     ],
     "tokens": {
       "victory": 0,
@@ -13798,7 +13797,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -13879,7 +13878,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 1,
@@ -14593,7 +14592,7 @@
     "buys": 0,
     "actions": 1,
     "text": "+1 Card; +1 Action. Each other player reveals the top 2 cards of their deck, trashes one of them costing from 3 Coins to 6 Coins, and discards the rest. If a Knight is trashed by this, trash this card. ",
-    "trash": false,
+    "trash": true,
     "exile": false,
     "name": "Sir Bailey",
     "junk": false,
@@ -14850,7 +14849,7 @@
     "buys": 0,
     "actions": 0,
     "text": "Sort the Castle pile by cost, putting the more expensive Castles on the bottom. For a 2-player game, use only one of each Castle. Only the top card of the pile can be gained or bought.",
-    "trash": true,
+    "trash": false,
     "exile": false,
     "name": "Castles",
     "junk": false,
@@ -15152,9 +15151,8 @@
     "name": "Spoils",
     "junk": false,
     "gain": 0,
-    "supply": true,
+    "supply": false,
     "related": [
-      "Pillage"
     ],
     "tokens": {
       "victory": 0,
@@ -15471,7 +15469,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 1,
     "categories": [],
     "buys": 0,
@@ -15770,7 +15768,7 @@
     "buys": 0,
     "actions": 0,
     "text": "Add 2 Debt to a Supply pile. — Setup: Add 1 Debt to each Supply pile. When a player buys a card, they take the Debt from its pile. ",
-    "trash": true,
+    "trash": false,
     "exile": false,
     "name": "Tax",
     "junk": false,
@@ -16100,7 +16098,7 @@
       "Boon"
     ],
     "coins": 0,
-    "cards": 1,
+    "cards": 0,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -16894,7 +16892,7 @@
     "buys": 1,
     "actions": 0,
     "text": " +3 Cards  +1 Buy  If you have 8 or more cards in hand (after drawing), trash this and gain a Treasure. ",
-    "trash": false,
+    "trash": true,
     "exile": false,
     "name": "Tragic Hero",
     "junk": false,
@@ -17513,7 +17511,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "cards": 1,
     "categories": [],
     "buys": 0,
@@ -17723,7 +17721,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 2,
     "categories": [],
     "buys": 0,
@@ -18183,7 +18181,7 @@
       "Reaction"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -18940,7 +18938,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 1,
@@ -18988,7 +18986,7 @@
     "buys": 0,
     "actions": 0,
     "text": "+4 Villagers  Trash this.",
-    "trash": false,
+    "trash": true,
     "exile": false,
     "name": "Acting Troupe",
     "junk": false,
@@ -19071,7 +19069,7 @@
     "buys": 1,
     "actions": 0,
     "text": "+1 Coffers; +1 Buy -- When you gain this, you may trash a copper from your hand.",
-    "trash": false,
+    "trash": true,
     "exile": false,
     "name": "Ducat",
     "junk": false,
@@ -19115,7 +19113,7 @@
     "exile": false,
     "name": "Experiment",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "supply": true,
     "related": [],
     "tokens": {
@@ -20552,7 +20550,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20592,7 +20590,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20632,7 +20630,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20672,7 +20670,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20712,7 +20710,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20752,7 +20750,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20792,7 +20790,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20832,7 +20830,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20845,7 +20843,7 @@
       "Project"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -20872,7 +20870,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20885,7 +20883,7 @@
       "Project"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -20899,7 +20897,7 @@
     "related": [],
     "tokens": {
       "victory": 0,
-      "coin": -1,
+      "coin": 1,
       "embargo": false,
       "debt": false,
       "journey": false,
@@ -20912,7 +20910,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20952,7 +20950,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -20996,7 +20994,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21039,7 +21037,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21061,7 +21059,7 @@
     "exile": false,
     "name": "Supplies",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "supply": true,
     "related": [
       "Horse"
@@ -21081,7 +21079,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21121,7 +21119,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21161,7 +21159,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21203,7 +21201,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21244,7 +21242,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21284,7 +21282,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21324,7 +21322,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21336,7 +21334,7 @@
     "types": [
       "Action"
     ],
-    "coins": 0,
+    "coins": 1,
     "cards": 0,
     "categories": [],
     "buys": 0,
@@ -21364,7 +21362,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21405,7 +21403,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21418,9 +21416,9 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 2,
     "categories": [],
-    "buys": 0,
+    "buys": 1,
     "actions": 0,
     "text": "Gain 2 Horses. - When you gain this, +2 Cards, +1 Buy, and if it's your Buy phase return to your Action phase.",
     "trash": false,
@@ -21447,7 +21445,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21489,7 +21487,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21531,7 +21529,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21573,7 +21571,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21614,7 +21612,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21657,7 +21655,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21697,7 +21695,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21738,7 +21736,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21780,7 +21778,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21820,7 +21818,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21842,7 +21840,7 @@
     "exile": false,
     "name": "Kiln",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "supply": true,
     "related": [],
     "tokens": {
@@ -21860,7 +21858,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21902,7 +21900,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21943,7 +21941,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -21965,7 +21963,7 @@
     "exile": false,
     "name": "Paddock",
     "junk": false,
-    "gain": 0,
+    "gain": 2,
     "supply": true,
     "related": [
       "Horse"
@@ -21985,7 +21983,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22025,7 +22023,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22065,7 +22063,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22105,7 +22103,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22127,7 +22125,7 @@
     "exile": false,
     "name": "Wayfarer",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "supply": true,
     "related": [],
     "tokens": {
@@ -22145,7 +22143,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22185,7 +22183,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22225,7 +22223,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22267,7 +22265,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22307,7 +22305,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22347,7 +22345,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22369,7 +22367,7 @@
     "exile": false,
     "name": "Ride",
     "junk": false,
-    "gain": 0,
+    "gain": 1,
     "supply": false,
     "related": [
       "Horse"
@@ -22389,7 +22387,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22429,7 +22427,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22469,7 +22467,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22509,7 +22507,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22549,7 +22547,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22589,7 +22587,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22631,7 +22629,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22671,7 +22669,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22711,7 +22709,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22751,7 +22749,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22793,7 +22791,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22835,7 +22833,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22875,7 +22873,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22915,7 +22913,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22955,7 +22953,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -22995,7 +22993,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23035,7 +23033,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23075,7 +23073,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23115,7 +23113,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23155,7 +23153,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23195,7 +23193,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23235,7 +23233,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23275,7 +23273,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23315,7 +23313,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23355,7 +23353,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23395,7 +23393,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23435,7 +23433,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23475,7 +23473,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23488,7 +23486,7 @@
       "Way"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -23515,7 +23513,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23555,7 +23553,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23595,7 +23593,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23635,7 +23633,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23675,7 +23673,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23715,7 +23713,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23755,7 +23753,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23795,7 +23793,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -23835,7 +23833,7 @@
       "minusCost": false,
       "trashing": false,
       "estate": false,
-      "villagers": true
+      "villagers": false
     }
   },
   {
@@ -24451,7 +24449,7 @@
       "Action"
     ],
     "coins": 0,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
     "actions": 0,
@@ -25257,10 +25255,10 @@
       "Action"
     ],
     "coins": 1,
-    "cards": 0,
+    "cards": 1,
     "categories": [],
     "buys": 0,
-    "actions": 0,
+    "actions": 1,
     "text": "Gain a card costing up to 4 Coins. If it is an... Action card, +1 Action. Treasure card, +1 Coin. Victory card, +1 Card. ",
     "trash": false,
     "exile": false,
@@ -25500,7 +25498,7 @@
     "types": [
       "Action"
     ],
-    "coins": 1,
+    "coins": 0,
     "cards": 1,
     "categories": [],
     "buys": 0,
@@ -25748,7 +25746,7 @@
     "cards": 0,
     "categories": [],
     "buys": 0,
-    "actions": 0,
+    "actions": 1,
     "text": "+1 Action. Reveal the top 4 cards of your deck. Put the revealed Victory cards into your hand. Put the other cards on top of your deck in any order.",
     "trash": false,
     "exile": false,
