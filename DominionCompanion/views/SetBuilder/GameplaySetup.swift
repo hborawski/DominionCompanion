@@ -33,6 +33,11 @@ struct GameplaySetup: View {
     @ViewBuilder
     var body: some View {
         List {
+            if model.cards.contains(where: {$0.name == "Black Market"}) {
+                NavigationLink(destination: BlackMarketSimulatorView(cards: model.cards, data: cardData)) {
+                    Text("Black Market Simulator")
+                }
+            }
             cardSection("In Supply", model.cards)
             if model.notInSupply.count > 0 {
                 cardSection("Not In Supply", model.notInSupply)

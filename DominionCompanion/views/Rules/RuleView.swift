@@ -77,7 +77,7 @@ struct RuleView<Builder: RuleBuilder>: View  where Builder: ObservableObject {
                 if configurePrecondition {
                     Section(header: Text("Precondition")) {
                         NavigationLink(
-                            destination: RuleView<RuleViewModel>(ruleBuilder: preconditionRuleBuilder, existing: preconditionRule, configurePrecondition: false),
+                            destination: RuleView<RuleViewModel>(ruleBuilder: preconditionRuleBuilder, existing: preconditionRule, configurePrecondition: false).navigationTitle("Precondition"),
                             label: {
                                 HStack {
                                     Image(systemName: "questionmark.diamond")
