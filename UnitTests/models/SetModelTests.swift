@@ -149,13 +149,13 @@ class SetModelTests: XCTestCase {
         let set1 = [TestData.getCard("Tracker")]
         let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
         XCTAssertTrue(model1.getAdditionalMechanics().contains("Boons"))
-        
+
         // Vampire should not cause Boons to be included
         let set2 = [TestData.getCard("Vampire")]
         let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
         XCTAssertFalse(model2.getAdditionalMechanics().contains("Boons"))
     }
-    
+
     func testAdditionalMechanicsHexes() {
         // Werewolf should cause Hexes to be included
         let set1 = [TestData.getCard("Werewolf")]
@@ -167,7 +167,7 @@ class SetModelTests: XCTestCase {
         let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
         XCTAssertFalse(model2.getAdditionalMechanics().contains("Hexes"))
     }
-    
+
     func testAdditionalMechanicsRuins() {
         // Death Cart should cause Ruins to be included
         let set1 = [TestData.getCard("Death Cart")]
@@ -238,6 +238,18 @@ class SetModelTests: XCTestCase {
         let set2 = [TestData.getCard("Island")]
         let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
         XCTAssertFalse(model2.getAdditionalMechanics().contains("Pirate Ship Mat"))
+    }
+
+    func testAdditionalMechanicsTradeRouteMat() {
+        // Trade Route should cause Trade Route Mat to be included
+        let set1 = [TestData.getCard("Trade Route")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Trade Route Mat"))
+
+        // Monument should not cause Trade Route Mat to be included
+        let set2 = [TestData.getCard("Monument")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Trade Route Mat"))
     }
 
     func testShareableSet() {
