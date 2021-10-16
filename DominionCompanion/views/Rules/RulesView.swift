@@ -19,7 +19,7 @@ struct RulesView<Builder: RuleBuilder>: View where Builder: ObservableObject {
     var body: some View {
         List {
             ForEach(ruleBuilder.rules, id: \.self) { rule in
-                NavigationLink(destination: RuleView(ruleBuilder: ruleBuilder, existing: rule)) {
+                NavigationLink(destination: RuleView(ruleBuilder: ruleBuilder, existing: rule).navigationTitle("Rule Edit")) {
                     RuleRow(rule: rule, ruleBuilder: ruleBuilder)
                 }
             }.onDelete(perform: { ruleBuilder.removeRule($0) })
@@ -43,7 +43,7 @@ struct RulesView<Builder: RuleBuilder>: View where Builder: ObservableObject {
         })
         .background(
             NavigationLink(
-                destination: RuleView(ruleBuilder: ruleBuilder),
+                destination: RuleView(ruleBuilder: ruleBuilder).navigationTitle("Rule Creation"),
                 isActive: $editing,
                 label: {
                     EmptyView()
