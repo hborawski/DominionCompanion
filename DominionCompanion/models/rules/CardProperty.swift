@@ -19,6 +19,7 @@ enum CardProperty: String, Codable, CaseIterable {
     case cards = "+ Cards"
     case trash = "Trash"
     case exile = "Exile"
+    case tavernMat = "Tavern Mat"
     case victoryTokens = "Victory Tokens"
     case coinTokens = "Coin Tokens"
     
@@ -46,6 +47,8 @@ enum CardProperty: String, Codable, CaseIterable {
             case .trash:
                 return .boolean
             case .exile:
+                return .boolean
+            case .tavernMat:
                 return .boolean
             case .victoryTokens:
                 return .number
@@ -77,6 +80,8 @@ enum CardProperty: String, Codable, CaseIterable {
             case .trash:
                 return ["true", "false"]
             case .exile:
+                return ["true", "false"]
+            case .tavernMat:
                 return ["true", "false"]
             case .victoryTokens:
                 return Array(0...CardData.shared.maxVictoryTokens).map { "\($0)" }
