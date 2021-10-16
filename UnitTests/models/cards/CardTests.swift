@@ -56,6 +56,7 @@ class CardTests: XCTestCase {
         XCTAssertEqual(harbinger.getProperty(.type) as? [String], ["Action"])
         XCTAssertEqual(harbinger.getProperty(.trash) as? Bool, false)
         XCTAssertEqual(harbinger.getProperty(.exile) as? Bool, false)
+        XCTAssertEqual(harbinger.getProperty(.tavernMat) as? Bool, false)
         XCTAssertEqual(harbinger.getProperty(.victoryTokens) as? Int, 0)
         XCTAssertEqual(harbinger.getProperty(.coinTokens) as? Int, 0)
     }

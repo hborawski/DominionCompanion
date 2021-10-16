@@ -22,6 +22,7 @@ class CardPropertyTests: XCTestCase {
         XCTAssertEqual(CardProperty.type.inputType, RuleType.list)
         XCTAssertEqual(CardProperty.trash.inputType, RuleType.boolean)
         XCTAssertEqual(CardProperty.exile.inputType, RuleType.boolean)
+        XCTAssertEqual(CardProperty.tavernMat.inputType, RuleType.boolean)
         XCTAssertEqual(CardProperty.victoryTokens.inputType, RuleType.number)
         XCTAssertEqual(CardProperty.coinTokens.inputType, RuleType.number)
     }
@@ -37,6 +38,7 @@ class CardPropertyTests: XCTestCase {
         XCTAssertEqual(CardProperty.type.all, CardData.shared.kingdomTypes)
         XCTAssertEqual(CardProperty.trash.all, ["true", "false"])
         XCTAssertEqual(CardProperty.exile.all, ["true", "false"])
+        XCTAssertEqual(CardProperty.tavernMat.all, ["true", "false"])
         XCTAssertEqual(CardProperty.victoryTokens.all, ["0", "1", "2"])
         XCTAssertEqual(CardProperty.coinTokens.all, ["0", "1", "2"])
     }

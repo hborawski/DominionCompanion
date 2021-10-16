@@ -55,8 +55,8 @@ struct CardRow<T>: View where T: View {
 
 struct CardRow_Previews: PreviewProvider {
     static let tokens = Tokens(victory: 0, coin: 0, embargo: false, debt: false, journey: false, minusCard: false, minusCoin: false, plusCard: false, plusAction: false, plusBuy: false, plusCoin: false, minusCost: false, trashing: false, estate: false, villagers: false)
-    static let card = Card(id: "1", cost: -1, debt: 0, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
-    static let card2 = Card(id: "2", cost: 4, debt: 4, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tokens: tokens, supply: true, related: [])
+    static let card = Card(id: "1", cost: -1, debt: 0, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tavernMat: false, tokens: tokens, supply: true, related: [])
+    static let card2 = Card(id: "2", cost: 4, debt: 4, potion: false, actions: 1, buys: 0, cards: 0, name: "Example", text: "", expansion: "Base", types: ["Action"], trash: false, exile: false, tavernMat: false, tokens: tokens, supply: true, related: [])
     static var previews: some View {
         let cardData = CardData()
         let cards = Array(cardData.allCards.shuffled()[0...4]) + [card]
