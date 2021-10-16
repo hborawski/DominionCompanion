@@ -130,6 +130,10 @@ struct SetModel {
             mechanics.append("Pirate Ship Mat")
         }
 
+        if allCards.first(where: {$0.name == "Trade Route"}) != nil {
+            mechanics.append("Trade Route Mat")
+        }
+
         return mechanics
     }
     
