@@ -53,6 +53,7 @@ struct SetModel {
     var ruins: Bool { allCards.filter({$0.types.contains("Looter")}).count > 0 }
     var potions: Bool { allCards.filter({$0.potion}).count > 0 }
     var exile: Bool { allCards.filter({$0.exile}).count > 0 }
+    var tavernMat: Bool { allCards.filter({$0.tavernMat}).count > 0 }
     var debt: Bool { allCards.filter({$0.tokens.debt}).count > 0 }
     var victoryTokens: Bool { allCards.filter({$0.tokens.victory > 0}).count > 0 }
     var coinTokens: Bool { allCards.filter({$0.tokens.coin > 0}).count > 0 }
@@ -113,7 +114,7 @@ struct SetModel {
             mechanics.append("Exile Mat")
         }
 
-        if journeyToken || minusCardTokens || minusCoinTokens || plusCardTokens || plusActionTokens || plusBuyTokens || plusCoinTokens || minusCostTokens || trashingTokens || estateTokens {
+        if tavernMat {
             mechanics.append("Tavern Mat")
         }
 

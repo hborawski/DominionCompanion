@@ -113,7 +113,8 @@ class SetModelTests: XCTestCase {
             TestData.getCard("Island"),
             TestData.getCard("Native Village"),
             TestData.getCard("Pirate Ship"),
-            TestData.getCard("Ranger")
+            TestData.getCard("Ranger"),
+            TestData.getCard("Miser")
         ]
 
         let model = SetModel(landmarks: [], events: [], projects: [], ways: [TestData.getCard("Way of the Worm")], cards: set)
@@ -141,6 +142,102 @@ class SetModelTests: XCTestCase {
         XCTAssertTrue(tokens.contains("Debt Tokens"))
         XCTAssertTrue(tokens.contains("Coin Tokens"))
         XCTAssertTrue(tokens.contains("Coin Tokens (Villagers)"))
+    }
+
+    func testAdditionalMechanicsBoons() {
+        // Tracker should cause Boons to be included
+        let set1 = [TestData.getCard("Tracker")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Boons"))
+        
+        // Vampire should not cause Boons to be included
+        let set2 = [TestData.getCard("Vampire")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Boons"))
+    }
+    
+    func testAdditionalMechanicsHexes() {
+        // Werewolf should cause Hexes to be included
+        let set1 = [TestData.getCard("Werewolf")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Hexes"))
+
+        // Druid should not cause Hexes to be included
+        let set2 = [TestData.getCard("Druid")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Hexes"))
+    }
+    
+    func testAdditionalMechanicsRuins() {
+        // Death Cart should cause Ruins to be included
+        let set1 = [TestData.getCard("Death Cart")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Ruins"))
+
+        // Pillage should not cause Ruins to be included
+        let set2 = [TestData.getCard("Pillage")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Ruins"))
+    }
+
+    func testAdditionalMechanicsExileMat() {
+        // Displace should cause Exile Mat to be included
+        let set1 = [TestData.getCard("Displace")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Exile Mat"))
+
+        // Paddock should not cause Exile Mat to be included
+        let set2 = [TestData.getCard("Paddock")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Exile Mat"))
+    }
+
+    func testAdditionalMechanicsTavernMat() {
+        // Guide should cause Tavern Mat to be included
+        let set1 = [TestData.getCard("Guide")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Tavern Mat"))
+
+        // Giant should not cause Tavern Mat to be included
+        let set2 = [TestData.getCard("Giant")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Tavern Mat"))
+    }
+
+    func testAdditionalMechanicsIslandMat() {
+        // Island should cause Island Mat to be included
+        let set1 = [TestData.getCard("Island")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Island Mat"))
+
+        // Native Village should not cause Island Mat to be included
+        let set2 = [TestData.getCard("Native Village")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Island Mat"))
+    }
+
+    func testAdditionalMechanicsNativeVillageMat() {
+        // Native Village should cause Native Village Mat to be included
+        let set1 = [TestData.getCard("Native Village")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Native Village Mat"))
+
+        // Pirate Ship should not cause Native Village Mat to be included
+        let set2 = [TestData.getCard("Pirate Ship")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Native Village Mat"))
+    }
+
+    func testAdditionalMechanicsPirateShipMat() {
+        // Pirate Ship should cause Pirate Ship Mat to be included
+        let set1 = [TestData.getCard("Pirate Ship")]
+        let model1 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set1)
+        XCTAssertTrue(model1.getAdditionalMechanics().contains("Pirate Ship Mat"))
+
+        // Island should not cause Pirate Ship Mat to be included
+        let set2 = [TestData.getCard("Island")]
+        let model2 = SetModel(landmarks: [], events: [], projects: [], ways: [], cards: set2)
+        XCTAssertFalse(model2.getAdditionalMechanics().contains("Pirate Ship Mat"))
     }
 
     func testShareableSet() {
