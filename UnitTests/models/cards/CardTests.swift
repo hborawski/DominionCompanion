@@ -64,7 +64,7 @@ class CardTests: XCTestCase {
     func testImageLoading() {
         let harbinger = TestData.getCard("Harbinger")
 
-        XCTAssertNotNil(harbinger.image())
+        XCTAssertNotNil(harbinger.image)
     }
 
     func testHashing() {
