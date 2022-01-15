@@ -16,6 +16,7 @@ struct GameplaySetup: View {
     var model: SetModel
     
     @State var saveModal: Bool = false
+    @State var imageShareModal: Bool = false
     
     @State var saveText: String = ""
     
@@ -94,11 +95,50 @@ struct GameplaySetup: View {
         .navigationTitle(Text("Gameplay Setup"))
         .navigationBarItems(trailing: HStack {
             Button(action: {
+                imageShareModal.toggle()
+            }, label: {
+                Image(systemName: "square.and.arrow.up")
+            })
+            Button(action: {
                 saveModal.toggle()
             }, label: {
                 Text("Save")
             })
         })
+        .sheet(isPresented: $imageShareModal) {
+            VStack {
+                Image(uiImage: model.image ?? UIImage()).resizable().scaledToFit()
+                ShareSheet(item: SharableItem(image: model.image ?? UIImage(), title: "Share Set"))
+            }
+        }
+    }
+}
+
+extension SetModel {
+    var image: UIImage? {
+        ImageGenerator.shared.generate(model: self)
+    }
+}
+
+extension ImageGenerator {
+    func generate(model: SetModel) -> UIImage? {
+        let landscape = model.events + model.landmarks + model.projects + model.ways
+        let rows: [[UIImage?]] = [
+            landscape,
+            model.cards,
+            model.notInSupply
+        ].map {
+            $0.chunked(into: 5).compactMap { ImageGenerator.shared.combineImages($0.compactMap(\.image), on: .horizontal) }
+        }
+        return ImageGenerator.shared.combineImages(rows.flatMap { $0 }.compactMap { $0 }, on: .vertical)
+    }
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
     }
 }
 

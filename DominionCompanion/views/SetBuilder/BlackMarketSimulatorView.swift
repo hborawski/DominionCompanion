@@ -24,7 +24,7 @@ struct BlackMarketSimulatorView: View {
                             NavigationLink(
                                 destination: CardView<EmptyView>(card: card)
                             ) {
-                                if let image = card.image() {
+                                if let image = card.image {
                                     Image(uiImage: image)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)

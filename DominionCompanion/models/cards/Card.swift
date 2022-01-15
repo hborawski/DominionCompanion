@@ -115,7 +115,7 @@ extension Card {
         }
     }
     
-    public func image() -> UIImage? {
+    public var image: UIImage? {
         guard
             let path = Bundle.main.path(forResource: "cards/\(self.name)", ofType: "jpg"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
