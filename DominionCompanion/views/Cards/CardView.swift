@@ -54,36 +54,41 @@ struct CardView<T>: View where T: View {
                 .padding(.vertical, 8)
                 .padding(.leading, 24)
                 Spacer()
-                Image(uiImage: card.image() ?? UIImage())
+                Image(uiImage: card.image ?? UIImage())
                     .resizable()
                     .cornerRadius(8)
                     .padding(.horizontal, 24)
                     .aspectRatio(contentMode: .fit)
                 Spacer()
             }
-            if card.relatedCards.count > 0 {
-                VStack(alignment: .center) {
-                    NavigationLink(
-                        destination: CardsView(
-                            cards: card.relatedCards,
-                            title: "Related Cards",
-                            accessory: self.accessory
-                        )
-                    ) {
-                        HStack {
-                            Image("Card")
-                            Text("Related Cards")
-                        }
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .foregroundColor(.blue)
-                    .padding(.bottom, 8)
-                }
-                .padding(0)
-            }
+            relatedCards
         }
         .navigationTitle(Text(card.name))
         .navigationBarItems(trailing: self.accessory(self.card))
+    }
+
+    @ViewBuilder
+    var relatedCards: some View {
+        if card.relatedCards.count > 0 {
+            VStack(alignment: .center) {
+                NavigationLink(
+                    destination: CardsView(
+                        cards: card.relatedCards,
+                        title: "Related Cards",
+                        accessory: self.accessory
+                    )
+                ) {
+                    HStack {
+                        Image("Card")
+                        Text("Related Cards")
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(.blue)
+                .padding(.bottom, 8)
+            }
+            .padding(0)
+        }
     }
 }
 
