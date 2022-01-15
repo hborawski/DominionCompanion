@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ExpansionSelection: View {
     @EnvironmentObject var cardData: CardData
+    @EnvironmentObject var setBuilder: SetBuilderModel
     
     @ObservedObject @UserDefaultsBacked(Constants.SaveKeys.chosenExpansions) var chosenExpansions: [String] = []
 
@@ -52,7 +53,7 @@ struct ExpansionSelection: View {
         .navigationTitle("Expansions")
         .background(
             NavigationLink(
-                destination: CardsView(cards: cardData.allCards.filter { $0.expansion == selectedExpansion }, title: selectedExpansion) {_ in EmptyView()},
+                destination: CardsView(cards: cardData.allCards.filter { $0.expansion == selectedExpansion }, title: selectedExpansion) { PinButton(card: $0) },
                 isActive: $viewExpansion,
                 label: {
                     EmptyView()

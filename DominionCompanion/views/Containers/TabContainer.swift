@@ -19,11 +19,7 @@ struct TabContainer: View {
                 Text("Set Builder")
             }
             NavigationView {
-                CardsView(cards: cardData.allCards, title: nil, accessory: { card in
-                    Button(action: {setBuilder.pin(card)}, label: {
-                        Image(systemName: setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle").foregroundColor(.blue)
-                    }).buttonStyle(PlainButtonStyle())
-                }, showOnRow: false)
+                CardsView(cards: cardData.allCards, title: nil, accessory: { PinButton(card: $0) }, showOnRow: false)
             }.tabItem {
                 Image("Card")
                 Text("Cards")
