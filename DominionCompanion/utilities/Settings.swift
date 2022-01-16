@@ -43,6 +43,8 @@ class Settings {
     
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .expansion
 
+    @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplayViewType) var gameplayViewType: GameplaySetupStyles = .list
+
     // For restoring setbuilder state when opening/closing
     @UserDefaultsBackedCodable(Constants.SaveKeys.currentCards) var currentCards: [Card] = []
 

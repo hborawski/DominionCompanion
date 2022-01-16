@@ -10,6 +10,8 @@ import SwiftUI
 
 struct GameplaySetup: View {
     @EnvironmentObject var cardData: CardData
+
+    @Environment(\.gameplaySetupStyle) var style
     
     @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var sortMode: SortMode = .cost
     
@@ -33,51 +35,7 @@ struct GameplaySetup: View {
 
     @ViewBuilder
     var body: some View {
-        List {
-            if model.cards.contains(where: {$0.name == "Black Market"}) {
-                NavigationLink(destination: BlackMarketSimulatorView(cards: model.cards, data: cardData)) {
-                    Text("Black Market Simulator")
-                }
-            }
-            cardSection("In Supply", model.cards)
-            if model.notInSupply.count > 0 {
-                cardSection("Not In Supply", model.notInSupply)
-            }
-            if model.landmarks.count > 0 {
-                cardSection("Landmarks", model.landmarks)
-            }
-            if model.events.count > 0 {
-                cardSection("Events", model.events)
-            }
-            if model.projects.count > 0 {
-                cardSection("Projects", model.projects)
-            }
-            if model.ways.count > 0 {
-                cardSection("Ways", model.ways)
-            }
-            if model.getTokens().count > 0 {
-                Section(header: Text("Tokens")) {
-                    ForEach(model.getTokens(), id: \.self) { Text($0) }
-                }
-            }
-            if model.getAdditionalMechanics().count > 0 {
-                Section(header: Text("Additional Mechanics")) {
-                    ForEach(model.getAdditionalMechanics(), id: \.self) { Text($0) }
-                }
-            }
-            if model.shelters || model.colonies {
-                Section(header: Text("Victory and Treasure")) {
-                    if model.shelters {
-                        Text("Shelters")
-                    }
-                    if model.colonies {
-                        ForEach(cardData.allCards.filter({ ["Colony", "Platinum"].contains($0.name)}), id: \.name) { card in
-                            CardRow(card: card) { Text(card.expansion).foregroundColor(.gray) }.listRowInsets(EdgeInsets())
-                        }
-                    }
-                }
-            }
-        }.listStyle(InsetGroupedListStyle())
+        style.makeBody(GameplaySetupConfiguration(model: model))
         .alert(isPresented: $saveModal, TextAlert(title: "Save Set", action: { saveName in
             guard let name = saveName else { return }
             let set = SavedSet(context: managedObjectContext).with(name: name, model: model)

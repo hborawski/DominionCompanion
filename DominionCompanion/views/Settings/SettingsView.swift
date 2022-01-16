@@ -32,6 +32,7 @@ struct SettingsView: View {
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansions: Bool = false
     @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .cost
+    @AppStorage(Constants.SaveKeys.settingsGameplayViewType) var gameplayStyle: GameplaySetupStyles = .list
 
     @AppStorage(Constants.SaveKeys.blackMarketDeckSize) var blackMarketDeckSize: Int = Settings.shared.blackMarketDeckSize
     @AppStorage(Constants.SaveKeys.blackMarketShuffle) var blackMarketShuffle: Bool = Settings.shared.blackMarketShuffle
@@ -77,6 +78,11 @@ struct SettingsView: View {
                     ListChoice(title: "Gameplay Setup Sort Mode", value: gameplaySortMode.rawValue, values: SortMode.allCases.map{$0.rawValue}) { val in
                         if let mode = SortMode(rawValue: val) {
                             gameplaySortMode = mode
+                        }
+                    }
+                    ListChoice(title: "Gameplay Setup View", value: gameplayStyle.rawValue, values: GameplaySetupStyles.allCases.map{$0.rawValue}) { val in
+                        if let style = GameplaySetupStyles(rawValue: val) {
+                            gameplayStyle = style
                         }
                     }
                 }
