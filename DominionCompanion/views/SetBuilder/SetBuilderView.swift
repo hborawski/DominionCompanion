@@ -16,6 +16,8 @@ struct SetBuilderView: View {
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansion: Bool = false
+
+    @AppStorage(Constants.SaveKeys.settingsGameplayViewType) var gameplayStyle: GameplaySetupStyles = .list
     
     @State var setup = false
     
@@ -66,7 +68,7 @@ struct SetBuilderView: View {
             }
             .background(
                 NavigationLink(
-                    destination: GameplaySetup(model: setBuilder.finalSet),
+                    destination: GameplaySetup(model: setBuilder.finalSet).environment(\.gameplaySetupStyle, gameplayStyle.style),
                     isActive: $setup,
                     label: {
                         EmptyView()

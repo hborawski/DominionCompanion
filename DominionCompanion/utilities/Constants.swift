@@ -35,6 +35,7 @@ struct Constants {
         static let settingsShowExpansionsWhenBuilding = "settings_showExpansionsWhenBuilding"
         static let settingsSortMode = "settings_sortMode"
         static let settingsGameplaySortMode = "settings_gameplaySortMode"
+        static let settingsGameplayViewType = "settings_gameplayViewType"
         static let settingsPinCards = "settings_pincards"
         static let settingsHideWikiLink = "settings_hideWikiLink"
         
