@@ -18,6 +18,8 @@ struct SetBuilderView: View {
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansion: Bool = false
 
     @AppStorage(Constants.SaveKeys.settingsGameplayViewType) var gameplayStyle: GameplaySetupStyles = .list
+
+    @AppStorage(Constants.SaveKeys.settingsSetBuilderViewType) var setBuilderStyle: SetBuilderStyles = .list
     
     @State var setup = false
     
@@ -42,18 +44,7 @@ struct SetBuilderView: View {
                     }.frame(maxWidth: .infinity)
                 }
                 .padding(.top, 10)
-                List {
-                    Section(header: Text("Landscape Cards")) {
-                        ForEach(setBuilder.landscape, id: \.name) { card in
-                            NavigationCardRow(card: card, showExpansion: self.showExpansion)
-                        }
-                    }
-                    Section(header: Text("Cards")) {
-                        ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.name) { card in
-                            NavigationCardRow(card: card, showExpansion: self.showExpansion)
-                        }
-                    }
-                }.listStyle(GroupedListStyle())
+                setBuilderStyle.style.makeBody(SetBuilderConfiguration())
             }
             .navigationTitle("Set Builder")
             .navigationBarTitleDisplayMode(.inline)

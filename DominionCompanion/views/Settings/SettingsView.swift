@@ -30,6 +30,7 @@ struct SettingsView: View {
     @AppStorage(Constants.SaveKeys.settingsHideWikiLink) var hideWikiLinks: Bool = false
     @AppStorage(Constants.SaveKeys.settingsPinCards) var pinCardsForSetup: Bool = false
     @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
+    @AppStorage(Constants.SaveKeys.settingsSetBuilderViewType) var setBuilderStyle: SetBuilderStyles = .list
     @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansions: Bool = false
     @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .cost
     @AppStorage(Constants.SaveKeys.settingsGameplayViewType) var gameplayStyle: GameplaySetupStyles = .list
@@ -72,6 +73,11 @@ struct SettingsView: View {
                     ListChoice(title: "Set Builder Sort Mode", value: sortMode.rawValue, values: SortMode.allCases.map{$0.rawValue}) { val in
                         if let mode = SortMode(rawValue: val) {
                             sortMode = mode
+                        }
+                    }
+                    ListChoice(title: "Set Builder View", value: setBuilderStyle.rawValue, values: SetBuilderStyles.allCases.map{$0.rawValue}) { val in
+                        if let style = SetBuilderStyles(rawValue: val) {
+                            setBuilderStyle = style
                         }
                     }
                     Toggle("Show Expansions in Set Builder", isOn: $showExpansions)

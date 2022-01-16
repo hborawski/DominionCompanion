@@ -11,8 +11,12 @@ import SwiftUI
 struct PinButton: View {
     @EnvironmentObject var setBuilder: SetBuilderModel
 
+    var pinned: Bool {
+        setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card)
+    }
+
     var image: Image {
-        Image(systemName: setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card) ? "checkmark.circle.fill" : "checkmark.circle")
+        Image(systemName: pinned ? "checkmark.circle.fill" : "checkmark.circle")
     }
 
     var card: Card
@@ -23,6 +27,84 @@ struct PinButton: View {
             image.foregroundColor(.blue)
         })
         .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct LargePinButton: View {
+    @EnvironmentObject var setBuilder: SetBuilderModel
+
+    var pinned: Bool {
+        setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card)
+    }
+
+    var image: Image {
+        Image(systemName: pinned ? "xmark" : "checkmark")
+    }
+
+    var card: Card
+    var body: some View {
+        Button(action: {
+                setBuilder.pin(card)
+        }, label: {
+            HStack {
+                image
+                Text(pinned ? "Unpin" : "Pin")
+            }
+        })
+        .when(pinned) { $0.buttonStyle(SecondaryButtonStyle()) }
+        .when(!pinned) { $0.buttonStyle(PrimaryButtonStyle()) }
+//        .buttonStyle(pinned ? SecondaryButtonStyle() : PrimaryButtonStyle())
+        .background(background)
+    }
+
+    @ViewBuilder
+    var background: some View {
+        if pinned {
+            RoundedRectangle(cornerRadius: 4).stroke().foregroundColor(.blue)
+        } else {
+            RoundedRectangle(cornerRadius: 4).foregroundColor(.blue)
+        }
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func when<V: View>(_ condition: @autoclosure () -> Bool, apply: @escaping (Self) -> V) -> some View {
+        if condition() {
+            apply(self)
+        } else {
+            self
+        }
+    }
+}
+
+struct PrimaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .foregroundColor(.white)
+            .padding(8)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 4).foregroundColor(.blue)
+                    .opacity(configuration.isPressed ? 0.7 : 1.0)
+            )
+            .opacity(configuration.isPressed ? 0.7 : 1.0)
+    }
+}
+
+struct SecondaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .foregroundColor(.blue)
+            .padding(8)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 4).stroke().foregroundColor(.blue)
+                    .opacity(configuration.isPressed ? 0.7 : 1.0)
+            )
+            .opacity(configuration.isPressed ? 0.7 : 1.0)
     }
 }
 

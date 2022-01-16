@@ -146,11 +146,18 @@ struct GameplaySetupPageStyle: GameplaySetupStyle {
         }
 
         func cardImage(_ card: Card) -> some View {
-            Image(uiImage: card.image ?? UIImage())
-                .resizable()
-                .cornerRadius(8)
-                .padding(.horizontal, 24)
-                .aspectRatio(contentMode: .fit)
+            VStack {
+                HStack {
+                    Image(systemName: "cube.box")
+                    Text(card.expansion)
+                }
+                Image(uiImage: card.image ?? UIImage())
+                    .resizable()
+                    .cornerRadius(8)
+                    .padding(.horizontal, 24)
+                    .aspectRatio(contentMode: .fit)
+            }
+            .padding(.bottom, 40)
         }
     }
 }
