@@ -31,6 +31,7 @@
 		AF34B1AB25F42D76007E241C /* Disclosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34B1AA25F42D76007E241C /* Disclosures.swift */; };
 		AF34B1CD25F59490007E241C /* SetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34B1CC25F59490007E241C /* SetModelTests.swift */; };
 		AF43B816279398D4003B23D5 /* GameplaySetupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43B815279398D4003B23D5 /* GameplaySetupStyle.swift */; };
+		AF43B81E2793A798003B23D5 /* SetBuilderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43B81D2793A798003B23D5 /* SetBuilderStyle.swift */; };
 		AF4E49F8252916FE00410D10 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49F7252916FE00410D10 /* RuleView.swift */; };
 		AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E49FC25291D3100410D10 /* ConditionRow.swift */; };
 		AF540F2C267D0EE900C8ECD9 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */; };
@@ -117,6 +118,7 @@
 		AF34B1AA25F42D76007E241C /* Disclosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disclosures.swift; sourceTree = "<group>"; };
 		AF34B1CC25F59490007E241C /* SetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelTests.swift; sourceTree = "<group>"; };
 		AF43B815279398D4003B23D5 /* GameplaySetupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplaySetupStyle.swift; sourceTree = "<group>"; };
+		AF43B81D2793A798003B23D5 /* SetBuilderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBuilderStyle.swift; sourceTree = "<group>"; };
 		AF4E49F7252916FE00410D10 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		AF4E49FC25291D3100410D10 /* ConditionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionRow.swift; sourceTree = "<group>"; };
 		AF540F2B267D0EE900C8ECD9 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				AF1A5E19252550EE0050DE4E /* SetBuilderView.swift */,
 				AF60BC67253CED4900DC50DE /* NavigationCardRow.swift */,
 				AF540F35267D574800C8ECD9 /* BlackMarketSimulatorView.swift */,
+				AF43B81D2793A798003B23D5 /* SetBuilderStyle.swift */,
 			);
 			path = SetBuilder;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				AF4E49FD25291D3100410D10 /* ConditionRow.swift in Sources */,
 				AF9186BC2793707A0077D16F /* ImageGenerator.swift in Sources */,
 				AF1A5E682529101C0050DE4E /* RuleRow.swift in Sources */,
+				AF43B81E2793A798003B23D5 /* SetBuilderStyle.swift in Sources */,
 				AFC1BA66246A24E400298F75 /* SavedSets.xcdatamodeld in Sources */,
 				AF9186CE279393590077D16F /* PinButton.swift in Sources */,
 				AFE8EE7522A4B830008E09B2 /* Card.swift in Sources */,

@@ -41,6 +41,8 @@ class Settings {
     
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
     
+    @UserDefaultsBackedEnum(Constants.SaveKeys.settingsSetBuilderViewType) var setBuilderViewType: SetBuilderStyles = .list
+    
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplaySortMode) var gameplaySortMode: SortMode = .expansion
 
     @UserDefaultsBackedEnum(Constants.SaveKeys.settingsGameplayViewType) var gameplayViewType: GameplaySetupStyles = .list
