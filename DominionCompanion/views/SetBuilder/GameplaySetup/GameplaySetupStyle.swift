@@ -42,6 +42,7 @@ extension GameplaySetupStyle {
 enum GameplaySetupStyles: String, CaseIterable {
     case list
     case pages
+    case grid
 }
 
 extension GameplaySetupStyles {
@@ -49,6 +50,7 @@ extension GameplaySetupStyles {
         switch self {
         case .list: return GameplaySetupListStyle().eraseToAnyGameplaySetupStyle()
         case .pages: return GameplaySetupPageStyle().eraseToAnyGameplaySetupStyle()
+        case .grid: return GameplaySetupGridStyle().eraseToAnyGameplaySetupStyle()
         }
     }
 }
@@ -129,8 +131,6 @@ struct GameplaySetupPageStyle: GameplaySetupStyle {
     struct GameplaySetupPages: View {
         @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var sortMode: SortMode = .cost
 
-        @Environment(\.colorScheme) var colorScheme
-
         let model: SetModel
 
         var body: some View {
@@ -158,6 +158,43 @@ struct GameplaySetupPageStyle: GameplaySetupStyle {
                     .aspectRatio(contentMode: .fit)
             }
             .padding(.bottom, 40)
+        }
+    }
+}
+
+struct GameplaySetupGridStyle: GameplaySetupStyle {
+    func makeBody(_ configuration: Configuration) -> some View {
+        GameplaySetupGrid(model: configuration.model)
+    }
+
+    struct GameplaySetupGrid: View {
+        @AppStorage(Constants.SaveKeys.settingsGameplaySortMode) var sortMode: SortMode = .cost
+
+        let model: SetModel
+
+        var body: some View {
+            ScrollView {
+                VStack {
+                    ForEach(model.events.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                    ForEach(model.landmarks.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                    ForEach(model.projects.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                    ForEach(model.ways.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                }
+                LazyVGrid(columns: .halfSizeCard) {
+                    ForEach(model.cards.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                }
+                Text("Not In Supply").font(.title2)
+                LazyVGrid(columns: .halfSizeCard) {
+                    ForEach(model.notInSupply.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                }
+            }
+        }
+
+        func cardImage(_ card: Card) -> some View {
+            Image(uiImage: card.image ?? UIImage())
+                .resizable()
+                .cornerRadius(4)
+                .aspectRatio(contentMode: .fit)
         }
     }
 }

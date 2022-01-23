@@ -43,26 +43,24 @@ struct LargePinButton: View {
 
     var card: Card
     var body: some View {
-        Button(action: {
-                setBuilder.pin(card)
-        }, label: {
-            HStack {
-                image
-                Text(pinned ? "Unpin" : "Pin")
+        Group {
+            if pinned {
+                Button(action: { setBuilder.pin(card) }) {
+                    HStack {
+                        image
+                        Text("Unpin")
+                    }
+                }
+                .buttonStyle(SecondaryButtonStyle())
+            } else {
+                Button(action: { setBuilder.pin(card) }) {
+                    HStack {
+                        image
+                        Text("Pin")
+                    }
+                }
+                .buttonStyle(PrimaryButtonStyle())
             }
-        })
-        .when(pinned) { $0.buttonStyle(SecondaryButtonStyle()) }
-        .when(!pinned) { $0.buttonStyle(PrimaryButtonStyle()) }
-//        .buttonStyle(pinned ? SecondaryButtonStyle() : PrimaryButtonStyle())
-        .background(background)
-    }
-
-    @ViewBuilder
-    var background: some View {
-        if pinned {
-            RoundedRectangle(cornerRadius: 4).stroke().foregroundColor(.blue)
-        } else {
-            RoundedRectangle(cornerRadius: 4).foregroundColor(.blue)
         }
     }
 }
@@ -70,10 +68,12 @@ struct LargePinButton: View {
 extension View {
     @ViewBuilder
     func when<V: View>(_ condition: @autoclosure () -> Bool, apply: @escaping (Self) -> V) -> some View {
-        if condition() {
-            apply(self)
-        } else {
-            self
+        Group {
+            if condition() {
+                apply(self)
+            } else {
+                self
+            }
         }
     }
 }
@@ -101,7 +101,7 @@ struct SecondaryButtonStyle: ButtonStyle {
             .padding(8)
             .frame(maxWidth: .infinity)
             .background(
-                RoundedRectangle(cornerRadius: 4).stroke().foregroundColor(.blue)
+                RoundedRectangle(cornerRadius: 4).stroke(lineWidth: 2).foregroundColor(.blue)
                     .opacity(configuration.isPressed ? 0.7 : 1.0)
             )
             .opacity(configuration.isPressed ? 0.7 : 1.0)

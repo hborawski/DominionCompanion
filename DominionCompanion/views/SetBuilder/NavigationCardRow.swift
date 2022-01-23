@@ -16,7 +16,6 @@ struct NavigationCardRow: View {
     var showExpansion = false
     @ViewBuilder
     var body: some View {
-        let pinned = setBuilder.pinnedCards.contains(card) || setBuilder.pinnedLandscape.contains(card)
         NavigationLink(
             destination: CardView(card: card, accessory: { PinButton(card: $0) }).navigationBarTitleDisplayMode(.large),
             label: {
@@ -25,29 +24,14 @@ struct NavigationCardRow: View {
                         if self.showExpansion {
                             Text(card.expansion).foregroundColor(.gray)
                         }
-                        if setBuilder.pinnedCards.contains(card) || setBuilder.pinnedLandscape.contains(card) {
-                            Image(systemName: "checkmark").foregroundColor(.blue).padding(.trailing, 0)
-                        }
+                        PinButton(card: card)
                     }
                 }
             })
             .background(Color(.secondarySystemGroupedBackground))
             .buttonStyle(PlainButtonStyle())
             .contextMenu {
-                Button(action: {
-                    setBuilder.pin(card)
-                }, label: {
-                    pinned ?
-                        HStack {
-                            Image(systemName: "xmark")
-                            Text("Unpin")
-                        } :
-                        HStack {
-                            Image(systemName: "checkmark")
-                            Text("Pin")
-                        }
-                })
-                Button(action: { setBuilder.pinnedCards = []}, label: {
+                Button(action: { setBuilder.pinnedCards = [] }, label: {
                     HStack {
                         Image(systemName: "xmark")
                         Text("Unpin All")
