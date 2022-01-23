@@ -108,25 +108,10 @@ struct SetBuilderPageStyle: SetBuilderStyle {
         }
 
         func cardImage(_ card: Card) -> some View {
-            VStack {
-                HStack {
-                    if showExpansion {
-                        HStack {
-                            Image(systemName: "cube.box")
-                            Text(card.expansion)
-                        }
-                        .padding(.leading, 24)
-                        .padding(.trailing, 16)
-                    }
-                    LargePinButton(card: card)
-                }
-                Image(uiImage: card.image ?? UIImage())
-                    .resizable()
-                    .cornerRadius(8)
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 40)
-                    .aspectRatio(contentMode: .fit)
-            }
+            NavigationCardImage(card: card, showExpansion: showExpansion)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 40)
+                .padding(.top, 8)
         }
     }
 }
@@ -144,26 +129,38 @@ struct SetBuilderGridStyle: SetBuilderStyle {
         var body: some View {
             ScrollView {
                 VStack {
-                    ForEach(setBuilder.landscape.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                    ForEach(setBuilder.landscape.sorted(by: sortMode.sortFunction()), id: \.id) {
+                        NavigationCardImage(card: $0, showExpansion: showExpansion)
+                    }
                 }
                 .padding(.horizontal, 8)
                 .padding(.top, 8)
                 LazyVGrid(columns: .halfSizeCard) {
-                    ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                    ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.id) {
+                        NavigationCardImage(card: $0, showExpansion: showExpansion)
+                    }
                 }
                 .padding(.horizontal, 8)
             }
         }
+    }
+}
 
-        func cardImage(_ card: Card) -> some View {
+struct NavigationCardImage: View {
+    let card: Card
+    let showExpansion: Bool
+    var body: some View {
+        VStack {
+            PinnableCard(card: card)
             VStack {
-                PinnableCard(card: card)
+                if showExpansion {
+                    HStack {
+                        Image(systemName: "cube.box")
+                        Text(card.expansion)
+                    }
+                }
                 LargePinButton(card: card)
             }
-        }
-
-        var pinOverlay: some View {
-            RoundedRectangle(cornerRadius: 4).stroke(lineWidth: 3).foregroundColor(.blue)
         }
     }
 }
