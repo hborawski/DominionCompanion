@@ -41,6 +41,7 @@ extension SetBuilderStyle {
 enum SetBuilderStyles: String, CaseIterable {
     case list
     case pages
+    case grid
 }
 
 extension SetBuilderStyles {
@@ -48,6 +49,7 @@ extension SetBuilderStyles {
         switch self {
         case .list: return SetBuilderListStyle().eraseToAnySetBuilderStyle()
         case .pages: return SetBuilderPageStyle().eraseToAnySetBuilderStyle()
+        case .grid: return SetBuilderGridStyle().eraseToAnySetBuilderStyle()
         }
     }
 }
@@ -127,4 +129,66 @@ struct SetBuilderPageStyle: SetBuilderStyle {
             }
         }
     }
+}
+
+struct SetBuilderGridStyle: SetBuilderStyle {
+    func makeBody(_ configuration: Configuration) -> some View {
+        SetBuilderGrid()
+    }
+
+    struct SetBuilderGrid: View {
+        @EnvironmentObject var setBuilder: SetBuilderModel
+        @AppStorage(Constants.SaveKeys.settingsSortMode) var sortMode: SortMode = .cost
+        @AppStorage(Constants.SaveKeys.settingsShowExpansionsWhenBuilding) var showExpansion: Bool = false
+
+        var body: some View {
+            ScrollView {
+                VStack {
+                    ForEach(setBuilder.landscape.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                }
+                .padding(.horizontal, 8)
+                .padding(.top, 8)
+                LazyVGrid(columns: .halfSizeCard) {
+                    ForEach(setBuilder.cards.sorted(by: sortMode.sortFunction()), id: \.id) { cardImage($0) }
+                }
+                .padding(.horizontal, 8)
+            }
+        }
+
+        func cardImage(_ card: Card) -> some View {
+            VStack {
+                PinnableCard(card: card)
+                LargePinButton(card: card)
+            }
+        }
+
+        var pinOverlay: some View {
+            RoundedRectangle(cornerRadius: 4).stroke(lineWidth: 3).foregroundColor(.blue)
+        }
+    }
+}
+
+struct PinnableCard: View {
+    @EnvironmentObject var setBuilder: SetBuilderModel
+    let card: Card
+
+    var pinned: Bool {
+        setBuilder.pinnedLandscape.contains(card) || setBuilder.pinnedCards.contains(card)
+    }
+
+    var body: some View {
+        NavigationLink(destination: CardView(card: card, accessory: { PinButton(card: $0) })) {
+            Image(uiImage: card.image ?? UIImage())
+                .resizable()
+                .cornerRadius(4)
+                .aspectRatio(contentMode: .fit)
+                .when(pinned) {
+                    $0.overlay(RoundedRectangle(cornerRadius: 4).stroke(lineWidth: 3).foregroundColor(.blue))
+                }
+        }
+    }
+}
+
+extension Array where Element == GridItem {
+    static var halfSizeCard = [GridItem(.adaptive(minimum: 145), spacing: 8, alignment: .center)]
 }

@@ -20,11 +20,13 @@ struct SearchBar: View {
                 .padding(.vertical, 8)
                 .frame(minWidth: 10, idealWidth: 20, maxWidth: nil, minHeight: 20, idealHeight: 56, maxHeight: 56, alignment: .center)
                 .overlay(HStack {
-                    Image(systemName: "magnifyingglass").foregroundColor(Color(.systemGray))
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(Color(.systemGray))
                         .padding(.leading, 8)
-                    TextField("Search", text: $text).foregroundColor(.primary).onTapGesture {
-                        self.editing = true
-                    }.autocapitalization(.none).disableAutocorrection(true)
+                    TextField("Search", text: $text, onEditingChanged: {self.editing = $0})
+                        .foregroundColor(.primary)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                     if !self.text.isEmpty {
                         Button(action: {
                             self.text = ""
