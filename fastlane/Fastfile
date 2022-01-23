@@ -80,7 +80,11 @@ platform :ios do
   end
 
   desc 'Release to TestFlight'
-  lane :beta_release do
+  lane :beta_release do |options|
+    if options[:bump_type]
+      puts "Incrementing version with: #{options[:bump_type]}"
+      increment_version_number(bump_type: options[:bump_type])
+    end
     increment_build_number
     build(release: true)
     upload_to_testflight(
